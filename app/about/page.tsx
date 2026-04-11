@@ -3,6 +3,7 @@ import Image from "next/image";
 import * as LucideIcons from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import { FOUNDER_STORY, VALUES, CREDENTIALS } from "@/lib/about-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -116,19 +117,8 @@ export default function AboutPage() {
         </Container>
       </SectionWrapper>
 
-      {/* Mid-page CTA */}
-      <div className="bg-white py-8">
-        <Container>
-          <div className="text-center">
-            <p className="text-secondary mb-4 text-lg">
-              Want to see these values in action?
-            </p>
-            <Button href="/contact" size="lg">
-              Get Your Free Estimate
-            </Button>
-          </div>
-        </Container>
-      </div>
+      {/* Why Choose Us */}
+      <WhyChooseUs />
 
       {/* Stats */}
       <StatsSection />

@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import ServicesGrid from "@/components/sections/ServicesGrid";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import DifferentiationSection from "@/components/sections/DifferentiationSection";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import GallerySection from "@/components/sections/GallerySection";
@@ -23,7 +22,6 @@ export default function HomePage() {
       />
       <TrustBar />
       <ServicesGrid />
-      <WhyChooseUs />
       <DifferentiationSection />
       <ProcessSteps />
       <GallerySection />
