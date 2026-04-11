@@ -1,0 +1,43 @@
+export const SERVICE_PRICING: Record<string, { service: string; range: string; note?: string }[]> = {
+  "concrete-foundations": [
+    { service: "Crack Repair", range: "$3,000–$5,000", note: "Depending on severity and access" },
+    { service: "Seismic Bolting", range: "$5,000–$15,000", note: "Foundation-to-frame anchoring" },
+    { service: "Cripple Wall Bracing", range: "$5,000–$15,000", note: "May qualify for Brace + Bolt grant" },
+    { service: "Full Foundation Replacement", range: "$30,000–$100,000+", note: "Based on home size and site conditions" },
+    { service: "Concrete Flatwork (driveway/patio)", range: "$8,000–$25,000", note: "Based on square footage and finish" },
+  ],
+  "retaining-walls": [
+    { service: "Standard CMU Block Wall (per linear ft)", range: "$200–$400", note: "4-foot height, including drainage" },
+    { service: "Poured Concrete Wall (per linear ft)", range: "$300–$500", note: "Engineered, reinforced" },
+    { service: "Small Retaining Wall Project", range: "$5,000–$15,000" },
+    { service: "Mid-Size Hillside Wall", range: "$15,000–$40,000" },
+    { service: "Complex Multi-Tier System", range: "$40,000–$80,000+", note: "Engineered terracing with drainage" },
+  ],
+  "complete-remodel": [
+    { service: "Kitchen Remodel (mid-range)", range: "$75,000–$150,000", note: "Cabinets, counters, appliances, layout changes" },
+    { service: "Kitchen Remodel (high-end)", range: "$150,000–$300,000+", note: "Custom millwork, structural changes" },
+    { service: "Bathroom Remodel", range: "$30,000–$75,000", note: "Full gut and rebuild" },
+    { service: "Whole-Home Renovation", range: "$200–$450/sq ft", note: "Scope and finish-dependent" },
+    { service: "Room Addition", range: "$400–$600/sq ft", note: "Including foundation and structural" },
+  ],
+  "composite-decks": [
+    { service: "Standard Composite Deck (300 sq ft)", range: "$15,000–$35,000", note: "Including railings and permits" },
+    { service: "Multi-Level Deck", range: "$35,000–$60,000+", note: "Tiered design for sloped yards" },
+    { service: "Deck with Pergola", range: "$25,000–$50,000", note: "Composite deck + shade structure" },
+    { service: "Railing System Only", range: "$3,000–$8,000", note: "Cable, glass, or composite rails" },
+  ],
+  roofing: [
+    { service: "Full Re-Roof (composition shingle)", range: "$15,000–$25,000", note: "1,200–1,800 sq ft roof area" },
+    { service: "Full Re-Roof (architectural shingle)", range: "$20,000–$35,000", note: "Premium materials, steep pitch" },
+    { service: "Roof Repair", range: "$1,500–$8,000", note: "Leak repair, flashing, partial replacement" },
+    { service: "Gutter Installation", range: "$2,000–$5,000", note: "Seamless aluminum with guards" },
+    { service: "Skylight Installation", range: "$3,000–$8,000", note: "Including flashing and interior finish" },
+  ],
+  "adu-construction": [
+    { service: "Garage Conversion", range: "$100,000–$200,000", note: "Existing structure to finished unit" },
+    { service: "Junior ADU (within home)", range: "$80,000–$150,000", note: "Up to 500 sq ft" },
+    { service: "Detached ADU (studio/1BR)", range: "$200,000–$350,000", note: "New construction" },
+    { service: "Detached ADU (2BR, high-end)", range: "$300,000–$450,000+", note: "Full design-build" },
+    { service: "Basement Conversion", range: "$120,000–$250,000", note: "Including waterproofing and egress" },
+  ],
+};

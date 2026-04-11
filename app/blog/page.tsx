@@ -1,0 +1,103 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { generatePageMetadata } from "@/lib/metadata";
+import { BLOG_POSTS } from "@/lib/blog-data";
+import Container from "@/components/ui/Container";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import CTABlock from "@/components/sections/CTABlock";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Blog | Insights & Guides for San Francisco Homeowners",
+  description:
+    "Expert construction guides, cost breakdowns, and home improvement tips for San Francisco homeowners. From Gadget Construction — 12+ years serving SF.",
+  path: "/blog",
+});
+
+export default function BlogPage() {
+  return (
+    <>
+      {/* Page Header */}
+      <SectionWrapper background="dark" className="py-16 md:py-24">
+        <Container>
+          <div className="max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
+              Insights &amp; Guides for San Francisco Homeowners
+            </h1>
+            <p className="mt-4 text-xl text-white/70">
+              Honest answers to the questions SF homeowners actually ask — costs,
+              permits, timelines, and what to watch out for.
+            </p>
+          </div>
+        </Container>
+      </SectionWrapper>
+
+      <div className="bg-white border-b border-neutral-200">
+        <Container>
+          <Breadcrumbs items={[{ label: "Blog", href: "/blog" }]} />
+        </Container>
+      </div>
+
+      {/* Posts Grid */}
+      <SectionWrapper>
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {BLOG_POSTS.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block rounded-xl border border-neutral-200 overflow-hidden bg-white transition-all duration-300 hover:shadow-card-hover hover:-translate-y-0.5"
+              >
+                {/* Image placeholder */}
+                <div className="aspect-[16/9] bg-neutral-100 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <p className="text-sm text-neutral-400 font-heading font-medium">
+                      Featured Image
+                    </p>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-xs text-neutral-400 mb-3">
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} />
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock size={12} />
+                      {post.readingTime}
+                    </span>
+                  </div>
+
+                  <h2 className="text-lg font-bold font-heading text-primary mb-2 group-hover:text-accent-orange transition-colors">
+                    {post.title}
+                  </h2>
+
+                  <p className="text-sm text-secondary leading-relaxed line-clamp-2 mb-4">
+                    {post.excerpt}
+                  </p>
+
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-orange group-hover:gap-2.5 transition-all font-heading">
+                    Read More
+                    <ArrowRight size={14} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </SectionWrapper>
+
+      <CTABlock
+        heading="Have a Project in Mind?"
+        subtext="Whether you're planning, researching, or ready to start — we're here to help with honest answers and free estimates."
+      />
+    </>
+  );
+}
