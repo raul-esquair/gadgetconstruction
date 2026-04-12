@@ -53,10 +53,6 @@ export default function TestimonialsSection({
                   <p className="font-heading font-bold text-sm text-primary">
                     {testimonial.name}
                   </p>
-                  <p className="text-xs text-neutral-400 mt-0.5">
-                    {testimonial.projectType}
-                    {testimonial.location && ` — ${testimonial.location}`}
-                  </p>
                 </div>
               </div>
             </RevealOnScroll>

@@ -9,6 +9,7 @@ import {
   Fence,
   Home,
   Building2,
+  Wrench,
   ArrowRight,
   ArrowLeft,
   Phone,
@@ -18,12 +19,13 @@ import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const SERVICE_OPTIONS = [
-  { value: "concrete-foundations", label: "Concrete Foundations & Slabs", icon: Landmark },
+  { value: "exterior-repairs", label: "Exterior Repairs", icon: Wrench },
   { value: "retaining-walls", label: "Retaining Walls", icon: Layers },
   { value: "complete-remodel", label: "Complete Remodel", icon: Hammer },
   { value: "composite-decks", label: "Composite Decks", icon: Fence },
   { value: "roofing", label: "Roofing", icon: Home },
   { value: "adu-construction", label: "ADU Construction", icon: Building2 },
+  { value: "concrete-foundations", label: "Concrete Foundations & Slabs", icon: Landmark },
 ];
 
 const TIMELINE_OPTIONS = [
@@ -216,9 +218,10 @@ export default function MultiStepForm({
             What type of project are you planning?
           </p>
           <div className="grid grid-cols-2 gap-2">
-            {SERVICE_OPTIONS.map((opt) => {
+            {SERVICE_OPTIONS.map((opt, idx) => {
               const Icon = opt.icon;
               const selected = formData.service === opt.value;
+              const isLast = idx === SERVICE_OPTIONS.length - 1 && SERVICE_OPTIONS.length % 2 !== 0;
               return (
                 <button
                   key={opt.value}
@@ -226,6 +229,7 @@ export default function MultiStepForm({
                   onClick={() => updateField("service", opt.value)}
                   className={cn(
                     "flex items-center gap-2.5 p-3 rounded-lg border text-left text-sm font-medium transition-all cursor-pointer",
+                    isLast && "col-span-2",
                     selected
                       ? "border-accent-orange bg-accent-orange/10 text-accent-orange"
                       : isDark

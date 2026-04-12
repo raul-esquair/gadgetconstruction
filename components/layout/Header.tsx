@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, ChevronDown } from "lucide-react";
@@ -11,9 +12,12 @@ import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [hasHero, setHasHero] = useState(false);
+  const [pastHeroCTA, setPastHeroCTA] = useState(false);
   const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   function openServices() {
@@ -26,10 +30,25 @@ export default function Header() {
   }
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const heroCTA = document.querySelector("[data-hero-cta]");
+    const pageHeader = document.querySelector("[data-page-header]");
+    const darkTop = heroCTA || pageHeader;
+    setHasHero(!!darkTop);
+    setPastHeroCTA(false);
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+
+      if (darkTop) {
+        const rect = darkTop.getBoundingClientRect();
+        setPastHeroCTA(rect.bottom < 0);
+      }
+    };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   // Lock scroll when menu is open to prevent background scrolling
   useEffect(() => {
@@ -43,13 +62,22 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  // Transparent only on hero pages, before scroll, and when menus are closed
+  const isTransparent = hasHero && !isScrolled && !isMobileMenuOpen;
+  // Mobile menu style: dark when at top of hero page, white when scrolled
+  const menuIsDark = hasHero && !isScrolled;
+
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white shadow-header border-b border-neutral-200/50"
-          : "bg-white shadow-none"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+        isMobileMenuOpen && menuIsDark
+          ? "bg-primary shadow-none"
+          : isMobileMenuOpen && !menuIsDark
+          ? "bg-white shadow-none"
+          : isTransparent
+          ? "bg-transparent shadow-none"
+          : "bg-white shadow-header border-b border-neutral-200/50"
       )}
     >
       <Container>
@@ -57,7 +85,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="relative shrink-0">
             <Image
-              src="/images/logo.png"
+              src={isTransparent || (isMobileMenuOpen && menuIsDark) ? "/images/logo-white.png" : "/images/logo.png"}
               alt={`${COMPANY.shortName} logo`}
               width={798}
               height={341}
@@ -77,7 +105,12 @@ export default function Header() {
                   onMouseLeave={closeServices}
                 >
                   <button
-                    className="flex items-center gap-1 text-sm font-medium text-secondary hover:text-accent-orange transition-colors font-heading py-4"
+                    className={cn(
+                      "flex items-center gap-1 text-sm font-medium transition-colors duration-500 font-heading py-4",
+                      isTransparent
+                        ? "text-white/90 hover:text-white"
+                        : "text-secondary hover:text-accent-orange"
+                    )}
                     aria-expanded={isServicesOpen}
                     aria-haspopup="true"
                   >
@@ -99,7 +132,12 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-secondary hover:text-accent-orange transition-colors font-heading"
+                  className={cn(
+                    "text-sm font-medium transition-colors duration-500 font-heading",
+                    isTransparent
+                      ? "text-white/90 hover:text-white"
+                      : "text-secondary hover:text-accent-orange"
+                  )}
                 >
                   {link.label}
                 </Link>
@@ -111,19 +149,36 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href={COMPANY.phoneHref}
-              className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent-orange transition-colors font-heading"
+              className={cn(
+                "flex items-center gap-2 text-sm font-semibold transition-colors duration-500 font-heading",
+                isTransparent
+                  ? "text-white/90 hover:text-white"
+                  : "text-primary hover:text-accent-orange"
+              )}
             >
               <Phone size={16} />
               {COMPANY.phone}
             </a>
-            <EstimateButton size="sm">
-              Get Free Estimate
-            </EstimateButton>
+            <div
+              className={cn(
+                "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                hasHero && !pastHeroCTA
+                  ? "opacity-0 scale-95 translate-y-1 pointer-events-none"
+                  : "opacity-100 scale-100 translate-y-0"
+              )}
+            >
+              <EstimateButton size="sm">
+                Get Free Estimate
+              </EstimateButton>
+            </div>
           </div>
 
           {/* Mobile Menu Toggle — animated hamburger ↔ X */}
           <button
-            className="lg:hidden relative w-10 h-10 flex items-center justify-center text-primary"
+            className={cn(
+              "lg:hidden relative w-10 h-10 flex items-center justify-center transition-colors duration-500",
+              isTransparent || (isMobileMenuOpen && menuIsDark) ? "text-white" : "text-primary"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
@@ -131,19 +186,22 @@ export default function Header() {
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
                 className={cn(
-                  "block h-0.5 w-6 bg-primary rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center",
+                  "block h-0.5 w-6 rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center",
+                  isTransparent || (isMobileMenuOpen && menuIsDark) ? "bg-white" : "bg-primary",
                   isMobileMenuOpen ? "rotate-45 translate-y-[9px]" : "rotate-0 translate-y-0"
                 )}
               />
               <span
                 className={cn(
-                  "block h-0.5 w-6 bg-primary rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                  "block h-0.5 w-6 rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                  isTransparent || (isMobileMenuOpen && menuIsDark) ? "bg-white" : "bg-primary",
                   isMobileMenuOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"
                 )}
               />
               <span
                 className={cn(
-                  "block h-0.5 w-6 bg-primary rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center",
+                  "block h-0.5 w-6 rounded-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center",
+                  isTransparent || (isMobileMenuOpen && menuIsDark) ? "bg-white" : "bg-primary",
                   isMobileMenuOpen ? "-rotate-45 -translate-y-[9px]" : "rotate-0 translate-y-0"
                 )}
               />
@@ -155,7 +213,8 @@ export default function Header() {
       {/* Desktop Services Panel — slides down seamlessly from header */}
       <div
         className={cn(
-          "hidden lg:block overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] border-t border-neutral-100",
+          "hidden lg:block overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          isTransparent ? "border-t border-white/10" : "border-t border-neutral-100 bg-white",
           isServicesOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
         )}
         onMouseEnter={openServices}
@@ -168,7 +227,10 @@ export default function Header() {
                 key={service.slug}
                 href={`/services/${service.slug}`}
                 className={cn(
-                  "text-sm text-secondary hover:text-accent-orange transition-all duration-300 font-medium",
+                  "text-sm font-medium transition-all duration-300 hover:scale-110",
+                  isTransparent
+                    ? "text-white/80 hover:text-white"
+                    : "text-secondary hover:text-accent-orange",
                   isServicesOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                 )}
                 style={{
@@ -184,120 +246,159 @@ export default function Header() {
         </Container>
       </div>
 
-      {/* Mobile Menu Backdrop */}
-      {isMobileMenuOpen && (
-        <div
-          className="lg:hidden fixed inset-0 top-20 z-30 bg-black/20 backdrop-blur-[2px] transition-opacity duration-300"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu — full-screen takeover, dark at top / white when scrolled */}
       <div
         className={cn(
-          "lg:hidden absolute left-0 right-0 top-20 bg-white z-40 shadow-xl border-b border-neutral-200 rounded-b-2xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "lg:hidden fixed inset-0 top-20 z-40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-y-auto",
+          menuIsDark ? "bg-primary" : "bg-white",
           isMobileMenuOpen
             ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible -translate-y-3 overflow-hidden max-h-0 pointer-events-none",
-          isMobileMenuOpen && isServicesOpen
-            ? "fixed bottom-0 rounded-b-none overflow-y-auto"
-            : isMobileMenuOpen
-            ? "overflow-hidden"
-            : ""
+            : "opacity-0 invisible -translate-y-4 pointer-events-none"
         )}
       >
-        <nav className="flex flex-col px-6 pt-4 pb-8 space-y-1" aria-label="Mobile navigation">
-          {NAV_LINKS.map((link, linkIndex) =>
-            link.children ? (
-              <div
-                key={link.label}
-                className={cn(
-                  "transition-all duration-500 will-change-[opacity,transform]",
-                  isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                )}
-                style={{
-                  transitionDelay: isMobileMenuOpen ? `${linkIndex * 60 + 100}ms` : "0ms",
-                  transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-                }}
-              >
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-semibold text-primary font-heading"
-                >
-                  {link.label}
-                  <ChevronDown
-                    size={18}
-                    className={cn(
-                      "transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                      isServicesOpen && "rotate-180"
-                    )}
-                  />
-                </button>
+        {/* Red carpet accent line */}
+        <div
+          className={cn(
+            "h-[2px] bg-accent-orange transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]",
+            isMobileMenuOpen ? "w-full" : "w-0"
+          )}
+        />
+
+        <nav className="flex flex-col px-8 pt-8 pb-10" aria-label="Mobile navigation">
+          <div className="space-y-1">
+            {NAV_LINKS.map((link, linkIndex) =>
+              link.children ? (
                 <div
+                  key={link.label}
                   className={cn(
-                    "overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                    isServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    "transition-all duration-700 will-change-[opacity,transform]",
+                    isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                   )}
+                  style={{
+                    transitionDelay: isMobileMenuOpen ? `${linkIndex * 80 + 200}ms` : "0ms",
+                    transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+                  }}
                 >
-                  <div className="pl-6 pb-2 space-y-1">
-                    {SERVICES.map((service, svcIndex) => (
-                      <Link
-                        key={service.slug}
-                        href={`/services/${service.slug}`}
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center justify-between w-full py-4 text-xl font-bold tracking-wide font-heading group"
+                    style={{ color: menuIsDark ? "#ffffff" : "#222222" }}
+                  >
+                    <span className="flex items-center gap-3">
+                      <span
                         className={cn(
-                          "block py-2 text-base text-secondary hover:text-accent-orange transition-all duration-400",
-                          isServicesOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
+                          "inline-block w-0 h-[2px] bg-accent-orange transition-all duration-300",
+                          "group-hover:w-6 group-active:w-6"
                         )}
-                        style={{
-                          transitionDelay: isServicesOpen ? `${svcIndex * 40 + 50}ms` : "0ms",
-                        }}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+                      />
+                      {link.label}
+                    </span>
+                    <ChevronDown
+                      size={20}
+                      className={cn(
+                        "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                        menuIsDark ? "text-white/40" : "text-neutral-400",
+                        isServicesOpen && "rotate-180 text-accent-orange"
+                      )}
+                    />
+                  </button>
+                  <div
+                    className={cn(
+                      "overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                      isServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    )}
+                  >
+                    <div className="pl-9 pb-3 space-y-0.5 border-l-2 border-accent-orange/20 ml-[3px]">
+                      {SERVICES.map((service, svcIndex) => (
+                        <Link
+                          key={service.slug}
+                          href={`/services/${service.slug}`}
+                          className={cn(
+                            "block py-2.5 text-base hover:pl-2 transition-all duration-300 font-medium",
+                            menuIsDark
+                              ? "text-white/60 hover:text-white"
+                              : "text-secondary hover:text-accent-orange",
+                            isServicesOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                          )}
+                          style={{
+                            transitionDelay: isServicesOpen ? `${svcIndex * 50 + 100}ms` : "0ms",
+                          }}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={cn(
-                  "block py-3 text-lg font-semibold text-primary font-heading transition-all duration-500 will-change-[opacity,transform]",
-                  isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                )}
-                style={{
-                  transitionDelay: isMobileMenuOpen ? `${linkIndex * 60 + 100}ms` : "0ms",
-                  transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={cn(
+                    "block py-4 text-xl font-bold tracking-wide font-heading transition-all duration-700 will-change-[opacity,transform] group",
+                    isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  )}
+                  style={{
+                    transitionDelay: isMobileMenuOpen ? `${linkIndex * 80 + 200}ms` : "0ms",
+                    transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+                    color: menuIsDark ? "#ffffff" : "#222222",
+                  }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span className="flex items-center gap-3">
+                    <span
+                      className={cn(
+                        "inline-block w-0 h-[2px] bg-accent-orange transition-all duration-300",
+                        "group-hover:w-6 group-active:w-6"
+                      )}
+                    />
+                    {link.label}
+                  </span>
+                </Link>
+              )
+            )}
+          </div>
 
+          {/* Bottom CTA area */}
           <div
             className={cn(
-              "pt-6 space-y-3 border-t border-neutral-200 mt-4 transition-all duration-500 will-change-[opacity,transform]",
-              isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              "mt-10 pt-8 space-y-4 transition-all duration-700 will-change-[opacity,transform]",
+              menuIsDark ? "border-t border-white/10" : "border-t border-neutral-200",
+              isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
             style={{
-              transitionDelay: isMobileMenuOpen ? "400ms" : "0ms",
+              transitionDelay: isMobileMenuOpen ? "700ms" : "0ms",
               transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
             <a
               href={COMPANY.phoneHref}
-              className="flex items-center justify-center gap-2 py-3 text-lg font-semibold text-primary font-heading"
+              className={cn(
+                "flex items-center justify-center gap-2.5 py-3.5 text-lg font-semibold font-heading transition-colors",
+                menuIsDark ? "text-white/80 hover:text-white" : "text-primary hover:text-accent-orange"
+              )}
             >
-              <Phone size={20} />
+              <Phone size={20} className="text-accent-orange" />
               {COMPANY.phone}
             </a>
             <EstimateButton fullWidth size="lg">
               Get Free Estimate
             </EstimateButton>
+          </div>
+
+          {/* License badge */}
+          <div
+            className={cn(
+              "mt-8 text-center text-xs font-medium tracking-wider uppercase transition-all duration-700",
+              menuIsDark ? "text-white/25" : "text-neutral-300",
+              isMobileMenuOpen ? "opacity-100" : "opacity-0"
+            )}
+            style={{
+              transitionDelay: isMobileMenuOpen ? "900ms" : "0ms",
+            }}
+          >
+            CA License #{COMPANY.license} &middot; Bonded &amp; Insured
           </div>
         </nav>
       </div>

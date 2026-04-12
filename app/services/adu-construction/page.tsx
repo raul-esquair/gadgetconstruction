@@ -33,7 +33,7 @@ export default function ADUConstructionPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$80,000–$450,000+")}
       />
       <Hero
         headline={data.hero.headline}

@@ -8,6 +8,7 @@ import { SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import PageHeader from "@/components/sections/PageHeader";
 import Button from "@/components/ui/Button";
 import JsonLd, { articleSchema } from "@/components/seo/JsonLd";
 import CTABlock from "@/components/sections/CTABlock";
@@ -29,6 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
+    ogType: "article",
+    publishedTime: post.date,
   });
 }
 
@@ -53,30 +56,25 @@ export default async function BlogPostPage({ params }: Props) {
         })}
       />
 
-      {/* Article Header */}
-      <SectionWrapper background="dark" className="py-16 md:py-24">
-        <Container narrow>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-4 text-sm text-white/50 mb-4">
-              <span className="flex items-center gap-1.5">
-                <Calendar size={14} />
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock size={14} />
-                {post.readingTime}
-              </span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
-              {post.title}
-            </h1>
+      <PageHeader
+        title={post.title}
+        preContent={
+          <div className="flex items-center gap-4 text-sm text-white/50 mb-4">
+            <span className="flex items-center gap-1.5">
+              <Calendar size={14} />
+              {new Date(post.date).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock size={14} />
+              {post.readingTime}
+            </span>
           </div>
-        </Container>
-      </SectionWrapper>
+        }
+      />
 
       <div className="bg-white border-b border-neutral-200">
         <Container narrow>

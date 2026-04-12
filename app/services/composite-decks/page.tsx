@@ -33,7 +33,7 @@ export default function CompositeDecksPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$15,000–$60,000+")}
       />
       <Hero
         headline={data.hero.headline}

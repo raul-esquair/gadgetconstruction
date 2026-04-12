@@ -181,28 +181,28 @@ export const DIFFERENTIATORS: Differentiator[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Michael R.",
-    projectType: "Complete Remodel",
+    name: "Cindy Olander",
+    projectType: "General Construction",
     quote:
-      "Gadget Construction transformed our 1940s Sunset District home into exactly what we envisioned. They handled everything — permits, inspections, the works. The crew showed up on time every single day and left the site spotless. We couldn't be happier with the result.",
+      "We had a great experience with Osmin and his team at Gadget Construction. He was a great communicator, arrived on time, kept the area clean, and completed the job early. His quality of work is high, and we are very happy with the work. We plan to use his company again in the near future.",
     rating: 5,
-    location: "Sunset District, SF",
+    location: "Bay Area, CA",
   },
   {
-    name: "Sarah & David L.",
-    projectType: "Concrete Foundation",
+    name: "Srinivas Ketavarapu",
+    projectType: "Exterior Repairs",
     quote:
-      "After the last earthquake, we knew our foundation needed work. Gadget Construction came out the next day, explained everything in plain English, and gave us a detailed estimate. The work was done on schedule and on budget. We sleep better at night now.",
+      "The team from Gadget worked on a project at our house which involved repairing a window that had dry rot and had been the source of water leaks in rain. They did an outstanding job from end to end — they went through the permit process, did high quality work on the schedule that was promised (which is amazing for a contractor) and also took care of getting the inspection completed for the permit. They identified other areas of dry rot in windows and the roof and again, did a very good job of getting that work done with high quality and on time. I would highly recommend Gadget.",
     rating: 5,
-    location: "Bernal Heights, SF",
+    location: "Bay Area, CA",
   },
   {
-    name: "Jennifer K.",
-    projectType: "Composite Deck",
+    name: "Reeta Prasad",
+    projectType: "Bathroom Remodel",
     quote:
-      "We wanted a deck that could handle San Francisco weather without constant maintenance. Gadget Construction recommended composite and walked us through every option. Six months in and it still looks brand new. Best investment we've made in this house.",
+      "We recently had our bathroom remodeled, and the experience was fantastic. The team was professional, always on time, and kept us updated throughout the process. The tile work and fixtures look amazing, and the project was completed within the promised timeline and budget. They left the space spotless each day, which we really appreciated. Highly recommend this company for anyone considering a bathroom remodel!",
     rating: 5,
-    location: "Noe Valley, SF",
+    location: "Bay Area, CA",
   },
 ];
 

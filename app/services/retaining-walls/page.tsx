@@ -33,7 +33,7 @@ export default function RetainingWallsPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$5,000–$80,000+")}
       />
       <Hero
         headline={data.hero.headline}

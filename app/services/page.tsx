@@ -7,6 +7,7 @@ import { SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import PageHeader from "@/components/sections/PageHeader";
 import TrustBar from "@/components/sections/TrustBar";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -20,20 +21,10 @@ export const metadata: Metadata = generatePageMetadata({
 export default function ServicesPage() {
   return (
     <>
-      <SectionWrapper background="dark" className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
-              Construction Services for San Francisco Homeowners
-            </h1>
-            <p className="mt-4 text-xl text-white/70">
-              From foundations to full remodels — every service backed by 12+
-              years of experience, full permit handling, and a 5-year workmanship
-              warranty.
-            </p>
-          </div>
-        </Container>
-      </SectionWrapper>
+      <PageHeader
+        title="Construction Services for San Francisco Homeowners"
+        subtitle="From foundations to full remodels — every service backed by 12+ years of experience, full permit handling, and a 5-year workmanship warranty."
+      />
 
       <TrustBar />
 

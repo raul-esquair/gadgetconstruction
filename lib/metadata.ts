@@ -6,13 +6,17 @@ interface PageMetadataOptions {
   description: string;
   path?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
+  publishedTime?: string;
 }
 
 export function generatePageMetadata({
   title,
   description,
   path = "",
-  ogImage = "/images/logo.png",
+  ogImage = "/opengraph-image",
+  ogType = "website",
+  publishedTime,
 }: PageMetadataOptions): Metadata {
   const url = `${COMPANY.url}${path}`;
 
@@ -33,7 +37,8 @@ export function generatePageMetadata({
         },
       ],
       locale: "en_US",
-      type: "website",
+      type: ogType,
+      ...(publishedTime && { publishedTime }),
     },
     twitter: {
       card: "summary_large_image",

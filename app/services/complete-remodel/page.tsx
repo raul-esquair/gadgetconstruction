@@ -33,7 +33,7 @@ export default function CompleteRemodelPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$25,000–$450,000+")}
       />
       <Hero
         headline={data.hero.headline}

@@ -95,8 +95,8 @@ export default function TrustBar() {
     <section
       ref={ref}
       className={cn(
-        "bg-neutral-50 border-y border-neutral-200 py-5 md:py-6 overflow-hidden transition-opacity duration-700",
-        isVisible ? "opacity-100" : "opacity-0"
+        "bg-neutral-50 border-y border-neutral-200 py-5 md:py-6 overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
     >
       <div className="relative">

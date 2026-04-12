@@ -52,9 +52,15 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <EstimateModalProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent-orange focus:text-white focus:rounded-lg focus:font-heading focus:font-semibold focus:text-sm"
+          >
+            Skip to main content
+          </a>
           <JsonLd data={localBusinessSchema()} />
           <Header />
-          <main className="flex-1 pt-20 md:pt-24">{children}</main>
+          <main id="main-content" className="flex-1 pt-20 md:pt-24">{children}</main>
           <Footer />
           <MobileBottomBar />
           {/* Bottom padding on mobile to account for sticky bottom bar */}

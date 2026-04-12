@@ -24,11 +24,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-white.png"
                 alt={`${COMPANY.shortName} logo`}
                 width={180}
                 height={56}
-                className="h-14 w-auto brightness-0 invert"
+                className="h-14 w-auto"
               />
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed max-w-xs">

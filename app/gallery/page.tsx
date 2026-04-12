@@ -8,6 +8,7 @@ import { GALLERY_PROJECTS, PROJECT_CATEGORIES } from "@/lib/gallery-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import PageHeader from "@/components/sections/PageHeader";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import CTABlock from "@/components/sections/CTABlock";
@@ -23,23 +24,10 @@ export default function GalleryPage() {
 
   return (
     <>
-      {/* Header */}
-      <SectionWrapper background="dark" className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-3xl">
-            <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight font-heading"
-              style={{ color: "#ffffff" }}
-            >
-              Our Work Speaks for Itself
-            </h1>
-            <p className="mt-4 text-xl text-white/70">
-              500+ projects across 31 Bay Area cities. Here are some of the
-              stories behind the builds.
-            </p>
-          </div>
-        </Container>
-      </SectionWrapper>
+      <PageHeader
+        title="Our Work Speaks for Itself"
+        subtitle="500+ projects across 31 Bay Area cities. Here are some of the stories behind the builds."
+      />
 
       <div className="bg-white border-b border-neutral-200">
         <Container>

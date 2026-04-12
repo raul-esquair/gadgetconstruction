@@ -88,7 +88,11 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
-export function serviceSchema(serviceName: string, description: string) {
+export function serviceSchema(
+  serviceName: string,
+  description: string,
+  priceRange?: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -108,6 +112,7 @@ export function serviceSchema(serviceName: string, description: string) {
       "@type": "OfferCatalog",
       name: serviceName,
     },
+    ...(priceRange && { priceRange }),
   };
 }
 
@@ -155,5 +160,23 @@ export function articleSchema(post: {
         url: post.image,
       },
     }),
+  };
+}
+
+export function howToSchema(
+  steps: { title: string; description: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Start a Construction Project with Gadget Construction",
+    description:
+      "Our 5-step process from first call to final walkthrough. Free estimates, full permit handling, and a 5-year workmanship warranty.",
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
+    })),
   };
 }

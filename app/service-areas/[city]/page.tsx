@@ -4,7 +4,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { SERVICE_AREAS, getCityBySlug, getNeighboringCities } from "@/lib/service-areas-data";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
-import JsonLd, { serviceSchema } from "@/components/seo/JsonLd";
+import JsonLd, { faqSchema } from "@/components/seo/JsonLd";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import {
@@ -64,6 +64,7 @@ export default async function CityPage({ params }: Props) {
           },
         }}
       />
+      {city.faqs.length > 0 && <JsonLd data={faqSchema(city.faqs)} />}
 
       <Hero
         headline={city.heroHeadline}

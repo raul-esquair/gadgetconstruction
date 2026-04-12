@@ -7,10 +7,13 @@ import GallerySection from "@/components/sections/GallerySection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ServiceArea from "@/components/sections/ServiceArea";
 import CTABlock from "@/components/sections/CTABlock";
+import JsonLd, { howToSchema } from "@/components/seo/JsonLd";
+import { PROCESS_STEPS } from "@/lib/constants";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={howToSchema(PROCESS_STEPS)} />
       <Hero
         headline="Get Rid of Contractor Nightmares Once and For All"
         subheadline="500+ Bay Area projects across 31 cities. Fixed-price contracts. Full permit handling. A 5-year warranty. And a crew that responds in minutes, not days."

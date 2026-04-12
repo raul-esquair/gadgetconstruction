@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Phone, ChevronDown, Calendar } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -39,11 +39,34 @@ export default function Hero({
   className,
 }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Small delay to ensure DOM is ready, then trigger entrance
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
+  }, []);
+
+  // Parallax: background moves at 0.3x scroll speed
+  useEffect(() => {
+    const el = parallaxRef.current;
+    if (!el) return;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        el.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const stagger = (delay: number) => ({
@@ -62,14 +85,14 @@ export default function Hero({
   return (
     <section
       className={cn(
-        "relative flex items-center bg-primary overflow-hidden",
-        compact ? "min-h-[50vh] py-16 md:py-20" : "min-h-[70vh] md:min-h-[80vh] py-16 md:py-20",
+        "relative flex items-center bg-primary overflow-hidden -mt-20 md:-mt-24",
+        compact ? "min-h-[50vh] pt-28 md:pt-36 pb-16 md:pb-20" : "min-h-[70vh] md:min-h-[80vh] pt-28 md:pt-36 pb-16 md:pb-20",
         className
       )}
     >
-      {/* Background image or gradient fallback */}
+      {/* Background image or gradient fallback — with parallax */}
       {backgroundImage ? (
-        <>
+        <div ref={parallaxRef} className="absolute inset-0 will-change-transform" style={{ transform: "scale(1.1)" }}>
           <Image
             src={backgroundImage}
             alt=""
@@ -80,14 +103,14 @@ export default function Hero({
             quality={85}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
-        </>
+        </div>
       ) : (
-        <>
+        <div ref={parallaxRef} className="absolute inset-0 will-change-transform">
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-neutral-700" />
           <div className="absolute inset-0 opacity-[0.03]" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }} />
-        </>
+        </div>
       )}
 
       <Container className="relative z-10">

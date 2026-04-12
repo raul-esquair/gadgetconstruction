@@ -33,7 +33,7 @@ export default function ConcreteFoundationsPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$3,000–$100,000+")}
       />
       <Hero
         headline={data.hero.headline}

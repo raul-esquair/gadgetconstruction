@@ -8,6 +8,7 @@ import { FOUNDER_STORY, VALUES, CREDENTIALS } from "@/lib/about-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import PageHeader from "@/components/sections/PageHeader";
 import Button from "@/components/ui/Button";
 import StatsSection from "@/components/sections/StatsSection";
 import CTABlock from "@/components/sections/CTABlock";
@@ -22,19 +23,10 @@ export const metadata: Metadata = generatePageMetadata({
 export default function AboutPage() {
   return (
     <>
-      {/* Page Header */}
-      <SectionWrapper background="dark" className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
-              The People Behind Your Project
-            </h1>
-            <p className="mt-4 text-xl text-white/70">
-              12 years. 500+ projects. One standard: yours.
-            </p>
-          </div>
-        </Container>
-      </SectionWrapper>
+      <PageHeader
+        title="The People Behind Your Project"
+        subtitle="12 years. 500+ projects. One standard: yours."
+      />
 
       <div className="bg-white border-b border-neutral-200">
         <Container>

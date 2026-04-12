@@ -33,7 +33,7 @@ export default function RoofingPage() {
   return (
     <>
       <JsonLd
-        data={serviceSchema(service.name, service.metaDescription)}
+        data={serviceSchema(service.name, service.metaDescription, "$1,500–$35,000")}
       />
       <Hero
         headline={data.hero.headline}

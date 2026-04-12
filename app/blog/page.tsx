@@ -6,6 +6,7 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import PageHeader from "@/components/sections/PageHeader";
 import CTABlock from "@/components/sections/CTABlock";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -18,20 +19,10 @@ export const metadata: Metadata = generatePageMetadata({
 export default function BlogPage() {
   return (
     <>
-      {/* Page Header */}
-      <SectionWrapper background="dark" className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
-              Insights &amp; Guides for San Francisco Homeowners
-            </h1>
-            <p className="mt-4 text-xl text-white/70">
-              Honest answers to the questions SF homeowners actually ask — costs,
-              permits, timelines, and what to watch out for.
-            </p>
-          </div>
-        </Container>
-      </SectionWrapper>
+      <PageHeader
+        title="Insights & Guides for San Francisco Homeowners"
+        subtitle="Honest answers to the questions SF homeowners actually ask — costs, permits, timelines, and what to watch out for."
+      />
 
       <div className="bg-white border-b border-neutral-200">
         <Container>

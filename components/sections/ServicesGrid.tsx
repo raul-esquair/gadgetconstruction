@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +9,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import { SERVICES } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 // Bento layout: first 2 services are large (high-value), rest are compact
 const BENTO_LAYOUT = [
@@ -38,6 +40,52 @@ const BENTO_ORDER = [
   SERVICES.find((s) => s.slug === "roofing")!,
 ];
 
+function StickyCard({
+  stickyTop,
+  index,
+  children,
+}: {
+  stickyTop: number;
+  index: number;
+  children: React.ReactNode;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) { setVisible(true); return; }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) { setVisible(true); observer.unobserve(el); }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.unobserve(el);
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "sticky pb-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform]",
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      )}
+      style={{
+        top: `${stickyTop}px`,
+        zIndex: index + 1,
+        transitionDelay: visible ? `${index * 100}ms` : "0ms",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function ServicesGrid() {
   return (
     <SectionWrapper>
@@ -49,7 +97,75 @@ export default function ServicesGrid() {
           <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+        {/* Mobile: Stacking cards */}
+        <div className="sm:hidden">
+          {BENTO_ORDER.map((service, index) => {
+            const HEADER_H = 80;
+            const PEEK = 48;
+            const stickyTop = HEADER_H + index * PEEK;
+
+            return (
+              <StickyCard
+                key={service.slug}
+                stickyTop={stickyTop}
+                index={index}
+              >
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group block relative overflow-hidden rounded-2xl min-h-[340px] shadow-[0_-2px_20px_rgba(0,0,0,0.25)]"
+                >
+                  <div className="absolute inset-0 bg-neutral-200">
+                    {SERVICE_IMAGES[service.slug] ? (
+                      <Image
+                        src={SERVICE_IMAGES[service.slug]}
+                        alt={service.name}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <Image
+                        src="/images/logo.png"
+                        alt={service.name}
+                        fill
+                        className="object-contain p-16 opacity-[0.05]"
+                      />
+                    )}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/30" />
+
+                  {/* Top: service name — visible as peek when stacked */}
+                  <div className="absolute top-0 left-0 right-0 z-10 px-5 pt-4">
+                    <h3
+                      className="text-lg font-extrabold font-heading"
+                      style={{ color: "#ffffff" }}
+                    >
+                      {service.name}
+                    </h3>
+                  </div>
+
+                  {/* Bottom: description + CTA */}
+                  <div className="relative z-10 flex flex-col justify-end p-5 min-h-[340px]">
+                    {index < 2 && (
+                      <span className="inline-block self-start text-xs font-semibold text-white bg-accent-orange/90 px-2.5 py-1 rounded-full mb-2 font-heading">
+                        Featured Service
+                      </span>
+                    )}
+                    <p className="text-sm text-white/70 leading-relaxed mb-3">
+                      {service.shortDescription}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-white font-heading">
+                      Learn More
+                      <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </Link>
+              </StickyCard>
+            );
+          })}
+        </div>
+
+        {/* Desktop: Bento grid */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {BENTO_ORDER.map((service, index) => {
             const layout = BENTO_LAYOUT[index];
 
@@ -58,7 +174,6 @@ export default function ServicesGrid() {
                 <RevealOnScroll
                   key={service.slug}
                   animation={index === 0 ? "slide-left" : "slide-right"}
-                 
                   className="lg:col-span-2"
                 >
                   <Link
@@ -107,7 +222,6 @@ export default function ServicesGrid() {
               <RevealOnScroll
                 key={service.slug}
                 animation="scale-up"
-               
               >
                 <Link
                   href={`/services/${service.slug}`}
