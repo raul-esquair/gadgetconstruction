@@ -47,12 +47,13 @@ export default function Hero({
     return () => clearTimeout(timer);
   }, []);
 
-  // Parallax: background moves at 0.3x scroll speed
+  // Parallax: background moves at 0.3x scroll speed (desktop only)
   useEffect(() => {
     const el = parallaxRef.current;
     if (!el) return;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
+    const isMobile = window.innerWidth < 768;
+    if (prefersReducedMotion || isMobile) return;
 
     let ticking = false;
     const handleScroll = () => {
@@ -92,7 +93,7 @@ export default function Hero({
     >
       {/* Background image or gradient fallback — with parallax */}
       {backgroundImage ? (
-        <div ref={parallaxRef} className="absolute inset-0 will-change-transform" style={{ transform: "scale(1.1)" }}>
+        <div ref={parallaxRef} className="absolute inset-0 will-change-transform md:scale-110">
           <Image
             src={backgroundImage}
             alt=""
