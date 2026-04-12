@@ -1,16 +1,15 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 
 export const alt = "Gadget Construction — Built Right. On Time. Guaranteed.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OGImage() {
-  const logoData = await readFile(
-    join(process.cwd(), "public/images/logo-white.png")
+  const logoRes = await fetch(
+    new URL("/images/logo-white.png", "https://gadgetconstructionsf.com")
   );
-  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+  const logoData = await logoRes.arrayBuffer();
+  const logoBase64 = `data:image/png;base64,${Buffer.from(logoData).toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -90,10 +89,9 @@ export default async function OGImage() {
               fontWeight: 600,
               color: "rgba(255,255,255,0.7)",
               letterSpacing: "4px",
-              textTransform: "uppercase" as const,
             }}
           >
-            Built Right. On Time. Guaranteed.
+            BUILT RIGHT. ON TIME. GUARANTEED.
           </div>
 
           {/* CTA */}
