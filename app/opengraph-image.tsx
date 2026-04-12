@@ -1,16 +1,11 @@
 import { ImageResponse } from "next/og";
+import { LOGO_WHITE_BASE64 } from "@/lib/logo-base64";
 
 export const alt = "Gadget Construction — Built Right. On Time. Guaranteed.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OGImage() {
-  const logoRes = await fetch(
-    new URL("/images/logo-white.png", "https://gadgetconstructionsf.com")
-  );
-  const logoData = await logoRes.arrayBuffer();
-  const logoBase64 = `data:image/png;base64,${Buffer.from(logoData).toString("base64")}`;
-
   return new ImageResponse(
     (
       <div
@@ -65,7 +60,7 @@ export default async function OGImage() {
         >
           {/* Logo */}
           <img
-            src={logoBase64}
+            src={LOGO_WHITE_BASE64}
             alt="Gadget Construction"
             width={400}
             height={170}
