@@ -65,7 +65,7 @@ export default function RootLayout({
           </a>
           <JsonLd data={localBusinessSchema()} />
           <Header />
-          <main id="main-content" className="flex-1 pt-20 md:pt-24">{children}</main>
+          <main id="main-content" className="flex-1 pt-20 md:pt-24 overflow-x-clip">{children}</main>
           <Footer />
           <MobileBottomBar />
           {/* Bottom padding on mobile to account for sticky bottom bar */}

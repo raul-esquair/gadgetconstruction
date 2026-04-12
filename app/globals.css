@@ -192,8 +192,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  background: #222222;
+  overflow-x: clip;
+  background: #ffffff;
 }
 
 html, body {
