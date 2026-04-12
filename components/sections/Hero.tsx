@@ -86,7 +86,7 @@ export default function Hero({
     <section
       className={cn(
         "relative flex items-center bg-primary overflow-hidden -mt-20 md:-mt-24",
-        compact ? "min-h-[50vh] pt-28 md:pt-36 pb-16 md:pb-20" : "min-h-[70vh] md:min-h-[80vh] pt-28 md:pt-36 pb-16 md:pb-20",
+        compact ? "min-h-[50vh] pt-28 md:pt-36 pb-16 md:pb-20" : "min-h-[85vh] md:min-h-[80vh] pt-28 md:pt-36 pb-16 md:pb-20",
         className
       )}
     >
