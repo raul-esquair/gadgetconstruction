@@ -168,7 +168,7 @@ export function EstimateButton({
     <button
       onClick={open}
       className={cn(
-        "inline-flex items-center justify-center gap-2 font-heading font-semibold rounded-lg transition-all duration-200 cursor-pointer whitespace-nowrap",
+        "inline-flex items-center justify-center gap-2 font-heading font-semibold rounded-lg transition-all duration-200 cursor-pointer whitespace-normal sm:whitespace-nowrap text-center",
         variantStyles[variant],
         sizeStyles[size],
         fullWidth && "w-full",
