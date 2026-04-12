@@ -19,7 +19,7 @@ export function localBusinessSchema() {
     description:
       "San Francisco's trusted general contractor for 12+ years. Concrete foundations, remodels, decks, roofing & ADU construction. 500+ projects completed.",
     telephone: "+16282333589",
-    url: "https://gadgetconstruction.com",
+    url: "https://gadgetconstructionsf.com",
     areaServed: [
       {
         "@type": "City",
@@ -102,7 +102,7 @@ export function serviceSchema(
       "@type": "GeneralContractor",
       name: "Gadget Construction Inc.",
       telephone: "+16282333589",
-      url: "https://gadgetconstruction.com",
+      url: "https://gadgetconstructionsf.com",
     },
     areaServed: {
       "@type": "City",
@@ -124,7 +124,7 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://gadgetconstruction.com${item.url}`,
+      item: `https://gadgetconstructionsf.com${item.url}`,
     })),
   };
 }
@@ -152,7 +152,7 @@ export function articleSchema(post: {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://gadgetconstruction.com${post.url}`,
+      "@id": `https://gadgetconstructionsf.com${post.url}`,
     },
     ...(post.image && {
       image: {

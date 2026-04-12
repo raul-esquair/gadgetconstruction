@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://gadgetconstruction.com/sitemap.xml",
+    sitemap: "https://gadgetconstructionsf.com/sitemap.xml",
   };
 }

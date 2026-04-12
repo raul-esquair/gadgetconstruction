@@ -14,7 +14,7 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  ogImage = "/opengraph-image",
+  ogImage = "https://gadgetconstructionsf.com/opengraph-image",
   ogType = "website",
   publishedTime,
 }: PageMetadataOptions): Metadata {

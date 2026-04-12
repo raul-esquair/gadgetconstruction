@@ -53,7 +53,7 @@ export default async function CityPage({ params }: Props) {
           name: "Gadget Construction Inc.",
           description: city.metaDescription,
           telephone: "+16282333589",
-          url: `https://gadgetconstruction.com/service-areas/${city.slug}`,
+          url: `https://gadgetconstructionsf.com/service-areas/${city.slug}`,
           areaServed: {
             "@type": "City",
             name: city.name,

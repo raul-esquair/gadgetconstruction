@@ -3,7 +3,7 @@ import { SERVICES } from "@/lib/constants";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { SERVICE_AREAS } from "@/lib/service-areas-data";
 
-const BASE_URL = "https://gadgetconstruction.com";
+const BASE_URL = "https://gadgetconstructionsf.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

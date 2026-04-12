@@ -13,7 +13,7 @@ export const COMPANY = {
   serviceArea: "San Francisco & the Bay Area",
   rating: 5.0,
   reviewCount: 3,
-  url: "https://gadgetconstruction.com",
+  url: "https://gadgetconstructionsf.com",
 } as const;
 
 export const SERVICES: Service[] = [
