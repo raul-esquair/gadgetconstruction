@@ -1,0 +1,167 @@
+export interface GalleryProject {
+  slug: string;
+  title: string;
+  category: string;
+  categorySlug: string;
+  location: string;
+  description: string;
+  scope: string[];
+  image?: string;
+}
+
+export const PROJECT_CATEGORIES = [
+  { label: "All", slug: "all" },
+  { label: "Remodels", slug: "complete-remodel" },
+  { label: "Foundations", slug: "concrete-foundations" },
+  { label: "Retaining Walls", slug: "retaining-walls" },
+  { label: "Decks", slug: "composite-decks" },
+  { label: "Roofing", slug: "roofing" },
+  { label: "ADUs", slug: "adu-construction" },
+];
+
+export const GALLERY_PROJECTS: GalleryProject[] = [
+  {
+    slug: "noe-valley-kitchen-remodel",
+    title: "Modern Kitchen Transformation",
+    category: "Complete Remodel",
+    categorySlug: "complete-remodel",
+    location: "Noe Valley, San Francisco",
+    description: "Gutted a 1940s galley kitchen and opened it into a modern, light-filled space with custom cabinetry, quartz countertops, and a 10-foot island.",
+    scope: ["Demo & structural wall removal", "Custom cabinetry", "Quartz countertops", "New plumbing & electrical", "Hardwood flooring"],
+  },
+  {
+    slug: "sunset-whole-home-renovation",
+    title: "Whole-Home Renovation",
+    category: "Complete Remodel",
+    categorySlug: "complete-remodel",
+    location: "Sunset District, San Francisco",
+    description: "Complete renovation of a 1,800 sq ft post-war home — every room updated, new systems throughout, and a layout reconfigured for modern family life.",
+    scope: ["Full interior demo", "Kitchen & 2 bathrooms", "Electrical panel upgrade", "New HVAC system", "Title 24 compliance"],
+  },
+  {
+    slug: "pacific-heights-bathroom",
+    title: "Luxury Primary Bathroom",
+    category: "Complete Remodel",
+    categorySlug: "complete-remodel",
+    location: "Pacific Heights, San Francisco",
+    description: "Transformed a cramped 1920s bathroom into a spa-like retreat with heated floors, freestanding tub, frameless glass shower, and custom tile work.",
+    scope: ["Complete gut renovation", "Heated floor installation", "Custom tile work", "Frameless glass shower", "Freestanding soaking tub"],
+  },
+  {
+    slug: "bernal-heights-foundation",
+    title: "Seismic Foundation Retrofit",
+    category: "Concrete Foundations",
+    categorySlug: "concrete-foundations",
+    location: "Bernal Heights, San Francisco",
+    description: "Full seismic retrofit on a 1920s Victorian — foundation bolting, cripple wall bracing, and new concrete stem walls to meet current California seismic codes.",
+    scope: ["Foundation bolting", "Cripple wall bracing", "New concrete stem walls", "DBI permit & inspection", "5-year warranty"],
+  },
+  {
+    slug: "foster-city-slab-repair",
+    title: "Fill-Soil Foundation Repair",
+    category: "Concrete Foundations",
+    categorySlug: "concrete-foundations",
+    location: "Foster City",
+    description: "Stabilized a settling foundation on Foster City's fill soil using helical piers anchored to stable layers 30 feet below grade.",
+    scope: ["Helical pier installation", "Foundation leveling", "Crack repair", "Drainage improvement", "Engineering report"],
+  },
+  {
+    slug: "twin-peaks-retaining-wall",
+    title: "Hillside Retaining Wall System",
+    category: "Retaining Walls",
+    categorySlug: "retaining-walls",
+    location: "Twin Peaks, San Francisco",
+    description: "Engineered a multi-tier retaining wall system on a steep hillside lot — 180 linear feet of poured concrete walls with integrated French drain system.",
+    scope: ["Soil & slope analysis", "Engineered design", "Poured concrete walls", "French drain system", "Landscape restoration"],
+  },
+  {
+    slug: "mill-valley-hillside-wall",
+    title: "Hillside Stabilization",
+    category: "Retaining Walls",
+    categorySlug: "retaining-walls",
+    location: "Mill Valley",
+    description: "Stabilized a failing hillside behind a mid-century home with a soldier pile wall and tiered planting terraces that turned an erosion problem into usable yard space.",
+    scope: ["Soldier pile system", "Tiered terracing", "Drainage integration", "Hillside planting prep", "Structural engineering"],
+  },
+  {
+    slug: "noe-valley-composite-deck",
+    title: "Multi-Level Composite Deck",
+    category: "Composite Decks",
+    categorySlug: "composite-decks",
+    location: "Noe Valley, San Francisco",
+    description: "Built a two-tier Trex composite deck with cable railings, built-in bench seating, and integrated LED lighting — designed to handle SF's fog and moisture.",
+    scope: ["Trex Transcend decking", "Cable railing system", "LED post cap & step lighting", "Built-in seating", "Pier foundation"],
+  },
+  {
+    slug: "tiburon-waterfront-deck",
+    title: "Waterfront View Deck",
+    category: "Composite Decks",
+    categorySlug: "composite-decks",
+    location: "Tiburon",
+    description: "Replaced a rotting wood deck with TimberTech composite and marine-grade stainless cable rails — engineered for salt air, wind, and panoramic Bay views.",
+    scope: ["TimberTech Pro decking", "Marine-grade hardware", "Cable rail system", "Wind-rated design", "Pergola structure"],
+  },
+  {
+    slug: "richmond-roof-replacement",
+    title: "Complete Re-Roof",
+    category: "Roofing",
+    categorySlug: "roofing",
+    location: "Richmond District, San Francisco",
+    description: "Full tear-off and re-roof on a 2,200 sq ft Victorian with a complex roofline — architectural shingles, new flashing, and gutter system.",
+    scope: ["Full tear-off (2 layers)", "Architectural shingles", "New flashing & valleys", "Seamless gutters", "Title 24 compliant"],
+  },
+  {
+    slug: "pacifica-coastal-roof",
+    title: "Coastal-Grade Roof Replacement",
+    category: "Roofing",
+    categorySlug: "roofing",
+    location: "Pacifica",
+    description: "Installed a salt-air resistant roofing system on a coastal home — algae-resistant shingles, marine-grade flashing, and enhanced ventilation for fog-belt moisture.",
+    scope: ["Algae-resistant shingles", "Marine-grade flashing", "Ridge & soffit ventilation", "Gutter guards", "10-year leak warranty"],
+  },
+  {
+    slug: "berkeley-backyard-adu",
+    title: "Backyard Studio ADU",
+    category: "ADU Construction",
+    categorySlug: "adu-construction",
+    location: "Berkeley",
+    description: "Designed and built a 600 sq ft detached ADU with full kitchen, bathroom, and private entrance — permitted through Berkeley's building department with green building compliance.",
+    scope: ["Custom architectural design", "Full kitchen & bathroom", "Private entrance & patio", "Green building compliance", "Certificate of Occupancy"],
+  },
+  {
+    slug: "palo-alto-garage-conversion",
+    title: "Eichler Garage Conversion ADU",
+    category: "ADU Construction",
+    categorySlug: "adu-construction",
+    location: "Palo Alto",
+    description: "Converted an Eichler home's 2-car garage into a 480 sq ft studio ADU — maintaining the mid-century aesthetic while creating a fully independent living space.",
+    scope: ["Garage-to-living conversion", "New foundation work", "Full kitchen & bath", "Mid-century design match", "Radiant floor heating preserved"],
+  },
+  {
+    slug: "san-rafael-detached-adu",
+    title: "Two-Bedroom Detached ADU",
+    category: "ADU Construction",
+    categorySlug: "adu-construction",
+    location: "San Rafael",
+    description: "Built a 1,000 sq ft 2-bedroom detached ADU on a Marin hillside lot — full design-build including engineering, permits, and landscaping.",
+    scope: ["1,000 sq ft 2BR/1BA", "Hillside pier foundation", "Full mechanical systems", "Landscaping & fencing", "DBI permits & C of O"],
+  },
+  {
+    slug: "oakland-victorian-restoration",
+    title: "Victorian Full Restoration",
+    category: "Complete Remodel",
+    categorySlug: "complete-remodel",
+    location: "Rockridge, Oakland",
+    description: "Restored a 1905 Victorian — preserving original millwork, staircase, and built-ins while upgrading electrical, plumbing, foundation, and adding a modern kitchen.",
+    scope: ["Original millwork preservation", "Foundation seismic retrofit", "Modern kitchen addition", "Full electrical upgrade", "Period-appropriate finishes"],
+  },
+  {
+    slug: "san-jose-foundation-repair",
+    title: "Clay-Soil Foundation Leveling",
+    category: "Concrete Foundations",
+    categorySlug: "concrete-foundations",
+    location: "Willow Glen, San Jose",
+    description: "Leveled a severely settling foundation caused by San Jose's expansive clay soil — installed push piers to stable bedrock and repaired interior damage.",
+    scope: ["Push pier installation", "Foundation leveling", "Interior crack repair", "Drainage improvement", "Soil moisture management"],
+  },
+];

@@ -1,7 +1,6 @@
 "use client";
 
-import { useInView } from "@/hooks/useInView";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
@@ -16,89 +15,105 @@ const STATS: AnimatedStat[] = [
   { value: 12, suffix: "+", label: "Years in Business" },
   { value: 500, suffix: "+", label: "Projects Completed" },
   { value: 5.0, suffix: "★", label: "Star Rated", decimals: 1 },
+  { value: 0, suffix: "", label: "Surprise Bills" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
-function CountUp({
-  target,
-  suffix,
-  decimals = 0,
-  isActive,
-}: {
-  target: number;
-  suffix: string;
-  decimals?: number;
-  isActive: boolean;
-}) {
-  const [value, setValue] = useState(0);
+// Double the array for seamless loop
+const LOOPED_STATS = [...STATS, ...STATS];
+
+function CountUpStat({ stat, shouldAnimate }: { stat: AnimatedStat; shouldAnimate: boolean }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!isActive) return;
+    if (!shouldAnimate || hasAnimated.current) return;
+    hasAnimated.current = true;
 
-    const duration = 2000;
-    const steps = 60;
+    if (stat.value === 0) {
+      setDisplayValue(0);
+      return;
+    }
+
+    const duration = 1800;
+    const steps = 50;
     const stepDuration = duration / steps;
     let current = 0;
 
     const timer = setInterval(() => {
       current++;
       const progress = current / steps;
-      // Ease-out quart — fast start, satisfying deceleration
       const eased = 1 - Math.pow(1 - progress, 4);
-      setValue(eased * target);
-
+      setDisplayValue(eased * stat.value);
       if (current >= steps) {
         clearInterval(timer);
-        setValue(target);
+        setDisplayValue(stat.value);
       }
     }, stepDuration);
 
     return () => clearInterval(timer);
-  }, [isActive, target]);
+  }, [shouldAnimate, stat.value]);
 
-  const display = decimals > 0 ? value.toFixed(decimals) : Math.floor(value).toString();
+  const display = stat.decimals
+    ? displayValue.toFixed(stat.decimals)
+    : Math.floor(displayValue).toString();
 
   return (
-    <span className="tabular-nums">
-      {display}
-      <span className="text-accent-orange">{suffix}</span>
-    </span>
+    <div className="flex-shrink-0 flex items-center gap-3 px-8 md:px-12">
+      <span className="text-2xl md:text-4xl font-extrabold font-heading text-primary tabular-nums whitespace-nowrap">
+        {display}
+        <span className="text-accent-orange">{stat.suffix}</span>
+      </span>
+      <span className="text-xs md:text-sm font-medium text-secondary uppercase tracking-wider whitespace-nowrap">
+        {stat.label}
+      </span>
+    </div>
   );
 }
 
 export default function TrustBar() {
-  const { ref, isInView } = useInView({ threshold: 0.5 });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) { setIsVisible(true); return; }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) { setIsVisible(true); observer.unobserve(el); }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.unobserve(el);
+  }, []);
 
   return (
-    <section ref={ref} className="bg-neutral-50 border-y border-neutral-200 py-8 md:py-10">
-      <Container>
-        <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-24">
-          {STATS.map((stat, index) => (
-            <div
-              key={index}
-              className={cn(
-                "text-center transition-all duration-700 will-change-[opacity,transform]",
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              )}
-              style={{
-                transitionDelay: `${index * 200}ms`,
-                transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-              }}
-            >
-              <div className="text-3xl md:text-5xl font-extrabold font-heading text-primary">
-                <CountUp
-                  target={stat.value}
-                  suffix={stat.suffix}
-                  decimals={stat.decimals}
-                  isActive={isInView}
-                />
-              </div>
-              <p className="mt-1.5 text-xs md:text-sm font-medium text-secondary uppercase tracking-wider">
-                {stat.label}
-              </p>
+    <section
+      ref={ref}
+      className={cn(
+        "bg-neutral-50 border-y border-neutral-200 py-5 md:py-6 overflow-hidden transition-opacity duration-700",
+        isVisible ? "opacity-100" : "opacity-0"
+      )}
+    >
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-neutral-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
+
+        {/* Conveyor belt */}
+        <div className="flex animate-[marquee_8s_linear_infinite] md:animate-[marquee_15s_linear_infinite] hover:[animation-play-state:paused]">
+          {LOOPED_STATS.map((stat, index) => (
+            <div key={index} className="flex items-center">
+              <CountUpStat stat={stat} shouldAnimate={isVisible} />
+              <div className="w-px h-8 bg-neutral-200 flex-shrink-0" />
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

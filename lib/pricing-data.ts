@@ -14,11 +14,11 @@ export const SERVICE_PRICING: Record<string, { service: string; range: string; n
     { service: "Complex Multi-Tier System", range: "$40,000–$80,000+", note: "Engineered terracing with drainage" },
   ],
   "complete-remodel": [
-    { service: "Kitchen Remodel (mid-range)", range: "$75,000–$150,000", note: "Cabinets, counters, appliances, layout changes" },
-    { service: "Kitchen Remodel (high-end)", range: "$150,000–$300,000+", note: "Custom millwork, structural changes" },
-    { service: "Bathroom Remodel", range: "$30,000–$75,000", note: "Full gut and rebuild" },
+    { service: "Kitchen Remodel (mid-range)", range: "$25,000–$35,000", note: "Cabinets, counters, appliances, layout changes" },
+    { service: "Kitchen Remodel (high-end)", range: "$50,000–$80,000", note: "Custom millwork, structural changes" },
+    { service: "Bathroom Remodel", range: "$25,000–$75,000", note: "Full gut and rebuild" },
     { service: "Whole-Home Renovation", range: "$200–$450/sq ft", note: "Scope and finish-dependent" },
-    { service: "Room Addition", range: "$400–$600/sq ft", note: "Including foundation and structural" },
+    { service: "Room Addition", range: "$600–$1,200/sq ft", note: "Including foundation and structural" },
   ],
   "composite-decks": [
     { service: "Standard Composite Deck (300 sq ft)", range: "$15,000–$35,000", note: "Including railings and permits" },

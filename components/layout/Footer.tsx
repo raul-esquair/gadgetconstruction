@@ -6,9 +6,10 @@ import Container from "@/components/ui/Container";
 
 const companyLinks = [
   { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Service Areas", href: "/service-areas" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
-  { label: "Get a Free Estimate", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -34,7 +35,7 @@ export default function Footer() {
               {COMPANY.tagline}
             </p>
             <p className="text-neutral-300 text-sm mt-3">
-              San Francisco&apos;s trusted general contractor for {currentYear - COMPANY.founded}+ years.
+              The Bay Area&apos;s trusted general contractor for {currentYear - COMPANY.founded}+ years. Serving 31 cities across 6 counties.
             </p>
           </div>
 

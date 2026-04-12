@@ -48,12 +48,14 @@ export default function Hero({
 
   const stagger = (delay: number) => ({
     className: cn(
-      "transition-all duration-700 will-change-[opacity,transform]",
-      isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      "transition-all duration-1000 will-change-[opacity,transform]",
+      isLoaded
+        ? "opacity-100 translate-y-0 blur-0"
+        : "opacity-0 translate-y-8 blur-[2px]"
     ),
     style: {
       transitionDelay: `${delay}ms`,
-      transitionTimingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
     },
   });
 
@@ -61,7 +63,7 @@ export default function Hero({
     <section
       className={cn(
         "relative flex items-center bg-primary overflow-hidden",
-        compact ? "min-h-[50vh] py-16 md:py-20" : "min-h-[85vh] md:min-h-[90vh] py-20 md:py-24",
+        compact ? "min-h-[50vh] py-16 md:py-20" : "min-h-[70vh] md:min-h-[80vh] py-16 md:py-20",
         className
       )}
     >
@@ -144,9 +146,13 @@ export default function Hero({
           {/* Trust line — enters last at 700ms */}
           {showTrustPills && (
             <div {...stagger(700)}>
-              <p className="mt-6 text-sm text-white/50 font-medium">
-                Licensed &amp; Insured&nbsp;&nbsp;·&nbsp;&nbsp;CA Lic #{COMPANY.license}
-              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs md:text-sm text-white/50 font-medium">
+                <span>Class B General Contractor</span>
+                <span className="hidden sm:inline">·</span>
+                <span>Licensed &amp; Insured</span>
+                <span className="hidden sm:inline">·</span>
+                <span>CA Lic #{COMPANY.license}</span>
+              </div>
             </div>
           )}
         </div>

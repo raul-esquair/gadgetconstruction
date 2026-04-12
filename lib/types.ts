@@ -48,3 +48,25 @@ export interface Stat {
   label: string;
   suffix?: string;
 }
+
+export interface CityData {
+  slug: string;
+  name: string;
+  county: string;
+  tier: 1 | 2 | 3;
+  population: string;
+  medianHomeValue: string;
+  permitAuthority: string;
+  heroHeadline: string;
+  heroSubheadline: string;
+  intro: string[];
+  constructionInsight: {
+    heading: string;
+    description: string;
+  };
+  housingStock: string;
+  topServices: string[]; // slugs from SERVICES
+  neighboringCities: string[]; // slugs of nearby cities
+  faqs: FAQ[];
+  metaDescription: string;
+}

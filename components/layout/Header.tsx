@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, ChevronDown } from "lucide-react";
@@ -14,6 +14,16 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  function openServices() {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    setIsServicesOpen(true);
+  }
+
+  function closeServices() {
+    closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 300);
+  }
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -63,11 +73,11 @@ export default function Header() {
                 <div
                   key={link.label}
                   className="relative group"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseEnter={openServices}
+                  onMouseLeave={closeServices}
                 >
                   <button
-                    className="flex items-center gap-1 text-sm font-medium text-secondary hover:text-accent-orange transition-colors font-heading"
+                    className="flex items-center gap-1 text-sm font-medium text-secondary hover:text-accent-orange transition-colors font-heading py-4"
                     aria-expanded={isServicesOpen}
                     aria-haspopup="true"
                   >
@@ -75,34 +85,15 @@ export default function Header() {
                     <ChevronDown
                       size={14}
                       className={cn(
-                        "transition-transform duration-200",
+                        "transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
                         isServicesOpen && "rotate-180"
                       )}
                     />
                   </button>
-
-                  {/* Dropdown */}
-                  <div
-                    className={cn(
-                      "absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200",
-                      isServicesOpen
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible -translate-y-2"
-                    )}
-                  >
-                    <div className="bg-white rounded-xl shadow-lg border border-neutral-200 py-2 min-w-[260px]">
-                      {SERVICES.map((service) => (
-                        <Link
-                          key={service.slug}
-                          href={`/services/${service.slug}`}
-                          className="block px-4 py-2.5 text-sm text-secondary hover:bg-neutral-50 hover:text-accent-orange transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                  {/* Invisible bridge — extends hover zone down to the panel */}
+                  {isServicesOpen && (
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full w-[100vw] h-4" />
+                  )}
                 </div>
               ) : (
                 <Link
@@ -160,6 +151,38 @@ export default function Header() {
           </button>
         </div>
       </Container>
+
+      {/* Desktop Services Panel — slides down seamlessly from header */}
+      <div
+        className={cn(
+          "hidden lg:block overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] border-t border-neutral-100",
+          isServicesOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+        )}
+        onMouseEnter={openServices}
+        onMouseLeave={closeServices}
+      >
+        <Container>
+          <div className="flex items-center justify-center gap-8 py-4">
+            {SERVICES.map((service, svcIdx) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className={cn(
+                  "text-sm text-secondary hover:text-accent-orange transition-all duration-300 font-medium",
+                  isServicesOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                )}
+                style={{
+                  transitionDelay: isServicesOpen ? `${svcIdx * 40 + 50}ms` : "0ms",
+                  transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+                }}
+                onClick={() => setIsServicesOpen(false)}
+              >
+                {service.name}
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </div>
 
       {/* Mobile Menu Backdrop */}
       {isMobileMenuOpen && (

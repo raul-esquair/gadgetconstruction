@@ -10,7 +10,7 @@ export const COMPANY = {
   founded: 2014,
   projectsCompleted: "500+",
   warranty: "5-Year Workmanship Warranty",
-  serviceArea: "San Francisco & the Peninsula",
+  serviceArea: "San Francisco & the Bay Area",
   rating: 5.0,
   reviewCount: 3,
   url: "https://gadgetconstruction.com",
@@ -92,7 +92,6 @@ interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
   {
     label: "Services",
     href: "/services",
@@ -101,7 +100,9 @@ export const NAV_LINKS: NavLink[] = [
       href: `/services/${s.slug}`,
     })),
   },
+  { label: "Gallery", href: "/gallery" },
   { label: "About", href: "/about" },
+  { label: "Areas", href: "/service-areas" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
