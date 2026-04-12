@@ -6,6 +6,7 @@ import MobileBottomBar from "@/components/layout/MobileBottomBar";
 import { EstimateModalProvider } from "@/components/ui/EstimateModal";
 import JsonLd, { localBusinessSchema } from "@/components/seo/JsonLd";
 import { COMPANY } from "@/lib/constants";
+import PreventZoom from "@/components/ui/PreventZoom";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -58,6 +59,7 @@ export default function RootLayout({
       className={`${montserrat.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <PreventZoom />
         <EstimateModalProvider>
           <a
             href="#main-content"
