@@ -13,7 +13,8 @@ Website for **Gadget Construction Inc.**, a Class B general contractor serving 3
 - **License:** CA #1132983
 - **Warranty:** 5-year workmanship
 - **Service area:** 31 cities across Marin, Contra Costa, Alameda, San Francisco, San Mateo, and Santa Clara counties
-- **Services:** Concrete Foundations, Retaining Walls, Complete Remodels, Composite Decks, Roofing, ADU Construction
+- **Services:** Concrete Foundations, Retaining Walls, Complete Remodels, Composite Decks, Roofing, ADU Construction, Exterior Repairs
+- **Site URL:** https://gadgetconstructionsf.com
 - **Tagline:** "Built Right. On Time. Guaranteed."
 
 ## Commands
@@ -36,14 +37,18 @@ npm run lint     # ESLint check
 - **Lucide React** (icons)
 - **clsx + tailwind-merge** (via `cn()` helper in `lib/utils.ts`)
 - **Zero animation libraries** — all animations use IntersectionObserver + scroll listeners + CSS
+- **class-variance-authority + @radix-ui/react-slot** (shadcn button dependency, installed but only used by `components/ui/shadcn-button.tsx` if present)
 
 ### File Structure
 
 ```
 app/                              # Pages (App Router)
-  layout.tsx                      # Root layout — fonts, header, footer, EstimateModalProvider
-  page.tsx                        # Homepage
-  globals.css                     # Design tokens, keyframes, base styles, btn-concrete
+  layout.tsx                      # Root layout — fonts, header, footer, EstimateModalProvider, skip-to-content
+  page.tsx                        # Homepage (with HowTo schema, context-aware urgency badge)
+  globals.css                     # Design tokens, keyframes, base styles, btn-concrete, overflow-x:clip
+  opengraph-image.tsx             # Dynamic OG image (1200x630, logo + CTA + credentials)
+  sitemap.ts                      # Auto-generated sitemap for all 51 routes with priority tiers
+  robots.ts                       # Robots.txt (allows all, blocks /api/, points to sitemap)
   about/page.tsx
   contact/page.tsx
   gallery/page.tsx                # Filterable project portfolio
@@ -52,7 +57,7 @@ app/                              # Pages (App Router)
   services/page.tsx               # Services hub
   services/*/page.tsx             # 6 individual service pages
   service-areas/page.tsx          # Service areas hub (31 cities grouped by county)
-  service-areas/[city]/page.tsx   # 31 individual city SEO pages
+  service-areas/[city]/page.tsx   # 31 individual city SEO pages (with FAQ schema)
   api/contact/route.ts            # Form submission endpoint
 
 components/
@@ -62,18 +67,19 @@ components/
     SectionWrapper.tsx            # Section with bg variants (white/light/dark/gradient)
     Card.tsx, Badge.tsx           # Basic UI elements
     FormField.tsx                 # Input/textarea/select with validation
-    MultiStepForm.tsx             # 3-step progressive form with directional transitions
+    MultiStepForm.tsx             # 3-step progressive form with directional transitions (7 service options)
     EstimateModal.tsx             # Context provider + modal + EstimateButton component
     AnimateOnScroll.tsx           # Binary scroll-trigger wrapper (uses useInView)
     RevealOnScroll.tsx            # Scroll-POSITION-linked animation (proportional to scroll)
     StatsCounter.tsx              # Animated count-up on scroll
     BeforeAfter.tsx               # Draggable image comparison slider
   sections/                       # Full-width page sections
-    Hero.tsx                      # Hero with bg image, Ken Burns, staggered text reveal
+    Hero.tsx                      # Hero with bg image, Ken Burns, stagger, parallax (desktop only)
     HeroCTA.tsx                   # Client wrapper for modal trigger in server Hero
     SectionCTA.tsx                # Client wrapper for modal trigger in server sections
-    TrustBar.tsx                  # Marquee conveyor belt with 5 animated stats
-    ServicesGrid.tsx              # Bento grid (2 large featured + 4 compact)
+    PageHeader.tsx                # Reusable dark page header for non-hero pages (extends behind transparent header)
+    TrustBar.tsx                  # Marquee conveyor belt with 5 animated stats (slides up from bottom)
+    ServicesGrid.tsx              # Bento grid desktop + stacking cards mobile
     WhyChooseUs.tsx               # 6 differentiator cards with bg image
     DifferentiationSection.tsx    # Problem vs. Solution comparison rows
     ProcessSteps.tsx              # 5-step timeline (horizontal desktop, vertical mobile)
@@ -90,11 +96,11 @@ components/
     CityPageContent.tsx           # City page sections (Intro, Insight, Services)
     NeighboringCities.tsx         # Cross-linking between nearby city pages
   layout/
-    Header.tsx                    # Sticky header, animated hamburger↔X, services panel
-    Footer.tsx                    # 4-column footer with license bar
+    Header.tsx                    # Transparent→white header, dark mobile menu, estimate button pop-in
+    Footer.tsx                    # 4-column footer with white logo + license bar
     MobileBottomBar.tsx           # Scroll-aware sticky CTA (appears when hero CTAs leave viewport)
   seo/
-    JsonLd.tsx                    # Structured data (LocalBusiness, Service, FAQ, Article, Breadcrumb)
+    JsonLd.tsx                    # Structured data (LocalBusiness, Service, FAQ, Article, Breadcrumb, HowTo)
     Breadcrumbs.tsx               # Visual breadcrumbs + BreadcrumbList schema
 
 lib/                              # Data & utilities
@@ -107,14 +113,16 @@ lib/                              # Data & utilities
   about-data.ts                   # FOUNDER_STORY, VALUES, CREDENTIALS
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
-  metadata.ts                     # generatePageMetadata() helper
-  utils.ts                        # cn() helper (clsx + tailwind-merge)
+  metadata.ts                     # generatePageMetadata() helper (supports ogType, publishedTime)
+  utils.ts                        # cn() helper + getBookingUrgency() context-aware season text
+  logo-base64.ts                  # White logo as base64 constant (used by OG image)
 
 hooks/
   useInView.ts                    # IntersectionObserver hook (binary trigger, fires once)
 
 public/images/
-  logo.png                        # Company logo (transparent PNG, tight crop)
+  logo.png                        # Company logo — dark version (for white backgrounds)
+  logo-white.png                  # Company logo — white version (for dark backgrounds, footer, OG image)
   hero-bg.jpg                     # Homepage hero (crew on roof)
   why-choose-us-bg.jpg            # WhyChooseUs section background (finished roof)
   adu-construction.jpg            # ADU service card image
@@ -219,11 +227,14 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 
 ### Animation System (Three Layers)
 
-**Layer 1: Hero Stagger (`Hero.tsx`)**
+**Layer 1: Hero Stagger + Parallax (`Hero.tsx`)**
 - Hero is a client component with `useState` for load trigger
 - Elements stagger in on page load: urgency badge (0ms) → headline (150ms) → subheadline (350ms) → CTA (550ms) → trust line (700ms)
 - Uses blur-to-sharp transition (`blur-[2px]` → `blur-0`) for cinematic feel
 - Hero background image has Ken Burns effect (`@keyframes ken-burns`, 20s cycle)
+- **Parallax** (desktop only, `md:` and up): background moves at 0.3x scroll speed via `requestAnimationFrame`. `scale(1.1)` buffer prevents edge reveal. Disabled on mobile to avoid image cutoff.
+- Hero pulls up behind transparent header with `-mt-20 md:-mt-24` + extra top padding (`pt-28 md:pt-36`)
+- Mobile hero height: `min-h-[85vh]`, desktop: `min-h-[80vh]`
 
 **Layer 2: Scroll-Position-Linked (`RevealOnScroll.tsx`) — PRIMARY SYSTEM**
 - Animation progress is **proportional to scroll position**, not binary on/off
@@ -261,6 +272,7 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - Gradient fades on left/right edges
 - Pauses on hover
 - Numbers count up on first view via individual `StatItem` components with self-contained observers
+- **Slides up from bottom** on scroll entry (`translate-y-10 → translate-y-0`, 1000ms) for parallax feel
 
 ### Mobile Bottom Bar
 
@@ -271,38 +283,75 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - **Hidden on `/contact` page** entirely
 - **On pages without a hero** — shows immediately
 
-### Header — Desktop Services Panel
+### Header — Transparent-to-White with Scroll Detection
 
-The services dropdown is NOT a floating card — it's a **full-width panel that expands from the header itself**:
-- Services button hover opens the panel, panel hover keeps it open
-- 300ms close delay with timer ref prevents snap-shut when mouse travels between button and panel
-- Invisible bridge div extends the hover zone between button and panel
-- Nav items stagger in at 40ms intervals
-- Animated hamburger ↔ X toggle on mobile (3 spans with rotate/translate transitions)
+The header has three visual states controlled by scroll position and page type:
 
-### Mobile Menu Behavior
+**Transparent state** (hero/PageHeader pages, before scroll):
+- `bg-transparent` with white logo (`logo-white.png`), white nav text, white hamburger
+- Detected via `[data-hero-cta]` or `[data-page-header]` in the DOM
+- Re-checks on route change via `usePathname()` dependency
 
-- **Default (services collapsed):** Compact dropdown, auto-height, rounded bottom corners
-- **Services expanded:** Stretches to full screen (`fixed bottom-0`)
-- Nav items stagger in on open, instant fade on close
-- Services submenu items slide in from left with 40ms stagger
+**Solid state** (after scrolling 100px, or pages without dark top section):
+- `bg-white` with colored logo, dark nav text, shadow
+- 700ms transition with `cubic-bezier(0.16,1,0.3,1)` easing
+
+**Estimate button pop-in** (desktop only):
+- Hidden (`opacity-0 scale-95`) when hero CTAs are in viewport
+- Fades/scales in when user scrolls past hero CTAs (`data-hero-cta` sentinel)
+
+**Desktop services panel:**
+- Full-width panel that expands from header, transparent-aware
+- Service links scale up 10% on hover (`hover:scale-110`)
+- 300ms close delay with timer ref, invisible bridge div for hover zone
+
+**Hamburger ↔ X** toggle: 3 spans with rotate/translate transitions, color-aware (white on dark, dark on white)
+
+### Mobile Menu — Full-Screen Takeover
+
+Premium mobile menu with two visual modes:
+
+**Dark mode** (at top of hero pages, `menuIsDark = hasHero && !isScrolled`):
+- `bg-primary` full-screen, white logo, white nav text
+- Header background also goes dark to blend seamlessly
+
+**Light mode** (scrolled down or non-hero pages):
+- `bg-white` full-screen, colored logo, dark nav text
+
+**Shared behaviors:**
+- Red accent line sweeps across top on open (1000ms)
+- Nav items stagger in at 80ms intervals with 700ms duration, `translate-y-6` entrance
+- Each item has a hidden red dash that slides out on hover (`w-0 → w-6`)
+- Services submenu has red border accent (`border-l-2 border-accent-orange/20`), items slide in from left
+- Bottom CTA area with phone + estimate button, separated by themed divider
+- License badge fades in last (900ms delay) as credibility anchor
 
 ### Multi-Step Form
 
 3-step progressive form: Service Selection → Timeline/Budget → Contact Info
+- **7 service options** in 2-column grid: Exterior Repairs, Retaining Walls, Complete Remodel, Composite Decks, Roofing, ADU Construction, Concrete Foundations & Slabs (spans full width as last odd item)
 - Step transitions animate with directional slide (forward = slide right, back = slide left)
 - 150ms fade-out, content swaps, fades in from opposite direction
 - Progress bar with numbered circles
 - Used in both `CTABlock` (inline) and `EstimateModal` (popup)
 - Collects: service, timeline, scope, name, phone, email, message
 
-### Services Bento Grid
+### Services Bento Grid (Desktop) + Stacking Cards (Mobile)
 
-Homepage services use an asymmetric bento layout:
-- 2 large "Featured Service" cards (Complete Remodel + ADU) spanning 2 columns on desktop
+**Desktop (`sm:` and up):** Asymmetric bento layout:
+- 2 large "Featured Service" cards (Complete Remodel + ADU) spanning 2 columns
 - 4 compact cards (Foundations, Retaining Walls, Decks, Roofing) in a row
-- `SERVICE_IMAGES` map in ServicesGrid.tsx controls which cards have real photos vs. logo placeholders
-- Large cards slide in from left/right, compact cards scale up
+- `SERVICE_IMAGES` map controls which cards have real photos vs. logo placeholders
+- Large cards slide in from left/right, compact cards scale up via `RevealOnScroll`
+
+**Mobile (`sm:hidden`):** Sticky stacking card effect:
+- Each card uses `position: sticky` with increasing `top` (80px header + 48px per card)
+- Higher `z-index` on each successive card so they stack on top
+- Service name at top of card (visible in 48px peek area when covered)
+- Each card has its own `IntersectionObserver` via `StickyCard` component for fade-up animation
+- `RevealOnScroll` wrapper was removed because it breaks `position: sticky`
+- All cards scroll out of view together when section ends
+- **Key learning:** `position: sticky` requires the sticky element to be a direct child of the scroll container. Wrapping in `RevealOnScroll` (which adds a wrapper div) breaks stacking.
 
 ### Service Area Pages — 3 Tiers
 
@@ -317,14 +366,38 @@ Helper functions: `getCitiesByCounty()`, `getCityBySlug()`, `getNeighboringCitie
 
 ## SEO
 
+Audited against 2026 Google standards (April 2026). All critical items addressed.
+
+### Metadata & OG
 - Every page exports `metadata` using `generatePageMetadata()` from `lib/metadata.ts`
-- Root layout has `LocalBusiness` JSON-LD schema on every page
-- Service pages have `Service` + `FAQPage` JSON-LD schemas
-- Blog posts have `Article` JSON-LD schema
-- City pages have `GeneralContractor` JSON-LD with city-specific `areaServed`
-- Breadcrumbs component generates `BreadcrumbList` schema
-- 130+ FAQ entries across city pages targeting "[service] + [city]" long-tail queries
+- `generatePageMetadata()` supports `ogType` ("website" or "article") and `publishedTime`
+- Blog posts use `og:type: "article"` with `publishedTime` for Google Discover
+- Dynamic OG image (`app/opengraph-image.tsx`) — 1200x630 with logo, tagline, CTA, credentials. Logo embedded as base64 via `lib/logo-base64.ts`
+- All URLs use `gadgetconstructionsf.com` (the actual live domain)
+
+### Structured Data (JSON-LD)
+- `LocalBusiness` (GeneralContractor) on every page via root layout
+- `Service` schema with `priceRange` on all 6 service pages
+- `FAQPage` schema on service pages AND city pages (130+ FAQs)
+- `Article` schema on blog posts
+- `BreadcrumbList` on all pages with breadcrumbs
+- `HowTo` schema for 5-step process on homepage
 - 33 FAQ entries across service pages
+
+### Crawlability
+- `app/sitemap.ts` — auto-generated sitemap for all 51 routes, with priority tiers by page type and city tier
+- `app/robots.ts` — allows all crawling, blocks `/api/`, points to sitemap
+- Self-referencing canonical URLs on all pages
+
+### Image Optimization
+- `next.config.ts` configured with `formats: ["image/avif", "image/webp"]`
+- Next.js `<Image>` component used everywhere with proper `sizes`, `priority`, `alt`
+
+### Accessibility
+- Skip-to-content link in root layout (`sr-only`, visible on focus)
+- `id="main-content"` on `<main>` element
+- All forms have proper labels, aria attributes
+- `prefers-reduced-motion` respected in all animation hooks
 
 ## Copywriting Rules
 
@@ -346,7 +419,7 @@ Helper functions: `getCitiesByCounty()`, `getCityBySlug()`, `getNeighboringCitie
 - **Header:** `h-20 md:h-24` — main content has matching `pt-20 md:pt-24`
 - **Mobile bottom bar spacer:** `h-16 md:hidden` at bottom of layout
 - **Section padding:** `py-12 md:py-20` via SectionWrapper
-- **Hero height:** `min-h-[70vh] md:min-h-[80vh]` — sized so trust bar is visible on first load
+- **Hero height:** `min-h-[85vh] md:min-h-[80vh]` — taller on mobile to prevent content cutoff
 - **Grids:** Typically `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`
 - **CTABlock and ContactForm:** Switch to 2-column at `md:` breakpoint (768px), not `lg:`
 
@@ -357,7 +430,7 @@ These were research-backed decisions — don't revert without reason:
 - **Multi-step form** over single-step (80-120% more form fills per contractor CRO data)
 - **Modal estimate form** triggered from header/hero/sections — keeps visitor on the page that built their trust
 - **"Minutes" not "24 hours"** response time promise (15-22% conversion lift)
-- **Urgency badge** on hero ("Limited availability — currently booking for Summer 2026")
+- **Urgency badge** on hero — context-aware via `getBookingUrgency()` in `lib/utils.ts`, auto-updates by season/year
 - **3 CTAs max on homepage** (hero, after testimonials, CTABlock) — reduced from 5 to lower cognitive load
 - **TrustBar as marquee** not static — adds visual energy + fits 5 stats without taking vertical space
 - **Pricing ranges on service pages** (10-20% conversion lift vs. no pricing)
@@ -377,15 +450,41 @@ These were research-backed decisions — don't revert without reason:
 - **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
 - **Project photography** — many placeholder images, needs real before/after photos for gallery and service pages
 - **Concrete foundations service image** — only service card without a real photo in the bento grid
-- **Google reviews** — placeholder testimonials, needs real review text (currently 3 reviews at 5 stars — too few to embed a live widget)
 - **Form backend** — API route logs to console, needs email service / CRM integration
 - **Blog featured images** — placeholder divs, needs real images
 - **Gallery project images** — all 16 projects use logo placeholders, need real project photos
+- **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
+
+## What's Done (Recently Completed)
+
+- **Real testimonials** — Cindy Olander, Srinivas Ketavarapu, Reeta Prasad (replaced all placeholders)
+- **Transparent header** — fades from transparent to white on scroll, route-aware
+- **Premium mobile menu** — full-screen dark/light takeover with red carpet accent
+- **Stacking service cards** — sticky cards on mobile with peek effect
+- **Hero parallax** — desktop-only background scroll at 0.3x speed
+- **TrustBar slide-up** — parallax entrance from bottom
+- **Exterior Repairs** — added as 7th service option in estimate form
+- **Full SEO audit** — sitemap, robots, OG image, FAQ schema on cities, HowTo schema, priceRange on services, WebP/AVIF, skip-to-content, corrected blog reading times
+- **Domain corrected** — all URLs updated from gadgetconstruction.com to gadgetconstructionsf.com
+- **Context-aware urgency badge** — auto-updates by season/year
+- **PageHeader component** — reusable dark header for non-hero pages
+- **Viewport overflow fix** — `overflow-x: clip` on html + main to prevent horizontal scroll from slide animations
 
 ## GitHub & Deployment
 
 - **Repo:** `raul-esquair/gadgetconstruction` (public)
 - **Branch:** `main`
-- **Deployment:** Netlify (connected to GitHub repo)
+- **Live URL:** `https://gadgetconstructionsf.com`
+- **Deployment:** Netlify (connected to GitHub repo, auto-deploys on push)
 - **Build command:** `npm run build`
-- **51 total routes** (homepage + about + contact + gallery + blog listing + 3 blog posts + services hub + 6 service pages + service areas hub + 31 city pages + API route)
+- **51+ routes** (homepage + about + contact + gallery + blog listing + 3 blog posts + services hub + 6 service pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
+
+## Key Gotchas
+
+- **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
+- **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards
+- **Parallax is desktop-only** — `scale(1.1)` causes image cutoff on mobile viewports
+- **`EstimateButton` and `Button` are separate components** — both need changes applied independently (different `whitespace` rules, etc.)
+- **`RevealOnScroll` breaks `position: sticky`** — it wraps children in a div that disrupts the sticky parent relationship. Use inline `IntersectionObserver` instead (see `StickyCard` in ServicesGrid.tsx)
+- **iOS Safari ignores `user-scalable=no`** since iOS 10 — don't try to prevent zoom via viewport meta. Use CSS overflow clipping instead.
+- **OG image on Netlify** — `fs.readFile` and `process.cwd()` don't work in serverless. Embed assets as base64 constants or fetch via absolute URL.
