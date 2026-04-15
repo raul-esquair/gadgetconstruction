@@ -134,12 +134,28 @@ public/images/
   composite-decks-hero.jpg        # Composite decks service page hero
   roofing-hero.jpg                # Roofing service page hero
   adu-construction-hero.jpg       # ADU construction service page hero
+  retaining-walls-hero.jpg        # Retaining walls service page hero
+  concrete-foundations-hero.jpg   # Concrete foundations service page hero (renamed from concrete-foundations.jpg)
+  complete-remodel-hero.jpg       # Complete remodel service page hero
   roofing-before.jpg              # Before/after: gazebo roof before replacement
   roofing-after.jpg               # Before/after: gazebo roof after replacement
   gallery-composite-deck-pergola.jpg  # Gallery: deck with pergola & LED lighting
   gallery-composite-deck-spa.jpg      # Gallery: spa deck with hot tub & privacy screens
   gallery-composite-deck-railing.jpg  # Gallery: wraparound deck with railing
   gallery-composite-deck-firepit.jpg  # Gallery: entertainer's deck with fire pit
+  gallery-retaining-wall-steps.jpg    # Gallery: concrete wall with redwood staircase & pavers
+  gallery-retaining-wall-landscaped.jpg # Gallery: concrete wall with fence & gravel landscaping
+  gallery-retaining-wall-rebar.jpg    # Gallery: hillside retaining wall rebar & formwork
+  gallery-foundation-rebar.jpg       # Gallery: rebar grid layout for new foundation
+  gallery-foundation-slab-prep.jpg   # Gallery: residential slab with rebar & formwork
+  gallery-foundation-garage-prep.jpg # Gallery: garage subgrade compaction
+  gallery-remodel-kitchen.jpg        # Gallery: white cabinet kitchen remodel
+  gallery-remodel-bathroom.jpg       # Gallery: marble tile bathroom remodel
+  gallery-remodel-kitchen-island.jpg # Gallery: butcher block island kitchen remodel
+  gallery-adu-insulation.jpg         # Gallery: ADU insulation installation
+  gallery-adu-framing.jpg            # Gallery: two-story ADU framing phase
+  gallery-adu-housewrap.jpg          # Gallery: ADU Tyvek housewrap installation
+  gallery-roofing-shingles.jpg       # Gallery: architectural shingles on modern home
 ```
 
 ### Data Flow
@@ -160,7 +176,7 @@ All content lives in `lib/` as typed constants. No CMS, no external APIs, no dat
 
 **To add a new city:** Add to `SERVICE_AREAS` in service-areas-data.ts with tier (1/2/3), county, FAQs, and content. Static params auto-generate the route.
 
-**To add a gallery project:** Add to `GALLERY_PROJECTS` in gallery-data.ts with categorySlug matching a service slug. Include `image` path for real photos — projects with images auto-appear in ServiceGallery sections and the main gallery page with real photos instead of placeholders.
+**To add a gallery project:** Add to `GALLERY_PROJECTS` in gallery-data.ts with categorySlug matching a service slug. Include `image` path for real photos. Optional `imagePosition` (e.g., `"center 70%"`) controls `object-position` for tall/portrait images that need custom cropping. All service pages pass `categorySlug` to `ServiceGallery`, so new gallery images auto-appear on both the gallery page and the matching service page.
 
 **To add a service image to the bento grid:** Add to `SERVICE_IMAGES` map in ServicesGrid.tsx. Also add descriptive SEO alt text to `SERVICE_IMAGE_ALT` map.
 
@@ -364,6 +380,8 @@ Premium mobile menu with two visual modes:
 - `RevealOnScroll` wrapper was removed because it breaks `position: sticky`
 - All cards scroll out of view together when section ends
 - **Key learning:** `position: sticky` requires the sticky element to be a direct child of the scroll container. Wrapping in `RevealOnScroll` (which adds a wrapper div) breaks stacking.
+- **Key learning:** `transition-all` on sticky cards causes visible lag — the browser transitions sticky positioning changes over the duration instead of snapping. Use `transition-[opacity,transform]` to scope transitions to only the animated properties.
+- **Key learning:** Artificial stagger delays (`transitionDelay: index * Nms`) on cards with individual IntersectionObservers cause the last cards to appear laggy on fast scroll — all observers fire nearly simultaneously, making the delay obvious. Natural scroll timing provides sufficient stagger without any delay.
 
 ### Service Area Pages — 3 Tiers
 
@@ -460,7 +478,6 @@ These were research-backed decisions — don't revert without reason:
 ## What's Pending
 
 - **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
-- **Project photography** — most service categories still need real gallery images (remodels, foundations, retaining walls, roofing, ADUs still have placeholders)
 - **Form backend** — API route logs to console, needs email service / CRM integration
 - **Blog featured images** — placeholder divs, needs real images
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
@@ -471,14 +488,15 @@ These were research-backed decisions — don't revert without reason:
 - **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
 - **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
-- **Service page hero images** — composite decks, roofing, and ADU pages now have real hero background images with SEO alt text (via new `imageAlt` prop on Hero component)
+- **All 6 service page hero images** — composite decks, roofing, ADU, retaining walls, concrete foundations, and complete remodel pages all have real hero background images with SEO alt text (via `imageAlt` prop on Hero component)
 - **Before/after slider** — roofing service page and homepage both use interactive BeforeAfter component with gazebo roof replacement photos
 - **BeforeAfter clipPath fix** — uses `clipPath: inset()` instead of `width` for pixel-perfect image alignment
 - **Homepage pixelation reveal** — GallerySection before/after slider pixelates into view via scroll-linked SVG filter (direct DOM manipulation for smoothness)
 - **Interactive county explorer** — ServiceArea component now has clickable county badges that expand a panel with city grid, staggered fade-in, and links to city pages
 - **Bubble animation** — DifferentiationSection rows use `bubble` RevealOnScroll type (easeOutBack single-overshoot settle)
-- **Gallery real images** — 4 composite deck projects now have real photos; 2 old placeholder deck entries removed
-- **ServiceGallery pulls real images** — component accepts `categorySlug` prop and renders real gallery photos when available, falls back to placeholders
+- **All gallery projects have real images** — 16 projects across all 6 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks, 1 roofing (shingles), 3 ADUs (insulation, framing, housewrap). All placeholder entries removed.
+- **ServiceGallery pulls real images** — all 6 service pages pass `categorySlug` to `ServiceGallery`, which filters `GALLERY_PROJECTS` for entries with images. Optional `imagePosition` field controls `object-position` for custom cropping.
+- **Mobile stacking card lag fix** — `transition-all` replaced with `transition-[opacity,transform]` to prevent sticky positioning from being transitioned. Stagger delay removed — natural scroll timing handles card entrance sequencing.
 - **SEO alt text system** — `SERVICE_IMAGE_ALT` map in ServicesGrid.tsx provides descriptive, keyword-rich alt text for bento grid images
 - **Scroll restoration** — `history.scrollRestoration = "manual"` in root layout forces scroll-to-top on refresh
 - **Testimonials removed from service pages** — pending hyper-relevant per-service reviews
