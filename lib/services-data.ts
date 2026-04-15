@@ -25,17 +25,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
   "concrete-foundations": {
     slug: "concrete-foundations",
     hero: {
-      headline: "Concrete Foundations & Slabs in San Francisco",
+      headline: "Concrete Foundations & Slabs — Engineered for Earthquake Country",
       subheadline:
-        "San Francisco's hills, clay soil, and seismic activity demand foundations that are engineered — not just poured. We build the kind you never have to think about again.",
-      ctaText: "Get Your Free Foundation Estimate",
+        "The Bay Area's seismic faults, diverse soil conditions, and steep terrain demand foundations that are engineered — not just poured. We build the kind you never have to think about again.",
+      ctaText: "Schedule a Free Site Assessment",
     },
     intro: {
       heading: "Your Home Is Only as Strong as What It Sits On",
       paragraphs: [
-        "A crack in your foundation isn't cosmetic. It's structural. And in earthquake country, structural means everything. San Francisco's unique combination of steep grades, expansive clay soil, and seismic zones creates conditions that punish shortcuts. The foundation your home sits on needs to account for all of it.",
+        "A crack in your foundation isn't cosmetic. It's structural. And in earthquake country, structural means everything. The Bay Area sits between the San Andreas and Hayward faults — from SF and Marin to Oakland, Berkeley, and down the Peninsula. The combination of seismic zones, expansive clay soil, and steep grades creates conditions that punish shortcuts. The foundation your home sits on needs to account for all of it.",
         "Maybe you've noticed cracks spreading across your garage floor. Doors that used to close fine are sticking. The floor in your hallway has a slope that wasn't there five years ago. These aren't just old-house quirks — they're your foundation telling you something.",
-        "Gadget Construction has been pouring, repairing, and replacing foundations across San Francisco for over 12 years. We understand the soil conditions in the Sunset are different from Bernal Heights. We know which neighborhoods sit on bedrock and which ones sit on fill. And we engineer every foundation to meet or exceed California's strict seismic codes — because close enough isn't good enough when the ground starts moving.",
+        "With 12+ years and 500+ projects behind us, we've seen what the Bay Area's ground does to shortcuts. We understand that soil conditions in SF's Sunset are different from Bernal Heights, that Oakland's hills have different challenges than the flat lots in Concord, and that Marin's canyon-side homes face unique drainage demands. Every foundation we build is engineered to meet or exceed California's strict seismic codes — because close enough isn't good enough when the ground starts moving.",
       ],
     },
     scope: {
@@ -66,7 +66,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         {
           title: "Concrete Flatwork",
           description:
-            "Driveways, walkways, patios, and steps — poured and finished to last in San Francisco's wet climate.",
+            "Driveways, walkways, patios, and steps — poured and finished to last in the Bay Area's wet climate.",
         },
       ],
     },
@@ -87,11 +87,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 3,
         title: "Permits & Prep",
         description:
-          "We pull all permits through SF DBI and prep the site. You don't touch a single form.",
+          "We pull all permits through your local building department and prep the site. You don't touch a single form.",
       },
       {
         number: 4,
-        title: "Construction",
+        title: "Excavation & Pour",
         description:
           "Excavation, forming, rebar placement, and pour — done by our crew, on our timeline, with daily site cleanup.",
       },
@@ -111,9 +111,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       },
       {
         icon: "FileCheck",
-        title: "Full SF DBI Permit Handling",
+        title: "Full Permit Handling",
         description:
-          "We manage the entire permit process with San Francisco's Department of Building Inspection.",
+          "We manage the entire permit process with your local building department — SF's DBI, Marin's CDA, Oakland's Planning & Building, and every jurisdiction in between.",
       },
       {
         icon: "Microscope",
@@ -131,9 +131,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     faqs: [
       {
         question:
-          "How much does a concrete foundation cost in San Francisco?",
+          "How much does a concrete foundation cost in the Bay Area?",
         answer:
-          "Foundation costs in SF vary significantly based on scope. Simple crack repairs can start around $3,000–$5,000. Seismic bolting typically runs $5,000–$15,000. A full foundation replacement for a single-family home can range from $30,000 to $100,000+ depending on lot conditions, access, and structural requirements. We provide detailed, itemized estimates after a site assessment — no ballpark guesses.",
+          "Foundation costs vary significantly based on scope and location. Simple crack repairs can start around $3,000–$5,000. Seismic bolting typically runs $5,000–$15,000. A full foundation replacement for a single-family home can range from $30,000 to $100,000+ depending on lot conditions, access, and structural requirements. We provide detailed, itemized estimates after a site assessment — no ballpark guesses.",
       },
       {
         question: "How long does a foundation project take?",
@@ -141,9 +141,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "Seismic bolting and minor repairs typically take 3–5 days of on-site work. A full foundation replacement can take 3–6 weeks depending on the size of the home, permit timeline, and site conditions. We give you a specific timeline before work begins — and we stick to it. 94% of our projects finish on or ahead of schedule.",
       },
       {
-        question: "Do I need a permit for foundation work in San Francisco?",
+        question: "Do I need a permit for foundation work?",
         answer:
-          "Yes. Most foundation work in San Francisco requires a permit from the Department of Building Inspection (DBI). This includes new foundations, foundation replacements, and seismic retrofits. We handle the entire permit process for you — applications, plan submissions, and inspection scheduling.",
+          "Yes. Most foundation work requires a building permit — including new foundations, foundation replacements, and seismic retrofits. Permit processes vary by city: SF uses DBI, Marin has the Community Development Agency, and each East Bay and Peninsula jurisdiction has its own department. We handle the entire permit process for you regardless of which city your project is in.",
       },
       {
         question: "What are the signs my foundation needs repair?",
@@ -154,13 +154,13 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         question:
           "What is the Brace + Bolt program and do I qualify?",
         answer:
-          "Brace + Bolt is a California Earthquake Authority program that provides grants of up to $3,000 to help homeowners seismically retrofit their homes. Eligible homes are typically older wood-frame houses with cripple wall or unbolted foundations. We can assess your eligibility during a free site visit and handle the entire retrofit process if you qualify.",
+          "Brace + Bolt is a California Earthquake Authority program that provides grants of up to $3,000 to help homeowners seismically retrofit their homes. Eligible homes are typically older wood-frame houses with cripple wall or unbolted foundations — common across the Bay Area, especially in SF, Oakland, Berkeley, and older Marin neighborhoods. We can assess your eligibility during a free site visit and handle the entire retrofit process if you qualify.",
       },
       {
         question:
-          "What makes San Francisco foundations different from other areas?",
+          "What makes Bay Area foundations different from other regions?",
         answer:
-          "Three things: seismic activity, soil conditions, and terrain. SF sits near the San Andreas and Hayward faults, so seismic compliance is critical. Many neighborhoods have expansive clay soil that shifts with moisture — Sunset, Richmond, and Bayview are particularly affected. And the hills create slope and drainage challenges that flat-lot contractors don't deal with. We've been building in these conditions for 12+ years.",
+          "Three things: seismic activity, soil conditions, and terrain. The Bay Area sits between the San Andreas and Hayward faults, so seismic compliance is critical everywhere from SF to Oakland to San Jose. Many areas have expansive clay soil that shifts with moisture — SF's Sunset and Richmond, Marin's low-lying areas, and parts of the East Bay are particularly affected. And the hills across the region create slope and drainage challenges that flat-lot contractors don't deal with. We've been building in these conditions for 12+ years across 31 cities.",
       },
     ],
   },
@@ -168,17 +168,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
   "retaining-walls": {
     slug: "retaining-walls",
     hero: {
-      headline: "Retaining Walls in San Francisco — Built for Steep Terrain",
+      headline: "Retaining Walls That Hold — From Marin to the Peninsula",
       subheadline:
-        "When your hillside lot needs structure, you need more than a wall — you need engineering that accounts for SF's soil, slope, and seismic demands.",
-      ctaText: "Get Your Free Retaining Wall Estimate",
+        "When your hillside lot needs structure, you need more than a wall. You need engineering that accounts for the soil, slope, and seismic demands of your specific site.",
+      ctaText: "Get a Free Slope Assessment",
     },
     intro: {
-      heading: "Holding Ground in a City That Moves",
+      heading: "Holding Ground in a Region That Moves",
       paragraphs: [
-        "If your yard is sliding, your driveway is cracking at the edges, or your hillside lot looks a little different after every rainy season — you're not imagining things. San Francisco's terrain doesn't stay put. Between the steep grades, clay soil, and seasonal rain, gravity is constantly working against your property.",
+        "If your yard is sliding, your driveway is cracking at the edges, or your hillside lot looks a little different after every rainy season — you're not imagining things. The Bay Area's terrain doesn't stay put. From Marin's canyon-carved slopes to SF's steep grades and the East Bay hills above Oakland and Berkeley, gravity is constantly working against your property.",
         "A properly engineered retaining wall isn't just a landscaping feature. It's a structural system that redirects soil pressure, manages water drainage, and protects your home's foundation from the forces pushing against it. Get it wrong and you're looking at failure within a few years — and a repair bill that dwarfs what the original wall would have cost.",
-        "Gadget Construction has been building retaining walls across San Francisco's hills for over a decade. We've worked on Twin Peaks slopes, Potrero Hill switchbacks, and Bernal Heights backyards where a 15-foot grade change is just a normal Tuesday. Every wall we build is engineered for the specific soil and load conditions on your lot.",
+        "We've built retaining walls on Twin Peaks slopes in SF, hillside lots in Mill Valley and Sausalito, Berkeley Hills properties, and Peninsula backyards where a 15-foot grade change is just a normal Tuesday. Across 6 counties and over a decade of hillside work, one thing hasn't changed: every wall we build is engineered for the specific soil and load conditions on your lot.",
       ],
     },
     scope: {
@@ -189,7 +189,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         {
           title: "Poured Concrete Retaining Walls",
           description:
-            "Maximum strength for high-load applications. Engineered, reinforced, and built to handle SF's most demanding slopes.",
+            "Maximum strength for high-load applications. Engineered, reinforced, and built to handle the Bay Area's most demanding slopes.",
         },
         {
           title: "Concrete Block (CMU) Walls",
@@ -230,11 +230,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 3,
         title: "Permits",
         description:
-          "Walls over 4 feet in SF require a permit. We handle the full DBI process so you don't have to.",
+          "Walls over 4 feet typically require a permit. We handle the full permitting process with your local building department.",
       },
       {
         number: 4,
-        title: "Construction",
+        title: "Wall Construction & Drainage",
         description:
           "Excavation, foundation, drainage, wall construction, and backfill — done right, done on schedule.",
       },
@@ -250,7 +250,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         icon: "Ruler",
         title: "Engineered for Your Slope",
         description:
-          "No cookie-cutter walls. Every design accounts for your lot's specific grade, soil, and load.",
+          "No cookie-cutter walls. Every design accounts for your lot's specific grade, soil, and load — whether you're in Marin, SF, or the East Bay.",
       },
       {
         icon: "Droplets",
@@ -262,7 +262,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         icon: "FileCheck",
         title: "Full Permit Handling",
         description:
-          "Walls over 4 feet need DBI permits. We manage the paperwork and inspections end to end.",
+          "Walls over 4 feet need permits. We manage the paperwork and inspections with every jurisdiction we serve.",
       },
       {
         icon: "ShieldCheck",
@@ -273,14 +273,19 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     faqs: [
       {
-        question: "How much does a retaining wall cost in San Francisco?",
+        question: "How do I know if my property needs a retaining wall?",
         answer:
-          "Retaining wall costs depend on height, length, material, and site access. In San Francisco, expect roughly $200–$500 per linear foot for a standard 4-foot concrete block wall, including drainage. Taller walls, poured concrete, and difficult access can push costs higher. Hillside stabilization projects with tiered walls or soldier piles can range from $15,000 to $60,000+. We provide exact estimates after a site assessment.",
+          "If you're seeing soil erosion on a slope, your yard is creeping downhill, your driveway or patio is cracking from lateral pressure, or water is pooling against your foundation after rain — those are signs. Any hillside lot with a grade change of 3 feet or more typically benefits from a retaining wall. We do free site evaluations to tell you exactly what's happening and whether a wall is the right fix.",
       },
       {
-        question: "Do I need a permit for a retaining wall in San Francisco?",
+        question: "How much does a retaining wall cost in the Bay Area?",
         answer:
-          "In San Francisco, retaining walls over 4 feet in height (measured from the bottom of the footing to the top of the wall) require a building permit from DBI. Walls near property lines or in certain zoning areas may have additional requirements. We handle all permitting and ensure your wall meets current code requirements.",
+          "It depends on height, length, material, and site access. Across the Bay Area, expect roughly $200–$500 per linear foot for a standard 4-foot concrete block wall, including drainage. Taller walls, poured concrete, and difficult hillside access — common in Marin, SF, and the East Bay hills — can push costs higher. Hillside stabilization projects with tiered walls or soldier piles can range from $15,000 to $60,000+. We provide exact estimates after a site assessment.",
+      },
+      {
+        question: "Do I need a permit for a retaining wall?",
+        answer:
+          "In most Bay Area jurisdictions, retaining walls over 4 feet in height (measured from the bottom of the footing to the top of the wall) require a building permit. Walls near property lines or in certain zoning areas may have additional requirements. Permit processes vary by city — SF's DBI, Marin's Community Development Agency, and each Peninsula and East Bay jurisdiction have their own procedures. We handle all permitting regardless of which city your project is in.",
       },
       {
         question: "How long does a retaining wall last?",
@@ -293,9 +298,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "The top three causes: poor drainage (water builds up behind the wall and creates hydrostatic pressure), inadequate foundation depth, and undersized design (the wall isn't engineered for the actual load it's holding). Cheap, un-engineered walls fail the fastest. We design every wall for the specific conditions on your lot — not based on a generic formula.",
       },
       {
-        question: "Can I build a retaining wall on the property line?",
+        question: "Do you build retaining walls outside of San Francisco?",
         answer:
-          "In San Francisco, retaining walls can generally be built up to the property line, but there are setback and drainage requirements depending on height and zoning. You'll also want to coordinate with your neighbor if the wall affects their property. We handle the code research and permitting for your specific situation.",
+          "Yes. We serve 31 cities across Marin, San Francisco, San Mateo, Alameda, Contra Costa, and Santa Clara counties. Some of our most demanding retaining wall projects are in Marin — Mill Valley, Sausalito, and Tiburon have steep hillside lots that require serious structural engineering. We also build throughout the Peninsula and East Bay hills.",
       },
     ],
   },
@@ -303,17 +308,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
   "complete-remodel": {
     slug: "complete-remodel",
     hero: {
-      headline: "Home Remodeling in San Francisco — Full-Service, Zero Stress",
+      headline: "Full-Service Home Remodeling — Zero Stress, Zero Surprises",
       subheadline:
-        "You've been thinking about this remodel for months. Maybe years. We're the contractor your neighbors wish they'd hired first.",
+        "You've been thinking about this remodel for months. Maybe years. We're the contractor your neighbors wish they'd hired first — serving 31 cities across the Bay Area.",
       ctaText: "Get Your Free Remodel Estimate",
     },
     intro: {
       heading: "Your Home Deserves Better Than a Horror Story",
       paragraphs: [
-        "You've heard them. The kitchen remodel that took eight months instead of three. The contractor who cashed the deposit and disappeared. The budget that doubled before the drywall went up. These stories are so common in San Francisco that a lot of homeowners just live with the kitchen that doesn't work and the bathroom from 1970 — because the alternative sounds worse.",
+        "You've heard them. The kitchen remodel that took eight months instead of three. The contractor who cashed the deposit and disappeared. The budget that doubled before the drywall went up. These stories are so common across the Bay Area that a lot of homeowners just live with the kitchen that doesn't work and the bathroom from 1970 — because the alternative sounds worse.",
         "It doesn't have to be that way. A remodel should be exciting, not exhausting. You should know exactly what it costs before it starts, exactly how long it will take, and exactly who to call when you have a question. That's not a radical concept — it's just how Gadget Construction operates.",
-        "Over 12 years and 500+ projects, we've remodeled homes in every corner of San Francisco — from 1920s Victorians in the Mission to mid-century ranches in the Sunset. We know the quirks of old San Francisco housing stock. We know which walls are load-bearing before we open them up. And we know how to navigate SF's DBI permit process without losing months to paperwork.",
+        "Over 12 years and 500+ projects, we've remodeled homes across 31 Bay Area cities — from 1920s Victorians in SF's Mission District to Craftsman bungalows in Berkeley, hillside homes in Mill Valley, Eichlers in Palo Alto, and mid-century ranches across the Peninsula. We know the quirks of Bay Area housing stock. We know which walls are load-bearing before we open them up. And we know how to navigate the permit process in every jurisdiction we serve.",
       ],
     },
     scope: {
@@ -370,11 +375,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 3,
         title: "Permits & Scheduling",
         description:
-          "We handle SF DBI permits, schedule inspections, and lock in your project timeline.",
+          "We handle all permits with your local building department, schedule inspections, and lock in your project timeline.",
       },
       {
         number: 4,
-        title: "Construction",
+        title: "Demo to Finishing",
         description:
           "Demo, framing, plumbing, electrical, finishing — with weekly photo updates and a clean site every day.",
       },
@@ -400,9 +405,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       },
       {
         icon: "FileCheck",
-        title: "SF Permit Experts",
+        title: "Bay Area Permit Experts",
         description:
-          "We navigate DBI's process daily. Your permits get handled correctly the first time.",
+          "We navigate permitting across 31 cities and 6 counties. Your permits get handled correctly the first time, regardless of jurisdiction.",
       },
       {
         icon: "MessageSquare",
@@ -413,14 +418,14 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     faqs: [
       {
-        question: "How much does a home remodel cost in San Francisco?",
+        question: "How much does a home remodel cost in the Bay Area?",
         answer:
-          "San Francisco is one of the most expensive remodeling markets in the country. A mid-range kitchen remodel typically runs $75,000–$150,000. A bathroom remodel ranges from $30,000–$75,000. Whole-home renovations generally cost $200–$450+ per square foot depending on the scope, finishes, and structural work involved. We provide detailed estimates with every line item explained — no vague allowances.",
+          "The Bay Area is one of the most expensive remodeling markets in the country. A mid-range kitchen remodel typically runs $75,000–$150,000. A bathroom remodel ranges from $30,000–$75,000. Whole-home renovations generally cost $200–$450+ per square foot depending on the scope, finishes, and structural work involved. Costs can vary by city and home type. We provide detailed estimates with every line item explained — no vague allowances.",
       },
       {
-        question: "How long does a full home remodel take in San Francisco?",
+        question: "How long does a full home remodel take?",
         answer:
-          "A kitchen remodel typically takes 8–14 weeks of on-site work. A full bathroom runs 6–10 weeks. A whole-home renovation can take 4–8 months depending on scope. Add 4–12 weeks for SF DBI permit processing before construction starts. We give you a specific timeline during the estimate phase and provide weekly updates throughout construction.",
+          "A kitchen remodel typically takes 8–14 weeks of on-site work. A full bathroom runs 6–10 weeks. A whole-home renovation can take 4–8 months depending on scope. Add 4–12 weeks for permit processing before construction starts — timelines vary by jurisdiction (SF's DBI tends to be longest). We give you a city-specific timeline during the estimate phase and provide weekly updates throughout construction.",
       },
       {
         question: "Do I need to move out during a remodel?",
@@ -430,17 +435,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "How do I know if a wall is load-bearing?",
         answer:
-          "Don't guess — this is one area where getting it wrong can be catastrophic. Load-bearing walls carry the weight of the structure above them down to the foundation. In older SF homes, it's not always obvious which walls are structural. We assess your home's framing before recommending any wall removals and install proper headers and beams when load-bearing walls need to come out.",
+          "Don't guess — this is one area where getting it wrong can be catastrophic. Load-bearing walls carry the weight of the structure above them down to the foundation. In older Bay Area homes — Victorians, Edwardians, Craftsmans, and early ranches — it's not always obvious which walls are structural. We assess your home's framing before recommending any wall removals and install proper headers and beams when load-bearing walls need to come out.",
       },
       {
-        question: "What permits do I need for a remodel in San Francisco?",
+        question: "What permits do I need for a remodel?",
         answer:
-          "Most remodeling work in SF requires permits from DBI — including electrical, plumbing, structural changes, and anything that alters the building's footprint or use. Even cosmetic kitchen remodels often trigger permit requirements if you're moving plumbing or electrical. We handle the full permit process from application to final inspection.",
+          "Most remodeling work requires permits — including electrical, plumbing, structural changes, and anything that alters the building's footprint or use. Even cosmetic kitchen remodels often trigger permit requirements if you're moving plumbing or electrical. Permit processes vary by city across the Bay Area. We handle the full permit process from application to final inspection in every jurisdiction we serve.",
       },
       {
         question: "Can you work with my architect or designer?",
         answer:
-          "Absolutely. We regularly collaborate with architects and interior designers throughout San Francisco. If you don't have one, we can recommend trusted professionals we've worked with. Either way, we build to spec and communicate clearly with everyone on the project team.",
+          "Absolutely. We regularly collaborate with architects and interior designers throughout the Bay Area. If you don't have one, we can recommend trusted professionals we've worked with. Either way, we build to spec and communicate clearly with everyone on the project team.",
       },
     ],
   },
@@ -448,17 +453,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
   "composite-decks": {
     slug: "composite-decks",
     hero: {
-      headline: "Composite Decks in San Francisco — Built for the Fog",
+      headline: "Composite Decks Built for Fog, Salt Air & Zero Maintenance",
       subheadline:
-        "San Francisco's marine layer destroys wood decks in a few years. Composite gives you the look of real wood with none of the rot, splinters, or annual staining.",
-      ctaText: "Get Your Free Deck Estimate",
+        "The Bay Area's marine layer, salt air, and constant moisture cycling destroy wood decks in a few years. Composite gives you the look of real wood with none of the rot, splinters, or annual staining.",
+      ctaText: "Design Your Dream Deck — Free Consultation",
     },
     intro: {
-      heading: "Outdoor Living That Actually Lasts in San Francisco",
+      heading: "Outdoor Living That Actually Lasts on the Coast",
       paragraphs: [
-        "You want a deck. A place to have coffee in the morning, grill on the weekend, or just sit outside and watch the fog roll in. The problem is, San Francisco's climate is brutal on wood. The marine layer, salt air, constant moisture cycling, and temperature swings warp, crack, and rot traditional lumber faster than almost anywhere in California.",
+        "You want a deck. A place to have coffee in the morning, grill on the weekend, or just sit outside and enjoy the view. The problem is, the Bay Area's coastal climate is brutal on wood. From Sausalito and Pacifica to SF and the Peninsula, the marine layer, salt air, constant moisture cycling, and temperature swings warp, crack, and rot traditional lumber faster than almost anywhere in California.",
         "That's why we build with composite. Brands like Trex and TimberTech have engineered decking materials that look and feel like real wood but won't rot, splinter, warp, or fade. No annual staining. No pressure washing every spring. No replacing boards every few years. You build it once and enjoy it for 25+ years.",
-        "Gadget Construction has been building composite decks across San Francisco for over a decade. We know how to work with the city's tight lot lines, steep backyards, and permitting requirements. Whether you want a simple single-level patio deck or a multi-tier outdoor living space with built-in lighting and pergola — we build it to last.",
+        "From Marin's hillside homes to SF's tight lot lines to Peninsula backyards in Burlingame, San Carlos, and Palo Alto — we've designed and built composite decks for every type of property the Bay Area throws at us. Whether you want a simple single-level patio deck or a multi-tier outdoor living space with built-in lighting and pergola, we build it to last.",
       ],
     },
     scope: {
@@ -474,12 +479,12 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         {
           title: "Multi-Level Decks",
           description:
-            "Tiered designs that work with San Francisco's sloped backyards — creating usable outdoor space on terrain that would otherwise go to waste.",
+            "Tiered designs that work with the Bay Area's sloped backyards — creating usable outdoor space on terrain that would otherwise go to waste.",
         },
         {
           title: "Pergolas & Shade Structures",
           description:
-            "Integrated pergolas, shade sails, and overhead structures for fog-free days when you want cover from the sun.",
+            "Integrated pergolas, shade sails, and overhead structures for sunny days when you want cover from the heat.",
         },
         {
           title: "Railing Systems",
@@ -510,7 +515,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 3,
         title: "Permits",
         description:
-          "We pull the building permit through SF DBI and handle all required documentation.",
+          "We pull the building permit through your local building department and handle all required documentation.",
       },
       {
         number: 4,
@@ -528,9 +533,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     differentiators: [
       {
         icon: "Droplets",
-        title: "Built for SF's Climate",
+        title: "Built for Bay Area Weather",
         description:
-          "We spec materials specifically for San Francisco's fog, salt air, and moisture cycling.",
+          "We spec materials specifically for the Bay Area's fog, salt air, and moisture cycling — from the coast to inland valleys.",
       },
       {
         icon: "Timer",
@@ -554,29 +559,29 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     faqs: [
       {
         question:
-          "How much does a composite deck cost in San Francisco?",
+          "How much does a composite deck cost in the Bay Area?",
         answer:
-          "A standard 300-square-foot composite deck in San Francisco typically costs $15,000–$35,000 including materials, labor, railings, and permits. Multi-level decks, pergolas, built-in lighting, and premium materials can push costs to $40,000–$60,000+. We provide detailed estimates with material selections so you can adjust scope and budget before committing.",
+          "A standard 300-square-foot composite deck in the Bay Area typically costs $15,000–$35,000 including materials, labor, railings, and permits. Multi-level decks, pergolas, built-in lighting, and premium materials can push costs to $40,000–$60,000+. Costs vary slightly by city and site access. We provide detailed estimates with material selections so you can adjust scope and budget before committing.",
       },
       {
         question: "Composite vs. wood — what's the real difference?",
         answer:
-          "Upfront cost: composite is 20–40% more expensive than pressure-treated wood. Lifetime cost: composite wins by a wide margin. Wood decks in SF need staining every 1–2 years ($500–$1,500 each time), plus board replacement as they rot and warp. Composite needs virtually zero maintenance and lasts 25–50 years. Most homeowners break even on cost within 5–7 years — and never have to spend another weekend staining their deck.",
+          "Upfront cost: composite is 20–40% more expensive than pressure-treated wood. Lifetime cost: composite wins by a wide margin. Wood decks in the Bay Area's coastal climate need staining every 1–2 years ($500–$1,500 each time), plus board replacement as they rot and warp. Composite needs virtually zero maintenance and lasts 25–50 years. Most homeowners break even on cost within 5–7 years — and never have to spend another weekend staining their deck.",
       },
       {
         question: "How long does a composite deck last?",
         answer:
-          "Premium composite decking (Trex Transcend, TimberTech Pro) comes with 25-year fade and stain warranties. The structural lifespan is 50+ years with proper installation. In San Francisco's climate, a well-built composite deck will outlast 3–4 generations of wood decks.",
+          "Premium composite decking (Trex Transcend, TimberTech Pro) comes with 25-year fade and stain warranties. The structural lifespan is 50+ years with proper installation. In the Bay Area's marine climate, a well-built composite deck will outlast 3–4 generations of wood decks.",
       },
       {
-        question: "Do I need a permit to build a deck in San Francisco?",
+        question: "Do I need a permit to build a deck?",
         answer:
-          "Yes. Decks attached to the house, decks over 30 inches above grade, and any deck with structural footings require a building permit from SF DBI. We handle the full permit process — application, plan submission, and inspection scheduling.",
+          "In most Bay Area cities, decks attached to the house, decks over 30 inches above grade, and any deck with structural footings require a building permit. Permit processes vary by jurisdiction — SF's DBI, Marin's Community Development, and each Peninsula and South Bay city have their own procedures. We handle the full permit process for every city we serve.",
       },
       {
-        question: "How long does it take to build a deck?",
+        question: "Do you build decks outside of San Francisco?",
         answer:
-          "Most residential composite deck projects take 1–3 weeks of on-site construction, depending on size, complexity, and site access. Add 4–8 weeks for SF DBI permit processing before construction begins. We schedule your build date when the permit is submitted so there's minimal gap.",
+          "Yes. We serve 31 cities across Marin, San Francisco, San Mateo, Alameda, Contra Costa, and Santa Clara counties. Coastal cities like Sausalito, Pacifica, and Daly City have the same fog and salt-air challenges as SF — composite is especially smart in those areas. We also build throughout the Peninsula and South Bay.",
       },
     ],
   },
@@ -585,23 +590,23 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     slug: "roofing",
     hero: {
       headline:
-        "Roofing Contractor in San Francisco — Installed Right the First Time",
+        "Bay Area Roofing Contractor — Installed Right the First Time",
       subheadline:
-        "A bad roofing job causes more damage than the leak itself. When you need roofing work in San Francisco, you need a crew that knows steep pitches, tight access, and fog-belt weather.",
+        "A bad roofing job causes more damage than the leak itself. From SF's Victorians to Marin's hillside homes and the East Bay's bungalows — you need a crew that knows steep pitches, tight access, and coastal weather.",
       ctaText: "Get Your Free Roof Estimate",
     },
     intro: {
       heading: "Your Roof Doesn't Wait for a Convenient Time",
       paragraphs: [
         "A leaking roof doesn't send a calendar invite. It shows up as a dark stain on your ceiling at 11pm during a rainstorm. Or as mold in your attic that you didn't know about for two years. By the time you see the damage inside your home, the problem above it has been growing for months.",
-        "San Francisco's roofing challenges are unique. The fog belt delivers constant moisture. Victorian and Edwardian homes have steep pitches and complex rooflines that require skill and precision to work on safely. Tight lot lines mean limited staging and access. And California's Title 24 cool roof requirements mean not just any material will pass inspection.",
-        "Gadget Construction has been installing and repairing roofs across San Francisco for over a decade. We've worked on flat commercial roofs in SOMA and steep-pitch Victorians in Pacific Heights. We know which materials perform best in SF's microclimates, and we install them with the precision that steep, complex rooflines demand.",
+        "The Bay Area's roofing challenges are unique. The fog belt delivers constant moisture from Pacifica to Sausalito. Victorian and Edwardian homes in SF, Oakland, and Berkeley have steep pitches and complex rooflines that require skill and precision to work on safely. Tight lot lines across the region mean limited staging and access. And California's Title 24 cool roof requirements mean not just any material will pass inspection.",
+        "Steep-pitch Victorians in SF. Hillside homes in Mill Valley and Tiburon. Craftsman bungalows in Oakland and Berkeley. Mid-century ranches across the Peninsula. Over 12 years, we've worked on every roof type the Bay Area has — and we know which materials perform best in each area's microclimate.",
       ],
     },
     scope: {
       heading: "Our Roofing Services",
       description:
-        "From a single leak repair to a full tear-off and re-roof — we handle every type of roofing project in San Francisco.",
+        "From a single leak repair to a full tear-off and re-roof — we handle every type of roofing project across the Bay Area.",
       items: [
         {
           title: "Complete Re-Roofing",
@@ -621,7 +626,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         {
           title: "Gutter Installation & Repair",
           description:
-            "Seamless aluminum gutters, downspouts, and gutter guards to manage SF's seasonal rain.",
+            "Seamless aluminum gutters, downspouts, and gutter guards to manage the Bay Area's seasonal rain.",
         },
         {
           title: "Skylight Installation",
@@ -647,7 +652,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 3,
         title: "Permits & Material Order",
         description:
-          "We pull the permit through SF DBI and order materials. Your build date gets scheduled.",
+          "We pull the permit through your local building department and order materials. Your build date gets scheduled.",
       },
       {
         number: 4,
@@ -673,13 +678,13 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         icon: "Mountain",
         title: "Steep-Pitch Specialists",
         description:
-          "SF's Victorian and Edwardian homes have complex rooflines. We have the skill and safety protocols to work on them properly.",
+          "Victorians, Edwardians, and hillside homes across the Bay Area have complex rooflines. We have the skill and safety protocols to work on them properly.",
       },
       {
         icon: "Droplets",
-        title: "Fog-Belt Tested Materials",
+        title: "Coastal-Climate Materials",
         description:
-          "We recommend materials proven to perform in SF's constant moisture cycling — not just what's cheapest.",
+          "We recommend materials proven to perform in the Bay Area's constant moisture cycling — not just what's cheapest.",
       },
       {
         icon: "ShieldCheck",
@@ -690,29 +695,29 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     faqs: [
       {
-        question: "How much does a new roof cost in San Francisco?",
-        answer:
-          "A full re-roof for a typical San Francisco single-family home (1,200–1,800 sq ft of roof area) generally costs $15,000–$35,000 depending on material choice, roof complexity, number of layers to remove, and access conditions. Steep-pitch Victorian homes with complex rooflines cost more than simple ranch-style roofs. We provide itemized estimates after a free roof inspection.",
-      },
-      {
-        question: "How long does a roof last in San Francisco?",
-        answer:
-          "Asphalt composition shingles: 20–30 years. Architectural shingles: 30–40 years. Metal roofing: 40–70 years. Tile: 50–100 years. SF's fog and moisture can shorten lifespan compared to drier climates, which is why material selection and proper ventilation matter here more than most places. We recommend materials suited specifically to your neighborhood's microclimate.",
-      },
-      {
         question: "How do I know if I need a new roof or just a repair?",
         answer:
           "Signs you need a full replacement: your roof is 20+ years old, you see widespread curling or missing shingles, there are multiple active leaks, or daylight is visible from the attic. If the damage is isolated to a small area and the rest of the roof is in good shape, a targeted repair may be all you need. We'll give you an honest assessment — we don't upsell replacements when a repair will do.",
       },
       {
+        question: "How much does a new roof cost in the Bay Area?",
+        answer:
+          "A full re-roof for a typical Bay Area single-family home (1,200–1,800 sq ft of roof area) generally costs $15,000–$35,000 depending on material choice, roof complexity, number of layers to remove, and access conditions. Steep-pitch Victorians in SF, Oakland, and Berkeley with complex rooflines cost more than simple ranch-style roofs. We provide itemized estimates after a free roof inspection.",
+      },
+      {
+        question: "How long does a roof last in the Bay Area?",
+        answer:
+          "Asphalt composition shingles: 20–30 years. Architectural shingles: 30–40 years. Metal roofing: 40–70 years. Tile: 50–100 years. The Bay Area's fog and coastal moisture can shorten lifespan compared to drier climates, which is why material selection and proper ventilation matter here more than most places. We recommend materials suited specifically to your neighborhood's microclimate.",
+      },
+      {
         question: "What are Title 24 cool roof requirements?",
         answer:
-          "California's Title 24 building energy code requires certain roof materials to meet solar reflectance and thermal emittance standards — essentially, the roof needs to reflect heat rather than absorb it. This applies to most re-roofing projects in SF. Non-compliant materials won't pass city inspection. We only install Title 24 compliant materials, so you won't have inspection issues.",
+          "California's Title 24 building energy code requires certain roof materials to meet solar reflectance and thermal emittance standards — essentially, the roof needs to reflect heat rather than absorb it. This applies to most re-roofing projects across the Bay Area. Non-compliant materials won't pass city inspection. We only install Title 24 compliant materials, so you won't have inspection issues.",
       },
       {
         question: "Do I need a permit to replace my roof?",
         answer:
-          "Yes. A full re-roof in San Francisco requires a building permit from DBI. Repairs that don't exceed a certain scope may be exempt, but it's always safer to check. We handle all permit applications and inspection scheduling as part of every project.",
+          "Yes. A full re-roof requires a building permit in virtually every Bay Area city. Permit processes vary — SF uses DBI, Marin and each Peninsula and East Bay city have their own building departments. Repairs that don't exceed a certain scope may be exempt, but it's always safer to check. We handle all permit applications and inspection scheduling as part of every project, in every city we serve.",
       },
     ],
   },
@@ -721,17 +726,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     slug: "adu-construction",
     hero: {
       headline:
-        "ADU Construction in San Francisco — Add Space, Value & Income",
+        "ADU Construction — Add Space, Value & Income to Your Property",
       subheadline:
-        "California's ADU laws have made it easier than ever to build a backyard unit. But easier doesn't mean easy. You need a contractor who's done this before — not one figuring it out on your project.",
-      ctaText: "Get Your Free ADU Estimate",
+        "California's ADU laws have made it easier than ever to build a backyard unit. But easier doesn't mean easy. You need a contractor who's navigated the permit process in your city — not one figuring it out on your project.",
+      ctaText: "Check What's Possible on Your Lot",
     },
     intro: {
       heading: "More Space. More Value. More Possibilities.",
       paragraphs: [
-        "Maybe you need space for aging parents. Maybe you want rental income to offset your mortgage. Maybe your adult kid needs a place while they get on their feet. Or maybe you just want to add $200,000+ to your property value. Whatever the reason, an Accessory Dwelling Unit is one of the smartest investments a San Francisco homeowner can make right now.",
-        "California's ADU laws (AB 881, SB 13, AB 68) have dramatically simplified the approval process. San Francisco has streamlined its own rules to encourage ADU development. But 'streamlined' in San Francisco still means navigating DBI permits, planning review, utility hookups, fire setbacks, and building code compliance. The paperwork alone stops most homeowners in their tracks.",
-        "Gadget Construction handles the entire ADU process — from initial feasibility assessment through design, permitting, construction, and final inspection. We've built detached backyard units, garage conversions, and basement ADUs across San Francisco. We know what DBI is looking for, which designs get approved faster, and how to avoid the common mistakes that add months and thousands of dollars to ADU projects.",
+        "Maybe you need space for aging parents. Maybe you want rental income to offset your mortgage. Maybe your adult kid needs a place while they get on their feet. Or maybe you just want to add $200,000+ to your property value. Whatever the reason, an Accessory Dwelling Unit is one of the smartest investments a Bay Area homeowner can make right now.",
+        "California's ADU laws (AB 881, SB 13, AB 68) have dramatically simplified the approval process statewide. But every city interprets these laws slightly differently. SF's DBI, Oakland's Planning & Building, Marin's Community Development, and each Peninsula and South Bay jurisdiction have their own review processes, timelines, and quirks. The paperwork alone stops most homeowners in their tracks.",
+        "Gadget Construction handles the entire ADU process — from initial feasibility assessment through design, permitting, construction, and final inspection. We've built detached backyard units, garage conversions, and basement ADUs across 31 Bay Area cities in 6 counties. We know what each building department is looking for, which designs get approved faster, and how to avoid the common mistakes that add months and thousands of dollars to ADU projects.",
       ],
     },
     scope: {
@@ -777,17 +782,17 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         number: 2,
         title: "Design & Engineering",
         description:
-          "Architectural plans, structural engineering, and Title 24 energy calcs — all prepared for DBI submittal.",
+          "Architectural plans, structural engineering, and Title 24 energy calcs — all prepared for your city's building department.",
       },
       {
         number: 3,
         title: "Permits",
         description:
-          "We submit to SF DBI and manage the plan review process. We know what they're looking for and how to get through review efficiently.",
+          "We submit to your local building department and manage the plan review process. We know what each jurisdiction looks for and how to get through review efficiently.",
       },
       {
         number: 4,
-        title: "Construction",
+        title: "Full Build",
         description:
           "Foundation, framing, plumbing, electrical, HVAC, finishes — a complete build with weekly updates.",
       },
@@ -801,9 +806,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     differentiators: [
       {
         icon: "FileCheck",
-        title: "DBI Permit Specialists",
+        title: "Multi-Jurisdiction Permit Experts",
         description:
-          "We've navigated SF's ADU permit process dozens of times. We know what DBI wants and how to deliver it without delays.",
+          "We've navigated the ADU permit process in cities across 6 Bay Area counties. We know what each building department wants and how to deliver it without delays.",
       },
       {
         icon: "Wrench",
@@ -826,34 +831,34 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
     faqs: [
       {
-        question: "How much does an ADU cost to build in San Francisco?",
+        question: "What size ADU can I build on my property?",
         answer:
-          "ADU costs in San Francisco typically range from $150,000 to $400,000+ depending on type, size, and finishes. Garage conversions start around $100,000–$200,000. Detached new-construction ADUs run $250,000–$400,000+ for a fully finished unit. Costs include design, engineering, permits, site work, construction, and finishes. We provide detailed estimates with line-item breakdowns.",
-      },
-      {
-        question: "How long does it take to build an ADU?",
-        answer:
-          "The full timeline from design to move-in is typically 10–16 months. That breaks down roughly as: design and engineering (1–2 months), DBI permit review (2–4 months), and construction (4–8 months depending on type and size). Garage conversions are on the faster end. New detached construction takes longer. We give you a specific timeline at the estimate phase.",
-      },
-      {
-        question: "What size ADU can I build in San Francisco?",
-        answer:
-          "Under current California law, you can build a detached ADU up to 1,200 sq ft on most single-family lots in San Francisco, regardless of lot size or existing FAR. Junior ADUs (JADUs) can be up to 500 sq ft within your existing home. In many cases, you can build both a JADU and a detached ADU on the same lot. Setback and height requirements vary — we assess your specific lot during the feasibility visit.",
+          "Under current California law, you can build a detached ADU up to 1,200 sq ft on most single-family lots, regardless of lot size or existing FAR. Junior ADUs (JADUs) can be up to 500 sq ft within your existing home. In many cases, you can build both a JADU and a detached ADU on the same lot. Setback and height requirements vary by city — we assess your specific lot and local rules during the feasibility visit.",
       },
       {
         question: "Can I rent out my ADU?",
         answer:
-          "Yes. ADUs in San Francisco can be rented out as long-term rentals. Current market rates for a 1-bedroom ADU in SF range from $2,000 to $3,500+/month depending on location, size, and finishes. Note: ADUs in SF are currently subject to rent control and just-cause eviction protections. We recommend consulting a property management professional for current rental regulations.",
+          "Yes. ADUs can be rented out as long-term rentals across the Bay Area. Market rates for a 1-bedroom ADU range from $1,800 to $3,500+/month depending on city, location, size, and finishes. Note: some cities like SF have additional rent control and just-cause eviction protections for ADUs. We recommend consulting a property management professional for your city's current rental regulations.",
       },
       {
         question: "Do I need to provide parking for an ADU?",
         answer:
-          "No. California law eliminates the parking requirement for ADUs in most cases, including when the ADU is within half a mile of public transit — which covers nearly all of San Francisco. Even if you convert your garage to an ADU, you are not required to replace the lost parking.",
+          "No. California law eliminates the parking requirement for ADUs in most cases, including when the ADU is within half a mile of public transit. Even if you convert your garage to an ADU, you are not required to replace the lost parking. This applies across all Bay Area cities.",
       },
       {
         question: "Will an ADU increase my property value?",
         answer:
-          "Yes. Studies show that a permitted ADU typically adds $200,000–$400,000+ to property value in the San Francisco market — often exceeding the construction cost. The rental income stream also improves your property's investment profile. A fully permitted, well-built ADU is one of the best ROI home improvements you can make in SF.",
+          "Yes. Studies show that a permitted ADU typically adds $200,000–$400,000+ to property value in the Bay Area market — often exceeding the construction cost. The rental income stream also improves your property's investment profile. A fully permitted, well-built ADU is one of the best ROI home improvements you can make in the current market.",
+      },
+      {
+        question: "What does an ADU cost to build?",
+        answer:
+          "ADU costs across the Bay Area typically range from $150,000 to $400,000+ depending on type, size, finishes, and location. Garage conversions start around $100,000–$200,000. Detached new-construction ADUs run $250,000–$400,000+ for a fully finished unit. Costs include design, engineering, permits, site work, construction, and finishes. We provide detailed estimates with line-item breakdowns.",
+      },
+      {
+        question: "How long does an ADU take from start to move-in?",
+        answer:
+          "The full timeline is typically 10–16 months. That breaks down roughly as: design and engineering (1–2 months), permit review (2–4 months depending on the city), and construction (4–8 months depending on type and size). Garage conversions are on the faster end. New detached construction takes longer. Some jurisdictions like Oakland and Berkeley have expedited ADU review. We give you a city-specific timeline at the estimate phase.",
       },
     ],
   },

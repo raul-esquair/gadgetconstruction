@@ -17,7 +17,7 @@ const COMPARISONS = [
   },
   {
     problem: "Permit nightmares you have to figure out alone",
-    solution: "Full SF DBI permit handling — we file, track, and schedule inspections",
+    solution: "Full permit handling in every city we serve — we file, track, and schedule inspections",
   },
   {
     problem: "\"We'll be there Monday\" means maybe Thursday",
@@ -49,7 +49,7 @@ export default function DifferentiationSection() {
 
         <div className="max-w-4xl mx-auto space-y-4">
           {COMPARISONS.map((item, index) => (
-            <RevealOnScroll key={index} animation="fade-up">
+            <RevealOnScroll key={index} animation="bubble">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4 rounded-xl border border-neutral-200 overflow-hidden">
                 <div className="flex items-center gap-3 p-4 bg-neutral-50">
                   <div className="w-7 h-7 rounded-full bg-accent-red/10 flex items-center justify-center shrink-0">

@@ -72,10 +72,10 @@ export default function BeforeAfter({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
 
-        {/* Before image (clipped) */}
+        {/* Before image (clipped — image stays full-width so it aligns with after) */}
         <div
           className="absolute inset-0 overflow-hidden"
-          style={{ width: `${sliderPosition}%` }}
+          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
           <Image
             src={beforeImage}

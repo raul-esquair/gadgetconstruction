@@ -16,7 +16,7 @@ import {
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -39,6 +39,8 @@ export default function ADUConstructionPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
+        backgroundImage="/images/adu-construction-hero.jpg"
+        imageAlt="Wood framing and electrical rough-in during ADU construction in the San Francisco Bay Area"
         openModal
         compact
       />
@@ -55,11 +57,11 @@ export default function ADUConstructionPage() {
       </div>
       <ServiceIntro data={data.intro} />
       <ServiceScope data={data.scope} />
-      <PricingSection items={SERVICE_PRICING["adu-construction"]} heading="ADU Costs in San Francisco" />
+      <PricingSection items={SERVICE_PRICING["adu-construction"]} heading="ADU Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our ADU Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="ADU" />
-      <TestimonialsSection heading="What Our Clients Say" />
+      <ServiceGallery serviceName="ADU" categorySlug="adu-construction" />
+
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock
         heading="Thinking About an ADU?"

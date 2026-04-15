@@ -16,7 +16,7 @@ import {
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -39,6 +39,8 @@ export default function RetainingWallsPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
+        backgroundImage="/images/retaining-walls-hero.jpg"
+        imageAlt="Gadget Construction crew applying stucco finish to a new retaining wall on a Bay Area hillside job site"
         openModal
         compact
       />
@@ -55,11 +57,11 @@ export default function RetainingWallsPage() {
       </div>
       <ServiceIntro data={data.intro} />
       <ServiceScope data={data.scope} />
-      <PricingSection items={SERVICE_PRICING["retaining-walls"]} heading="Retaining Wall Costs in San Francisco" />
+      <PricingSection items={SERVICE_PRICING["retaining-walls"]} heading="Retaining Wall Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Retaining Wall Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Retaining Wall" />
-      <TestimonialsSection heading="What Our Clients Say" />
+      <ServiceGallery serviceName="Retaining Wall" categorySlug="retaining-walls" />
+
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock
         heading="Need a Wall That Won't Quit?"

@@ -74,18 +74,18 @@ components/
     StatsCounter.tsx              # Animated count-up on scroll
     BeforeAfter.tsx               # Draggable image comparison slider
   sections/                       # Full-width page sections
-    Hero.tsx                      # Hero with bg image, Ken Burns, stagger, parallax (desktop only)
+    Hero.tsx                      # Hero with bg image, Ken Burns, stagger, parallax (desktop only), imageAlt prop for SEO
     HeroCTA.tsx                   # Client wrapper for modal trigger in server Hero
     SectionCTA.tsx                # Client wrapper for modal trigger in server sections
     PageHeader.tsx                # Reusable dark page header for non-hero pages (extends behind transparent header)
     TrustBar.tsx                  # Marquee conveyor belt with 5 animated stats (slides up from bottom)
     ServicesGrid.tsx              # Bento grid desktop + stacking cards mobile
     WhyChooseUs.tsx               # 6 differentiator cards with bg image
-    DifferentiationSection.tsx    # Problem vs. Solution comparison rows
+    DifferentiationSection.tsx    # Problem vs. Solution comparison rows (bubble animation)
     ProcessSteps.tsx              # 5-step timeline (horizontal desktop, vertical mobile)
-    GallerySection.tsx            # Homepage gallery preview
+    GallerySection.tsx            # Homepage before/after slider with pixelation scroll-reveal
     TestimonialsSection.tsx       # 3 testimonial cards
-    ServiceArea.tsx               # "31 Cities" section with county badges
+    ServiceArea.tsx               # Interactive "31 Cities" section — clickable counties expand city panels
     CTABlock.tsx                  # Dark CTA with inline multi-step form
     FAQSection.tsx                # Accordion FAQ with JSON-LD schema
     PricingSection.tsx            # Service pricing rows
@@ -109,7 +109,7 @@ lib/                              # Data & utilities
   services-data.ts                # SERVICE_PAGES — full copy for each service page
   service-areas-data.ts           # SERVICE_AREAS — 31 cities with tier, county, FAQs, content
   blog-data.ts                    # BLOG_POSTS array (3 seed posts)
-  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (16 projects)
+  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (18 projects, 4 with real images)
   about-data.ts                   # FOUNDER_STORY, VALUES, CREDENTIALS
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
@@ -125,11 +125,21 @@ public/images/
   logo-white.png                  # Company logo — white version (for dark backgrounds, footer, OG image)
   hero-bg.jpg                     # Homepage hero (crew on roof)
   why-choose-us-bg.jpg            # WhyChooseUs section background (finished roof)
-  adu-construction.jpg            # ADU service card image
-  complete-remodel.jpg            # Remodel service card image
-  composite-decks.jpg             # Deck service card image
-  roofing.jpg                     # Roofing service card image
-  retaining-walls.jpg             # Retaining wall service card image
+  adu-construction.jpg            # ADU service card image (bento grid)
+  complete-remodel.jpg            # Remodel service card image (bento grid)
+  composite-decks.jpg             # Deck service card image (bento grid)
+  concrete-foundations.jpg        # Foundation service card image (bento grid)
+  roofing.jpg                     # Roofing service card image (bento grid)
+  retaining-walls.jpg             # Retaining wall service card image (bento grid)
+  composite-decks-hero.jpg        # Composite decks service page hero
+  roofing-hero.jpg                # Roofing service page hero
+  adu-construction-hero.jpg       # ADU construction service page hero
+  roofing-before.jpg              # Before/after: gazebo roof before replacement
+  roofing-after.jpg               # Before/after: gazebo roof after replacement
+  gallery-composite-deck-pergola.jpg  # Gallery: deck with pergola & LED lighting
+  gallery-composite-deck-spa.jpg      # Gallery: spa deck with hot tub & privacy screens
+  gallery-composite-deck-railing.jpg  # Gallery: wraparound deck with railing
+  gallery-composite-deck-firepit.jpg  # Gallery: entertainer's deck with fire pit
 ```
 
 ### Data Flow
@@ -150,9 +160,11 @@ All content lives in `lib/` as typed constants. No CMS, no external APIs, no dat
 
 **To add a new city:** Add to `SERVICE_AREAS` in service-areas-data.ts with tier (1/2/3), county, FAQs, and content. Static params auto-generate the route.
 
-**To add a gallery project:** Add to `GALLERY_PROJECTS` in gallery-data.ts with categorySlug matching a service slug.
+**To add a gallery project:** Add to `GALLERY_PROJECTS` in gallery-data.ts with categorySlug matching a service slug. Include `image` path for real photos — projects with images auto-appear in ServiceGallery sections and the main gallery page with real photos instead of placeholders.
 
-**To add a service image to the bento grid:** Add to `SERVICE_IMAGES` map in ServicesGrid.tsx.
+**To add a service image to the bento grid:** Add to `SERVICE_IMAGES` map in ServicesGrid.tsx. Also add descriptive SEO alt text to `SERVICE_IMAGE_ALT` map.
+
+**To add a hero image to a service page:** Pass `backgroundImage` and `imageAlt` props to the `<Hero>` component in the service page file.
 
 ## Design System
 
@@ -243,7 +255,7 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - Progress mapped through `easeOutExpo` curve for natural deceleration
 - **One-way only** — once progress hits 100%, element locks via `locked.current = true` and scroll listener disconnects. Scrolling back up does NOT reverse the animation.
 - IntersectionObserver gates the scroll listener — only elements currently in viewport cost CPU per frame
-- Animation types: `fade-up`, `fade-in`, `slide-left`, `slide-right`, `scale-up`, `scale-rotate`
+- Animation types: `fade-up`, `fade-in`, `slide-left`, `slide-right`, `scale-up`, `scale-rotate`, `bubble` (elastic overshoot — easeOutBack with subtle single-bounce settle)
 
 **Layer 3: Binary Trigger (`AnimateOnScroll.tsx` + `useInView.ts`)**
 - Simpler system for section headings and non-grid content
@@ -341,7 +353,7 @@ Premium mobile menu with two visual modes:
 **Desktop (`sm:` and up):** Asymmetric bento layout:
 - 2 large "Featured Service" cards (Complete Remodel + ADU) spanning 2 columns
 - 4 compact cards (Foundations, Retaining Walls, Decks, Roofing) in a row
-- `SERVICE_IMAGES` map controls which cards have real photos vs. logo placeholders
+- `SERVICE_IMAGES` map has real photos for all 6 services; `SERVICE_IMAGE_ALT` provides SEO alt text
 - Large cards slide in from left/right, compact cards scale up via `RevealOnScroll`
 
 **Mobile (`sm:hidden`):** Sticky stacking card effect:
@@ -442,21 +454,34 @@ These were research-backed decisions — don't revert without reason:
 
 - **WhyChooseUs moved from homepage to About page** — homepage had too many trust sections back-to-back
 - **Section heading styles varied** — not every section uses centered heading + orange underline. Differentiation and Gallery use left-aligned eyebrow tags.
-- **Homepage sections (current order):** Hero → TrustBar → Services (bento) → Differentiation → Process → Gallery → Testimonials → Service Area → CTABlock
+- **Homepage sections (current order):** Hero → TrustBar → Services (bento) → Differentiation (bubble animation) → Process → Gallery (before/after slider with pixelation reveal) → Testimonials → Service Area (interactive county explorer) → CTABlock
 - **"Home" removed from nav** — logo handles navigation home
 
 ## What's Pending
 
 - **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
-- **Project photography** — many placeholder images, needs real before/after photos for gallery and service pages
-- **Concrete foundations service image** — only service card without a real photo in the bento grid
+- **Project photography** — most service categories still need real gallery images (remodels, foundations, retaining walls, roofing, ADUs still have placeholders)
 - **Form backend** — API route logs to console, needs email service / CRM integration
 - **Blog featured images** — placeholder divs, needs real images
-- **Gallery project images** — all 16 projects use logo placeholders, need real project photos
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
+- **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
 
 ## What's Done (Recently Completed)
 
+- **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
+- **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
+- **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
+- **Service page hero images** — composite decks, roofing, and ADU pages now have real hero background images with SEO alt text (via new `imageAlt` prop on Hero component)
+- **Before/after slider** — roofing service page and homepage both use interactive BeforeAfter component with gazebo roof replacement photos
+- **BeforeAfter clipPath fix** — uses `clipPath: inset()` instead of `width` for pixel-perfect image alignment
+- **Homepage pixelation reveal** — GallerySection before/after slider pixelates into view via scroll-linked SVG filter (direct DOM manipulation for smoothness)
+- **Interactive county explorer** — ServiceArea component now has clickable county badges that expand a panel with city grid, staggered fade-in, and links to city pages
+- **Bubble animation** — DifferentiationSection rows use `bubble` RevealOnScroll type (easeOutBack single-overshoot settle)
+- **Gallery real images** — 4 composite deck projects now have real photos; 2 old placeholder deck entries removed
+- **ServiceGallery pulls real images** — component accepts `categorySlug` prop and renders real gallery photos when available, falls back to placeholders
+- **SEO alt text system** — `SERVICE_IMAGE_ALT` map in ServicesGrid.tsx provides descriptive, keyword-rich alt text for bento grid images
+- **Scroll restoration** — `history.scrollRestoration = "manual"` in root layout forces scroll-to-top on refresh
+- **Testimonials removed from service pages** — pending hyper-relevant per-service reviews
 - **Real testimonials** — Cindy Olander, Srinivas Ketavarapu, Reeta Prasad (replaced all placeholders)
 - **Transparent header** — fades from transparent to white on scroll, route-aware
 - **Premium mobile menu** — full-screen dark/light takeover with red carpet accent
@@ -488,3 +513,7 @@ These were research-backed decisions — don't revert without reason:
 - **`RevealOnScroll` breaks `position: sticky`** — it wraps children in a div that disrupts the sticky parent relationship. Use inline `IntersectionObserver` instead (see `StickyCard` in ServicesGrid.tsx)
 - **iOS Safari ignores `user-scalable=no`** since iOS 10 — don't try to prevent zoom via viewport meta. Use CSS overflow clipping instead.
 - **OG image on Netlify** — `fs.readFile` and `process.cwd()` don't work in serverless. Embed assets as base64 constants or fetch via absolute URL.
+- **Service pages are regionalized to "Bay Area"** — NOT "San Francisco." All meta titles, headlines, intros, FAQs, and pricing headings say "Bay Area" / "31 cities" / "6 counties." SF is kept as the anchor with specific neighborhoods, but supplemented with Marin, East Bay, Peninsula, South Bay references. Do NOT revert to SF-only framing.
+- **Service page variety** — each page has unique headline structure, CTA text, intro opener, FAQ lead question, and testimonial heading. Do NOT use the same pattern across all 6 pages.
+- **Testimonials removed from service pages** — intentionally removed pending hyper-relevant per-service reviews. Do NOT re-add generic testimonials.
+- **BeforeAfter uses `clipPath`** not `width` — `clipPath: inset(0 X% 0 0)` keeps both images at full container width so `object-cover` crops them identically. Using `width` causes misaligned crops.

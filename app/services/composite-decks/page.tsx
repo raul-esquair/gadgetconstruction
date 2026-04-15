@@ -16,7 +16,7 @@ import {
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -39,6 +39,8 @@ export default function CompositeDecksPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
+        backgroundImage="/images/composite-decks-hero.jpg"
+        imageAlt="Multi-level gray composite deck with stepped design attached to a residential home in the San Francisco Bay Area"
         openModal
         compact
       />
@@ -55,11 +57,11 @@ export default function CompositeDecksPage() {
       </div>
       <ServiceIntro data={data.intro} />
       <ServiceScope data={data.scope} />
-      <PricingSection items={SERVICE_PRICING["composite-decks"]} heading="Composite Deck Costs in San Francisco" />
+      <PricingSection items={SERVICE_PRICING["composite-decks"]} heading="Composite Deck Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Deck Building Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Composite Deck" />
-      <TestimonialsSection heading="What Our Deck Clients Say" />
+      <ServiceGallery serviceName="Composite Deck" categorySlug="composite-decks" />
+
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock
         heading="Ready for a Deck That Lasts?"

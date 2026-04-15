@@ -28,6 +28,17 @@ const SERVICE_IMAGES: Record<string, string> = {
   "composite-decks": "/images/composite-decks.jpg",
   "roofing": "/images/roofing.jpg",
   "retaining-walls": "/images/retaining-walls.jpg",
+  "concrete-foundations": "/images/concrete-foundations.jpg",
+};
+
+// Descriptive alt text for SEO (falls back to service.name)
+const SERVICE_IMAGE_ALT: Record<string, string> = {
+  "concrete-foundations": "Construction workers pouring wet concrete into a rebar-reinforced foundation form on a Bay Area job site",
+  "complete-remodel": "Complete home remodel project by Gadget Construction in the San Francisco Bay Area",
+  "adu-construction": "ADU accessory dwelling unit construction by Gadget Construction in the Bay Area",
+  "composite-decks": "Composite deck building and installation by Gadget Construction",
+  "roofing": "Professional roof installation and repair by Gadget Construction",
+  "retaining-walls": "Retaining wall construction by Gadget Construction in the Bay Area",
 };
 
 // Reorder services: lead with the two highest-value
@@ -72,13 +83,12 @@ function StickyCard({
     <div
       ref={ref}
       className={cn(
-        "sticky pb-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform]",
+        "sticky pb-5 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform]",
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       )}
       style={{
         top: `${stickyTop}px`,
         zIndex: index + 1,
-        transitionDelay: visible ? `${index * 100}ms` : "0ms",
       }}
     >
       {children}
@@ -118,7 +128,7 @@ export default function ServicesGrid() {
                     {SERVICE_IMAGES[service.slug] ? (
                       <Image
                         src={SERVICE_IMAGES[service.slug]}
-                        alt={service.name}
+                        alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                         fill
                         className="object-cover"
                       />
@@ -184,7 +194,7 @@ export default function ServicesGrid() {
                       {SERVICE_IMAGES[service.slug] ? (
                         <Image
                           src={SERVICE_IMAGES[service.slug]}
-                          alt={service.name}
+                          alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -231,7 +241,7 @@ export default function ServicesGrid() {
                     {SERVICE_IMAGES[service.slug] ? (
                       <Image
                         src={SERVICE_IMAGES[service.slug]}
-                        alt={service.name}
+                        alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                       />

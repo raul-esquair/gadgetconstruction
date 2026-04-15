@@ -11,12 +11,13 @@ import {
   ServiceIntro,
   ServiceScope,
   ServiceDifferentiators,
-  ServiceGallery,
 } from "@/components/sections/ServicePageContent";
+import BeforeAfter from "@/components/ui/BeforeAfter";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -39,6 +40,8 @@ export default function RoofingPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
+        backgroundImage="/images/roofing-hero.jpg"
+        imageAlt="Newly installed architectural shingle roof with ridge vents on a Bay Area residential home by Gadget Construction"
         openModal
         compact
       />
@@ -55,11 +58,31 @@ export default function RoofingPage() {
       </div>
       <ServiceIntro data={data.intro} />
       <ServiceScope data={data.scope} />
-      <PricingSection items={SERVICE_PRICING["roofing"]} heading="Roofing Costs in San Francisco" />
+      <PricingSection items={SERVICE_PRICING["roofing"]} heading="Roofing Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Roofing Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Roofing" />
-      <TestimonialsSection heading="What Our Roofing Clients Say" />
+      <SectionWrapper>
+        <Container>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading">
+              See the Difference
+            </h2>
+            <p className="mt-3 text-secondary text-lg">
+              Drag the slider to compare before and after our roof replacement.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <BeforeAfter
+              beforeImage="/images/roofing-before.jpg"
+              afterImage="/images/roofing-after.jpg"
+              beforeAlt="Damaged gazebo roof before replacement by Gadget Construction in the Bay Area"
+              afterAlt="Newly installed shingle roof on gazebo after replacement by Gadget Construction in the Bay Area"
+              caption="Gazebo Roof Replacement — Full tear-off and re-roof with architectural shingles"
+            />
+          </div>
+        </Container>
+      </SectionWrapper>
+
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock
         heading="Need a Roof You Can Count On?"

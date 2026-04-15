@@ -1,20 +1,113 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import SectionCTA from "@/components/sections/SectionCTA";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
-import RevealOnScroll from "@/components/ui/RevealOnScroll";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 
-const PLACEHOLDER_PROJECTS = [
-  { title: "Kitchen Remodel", location: "Noe Valley, SF", category: "Remodel" },
-  { title: "Concrete Foundation", location: "Sunset District, SF", category: "Foundation" },
-  { title: "Composite Deck", location: "Bernal Heights, SF", category: "Deck" },
-  { title: "Retaining Wall", location: "Twin Peaks, SF", category: "Retaining Wall" },
-  { title: "Full Home Remodel", location: "Richmond District, SF", category: "Remodel" },
-  { title: "New Roof Installation", location: "Pacific Heights, SF", category: "Roofing" },
-];
+function PixelReveal({ children }: { children: React.ReactNode }) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const compositeRef = useRef<SVGFECompositeElement>(null);
+  const morphRef = useRef<SVGFEMorphologyElement>(null);
+  const locked = useRef(false);
+  const rafId = useRef<number>(0);
+  const lastSize = useRef(20);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    const content = contentRef.current;
+    const composite = compositeRef.current;
+    const morph = morphRef.current;
+    if (!wrapper || !content || !composite || !morph) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) {
+      content.style.filter = "none";
+      locked.current = true;
+      return;
+    }
+
+    const handleScroll = () => {
+      if (locked.current) return;
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(() => {
+        if (!wrapper || !composite || !morph || !content) return;
+        const rect = wrapper.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const start = vh * 0.95;
+        const end = vh * 0.15;
+        const top = rect.top;
+
+        let progress: number;
+        if (top >= start) {
+          progress = 0;
+        } else if (top <= end) {
+          progress = 1;
+        } else {
+          progress = 1 - (top - end) / (start - end);
+        }
+
+        // Ease out quart for a long smooth tail
+        const eased = 1 - Math.pow(1 - progress, 4);
+
+        // Pixel size: 20 → 0 (fractional for smoothness)
+        const size = 20 * (1 - eased);
+
+        // Only update DOM if the value actually changed enough to matter
+        if (Math.abs(size - lastSize.current) < 0.3 && size > 0.5) return;
+        lastSize.current = size;
+
+        if (size < 0.5) {
+          // Fully resolved — remove filter and lock
+          content.style.filter = "none";
+          locked.current = true;
+          return;
+        }
+
+        // Update SVG filter attributes directly (no React re-render)
+        const cellSize = Math.max(1, size * 2);
+        composite.setAttribute("width", String(cellSize));
+        composite.setAttribute("height", String(cellSize));
+        morph.setAttribute("radius", String(size));
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId.current);
+    };
+  }, []);
+
+  return (
+    <div ref={wrapperRef}>
+      {/* Persistent SVG filter — attributes mutated directly via refs */}
+      <svg className="absolute w-0 h-0" aria-hidden="true">
+        <defs>
+          <filter id="pixel-reveal">
+            <feFlood x="4" y="4" height="2" width="2" />
+            <feComposite ref={compositeRef} width="40" height="40" />
+            <feTile result="a" />
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+            <feMorphology ref={morphRef} operator="dilate" radius="20" />
+          </filter>
+        </defs>
+      </svg>
+      <div
+        ref={contentRef}
+        className="will-change-[filter]"
+        style={{ filter: "url(#pixel-reveal)" }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
 
 interface GallerySectionProps {
   showCTA?: boolean;
@@ -31,35 +124,22 @@ export default function GallerySection({ showCTA = true }: GallerySectionProps) 
           <h2 className="text-3xl md:text-4xl font-extrabold font-heading">
             Every project tells a story
           </h2>
+          <p className="mt-3 text-secondary text-lg max-w-xl">
+            Drag the slider to see the transformation. Real work, real results.
+          </p>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {PLACEHOLDER_PROJECTS.map((project, index) => (
-            <RevealOnScroll key={index} animation="scale-rotate">
-              <div className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent z-10" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/images/logo.png"
-                    alt={project.title}
-                    width={120}
-                    height={40}
-                    className="opacity-10 group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 z-20 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="inline-block text-xs font-semibold text-accent-orange bg-white/90 px-2 py-0.5 rounded-full mb-2">
-                    {project.category}
-                  </span>
-                  <h3 className="text-white font-heading font-bold text-sm">
-                    {project.title}
-                  </h3>
-                  <p className="text-white/70 text-xs mt-0.5">{project.location}</p>
-                </div>
-              </div>
-            </RevealOnScroll>
-          ))}
-        </div>
+        <PixelReveal>
+          <div className="max-w-3xl mx-auto">
+            <BeforeAfter
+              beforeImage="/images/roofing-before.jpg"
+              afterImage="/images/roofing-after.jpg"
+              beforeAlt="Damaged gazebo roof before replacement by Gadget Construction in the Bay Area"
+              afterAlt="Newly installed shingle roof on gazebo after replacement by Gadget Construction in the Bay Area"
+              caption="Gazebo Roof Replacement — Full tear-off and re-roof with architectural shingles"
+            />
+          </div>
+        </PixelReveal>
 
         {showCTA && (
           <div className="text-center mt-10">

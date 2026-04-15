@@ -20,6 +20,7 @@ interface HeroProps {
   showTrustPills?: boolean;
   urgencyText?: string;
   backgroundImage?: string;
+  imageAlt?: string;
   compact?: boolean;
   className?: string;
 }
@@ -35,6 +36,7 @@ export default function Hero({
   showTrustPills = false,
   urgencyText,
   backgroundImage,
+  imageAlt = "",
   compact = false,
   className,
 }: HeroProps) {
@@ -96,7 +98,7 @@ export default function Hero({
         <div ref={parallaxRef} className="absolute inset-0 will-change-transform md:scale-110">
           <Image
             src={backgroundImage}
-            alt=""
+            alt={imageAlt}
             fill
             className="object-cover animate-[ken-burns_20s_ease-in-out_infinite_alternate]"
             priority

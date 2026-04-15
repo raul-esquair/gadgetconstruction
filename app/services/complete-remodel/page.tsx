@@ -16,7 +16,7 @@ import {
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
 
@@ -39,6 +39,8 @@ export default function CompleteRemodelPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
+        backgroundImage="/images/complete-remodel-hero.jpg"
+        imageAlt="Fully remodeled Bay Area kitchen with marble island, shaker cabinetry, pendant lighting, wine bar, and skylight by Gadget Construction"
         openModal
         compact
       />
@@ -55,11 +57,11 @@ export default function CompleteRemodelPage() {
       </div>
       <ServiceIntro data={data.intro} />
       <ServiceScope data={data.scope} />
-      <PricingSection items={SERVICE_PRICING["complete-remodel"]} heading="Remodeling Costs in San Francisco" />
+      <PricingSection items={SERVICE_PRICING["complete-remodel"]} heading="Remodeling Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Remodeling Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Remodeling" />
-      <TestimonialsSection heading="What Our Remodeling Clients Say" />
+      <ServiceGallery serviceName="Remodeling" categorySlug="complete-remodel" />
+
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock
         heading="Ready to Transform Your Home?"

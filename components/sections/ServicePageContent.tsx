@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import type { ServicePageData } from "@/lib/services-data";
+import { GALLERY_PROJECTS } from "@/lib/gallery-data";
 
 interface ServiceIntroProps {
   data: ServicePageData["intro"];
@@ -119,9 +120,14 @@ export function ServiceDifferentiators({ differentiators }: ServiceDifferentiato
 
 interface ServiceGalleryProps {
   serviceName: string;
+  categorySlug?: string;
 }
 
-export function ServiceGallery({ serviceName }: ServiceGalleryProps) {
+export function ServiceGallery({ serviceName, categorySlug }: ServiceGalleryProps) {
+  const projectsWithImages = categorySlug
+    ? GALLERY_PROJECTS.filter((p) => p.categorySlug === categorySlug && p.image)
+    : [];
+
   return (
     <SectionWrapper>
       <Container>
@@ -133,28 +139,49 @@ export function ServiceGallery({ serviceName }: ServiceGalleryProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100"
-            >
-              <Image
-                src="/images/logo.png"
-                alt={`${serviceName} project ${i}`}
-                fill
-                className="object-contain p-16 opacity-10"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-sm text-neutral-400 font-heading font-medium">
-                  Project Photo {i}
-                </p>
-              </div>
-            </div>
-          ))}
+          {projectsWithImages.length > 0
+            ? projectsWithImages.slice(0, 6).map((project) => (
+                <div
+                  key={project.slug}
+                  className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100 group"
+                >
+                  <Image
+                    src={project.image!}
+                    alt={`${project.title} — ${serviceName} project in ${project.location} by Gadget Construction`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-3 left-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm text-white font-heading font-semibold">{project.title}</p>
+                    <p className="text-xs text-white/70">{project.location}</p>
+                  </div>
+                </div>
+              ))
+            : [1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100"
+                >
+                  <Image
+                    src="/images/logo.png"
+                    alt={`${serviceName} project ${i}`}
+                    fill
+                    className="object-contain p-16 opacity-10"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <p className="text-sm text-neutral-400 font-heading font-medium">
+                      Project Photo {i}
+                    </p>
+                  </div>
+                </div>
+              ))}
         </div>
 
         <div className="text-center mt-8">
-          <Button href="/contact" variant="outline">
+          <Button href="/gallery" variant="outline">
             See More of Our Work
           </Button>
         </div>

@@ -21,23 +21,23 @@ export const SERVICES: Service[] = [
     name: "Concrete Foundations & Slabs",
     slug: "concrete-foundations",
     shortDescription:
-      "Engineered for SF's seismic demands and soil conditions",
+      "Engineered for the Bay Area's seismic demands and soil conditions",
     icon: "Landmark",
     metaTitle:
-      "Concrete Foundations & Slabs in San Francisco, CA | Gadget Construction",
+      "Concrete Foundations & Slabs in the Bay Area | Gadget Construction",
     metaDescription:
-      "Expert concrete foundation and slab work in San Francisco. Seismic-compliant engineering, full permit handling, 5-year warranty. Free estimates. CA Lic #1132983.",
+      "Expert concrete foundation and slab work across the San Francisco Bay Area. Seismic-compliant engineering, full permit handling, 5-year warranty. Serving 31 cities. CA Lic #1132983.",
   },
   {
     name: "Retaining Walls",
     slug: "retaining-walls",
     shortDescription:
-      "Structural solutions for San Francisco's steepest terrain",
+      "Structural solutions for the Bay Area's steepest terrain",
     icon: "Layers",
     metaTitle:
-      "Retaining Walls in San Francisco, CA | Gadget Construction",
+      "Retaining Walls in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Professional retaining wall construction in San Francisco. Engineered for hillside lots with integrated drainage. Free estimates. CA Lic #1132983.",
+      "Professional retaining wall construction across the Bay Area — from Marin's hillsides to SF and the Peninsula. Engineered drainage, full permits. CA Lic #1132983.",
   },
   {
     name: "Complete Remodel",
@@ -46,20 +46,20 @@ export const SERVICES: Service[] = [
       "Transform your space without the stress, delays, or budget surprises",
     icon: "Hammer",
     metaTitle:
-      "Home Remodeling in San Francisco, CA | Gadget Construction",
+      "Home Remodeling in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Full-service home remodeling in San Francisco. Kitchen, bathroom, whole-home renovations. Transparent pricing, permit handling, 5-year warranty. Free estimates.",
+      "Full-service home remodeling across the Bay Area. Kitchen, bathroom, whole-home renovations. Transparent pricing, permit handling, 5-year warranty. 31 cities served.",
   },
   {
     name: "Composite Decks",
     slug: "composite-decks",
     shortDescription:
-      "Low-maintenance outdoor living built to handle the fog",
+      "Low-maintenance outdoor living built for coastal Bay Area weather",
     icon: "Fence",
     metaTitle:
-      "Composite Decks in San Francisco, CA | Gadget Construction",
+      "Composite Decks in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Composite deck building in San Francisco. Trex & TimberTech installations built for SF's marine climate. Free estimates. CA Lic #1132983.",
+      "Composite deck building across the Bay Area. Trex & TimberTech installations built for coastal fog and salt air. Serving 31 cities. CA Lic #1132983.",
   },
   {
     name: "Roofing",
@@ -68,9 +68,9 @@ export const SERVICES: Service[] = [
       "Weather-tight protection installed right the first time",
     icon: "Home",
     metaTitle:
-      "Roofing Contractor in San Francisco, CA | Gadget Construction",
+      "Roofing Contractor in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Trusted roofing contractor in San Francisco. Re-roofing, repairs, new construction on steep-pitch Victorian and Edwardian homes. Free estimates. CA Lic #1132983.",
+      "Trusted Bay Area roofing contractor. Re-roofing, repairs, and new construction — from Victorians to modern builds. Serving 31 cities. CA Lic #1132983.",
   },
   {
     name: "ADU Construction",
@@ -79,9 +79,9 @@ export const SERVICES: Service[] = [
       "Add living space, rental income, or property value to your lot",
     icon: "Building2",
     metaTitle:
-      "ADU Construction in San Francisco, CA | Gadget Construction",
+      "ADU Construction in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "ADU contractor in San Francisco. Detached units, garage conversions, in-law suites. Full DBI permit handling. Free estimates. CA Lic #1132983.",
+      "Bay Area ADU contractor serving 31 cities. Detached units, garage conversions, in-law suites. Full permit handling for every jurisdiction. CA Lic #1132983.",
   },
 ];
 
@@ -124,7 +124,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: 3,
     title: "Contract & Permits",
     description:
-      "Once you approve, we handle all permits and paperwork with SF DBI.",
+      "Once you approve, we handle all permits and paperwork with your local building department.",
   },
   {
     number: 4,
@@ -145,7 +145,7 @@ export const DIFFERENTIATORS: Differentiator[] = [
     icon: "FileCheck",
     title: "We Handle Every Permit",
     description:
-      "SF's building department is notoriously complex. We navigate DBI so you don't have to.",
+      "Bay Area building departments are notoriously complex. We navigate permits across all 31 cities we serve so you don't have to.",
   },
   {
     icon: "ShieldCheck",

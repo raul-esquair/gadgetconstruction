@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
-type AnimationType = "fade-up" | "fade-in" | "slide-left" | "slide-right" | "scale-up" | "scale-rotate";
+type AnimationType = "fade-up" | "fade-in" | "slide-left" | "slide-right" | "scale-up" | "scale-rotate" | "bubble";
 
 interface RevealOnScrollProps {
   children: React.ReactNode;
@@ -108,9 +108,27 @@ function getProgressStyles(
   progress: number,
   blur: boolean,
 ): React.CSSProperties {
+  if (animation === "bubble") {
+    // Bubble-gum elastic: inflates past 100% then settles back
+    const elastic = easeOutElastic(progress);
+    // Scale from 0 (tiny dot) to 1 (full size), overshooting to ~1.08
+    const scale = elastic;
+    // Opacity fades in faster so the shape is visible during inflation
+    const opacity = Math.min(1, progress * 3);
+    // Border-radius goes from full circle to rounded rectangle
+    const radius = Math.max(0, (1 - progress) * 40);
+
+    return {
+      opacity,
+      transform: `scale(${scale})`,
+      borderRadius: `${12 + radius}px`,
+      filter: blur ? `blur(${(1 - progress) * 3}px)` : undefined,
+    };
+  }
+
   const eased = easeOutExpo(progress);
 
-  const transforms: Record<AnimationType, string> = {
+  const transforms: Record<string, string> = {
     "fade-up": `translateY(${(1 - eased) * 30}px)`,
     "fade-in": "",
     "slide-left": `translateX(${(1 - eased) * -40}px)`,
@@ -128,4 +146,13 @@ function getProgressStyles(
 
 function easeOutExpo(x: number): number {
   return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+}
+
+// Subtle ease-out with single gentle overshoot — like a bubble settling
+function easeOutElastic(x: number): number {
+  if (x === 0 || x === 1) return x;
+  // easeOutBack with mild overshoot: one clean arc past 1.0, then settle
+  const c1 = 1.3; // overshoot amount (1.7 = default, 1.3 = subtle)
+  const c3 = c1 + 1;
+  return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
 }
