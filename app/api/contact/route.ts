@@ -20,6 +20,19 @@ export async function POST(request: Request) {
       timeStyle: "short",
     });
 
+    // Push notification via ntfy
+    if (process.env.NTFY_TOPIC) {
+      fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC}`, {
+        method: "POST",
+        headers: {
+          Title: `New Lead: ${service}`,
+          Priority: "high",
+          Tags: "hammer,phone",
+        },
+        body: `${name} — ${phone}${email ? ` — ${email}` : ""}${timeline ? `\nTimeline: ${timeline}` : ""}${message ? `\n"${message}"` : ""}`,
+      }).catch(() => {});
+    }
+
     await resend.emails.send({
       from: "Gadget Construction <estimates@gadgetconstructionsf.com>",
       to: process.env.CONTACT_EMAIL!,
