@@ -89,7 +89,8 @@ export default function Header() {
               alt={`${COMPANY.shortName} logo`}
               width={798}
               height={341}
-              className="w-40 md:w-56 h-auto"
+              className="w-40 md:w-56"
+              style={{ height: "auto" }}
               priority
             />
           </Link>
@@ -210,36 +211,72 @@ export default function Header() {
         </div>
       </Container>
 
-      {/* Desktop Services Panel — slides down seamlessly from header */}
+      {/* Desktop Services Panel — megamenu with thumbnails */}
       <div
         className={cn(
           "hidden lg:block overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          isTransparent ? "border-t border-white/10" : "border-t border-neutral-100 bg-white",
-          isServicesOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+          isTransparent
+            ? "border-t border-white/10 bg-primary/40 backdrop-blur-md"
+            : "border-t border-neutral-100 bg-white shadow-lg",
+          isServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         )}
         onMouseEnter={openServices}
         onMouseLeave={closeServices}
       >
         <Container>
-          <div className="flex items-center justify-center gap-8 py-4">
+          <div className="grid grid-cols-3 gap-2 py-5">
             {SERVICES.map((service, svcIdx) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
                 className={cn(
-                  "text-sm font-medium transition-all duration-300 hover:scale-110",
+                  "group flex items-center gap-3 p-3 rounded-xl transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform]",
                   isTransparent
-                    ? "text-white/80 hover:text-white"
-                    : "text-secondary hover:text-accent-orange",
+                    ? "hover:bg-white/10"
+                    : "hover:bg-neutral-50",
                   isServicesOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                 )}
                 style={{
-                  transitionDelay: isServicesOpen ? `${svcIdx * 40 + 50}ms` : "0ms",
-                  transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+                  transitionDelay: isServicesOpen ? `${svcIdx * 50 + 80}ms` : "0ms",
                 }}
                 onClick={() => setIsServicesOpen(false)}
               >
-                {service.name}
+                <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-neutral-200">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="56px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    className={cn(
+                      "absolute inset-0 transition-opacity duration-300",
+                      "bg-gradient-to-t from-primary/50 to-transparent",
+                      "group-hover:opacity-0"
+                    )}
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div
+                    className={cn(
+                      "text-sm font-bold font-heading leading-tight transition-colors duration-200",
+                      isTransparent
+                        ? "text-white"
+                        : "text-primary group-hover:text-accent-orange"
+                    )}
+                  >
+                    {service.name}
+                  </div>
+                  <div
+                    className={cn(
+                      "text-xs mt-1 leading-snug line-clamp-2",
+                      isTransparent ? "text-white/70" : "text-secondary"
+                    )}
+                  >
+                    {service.shortDescription}
+                  </div>
+                </div>
               </Link>
             ))}
           </div>

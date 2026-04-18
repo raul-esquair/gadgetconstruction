@@ -21,16 +21,6 @@ const BENTO_LAYOUT = [
   { large: false },   // Roofing
 ];
 
-// Service-specific images (real photos replace placeholders as available)
-const SERVICE_IMAGES: Record<string, string> = {
-  "complete-remodel": "/images/complete-remodel.jpg",
-  "adu-construction": "/images/adu-construction.jpg",
-  "composite-decks": "/images/composite-decks.jpg",
-  "roofing": "/images/roofing.jpg",
-  "retaining-walls": "/images/retaining-walls.jpg",
-  "concrete-foundations": "/images/concrete-foundations.jpg",
-};
-
 // Descriptive alt text for SEO (falls back to service.name)
 const SERVICE_IMAGE_ALT: Record<string, string> = {
   "concrete-foundations": "Construction workers pouring wet concrete into a rebar-reinforced foundation form on a Bay Area job site",
@@ -125,21 +115,13 @@ export default function ServicesGrid() {
                   className="group block relative overflow-hidden rounded-2xl min-h-[340px] shadow-[0_-2px_20px_rgba(0,0,0,0.25)]"
                 >
                   <div className="absolute inset-0 bg-neutral-200">
-                    {SERVICE_IMAGES[service.slug] ? (
-                      <Image
-                        src={SERVICE_IMAGES[service.slug]}
-                        alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <Image
-                        src="/images/logo.png"
-                        alt={service.name}
-                        fill
-                        className="object-contain p-16 opacity-[0.05]"
-                      />
-                    )}
+                    <Image
+                      src={service.image}
+                      alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
+                      fill
+                      sizes="100vw"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/30" />
 
@@ -191,21 +173,13 @@ export default function ServicesGrid() {
                     className="group relative overflow-hidden rounded-2xl min-h-[280px] md:min-h-[340px] block"
                   >
                     <div className="absolute inset-0 bg-neutral-200">
-                      {SERVICE_IMAGES[service.slug] ? (
-                        <Image
-                          src={SERVICE_IMAGES[service.slug]}
-                          alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
-                      ) : (
-                        <Image
-                          src="/images/logo.png"
-                          alt={service.name}
-                          fill
-                          className="object-contain p-20 opacity-[0.06] group-hover:scale-105 transition-transform duration-700"
-                        />
-                      )}
+                      <Image
+                        src={service.image}
+                        alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 640px"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/20 group-hover:from-primary/95 transition-colors duration-500" />
                     <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-8 min-h-[280px] md:min-h-[340px]">
@@ -238,21 +212,13 @@ export default function ServicesGrid() {
                   className="group relative overflow-hidden rounded-2xl min-h-[200px] block"
                 >
                   <div className="absolute inset-0 bg-neutral-100">
-                    {SERVICE_IMAGES[service.slug] ? (
-                      <Image
-                        src={SERVICE_IMAGES[service.slug]}
-                        alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                    ) : (
-                      <Image
-                        src="/images/logo.png"
-                        alt={service.name}
-                        fill
-                        className="object-contain p-12 opacity-[0.04] group-hover:scale-105 transition-transform duration-700"
-                      />
-                    )}
+                    <Image
+                      src={service.image}
+                      alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent group-hover:from-primary/90 transition-colors duration-500" />
                   <div className="relative z-10 h-full flex flex-col justify-end p-5 md:p-6 min-h-[200px]">

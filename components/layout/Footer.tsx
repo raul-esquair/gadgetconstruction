@@ -28,7 +28,8 @@ export default function Footer() {
                 alt={`${COMPANY.shortName} logo`}
                 width={180}
                 height={56}
-                className="h-14 w-auto"
+                className="h-14"
+                style={{ width: "auto" }}
               />
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed max-w-xs">

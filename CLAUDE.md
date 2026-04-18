@@ -478,7 +478,9 @@ These were research-backed decisions — don't revert without reason:
 ## What's Pending
 
 - **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
-- **Form backend** — API route logs to console, needs email service / CRM integration
+- **Exterior repairs landing page** — dry rot, stucco, and siding need a dedicated service page before launching Google Ads for those services
+- **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live
+- **Call tracking** — Google forwarding number or CallRail for phone lead attribution
 - **Blog featured images** — placeholder divs, needs real images
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
@@ -497,6 +499,8 @@ These were research-backed decisions — don't revert without reason:
 - **All gallery projects have real images** — 16 projects across all 6 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks, 1 roofing (shingles), 3 ADUs (insulation, framing, housewrap). All placeholder entries removed.
 - **ServiceGallery pulls real images** — all 6 service pages pass `categorySlug` to `ServiceGallery`, which filters `GALLERY_PROJECTS` for entries with images. Optional `imagePosition` field controls `object-position` for custom cropping.
 - **Mobile stacking card lag fix** — `transition-all` replaced with `transition-[opacity,transform]` to prevent sticky positioning from being transitioned. Stagger delay removed — natural scroll timing handles card entrance sequencing.
+- **Form backend connected** — Resend email delivery from `estimates@gadgetconstructionsf.com` with all 7 form fields, reply-to, tap-to-call. ntfy push notifications for instant mobile alerts on new leads. Env vars: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NTFY_TOPIC` (set in Netlify).
+- **Google Ads campaign plan** — 28 keywords across 5 ad groups (dry rot, stucco, siding, decks, underpinning), 2 campaigns (urgent repairs + planned projects). Budget: $2,500–$4,000/month Search Ads + $500–$800/month LSAs. Word doc generated for client presentation.
 - **SEO alt text system** — `SERVICE_IMAGE_ALT` map in ServicesGrid.tsx provides descriptive, keyword-rich alt text for bento grid images
 - **Scroll restoration** — `history.scrollRestoration = "manual"` in root layout forces scroll-to-top on refresh
 - **Testimonials removed from service pages** — pending hyper-relevant per-service reviews

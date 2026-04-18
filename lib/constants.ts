@@ -23,6 +23,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Engineered for the Bay Area's seismic demands and soil conditions",
     icon: "Landmark",
+    image: "/images/concrete-foundations.jpg",
     metaTitle:
       "Concrete Foundations & Slabs in the Bay Area | Gadget Construction",
     metaDescription:
@@ -34,6 +35,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Structural solutions for the Bay Area's steepest terrain",
     icon: "Layers",
+    image: "/images/retaining-walls.jpg",
     metaTitle:
       "Retaining Walls in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
@@ -45,6 +47,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Transform your space without the stress, delays, or budget surprises",
     icon: "Hammer",
+    image: "/images/complete-remodel.jpg",
     metaTitle:
       "Home Remodeling in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
@@ -56,6 +59,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Low-maintenance outdoor living built for coastal Bay Area weather",
     icon: "Fence",
+    image: "/images/composite-decks.jpg",
     metaTitle:
       "Composite Decks in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
@@ -67,6 +71,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Weather-tight protection installed right the first time",
     icon: "Home",
+    image: "/images/roofing.jpg",
     metaTitle:
       "Roofing Contractor in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
@@ -78,6 +83,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Add living space, rental income, or property value to your lot",
     icon: "Building2",
+    image: "/images/adu-construction.jpg",
     metaTitle:
       "ADU Construction in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
