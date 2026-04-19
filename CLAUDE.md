@@ -9,7 +9,7 @@ Website for **Gadget Construction Inc.**, a Class B general contractor serving 3
 - **Owner:** Raul
 - **Founded:** 2014 (12+ years)
 - **Projects:** 500+ completed
-- **Phone:** (628) 257-7598
+- **Phone:** (628) 233-3589
 - **License:** CA #1132983
 - **Warranty:** 5-year workmanship
 - **Service area:** 31 cities across Marin, Contra Costa, Alameda, San Francisco, San Mateo, and Santa Clara counties

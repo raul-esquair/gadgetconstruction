@@ -10,7 +10,7 @@ import ContactForm from "@/components/sections/ContactForm";
 export const metadata: Metadata = generatePageMetadata({
   title: "Contact Gadget Construction | Free Estimates in San Francisco",
   description:
-    "Get a free, no-obligation estimate from Gadget Construction. Call (628) 257-7598 or fill out our form. We respond in minutes. CA Lic #1132983.",
+    "Get a free, no-obligation estimate from Gadget Construction. Call (628) 233-3589 or fill out our form. We respond in minutes. CA Lic #1132983.",
   path: "/contact",
 });
 
