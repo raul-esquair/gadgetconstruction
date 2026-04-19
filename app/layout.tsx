@@ -67,7 +67,7 @@ export default function RootLayout({
         {/* CallRail DNI — dynamic number insertion for per-source call attribution */}
         <script
           type="text/javascript"
-          src="https://cdn.callrail.com/companies/480674184/83f392e18e02a212b5b6/12/swap.js"
+          src="https://cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js"
           async
         />
         <EstimateModalProvider>
