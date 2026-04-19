@@ -8,6 +8,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "San Francisco is one of the most expensive remodeling markets in the country. Here's what projects actually cost — with real numbers, not national averages.",
     date: "2026-04-01",
     readingTime: "15 min read",
+    featuredImage: "/images/blog-remodel-cost-sf.png",
     relatedService: "complete-remodel",
     content: `
 ## The Short Answer
@@ -90,6 +91,7 @@ Gadget Construction provides detailed, itemized estimates with no obligation. We
       "Thinking about building an ADU in San Francisco? Here's the complete guide — from California law to DBI permits to actual construction costs.",
     date: "2026-03-15",
     readingTime: "16 min read",
+    featuredImage: "/images/blog-adu-construction-sf.png",
     relatedService: "adu-construction",
     content: `
 ## What Is an ADU?
@@ -218,6 +220,7 @@ No obligation. No pressure. Just the information you need to make a smart decisi
       "Cracks in the walls? Doors that won't close? Here are the warning signs that your foundation needs attention — and what to do about them.",
     date: "2026-03-01",
     readingTime: "12 min read",
+    featuredImage: "/images/blog-foundation-repair-sf.png",
     relatedService: "concrete-foundations",
     content: `
 ## Why San Francisco Homes Are Vulnerable

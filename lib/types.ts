@@ -67,6 +67,13 @@ export interface CityData {
   };
   housingStock: string;
   topServices: string[]; // slugs from SERVICES
+  // Optional per-service anchor text overrides (keyed by service slug).
+  // Used for varied anchor text in internal links — SEO signal for service pages.
+  serviceAnchors?: Partial<Record<string, string>>;
+  // Optional hyper-local paragraph about exterior repair conditions in this city.
+  // Only rendered on cities where exterior-repair content is most SEO-relevant
+  // (coastal, foggy, distinctive housing stock). Drives E-E-A-T Experience signal.
+  exteriorRepairsContext?: string;
   neighboringCities: string[]; // slugs of nearby cities
   faqs: FAQ[];
   metaDescription: string;

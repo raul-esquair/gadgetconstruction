@@ -184,6 +184,39 @@
   }
 }
 
+/* Blueprint grid — drifts diagonally behind hero content */
+@keyframes blueprint-drift {
+  from { background-position: 0 0; }
+  to { background-position: 80px 80px; }
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: blueprint-drift 80s linear infinite;
+  will-change: background-position;
+}
+
+/* Soft red brand-accent glow that breathes behind hero title */
+@keyframes hero-glow-breath {
+  0%, 100% { opacity: 0.18; transform: translate(-50%, 0) scale(1); }
+  50%      { opacity: 0.42; transform: translate(-50%, 0) scale(1.10); }
+}
+
+.hero-red-glow {
+  background: radial-gradient(ellipse at center, rgba(204, 0, 0, 0.9) 0%, transparent 70%);
+  animation: hero-glow-breath 6s ease-in-out infinite;
+  will-change: opacity, transform;
+  filter: blur(24px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blueprint-grid { animation: none; }
+  .hero-red-glow { animation: none; opacity: 0.28; }
+}
+
 /* ============================================
    BASE STYLES
    ============================================ */

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog-data";
@@ -40,13 +41,23 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group block rounded-xl border border-neutral-200 overflow-hidden bg-white transition-all duration-300 hover:shadow-card-hover hover:-translate-y-0.5"
               >
-                {/* Image placeholder */}
-                <div className="aspect-[16/9] bg-neutral-100 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-sm text-neutral-400 font-heading font-medium">
-                      Featured Image
-                    </p>
-                  </div>
+                {/* Featured image */}
+                <div className="aspect-[16/9] bg-neutral-100 relative overflow-hidden">
+                  {post.featuredImage ? (
+                    <Image
+                      src={post.featuredImage}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <p className="text-sm text-neutral-400 font-heading font-medium">
+                        Featured Image
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}

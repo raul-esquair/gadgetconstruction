@@ -722,6 +722,161 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
   },
 
+  "exterior-repairs": {
+    slug: "exterior-repairs",
+    hero: {
+      headline: "Dry Rot, Stucco & Siding Repair Across the Bay Area",
+      subheadline:
+        "Fog, salt air, and wind-driven rain don't stay outside forever. Catch exterior damage early and your home stays watertight for decades. Wait too long and you're rebuilding framing.",
+      ctaText: "Get a Free Exterior Inspection",
+    },
+    intro: {
+      heading: "Your Home's First Line of Defense",
+      paragraphs: [
+        "The Bay Area is one of the hardest climates in the country on a home's exterior. Fog rolls in from the Pacific every afternoon. Coastal moisture settles into every seam. Wind-driven rain hits siding from angles a flat-lot home in Arizona will never see. Salt air eats fasteners and finishes. And most homes here are 50 to 120 years old — built with details that don't meet modern water-management standards.",
+        "What starts as a cosmetic issue — a hairline stucco crack, a soft spot near a window sill, paint peeling on one wall — is almost never just cosmetic. Water is getting in somewhere. By the time damage shows up on the outside, framing behind the wall has usually been rotting for months or years. The $800 patch job you should have done two years ago is now a $12,000 sister-framing rebuild.",
+        "Gadget Construction treats exterior repair as a systems problem, not a patching job. We find where the water is coming in, cut out every piece of rotted wood, replace framing and sheathing where needed, install proper weather-resistive barrier and flashing, then re-clad with stucco, Hardie board, or wood siding — built to last another 30 years. 12+ years, 500+ projects, 31 Bay Area cities across 6 counties. Licensed Class B (CA #1132983). 5-year workmanship warranty on every repair.",
+      ],
+    },
+    scope: {
+      heading: "What We Fix",
+      description:
+        "Three connected problems — dry rot, failing stucco, and aging siding — that share a common cause: water getting past your home's exterior. We fix the cause, not just the visible damage.",
+      items: [
+        {
+          title: "Dry Rot Repair",
+          description:
+            "Window sills, fascia, trim, sheathing, and framing — we cut out every rotted piece and sister in new pressure-treated or kiln-dried lumber. No paint-over patches that come back in 18 months.",
+        },
+        {
+          title: "Stucco Patching & Crack Repair",
+          description:
+            "Sealing hairline cracks, spot patching, and color-coat matching on existing stucco walls. Works best when the underlying system is sound.",
+        },
+        {
+          title: "Full Re-Stucco",
+          description:
+            "Complete removal down to framing, new weather-resistive barrier, wire lath, and a proper three-coat stucco system. The only real fix when stucco has failed behind the surface.",
+        },
+        {
+          title: "Hardie Board & Fiber Cement Siding",
+          description:
+            "James Hardie installation and replacement — the Bay Area's most durable siding for fog, salt air, and fire zones. Full removal, proper flashing, color-matched finish.",
+        },
+        {
+          title: "Wood & Cedar Siding",
+          description:
+            "Clapboard, tongue-and-groove, T1-11, cedar shake, and redwood siding — installed or replaced to match your home's architectural style.",
+        },
+        {
+          title: "Composite & Engineered Siding",
+          description:
+            "LP SmartSide, Diamond Kote, and composite options for homeowners who want wood's look with fiber cement's durability.",
+        },
+      ],
+    },
+    process: [
+      {
+        number: 1,
+        title: "Full Exterior Inspection",
+        description:
+          "We walk the entire envelope of your home — every wall, window, door, fascia, and roof edge. We probe suspect areas for rot and photograph every finding. You get a written report, not a verbal guess.",
+      },
+      {
+        number: 2,
+        title: "Written Scope & Fixed-Price Estimate",
+        description:
+          "Every repair itemized with a fixed price. No 'allowances' that balloon mid-project. No change orders unless we open a wall and find additional damage you agreed to inspect for.",
+      },
+      {
+        number: 3,
+        title: "Permits & Scheduling",
+        description:
+          "Full re-stucco and large siding replacements typically trigger a permit in most Bay Area jurisdictions. We pull them. You don't touch a form.",
+      },
+      {
+        number: 4,
+        title: "Repair & Weatherproofing",
+        description:
+          "We work in the right sequence: remove damage, replace framing and sheathing, install weather-resistive barrier and flashing, then re-clad. Every layer matters — skip one and the next leak is a year away.",
+      },
+      {
+        number: 5,
+        title: "Final Walkthrough & 5-Year Warranty",
+        description:
+          "We walk the finished work with you. You don't sign off until every punch-list item is done. Every repair is backed by our written 5-year workmanship warranty.",
+      },
+    ],
+    differentiators: [
+      {
+        icon: "Search",
+        title: "We Fix the Cause, Not the Symptom",
+        description:
+          "Every exterior repair starts with finding where water is actually getting in. Patch the stucco crack without finding the failed kickout flashing above it, and the damage is back in 18 months. We don't work that way.",
+      },
+      {
+        icon: "FileCheck",
+        title: "Licensed Class B + Full Permit Handling",
+        description:
+          "CA License #1132983. We handle the permit process in SF's DBI, Marin's CDA, Oakland's Planning & Building, and every Peninsula and South Bay jurisdiction we serve. You don't file a single form.",
+      },
+      {
+        icon: "MapPin",
+        title: "Bay Area-Specific Experience",
+        description:
+          "We know what fog does to Sunset Doelgers, what salt air does to Pacifica homes, what rain-driven wind does to Marin hillside siding. 500+ projects across 31 cities — not generic advice.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "5-Year Workmanship Warranty",
+        description:
+          "Every repair, every elevation, every nail. Backed by our written warranty. If something fails, we come back and fix it.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How do I know if it's dry rot or termite damage?",
+        answer:
+          "Dry rot is caused by water and a wood-decaying fungus (Serpula lacrymans and related species). It turns wood soft, spongy, and crumbly — often with visible cracked or cubical patterns. Termite damage usually shows hollow galleries running with the grain, sometimes with mud tubes on the outside. In Bay Area homes, the two frequently occur together: water damage creates softened wood, which termites then exploit. We inspect for both during every exterior repair project and coordinate with licensed pest control if termite treatment is needed before we rebuild.",
+      },
+      {
+        question: "Do I need a permit for stucco repair in San Francisco or the Bay Area?",
+        answer:
+          "Small crack patching and localized stucco repair typically do not require a permit. Full re-stucco of one or more elevations, or any work that disturbs the weather-resistive barrier behind the stucco, generally does require a building permit — in SF (DBI), Oakland, Berkeley, and most Peninsula and Marin jurisdictions. We pull permits for every job where they're required and handle all city inspections. If you're unsure, we clarify permit requirements during the estimate.",
+      },
+      {
+        question: "How much does exterior repair cost in the Bay Area?",
+        answer:
+          "Costs vary widely by scope. Small dry rot patches (single window sill or piece of trim) typically run $800–$2,500. Whole-wall dry rot with framing replacement runs $4,000–$12,000. Stucco crack patching starts around $400–$1,500. A full re-stucco of one elevation runs $4,000–$9,000; a whole-house re-stucco runs $15,000–$35,000. Hardie board siding averages $14–$22 per square foot installed; wood siding runs $10–$16 per square foot. Every project gets an itemized, fixed-price estimate after inspection — no vague allowances.",
+      },
+      {
+        question: "Will you match my existing stucco texture and color?",
+        answer:
+          "Yes — on patch and spot-repair jobs. We match texture (smooth, sand, dash, lace, Santa Barbara, etc.) and work with a color-coat specialist to blend new work with weathered existing stucco. Perfect matches are hard when stucco is more than 10–15 years old because UV and weather change the color over time; in those cases we usually recommend color-coating the full elevation to avoid a visible patch. We discuss the tradeoff during estimate.",
+      },
+      {
+        question: "What's the best siding for San Francisco's fog and salt air?",
+        answer:
+          "For most Bay Area homes, fiber cement (James Hardie board) is the strongest performer. It doesn't rot, doesn't warp, is non-combustible (important in fire-risk zones across Marin, the East Bay hills, and the Peninsula), and holds paint far better than wood in fog conditions. Wood siding — cedar, redwood, clapboard — is period-correct on older homes and performs well when properly maintained, but requires repainting every 5–8 years in coastal conditions. Composite siding (LP SmartSide) is a middle ground. We recommend based on your home's architectural style, location, and maintenance tolerance.",
+      },
+      {
+        question: "Can you repair stucco on Doelger homes, SF rowhouses, or Victorians?",
+        answer:
+          "Yes. Doelger homes (built in the 1930s–1950s across SF's Sunset, Westlake in Daly City, and parts of Pacifica) often have stucco over shiplap sheathing — a construction detail that fails predictably at windows and roof edges. Victorian and Edwardian homes frequently have later stucco applied over the original lath-and-plaster or wood siding, which creates its own set of water intrusion risks. We've worked on all of these construction types across SF, Daly City, Pacifica, and the Avenues, and know where the failure points hide.",
+      },
+      {
+        question: "How long does an exterior repair project take?",
+        answer:
+          "Small dry rot or stucco patches typically take 1–3 days. Whole-elevation stucco re-coat or siding replacement usually runs 1–2 weeks. Full-house re-stucco or a complete re-siding typically takes 2–4 weeks, depending on size and weather. We give you a specific timeline with the estimate and update you weekly. 94% of our projects finish on or ahead of schedule.",
+      },
+      {
+        question: "What happens if you find more damage once you open up the wall?",
+        answer:
+          "We include a contingency for typical surprise findings in every estimate — about 10–15% depending on the home's age. If we open a wall and find significantly more rotted framing than the inspection suggested, we stop, photograph the finding, and give you a written change order before doing any additional work. You approve (or decline) in writing. We never surprise you with a bigger bill at the end of the job.",
+      },
+    ],
+  },
+
   "adu-construction": {
     slug: "adu-construction",
     hero: {
@@ -736,7 +891,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       paragraphs: [
         "Maybe you need space for aging parents. Maybe you want rental income to offset your mortgage. Maybe your adult kid needs a place while they get on their feet. Or maybe you just want to add $200,000+ to your property value. Whatever the reason, an Accessory Dwelling Unit is one of the smartest investments a Bay Area homeowner can make right now.",
         "California's ADU laws (AB 881, SB 13, AB 68) have dramatically simplified the approval process statewide. But every city interprets these laws slightly differently. SF's DBI, Oakland's Planning & Building, Marin's Community Development, and each Peninsula and South Bay jurisdiction have their own review processes, timelines, and quirks. The paperwork alone stops most homeowners in their tracks.",
-        "Gadget Construction handles the entire ADU process — from initial feasibility assessment through design, permitting, construction, and final inspection. We've built detached backyard units, garage conversions, and basement ADUs across 31 Bay Area cities in 6 counties. We know what each building department is looking for, which designs get approved faster, and how to avoid the common mistakes that add months and thousands of dollars to ADU projects.",
+        "Gadget Construction is the builder side of your ADU project. You bring the plans from your architect or designer; we take it from there — constructability review, detailed estimate, permit submittal and plan check support, full construction, and final inspections. We've built detached backyard units, garage conversions, and basement ADUs across 31 Bay Area cities in 6 counties. We know what each building department is looking for, which design choices get flagged in plan check, and how to avoid the common mistakes that add months and thousands of dollars to ADU projects.",
       ],
     },
     scope: {
@@ -765,42 +920,42 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
             "Up to 500 sq ft carved out of your existing home — an efficient option when lot space is limited.",
         },
         {
-          title: "Full Design-Build",
+          title: "Permit & Plan Check Support",
           description:
-            "We coordinate architecture, engineering, and construction under one roof — fewer handoffs, fewer delays, fewer surprises.",
+            "Bring us your approved plans. We submit to your local building department, track the review, and respond to plan check corrections so your project keeps moving.",
         },
       ],
     },
     process: [
       {
         number: 1,
-        title: "Feasibility Assessment",
+        title: "Free Consultation & Feasibility Walk",
         description:
-          "We evaluate your lot, zoning, setbacks, and utility access to determine what type and size of ADU is possible.",
+          "Already have an architect or designer? Bring them in. We walk your lot, review setbacks, height limits, and utility access, and tell you what's realistically buildable before you spend money on plans.",
       },
       {
         number: 2,
-        title: "Design & Engineering",
+        title: "Plan Review & Detailed Estimate",
         description:
-          "Architectural plans, structural engineering, and Title 24 energy calcs — all prepared for your city's building department.",
+          "You bring the approved plans from your architect or designer. We review them for constructability, flag anything that will trip up plan check, and deliver a line-item estimate — no vague allowances, no surprise change orders.",
       },
       {
         number: 3,
-        title: "Permits",
+        title: "Permit Submittal & Plan Check Support",
         description:
-          "We submit to your local building department and manage the plan review process. We know what each jurisdiction looks for and how to get through review efficiently.",
+          "We submit your plans to your local building department, track the review, respond to corrections, and coordinate revisions with your designer. We've shepherded ADU permits through 31 Bay Area cities — we know what each jurisdiction asks for.",
       },
       {
         number: 4,
-        title: "Full Build",
+        title: "Construction",
         description:
-          "Foundation, framing, plumbing, electrical, HVAC, finishes — a complete build with weekly updates.",
+          "Foundation, framing, plumbing, electrical, HVAC, finishes — built by our crew with weekly photo updates and one point of contact from groundbreak to final walkthrough.",
       },
       {
         number: 5,
-        title: "Final Inspection & Certificate of Occupancy",
+        title: "Final Inspections & Certificate of Occupancy",
         description:
-          "All city inspections coordinated. You get a fully permitted, legal dwelling unit ready for move-in or rental.",
+          "We coordinate every city inspection through final sign-off. You get a fully permitted, legal dwelling unit ready for move-in or rental.",
       },
     ],
     differentiators: [
@@ -812,9 +967,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       },
       {
         icon: "Wrench",
-        title: "Full Design-Build",
+        title: "We Work With Your Designer",
         description:
-          "Architecture, engineering, and construction managed by one team. Fewer handoffs mean fewer problems.",
+          "Already have plans or an architect on board? Perfect. We slot in as your builder, review for constructability, and coordinate directly with your design team through permitting and construction.",
       },
       {
         icon: "TrendingUp",
@@ -858,7 +1013,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       {
         question: "How long does an ADU take from start to move-in?",
         answer:
-          "The full timeline is typically 10–16 months. That breaks down roughly as: design and engineering (1–2 months), permit review (2–4 months depending on the city), and construction (4–8 months depending on type and size). Garage conversions are on the faster end. New detached construction takes longer. Some jurisdictions like Oakland and Berkeley have expedited ADU review. We give you a city-specific timeline at the estimate phase.",
+          "Once you have approved plans from your architect or designer, our side of the timeline is typically 6–12 months: permit review (2–4 months depending on the city) plus construction (4–8 months depending on type and size). Garage conversions are on the faster end; new detached construction takes longer. Some jurisdictions like Oakland and Berkeley have expedited ADU review. If you don't have plans yet, add 1–3 months on the front end for design with your architect. We give you a city-specific timeline at the estimate phase.",
       },
     ],
   },

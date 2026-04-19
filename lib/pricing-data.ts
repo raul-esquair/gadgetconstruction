@@ -33,6 +33,15 @@ export const SERVICE_PRICING: Record<string, { service: string; range: string; n
     { service: "Gutter Installation", range: "$2,000–$5,000", note: "Seamless aluminum with guards" },
     { service: "Skylight Installation", range: "$3,000–$8,000", note: "Including flashing and interior finish" },
   ],
+  "exterior-repairs": [
+    { service: "Dry Rot Patch (single window sill / trim piece)", range: "$800–$2,500", note: "Localized repair, no framing replacement" },
+    { service: "Whole-Wall Dry Rot + Framing Replacement", range: "$4,000–$12,000", note: "Sister-framing, new sheathing, WRB, flashing" },
+    { service: "Stucco Crack Patching & Spot Repair", range: "$400–$1,500", note: "Color-coat matching on existing stucco" },
+    { service: "Stucco Re-Coat (one elevation)", range: "$4,000–$9,000", note: "New color coat over sound existing stucco" },
+    { service: "Full Re-Stucco (whole house)", range: "$15,000–$35,000", note: "Three-coat system, new WRB and lath" },
+    { service: "Hardie Board Siding (per sq ft installed)", range: "$14–$22", note: "Includes removal, flashing, and finish" },
+    { service: "Wood / Cedar Siding (per sq ft installed)", range: "$10–$16", note: "Clapboard, T1-11, cedar shake, redwood" },
+  ],
   "adu-construction": [
     { service: "Garage Conversion", range: "$100,000–$200,000", note: "Existing structure to finished unit" },
     { service: "Junior ADU (within home)", range: "$80,000–$150,000", note: "Up to 500 sq ft" },

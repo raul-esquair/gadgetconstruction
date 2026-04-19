@@ -116,6 +116,43 @@ export function serviceSchema(
   };
 }
 
+export function multiServiceGraphSchema(params: {
+  pageUrl: string;
+  services: {
+    id: string;
+    name: string;
+    description: string;
+    serviceType: string;
+    priceRange?: string;
+  }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": params.services.map((s) => ({
+      "@type": "Service",
+      "@id": `${params.pageUrl}#${s.id}`,
+      name: s.name,
+      description: s.description,
+      serviceType: s.serviceType,
+      provider: {
+        "@type": "GeneralContractor",
+        name: "Gadget Construction Inc.",
+        telephone: "+16282333589",
+        url: "https://gadgetconstructionsf.com",
+      },
+      areaServed: [
+        { "@type": "City", name: "San Francisco" },
+        { "@type": "AdministrativeArea", name: "Marin County" },
+        { "@type": "AdministrativeArea", name: "Alameda County" },
+        { "@type": "AdministrativeArea", name: "Contra Costa County" },
+        { "@type": "AdministrativeArea", name: "San Mateo County" },
+        { "@type": "AdministrativeArea", name: "Santa Clara County" },
+      ],
+      ...(s.priceRange && { priceRange: s.priceRange }),
+    })),
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",

@@ -11,6 +11,7 @@ import {
   CityIntro,
   CityInsight,
   CityServices,
+  CityExteriorRepairsContext,
 } from "@/components/sections/CityPageContent";
 import FAQSection from "@/components/sections/FAQSection";
 import NeighboringCities from "@/components/sections/NeighboringCities";
@@ -89,6 +90,7 @@ export default async function CityPage({ params }: Props) {
       <CityIntro city={city} />
       <CityInsight city={city} />
       <CityServices city={city} />
+      <CityExteriorRepairsContext city={city} />
 
       <FAQSection
         faqs={city.faqs}

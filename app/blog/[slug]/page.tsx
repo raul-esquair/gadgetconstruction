@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
-import PageHeader from "@/components/sections/PageHeader";
 import Button from "@/components/ui/Button";
 import JsonLd, { articleSchema } from "@/components/seo/JsonLd";
 import CTABlock from "@/components/sections/CTABlock";
@@ -56,25 +56,72 @@ export default async function BlogPostPage({ params }: Props) {
         })}
       />
 
-      <PageHeader
-        title={post.title}
-        preContent={
-          <div className="flex items-center gap-4 text-sm text-white/50 mb-4">
-            <span className="flex items-center gap-1.5">
-              <Calendar size={14} />
-              {new Date(post.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Clock size={14} />
-              {post.readingTime}
-            </span>
+      {/* Blog post hero — centered editorial layout */}
+      <section
+        data-page-header
+        className="relative overflow-hidden bg-primary text-white -mt-20 md:-mt-24 pt-28 md:pt-32 pb-12 md:pb-16"
+      >
+        {/* Drifting blueprint grid */}
+        <div
+          className="absolute inset-0 blueprint-grid pointer-events-none"
+          aria-hidden="true"
+        />
+        {/* Breathing red brand glow behind title */}
+        <div
+          className="absolute left-1/2 top-32 md:top-40 w-[min(900px,90vw)] h-[320px] hero-red-glow pointer-events-none"
+          aria-hidden="true"
+        />
+
+        <Container className="relative">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Category · Date · Reading time */}
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm mb-6">
+              {relatedService && (
+                <Link
+                  href={`/services/${relatedService.slug}`}
+                  className="text-accent-orange font-semibold hover:text-accent-orange-dark transition-colors font-heading"
+                >
+                  {relatedService.name}
+                </Link>
+              )}
+              {relatedService && <span className="text-white/30">·</span>}
+              <time className="text-white/60" dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </time>
+              <span className="text-white/30">·</span>
+              <span className="text-white/60">{post.readingTime}</span>
+            </div>
+
+            {/* Title */}
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] font-heading"
+              style={{ color: "#ffffff" }}
+            >
+              {post.title}
+            </h1>
           </div>
-        }
-      />
+        </Container>
+
+        {/* Featured image — same dark canvas, no card chrome */}
+        {post.featuredImage && (
+          <Container narrow className="relative mt-10 md:mt-14">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                priority
+                className="object-cover"
+              />
+            </div>
+          </Container>
+        )}
+      </section>
 
       <div className="bg-white border-b border-neutral-200">
         <Container narrow>

@@ -89,6 +89,18 @@ export const SERVICES: Service[] = [
     metaDescription:
       "Bay Area ADU contractor serving 31 cities. Detached units, garage conversions, in-law suites. Full permit handling for every jurisdiction. CA Lic #1132983.",
   },
+  {
+    name: "Exterior Repairs",
+    slug: "exterior-repairs",
+    shortDescription:
+      "Dry rot, stucco, and siding repair for Bay Area homes built to survive fog and salt air",
+    icon: "Wrench",
+    image: "/images/why-choose-us-bg.jpg",
+    metaTitle:
+      "Dry Rot, Stucco & Siding Repair in the Bay Area | Gadget Construction",
+    metaDescription:
+      "Expert exterior repairs across the San Francisco Bay Area — dry rot removal, stucco repair, and Hardie/wood/composite siding. Licensed Class B contractor. 5-year warranty. 31 cities served. CA Lic #1132983.",
+  },
 ];
 
 interface NavLink {

@@ -29,6 +29,7 @@ const SERVICE_IMAGE_ALT: Record<string, string> = {
   "composite-decks": "Composite deck building and installation by Gadget Construction",
   "roofing": "Professional roof installation and repair by Gadget Construction",
   "retaining-walls": "Retaining wall construction by Gadget Construction in the Bay Area",
+  "exterior-repairs": "Dry rot, stucco, and siding exterior repair by Gadget Construction on a Bay Area home",
 };
 
 // Reorder services: lead with the two highest-value

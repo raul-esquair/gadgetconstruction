@@ -224,7 +224,7 @@ export default function Header() {
         onMouseLeave={closeServices}
       >
         <Container>
-          <div className="grid grid-cols-3 gap-2 py-5">
+          <div className="grid grid-cols-3 xl:grid-cols-4 gap-2 py-5">
             {SERVICES.map((service, svcIdx) => (
               <Link
                 key={service.slug}
