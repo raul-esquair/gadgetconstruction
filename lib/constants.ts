@@ -3,8 +3,8 @@ import type { Service, Testimonial, ProcessStep, Differentiator, Stat } from "./
 export const COMPANY = {
   name: "Gadget Construction Inc.",
   shortName: "Gadget Construction",
-  phone: "(628) 233-3589",
-  phoneHref: "tel:+16282333589",
+  phone: "(628) 257-7598",
+  phoneHref: "tel:+16282577598",
   tagline: "Built Right. On Time. Guaranteed.",
   license: "1132983",
   founded: 2014,
