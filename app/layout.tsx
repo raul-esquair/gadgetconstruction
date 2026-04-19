@@ -64,6 +64,12 @@ export default function RootLayout({
           data-uuid="9d4b41e8-8d39-4a1c-86c6-d44ba9e99b3c"
           {...({ nowprocket: "", "nitro-exclude": "" } as Record<string, string>)}
         />
+        {/* CallRail DNI — dynamic number insertion for per-source call attribution */}
+        <script
+          type="text/javascript"
+          src="https://cdn.callrail.com/companies/480674184/83f392e18e02a212b5b6/12/swap.js"
+          async
+        />
         <EstimateModalProvider>
           <a
             href="#main-content"
