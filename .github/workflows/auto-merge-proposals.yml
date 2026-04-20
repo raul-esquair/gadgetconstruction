@@ -1,0 +1,86 @@
+name: Auto-merge open content proposal PRs
+
+# Safety net that closes the content-planning loop. If the proposal PR opened
+# by auto-propose-batch.yml on Tuesday still hasn't been merged by Thursday
+# night, this workflow auto-merges it. That triggers merge-proposed-briefs.yml
+# to migrate the briefs into post-queue.json so the Friday draft automation
+# sees them.
+#
+# Contract:
+#   - Leave proposal PR open → implicit approval → auto-merges Thursday night
+#   - Close proposal PR      → explicit rejection → no briefs migrated
+#   - Edit proposal PR       → edits captured, still auto-merges
+#
+# Full weekly cadence (fully automated):
+#   Tue 16:00 UTC  → auto-propose-batch.yml      (opens proposal PR if queue low)
+#   Fri 07:00 UTC  → auto-merge-proposals.yml    (this workflow, merges pending proposal)
+#   Fri 07:01 UTC  → merge-proposed-briefs.yml   (triggered on push — migrates to queue)
+#   Fri 16:00 UTC  → weekly-draft.yml            (generates draft from fresh queue)
+#   Sun 23:00 PT   → auto-merge-drafts.yml       (merges pending draft PR)
+#   Mon 14:00 UTC  → weekly-publish.yml          (Netlify rebuild — post goes live)
+
+on:
+  schedule:
+    # Friday 07:00 UTC = Thursday 23:00 PST / Friday 00:00 PDT
+    # Chosen 9 hours before the Friday 16:00 UTC draft automation so merged
+    # briefs have time to migrate via merge-proposed-briefs.yml before drafting.
+    - cron: '0 7 * * 5'
+  workflow_dispatch:
+
+jobs:
+  auto-merge:
+    name: Squash-merge pending proposal PRs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Find and merge open proposal PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # List open PRs whose head branch starts with proposals/
+          prs=$(gh pr list \
+            --repo raul-esquair/gadgetconstruction \
+            --state open \
+            --base main \
+            --json number,headRefName,title \
+            --jq '.[] | select(.headRefName | startswith("proposals/")) | .number')
+
+          if [ -z "$prs" ]; then
+            echo "No open proposal PRs. Nothing to auto-merge."
+            exit 0
+          fi
+
+          # If multiple proposal PRs are open, only merge the first (oldest).
+          # Merging a second would conflict with content/proposed-briefs.json
+          # that the merge-proposed-briefs.yml workflow just cleared.
+          first_pr=$(echo "$prs" | head -n 1)
+
+          echo "──────────────────────────────────────────"
+          echo "Auto-merging proposal PR #$first_pr"
+          echo "──────────────────────────────────────────"
+
+          gh pr comment "$first_pr" --body "⏰ **Auto-merged**
+
+This proposal was still open at the Thursday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The briefs will migrate into \`post-queue.json\` via \`merge-proposed-briefs.yml\`, and the Friday 9am PT draft automation will then pick up the next one.
+
+If this was a mistake:
+- Revert the merge commit on \`main\` within the next few hours (before Friday 9am PT draft fires)
+- Or edit \`content/post-queue.json\` directly to remove the unwanted briefs"
+
+          gh pr merge "$first_pr" --squash --delete-branch --admin
+
+          # Log any remaining proposal PRs that were skipped
+          remaining=$(echo "$prs" | tail -n +2)
+          if [ -n "$remaining" ]; then
+            echo ""
+            echo "ℹ️  Additional open proposal PRs were skipped (one at a time to avoid file conflicts):"
+            for other in $remaining; do
+              echo "   - PR #$other"
+            done
+            echo "These will be picked up next Friday or can be merged manually."
+          fi
+
+          echo ""
+          echo "Auto-merge pass complete."

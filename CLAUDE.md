@@ -139,11 +139,12 @@ scripts/                          # CLI tools (Node + Python)
   next-content-batch/             # /next-content-batch → propose 4 new briefs
 
 .github/workflows/                # Automation
+  auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
+  auto-merge-proposals.yml        # Fri 07:00 UTC — auto-merge pending proposal PRs
+  merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue
   weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
   weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
-  auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
-  merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue
 
 public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
@@ -565,14 +566,26 @@ These were research-backed decisions — don't revert without reason:
 
 Complete end-to-end pipeline for AI-generated blog posts. Runs on GitHub Actions with secrets for all external APIs. Never modify `content/post-queue.json` directly unless adding manually — the skills handle writes.
 
-### Weekly cadence
+### Full weekly cadence (all phases automated, human review optional)
 
 ```
-Friday   16:00 UTC  (~9am PDT)  → weekly-draft.yml     — AI drafts next queued post, opens PR, emails review copy
-Weekend              (~60 hrs)   → human review window  — edit, merge, or close the PR
-Sunday   07:00 UTC  (~11pm PT)  → auto-merge-drafts.yml — squash-merges any still-open drafts/* PR
-Monday   14:00 UTC  (~7am PDT)  → weekly-publish.yml   — triggers Netlify rebuild; posts with date<=today go live
+Tuesday  16:00 UTC  (~9am PDT)  → auto-propose-batch.yml    — if queue runway ≤ 4, AI proposes 4 new briefs, opens proposal PR, emails
+Tue-Thu                          → human review window for  — edit, merge, or close the proposal PR
+                                    proposal PR (optional)
+Friday   07:00 UTC  (~11pm Thu) → auto-merge-proposals.yml  — squash-merges any still-open proposals/* PR
+                                    → merge triggers merge-proposed-briefs.yml → briefs migrate to post-queue.json
+Friday   16:00 UTC  (~9am PDT)  → weekly-draft.yml          — AI drafts next queued post, opens draft PR, emails review copy
+Fri-Sun                          → human review window for   — edit, merge, or close the draft PR
+                                    draft PR (optional)
+Sunday   07:00 UTC  (~11pm PT)  → auto-merge-drafts.yml     — squash-merges any still-open drafts/* PR
+Monday   14:00 UTC  (~7am PDT)  → weekly-publish.yml        — triggers Netlify rebuild; posts with date<=today go live
+Tuesday  16:00 UTC              → back to the top
 ```
+
+**Default-yes contract for both review stages:**
+- Leave PR open past the deadline → implicit approval (auto-merges on schedule)
+- Close PR → explicit rejection (nothing happens; next cycle may re-propose or re-draft)
+- Edit PR → your edits captured; still auto-merges unless closed
 
 ### The Friday draft pipeline (`scripts/generate-post.ts`)
 
