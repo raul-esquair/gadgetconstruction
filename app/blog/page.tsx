@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
-import { BLOG_POSTS } from "@/lib/blog-data";
+import { getPublishedPosts } from "@/lib/blog-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
@@ -18,6 +18,7 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function BlogPage() {
+  const posts = getPublishedPosts();
   return (
     <>
       <PageHeader
@@ -35,7 +36,7 @@ export default function BlogPage() {
       <SectionWrapper>
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {BLOG_POSTS.map((post) => (
+            {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

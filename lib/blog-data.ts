@@ -1,5 +1,20 @@
 import type { BlogPost } from "./types";
 
+/**
+ * A post is "published" when its `date` field is today or earlier.
+ * Future-dated posts stay in the array but are filtered out of routing,
+ * listings, sitemaps, and schemas until a build runs on/after that date.
+ * Combined with a scheduled Netlify rebuild, this lets you pre-write posts
+ * and have them auto-appear on their target date.
+ */
+export function isPublished(post: BlogPost, now: Date = new Date()): boolean {
+  return new Date(post.date).getTime() <= now.getTime();
+}
+
+export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
+  return BLOG_POSTS.filter((post) => isPublished(post, now));
+}
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "home-remodel-cost-san-francisco-2026",

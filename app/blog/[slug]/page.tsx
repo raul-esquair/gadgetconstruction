@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
-import { BLOG_POSTS } from "@/lib/blog-data";
+import { BLOG_POSTS, isPublished, getPublishedPosts } from "@/lib/blog-data";
 import { SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -18,13 +18,13 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+  return getPublishedPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
-  if (!post) return {};
+  if (!post || !isPublished(post)) return {};
 
   return generatePageMetadata({
     title: post.title,
@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
 
-  if (!post) notFound();
+  if (!post || !isPublished(post)) notFound();
 
   const relatedService = post.relatedService
     ? SERVICES.find((s) => s.slug === post.relatedService)
