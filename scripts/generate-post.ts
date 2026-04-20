@@ -367,7 +367,7 @@ Review, edit inline, and merge this PR before the scheduled date.
   run(`git commit -F ${commitMsgPath}`);
   // Force push — previous stale drafts for this slug are always overwritten.
   // Any unmerged draft branch is treated as abandoned; merge before rerunning to preserve.
-  run(`git push --force-with-lease origin ${branch}`);
+  run(`git push --force origin ${branch}`);
 
   const prBody = `## 📝 Auto-generated draft for ${brief.scheduledDate}
 
@@ -400,10 +400,26 @@ If the draft is bad, close this PR without merging. The brief stays in the queue
 `;
   const prBodyPath = "/tmp/draft-pr-body.md";
   writeFileSync(prBodyPath, prBody);
-  const prUrl = run(
-    `gh pr create --title "📝 Draft: ${brief.title.slice(0, 80)}" --body-file ${prBodyPath}`,
-  );
-  console.log(`PR created: ${prUrl}`);
+  // Check if a PR already exists for this branch (rerun scenario)
+  let prUrl: string;
+  const existingPr = (() => {
+    try {
+      return run(`gh pr list --head ${branch} --json url -q '.[0].url'`);
+    } catch {
+      return "";
+    }
+  })();
+
+  if (existingPr) {
+    console.log(`PR already exists at ${existingPr} — updating body instead of creating`);
+    run(`gh pr edit ${existingPr} --body-file ${prBodyPath}`);
+    prUrl = existingPr;
+  } else {
+    prUrl = run(
+      `gh pr create --title "📝 Draft: ${brief.title.slice(0, 80)}" --body-file ${prBodyPath}`,
+    );
+    console.log(`PR created: ${prUrl}`);
+  }
   return prUrl;
 }
 
