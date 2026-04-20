@@ -22,7 +22,7 @@ import OpenAI from "openai";
 import { marked } from "marked";
 import { Resend } from "resend";
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -426,6 +426,23 @@ async function sendDraftEmail(
 </body>
 </html>`;
 
+  // Build attachments: the featured image (if present) is attached as a real file
+  // so recipients can save/forward it, in addition to rendering inline.
+  let attachments: Array<{ filename: string; content: string }> | undefined;
+  if (imagePath) {
+    const localPath = resolve(REPO_ROOT, "public" + imagePath);
+    if (existsSync(localPath)) {
+      const buf = readFileSync(localPath);
+      attachments = [
+        {
+          filename: `blog-${brief.slug}.png`,
+          content: buf.toString("base64"),
+        },
+      ];
+      console.log(`Attaching ${localPath} (${buf.length} bytes) to email`);
+    }
+  }
+
   const resend = new Resend(apiKey);
   const fromAddress = process.env.DRAFT_FROM_EMAIL || "Gadget Drafts <drafts@gadgetconstructionsf.com>";
 
@@ -434,6 +451,7 @@ async function sendDraftEmail(
     to: recipients,
     subject: `📝 New blog draft ready: ${brief.title}`,
     html,
+    ...(attachments && { attachments }),
   });
 
   if (error) {
