@@ -64,7 +64,7 @@ jobs:
           MODEL: ${{ inputs.model || 'claude-sonnet-4-6' }}
           # Comma-separated list of reviewers who get the HTML email.
           # Edit this list to change recipients — no new secret needed.
-          DRAFT_REVIEW_EMAILS: "raulariasp3@gmail.com,admin@esquair.com"
+          DRAFT_REVIEW_EMAILS: "admin@esquair.com,info@gadgetconstructionsf.com"
           # Uses the same verified sender as the contact form to avoid adding a new Resend verified identity
           DRAFT_FROM_EMAIL: "Gadget Drafts <estimates@gadgetconstructionsf.com>"
         run: |
