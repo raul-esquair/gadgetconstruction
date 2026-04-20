@@ -17,6 +17,146 @@ export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "composite-deck-cost-san-francisco",
+    title: "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
+    excerpt:
+      "Composite decks in San Francisco typically run $15,000 to $60,000+. Here's what actually drives the range — with pricing from 500+ Bay Area projects, not national averages.",
+    date: "2026-04-27",
+    readingTime: "10 min read",
+    relatedService: "composite-decks",
+    content: `
+## The Short Answer
+
+Composite decks in San Francisco typically run $15,000–$60,000+ depending on size, site conditions, and materials. Most mid-sized decks (around 300 sq ft) fall between $15,000 and $35,000 fully installed. SF prices run 25–40% above national averages — because of permit requirements, steep-lot access costs, and labor rates that reflect what licensed tradespeople actually earn in this market. Here's what actually drives the range, with pricing from 500+ Bay Area projects, not national averages.
+
+## Price Ranges by Project Type
+
+The tier you land in depends mostly on size, elevation, and how much structural work the site demands. Here's how the numbers break down.
+
+### Standard 300 sq ft Deck ($15,000–$35,000)
+
+This is the most common project we build. A 300 sq ft ground-level or low-elevation deck on a flat or gently sloped lot — typical in Noe Valley, the Sunset, and the flatter blocks of the Richmond — runs $15,000–$35,000 installed. That price includes demolition of the existing deck or surface, new pressure-treated framing, composite decking boards, a code-compliant railing system, and all fasteners and flashing.
+
+Material choice moves you around within this range. Trex Enhance (entry-level Trex line) installed runs roughly $14–$17 per sq ft for materials alone. TimberTech AZEK — a better choice for the fog belt — runs $18–$22 per sq ft. Budget 6–8 weeks from contract to completion on a project this size, assuming permits are pulled and approved.
+
+### Multi-Level Hillside Deck ($35,000–$60,000+)
+
+Bernal Heights, Twin Peaks, and the upper blocks of Noe Valley are where this tier lives. A multi-level deck on a sloped lot adds significant cost — not because composite decking is more expensive, but because the structural work underneath it is. You're looking at taller posts, more complex framing, cross-bracing, deeper footings, and often engineered plans stamped by a licensed structural engineer.
+
+A 500–700 sq ft two-level deck on a steep Bernal Heights lot typically runs $40,000–$60,000. The structural package alone — footings, posts, beams, and engineering — can represent 35–45% of total project cost before a single decking board goes down.
+
+### Deck with Pergola and Lighting ($25,000–$50,000)
+
+Adding a pergola to a standard deck moves the budget to $25,000–$50,000 depending on scale and materials. A cedar or Douglas fir pergola over a 300 sq ft Trex deck runs $8,000–$15,000 more than the deck alone. Aluminum pergola systems (powder-coated, low-maintenance) run $12,000–$20,000 installed. Integrated LED lighting — recessed into the decking surface, post-cap lights, or string-light posts — adds $2,000–$5,000 depending on the circuit layout and how much electrical work is needed at the panel. Timeline: 8–10 weeks from contract.
+
+### Railing-Only Replacement ($3,000–$8,000)
+
+If your deck structure is solid but the railing is failing — rusted posts, cracked balusters, a top rail that wobbles — a railing-only swap is often the right call. Don't let a contractor sell you a full deck replacement when only the railing needs to go. We've replaced railings on 15-year-old Doelger decks in the Sunset where the framing was still perfectly sound. Cable railing systems run $4,000–$8,000 for a standard 40–60 linear foot run. Aluminum balusters with a composite top rail run $3,000–$6,000.
+
+## What Drives Composite Deck Costs in San Francisco
+
+### Material Selection (Trex, TimberTech, Fiberon)
+
+Composite decking isn't a commodity — the products vary significantly in how they hold up to fog, salt air, and UV exposure. That matters in SF more than almost anywhere else.
+
+| Material | Installed Cost (materials only) | Fade Warranty | Best For |
+|---|---|---|---|
+| Trex Enhance | $14–$17/sq ft | 25 years | Budget-conscious, inland SF |
+| Trex Transcend | $16–$20/sq ft | 25 years | Mid-range, most SF homes |
+| TimberTech AZEK | $18–$22/sq ft | 50 years | Coastal / fog belt |
+| Fiberon Paramount | $16–$20/sq ft | 50 years | Value premium |
+| Fiberon Good Life | $13–$16/sq ft | 25 years | Entry-level |
+
+For homes in the Outer Sunset, Outer Richmond, Pacifica (Rockaway, Linda Mar), and Sausalito waterfront, TimberTech AZEK or Fiberon Paramount are the right call. Both carry 50-year fade and stain warranties and use a full PVC cap that resists the moisture cycling that breaks down cheaper composites. Trex Enhance installed in a fog-zone deck can show surface degradation in 7–10 years. AZEK won't.
+
+### Site Access and Demolition
+
+This is the cost variable most homeowners don't see coming. If your home has no side-yard access, a staircase-only rear approach, or sits on a block where a delivery truck can't park, material handling costs increase — sometimes by $2,000–$5,000. Demo on a hillside lot where debris has to be hand-carried out adds labor. Demo of a concrete or pavers patio adds disposal fees ($500–$1,500 depending on volume).
+
+Twin Peaks and upper Bernal Heights are the hardest sites we work in SF. Narrow streets, steep driveways, and no staging area mean every board goes up by hand. Factor that in when comparing bids.
+
+### Structural Requirements (Hillside, Multi-Level, Elevated)
+
+Any deck elevated more than 30 inches above grade in San Francisco triggers a permit with the SF Department of Building Inspection (DBI) — and structural engineering. Even a deck that stays under 30 inches may need engineering if it's cantilevered, multi-level, or attached to a hillside home with complex load paths.
+
+Structural engineering fees run $2,000–$5,000 for a residential deck project. Foundation upgrades — replacing undersized existing footings or pouring new concrete piers — add $1,500–$4,000. Post-and-beam upgrades for a hillside deck can add $5,000–$15,000 depending on height and span.
+
+### SF DBI Permits (Decks Over 30 Inches)
+
+Decks over 30 inches above grade require a building permit from SF DBI. The permit process includes plan submittal, plan check review, and field inspections at framing and final. Budget $1,500–$4,000 for permit fees on a typical residential deck, plus your contractor's time to prepare and manage the submittal.
+
+Decks under 30 inches above grade generally don't require a permit — but the work still needs to meet code. We pull permits on every project that requires one. Skipping a permit on an elevated deck isn't just a code violation — it's a liability issue when you sell.
+
+### Add-Ons: Pergolas, Lighting, Railings
+
+Each add-on has a real cost impact:
+
+- **Pergola (wood):** $8,000–$15,000 installed
+- **Pergola (aluminum louvered system):** $15,000–$25,000 installed
+- **LED recessed deck lighting:** $150–$250 per fixture installed, plus electrical panel work ($500–$1,500)
+- **Cable railing system:** $90–$130 per linear foot installed
+- **Glass panel railing:** $150–$220 per linear foot installed
+- **Composite/aluminum railing:** $60–$100 per linear foot installed
+- **Gas line for fire feature:** $1,500–$4,000 depending on distance to existing line
+
+Don't price these separately and assume you can mix and match contractors. The lighting circuit, framing, and structural attachments need to be coordinated from the start.
+
+## Hidden Costs Most Contractors Don't Tell You About
+
+A low bid often means someone isn't including something. Here's what sandbags deck budgets in SF:
+
+**1. Dry rot at the ledger board.** The ledger board is where your deck attaches to the house. It's also where water infiltrates, especially on older homes with inadequate kickout flashing (the metal diverter that keeps water from running behind the siding at the deck connection). We find significant [dry rot at deck ledger boards](/services/exterior-repairs) on roughly 30% of the deck replacements we do in the Sunset and Richmond. Repairing it adds $1,500–$6,000 depending on how deep it's spread into the rim joist and framing. You won't know until the old deck comes off.
+
+**2. Undersized existing footings.** Pre-1990 decks were often built on footings that don't meet current code — undersized diameter, insufficient depth for frost or seismic, or poured without rebar. SF DBI now requires footings that meet current code when an existing deck is replaced with a permitted one. New footings: $300–$600 each, typically 4–8 per deck.
+
+**3. Inadequate drainage.** Flat lots in the Sunset and Mission often have drainage that runs toward the house rather than away from it. If your deck is covering an area with poor drainage, you'll want to address the grading before the deck goes in — otherwise you're trapping moisture under the structure. Budget $1,000–$3,000 for drainage corrections.
+
+**4. Electrical for lighting.** Many homeowners price out a deck with lighting, then discover their panel is already at capacity or the circuit run requires opening interior walls. Running a new 20-amp circuit for deck lighting from the panel can run $800–$2,500 depending on distance and obstacles.
+
+**5. HOA review fees.** Many SF condos and TIC (tenants in common) buildings require HOA or co-owner approval before exterior construction. HOA review processes can take 30–60 days and sometimes require architectural drawings. Budget 4–6 weeks for this process if it applies to your property.
+
+**6. Gas line for fire pit or fire table.** Adding a gas fire feature is increasingly popular on SF decks — evenings here are cold even in July. Running a gas line from your existing service to a deck fire feature adds $1,500–$4,000. If your meter is undersized, add more.
+
+**7. Old fasteners and hardware.** On a full deck replacement, corroded joist hangers, split blocking, and stripped ledger bolts all need to go. This isn't optional — it's a code requirement during a permitted rebuild. Budget $500–$1,500 for hardware replacement on an older structure.
+
+## Real Project Examples from 500+ Bay Area Projects
+
+Numbers are more useful when they're attached to a real project. Here are three from our work.
+
+**Project 1: 320 sq ft Trex Transcend deck, Noe Valley, flat lot**
+A homeowner on a flat lot in Noe Valley needed to replace a rotted redwood deck off the main living level. Site access was clean — driveway to the rear yard. Demo took half a day. We found moderate dry rot at the ledger board (added $2,200 to scope). New pressure-treated framing, Trex Transcend Spiced Rum boards, aluminum railing with cable infill, and permit through SF DBI. Total: $22,000. Timeline: 5 weeks from contract to final inspection.
+
+**Project 2: 600 sq ft TimberTech AZEK multi-level deck, Bernal Heights hillside**
+An upper Bernal Heights home needed a full rebuild — two levels, 9-foot elevation on the lower level, zero side-yard access. Engineering was required. We poured 6 new concrete piers, framed a post-and-beam substructure with cross-bracing, and installed TimberTech AZEK Vintage Weathered Teak throughout. The no-access situation added roughly $3,500 in manual handling time. Structural engineering: $3,200. Total: $48,000. Timeline: 9 weeks.
+
+**Project 3: 450 sq ft Fiberon Paramount deck with pergola and LED lighting, Twin Peaks**
+A Twin Peaks homeowner wanted a usable outdoor space that worked in the wind and fog — which rules out anything fragile. We built a Fiberon Paramount deck in Hazel finish with a cedar pergola, 8 recessed LED deck lights on a dedicated 20-amp circuit, and glass panel railing for wind protection. The permit process through SF DBI took 6 weeks for plan check. Total: $39,000. Timeline: 11 weeks including permitting.
+
+You can see more of [our composite deck projects](/gallery) to get a sense of materials and finished quality.
+
+## How to Budget for Your SF Deck
+
+**Get 2–3 estimates from licensed Class B contractors** — not handymen, not unlicensed crews. Composite [composite deck construction](/services/composite-decks) is structural work. It requires permits, inspections, and someone who carries liability insurance.
+
+**Compare apples to apples.** Ask every bidder to specify: the exact decking product and line (not just "Trex"), whether demo is included, whether permits are included, whether electrical and drainage are in scope. A $28,000 bid that excludes permits and electrical might be more expensive than a $32,000 all-in bid.
+
+**Understand the per-square-foot math — but don't let it fool you.** At $50–$80 per installed sq ft (the realistic Bay Area range for mid-grade composite), a 300 sq ft deck runs $15,000–$24,000 before add-ons. But fixed costs — permit fees, site setup, demolition, ledger work — don't scale with square footage. A 150 sq ft deck doesn't cost half as much as a 300 sq ft deck.
+
+**Budget 10% contingency for hidden damage.** Especially on any deck attached to a pre-1980 home. Dry rot, corroded hardware, and undersized footings are common. A 10% contingency on a $25,000 project is $2,500 — cheap insurance.
+
+**Know what a fixed-price estimate means.** We provide written, line-item estimates that specify every material, every scope item, and every permit cost — no allowances that expand later. If we find dry rot at the ledger after demo starts, we document it and bring you a change order with a clear price before proceeding. No surprises after the fact.
+
+Our 5-year workmanship warranty covers every [composite deck construction](/services/composite-decks) project we complete, in writing — not as a verbal promise.
+
+## Ready to Know What Your Specific Deck Will Cost?
+
+Every site in San Francisco is different — flat lots in Noe Valley price differently than hillside lots in Bernal Heights or fog-zone locations in the Outer Sunset. The only way to get a real number is a site visit where we can see your access, assess the existing structure, and put a line-item price in writing.
+
+We provide detailed, line-item estimates after a free site visit — no allowances, no surprises. You'll know exactly what material we're using, what's included in demo, whether permits are needed, and what the contingency looks like before any work begins.
+    `.trim(),
+  },
+
+  {
     slug: "home-remodel-cost-san-francisco-2026",
     title: "How Much Does a Home Remodel Cost in San Francisco? (2026 Guide)",
     excerpt:
