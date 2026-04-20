@@ -18,6 +18,8 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import { marked } from "marked";
+import { Resend } from "resend";
 import { execSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -206,13 +208,135 @@ ${escapedContent}
   console.log(`Inserted post into ${BLOG_DATA_PATH}`);
 }
 
+// ──────────── Email draft for review ────────────
+
+async function sendDraftEmail(
+  brief: Brief,
+  markdownContent: string,
+  prUrl: string,
+): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.log("RESEND_API_KEY not set — skipping email.");
+    return;
+  }
+
+  const recipientsRaw = process.env.DRAFT_REVIEW_EMAILS;
+  if (!recipientsRaw) {
+    console.log("DRAFT_REVIEW_EMAILS not set — skipping email.");
+    return;
+  }
+  const recipients = recipientsRaw
+    .split(",")
+    .map((e) => e.trim())
+    .filter(Boolean);
+
+  const renderedBody = await marked.parse(markdownContent);
+
+  const readingTime = Math.max(1, Math.round(brief.targetWordCount / 250));
+  const wordCount = brief.targetWordCount.toLocaleString();
+  const scheduledLabel = new Date(brief.scheduledDate).toLocaleDateString(
+    "en-US",
+    { weekday: "long", month: "long", day: "numeric", year: "numeric" },
+  );
+
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeHtml(brief.title)}</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color:#222222; line-height:1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
+  .header { background:#222222; color:#ffffff; padding: 20px 24px; border-radius: 12px 12px 0 0; }
+  .badge { display:inline-block; background:#CC0000; color:#fff; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:4px 10px; border-radius: 999px; }
+  .header h2 { margin: 12px 0 0; font-size: 20px; font-weight: 700; color:#ffffff; }
+  .meta-grid { background: #ffffff; padding: 20px 24px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; }
+  .meta-row { display:flex; font-size: 13px; margin-bottom: 8px; }
+  .meta-label { width: 140px; color:#6b7280; font-weight:600; }
+  .meta-value { color:#222222; }
+  .actions { background:#ffffff; padding: 16px 24px 24px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; border-radius: 0 0 12px 12px; }
+  .btn-primary { display:inline-block; background:#CC0000; color:#ffffff !important; text-decoration:none; padding: 12px 22px; border-radius: 8px; font-weight:700; font-size: 14px; }
+  .btn-secondary { display:inline-block; margin-left: 8px; color:#222222 !important; text-decoration:none; padding: 12px 22px; border-radius: 8px; border:1px solid #d4d4d8; font-weight:600; font-size: 14px; }
+  .article { background:#ffffff; margin-top: 24px; padding: 32px 28px; border: 1px solid #e5e5e5; border-radius: 12px; }
+  .article h1 { font-size: 28px; line-height: 1.2; margin: 0 0 16px; color:#222222; }
+  .article h2 { font-size: 22px; line-height: 1.25; margin: 32px 0 12px; color:#222222; border-bottom: 2px solid #f4f4f5; padding-bottom: 8px; }
+  .article h3 { font-size: 17px; line-height: 1.3; margin: 22px 0 8px; color:#222222; }
+  .article p { margin: 0 0 14px; color: #444444; font-size: 15px; }
+  .article ul, .article ol { margin: 0 0 14px; padding-left: 22px; color:#444444; }
+  .article li { margin-bottom: 6px; }
+  .article a { color: #CC0000; text-decoration: underline; }
+  .article strong { color: #222222; }
+  .article table { width:100%; border-collapse: collapse; margin: 14px 0 18px; }
+  .article th, .article td { border: 1px solid #e5e5e5; padding: 8px 10px; text-align: left; font-size: 14px; vertical-align: top; }
+  .article th { background:#fafafa; font-weight:700; }
+  .article blockquote { margin: 14px 0; padding: 10px 16px; border-left: 3px solid #CC0000; background: #fafafa; color:#444444; }
+  .footer { text-align:center; color:#9ca3af; font-size: 12px; margin-top: 32px; }
+  .footer a { color:#9ca3af; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <span class="badge">Draft for review</span>
+      <h2>${escapeHtml(brief.title)}</h2>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-row"><div class="meta-label">Scheduled to publish</div><div class="meta-value">${escapeHtml(scheduledLabel)}</div></div>
+      <div class="meta-row"><div class="meta-label">Primary keyword</div><div class="meta-value"><code>${escapeHtml(brief.primaryKeyword)}</code></div></div>
+      <div class="meta-row"><div class="meta-label">Target service</div><div class="meta-value">/services/${escapeHtml(brief.relatedService)}</div></div>
+      <div class="meta-row"><div class="meta-label">Word count</div><div class="meta-value">${wordCount} words — ~${readingTime} min read</div></div>
+      <div class="meta-row"><div class="meta-label">Geographic focus</div><div class="meta-value">${escapeHtml(brief.geoFocus)}</div></div>
+    </div>
+    <div class="actions">
+      <a class="btn-primary" href="${prUrl}">Review &amp; merge on GitHub</a>
+      <a class="btn-secondary" href="${prUrl}">Open PR in browser</a>
+    </div>
+    <div class="article">
+      ${renderedBody}
+    </div>
+    <div class="footer">
+      Auto-generated by Gadget Construction's weekly blog pipeline. Close the PR to reject this draft.<br>
+      Merging publishes the post on ${escapeHtml(scheduledLabel)}.
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const resend = new Resend(apiKey);
+  const fromAddress = process.env.DRAFT_FROM_EMAIL || "Gadget Drafts <drafts@gadgetconstructionsf.com>";
+
+  const { data, error } = await resend.emails.send({
+    from: fromAddress,
+    to: recipients,
+    subject: `📝 New blog draft ready: ${brief.title}`,
+    html,
+  });
+
+  if (error) {
+    console.error("Resend error:", error);
+    throw new Error(`Failed to send draft email: ${JSON.stringify(error)}`);
+  }
+  console.log(`Draft email sent to ${recipients.join(", ")} (id: ${data?.id})`);
+}
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 // ──────────── Git operations ────────────
 
 function run(cmd: string): string {
   return execSync(cmd, { cwd: REPO_ROOT, encoding: "utf8" }).trim();
 }
 
-function createDraftPR(brief: Brief): void {
+function createDraftPR(brief: Brief): string {
   const branch = `drafts/${brief.slug}`;
 
   // Configure git identity for CI
@@ -272,8 +396,11 @@ If the draft is bad, close this PR without merging. The brief stays in the queue
 `;
   const prBodyPath = "/tmp/draft-pr-body.md";
   writeFileSync(prBodyPath, prBody);
-  run(`gh pr create --title "📝 Draft: ${brief.title.slice(0, 80)}" --body-file ${prBodyPath}`);
-  console.log(`PR created.`);
+  const prUrl = run(
+    `gh pr create --title "📝 Draft: ${brief.title.slice(0, 80)}" --body-file ${prBodyPath}`,
+  );
+  console.log(`PR created: ${prUrl}`);
+  return prUrl;
 }
 
 // ──────────── Main ────────────
@@ -311,7 +438,14 @@ async function main(): Promise<void> {
   saveQueue(updatedQueue);
   console.log(`Updated ${next.slug} status: queued → drafted`);
 
-  createDraftPR(next);
+  const prUrl = createDraftPR(next);
+
+  try {
+    await sendDraftEmail(next, content, prUrl);
+  } catch (err) {
+    // Don't fail the whole workflow if email delivery breaks — PR still exists
+    console.error("Draft email failed but PR is live:", err);
+  }
 
   console.log("\n✓ Done. Review and merge the PR before the scheduled publish date.");
 }

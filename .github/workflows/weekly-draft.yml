@@ -59,8 +59,14 @@ jobs:
         if: steps.check-queue.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MODEL: ${{ inputs.model || 'claude-sonnet-4-6' }}
+          # Comma-separated list of reviewers who get the HTML email.
+          # Edit this list to change recipients — no new secret needed.
+          DRAFT_REVIEW_EMAILS: "raulariasp3@gmail.com,admin@esquair.com"
+          # Uses the same verified sender as the contact form to avoid adding a new Resend verified identity
+          DRAFT_FROM_EMAIL: "Gadget Drafts <estimates@gadgetconstructionsf.com>"
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY secret is missing. Add it under Settings → Secrets and variables → Actions."
