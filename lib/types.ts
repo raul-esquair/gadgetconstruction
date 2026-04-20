@@ -30,6 +30,10 @@ export interface BlogPost {
   featuredImage?: string;
   relatedService?: string;
   readingTime: string;
+  // Optional structured FAQ block for PAA capture + AI retrieval.
+  // Rendered as a dedicated section on the blog detail page and serialized
+  // as FAQPage schema for Google / LLM answer engines.
+  faqs?: FAQ[];
 }
 
 export interface ProcessStep {

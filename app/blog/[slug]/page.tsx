@@ -10,7 +10,7 @@ import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import Button from "@/components/ui/Button";
-import JsonLd, { articleSchema } from "@/components/seo/JsonLd";
+import JsonLd, { articleSchema, faqSchema } from "@/components/seo/JsonLd";
 import CTABlock from "@/components/sections/CTABlock";
 
 interface Props {
@@ -55,6 +55,9 @@ export default async function BlogPostPage({ params }: Props) {
           url: `/blog/${post.slug}`,
         })}
       />
+      {post.faqs && post.faqs.length > 0 && (
+        <JsonLd data={faqSchema(post.faqs)} />
+      )}
 
       {/* Blog post hero — centered editorial layout */}
       <section

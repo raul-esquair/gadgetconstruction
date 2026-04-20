@@ -32,6 +32,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "..");
 const QUEUE_PATH = resolve(REPO_ROOT, "content/post-queue.json");
 const STYLE_PATH = resolve(REPO_ROOT, "content/style-reference.md");
+const INVENTORY_PATH = resolve(REPO_ROOT, "content/site-inventory.json");
 const BLOG_DATA_PATH = resolve(REPO_ROOT, "lib/blog-data.ts");
 
 const MODEL = process.env.MODEL || "claude-sonnet-4-6";
@@ -141,6 +142,189 @@ Output requirements:
 Do not wrap the output in backticks. Do not include a title line. Begin with "## The Short Answer".`;
 }
 
+// ──────────── Pass 2: SEO critique + revision + FAQ generation ────────────
+
+interface SiteInventoryEntry {
+  url: string;
+  type: "service" | "city" | "blog" | "static";
+  title: string;
+  summary: string;
+  tags?: string[];
+}
+
+interface RevisionResult {
+  revisedPost: string;
+  faqs: Array<{ question: string; answer: string }>;
+  seoNotes: string;
+}
+
+function buildCritiqueSystemPrompt(styleGuide: string): string {
+  return `You are an SEO editor for Gadget Construction's blog. Your job is to take a draft blog post and return a revised version that is measurably better for SEO — specifically targeting Google's 2026 ranking signals and AI answer-engine citation (ChatGPT, Perplexity, Google AI Overviews).
+
+You do NOT rewrite for voice — the draft's voice is already locked by the style guide below. You edit for SEO structure, internal linking, passage-level self-containment, and you ADD a FAQ section.
+
+<style_guide>
+${styleGuide}
+</style_guide>
+
+# SEO Critique Checklist — apply ALL of these
+
+## Keyword integration
+- Primary keyword appears in the first 100 words of the post
+- Primary keyword appears in at least 2 H2 headings (or close semantic variants)
+- Primary keyword appears in the final/CTA section
+- Every secondary keyword from the brief appears at least twice in the body
+- LSI keywords and semantic variations are present (synonyms, related terms that humans actually use)
+- No keyword stuffing — density stays under 2% for primary keyword
+
+## Passage-level self-containment (critical for LLM retrieval)
+- Every H2 section begins with a direct-answer sentence that resolves its own heading as a standalone statement
+- No references to "as mentioned above," "earlier in this post," or similar
+- Each H2 can be pulled out and read independently by an LLM and still make sense
+- Paragraphs are concrete, not vague
+
+## Internal linking (THIS IS THE BIGGEST LEVER)
+- The post must have 12–20 contextual internal links for a ~2,500-word post (scale for length)
+- Include EVERY link specified in the brief's internalLinks array AS A MINIMUM
+- Then select 8–15 ADDITIONAL links from the site inventory provided below, choosing the most contextually relevant targets for the specific topic and cities/services mentioned in the post
+- Place at least 3 of these internal links in the top 30% of the post (opening paragraphs and first 2 H2 sections)
+- Vary anchor text: less than 25% exact-match keyword anchors, use a mix of partial-match, LSI variations, branded, and natural-language anchors
+- Never use "click here" or generic anchors
+- Every URL you link must appear in the site inventory — do NOT invent URLs
+
+## FAQ section (append to post before final CTA)
+- Add a new ## Frequently Asked Questions section
+- 5–7 questions formatted as ### question? headers
+- Each answer 40–60 words, starting with a direct-answer sentence
+- Questions should mirror how real Bay Area homeowners phrase their queries to Google or ChatGPT
+- Cover diverse dimensions: cost, timeline, materials, permits, risks, specific local housing types
+- Include primary keyword naturally in at least 2 answers
+- The FAQ section is in addition to the brief's outline, not replacing any existing section
+
+## Local E-E-A-T signals
+- At least 3 specific Bay Area neighborhoods named (not "the Bay Area" generically)
+- Specific permit jurisdiction mentioned by name (SF DBI, Marin CDA, etc.)
+- Housing era / architectural style referenced (Doelger, Eichler, Victorian, Craftsman, etc.)
+- Specific climate or terrain detail (fog belt, clay soil, WUI fire zone, etc.)
+
+## Voice guardrails
+- No banned phrases from the style guide ("we pride ourselves on," stock language, etc.)
+- Contractions preserved
+- Short sentences — most under 20 words
+- Pain-first framing somewhere in the opening
+
+# Output format — this is strict
+
+Respond with EXACTLY three XML-tagged blocks, in order. No preamble, no commentary between them.
+
+<revised_post>
+(the full revised markdown of the post, including the new FAQ section before the CTA)
+</revised_post>
+
+<faqs>
+[
+  { "question": "How much does X cost?", "answer": "..." },
+  { "question": "How long does X take?", "answer": "..." },
+  ...
+]
+</faqs>
+
+<seo_notes>
+(a short bulleted list of the specific SEO improvements you made to the draft — keyword additions, new links added from inventory, self-containment fixes, FAQ generation decisions. 5-10 bullets max. This is for debugging — it goes in the PR body.)
+</seo_notes>`;
+}
+
+function buildCritiqueUserPrompt(
+  brief: Brief,
+  draft: string,
+  inventory: SiteInventoryEntry[],
+): string {
+  return `Review and revise the draft below.
+
+<brief>
+${JSON.stringify(brief, null, 2)}
+</brief>
+
+<draft>
+${draft}
+</draft>
+
+<site_inventory>
+${JSON.stringify(inventory, null, 2)}
+</site_inventory>
+
+Apply the full SEO critique checklist. Return the three XML-tagged blocks per the output format.`;
+}
+
+async function critiqueAndRevise(
+  brief: Brief,
+  draft: string,
+): Promise<RevisionResult> {
+  const styleGuide = readFileSync(STYLE_PATH, "utf8");
+  const inventory: SiteInventoryEntry[] = JSON.parse(
+    readFileSync(INVENTORY_PATH, "utf8"),
+  );
+
+  console.log(
+    `Running SEO critique pass (inventory: ${inventory.length} URLs)...`,
+  );
+
+  const client = new Anthropic();
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 16_000,
+    system: buildCritiqueSystemPrompt(styleGuide),
+    messages: [
+      { role: "user", content: buildCritiqueUserPrompt(brief, draft, inventory) },
+    ],
+  });
+
+  const text = response.content.find((b) => b.type === "text");
+  if (!text || text.type !== "text") {
+    throw new Error("No text in critique response");
+  }
+
+  const usage = response.usage;
+  const approxCost =
+    (usage.input_tokens * 3 + usage.output_tokens * 15) / 1_000_000;
+  console.log(
+    `Critique done. Input: ${usage.input_tokens} | Output: ${usage.output_tokens} | ~$${approxCost.toFixed(3)}`,
+  );
+
+  return parseCritiqueResponse(text.text);
+}
+
+function parseCritiqueResponse(raw: string): RevisionResult {
+  const postMatch = raw.match(/<revised_post>([\s\S]*?)<\/revised_post>/);
+  const faqsMatch = raw.match(/<faqs>([\s\S]*?)<\/faqs>/);
+  const notesMatch = raw.match(/<seo_notes>([\s\S]*?)<\/seo_notes>/);
+
+  if (!postMatch) {
+    throw new Error(
+      "Critique response missing <revised_post> block. Raw output:\n" +
+        raw.slice(0, 400),
+    );
+  }
+
+  let faqs: Array<{ question: string; answer: string }> = [];
+  if (faqsMatch) {
+    try {
+      faqs = JSON.parse(faqsMatch[1].trim());
+    } catch (err) {
+      console.warn(
+        "Failed to parse FAQ JSON — continuing without structured FAQs:",
+        err,
+      );
+    }
+  }
+
+  return {
+    revisedPost: postMatch[1].trim(),
+    faqs,
+    seoNotes: notesMatch?.[1]?.trim() ?? "",
+  };
+}
+
 // ──────────── Call Claude ────────────
 
 async function generatePost(brief: Brief): Promise<string> {
@@ -175,11 +359,20 @@ async function generatePost(brief: Brief): Promise<string> {
 
 // ──────────── Insert into blog-data.ts ────────────
 
-function insertPostIntoBlogData(brief: Brief, content: string): void {
+function insertPostIntoBlogData(
+  brief: Brief,
+  content: string,
+  faqs: Array<{ question: string; answer: string }> = [],
+): void {
   const file = readFileSync(BLOG_DATA_PATH, "utf8");
 
   // Escape backticks in generated content so the TS template literal is valid
   const escapedContent = content.replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+
+  const faqsField =
+    faqs.length > 0
+      ? `    faqs: ${JSON.stringify(faqs, null, 2).replace(/\n/g, "\n    ")},\n`
+      : "";
 
   const newEntry = `  {
     slug: "${brief.slug}",
@@ -189,7 +382,7 @@ function insertPostIntoBlogData(brief: Brief, content: string): void {
     date: "${brief.scheduledDate}",
     readingTime: "${Math.max(1, Math.round(brief.targetWordCount / 250))} min read",
     relatedService: "${brief.relatedService}",
-    content: \`
+${faqsField}    content: \`
 ${escapedContent}
     \`.trim(),
   },
@@ -476,7 +669,12 @@ function run(cmd: string): string {
   return execSync(cmd, { cwd: REPO_ROOT, encoding: "utf8" }).trim();
 }
 
-function createDraftPR(brief: Brief, imagePath: string | null): string {
+function createDraftPR(
+  brief: Brief,
+  imagePath: string | null,
+  seoNotes: string,
+  faqCount: number,
+): string {
   const branch = `drafts/${brief.slug}`;
 
   // Configure git identity for CI
@@ -531,7 +729,13 @@ Saved as \`public${imagePath}\` and wired to the post's \`featuredImage\` field.
 **Target word count:** ${brief.targetWordCount}
 **Generated with:** ${MODEL}
 
-${imageSection}## Review checklist
+${imageSection}${seoNotes ? `## SEO Critique Pass Notes
+
+${seoNotes}
+
+**FAQs generated:** ${faqCount}
+
+` : ""}## Review checklist
 
 - [ ] Numbers are accurate (pricing, statistics, local references)
 - [ ] Neighborhood and permit jurisdiction references are correct
@@ -580,6 +784,14 @@ If the draft is bad, close this PR without merging. The brief stays in the queue
 // ──────────── Main ────────────
 
 async function main(): Promise<void> {
+  // Always rebuild site inventory first — ensures critique pass has
+  // the latest list of URLs (new city pages, recently-published posts, etc.)
+  console.log("Building site inventory...");
+  execSync("npx tsx scripts/build-site-inventory.ts", {
+    cwd: REPO_ROOT,
+    stdio: "inherit",
+  });
+
   const queue = loadQueue();
   const next = findNextQueued(queue);
 
@@ -593,17 +805,30 @@ async function main(): Promise<void> {
   console.log(`Status: ${next.status}`);
   console.log("");
 
-  const content = await generatePost(next);
+  // ── Pass 1: Draft ──
+  const draft = await generatePost(next);
+
+  // ── Pass 2: SEO critique + revision + FAQ generation ──
+  const { revisedPost, faqs, seoNotes } = await critiqueAndRevise(next, draft);
+
+  console.log(`FAQs generated: ${faqs.length}`);
+  if (seoNotes) {
+    console.log("\nSEO notes from critique pass:\n" + seoNotes);
+  }
+
+  const finalContent = revisedPost;
 
   if (IS_DRY_RUN) {
-    console.log("\n──────────── DRY RUN — generated content ────────────\n");
-    console.log(content);
+    console.log("\n──────────── DRY RUN — final content ────────────\n");
+    console.log(finalContent);
+    console.log("\n──────────── FAQs ────────────\n");
+    console.log(JSON.stringify(faqs, null, 2));
     console.log("\n──────────── END DRY RUN ────────────\n");
     console.log("No files modified. No PR created.");
     return;
   }
 
-  insertPostIntoBlogData(next, content);
+  insertPostIntoBlogData(next, finalContent, faqs);
 
   // Generate and save featured image (non-fatal — post can ship without one)
   let imagePath: string | null = null;
@@ -622,10 +847,10 @@ async function main(): Promise<void> {
   saveQueue(updatedQueue);
   console.log(`Updated ${next.slug} status: queued → drafted`);
 
-  const prUrl = createDraftPR(next, imagePath);
+  const prUrl = createDraftPR(next, imagePath, seoNotes, faqs.length);
 
   try {
-    await sendDraftEmail(next, content, prUrl, imagePath);
+    await sendDraftEmail(next, finalContent, prUrl, imagePath);
   } catch (err) {
     // Don't fail the whole workflow if email delivery breaks — PR still exists
     console.error("Draft email failed but PR is live:", err);

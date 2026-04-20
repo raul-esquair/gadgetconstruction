@@ -1,0 +1,478 @@
+[
+  {
+    "url": "/",
+    "type": "static",
+    "title": "Homepage",
+    "summary": "Gadget Construction homepage — Bay Area general contractor, 500+ projects, 31 cities."
+  },
+  {
+    "url": "/services",
+    "type": "static",
+    "title": "All Services",
+    "summary": "Service hub listing all 7 services offered by Gadget Construction."
+  },
+  {
+    "url": "/service-areas",
+    "type": "static",
+    "title": "Bay Area Service Areas",
+    "summary": "Interactive map of all 31 cities served across 6 Bay Area counties."
+  },
+  {
+    "url": "/gallery",
+    "type": "static",
+    "title": "Project Gallery",
+    "summary": "Filterable portfolio of completed projects by service category."
+  },
+  {
+    "url": "/about",
+    "type": "static",
+    "title": "About Gadget Construction",
+    "summary": "Founder story, credentials, company values, and licensing."
+  },
+  {
+    "url": "/blog",
+    "type": "static",
+    "title": "Blog",
+    "summary": "Insights and guides for San Francisco Bay Area homeowners."
+  },
+  {
+    "url": "/contact",
+    "type": "static",
+    "title": "Contact",
+    "summary": "Contact form and phone number for free estimates."
+  },
+  {
+    "url": "/services/concrete-foundations",
+    "type": "service",
+    "title": "Concrete Foundations & Slabs",
+    "summary": "Engineered for the Bay Area's seismic demands and soil conditions",
+    "tags": [
+      "concrete-foundations"
+    ]
+  },
+  {
+    "url": "/services/retaining-walls",
+    "type": "service",
+    "title": "Retaining Walls",
+    "summary": "Structural solutions for the Bay Area's steepest terrain",
+    "tags": [
+      "retaining-walls"
+    ]
+  },
+  {
+    "url": "/services/complete-remodel",
+    "type": "service",
+    "title": "Complete Remodel",
+    "summary": "Transform your space without the stress, delays, or budget surprises",
+    "tags": [
+      "complete-remodel"
+    ]
+  },
+  {
+    "url": "/services/composite-decks",
+    "type": "service",
+    "title": "Composite Decks",
+    "summary": "Low-maintenance outdoor living built for coastal Bay Area weather",
+    "tags": [
+      "composite-decks"
+    ]
+  },
+  {
+    "url": "/services/roofing",
+    "type": "service",
+    "title": "Roofing",
+    "summary": "Weather-tight protection installed right the first time",
+    "tags": [
+      "roofing"
+    ]
+  },
+  {
+    "url": "/services/adu-construction",
+    "type": "service",
+    "title": "ADU Construction",
+    "summary": "Add living space, rental income, or property value to your lot",
+    "tags": [
+      "adu-construction"
+    ]
+  },
+  {
+    "url": "/services/exterior-repairs",
+    "type": "service",
+    "title": "Exterior Repairs",
+    "summary": "Dry rot, stucco, and siding repair for Bay Area homes built to survive fog and salt air",
+    "tags": [
+      "exterior-repairs"
+    ]
+  },
+  {
+    "url": "/service-areas/san-anselmo",
+    "type": "city",
+    "title": "San Anselmo, Marin County",
+    "summary": "74% single-family detached.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/mill-valley",
+    "type": "city",
+    "title": "Mill Valley, Marin County",
+    "summary": "71% single-family detached.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/sausalito",
+    "type": "city",
+    "title": "Sausalito, Marin County",
+    "summary": "40% single-family detached — lower than typical for Marin.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/tiburon",
+    "type": "city",
+    "title": "Tiburon, Marin County",
+    "summary": "66% single-family detached.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/fairfax",
+    "type": "city",
+    "title": "Fairfax, Marin County",
+    "summary": "70% single-family detached.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/san-rafael",
+    "type": "city",
+    "title": "San Rafael, Marin County",
+    "summary": "47% single-family detached — more housing diversity than other Marin cities.",
+    "tags": [
+      "city",
+      "marin-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/richmond",
+    "type": "city",
+    "title": "Richmond, Contra Costa County",
+    "summary": "45% built 1940s–1960s, many WWII-era worker housing.",
+    "tags": [
+      "city",
+      "contra-costa-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/concord",
+    "type": "city",
+    "title": "Concord, Contra Costa County",
+    "summary": "58% single-family detached.",
+    "tags": [
+      "city",
+      "contra-costa-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/berkeley",
+    "type": "city",
+    "title": "Berkeley, Alameda County",
+    "summary": "Median construction year 1944 — one of the oldest in the Bay Area.",
+    "tags": [
+      "city",
+      "alameda-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/oakland",
+    "type": "city",
+    "title": "Oakland, Alameda County",
+    "summary": "Most housing built before 1980.",
+    "tags": [
+      "city",
+      "alameda-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/san-francisco",
+    "type": "city",
+    "title": "San Francisco, San Francisco County",
+    "summary": "Victorians from 1850s–1900s.",
+    "tags": [
+      "city",
+      "san-francisco-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/daly-city",
+    "type": "city",
+    "title": "Daly City, San Mateo County",
+    "summary": "Famous Westlake/Doelger homes (1948–1962).",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/south-san-francisco",
+    "type": "city",
+    "title": "South San Francisco, San Mateo County",
+    "summary": "59% single-family detached.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/millbrae",
+    "type": "city",
+    "title": "Millbrae, San Mateo County",
+    "summary": "59% built 1940s–1960s.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/san-bruno",
+    "type": "city",
+    "title": "San Bruno, San Mateo County",
+    "summary": "56% single-family detached.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/burlingame",
+    "type": "city",
+    "title": "Burlingame, San Mateo County",
+    "summary": "30% built before 1940.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/hillsborough",
+    "type": "city",
+    "title": "Hillsborough, San Mateo County",
+    "summary": "41% built 1940s–1960s.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/foster-city",
+    "type": "city",
+    "title": "Foster City, San Mateo County",
+    "summary": "Built in 1960s–1980s on reclaimed Bay marshland.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/belmont",
+    "type": "city",
+    "title": "Belmont, San Mateo County",
+    "summary": "Mix of post-war and newer homes.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-3"
+    ]
+  },
+  {
+    "url": "/service-areas/san-carlos",
+    "type": "city",
+    "title": "San Carlos, San Mateo County",
+    "summary": "Median construction year 1961.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/pacifica",
+    "type": "city",
+    "title": "Pacifica, San Mateo County",
+    "summary": "60% built 1940s–1960s.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/woodside",
+    "type": "city",
+    "title": "Woodside, San Mateo County",
+    "summary": "Rural estate character.",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/atherton",
+    "type": "city",
+    "title": "Atherton, San Mateo County",
+    "summary": "Large lots (1+ acres in West Atherton).",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/menlo-park",
+    "type": "city",
+    "title": "Menlo Park, San Mateo County",
+    "summary": "California Ranch and Mid-Century Modern (The Willows, Allied Arts).",
+    "tags": [
+      "city",
+      "san-mateo-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/palo-alto",
+    "type": "city",
+    "title": "Palo Alto, Santa Clara County",
+    "summary": "~2,200 Eichler homes — highest concentration worldwide.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/service-areas/los-altos",
+    "type": "city",
+    "title": "Los Altos, Santa Clara County",
+    "summary": "Ranch and Mid-Century homes.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/mountain-view",
+    "type": "city",
+    "title": "Mountain View, Santa Clara County",
+    "summary": "Mix of Eichler tracts, mid-century ranch homes, and newer construction.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/sunnyvale",
+    "type": "city",
+    "title": "Sunnyvale, Santa Clara County",
+    "summary": "1,000+ Eichler homes.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/santa-clara",
+    "type": "city",
+    "title": "Santa Clara, Santa Clara County",
+    "summary": "Mix of post-war and modern housing.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/cupertino",
+    "type": "city",
+    "title": "Cupertino, Santa Clara County",
+    "summary": "Higher share of detached single-family than regional average.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-2"
+    ]
+  },
+  {
+    "url": "/service-areas/san-jose",
+    "type": "city",
+    "title": "San Jose, Santa Clara County",
+    "summary": "Wide variety: Victorian downtown, 1970s suburbs, new construction.",
+    "tags": [
+      "city",
+      "santa-clara-county",
+      "tier-1"
+    ]
+  },
+  {
+    "url": "/blog/home-remodel-cost-san-francisco-2026",
+    "type": "blog",
+    "title": "How Much Does a Home Remodel Cost in San Francisco? (2026 Guide)",
+    "summary": "San Francisco is one of the most expensive remodeling markets in the country. Here's what projects actually cost — with real numbers, not national averages.",
+    "tags": [
+      "complete-remodel",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/adu-construction-san-francisco-guide",
+    "type": "blog",
+    "title": "ADU Construction in SF: Costs, Permits & Everything You Need to Know",
+    "summary": "Thinking about building an ADU in San Francisco? Here's the complete guide — from California law to DBI permits to actual construction costs.",
+    "tags": [
+      "adu-construction",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/foundation-repair-signs-san-francisco",
+    "type": "blog",
+    "title": "5 Signs Your San Francisco Home Needs Foundation Repair",
+    "summary": "Cracks in the walls? Doors that won't close? Here are the warning signs that your foundation needs attention — and what to do about them.",
+    "tags": [
+      "concrete-foundations",
+      "blog"
+    ]
+  }
+]
