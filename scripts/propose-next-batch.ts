@@ -23,6 +23,8 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import { marked } from "marked";
+import { Resend } from "resend";
 import { execSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -163,7 +165,22 @@ async function main(): Promise<void> {
   console.log(`Wrote ${proposal.briefs.length} briefs to ${PROPOSAL_PATH}`);
 
   // 6. Open PR
-  openReviewPR(proposal.briefs, proposal.summaryMarkdown);
+  const prUrl = openReviewPR(proposal.briefs, proposal.summaryMarkdown);
+
+  // 7. Email review copy — ONLY when explicitly requested (GitHub Actions sets this).
+  //    When a human runs /next-content-batch from Claude Code, SEND_PROPOSAL_EMAIL
+  //    is not set, so no email fires — the local terminal output is enough.
+  if (process.env.SEND_PROPOSAL_EMAIL === "true") {
+    try {
+      await sendProposalEmail(proposal.briefs, proposal.summaryMarkdown, prUrl);
+    } catch (err) {
+      console.error("Proposal email failed but PR is live:", err);
+    }
+  } else {
+    console.log(
+      "SEND_PROPOSAL_EMAIL not set — skipping email (manual invocation mode).",
+    );
+  }
 }
 
 // ──────────── Claude call ────────────
@@ -353,7 +370,7 @@ function parseProposal(raw: string): Proposal {
 
 // ──────────── Git / PR ────────────
 
-function openReviewPR(briefs: ProposedBrief[], summary: string): void {
+function openReviewPR(briefs: ProposedBrief[], summary: string): string {
   const branch = `proposals/content-batch-${todayIso()}`;
 
   // Configure git identity for CI
@@ -399,10 +416,150 @@ ${summary}
 The briefs use the same schema as the existing 10 — same Friday automation, same review flow, same publishing pipeline.
 `;
   writeFileSync("/tmp/proposal-pr-body.md", prBody);
-  run(
+  const prUrl = run(
     `gh pr create --title "📋 Next content batch (${briefs.length} briefs) — review for approval" --body-file /tmp/proposal-pr-body.md`,
   );
-  console.log("PR created.");
+  console.log(`PR created: ${prUrl}`);
+  return prUrl;
+}
+
+// ──────────── Email review copy ────────────
+
+async function sendProposalEmail(
+  briefs: ProposedBrief[],
+  summaryMarkdown: string,
+  prUrl: string,
+): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.log("RESEND_API_KEY not set — skipping proposal email.");
+    return;
+  }
+
+  const recipientsRaw = process.env.DRAFT_REVIEW_EMAILS;
+  if (!recipientsRaw) {
+    console.log("DRAFT_REVIEW_EMAILS not set — skipping proposal email.");
+    return;
+  }
+  const recipients = recipientsRaw
+    .split(",")
+    .map((e) => e.trim())
+    .filter(Boolean);
+
+  const summaryHtml = await marked.parse(summaryMarkdown);
+
+  const briefRows = briefs
+    .map((b, i) => {
+      const actionBadge =
+        b.action === "refresh"
+          ? `<span style="display:inline-block; background:#CC0000; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius: 999px; margin-left: 8px; vertical-align: middle;">REFRESH</span>`
+          : `<span style="display:inline-block; background:#444444; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius: 999px; margin-left: 8px; vertical-align: middle;">NEW</span>`;
+      const scheduled = new Date(b.scheduledDate).toLocaleDateString("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+      });
+      return `
+        <tr>
+          <td style="padding: 12px 16px; border-bottom: 1px solid #e5e5e5; vertical-align: top;">
+            <div style="font-size: 11px; color: #6b7280; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 4px;">Week ${i + 1} — ${escapeHtml(scheduled)}</div>
+            <div style="font-size: 15px; font-weight: 700; color: #222222; line-height: 1.3; margin-bottom: 4px;">
+              ${escapeHtml(b.title)}${actionBadge}
+            </div>
+            <div style="font-size: 13px; color: #444444; margin-bottom: 6px;">
+              <code style="background: #fafafa; padding: 2px 6px; border-radius: 4px; font-size: 12px;">${escapeHtml(b.primaryKeyword)}</code>
+              <span style="color: #9ca3af; margin: 0 4px;">·</span>
+              /services/${escapeHtml(b.relatedService)}
+              <span style="color: #9ca3af; margin: 0 4px;">·</span>
+              ${b.targetWordCount.toLocaleString()} words
+            </div>
+            <div style="font-size: 13px; color: #6b7280; line-height: 1.5;">
+              ${escapeHtml(b.proposalRationale ?? "")}
+            </div>
+          </td>
+        </tr>`;
+    })
+    .join("");
+
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content batch proposed</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color:#222222; line-height:1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
+  .header { background:#222222; color:#ffffff; padding: 20px 24px; border-radius: 12px 12px 0 0; }
+  .badge { display:inline-block; background:#CC0000; color:#fff; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:4px 10px; border-radius: 999px; }
+  .header h2 { margin: 12px 0 0; font-size: 20px; font-weight: 700; color:#ffffff; }
+  .header p { margin: 8px 0 0; color: rgba(255,255,255,0.7); font-size: 14px; }
+  .actions { background:#ffffff; padding: 20px 24px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; }
+  .btn-primary { display:inline-block; background:#CC0000; color:#ffffff !important; text-decoration:none; padding: 12px 22px; border-radius: 8px; font-weight:700; font-size: 14px; }
+  .briefs { background:#ffffff; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; border-radius: 0 0 12px 12px; }
+  .summary { background:#ffffff; margin-top: 24px; padding: 28px; border: 1px solid #e5e5e5; border-radius: 12px; }
+  .summary h1, .summary h2, .summary h3 { color: #222222; }
+  .summary h1 { font-size: 22px; margin: 0 0 16px; }
+  .summary h2 { font-size: 17px; margin: 24px 0 10px; border-bottom: 2px solid #f4f4f5; padding-bottom: 6px; }
+  .summary h3 { font-size: 15px; margin: 16px 0 6px; }
+  .summary p { margin: 0 0 12px; color: #444444; font-size: 14px; }
+  .summary ul { margin: 0 0 14px; padding-left: 22px; color: #444444; font-size: 14px; }
+  .summary strong { color: #222222; }
+  .summary code { background: #fafafa; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  .footer { text-align:center; color:#9ca3af; font-size: 12px; margin-top: 32px; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <span class="badge">Content batch proposed</span>
+      <h2>${briefs.length} briefs ready for your approval</h2>
+      <p>Scheduled: ${briefs[0] ? escapeHtml(briefs[0].scheduledDate) : "?"} through ${briefs[briefs.length - 1] ? escapeHtml(briefs[briefs.length - 1].scheduledDate) : "?"}</p>
+    </div>
+    <div class="actions">
+      <a class="btn-primary" href="${escapeHtml(prUrl)}">Review &amp; approve on GitHub</a>
+    </div>
+    <div class="briefs">
+      <table style="width:100%; border-collapse: collapse;">
+        ${briefRows}
+      </table>
+    </div>
+    <div class="summary">
+      ${summaryHtml}
+    </div>
+    <div class="footer">
+      Merging the PR moves these briefs into <code>post-queue.json</code>. The Friday draft automation picks them up on their scheduled dates.<br>
+      Close the PR without merging to reject the batch — no posts created, next proposal fires next Tuesday.
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const resend = new Resend(apiKey);
+  const fromAddress =
+    process.env.DRAFT_FROM_EMAIL ||
+    "Gadget Drafts <estimates@gadgetconstructionsf.com>";
+
+  const { data, error } = await resend.emails.send({
+    from: fromAddress,
+    to: recipients,
+    subject: `📋 ${briefs.length} new blog briefs proposed — review for approval`,
+    html,
+  });
+
+  if (error) {
+    throw new Error(`Resend error: ${JSON.stringify(error)}`);
+  }
+  console.log(`Proposal email sent to ${recipients.join(", ")} (id: ${data?.id})`);
+}
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 main().catch((err) => {

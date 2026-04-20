@@ -15,6 +15,8 @@ When the user invokes this skill, propose the next batch of 4 blog briefs.
 
    If running inside a GitHub Actions workflow, these are supplied automatically from repo secrets. If running locally, the user needs to export them.
 
+   **No email is sent** when invoked manually from Claude Code. The script only sends the HTML review email when `SEND_PROPOSAL_EMAIL=true` is set in the environment, which only happens in the `auto-propose-batch.yml` workflow. If the user wants an email during manual invocation, they can prefix the command: `SEND_PROPOSAL_EMAIL=true RESEND_API_KEY=... DRAFT_REVIEW_EMAILS=... npx tsx scripts/propose-next-batch.ts`.
+
 2. **Invoke the proposal script:**
 
    ```bash

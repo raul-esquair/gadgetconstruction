@@ -94,9 +94,16 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GSC_SERVICE_ACCOUNT_JSON_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_BASE64 }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Opus by default for topic-selection quality; override with Sonnet to save cost
           MODEL: claude-opus-4-7
+          # Email review copy — only fires in CI (GitHub Actions).
+          # When /next-content-batch is invoked manually from Claude Code,
+          # this env var isn't set, so no email is sent.
+          SEND_PROPOSAL_EMAIL: "true"
+          DRAFT_REVIEW_EMAILS: "admin@esquair.com,info@gadgetconstructionsf.com"
+          DRAFT_FROM_EMAIL: "Gadget Drafts <estimates@gadgetconstructionsf.com>"
         run: |
           echo "Running propose-next-batch.ts..."
           npx tsx scripts/propose-next-batch.ts
