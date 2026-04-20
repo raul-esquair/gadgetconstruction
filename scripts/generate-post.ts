@@ -348,6 +348,8 @@ function createDraftPR(brief: Brief): string {
   }
 
   console.log(`Creating branch ${branch}`);
+  // Delete the local branch if it exists (from a partial prior run), then recreate fresh
+  try { run(`git branch -D ${branch}`); } catch { /* branch didn't exist */ }
   run(`git checkout -b ${branch}`);
   run("git add lib/blog-data.ts content/post-queue.json");
 
@@ -363,7 +365,9 @@ Review, edit inline, and merge this PR before the scheduled date.
   const commitMsgPath = "/tmp/draft-commit-msg.txt";
   writeFileSync(commitMsgPath, commitMsg);
   run(`git commit -F ${commitMsgPath}`);
-  run(`git push origin ${branch}`);
+  // Force push — previous stale drafts for this slug are always overwritten.
+  // Any unmerged draft branch is treated as abandoned; merge before rerunning to preserve.
+  run(`git push --force-with-lease origin ${branch}`);
 
   const prBody = `## 📝 Auto-generated draft for ${brief.scheduledDate}
 
