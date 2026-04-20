@@ -18,6 +18,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import { marked } from "marked";
 import { Resend } from "resend";
 import { execSync } from "node:child_process";
@@ -208,12 +209,132 @@ ${escapedContent}
   console.log(`Inserted post into ${BLOG_DATA_PATH}`);
 }
 
+// ──────────── Featured image generation ────────────
+
+const IMAGE_PROMPT_SYSTEM = `# Role
+You are an expert image prompt generator for blog featured images on the Gadget Construction website (Bay Area general contractor — concrete, foundations, retaining walls, ADUs, decks, roofing, remodels).
+
+# Task
+Read the H1 and intro of the blog post supplied below. Identify the central idea, insight, or stat the post is built around, then produce a single text-to-image prompt for a featured image that visually represents that idea on-brand.
+
+# Output Rules
+- Output ONLY the final image prompt — one paragraph, no quotation marks, no preamble, no explanation.
+- Do NOT repeat, paraphrase, or quote the blog H1 inside the prompt.
+- Do NOT include placeholder phrases like "header area reserved for callout text," "title goes here," or anything asking the image tool to leave room for text overlays. The image stands on its own.
+- If the H1 or intro contains a concrete number (dollar figure, percentage, square footage, year, count), incorporate it visually — as a large stylized numeral, dimension callout on a blueprint, data label, or rendered as part of the composition.
+- Avoid: stock-photo construction workers in hardhats giving thumbs-up, generic "two contractors shaking hands" tropes, cartoon flat illustrations, identifiable faces, hyperrealistic photo recreations of finished rooms.
+- Bay Area context cues are welcome when the post calls for them: SF rowhouse silhouettes, hillside topography, fog gradients, Marin hills, Eichler rooflines, Doelger facades — used as graphic motifs, not literal scenery.
+
+# Brand & Visual Style (apply to every prompt)
+- Background: charcoal (#222222) base, optionally with concrete-texture grain, blueprint grid lines, or subtle metallic silver gradient. Pure black and pure white are both acceptable secondary backgrounds when the composition calls for it.
+- Accent color: signature red (#CC0000) used sparingly and with intent — a single bold accent line, callout, dimension marker, isolated element, or data highlight. Never washed across the whole image.
+- Supporting palette: warm metallic silvers and cool steel grays (concrete, rebar, structural steel feel), occasional muted off-white for blueprint paper or framing lumber. No teals, lavenders, or pastels.
+- Typography (when used): clean modern sans-serif fragments only — bold geometric numerals, dimension labels, percentage marks, unit callouts. Treat numbers like architectural specs.
+- Aesthetic options to draw from:
+  - Architectural blueprint / technical drawing (white or red linework on dark, dimension lines, grid overlay, section cuts)
+  - Isometric building cutaway showing structural layers (foundation → framing → finish)
+  - Editorial construction photography mood — strong directional light, high contrast, raw materials in focus (rebar, wet concrete, framing lumber, plywood, copper pipe)
+  - Exploded-view technical illustration of a building component
+  - Data-driven editorial (large stylized stat as the hero element with supporting industrial graphics)
+  - Topographic contour-line patterns for Bay Area / hillside / soil topics
+- Composition: intentional negative space, single clear focal point, balanced for use as a 16:9 blog hero card. Premium contractor brand feel — function-forward, trust-building, never gimmicky.
+- Mood: serious, professional, built-to-last. Think New York Times architecture column or Dwell magazine cover — not Pinterest infographic.
+
+# Example Output (for "How Much Does a Home Remodel Cost in San Francisco? 2026 Guide" — stat: $75,000–$150,000 mid-range kitchen)
+A high-contrast editorial featured image on a deep charcoal background with subtle concrete-texture grain. A large stylized "$150K" rendered in bold modern sans-serif occupies the right third in off-white, with a thin signature red underline cutting beneath it like a dimension marker. To the left, a clean white architectural blueprint linework drawing of a kitchen plan view — cabinets, island, range, and a faint San Francisco rowhouse roofline rising behind it — drawn in technical-drawing style with dimension lines and grid overlay. A single red callout arrow points from the dollar figure into the kitchen plan. Strong negative space, premium contractor brand feel, 16:9 composition.`;
+
+async function generateImagePrompt(brief: Brief): Promise<string> {
+  const client = new Anthropic();
+  const userMessage = `Blog post details:
+
+Title: ${brief.title}
+Excerpt: ${brief.excerpt}
+Primary keyword: ${brief.primaryKeyword}
+Target service: ${brief.relatedService}
+
+Generate the image prompt per the output rules.`;
+
+  const response = await client.messages.create({
+    model: "claude-haiku-4-5-20251001",
+    max_tokens: 1024,
+    system: IMAGE_PROMPT_SYSTEM,
+    messages: [{ role: "user", content: userMessage }],
+  });
+
+  const textBlock = response.content.find((b) => b.type === "text");
+  if (!textBlock || textBlock.type !== "text") {
+    throw new Error("No text content in image prompt response");
+  }
+  const prompt = textBlock.text.trim();
+  const cost =
+    (response.usage.input_tokens * 0.25 + response.usage.output_tokens * 1.25) / 1_000_000;
+  console.log(`Image prompt generated (Haiku): ~$${cost.toFixed(4)}`);
+  return prompt;
+}
+
+async function generateFeaturedImage(
+  brief: Brief,
+): Promise<{ imagePath: string; localPath: string; prompt: string }> {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error("OPENAI_API_KEY is required for image generation");
+  }
+
+  console.log("Generating image prompt...");
+  const prompt = await generateImagePrompt(brief);
+  console.log(`Prompt: ${prompt.slice(0, 160)}...`);
+
+  console.log("Calling OpenAI gpt-image-1...");
+  const openai = new OpenAI();
+  const imageResponse = await openai.images.generate({
+    model: "gpt-image-1",
+    prompt,
+    size: "1536x1024",
+    quality: "medium",
+    n: 1,
+  });
+
+  const b64 = imageResponse.data?.[0]?.b64_json;
+  if (!b64) {
+    throw new Error("No b64_json in OpenAI response");
+  }
+
+  const filename = `blog-${brief.slug}.png`;
+  const localPath = resolve(REPO_ROOT, "public/images", filename);
+  const publicPath = `/images/${filename}`;
+
+  writeFileSync(localPath, Buffer.from(b64, "base64"));
+  console.log(`Image saved: ${localPath}`);
+
+  return { imagePath: publicPath, localPath, prompt };
+}
+
+function addFeaturedImageToBlogData(slug: string, imagePath: string): void {
+  const file = readFileSync(BLOG_DATA_PATH, "utf8");
+  // Insert `featuredImage: "<path>",` right after the slug line for this post.
+  // Match: `slug: "<slug>",` and inject on the next line with matching indent.
+  const pattern = new RegExp(
+    `(\\s+)(slug: "${slug.replace(/-/g, "\\-")}",)`,
+    "m",
+  );
+  const match = file.match(pattern);
+  if (!match) {
+    console.warn(`Could not locate slug line for ${slug}; featuredImage not added`);
+    return;
+  }
+  const indent = match[1];
+  const replacement = `${indent}${match[2]}${indent}featuredImage: "${imagePath}",`;
+  const updated = file.replace(pattern, replacement);
+  writeFileSync(BLOG_DATA_PATH, updated);
+  console.log(`featuredImage field added to lib/blog-data.ts`);
+}
+
 // ──────────── Email draft for review ────────────
 
 async function sendDraftEmail(
   brief: Brief,
   markdownContent: string,
   prUrl: string,
+  imagePath: string | null,
 ): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -282,6 +403,7 @@ async function sendDraftEmail(
       <span class="badge">Draft for review</span>
       <h2>${escapeHtml(brief.title)}</h2>
     </div>
+    ${imagePath ? `<img src="https://raw.githubusercontent.com/raul-esquair/gadgetconstruction/drafts/${brief.slug}/public${imagePath}" alt="Featured image" style="width:100%; display:block; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5;">` : ""}
     <div class="meta-grid">
       <div class="meta-row"><div class="meta-label">Scheduled to publish</div><div class="meta-value">${escapeHtml(scheduledLabel)}</div></div>
       <div class="meta-row"><div class="meta-label">Primary keyword</div><div class="meta-value"><code>${escapeHtml(brief.primaryKeyword)}</code></div></div>
@@ -336,7 +458,7 @@ function run(cmd: string): string {
   return execSync(cmd, { cwd: REPO_ROOT, encoding: "utf8" }).trim();
 }
 
-function createDraftPR(brief: Brief): string {
+function createDraftPR(brief: Brief, imagePath: string | null): string {
   const branch = `drafts/${brief.slug}`;
 
   // Configure git identity for CI
@@ -351,7 +473,11 @@ function createDraftPR(brief: Brief): string {
   // Delete the local branch if it exists (from a partial prior run), then recreate fresh
   try { run(`git branch -D ${branch}`); } catch { /* branch didn't exist */ }
   run(`git checkout -b ${branch}`);
-  run("git add lib/blog-data.ts content/post-queue.json");
+  const pathsToAdd = ["lib/blog-data.ts", "content/post-queue.json"];
+  if (imagePath) {
+    pathsToAdd.push(`public${imagePath}`);
+  }
+  run(`git add ${pathsToAdd.join(" ")}`);
 
   const commitMsg = `Draft: ${brief.title}
 
@@ -369,6 +495,16 @@ Review, edit inline, and merge this PR before the scheduled date.
   // Any unmerged draft branch is treated as abandoned; merge before rerunning to preserve.
   run(`git push --force origin ${branch}`);
 
+  const imageSection = imagePath
+    ? `## Featured image
+
+![Featured image](https://raw.githubusercontent.com/raul-esquair/gadgetconstruction/${branch}/public${imagePath})
+
+Saved as \`public${imagePath}\` and wired to the post's \`featuredImage\` field.
+
+`
+    : "";
+
   const prBody = `## 📝 Auto-generated draft for ${brief.scheduledDate}
 
 **Title:** ${brief.title}
@@ -377,7 +513,7 @@ Review, edit inline, and merge this PR before the scheduled date.
 **Target word count:** ${brief.targetWordCount}
 **Generated with:** ${MODEL}
 
-## Review checklist
+${imageSection}## Review checklist
 
 - [ ] Numbers are accurate (pricing, statistics, local references)
 - [ ] Neighborhood and permit jurisdiction references are correct
@@ -451,6 +587,16 @@ async function main(): Promise<void> {
 
   insertPostIntoBlogData(next, content);
 
+  // Generate and save featured image (non-fatal — post can ship without one)
+  let imagePath: string | null = null;
+  try {
+    const imgResult = await generateFeaturedImage(next);
+    imagePath = imgResult.imagePath;
+    addFeaturedImageToBlogData(next.slug, imagePath);
+  } catch (err) {
+    console.error("Featured image generation failed — proceeding without image:", err);
+  }
+
   // Flip status in queue
   const updatedQueue = queue.map((b) =>
     b.slug === next.slug ? { ...b, status: "drafted" as const } : b,
@@ -458,10 +604,10 @@ async function main(): Promise<void> {
   saveQueue(updatedQueue);
   console.log(`Updated ${next.slug} status: queued → drafted`);
 
-  const prUrl = createDraftPR(next);
+  const prUrl = createDraftPR(next, imagePath);
 
   try {
-    await sendDraftEmail(next, content, prUrl);
+    await sendDraftEmail(next, content, prUrl, imagePath);
   } catch (err) {
     // Don't fail the whole workflow if email delivery breaks — PR still exists
     console.error("Draft email failed but PR is live:", err);
