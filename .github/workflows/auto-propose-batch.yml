@@ -1,0 +1,102 @@
+name: Auto-propose content batch when queue is low
+
+# Every Tuesday (the day after Monday publish), this workflow counts how many
+# unpublished briefs remain in content/post-queue.json. If the runway drops
+# to 4 weeks or fewer AND there's no open proposal PR already awaiting review,
+# it fires the proposal pipeline to generate the next 4 briefs.
+#
+# Manual trigger also supported — useful for forcing a proposal regardless
+# of queue depth.
+
+on:
+  schedule:
+    # Tuesday 16:00 UTC = ~9am PDT / 8am PST
+    - cron: '0 16 * * 2'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force proposal even if queue has more than the threshold'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+env:
+  # Trigger threshold: propose when this many unpublished briefs remain or fewer.
+  # 4 = one month of runway at trigger time, plenty of time for review + merge
+  # before the automation actually needs them.
+  RUNWAY_THRESHOLD: 4
+
+jobs:
+  check-and-propose:
+    name: Check queue depth + fire proposal if low
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check queue depth
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+
+          # Count briefs with a future scheduledDate — the actual runway
+          count=$(jq --arg today "$TODAY" \
+            '[.[] | select(.scheduledDate > $today)] | length' \
+            content/post-queue.json)
+
+          # Don't propose if a proposal PR is already open (avoid duplicates)
+          open_proposal=$(gh pr list --state open --json headRefName \
+            --jq '[.[] | select(.headRefName | startswith("proposals/"))] | length')
+
+          echo "──────────────────────────────────────────"
+          echo "Unpublished briefs in queue: $count"
+          echo "Threshold:                   ${{ env.RUNWAY_THRESHOLD }}"
+          echo "Open proposal PRs:           $open_proposal"
+          echo "Force flag:                  ${{ inputs.force }}"
+          echo "──────────────────────────────────────────"
+
+          # Decide whether to trigger
+          TRIGGER=false
+          if [ "${{ inputs.force }}" = "true" ]; then
+            TRIGGER=true
+            echo "Force flag set — triggering regardless of queue depth."
+          elif [ "$count" -le "${{ env.RUNWAY_THRESHOLD }}" ] && [ "$open_proposal" -eq 0 ]; then
+            TRIGGER=true
+            echo "Queue at or below threshold and no pending proposal — triggering."
+          elif [ "$open_proposal" -gt 0 ]; then
+            echo "Skipping — a proposal PR is already open. Review and merge it first."
+          else
+            echo "Queue is healthy ($count posts) — no action needed."
+          fi
+
+          echo "trigger=$TRIGGER" >> $GITHUB_OUTPUT
+          echo "count=$count" >> $GITHUB_OUTPUT
+
+      - name: Propose next batch
+        if: steps.check.outputs.trigger == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GSC_SERVICE_ACCOUNT_JSON_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_BASE64 }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Opus by default for topic-selection quality; override with Sonnet to save cost
+          MODEL: claude-opus-4-7
+        run: |
+          echo "Running propose-next-batch.ts..."
+          npx tsx scripts/propose-next-batch.ts

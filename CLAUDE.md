@@ -142,6 +142,7 @@ scripts/                          # CLI tools (Node + Python)
   weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
   weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
+  auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
   merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue
 
 public/images/
@@ -601,7 +602,11 @@ Run monthly before client meetings. `.claude/skills/monthly-seo-doc/` contains `
 
 ### The /next-content-batch skill
 
-Run monthly when queue is low. `.claude/skills/next-content-batch/SKILL.md` + `scripts/propose-next-batch.ts`. Pulls 90 days of GSC data via service-account auth, combines with post-queue + published posts + services + ads plan, calls Claude Opus 4.7 (default — override with `MODEL=claude-sonnet-4-6`) to propose 4 briefs. Opens `proposals/content-batch-<date>` PR. On merge, `merge-proposed-briefs.yml` migrates briefs from `content/proposed-briefs.json` into `content/post-queue.json`.
+Run monthly when queue is low (or automatically — see below). `.claude/skills/next-content-batch/SKILL.md` + `scripts/propose-next-batch.ts`. Pulls 90 days of GSC data via service-account auth, combines with post-queue + published posts + services + ads plan, calls Claude Opus 4.7 (default — override with `MODEL=claude-sonnet-4-6`) to propose 4 briefs. Opens `proposals/content-batch-<date>` PR. On merge, `merge-proposed-briefs.yml` migrates briefs from `content/proposed-briefs.json` into `content/post-queue.json`.
+
+### Auto-trigger proposal when queue is low
+
+`auto-propose-batch.yml` runs every Tuesday at 16:00 UTC. It counts briefs with `scheduledDate > today` in `post-queue.json`. If the runway drops to **4 weeks or fewer** AND no proposal PR is already open, it invokes `scripts/propose-next-batch.ts` automatically. Manual trigger via `gh workflow run auto-propose-batch.yml --ref main -f force=true` bypasses the threshold.
 
 ### Required GitHub Actions secrets
 
