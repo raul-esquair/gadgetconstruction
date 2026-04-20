@@ -120,6 +120,30 @@ lib/                              # Data & utilities
 hooks/
   useInView.ts                    # IntersectionObserver hook (binary trigger, fires once)
 
+content/                          # Editorial pipeline data (not shipped to production)
+  post-queue.json                 # 10 briefs (status: queued → drafted → published)
+  proposed-briefs.json            # Staging from /next-content-batch (normally [])
+  proposed-briefs-summary.md      # Human-readable proposal summary
+  site-inventory.json             # Auto-generated, 48 URLs for internal linking
+  style-reference.md              # Voice guide for AI drafting passes
+
+scripts/                          # CLI tools (Node + Python)
+  generate-post.ts                # Friday draft pipeline (Claude + OpenAI + Resend + gh)
+  build-site-inventory.ts         # Rebuilds site-inventory.json
+  fetch-gsc-data.ts               # Google Search Console client
+  propose-next-batch.ts           # /next-content-batch implementation
+  generate-month1-doc.py          # Reference impl for month-1 client doc
+
+.claude/skills/                   # Claude Code slash-command skills
+  monthly-seo-doc/                # /monthly-seo-doc → client .docx
+  next-content-batch/             # /next-content-batch → propose 4 new briefs
+
+.github/workflows/                # Automation
+  weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
+  auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
+  weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
+  merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue
+
 public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
   logo-white.png                  # Company logo — white version (for dark backgrounds, footer, OG image)
@@ -172,7 +196,9 @@ All content lives in `lib/` as typed constants. No CMS, no external APIs, no dat
 
 **To add a new service:** Add to `SERVICES` in constants.ts, add entry to `SERVICE_PAGES` in services-data.ts, add pricing to `SERVICE_PRICING`, create `app/services/[slug]/page.tsx`.
 
-**To add a new blog post:** Add to `BLOG_POSTS` in blog-data.ts. Static params auto-generate the route.
+**To add a new blog post:** Two paths —
+  1. **Automated (preferred):** The Friday `weekly-draft.yml` workflow picks up the next `status: "queued"` brief from `content/post-queue.json`, generates the full post with featured image, opens a PR. To add a new topic, invoke `/next-content-batch` (proposes 4 new briefs) or edit `post-queue.json` directly with a manually-written brief.
+  2. **Manual:** Append to `BLOG_POSTS` in `lib/blog-data.ts`. Set `date` to a past date to publish immediately, or a future Monday to schedule. Must include `faqs` field if you want FAQPage schema. Static params auto-generate the route.
 
 **To add a new city:** Add to `SERVICE_AREAS` in service-areas-data.ts with tier (1/2/3), county, FAQs, and content. Static params auto-generate the route.
 
@@ -478,15 +504,32 @@ These were research-backed decisions — don't revert without reason:
 ## What's Pending
 
 - **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
-- **Exterior repairs landing page** — dry rot, stucco, and siding need a dedicated service page before launching Google Ads for those services
-- **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live
-- **Call tracking** — Google forwarding number or CallRail for phone lead attribution
-- **Blog featured images** — placeholder divs, needs real images
+- **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live (separate from CallRail which is now wired up for call attribution)
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
+- **Exterior repairs hero image** — service page currently uses `/images/why-choose-us-bg.jpg` as placeholder. Swap `backgroundImage` on `app/services/exterior-repairs/page.tsx:75` when a real photo is available.
+- **Gallery photos for exterior repairs** — no gallery entries tagged `categorySlug: "exterior-repairs"` yet. When added, the ServiceGallery will auto-populate on the page.
 
 ## What's Done (Recently Completed)
 
+- **Exterior repairs service page** — `/services/exterior-repairs` covers dry rot, stucco, and siding as three subservices on one URL. 1,400+ words, 6-item scope, 5-step process, 4 differentiators, 8 FAQs, itemized pricing. Uses a custom `multiServiceGraphSchema()` helper that emits a `@graph` with three separate `Service` nodes (Dry Rot Repair, Stucco Repair, Siding Installation) per 2026 SEO research. Exterior Repairs is now the 7th entry in `SERVICES`.
+- **31 city cross-linking to exterior-repairs** — every city page links into the new service with varied anchor text via the new optional `serviceAnchors?: Partial<Record<string, string>>` field on `CityData`. Examples: "Doelger Home Stucco & Dry Rot Repair" (Daly City), "Eichler T1-11 Siding & Exterior Repair" (Menlo Park), "Craftsman Home Dry Rot & Siding Repair" (Berkeley). Rendered by `CityServices` in CityPageContent.tsx.
+- **12 hyper-local exterior-repair paragraphs** — new `CityExteriorRepairsContext` component renders a unique ~80-word paragraph on 12 priority cities (SF, Daly City, Pacifica, Sausalito, Mill Valley, San Rafael, San Anselmo, Berkeley, Oakland, Palo Alto, Menlo Park, San Jose). Only renders when `CityData.exteriorRepairsContext` field is populated. E-E-A-T Experience signal per 2026 Helpful Content update.
+- **ADU process rewrite** — ADU page now correctly reflects that Gadget receives approved plans from the homeowner's architect/designer. Gadget does NOT fabricate plan sets. New process: Feasibility Walk → Plan Review → Permit Submittal → Construction → Inspections & COO. Intro paragraph, scope items, "Full Design-Build" differentiator (→ "We Work With Your Designer"), and timeline FAQ all updated to remove design-build framing.
+- **Blog featured images** — all 3 existing posts have real architectural/editorial featured images (remodel cost, foundation signs, ADU guide). New blog detail hero layout: centered category · date · reading time meta line, big centered H1, featured image attached seamlessly to the dark canvas (no card chrome, `aspect-[3/2]`). Legacy `PageHeader` still used elsewhere.
+- **Blog hero animations** — `blueprint-grid` class (faint diagonal-drifting grid, 80s loop) + `hero-red-glow` class (breathing radial red accent, 6s loop, 18-42% opacity) in globals.css. Pure CSS, GPU-friendly, respects `prefers-reduced-motion`.
+- **CallRail DNI installed** — dynamic number insertion via `<script src="cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js">` in root layout. Real business number (628) 233-3589 stays in source code; CallRail's JS swaps it per-visitor based on traffic source (organic, paid, GBP, direct). CallRail "Website pool" configured on their side. Every phone number on the site is attributed.
+- **SearchAtlas dynamic optimization script** — third-party SEO script in root layout with `nowprocket` / `nitro-exclude` attributes preserved for cache-plugin compatibility.
+- **Scheduled blog publishing** — blog posts filter via new `isPublished()` helper in lib/blog-data.ts (published when `date <= today`). Future-dated posts stay hidden from `/blog` listing, detail route (404s), and sitemap. Combined with `weekly-publish.yml` workflow (Monday 14:00 UTC) that triggers Netlify rebuild so posts auto-publish on their scheduled date without any manual action.
+- **AI weekly draft pipeline** — complete automation that generates blog posts end-to-end. Details under "Content Automation Pipeline" section below. Friday 16:00 UTC workflow generates draft + image + opens PR + emails HTML preview + attaches image file.
+- **Multi-pass SEO generation** — the draft generator uses TWO Claude calls: Pass 1 drafts from brief + style guide + voice anchors; Pass 2 runs SEO critique on the draft with a 48-URL site inventory, adds 12-20 contextual internal links with varied anchor text, restructures passages for LLM-chunk retrieval, and appends 5-7 FAQs with FAQPage schema. SEO notes logged to PR body for transparency.
+- **Site inventory generator** — `scripts/build-site-inventory.ts` reads SERVICES + SERVICE_AREAS + BLOG_POSTS + static pages → emits `content/site-inventory.json` (48 URLs with titles/summaries/tags). Auto-runs at start of every `generate-post.ts` invocation.
+- **Featured image generation via gpt-image-1** — the Friday pipeline calls OpenAI `gpt-image-1` at 1536x1024 medium quality using a Claude-generated image prompt (Haiku 4.5, using the exact system prompt ported from the n8n Feature Image Creator workflow). Saved to `public/images/blog-<slug>.png` and wired into `featuredImage` field. Cost: ~$0.05 per image.
+- **Draft email delivery** — PR creation also sends an HTML email via Resend to `DRAFT_REVIEW_EMAILS` (currently `admin@esquair.com` and `info@gadgetconstructionsf.com`) from `estimates@gadgetconstructionsf.com`. Email includes: featured image rendered inline (via GitHub raw URL) AND attached as a real PNG file, metadata card, rendered markdown body, CTA button to PR.
+- **Auto-merge safety net** — `auto-merge-drafts.yml` fires Sunday 23:00 PT (Monday 07:00 UTC), squash-merges any still-open `drafts/*` PR so posts land on main before the Monday publish rebuild. Contract: leave PR open = implicit approval, close PR = explicit rejection, edit PR = still auto-merges.
+- **Monthly client doc skill** — `/monthly-seo-doc` invokes `.claude/skills/monthly-seo-doc/generate.py` (python-docx). Auto-detects the next 4 unpublished briefs, writes custom client rationale + target audience per post, produces `Gadget-Construction-SEO-Month-N.docx`. Filename pattern ignored by .gitignore (regenerable via skill).
+- **Content batch proposal skill** — `/next-content-batch` invokes `scripts/propose-next-batch.ts`. Pulls 90 days of Google Search Console data, reads existing queue + published posts + services + cities + Google Ads keyword plan, calls Claude Opus 4.7 to propose 4 new briefs (mix of new posts and refreshes if GSC data supports). Writes to `content/proposed-briefs.json` + summary, opens PR for review. On merge, `merge-proposed-briefs.yml` workflow detects the file change and migrates briefs into `post-queue.json` with `status: "queued"`. Cost: ~$0.50-$1.50 per batch.
+- **10-post SEO content plan locked** — `content/post-queue.json` contains 10 detailed briefs for Weeks 1-10 (2026-04-27 through 2026-06-29). Primary focus: composite decks (4 posts), exterior repairs (4 posts), foundation underpinning (1 post), coastal cluster hub (1 post). Geographic mix per Option B: SF-anchored + Bay Area-wide + hyper-local. All briefs have complete outline, keywords, internal links, must-includes, CTA.
 - **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
 - **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
@@ -517,6 +560,111 @@ These were research-backed decisions — don't revert without reason:
 - **PageHeader component** — reusable dark header for non-hero pages
 - **Viewport overflow fix** — `overflow-x: clip` on html + main to prevent horizontal scroll from slide animations
 
+## Content Automation Pipeline
+
+Complete end-to-end pipeline for AI-generated blog posts. Runs on GitHub Actions with secrets for all external APIs. Never modify `content/post-queue.json` directly unless adding manually — the skills handle writes.
+
+### Weekly cadence
+
+```
+Friday   16:00 UTC  (~9am PDT)  → weekly-draft.yml     — AI drafts next queued post, opens PR, emails review copy
+Weekend              (~60 hrs)   → human review window  — edit, merge, or close the PR
+Sunday   07:00 UTC  (~11pm PT)  → auto-merge-drafts.yml — squash-merges any still-open drafts/* PR
+Monday   14:00 UTC  (~7am PDT)  → weekly-publish.yml   — triggers Netlify rebuild; posts with date<=today go live
+```
+
+### The Friday draft pipeline (`scripts/generate-post.ts`)
+
+1. Rebuild site inventory (`scripts/build-site-inventory.ts` → `content/site-inventory.json`, 48 URLs)
+2. Find next `status: "queued"` brief in `content/post-queue.json`
+3. Load `content/style-reference.md` + 2 most-recent published posts as voice anchors
+4. **Pass 1 (Sonnet 4.6):** draft full post from brief
+5. **Pass 2 (Sonnet 4.6):** SEO critique + revision:
+   - 12-20 contextual internal links with varied anchor text (<25% exact-match)
+   - Passage-level self-containment (each H2 starts with a direct-answer sentence)
+   - Keyword density audit, secondary keyword integration
+   - 5-7 FAQ questions appended before CTA
+   - Returns 3 XML-tagged outputs: `<revised_post>`, `<faqs>` JSON, `<seo_notes>`
+6. **Image prompt (Haiku 4.5):** generates detailed visual prompt per the Gadget brand (charcoal + red, architectural/editorial aesthetic). Rules include: single hero number over range, single quotes around exact rendered text, no trailing `+` (gpt-image-1 hallucinates it as a digit).
+7. **Image generation (gpt-image-1):** 1536x1024 medium-quality PNG. Saved to `public/images/blog-<slug>.png`.
+8. Insert post into `lib/blog-data.ts` (at top of `BLOG_POSTS` array) with `featuredImage` and `faqs` fields populated
+9. Flip brief status: `queued` → `drafted` in queue
+10. `git push --force origin drafts/<slug>` (stale drafts always overwritten — unmerged = abandoned)
+11. `gh pr create` with body containing SEO notes + review checklist + image preview
+12. `resend.emails.send()` — HTML email with inline image render + PNG attachment to `DRAFT_REVIEW_EMAILS`
+
+Cost per post: ~$0.27 (Sonnet draft $0.08 + Sonnet critique $0.14 + Haiku image prompt $0.001 + gpt-image-1 $0.04).
+
+### The /monthly-seo-doc skill
+
+Run monthly before client meetings. `.claude/skills/monthly-seo-doc/` contains `SKILL.md` (invocation instructions) and `generate.py` (python-docx builder). Auto-detects the next 4 unpublished briefs (by counting how many are already published), writes custom client-facing rationale + audience paragraphs matching the voice in `scripts/generate-month1-doc.py` (reference implementation), outputs `Gadget-Construction-SEO-Month-N.docx`.
+
+### The /next-content-batch skill
+
+Run monthly when queue is low. `.claude/skills/next-content-batch/SKILL.md` + `scripts/propose-next-batch.ts`. Pulls 90 days of GSC data via service-account auth, combines with post-queue + published posts + services + ads plan, calls Claude Opus 4.7 (default — override with `MODEL=claude-sonnet-4-6`) to propose 4 briefs. Opens `proposals/content-batch-<date>` PR. On merge, `merge-proposed-briefs.yml` migrates briefs from `content/proposed-briefs.json` into `content/post-queue.json`.
+
+### Required GitHub Actions secrets
+
+| Secret | Used by | Purpose |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | weekly-draft, next-content-batch | Claude API (post drafting, SEO critique, image prompts, batch proposal) |
+| `OPENAI_API_KEY` | weekly-draft | gpt-image-1 featured image generation |
+| `RESEND_API_KEY` | weekly-draft | Send HTML review emails to admin@esquair.com + info@gadgetconstructionsf.com |
+| `NETLIFY_BUILD_HOOK_URL` | weekly-publish | Triggers Netlify rebuild on Monday 07:00 UTC |
+| `GSC_SERVICE_ACCOUNT_JSON_BASE64` | next-content-batch | Base64-encoded GCP service account JSON for Search Console API reads |
+| `GITHUB_TOKEN` | all workflows | Auto-provided by GitHub Actions for gh CLI (branch push, PR create) |
+
+### Brief schema (`content/post-queue.json`)
+
+Each brief has: `slug`, `scheduledDate`, `status` (queued/drafted/published/proposed), `title`, `metaTitle`, `excerpt`, `primaryKeyword`, `secondaryKeywords[]`, `relatedService`, `targetWordCount`, `geoFocus`, `citiesReferenced[]`, `outline[{h2, h3[], notes}]`, `mustInclude[]`, `mustAvoid[]`, `internalLinks[{url, anchor}]`, `cta`. Proposed briefs from `/next-content-batch` also have `action: "new" | "refresh"`, optional `refreshesSlug`, and `proposalRationale`.
+
+### Brief lifecycle
+
+```
+Proposed (content/proposed-briefs.json)
+  → Queued (content/post-queue.json, status: queued)     ← after proposal PR merges
+  → Drafted (status: drafted on drafts/<slug> branch)    ← after Friday draft PR created
+  → Drafted on main                                      ← after manual merge OR Sunday auto-merge
+  → Published                                            ← after Monday rebuild + scheduled date arrives
+```
+
+Editing published-post status back to "queued" triggers a regeneration on next Friday run. Closing a Friday PR without merging keeps the brief as queued on main, so it will re-draft next Friday with a new attempt.
+
+### Key files
+
+```
+content/
+  post-queue.json              # 10 briefs, manually edited or via /next-content-batch
+  proposed-briefs.json         # staging for /next-content-batch output (normally empty [])
+  proposed-briefs-summary.md   # human-readable summary for the proposal PR
+  site-inventory.json          # auto-generated list of 48 linkable URLs
+  style-reference.md           # voice guide loaded by the drafting passes
+
+scripts/
+  generate-post.ts             # Friday draft pipeline
+  build-site-inventory.ts      # rebuilds site-inventory.json from repo state
+  fetch-gsc-data.ts            # Search Console API client
+  propose-next-batch.ts        # /next-content-batch implementation
+  generate-month1-doc.py       # reference impl for month-1 client doc (superseded by skill)
+
+.claude/skills/
+  monthly-seo-doc/             # /monthly-seo-doc skill
+  next-content-batch/          # /next-content-batch skill
+
+.github/workflows/
+  weekly-draft.yml             # Fri 16:00 UTC — AI draft + PR + email
+  auto-merge-drafts.yml        # Sun 23:00 PT — merge any open drafts/* PR
+  weekly-publish.yml           # Mon 14:00 UTC — Netlify rebuild
+  merge-proposed-briefs.yml    # on push to proposed-briefs.json — migrate to queue
+```
+
+### Debugging the pipeline
+
+- Check PR #N body for `## SEO Critique Pass Notes` section — documents what the critique pass changed vs. the initial draft
+- Inspect workflow run logs via `gh run view <id> --log-failed` or `gh run view <id> --log`
+- Manual trigger for testing: `gh workflow run weekly-draft.yml --ref main` (will draft whatever post is next queued)
+- To regenerate a specific post from scratch: close any existing drafts/<slug> PR, delete remote branch, re-trigger the workflow (post status on main is still "queued" if PR never merged to main)
+
 ## GitHub & Deployment
 
 - **Repo:** `raul-esquair/gadgetconstruction` (public)
@@ -539,3 +687,13 @@ These were research-backed decisions — don't revert without reason:
 - **Service page variety** — each page has unique headline structure, CTA text, intro opener, FAQ lead question, and testimonial heading. Do NOT use the same pattern across all 6 pages.
 - **Testimonials removed from service pages** — intentionally removed pending hyper-relevant per-service reviews. Do NOT re-add generic testimonials.
 - **BeforeAfter uses `clipPath`** not `width` — `clipPath: inset(0 X% 0 0)` keeps both images at full container width so `object-cover` crops them identically. Using `width` causes misaligned crops.
+- **CallRail uses DNI (dynamic number insertion) via JS** — the real business number `(628) 233-3589` stays in the source code (JSX, JSON-LD schema, OG image, everywhere). The CallRail swap.js script in root layout swaps the displayed number per-visitor based on traffic source. Do NOT replace `(628) 233-3589` with a tracking number in source — CallRail's dashboard owns the mapping. If a new CallRail company ID is needed, swap only the `src` URL in `app/layout.tsx`.
+- **Email sender must be verified in Resend** — all blog draft emails use `estimates@gadgetconstructionsf.com` because that domain/sender is already verified in Resend for the contact form. Sending from an unverified address (like `drafts@...`) would fail.
+- **Blog posts use `isPublished()` filter** — future-dated posts exist in `BLOG_POSTS` array but don't appear on `/blog`, at their detail route (404), or in the sitemap until their `date` arrives. This enables pre-writing + scheduled publishing. Always import `isPublished` or `getPublishedPosts` from `lib/blog-data.ts`, never iterate `BLOG_POSTS` directly in user-facing routes.
+- **gpt-image-1 hallucinates numeric ranges with duplicate currency symbols** — `$15K-$60K` format caused a failed render ("$15K-600K"). The image prompt generator system prompt enforces: single hero number preferred over range, if range then single `$` sign only (`$15K-60K`), no trailing `+`, wrap exact text in single quotes.
+- **Force push on `drafts/` branches** — `generate-post.ts` uses `git push --force` because any unmerged draft is considered abandoned and overwritten on rerun. If you want to preserve a draft, merge it before rerunning the workflow.
+- **Auto-merge contract** — leave a drafts/* PR open past Sunday 23:00 PT = implicit approval (Monday publish). Close PR = explicit rejection (brief stays `queued` on main, re-drafts next Friday). Do NOT leave PRs open with intent to revisit later unless you mean to ship them.
+- **FAQ rich results restricted to health/gov since 2023** — the `faqSchema()` still ships because it captures People Also Ask + LLM answer-engine citation (ChatGPT, Perplexity, Google AI Overviews), NOT because we expect the old FAQ rich result display. Keep generating FAQ blocks anyway.
+- **Internal linking target: 12-20 links per 2,500-word post** — the SEO critique pass enforces this. Briefs specify 3-5 required links; critique pass adds 8-15 more from the site inventory. Anchor text diversification: <25% exact-match. Top 30% of page gets at least 3 links.
+- **Do NOT edit `content/proposed-briefs.json` on main manually** — the `merge-proposed-briefs.yml` workflow watches it and will try to migrate whatever's there into the queue. Edit only through `/next-content-batch` PRs.
+- **`featuredImage` field is required for blog hero to render correctly** — the Friday pipeline auto-populates it. Manually-added posts need it too, or the `app/blog/[slug]/page.tsx` hero falls back to text-only.
