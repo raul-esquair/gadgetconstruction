@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   const pathname = usePathname();
+  const isLpRoute = pathname?.startsWith("/lp/");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -66,6 +67,8 @@ export default function Header() {
   const isTransparent = hasHero && !isScrolled && !isMobileMenuOpen;
   // Mobile menu style: dark when at top of hero page, white when scrolled
   const menuIsDark = hasHero && !isScrolled;
+
+  if (isLpRoute) return null;
 
   return (
     <header

@@ -32,8 +32,8 @@ export default function MobileBottomBar() {
     return () => window.removeEventListener("scroll", checkVisibility);
   }, [pathname]);
 
-  // Hide on contact page
-  if (pathname === "/contact") return null;
+  // Hide on contact page and on PPC landing pages (they render their own sticky bar)
+  if (pathname === "/contact" || pathname?.startsWith("/lp/")) return null;
 
   return (
     <div

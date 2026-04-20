@@ -8,6 +8,7 @@ interface PageMetadataOptions {
   ogImage?: string;
   ogType?: "website" | "article";
   publishedTime?: string;
+  noindex?: boolean;
 }
 
 export function generatePageMetadata({
@@ -17,6 +18,7 @@ export function generatePageMetadata({
   ogImage = "https://gadgetconstructionsf.com/opengraph-image",
   ogType = "website",
   publishedTime,
+  noindex = false,
 }: PageMetadataOptions): Metadata {
   const url = `${COMPANY.url}${path}`;
 
@@ -48,5 +50,11 @@ export function generatePageMetadata({
     alternates: {
       canonical: url,
     },
+    ...(noindex && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
   };
 }

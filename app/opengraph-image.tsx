@@ -104,7 +104,7 @@ export default async function OGImage() {
               fontWeight: 700,
             }}
           >
-            Get Your Free Estimate — (628) 233-3589
+            Get Your Free Estimate — (650) 771-5817
           </div>
         </div>
 

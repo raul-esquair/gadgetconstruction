@@ -8,10 +8,18 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import { X, Phone } from "lucide-react";
 import MultiStepForm from "@/components/ui/MultiStepForm";
+import LpQuickForm from "@/components/lp/LpQuickForm";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+
+function deriveLpService(pathname: string | null): string | null {
+  if (!pathname) return null;
+  const match = pathname.match(/^\/lp\/([^/]+)/);
+  return match ? match[1] : null;
+}
 
 // ---- Context ----
 interface EstimateModalContextType {
@@ -32,6 +40,9 @@ export function useEstimateModal() {
 
 // ---- Provider + Modal ----
 export function EstimateModalProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const lpService = deriveLpService(pathname);
+  const isLp = lpService !== null;
   const [isOpen, setIsOpen] = useState(false);
 
   const open = useCallback(() => setIsOpen(true), []);
@@ -101,16 +112,22 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
           {/* Header */}
           <div className="px-6 pt-6 pb-2">
             <h2 className="text-xl font-extrabold font-heading text-primary pr-8">
-              Get Your Free Estimate
+              {isLp ? "Get Your Free Quote" : "Get Your Free Estimate"}
             </h2>
             <p className="text-sm text-secondary mt-1">
-              Three quick steps — takes under 30 seconds. We respond in minutes.
+              {isLp
+                ? "Takes under 20 seconds. We respond in minutes."
+                : "Three quick steps — takes under 30 seconds. We respond in minutes."}
             </p>
           </div>
 
           {/* Form */}
           <div className="px-6 pb-4">
-            <MultiStepForm variant="light" onSuccess={() => {}} />
+            {isLp ? (
+              <LpQuickForm service={lpService} onSuccess={() => {}} />
+            ) : (
+              <MultiStepForm variant="light" onSuccess={() => {}} />
+            )}
           </div>
 
           {/* Phone fallback */}

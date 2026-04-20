@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Phone, MapPin } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
@@ -13,7 +16,10 @@ const companyLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  if (pathname?.startsWith("/lp/")) return null;
 
   return (
     <footer className="bg-primary text-white">
