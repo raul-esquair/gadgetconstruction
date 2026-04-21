@@ -137,6 +137,7 @@ scripts/                          # CLI tools (Node + Python)
 .claude/skills/                   # Claude Code slash-command skills
   monthly-seo-doc/                # /monthly-seo-doc → client .docx
   next-content-batch/             # /next-content-batch → propose 4 new briefs
+  google-ads/                     # /google-ads → load status doc + iterate on campaigns
 
 .github/workflows/                # Automation
   auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
