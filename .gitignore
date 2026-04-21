@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Generated client docs (reproducible via /monthly-seo-doc skill)
 Gadget-Construction-SEO-Month-*.docx
+
+# MCP server config — contains secrets (Google Ads dev token, account IDs)
+.mcp.json
