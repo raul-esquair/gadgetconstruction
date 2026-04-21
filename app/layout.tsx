@@ -70,6 +70,16 @@ export default function RootLayout({
           src="https://cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js"
           async
         />
+        {/* Google Ads conversion tracking — gtag.js */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16885734093"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16885734093');`,
+          }}
+        />
         <EstimateModalProvider>
           <a
             href="#main-content"

@@ -81,6 +81,15 @@ export default function LpQuickForm({
       // fall through to success for UX
     }
 
+    if (typeof window !== "undefined") {
+      const w = window as Window & { gtag?: (...args: unknown[]) => void };
+      if (typeof w.gtag === "function") {
+        w.gtag("event", "conversion", {
+          send_to: "AW-16885734093/jV9TCOXkkqAcEM213_M-",
+        });
+      }
+    }
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     onSuccess?.();
