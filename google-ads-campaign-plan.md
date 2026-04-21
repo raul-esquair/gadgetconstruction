@@ -21,7 +21,7 @@
 | **Campaign 1 — Urgent Repairs** | ✅ Enabled |
 | **Campaign 2 — Planned Projects (Composite Decks)** | ✅ Enabled |
 | **Ad Group — Dry Rot Repair** | ✅ Live (4 keywords, 15 HL + 4 desc, 3 pins) |
-| **Ad Group — Stucco Repair** | 🟡 Pending (user adding today) |
+| **Ad Group — Stucco Repair** | ✅ Live (7 keywords, 15 HL + 4 desc, 3 pins) |
 | **Ad Group — Composite Decks** | ✅ Live (5 keywords, 15 HL + 4 desc, 3 pins) |
 | **Ad Group — Siding** | 🔴 Deferred (month 2+ when budget scales) |
 | **Ad Group — Underpinning** | 🔴 Deferred (month 2+) |
@@ -69,7 +69,7 @@
 | **AI Max** | OFF |
 | **Sitelinks** | 6 campaign-level (Gallery, Service Areas, About, Pricing/FAQ, Contact, #stucco) |
 | **Callouts** | 10 campaign-level |
-| **Ad Groups** | 1 live (Dry Rot), 1 pending (Stucco) |
+| **Ad Groups** | 2 live (Dry Rot, Stucco) |
 
 ### Campaign 2: Planned Projects — Composite Decks
 
@@ -104,7 +104,7 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
 ---
 
-### 🟡 Ad Group 2: Stucco Repair  *(Campaign 1 — to be added 2026-04-21)*
+### 🟢 Ad Group 2: Stucco Repair  *(Campaign 1 — added 2026-04-21)*
 
 **Final URL:** `/lp/exterior-repairs#stucco`
 
@@ -118,6 +118,36 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 | stucco companies near me | Exact | 110 | $5.06–$11.36 |
 | stucco company | Phrase | 20 | $8.09–$30.00 |
 | **Group total** | | **1,330** | |
+
+**Ad group default bid (Max CPC):** $8.00
+**Display paths:** `stucco-repair` / `bay-area`
+
+**Responsive Search Ad — headlines (15, ≤30 chars):**
+
+| # | Headline | Pin |
+|---|---|---|
+| 1 | Stucco Repair Bay Area | Position 1 |
+| 2 | Stucco Repair Near You | Position 1 |
+| 3 | Cracked Stucco? Fixed Right | Position 2 |
+| 4 | Free Stucco Inspection | Position 2 |
+| 5 | CA Licensed, 5-Yr Warranty | Position 3 |
+| 6 | Three-Coat Re-Stucco Pros | — |
+| 7 | Hairline Crack to Re-Coat | — |
+| 8 | 500+ Bay Area Projects | — |
+| 9 | Fixed-Price Stucco Quotes | — |
+| 10 | 12+ Years in the Bay Area | — |
+| 11 | Stucco Contractor, SF & Marin | — |
+| 12 | Stop Water Damage Fast | — |
+| 13 | Same-Week Stucco Estimates | — |
+| 14 | Full-House Re-Stucco Service | — |
+| 15 | Free Fixed-Price Estimate | — |
+
+**Descriptions (4, ≤90 chars):**
+
+1. Licensed Bay Area stucco pros. Crack patching to full re-stucco. 5-year warranty.
+2. 500+ Bay Area projects, 12+ years. Fixed-price quotes after free on-site inspection.
+3. Catch water damage early. We diagnose whether you need a patch, re-coat, or tear-off.
+4. CA Lic #1132983. Serving 31 Bay Area cities. Free inspection - response in minutes.
 
 ---
 
@@ -177,7 +207,7 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 | Campaign | Ad Group | Daily | Monthly | Status |
 |---|---|---|---|---|
 | Urgent Repairs | Dry Rot | (shares $33/day) | ~$250 | 🟢 Live |
-| Urgent Repairs | Stucco | (shares $33/day) | ~$750 | 🟡 Adding today |
+| Urgent Repairs | Stucco | (shares $33/day) | ~$750 | 🟢 Live |
 | Planned Projects | Composite Decks | $16.50/day | ~$500 | 🟢 Live |
 | **Total** | | **$49.50** | **~$1,500** | |
 
@@ -366,9 +396,11 @@ Based on current $1,500/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% c
 
 ## Immediate Next Steps
 
-1. **Today (2026-04-21):** Add Stucco ad group to Urgent Repairs using the content in the Stucco section above. 15 headlines + 4 descriptions already drafted — see conversation history for the exact copy.
-2. **This week:** Verify Campaign 2 has sitelinks + callouts attached. Update CallRail conversion values to $1,500.
-3. **End of week 1:** First optimization pass based on Search terms report.
+1. **This week:** Verify Campaign 2 (Planned Projects) has sitelinks + callouts attached. Update CallRail conversion values (first-time + repeat) to $1,500 each in Google Ads.
+2. **Within 24 hrs of Stucco launch:** confirm ad flipped from "Under review" to "Eligible" and all 7 Stucco keywords show Eligible. Spot-check that `/lp/exterior-repairs#stucco` is scrolling to the Stucco section on ad click.
+3. **Watch Stucco ad group closely week 1:** it has 1,330 mo search volume vs. Dry Rot's 160, so it will absorb most of Campaign 1's $33/day budget. If impression share < 30% with bid at $8, raise to $10 before raising campaign cap.
+4. **End of week 1:** First optimization pass based on Search terms report. Focus on `stucco contractor` queries — that phrase-match has the widest CPC spread ($8.45–$37.27).
+5. **Stucco RSA copy stored in status doc** (see Ad Group 2 section) — no longer requires conversation-history lookup for future regeneration.
 
 ---
 
