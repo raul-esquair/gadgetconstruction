@@ -26,7 +26,8 @@
 | **Ad Group — Siding** | 🔴 Deferred (month 2+ when budget scales) |
 | **Ad Group — Underpinning** | 🔴 Deferred (month 2+) |
 | **Sitelinks + Callouts — Campaign 1 (Urgent Repairs)** | ✅ 6 sitelinks + 10 callouts |
-| **Sitelinks + Callouts — Campaign 2 (Planned Projects)** | ⚠️ Not verified — may need to copy from Campaign 1 |
+| **Sitelinks — Campaign 2 (Planned Projects)** | ✅ 6 sitelinks (incl. Composite vs. Wood Decks) |
+| **Callouts — Campaign 2 (Planned Projects)** | ✅ 10 callouts (deck-tailored mix) |
 
 ---
 
@@ -81,7 +82,8 @@
 | **Locations** | Same as Campaign 1 |
 | **Schedule** | Same as Campaign 1 |
 | **AI Max** | OFF |
-| **Sitelinks / Callouts** | ⚠️ Verify — may need to be added at campaign level |
+| **Sitelinks** | 6 campaign-level (see Ad Extensions section) |
+| **Callouts** | 10 campaign-level (see Ad Extensions section) |
 | **Ad Groups** | 1 live (Composite Decks) |
 
 ---
@@ -256,10 +258,23 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 - **Sitelinks (6):** Bay Area Project Gallery, 31 Cities We Serve, 12+ Years of Trust, Pricing & FAQs, Call or Request Quote, Siding & Stucco Options
 - **Callouts (10):** 5-Yr Workmanship Warranty · 500+ Bay Area Projects · Licensed & Fully Insured · Free On-Site Inspection · Fixed-Price Quotes · Respond in Minutes · 12+ Years in the Bay Area · Full Permit Handling · CA License #1132983 · Family Owned & Operated
 
-### Campaign 2 — Planned Projects ⚠️
-**TODO:** Verify the same sitelinks + callouts are attached. If not, either:
-- Copy sitelinks/callouts into Campaign 2 inline, OR
-- Move existing assets to **account level** via Ads & Assets → Assets so both campaigns share one master set.
+### Campaign 2 — Planned Projects ✅
+- **Call extension:** (650) 771-5817
+- **Sitelinks (6):** Bay Area Project Gallery, 31 Cities We Serve, 12+ Years of Trust, Pricing & FAQs, Call or Request Quote, Composite vs. Wood Decks
+  - *Note: Campaign 2 uses a deck-specific 6th sitelink ("Composite vs. Wood Decks" → `/services/composite-decks`) instead of Campaign 1's Siding/Stucco one.*
+- **Callouts (10, added 2026-04-21):** 5-Yr Workmanship Warranty · 25-Yr Board Warranty · Trex & TimberTech Pros · 500+ Bay Area Projects · No Stain, No Sand, No Rot · Fixed-Price Quotes · Respond in Minutes · Free Deck Design Visit · 12+ Years in the Bay Area · CA License #1132983
+  - *Tailored vs. Campaign 1:* swapped `Licensed & Fully Insured`, `Family Owned & Operated`, `Full Permit Handling` for `25-Yr Board Warranty`, `Trex & TimberTech Pros`, `No Stain, No Sand, No Rot`. Also rephrased `Free On-Site Inspection` → `Free Deck Design Visit` since Planned Projects buyers are designing, not inspecting damage.
+
+### Sitelink 6 copy (Campaign 2 only)
+
+Added 2026-04-21. Catches top-of-funnel deck shoppers still comparing materials.
+
+| Field | Value |
+|---|---|
+| Sitelink text | Composite vs. Wood Decks |
+| Description 1 | 25-year lifespan, zero staining |
+| Description 2 | Why composite outlasts redwood |
+| Final URL | `https://gadgetconstructionsf.com/services/composite-decks` |
 
 ### Structured Snippets (pending)
 - **Type:** Services
@@ -396,7 +411,7 @@ Based on current $1,500/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% c
 
 ## Immediate Next Steps
 
-1. **This week:** Verify Campaign 2 (Planned Projects) has sitelinks + callouts attached. Update CallRail conversion values (first-time + repeat) to $1,500 each in Google Ads.
+1. **This week:** Update CallRail conversion values (first-time caller + repeat caller) to $1,500 each in Google Ads so Smart Bidding has a clean signal when it eventually kicks in.
 2. **Within 24 hrs of Stucco launch:** confirm ad flipped from "Under review" to "Eligible" and all 7 Stucco keywords show Eligible. Spot-check that `/lp/exterior-repairs#stucco` is scrolling to the Stucco section on ad click.
 3. **Watch Stucco ad group closely week 1:** it has 1,330 mo search volume vs. Dry Rot's 160, so it will absorb most of Campaign 1's $33/day budget. If impression share < 30% with bid at $8, raise to $10 before raising campaign cap.
 4. **End of week 1:** First optimization pass based on Search terms report. Focus on `stucco contractor` queries — that phrase-match has the widest CPC spread ($8.45–$37.27).
