@@ -12,6 +12,7 @@ import Button from "@/components/ui/Button";
 import StatsSection from "@/components/sections/StatsSection";
 import CTABlock from "@/components/sections/CTABlock";
 import FounderStory from "@/components/sections/FounderStory";
+import BBBSeal from "@/components/ui/BBBSeal";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "About Gadget Construction | San Francisco General Contractor Since 2014",
@@ -91,6 +92,10 @@ export default function AboutPage() {
               Licensed. Bonded. Insured.
             </h2>
             <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+          </div>
+
+          <div className="flex justify-center mb-10">
+            <BBBSeal size="lg" />
           </div>
 
           <div className="space-y-4">
