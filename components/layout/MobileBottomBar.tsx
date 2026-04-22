@@ -13,23 +13,33 @@ export default function MobileBottomBar() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Find the hero CTA section — it's inside the hero's container
-    const checkVisibility = () => {
-      const heroCTAs = document.querySelector("[data-hero-cta]");
-      if (!heroCTAs) {
-        // No hero CTAs on this page — show immediately
-        setIsVisible(true);
-        return;
-      }
+    const heroCTAs = document.querySelector("[data-hero-cta]");
+    if (!heroCTAs) {
+      setIsVisible(true);
+      return;
+    }
 
-      const rect = heroCTAs.getBoundingClientRect();
-      // Show bottom bar when hero CTAs scroll out of view
-      setIsVisible(rect.bottom < 0);
+    let ticking = false;
+    let lastVisible = false;
+
+    const measure = () => {
+      ticking = false;
+      const nextVisible = heroCTAs.getBoundingClientRect().bottom < 0;
+      if (nextVisible !== lastVisible) {
+        lastVisible = nextVisible;
+        setIsVisible(nextVisible);
+      }
     };
 
-    checkVisibility();
-    window.addEventListener("scroll", checkVisibility, { passive: true });
-    return () => window.removeEventListener("scroll", checkVisibility);
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(measure);
+    };
+
+    measure();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
   // Hide on contact page and on PPC landing pages (they render their own sticky bar)

@@ -37,16 +37,33 @@ export default function Header() {
     setHasHero(!!darkTop);
     setPastHeroCTA(false);
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+    let ticking = false;
+    let lastScrolled = window.scrollY > 100;
+    let lastPast = false;
 
+    const measure = () => {
+      ticking = false;
+      const nextScrolled = window.scrollY > 100;
+      if (nextScrolled !== lastScrolled) {
+        lastScrolled = nextScrolled;
+        setIsScrolled(nextScrolled);
+      }
       if (darkTop) {
-        const rect = darkTop.getBoundingClientRect();
-        setPastHeroCTA(rect.bottom < 0);
+        const nextPast = darkTop.getBoundingClientRect().bottom < 0;
+        if (nextPast !== lastPast) {
+          lastPast = nextPast;
+          setPastHeroCTA(nextPast);
+        }
       }
     };
 
-    handleScroll();
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(measure);
+    };
+
+    measure();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);

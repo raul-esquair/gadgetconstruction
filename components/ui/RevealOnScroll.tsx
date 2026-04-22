@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 type AnimationType = "fade-up" | "fade-in" | "slide-left" | "slide-right" | "scale-up" | "scale-rotate" | "bubble";
@@ -16,37 +16,10 @@ interface RevealOnScrollProps {
 export default function RevealOnScroll({
   children,
   animation = "fade-up",
-  delay = 0,
   className,
   blur = false,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
-  const locked = useRef(false);
-  const active = useRef(false);
-
-  const updateProgress = useCallback(() => {
-    const el = ref.current;
-    if (!el || locked.current) return;
-
-    const rect = el.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    // Element's top relative to bottom of viewport
-    // 0 = element just entered at the bottom
-    // 1 = element has traveled 40% of the viewport height upward
-    const distanceFromBottom = windowHeight - rect.top;
-    const travelZone = windowHeight * 0.65;
-    const raw = distanceFromBottom / travelZone;
-    const clamped = Math.min(1, Math.max(0, raw));
-
-    setProgress(clamped);
-
-    if (clamped >= 1) {
-      locked.current = true;
-      active.current = false;
-    }
-  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -56,51 +29,96 @@ export default function RevealOnScroll({
       "(prefers-reduced-motion: reduce)"
     ).matches;
     if (prefersReducedMotion) {
-      setProgress(1);
+      applyStyles(el, animation, 1, blur);
       return;
     }
 
-    // Use IntersectionObserver to activate/deactivate scroll tracking
+    let locked = false;
+    let active = false;
+    let ticking = false;
+    let lastProgress = -1;
+
+    const update = () => {
+      ticking = false;
+      if (locked) return;
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const distanceFromBottom = windowHeight - rect.top;
+      const travelZone = windowHeight * 0.65;
+      const progress = Math.min(1, Math.max(0, distanceFromBottom / travelZone));
+
+      if (Math.abs(progress - lastProgress) < 0.005 && progress < 1) return;
+      lastProgress = progress;
+
+      applyStyles(el, animation, progress, blur);
+
+      if (progress >= 1) {
+        locked = true;
+        active = false;
+      }
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (locked.current) return;
-
+        if (locked) return;
         if (entry.isIntersecting) {
-          active.current = true;
-          updateProgress();
+          active = true;
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+          }
         } else {
-          active.current = false;
+          active = false;
         }
       },
-      { threshold: 0, rootMargin: "0px 0px 0px 0px" }
+      { threshold: 0, rootMargin: "0px" }
     );
 
     const handleScroll = () => {
-      if (active.current && !locked.current) {
-        requestAnimationFrame(updateProgress);
-      }
+      if (!active || locked || ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
     };
 
     observer.observe(el);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      observer.unobserve(el);
+      observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [updateProgress]);
+  }, [animation, blur]);
 
-  const styles = getProgressStyles(animation, progress, blur);
+  // Initial styles (progress 0) — rendered in SSR and first client paint.
+  // useEffect above then drives updates via direct DOM writes.
+  const initialStyle = getProgressStyles(animation, 0, blur);
 
   return (
     <div
       ref={ref}
       className={cn("will-change-[opacity,transform]", className)}
-      style={styles}
+      style={initialStyle}
     >
       {children}
     </div>
   );
+}
+
+function applyStyles(
+  el: HTMLDivElement,
+  animation: AnimationType,
+  progress: number,
+  blur: boolean
+) {
+  const s = getProgressStyles(animation, progress, blur);
+  if (s.opacity !== undefined) el.style.opacity = String(s.opacity);
+  if (typeof s.transform === "string") el.style.transform = s.transform;
+  if (typeof s.borderRadius === "string") el.style.borderRadius = s.borderRadius;
+  if (typeof s.filter === "string") {
+    el.style.filter = s.filter;
+  } else if (!blur) {
+    el.style.filter = "";
+  }
 }
 
 function getProgressStyles(
@@ -109,15 +127,10 @@ function getProgressStyles(
   blur: boolean,
 ): React.CSSProperties {
   if (animation === "bubble") {
-    // Bubble-gum elastic: inflates past 100% then settles back
     const elastic = easeOutElastic(progress);
-    // Scale from 0 (tiny dot) to 1 (full size), overshooting to ~1.08
     const scale = elastic;
-    // Opacity fades in faster so the shape is visible during inflation
     const opacity = Math.min(1, progress * 3);
-    // Border-radius goes from full circle to rounded rectangle
     const radius = Math.max(0, (1 - progress) * 40);
-
     return {
       opacity,
       transform: `scale(${scale})`,
@@ -127,7 +140,6 @@ function getProgressStyles(
   }
 
   const eased = easeOutExpo(progress);
-
   const transforms: Record<string, string> = {
     "fade-up": `translateY(${(1 - eased) * 30}px)`,
     "fade-in": "",
@@ -148,11 +160,9 @@ function easeOutExpo(x: number): number {
   return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
 }
 
-// Subtle ease-out with single gentle overshoot — like a bubble settling
 function easeOutElastic(x: number): number {
   if (x === 0 || x === 1) return x;
-  // easeOutBack with mild overshoot: one clean arc past 1.0, then settle
-  const c1 = 1.3; // overshoot amount (1.7 = default, 1.3 = subtle)
+  const c1 = 1.3;
   const c3 = c1 + 1;
   return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
 }
