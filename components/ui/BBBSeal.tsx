@@ -5,14 +5,13 @@ interface BBBSealProps {
   size?: "sm" | "md" | "lg";
 }
 
-const SIZE_MAP = {
-  sm: { width: 120, height: 84 },
-  md: { width: 160, height: 112 },
-  lg: { width: 187, height: 130 },
+const SIZE_CLASSES = {
+  sm: "max-w-[110px]",
+  md: "max-w-[120px] md:max-w-[160px]",
+  lg: "max-w-[130px] md:max-w-[187px]",
 };
 
 export default function BBBSeal({ className, size = "md" }: BBBSealProps) {
-  const { width, height } = SIZE_MAP[size];
   return (
     <a
       href="https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/gadget-construction-inc-1116-981771/#sealclick"
@@ -28,8 +27,9 @@ export default function BBBSeal({ className, size = "md" }: BBBSealProps) {
       <img
         src="https://seal-goldengate.bbb.org/seals/blue-seal-187-130-bbb-981771.png"
         alt="Gadget Construction, Inc. BBB Business Review"
-        width={width}
-        height={height}
+        width={187}
+        height={130}
+        className={cn("h-auto", SIZE_CLASSES[size])}
         style={{ border: 0 }}
       />
     </a>
