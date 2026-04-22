@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomBar from "@/components/layout/MobileBottomBar";
@@ -57,29 +58,26 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <script dangerouslySetInnerHTML={{ __html: `if("scrollRestoration"in history)history.scrollRestoration="manual";window.scrollTo(0,0);` }} />
-        <script
-          type="text/javascript"
+        <Script
           id="sa-dynamic-optimization"
+          strategy="lazyOnload"
           src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjlkNGI0MWU4LThkMzktNGExYy04NmM2LWQ0NGJhOWU5OWIzYyI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="
           data-uuid="9d4b41e8-8d39-4a1c-86c6-d44ba9e99b3c"
           {...({ nowprocket: "", "nitro-exclude": "" } as Record<string, string>)}
         />
-        {/* CallRail DNI — dynamic number insertion for per-source call attribution */}
-        <script
-          type="text/javascript"
+        <Script
+          id="callrail-dni"
+          strategy="afterInteractive"
           src="https://cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js"
-          async
         />
-        {/* Google Ads conversion tracking — gtag.js */}
-        <script
-          async
+        <Script
+          id="gtag-src"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-16885734093"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16885734093');`,
-          }}
-        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16885734093');`}
+        </Script>
         <EstimateModalProvider>
           <a
             href="#main-content"
