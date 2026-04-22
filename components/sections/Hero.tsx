@@ -102,8 +102,9 @@ export default function Hero({
             fill
             className="object-cover animate-[ken-burns_20s_ease-in-out_infinite_alternate]"
             priority
+            fetchPriority="high"
             sizes="100vw"
-            quality={85}
+            quality={80}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
         </div>
