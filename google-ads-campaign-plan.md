@@ -4,7 +4,7 @@
 **Client:** Gadget Construction Inc. | CA Lic #1132983
 **Service Area:** Marin, San Francisco, San Mateo, Santa Clara counties
 **Google Ads Conversion ID:** `AW-16885734093`
-**Monthly Budget (current):** $1,500/mo ($49.50/day split across 2 campaigns)
+**Monthly Budget (current):** $1,800/mo ($58.96/day split across 2 campaigns)
 
 ---
 
@@ -28,6 +28,7 @@
 | **Sitelinks + Callouts — Campaign 1 (Urgent Repairs)** | ✅ 6 sitelinks + 10 callouts |
 | **Sitelinks — Campaign 2 (Planned Projects)** | ✅ 6 sitelinks (incl. Composite vs. Wood Decks) |
 | **Callouts — Campaign 2 (Planned Projects)** | ✅ 10 callouts (deck-tailored mix) |
+| **Google Ads MCP (live telemetry from Claude)** | ✅ Live — verified 2026-04-21 reaches Gadget `8495875417` through Esquair MCC `7701854464`. Campaign search returns Urgent Repairs + Planned Projects. |
 
 ---
 
@@ -77,7 +78,7 @@
 | Setting | Value |
 |---|---|
 | **Status** | Enabled |
-| **Daily Budget** | $16.50/day (~$500/mo) |
+| **Daily Budget** | $25.00/day (~$760/mo) |
 | **Bidding** | Clicks + Max CPC cap $10.00 |
 | **Locations** | Same as Campaign 1 |
 | **Schedule** | Same as Campaign 1 |
@@ -208,16 +209,16 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
 | Campaign | Ad Group | Daily | Monthly | Status |
 |---|---|---|---|---|
-| Urgent Repairs | Dry Rot | (shares $33/day) | ~$250 | 🟢 Live |
-| Urgent Repairs | Stucco | (shares $33/day) | ~$750 | 🟢 Live |
-| Planned Projects | Composite Decks | $16.50/day | ~$500 | 🟢 Live |
-| **Total** | | **$49.50** | **~$1,500** | |
+| Urgent Repairs | Dry Rot | (shares $33.96/day) | ~$260 | 🟢 Live |
+| Urgent Repairs | Stucco | (shares $33.96/day) | ~$780 | 🟢 Live |
+| Planned Projects | Composite Decks | $25.00/day | ~$760 | 🟢 Live |
+| **Total** | | **$58.96** | **~$1,800** | |
 
-*Google splits campaign budget across ad groups based on performance. With Stucco added, Urgent Repairs internally distributes $33/day between Dry Rot (low volume) and Stucco (high volume), favoring Stucco.*
+*Google splits campaign budget across ad groups based on performance. With Stucco added, Urgent Repairs internally distributes $33.96/day between Dry Rot (low volume) and Stucco (high volume), favoring Stucco.*
 
 ### Scaling Path
 
-- **If Month 1 ROAS > 300%:** scale to $2,500/mo, add Siding + Underpinning
+- **If Month 1 ROAS > 300%:** scale to $2,800/mo, add Siding + Underpinning
 - **If Month 1 ROAS 150–300%:** hold budget, optimize creative + bids
 - **If Month 1 ROAS < 150%:** pause underperforming ad group, consolidate budget onto winners
 
@@ -396,19 +397,19 @@ All LPs have `noindex, follow` meta robots so they don't compete with /services/
 
 ## Expected Performance (Month 1)
 
-Based on current $1,500/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% close rate.
+Based on current $1,800/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% close rate.
 
 | Metric | Low | Mid | High |
 |--------|-----|-----|------|
-| Monthly spend | $1,500 | $1,500 | $1,500 |
-| Clicks | 100 | 125 | 150 |
+| Monthly spend | $1,800 | $1,800 | $1,800 |
+| Clicks | 120 | 150 | 180 |
 | Avg CPC | $15 | $12 | $10 |
-| Form submissions (5% CVR) | 5 | 6 | 8 |
-| Phone calls (CallRail qualified) | 3 | 5 | 7 |
-| Total leads | 8 | 11 | 15 |
-| Closed jobs (22% close rate) | 2 | 2–3 | 3–4 |
+| Form submissions (5% CVR) | 6 | 8 | 9 |
+| Phone calls (CallRail qualified) | 4 | 6 | 8 |
+| Total leads | 10 | 14 | 17 |
+| Closed jobs (22% close rate) | 2 | 3 | 4 |
 | Avg job value (blended) | $6,000 | $8,000 | $12,000 |
-| **Revenue estimate** | **$12K** | **$20K** | **$45K** |
+| **Revenue estimate** | **$14K** | **$24K** | **$54K** |
 | **ROAS** | 8x | 13x | 30x |
 
 *These are estimates. Response time to leads (minutes vs hours) is the single biggest lever on close rate.*
@@ -423,7 +424,8 @@ Based on current $1,500/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% c
 4. **After first CallRail calls fire:** verify in Google Ads that First Time Phone Call and Repeat Phone Call conversions are recording with the correct values ($1,500 and $500 respectively). Spot-check in CallRail that the conversion push is tagging the correct action on each call.
 5. **60–90 days in:** review the actual repeat-caller breakdown in CallRail recordings. Decide whether to raise/lower the $500 repeat value based on what % are returning prospects vs. existing customers.
 6. **Stucco RSA copy stored in status doc** (see Ad Group 2 section) — no longer requires conversation-history lookup for future regeneration.
-7. **Google Ads MCP config — known issue (2026-04-21):** the `google-ads-mcp` MCP server returned `list_accessible_customers` as `["5173141186"]` but all queries against it returned `User doesn't have permission to access customer` because the MCP server wasn't passing a `login-customer-id` header for the parent MCC. `.mcp.json` env var `GOOGLE_ADS_LOGIN_CUSTOMER_ID` was set to two conflicting IDs (`7701854464` and `8495875417`) as duplicate keys; one was kept but MCP queries still failed (possibly wrong MCC chosen OR Claude Code process not fully restarted after edit). **Next session:** cmd-Q Claude Code → verify the correct MCC in Google Ads top-right account switcher → set `.mcp.json` to that single MCC ID → relaunch Claude Code → retry `list_accessible_customers` then a campaign-metrics query. Until fixed, fall back to screenshots from the Google Ads UI for telemetry questions.
+7. **Google Ads MCP — ACTIVATED 2026-04-21:** post-relaunch verification confirmed `.mcp.json` with `GOOGLE_ADS_LOGIN_CUSTOMER_ID=7701854464` (Esquair MCC) successfully reaches Gadget `8495875417`. `list_accessible_customers` returns `7701854464`; campaign search on `8495875417` surfaces both live campaigns (Urgent Repairs `23773779275`, Planned Projects `23773939394`). All future telemetry questions should pull live from MCP rather than relying on screenshots.
+8. **Budget reconciled to $1,800/mo (2026-04-21):** Planned Projects daily was set to $25/day at campaign creation (not $16.50 as the original plan called for). Confirmed intentional and locked in as the new committed budget. ~$258/mo above the original $1,500 plan; revisit only if Month 1 ROAS drops below 150%.
 
 ---
 
