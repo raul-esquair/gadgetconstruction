@@ -16,7 +16,7 @@
 | **LP Form Submission conversion action** | ⏳ Inactive (awaiting Google tag verification — auto on first traffic) |
 | **LP Form Submission attached to both campaigns** | ✅ 2 of 2 |
 | **Phone call lead conversion attached to both campaigns** | ✅ 2 of 2 Active |
-| **CallRail → Google Ads integration** | ✅ Activated, separate first-time / repeat caller conversions |
+| **CallRail → Google Ads integration** | ✅ Activated + goal attached to 2 of 2 campaigns (First Time Phone Call $1,500, Repeat Phone Call $500) |
 | **Account negative keyword list applied** | ✅ Applied to both campaigns |
 | **Campaign 1 — Urgent Repairs** | ✅ Enabled |
 | **Campaign 2 — Planned Projects (Composite Decks)** | ✅ Enabled |
@@ -235,19 +235,25 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 ### CallRail → Google Ads
 - **Activation:** 2026-04-21
 - **Min call duration for conversion:** 60 seconds
-- **Conversion actions pushed:**
-  - `Phone call from CallRail (first-time caller)`
-  - `Phone call from CallRail (repeat caller)`
-- **Conversion values:** ⚠️ TODO — set to $1,500 each in Google Ads to match form value
+- **Conversion actions pushed (actual Google Ads names):**
+  - `First Time Phone Call` — $1,500 value (set 2026-04-21)
+  - `Repeat Phone Call` — $500 value (set 2026-04-21)
+- **Count setting:** "Every" (phone-native default — each call counts; correct for repeat caller action)
+- **Attribution window:** 90-day click-through (CallRail default; longer than form action since call leads take longer to close)
+- **Goal group:** "Other" (account-default), attached to **2 of 2 campaigns** after goal-attachment fix on 2026-04-21
+
+### Why $500 on Repeat Phone Call (not $1,500)
+
+Repeat callers are a mix of returning prospects, existing customers with warranty/followup questions, and past non-converters circling back. Setting repeat caller equal to form value would teach Smart Bidding to bid aggressively toward queries that surface repeat callers — largely people who'd call regardless of ad spend. $500 captures real incremental lead value without overweighting. Revisit after 60–90 days of CallRail call recordings reveal the actual repeat-caller breakdown.
 
 ### Conversion Action Inventory
 
 | Action | Source | Status | Value |
 |---|---|---|---|
 | LP Form Submission | Website (gtag) | Inactive (verifying) | $1,500 |
-| Calls from Smart Campaign Ads | Google (call extension) | Active | $0 — needs update |
-| CallRail — first-time caller | CallRail push | Pending first call | $0 — needs update |
-| CallRail — repeat caller | CallRail push | Pending first call | $0 — needs update |
+| First Time Phone Call | CallRail push | Pending first call | $1,500 |
+| Repeat Phone Call | CallRail push | Pending first call | $500 |
+| Calls from Smart Campaign Ads | Google (call extension) | Locked/system-managed | — (skipped; Smart Campaign-only, doesn't fire from Search campaigns) |
 
 ---
 
@@ -411,11 +417,12 @@ Based on current $1,500/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% c
 
 ## Immediate Next Steps
 
-1. **This week:** Update CallRail conversion values (first-time caller + repeat caller) to $1,500 each in Google Ads so Smart Bidding has a clean signal when it eventually kicks in.
-2. **Within 24 hrs of Stucco launch:** confirm ad flipped from "Under review" to "Eligible" and all 7 Stucco keywords show Eligible. Spot-check that `/lp/exterior-repairs#stucco` is scrolling to the Stucco section on ad click.
-3. **Watch Stucco ad group closely week 1:** it has 1,330 mo search volume vs. Dry Rot's 160, so it will absorb most of Campaign 1's $33/day budget. If impression share < 30% with bid at $8, raise to $10 before raising campaign cap.
-4. **End of week 1:** First optimization pass based on Search terms report. Focus on `stucco contractor` queries — that phrase-match has the widest CPC spread ($8.45–$37.27).
-5. **Stucco RSA copy stored in status doc** (see Ad Group 2 section) — no longer requires conversation-history lookup for future regeneration.
+1. **Within 24 hrs of Stucco launch:** confirm ad flipped from "Under review" to "Eligible" and all 7 Stucco keywords show Eligible. Spot-check that `/lp/exterior-repairs#stucco` is scrolling to the Stucco section on ad click.
+2. **Watch Stucco ad group closely week 1:** it has 1,330 mo search volume vs. Dry Rot's 160, so it will absorb most of Campaign 1's $33/day budget. If impression share < 30% with bid at $8, raise to $10 before raising campaign cap.
+3. **End of week 1:** First optimization pass based on Search terms report. Focus on `stucco contractor` queries — that phrase-match has the widest CPC spread ($8.45–$37.27).
+4. **After first CallRail calls fire:** verify in Google Ads that First Time Phone Call and Repeat Phone Call conversions are recording with the correct values ($1,500 and $500 respectively). Spot-check in CallRail that the conversion push is tagging the correct action on each call.
+5. **60–90 days in:** review the actual repeat-caller breakdown in CallRail recordings. Decide whether to raise/lower the $500 repeat value based on what % are returning prospects vs. existing customers.
+6. **Stucco RSA copy stored in status doc** (see Ad Group 2 section) — no longer requires conversation-history lookup for future regeneration.
 
 ---
 
