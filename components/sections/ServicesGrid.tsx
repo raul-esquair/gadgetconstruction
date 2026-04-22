@@ -120,8 +120,7 @@ export default function ServicesGrid() {
                       src={service.image}
                       alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                       fill
-                      sizes="(max-width: 640px) 400px, 100vw"
-                      quality={70}
+                      sizes="100vw"
                       className="object-cover"
                     />
                   </div>
@@ -180,7 +179,6 @@ export default function ServicesGrid() {
                         alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 640px"
-                        quality={70}
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
@@ -220,7 +218,6 @@ export default function ServicesGrid() {
                       alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
-                      quality={70}
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
