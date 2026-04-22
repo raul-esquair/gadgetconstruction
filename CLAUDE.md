@@ -506,7 +506,6 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Pending
 
-- **Founder story** — placeholder copy in about-data.ts, needs Raul's real story
 - **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live (separate from CallRail which is now wired up for call attribution)
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
@@ -515,6 +514,7 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Done (Recently Completed)
 
+- **Founder story → "rooted in place" pivot** — About page's `FounderStory` section now opens with an SF skyline shot from a Bay Area hilltop (`/images/about-sf-skyline.jpg`, 685KB) instead of a logo placeholder. Heading: `Twelve Years. 31 Cities. One Backyard.` Three paragraphs name specific neighborhoods (Sunset, Berkeley hillsides, Daly City), housing stock by architect (Eichler, Doelger), and the SF permit authority (DBI). Component now consumes `FOUNDER_STORY` from `lib/about-data.ts` (previously had divergent hardcoded copy). The `image: { src, alt }` field is now part of FOUNDER_STORY.
 - **Exterior repairs service page** — `/services/exterior-repairs` covers dry rot, stucco, and siding as three subservices on one URL. 1,400+ words, 6-item scope, 5-step process, 4 differentiators, 8 FAQs, itemized pricing. Uses a custom `multiServiceGraphSchema()` helper that emits a `@graph` with three separate `Service` nodes (Dry Rot Repair, Stucco Repair, Siding Installation) per 2026 SEO research. Exterior Repairs is now the 7th entry in `SERVICES`.
 - **31 city cross-linking to exterior-repairs** — every city page links into the new service with varied anchor text via the new optional `serviceAnchors?: Partial<Record<string, string>>` field on `CityData`. Examples: "Doelger Home Stucco & Dry Rot Repair" (Daly City), "Eichler T1-11 Siding & Exterior Repair" (Menlo Park), "Craftsman Home Dry Rot & Siding Repair" (Berkeley). Rendered by `CityServices` in CityPageContent.tsx.
 - **12 hyper-local exterior-repair paragraphs** — new `CityExteriorRepairsContext` component renders a unique ~80-word paragraph on 12 priority cities (SF, Daly City, Pacifica, Sausalito, Mill Valley, San Rafael, San Anselmo, Berkeley, Oakland, Palo Alto, Menlo Park, San Jose). Only renders when `CityData.exteriorRepairsContext` field is populated. E-E-A-T Experience signal per 2026 Helpful Content update.

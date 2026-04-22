@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import * as LucideIcons from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { generatePageMetadata } from "@/lib/metadata";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import { FOUNDER_STORY, VALUES, CREDENTIALS } from "@/lib/about-data";
+import { VALUES, CREDENTIALS } from "@/lib/about-data";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
@@ -12,6 +11,7 @@ import PageHeader from "@/components/sections/PageHeader";
 import Button from "@/components/ui/Button";
 import StatsSection from "@/components/sections/StatsSection";
 import CTABlock from "@/components/sections/CTABlock";
+import FounderStory from "@/components/sections/FounderStory";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "About Gadget Construction | San Francisco General Contractor Since 2014",
@@ -34,39 +34,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* Founder Story */}
-      <SectionWrapper>
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Photo placeholder */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100 order-2 lg:order-1">
-              <Image
-                src="/images/logo.png"
-                alt="Gadget Construction team on a job site"
-                fill
-                className="object-contain p-16 opacity-15"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-sm text-neutral-400 font-heading font-medium">
-                  Founder / Team Photo
-                </p>
-              </div>
-            </div>
-
-            {/* Story */}
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-extrabold font-heading mb-8">
-                {FOUNDER_STORY.heading}
-              </h2>
-              <div className="space-y-4 text-secondary leading-relaxed">
-                {FOUNDER_STORY.paragraphs.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </SectionWrapper>
+      <FounderStory />
 
       {/* Values */}
       <SectionWrapper background="light">

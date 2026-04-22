@@ -1,11 +1,13 @@
 export const FOUNDER_STORY = {
-  heading: "How We Got Here",
+  heading: "Twelve Years. 31 Cities. One Backyard.",
+  image: {
+    src: "/images/about-sf-skyline.jpg",
+    alt: "San Francisco skyline and Bay Area rooftops from a hilltop — the region Gadget Construction has served for 12+ years",
+  },
   paragraphs: [
-    "Gadget Construction didn't start with a business plan. It started with frustration.",
-    "After years working for other contractors — watching homeowners get vague bids, missed deadlines, and radio silence once the check cleared — something had to change. Too many people were getting burned by contractors who treated their home like just another job number.",
-    "In 2014, Gadget Construction was founded with a straightforward idea: treat every project like it's your own home. Show up when you say you will. Charge what you quoted. And leave the job site cleaner than you found it.",
-    "Twelve years and 500+ projects later, that idea hasn't changed. We've grown from a one-truck operation to a full team of skilled tradespeople — but the standard is the same. Every foundation we pour, every wall we frame, every roof we install gets the same attention to detail.",
-    "We know San Francisco. We know the soil in the Sunset is different from Bernal Heights. We know which DBI inspectors want to see what. We know how to work on steep lots, in tight spaces, and alongside neighbors who are three feet away. This city is where we live and work — and our reputation here is everything.",
+    "This is where we work. Marin to Santa Clara, Sausalito to Sunnyvale — 31 cities across 6 counties we know by name, by soil, and by inspector. We've poured foundations in the Sunset's sand, framed ADUs on Berkeley's hillsides, and re-stuccoed Daly City Doelgers in the fog. Local doesn't just mean nearby. It means we already know what your project will throw at us.",
+    "Gadget Construction was founded in 2014 with one straightforward idea: treat every Bay Area home like it's your own. Show up when you say you will. Charge what you quoted. Leave the job site cleaner than you found it. Twelve years and 500+ projects later, that standard hasn't moved an inch.",
+    "We know which DBI inspectors want what. We know Eichler post-and-beam from Doelger pastel-stucco. We know which fence your neighbor will care about and which soils need underpinning before you frame. This city — and the 30 around it — is our backyard. Our reputation here is everything.",
   ],
 };
 
