@@ -8,12 +8,20 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { X, Phone } from "lucide-react";
-import MultiStepForm from "@/components/ui/MultiStepForm";
-import LpQuickForm from "@/components/lp/LpQuickForm";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+
+const MultiStepForm = dynamic(() => import("@/components/ui/MultiStepForm"), {
+  ssr: false,
+  loading: () => <div className="h-[440px]" aria-hidden="true" />,
+});
+const LpQuickForm = dynamic(() => import("@/components/lp/LpQuickForm"), {
+  ssr: false,
+  loading: () => <div className="h-[440px]" aria-hidden="true" />,
+});
 
 function deriveLpService(pathname: string | null): string | null {
   if (!pathname) return null;
@@ -44,8 +52,12 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
   const lpService = deriveLpService(pathname);
   const isLp = lpService !== null;
   const [isOpen, setIsOpen] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
 
-  const open = useCallback(() => setIsOpen(true), []);
+  const open = useCallback(() => {
+    setIsOpen(true);
+    setHasOpened(true);
+  }, []);
   const close = useCallback(() => setIsOpen(false), []);
 
   // Lock body scroll when open
@@ -121,13 +133,14 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
             </p>
           </div>
 
-          {/* Form */}
+          {/* Form — only mounted after first open to defer JS */}
           <div className="px-6 pb-4">
-            {isLp ? (
-              <LpQuickForm service={lpService} onSuccess={() => {}} />
-            ) : (
-              <MultiStepForm variant="light" onSuccess={() => {}} />
-            )}
+            {hasOpened &&
+              (isLp ? (
+                <LpQuickForm service={lpService} onSuccess={() => {}} />
+              ) : (
+                <MultiStepForm variant="light" onSuccess={() => {}} />
+              ))}
           </div>
 
           {/* Phone fallback */}

@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
-import MultiStepForm from "@/components/ui/MultiStepForm";
+import CTABlockForm from "@/components/sections/CTABlockForm";
 import { COMPANY } from "@/lib/constants";
 
 interface CTABlockProps {
@@ -33,9 +33,9 @@ export default function CTABlock({
             </a>
           </div>
 
-          {/* Right: Multi-step Form */}
+          {/* Right: Multi-step Form (lazy-loaded on scroll-in) */}
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl">
-            <MultiStepForm variant="light" />
+            <CTABlockForm />
           </div>
         </div>
       </Container>
