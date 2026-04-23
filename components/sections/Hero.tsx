@@ -105,7 +105,7 @@ export default function Hero({
             fetchPriority="high"
             decoding="sync"
             sizes="100vw"
-            quality={85}
+            quality={80}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
         </div>

@@ -18,6 +18,7 @@ export default function LpFooter() {
                 alt={`${COMPANY.shortName} logo`}
                 width={180}
                 height={56}
+                sizes="150px"
                 className="h-12"
                 style={{ width: "auto" }}
               />

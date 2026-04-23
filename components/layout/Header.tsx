@@ -109,6 +109,7 @@ export default function Header() {
               alt={`${COMPANY.shortName} logo`}
               width={798}
               height={341}
+              sizes="(max-width: 768px) 160px, 224px"
               className="w-40 md:w-56"
               style={{ height: "auto" }}
               priority

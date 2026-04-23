@@ -35,6 +35,7 @@ export default function Footer() {
                 alt={`${COMPANY.shortName} logo`}
                 width={180}
                 height={56}
+                sizes="180px"
                 className="h-14"
                 style={{ width: "auto" }}
               />

@@ -17,6 +17,7 @@ export default function LpHeader() {
               alt={`${COMPANY.shortName} logo`}
               width={798}
               height={341}
+              sizes="(max-width: 768px) 144px, 192px"
               className="w-36 md:w-48"
               style={{ height: "auto" }}
               priority
