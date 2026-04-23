@@ -67,7 +67,7 @@ export default function RootLayout({
         />
         <Script
           id="callrail-dni"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js"
         />
         <Script
