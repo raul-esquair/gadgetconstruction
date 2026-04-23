@@ -33,14 +33,16 @@ export function localBusinessSchema() {
     ],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "168 Hyde St. Apt. 301",
       addressLocality: "San Francisco",
       addressRegion: "CA",
+      postalCode: "94102",
       addressCountry: "US",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 37.7749,
-      longitude: -122.4194,
+      latitude: 37.7823,
+      longitude: -122.4168,
     },
     priceRange: "$$$",
     aggregateRating: {

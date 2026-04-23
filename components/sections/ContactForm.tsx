@@ -1,7 +1,7 @@
 "use client";
 
 import * as LucideIcons from "lucide-react";
-import { Phone, CheckCircle, Shield } from "lucide-react";
+import { Phone, CheckCircle, Shield, MapPin } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import { CONTACT_COPY } from "@/lib/contact-data";
 import Container from "@/components/ui/Container";
@@ -50,6 +50,19 @@ export default function ContactForm() {
                   <p className="text-xs text-neutral-400">Mon–Fri, 7am–6pm</p>
                 </div>
               </a>
+              <div className="flex items-start gap-3 mt-3 pt-4 border-t border-neutral-200">
+                <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-secondary" />
+                </div>
+                <div className="pt-1">
+                  <p className="text-sm font-heading font-semibold text-primary">
+                    {COMPANY.address.street}
+                  </p>
+                  <p className="text-xs text-secondary">
+                    {COMPANY.address.city}, {COMPANY.address.region} {COMPANY.address.postalCode}
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* What to Expect */}

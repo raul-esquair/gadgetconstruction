@@ -14,6 +14,14 @@ export const COMPANY = {
   rating: 5.0,
   reviewCount: 3,
   url: "https://gadgetconstructionsf.com",
+  address: {
+    street: "168 Hyde St. Apt. 301",
+    city: "San Francisco",
+    region: "CA",
+    postalCode: "94102",
+    country: "US",
+    full: "168 Hyde St. Apt. 301, San Francisco, CA 94102",
+  },
 } as const;
 
 export const SERVICES: Service[] = [

@@ -97,7 +97,13 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-2.5 text-sm text-neutral-300">
                 <MapPin size={16} className="shrink-0 mt-0.5" />
-                <span>{COMPANY.serviceArea}</span>
+                <span>
+                  {COMPANY.address.street}
+                  <br />
+                  {COMPANY.address.city}, {COMPANY.address.region} {COMPANY.address.postalCode}
+                  <br />
+                  <span className="text-neutral-400">Serving {COMPANY.serviceArea}</span>
+                </span>
               </div>
             </div>
           </div>
