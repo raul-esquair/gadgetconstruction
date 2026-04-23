@@ -102,6 +102,8 @@ export default function Hero({
             fill
             className="object-cover animate-[ken-burns_20s_ease-in-out_infinite_alternate]"
             priority
+            fetchPriority="high"
+            decoding="sync"
             sizes="100vw"
             quality={85}
           />
