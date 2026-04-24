@@ -2,7 +2,7 @@
   {
     "slug": "composite-deck-cost-san-francisco",
     "scheduledDate": "2026-04-27",
-    "status": "queued",
+    "status": "drafted",
     "title": "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
     "metaTitle": "Composite Deck Cost in San Francisco (2026) | Real Bay Area Numbers",
     "excerpt": "Composite decks in San Francisco typically run $15,000 to $60,000+. Here's what actually drives the range — with pricing from 500+ Bay Area projects, not national averages.",
@@ -16,7 +16,12 @@
     "relatedService": "composite-decks",
     "targetWordCount": 2500,
     "geoFocus": "SF-anchored",
-    "citiesReferenced": ["San Francisco", "Noe Valley", "Bernal Heights", "Twin Peaks"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Bernal Heights",
+      "Twin Peaks"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: What Composite Decks Cost in San Francisco",
@@ -24,12 +29,23 @@
       },
       {
         "h2": "Price Ranges by Project Type",
-        "h3": ["Standard 300 sq ft Deck ($15,000–$35,000)", "Multi-Level Hillside Deck ($35,000–$60,000+)", "Deck with Pergola and Lighting ($25,000–$50,000)", "Railing-Only Replacement ($3,000–$8,000)"],
+        "h3": [
+          "Standard 300 sq ft Deck ($15,000–$35,000)",
+          "Multi-Level Hillside Deck ($35,000–$60,000+)",
+          "Deck with Pergola and Lighting ($25,000–$50,000)",
+          "Railing-Only Replacement ($3,000–$8,000)"
+        ],
         "notes": "For each tier: what's included, typical materials, example SF neighborhood, typical timeline. Use pricing from lib/pricing-data.ts SERVICE_PRICING.composite-decks."
       },
       {
         "h2": "What Drives Composite Deck Costs in San Francisco",
-        "h3": ["Material Selection (Trex, TimberTech, Fiberon)", "Site Access and Demolition", "Structural Requirements (Hillside, Multi-Level, Elevated)", "SF DBI Permits (Decks Over 30 Inches)", "Add-Ons: Pergolas, Lighting, Railings"],
+        "h3": [
+          "Material Selection (Trex, TimberTech, Fiberon)",
+          "Site Access and Demolition",
+          "Structural Requirements (Hillside, Multi-Level, Elevated)",
+          "SF DBI Permits (Decks Over 30 Inches)",
+          "Add-Ons: Pergolas, Lighting, Railings"
+        ],
         "notes": "Explain each factor with specific dollar impact. Mention SF DBI permit threshold of 30 inches above grade triggers permit. Explain why steep streets in SF create access cost premiums."
       },
       {
@@ -60,9 +76,18 @@
       "Treating composite decks as commodity (they're not)"
     ],
     "internalLinks": [
-      {"url": "/services/composite-decks", "anchor": "composite deck construction"},
-      {"url": "/services/exterior-repairs", "anchor": "dry rot at deck ledger boards"},
-      {"url": "/gallery", "anchor": "our composite deck projects"}
+      {
+        "url": "/services/composite-decks",
+        "anchor": "composite deck construction"
+      },
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "dry rot at deck ledger boards"
+      },
+      {
+        "url": "/gallery",
+        "anchor": "our composite deck projects"
+      }
     ],
     "cta": "Ready to know what your specific deck will cost? We provide detailed, line-item estimates after a free site visit — no allowances, no surprises. Link to estimate modal."
   },
@@ -83,7 +108,13 @@
     "relatedService": "composite-decks",
     "targetWordCount": 3000,
     "geoFocus": "Bay Area-wide",
-    "citiesReferenced": ["San Francisco", "Marin", "East Bay", "Peninsula", "Pacifica"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Marin",
+      "East Bay",
+      "Peninsula",
+      "Pacifica"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: Which Wins in Fog and Salt Air",
@@ -95,17 +126,32 @@
       },
       {
         "h2": "Trex: The Market Leader",
-        "h3": ["Product Lines: Enhance, Select, Transcend, Signature", "Warranty Terms and What They Actually Cover", "Installed Cost per Square Foot in the Bay Area", "Bay Area Performance: Strengths and Weaknesses"],
+        "h3": [
+          "Product Lines: Enhance, Select, Transcend, Signature",
+          "Warranty Terms and What They Actually Cover",
+          "Installed Cost per Square Foot in the Bay Area",
+          "Bay Area Performance: Strengths and Weaknesses"
+        ],
         "notes": "Trex Enhance ($10-14/sq ft material): entry-level, good for budget. Transcend ($14-18): our most-recommended mid-range. Signature ($18-24): premium hardwood look. 25-year fade/stain warranty. Known issue: older Trex (pre-2013 generation 1) had rot problems — that's been fixed, but the reputation lingers. Performs well in fog, moderate scratch resistance."
       },
       {
         "h2": "TimberTech: Premium Cap-Stock and PVC",
-        "h3": ["Product Lines: Edge, Reserve, Legacy, AZEK (100% PVC)", "Warranty Terms", "Installed Cost per Square Foot", "Bay Area Performance"],
+        "h3": [
+          "Product Lines: Edge, Reserve, Legacy, AZEK (100% PVC)",
+          "Warranty Terms",
+          "Installed Cost per Square Foot",
+          "Bay Area Performance"
+        ],
         "notes": "TimberTech AZEK ($16-22/sq ft material) is 100% PVC — no wood fibers at all, so no moisture absorption possible. Best for Pacifica, Sausalito, SF Sunset, any coastal home. Reserve and Legacy ($14-20) are cap-stock composites. 50-year fade warranty (best in industry). Heavier than Trex, bit more contractor-sensitive to install right. Premium pricing."
       },
       {
         "h2": "Fiberon: The Underdog Value Play",
-        "h3": ["Product Lines: Good, Better, Best Tiers", "Warranty Terms", "Installed Cost per Square Foot", "Bay Area Performance"],
+        "h3": [
+          "Product Lines: Good, Better, Best Tiers",
+          "Warranty Terms",
+          "Installed Cost per Square Foot",
+          "Bay Area Performance"
+        ],
         "notes": "Good tier ($9-12/sq ft material), Better ($12-16), Best/Paramount ($16-20). 50-year fade warranty (matches TimberTech). Lesser brand recognition but the product is legitimately good. Our preferred choice for price-sensitive projects that still need 20+ year life. Available through most Bay Area distributors."
       },
       {
@@ -132,9 +178,18 @@
       "Outdated info about Trex quality (it's improved significantly)"
     ],
     "internalLinks": [
-      {"url": "/services/composite-decks", "anchor": "Bay Area composite deck installation"},
-      {"url": "/blog/composite-deck-cost-san-francisco", "anchor": "full composite deck cost breakdown"},
-      {"url": "/gallery", "anchor": "our recent deck projects"}
+      {
+        "url": "/services/composite-decks",
+        "anchor": "Bay Area composite deck installation"
+      },
+      {
+        "url": "/blog/composite-deck-cost-san-francisco",
+        "anchor": "full composite deck cost breakdown"
+      },
+      {
+        "url": "/gallery",
+        "anchor": "our recent deck projects"
+      }
     ],
     "cta": "Comparing brands for your project? We're certified in Trex, TimberTech, and Fiberon. We'll walk your site, understand your priorities, and recommend what's actually right — not what's easiest for us."
   },
@@ -155,7 +210,12 @@
     "relatedService": "composite-decks",
     "targetWordCount": 2200,
     "geoFocus": "Bay Area-wide",
-    "citiesReferenced": ["San Francisco", "Marin", "East Bay", "Peninsula"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Marin",
+      "East Bay",
+      "Peninsula"
+    ],
     "outline": [
       {
         "h2": "The Short Answer",
@@ -167,7 +227,12 @@
       },
       {
         "h2": "The Case for Composite in 2026",
-        "h3": ["The Maintenance Reality (Wood vs Composite)", "Longevity: 20 Years vs 40+ Years", "Bay Area Climate Resistance", "Total Cost of Ownership (20-Year Math)"],
+        "h3": [
+          "The Maintenance Reality (Wood vs Composite)",
+          "Longevity: 20 Years vs 40+ Years",
+          "Bay Area Climate Resistance",
+          "Total Cost of Ownership (20-Year Math)"
+        ],
         "notes": "Wood requires annual/biannual staining and sealing ($800-$1500/year for 400 sq ft deck). Composite requires occasional soap-and-water cleaning ($0). Over 20 years: wood replacement typically needed around year 15-20 on coastal homes. Composite lasts 25-40 years. Math: wood $12K upfront + $20K maintenance over 20 years = $32K. Composite $18K upfront + $500 maintenance = $18.5K. Composite is CHEAPER over its lifespan."
       },
       {
@@ -200,9 +265,18 @@
       "Pretending cost is the only factor"
     ],
     "internalLinks": [
-      {"url": "/services/composite-decks", "anchor": "composite deck construction in the Bay Area"},
-      {"url": "/services/exterior-repairs", "anchor": "dry rot repair at wooden decks"},
-      {"url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026", "anchor": "composite brand comparison"}
+      {
+        "url": "/services/composite-decks",
+        "anchor": "composite deck construction in the Bay Area"
+      },
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "dry rot repair at wooden decks"
+      },
+      {
+        "url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026",
+        "anchor": "composite brand comparison"
+      }
     ],
     "cta": "Deciding between wood and composite? We'll walk your site, understand your architectural context, and give you an honest recommendation — plus fixed-price estimates for both options if you want to compare."
   },
@@ -224,7 +298,14 @@
     "relatedService": "concrete-foundations",
     "targetWordCount": 2500,
     "geoFocus": "SF-anchored",
-    "citiesReferenced": ["San Francisco", "Sunset", "Marina", "Richmond", "Bernal Heights", "Oakland"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Sunset",
+      "Marina",
+      "Richmond",
+      "Bernal Heights",
+      "Oakland"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: SF Underpinning Cost Ranges",
@@ -236,17 +317,32 @@
       },
       {
         "h2": "Method 1: Helical Piers",
-        "h3": ["How They Work (Rotating Steel Shafts Driven to Bedrock)", "Typical Use Cases in SF", "Pros and Cons", "Cost Per Pier and Total Project Cost"],
+        "h3": [
+          "How They Work (Rotating Steel Shafts Driven to Bedrock)",
+          "Typical Use Cases in SF",
+          "Pros and Cons",
+          "Cost Per Pier and Total Project Cost"
+        ],
         "notes": "Helical piers = screw-shaped steel shafts rotated into soil until they reach bedrock or load-bearing layer. Best for: unstable soils, sites with limited access, lighter structures. SF use case: Marina District fill, Outer Sunset expansive clay, Bernal Heights slope. Cost: $2,500-$4,500 per pier installed (includes engineering, monitoring). Pros: minimal excavation, can be installed in tight spaces, immediately load-bearing. Cons: requires skilled operator, not ideal for very deep bedrock."
       },
       {
         "h2": "Method 2: Push Piers (Resistance Piers)",
-        "h3": ["How They Work (Hydraulic Press Driven to Load-Bearing Strata)", "Typical Use Cases in SF", "Pros and Cons", "Cost Per Pier and Total Project Cost"],
+        "h3": [
+          "How They Work (Hydraulic Press Driven to Load-Bearing Strata)",
+          "Typical Use Cases in SF",
+          "Pros and Cons",
+          "Cost Per Pier and Total Project Cost"
+        ],
         "notes": "Push piers = steel tubes hydraulically driven straight down using the house's weight as counterforce. Best for: heavier structures, well-defined load-bearing layers. SF use case: Victorians in Alamo Square, Edwardians in the Richmond, older multi-unit buildings. Cost: $2,000-$3,500 per pier. Pros: cheaper than helical on heavier houses, more predictable load capacity. Cons: requires heavier structure to push against, more disruptive excavation."
       },
       {
         "h2": "Method 3: Slabjacking / Mudjacking",
-        "h3": ["How It Works (Polyurethane or Concrete Slurry Injection)", "Typical Use Cases in SF", "Pros and Cons", "Cost Per Injection and Total Project Cost"],
+        "h3": [
+          "How It Works (Polyurethane or Concrete Slurry Injection)",
+          "Typical Use Cases in SF",
+          "Pros and Cons",
+          "Cost Per Injection and Total Project Cost"
+        ],
         "notes": "Slabjacking = drilling holes and injecting material under a settled slab to raise it. Modern version uses polyurethane foam (faster, cleaner, lighter than concrete). Best for: garage floors, concrete driveways, non-structural slabs, surface-level settling. NOT appropriate for: main-home foundation settling, deep structural movement. Cost: $500-$1,500 per injection hole, typical project $3,000-$12,000. Pros: fast (same day), cheap, non-invasive. Cons: surface-level only, doesn't address underlying soil failure."
       },
       {
@@ -255,7 +351,13 @@
       },
       {
         "h2": "What Drives SF Underpinning Cost Up",
-        "h3": ["Site Access (Can Equipment Reach the Foundation?)", "Soil Conditions (Bay Mud, Fill, Clay, Sand)", "Number of Piers Required", "SF DBI Permit and Engineering Requirements", "Historic District / Architectural Review"],
+        "h3": [
+          "Site Access (Can Equipment Reach the Foundation?)",
+          "Soil Conditions (Bay Mud, Fill, Clay, Sand)",
+          "Number of Piers Required",
+          "SF DBI Permit and Engineering Requirements",
+          "Historic District / Architectural Review"
+        ],
         "notes": "Specific SF cost drivers: steep streets, neighboring buildings, basement access requirements, Mission Bay / Marina fill (bay mud), pre-1989 soft-story buildings. Engineering costs: $3,000-$8,000 for a full report. DBI permits: $2,000-$5,000."
       },
       {
@@ -277,9 +379,18 @@
       "Fear-mongering without giving readers diagnostic tools"
     ],
     "internalLinks": [
-      {"url": "/services/concrete-foundations", "anchor": "foundation repair in San Francisco"},
-      {"url": "/blog/foundation-repair-signs-san-francisco", "anchor": "5 signs your foundation needs repair"},
-      {"url": "/service-areas/san-francisco", "anchor": "SF foundation work"}
+      {
+        "url": "/services/concrete-foundations",
+        "anchor": "foundation repair in San Francisco"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "5 signs your foundation needs repair"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "SF foundation work"
+      }
     ],
     "cta": "Foundation issues? We provide free on-site assessments with written findings — no scare tactics, no pressure. We'll tell you what's happening and what each method would cost for your specific situation."
   },
@@ -300,7 +411,15 @@
     "relatedService": "exterior-repairs",
     "targetWordCount": 2800,
     "geoFocus": "Bay Area-wide",
-    "citiesReferenced": ["San Francisco", "Mill Valley", "Oakland Hills", "Berkeley Hills", "Pacifica", "Menlo Park", "Palo Alto"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Mill Valley",
+      "Oakland Hills",
+      "Berkeley Hills",
+      "Pacifica",
+      "Menlo Park",
+      "Palo Alto"
+    ],
     "outline": [
       {
         "h2": "The Short Answer",
@@ -312,17 +431,35 @@
       },
       {
         "h2": "Stucco: Traditional but Temperamental",
-        "h3": ["How Three-Coat Stucco Works", "Why It Cracks (And What It Means)", "Cost: Installation and Repair", "Best Used On: Architectural Context"],
+        "h3": [
+          "How Three-Coat Stucco Works",
+          "Why It Cracks (And What It Means)",
+          "Cost: Installation and Repair",
+          "Best Used On: Architectural Context"
+        ],
         "notes": "Three-coat stucco = scratch coat, brown coat, finish coat over wire lath and weather-resistive barrier. Cracks from: settling, temperature cycling, improper control joints, water intrusion behind surface. Cost: $7-$14/sq ft new construction, $15K-$35K full-house re-stucco. Best for: Spanish Revival, Mediterranean, midcentury ranches, SF Doelgers (native to the architecture). Worst for: coastal homes without proper weather-resistive detail."
       },
       {
         "h2": "Hardie Board / Fiber Cement: The Modern Default",
-        "h3": ["How It's Made (Cement, Sand, Cellulose Fiber)", "Warranty and Durability", "Fire Rating in WUI Zones", "Cost: Installation per Square Foot", "Best Used On: Versatile Across Architectural Styles"],
+        "h3": [
+          "How It's Made (Cement, Sand, Cellulose Fiber)",
+          "Warranty and Durability",
+          "Fire Rating in WUI Zones",
+          "Cost: Installation per Square Foot",
+          "Best Used On: Versatile Across Architectural Styles"
+        ],
         "notes": "Hardie board = composite of Portland cement, silica sand, and cellulose fiber. Available in planks, shingles, panels. 30-year warranty. Class A fire rating (critical for Marin, East Bay Hills, Peninsula hills WUI zones). Cost: $14-$22/sq ft installed. Best for: 80% of Bay Area homes — especially coastal (fog/salt) and fire zones. Also good for: mid-century ranches getting refreshed, modern new construction, replacement on homes previously with vinyl/T1-11."
       },
       {
         "h2": "Wood Siding: When Tradition Matters",
-        "h3": ["Cedar and Redwood Clapboard", "T1-11 Plywood (Eichler Siding)", "Cedar Shake / Shingle", "Maintenance Reality", "Cost: Installation per Square Foot", "Best Used On: Period-Correct Restoration"],
+        "h3": [
+          "Cedar and Redwood Clapboard",
+          "T1-11 Plywood (Eichler Siding)",
+          "Cedar Shake / Shingle",
+          "Maintenance Reality",
+          "Cost: Installation per Square Foot",
+          "Best Used On: Period-Correct Restoration"
+        ],
         "notes": "Cedar clapboard: $10-$16/sq ft installed. Redwood shingles: $16-$25/sq ft (limited supply). T1-11 plywood (Eichler siding): $8-$12/sq ft. Cedar shake: $14-$22/sq ft. Maintenance: refinish every 5-8 years. Best for: Victorians (clapboard), Craftsman (shingle/shake), Eichlers (T1-11 - critical for architectural authenticity), Berkeley brown-shingles, Mill Valley redwood homes. Worst for: coastal homes without rigorous maintenance budget."
       },
       {
@@ -348,10 +485,22 @@
       "Ignoring architectural context"
     ],
     "internalLinks": [
-      {"url": "/services/exterior-repairs", "anchor": "stucco and siding repair"},
-      {"url": "/service-areas/mill-valley", "anchor": "WUI fire zone homes in Marin"},
-      {"url": "/service-areas/pacifica", "anchor": "coastal home siding in Pacifica"},
-      {"url": "/service-areas/palo-alto", "anchor": "Eichler homes in Palo Alto"}
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "stucco and siding repair"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "WUI fire zone homes in Marin"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "coastal home siding in Pacifica"
+      },
+      {
+        "url": "/service-areas/palo-alto",
+        "anchor": "Eichler homes in Palo Alto"
+      }
     ],
     "cta": "Choosing siding for your project? We install all three — Hardie board, traditional three-coat stucco, and wood siding. We'll walk your home, factor in fire zone and coastal exposure, and recommend what's actually right for your specific context."
   },
@@ -372,7 +521,14 @@
     "relatedService": "exterior-repairs",
     "targetWordCount": 2600,
     "geoFocus": "SF-anchored",
-    "citiesReferenced": ["San Francisco", "Sunset", "Richmond", "Daly City", "Westlake", "Pacifica"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Sunset",
+      "Richmond",
+      "Daly City",
+      "Westlake",
+      "Pacifica"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: Diagnose Before You Decide",
@@ -380,7 +536,13 @@
       },
       {
         "h2": "What Your Stucco Cracks Are Telling You",
-        "h3": ["Hairline Cracks (Under 1/16 Inch)", "Diagonal Cracks at Windows and Doors", "Stair-Step Cracks", "Horizontal Cracks", "Spider / Map Cracking Across Walls"],
+        "h3": [
+          "Hairline Cracks (Under 1/16 Inch)",
+          "Diagonal Cracks at Windows and Doors",
+          "Stair-Step Cracks",
+          "Horizontal Cracks",
+          "Spider / Map Cracking Across Walls"
+        ],
         "notes": "For each crack type: what causes it, what it means, urgency level (cosmetic / monitor / act). Hairline = usually cosmetic, temperature cycling. Diagonal from corners = structural movement, act. Stair-step = foundation settling (link to foundation signs post). Horizontal = serious water intrusion likely. Spider/map = stucco system failure, re-stucco likely needed."
       },
       {
@@ -421,10 +583,22 @@
       "Generic stucco advice without SF specifics"
     ],
     "internalLinks": [
-      {"url": "/services/exterior-repairs", "anchor": "SF stucco repair"},
-      {"url": "/service-areas/san-francisco", "anchor": "stucco repair throughout San Francisco"},
-      {"url": "/service-areas/daly-city", "anchor": "Westlake Doelger stucco repair"},
-      {"url": "/blog/foundation-repair-signs-san-francisco", "anchor": "foundation settling that causes stair-step cracks"}
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "SF stucco repair"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "stucco repair throughout San Francisco"
+      },
+      {
+        "url": "/service-areas/daly-city",
+        "anchor": "Westlake Doelger stucco repair"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "foundation settling that causes stair-step cracks"
+      }
     ],
     "cta": "Not sure which option you need? We provide free on-site stucco assessments with written findings. We'll photograph the damage, probe for underlying issues, and give you honest recommendations — not a sales pitch for the most expensive option."
   },
@@ -446,7 +620,17 @@
     "relatedService": "exterior-repairs",
     "targetWordCount": 2800,
     "geoFocus": "Hyper-local (coastal)",
-    "citiesReferenced": ["Sunset", "Richmond", "Pacifica", "Daly City", "Sausalito", "Mill Valley", "Marin", "Berkeley", "Oakland Hills"],
+    "citiesReferenced": [
+      "Sunset",
+      "Richmond",
+      "Pacifica",
+      "Daly City",
+      "Sausalito",
+      "Mill Valley",
+      "Marin",
+      "Berkeley",
+      "Oakland Hills"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: Dry Rot Spreads. Catch It Early.",
@@ -458,22 +642,50 @@
       },
       {
         "h2": "Why Bay Area Homes Are Uniquely Vulnerable",
-        "h3": ["Fog Belt Moisture (Permanent Humidity)", "Coastal Salt Air (Accelerates Paint Failure, Exposing Wood)", "Wind-Driven Rain (Water Where It Shouldn't Be)", "Old Housing Stock (1900s-1950s, Pre-Modern Flashing Standards)"],
+        "h3": [
+          "Fog Belt Moisture (Permanent Humidity)",
+          "Coastal Salt Air (Accelerates Paint Failure, Exposing Wood)",
+          "Wind-Driven Rain (Water Where It Shouldn't Be)",
+          "Old Housing Stock (1900s-1950s, Pre-Modern Flashing Standards)"
+        ],
         "notes": "Specific to our climate: fog rolls in daily year-round, homes in the Sunset/Richmond/Pacifica stay damp. Salt air accelerates paint failure, exposing wood. Wind-driven rain during atmospheric rivers hits exterior walls from angles flat-country homes don't see. 50%+ of Bay Area housing predates 1950 — built before modern kickout flashing, housewrap, and modern weather-resistive barrier standards."
       },
       {
         "h2": "How to Spot Dry Rot: The 7 Signs",
-        "h3": ["1. Soft Wood (The Screwdriver Test)", "2. Paint Peeling or Bubbling in Localized Areas", "3. Cubical / Cracked Pattern in Wood", "4. Musty / Damp Smell (Especially Near Windows)", "5. Visible Fungal Growth (White Strands or Orange Fruiting Bodies)", "6. Sagging Floors or Ceilings Near Exterior Walls", "7. Stuck Windows or Doors Near Exterior Walls"],
+        "h3": [
+          "1. Soft Wood (The Screwdriver Test)",
+          "2. Paint Peeling or Bubbling in Localized Areas",
+          "3. Cubical / Cracked Pattern in Wood",
+          "4. Musty / Damp Smell (Especially Near Windows)",
+          "5. Visible Fungal Growth (White Strands or Orange Fruiting Bodies)",
+          "6. Sagging Floors or Ceilings Near Exterior Walls",
+          "7. Stuck Windows or Doors Near Exterior Walls"
+        ],
         "notes": "For each sign: what to look for, what it means, how confident you can be. Screwdriver test = press flat-head screwdriver into suspect wood; if it sinks more than 1/8 inch without splitting, it's rotting. Include photos-worthy descriptions. Orange fruiting bodies = very advanced decay, emergency."
       },
       {
         "h2": "Where to Look: The 10 Places Dry Rot Hides in Bay Area Homes",
-        "h3": ["1. Window Sills (Especially South and West Facing)", "2. Door Thresholds and Jambs", "3. Fascia Boards and Eaves", "4. Roof Valleys and Kickouts", "5. Deck Ledger Boards", "6. Bay Window Bases", "7. Behind Downspouts and at Gutter Outlets", "8. Near Chimney Flashings", "9. Under Stucco at Foundation Level", "10. Behind Siding at Kickout Flashing Locations"],
+        "h3": [
+          "1. Window Sills (Especially South and West Facing)",
+          "2. Door Thresholds and Jambs",
+          "3. Fascia Boards and Eaves",
+          "4. Roof Valleys and Kickouts",
+          "5. Deck Ledger Boards",
+          "6. Bay Window Bases",
+          "7. Behind Downspouts and at Gutter Outlets",
+          "8. Near Chimney Flashings",
+          "9. Under Stucco at Foundation Level",
+          "10. Behind Siding at Kickout Flashing Locations"
+        ],
         "notes": "Systematic checklist homeowners can use for their own walk-through. Each location: what to inspect, how, what bad signs look like. Include 'take a flashlight and look up at fascia' kind of practical guidance."
       },
       {
         "h2": "What Repair Actually Costs",
-        "h3": ["Localized Patch (Single Window / Trim Piece): $800-$2,500", "Whole-Wall Dry Rot + Sister-Framing: $4,000-$12,000", "Structural (Band Joist, Rim Joist, Foundation-Adjacent): $12,000-$30,000+"],
+        "h3": [
+          "Localized Patch (Single Window / Trim Piece): $800-$2,500",
+          "Whole-Wall Dry Rot + Sister-Framing: $4,000-$12,000",
+          "Structural (Band Joist, Rim Joist, Foundation-Adjacent): $12,000-$30,000+"
+        ],
         "notes": "Use SERVICE_PRICING.exterior-repairs numbers. Explain what each tier includes. Note that opening a wall often reveals more damage than the inspection suggested — always budget 10-15% contingency."
       },
       {
@@ -501,11 +713,26 @@
       "Fear-mongering without diagnostic tools"
     ],
     "internalLinks": [
-      {"url": "/services/exterior-repairs", "anchor": "dry rot repair across the Bay Area"},
-      {"url": "/services/concrete-foundations", "anchor": "foundation-level wood rot issues"},
-      {"url": "/service-areas/pacifica", "anchor": "Pacifica coastal home repairs"},
-      {"url": "/service-areas/sausalito", "anchor": "Sausalito hillside dry rot"},
-      {"url": "/service-areas/san-francisco", "anchor": "Sunset and Richmond dry rot"}
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "dry rot repair across the Bay Area"
+      },
+      {
+        "url": "/services/concrete-foundations",
+        "anchor": "foundation-level wood rot issues"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "Pacifica coastal home repairs"
+      },
+      {
+        "url": "/service-areas/sausalito",
+        "anchor": "Sausalito hillside dry rot"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "Sunset and Richmond dry rot"
+      }
     ],
     "cta": "See any of the signs above on your home? We provide free dry rot inspections with written findings and photos. We'll identify the source of water intrusion, map the full extent of damage, and give you a fixed-price estimate — not a scare-tactic sales pitch."
   },
@@ -526,7 +753,14 @@
     "relatedService": "exterior-repairs",
     "targetWordCount": 2400,
     "geoFocus": "Bay Area-wide",
-    "citiesReferenced": ["San Francisco", "Oakland", "Berkeley", "Palo Alto", "Mill Valley", "Pacifica"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Oakland",
+      "Berkeley",
+      "Palo Alto",
+      "Mill Valley",
+      "Pacifica"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: SF Siding Replacement Cost Ranges",
@@ -538,12 +772,23 @@
       },
       {
         "h2": "Cost by Material Type",
-        "h3": ["Hardie Board (Fiber Cement): $14-$22 per sq ft installed", "Engineered Wood Composite: $12-$18 per sq ft installed", "Cedar and Redwood Natural Wood: $10-$16 per sq ft installed", "Vinyl: $6-$10 per sq ft installed (why we don't recommend it)"],
+        "h3": [
+          "Hardie Board (Fiber Cement): $14-$22 per sq ft installed",
+          "Engineered Wood Composite: $12-$18 per sq ft installed",
+          "Cedar and Redwood Natural Wood: $10-$16 per sq ft installed",
+          "Vinyl: $6-$10 per sq ft installed (why we don't recommend it)"
+        ],
         "notes": "For each material: cost per sq ft installed, what that includes, typical warranty, maintenance cost over 20 years, best and worst use cases. Vinyl section: include but explain why we don't recommend it for SF (looks cheap, fades, warps near heat sources like BBQs, doesn't match SF architecture)."
       },
       {
         "h2": "What Drives Cost Up in San Francisco",
-        "h3": ["Demolition of Existing Siding", "Dry Rot / Sheathing Repair Found During Demo", "Scaffolding for 3-Story SF Rowhouses", "Historic District and Architectural Review", "SF DBI Permits"],
+        "h3": [
+          "Demolition of Existing Siding",
+          "Dry Rot / Sheathing Repair Found During Demo",
+          "Scaffolding for 3-Story SF Rowhouses",
+          "Historic District and Architectural Review",
+          "SF DBI Permits"
+        ],
         "notes": "Specific cost impacts: demo $2-$4/sq ft. Dry rot repair allowance typically 10-20% of siding budget. Scaffolding for 3-story SF homes: $8-$15/sq ft of elevation. Historic district review (Haight, Alamo Square, select neighborhoods): $2K-$8K additional. DBI permits: $2K-$6K depending on project size."
       },
       {
@@ -571,9 +816,18 @@
       "Underselling dry rot discovery as 'rare' (it's common)"
     ],
     "internalLinks": [
-      {"url": "/services/exterior-repairs", "anchor": "Bay Area siding replacement"},
-      {"url": "/blog/dry-rot-bay-area-homes-spot-repair-cost", "anchor": "dry rot discovery during siding work"},
-      {"url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area", "anchor": "how to choose your siding material"}
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area siding replacement"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "dry rot discovery during siding work"
+      },
+      {
+        "url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area",
+        "anchor": "how to choose your siding material"
+      }
     ],
     "cta": "Planning a siding replacement? We provide itemized, fixed-price estimates with explicit allowances for dry rot discovery — no mystery change orders. Free on-site assessment and quote."
   },
@@ -594,7 +848,18 @@
     "relatedService": "composite-decks",
     "targetWordCount": 2600,
     "geoFocus": "Hyper-local",
-    "citiesReferenced": ["San Francisco", "Twin Peaks", "Noe Valley", "Bernal Heights", "Mill Valley", "Tamalpais Valley", "Sausalito", "Tiburon", "Berkeley Hills", "Oakland Hills"],
+    "citiesReferenced": [
+      "San Francisco",
+      "Twin Peaks",
+      "Noe Valley",
+      "Bernal Heights",
+      "Mill Valley",
+      "Tamalpais Valley",
+      "Sausalito",
+      "Tiburon",
+      "Berkeley Hills",
+      "Oakland Hills"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: Hillside Decks Cost 30-60% More. Here's Why.",
@@ -602,17 +867,32 @@
       },
       {
         "h2": "What Makes Hillside Deck Construction Different",
-        "h3": ["Foundation Engineering (Piers and Caissons)", "Post Heights and Structural Loads", "Drainage and Water Management", "Access for Equipment and Materials"],
+        "h3": [
+          "Foundation Engineering (Piers and Caissons)",
+          "Post Heights and Structural Loads",
+          "Drainage and Water Management",
+          "Access for Equipment and Materials"
+        ],
         "notes": "Foundation: hillside decks typically require drilled pier footings or caissons down to bedrock or load-bearing soil (unlike flat lots where 24-inch footings suffice). Post heights: a 'deck' at house level can require 15-20 foot posts to reach down-slope grade. Drainage: steep sites require engineered drainage so water doesn't undermine footings. Access: getting concrete trucks, lumber, and equipment to a Twin Peaks backyard is often impossible — helicopter delivery or hand-carried materials are real options."
       },
       {
         "h2": "Engineering Requirements in SF and Marin",
-        "h3": ["Structural Engineer Stamp (Required, Not Optional)", "SF DBI and Marin Community Development Agency", "Seismic Requirements for Elevated Structures", "Wildland-Urban Interface (WUI) Fire Zone Compliance"],
+        "h3": [
+          "Structural Engineer Stamp (Required, Not Optional)",
+          "SF DBI and Marin Community Development Agency",
+          "Seismic Requirements for Elevated Structures",
+          "Wildland-Urban Interface (WUI) Fire Zone Compliance"
+        ],
         "notes": "In SF and Marin, any deck over 30 inches above grade requires permit. Multi-level or elevated decks on slopes almost always require a structural engineer's stamp ($2K-$6K). SF DBI plan review adds 2-4 months. Marin CDA: similar. WUI zones (most of Marin, SF Twin Peaks, Oakland Hills, Berkeley Hills): non-combustible structural materials required, ember-resistant detailing."
       },
       {
         "h2": "Multi-Level Design Strategy",
-        "h3": ["Connecting Grade Changes with Deck Levels", "Stair Systems (Open vs Enclosed)", "Railing Requirements and Code", "Material Flow Between Levels"],
+        "h3": [
+          "Connecting Grade Changes with Deck Levels",
+          "Stair Systems (Open vs Enclosed)",
+          "Railing Requirements and Code",
+          "Material Flow Between Levels"
+        ],
         "notes": "Multi-level decks create architectural drama on slopes but require careful design. Level changes of 7-24 inches typically connect with a single step. Larger changes need stairs with code-compliant rise/run (7.75 inch max rise, 10 inch min run in CA). Railings over 30 inch drops: 42-inch height minimum, 4-inch sphere test. Material continuity: either match materials across levels for unity, or deliberately contrast for visual separation — both are legit design choices."
       },
       {
@@ -644,10 +924,22 @@
       "Ignoring WUI fire zone requirements"
     ],
     "internalLinks": [
-      {"url": "/services/composite-decks", "anchor": "hillside composite deck construction"},
-      {"url": "/services/retaining-walls", "anchor": "retaining walls often paired with hillside decks"},
-      {"url": "/service-areas/mill-valley", "anchor": "Mill Valley canyon deck construction"},
-      {"url": "/service-areas/sausalito", "anchor": "Sausalito waterfront decks"}
+      {
+        "url": "/services/composite-decks",
+        "anchor": "hillside composite deck construction"
+      },
+      {
+        "url": "/services/retaining-walls",
+        "anchor": "retaining walls often paired with hillside decks"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "Mill Valley canyon deck construction"
+      },
+      {
+        "url": "/service-areas/sausalito",
+        "anchor": "Sausalito waterfront decks"
+      }
     ],
     "cta": "Planning a hillside deck? We've built on slopes across SF, Marin, and the East Bay hills. We'll walk your site with our structural engineer, assess access constraints, and give you a realistic estimate — no surprise change orders mid-project."
   },
@@ -669,7 +961,18 @@
     "relatedService": "exterior-repairs",
     "targetWordCount": 2400,
     "geoFocus": "Hyper-local",
-    "citiesReferenced": ["Sunset", "Richmond", "Pacifica", "Daly City", "Westlake", "Sausalito", "Mill Valley", "Half Moon Bay", "Marin", "Tiburon"],
+    "citiesReferenced": [
+      "Sunset",
+      "Richmond",
+      "Pacifica",
+      "Daly City",
+      "Westlake",
+      "Sausalito",
+      "Mill Valley",
+      "Half Moon Bay",
+      "Marin",
+      "Tiburon"
+    ],
     "outline": [
       {
         "h2": "The Short Answer: Coastal Bay Area Homes Wear Out Differently",
@@ -677,7 +980,12 @@
       },
       {
         "h2": "Why Coastal Homes Fail Faster",
-        "h3": ["Salt Air (Accelerates Paint and Fastener Corrosion)", "Fog Exposure (Permanent Moisture in Wood)", "Wind-Driven Rain (Water Where Flashing Wasn't Designed to Stop It)", "UV from Reflected Ocean Light"],
+        "h3": [
+          "Salt Air (Accelerates Paint and Fastener Corrosion)",
+          "Fog Exposure (Permanent Moisture in Wood)",
+          "Wind-Driven Rain (Water Where Flashing Wasn't Designed to Stop It)",
+          "UV from Reflected Ocean Light"
+        ],
         "notes": "Each environmental factor: what it does, what it attacks, failure timeline. Salt air = metal fasteners and paint fail in 5-8 years vs 15+ inland. Fog = wood moisture content stays above rot threshold (~20%) year-round. Wind-driven rain during atmospheric rivers hits walls at angles flashing wasn't designed for. UV is 20% higher over the ocean from reflection off water."
       },
       {
@@ -722,14 +1030,38 @@
       "Missing the internal linking opportunity to cluster posts"
     ],
     "internalLinks": [
-      {"url": "/services/exterior-repairs", "anchor": "Bay Area exterior repairs across 31 cities"},
-      {"url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off", "anchor": "full guide to stucco repair decisions"},
-      {"url": "/blog/dry-rot-bay-area-homes-spot-repair-cost", "anchor": "how to spot and repair dry rot"},
-      {"url": "/blog/siding-replacement-cost-san-francisco-2026", "anchor": "siding replacement cost breakdown"},
-      {"url": "/service-areas/san-francisco", "anchor": "Sunset and Richmond exterior repairs"},
-      {"url": "/service-areas/pacifica", "anchor": "Pacifica coastal home repairs"},
-      {"url": "/service-areas/daly-city", "anchor": "Westlake Doelger home exterior work"},
-      {"url": "/service-areas/sausalito", "anchor": "Sausalito hillside exterior repairs"}
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area exterior repairs across 31 cities"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "full guide to stucco repair decisions"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "how to spot and repair dry rot"
+      },
+      {
+        "url": "/blog/siding-replacement-cost-san-francisco-2026",
+        "anchor": "siding replacement cost breakdown"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "Sunset and Richmond exterior repairs"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "Pacifica coastal home repairs"
+      },
+      {
+        "url": "/service-areas/daly-city",
+        "anchor": "Westlake Doelger home exterior work"
+      },
+      {
+        "url": "/service-areas/sausalito",
+        "anchor": "Sausalito hillside exterior repairs"
+      }
     ],
     "cta": "Live on the coast? We've been repairing Bay Area coastal homes for 12+ years — Sunset, Pacifica, Daly City, Sausalito, Mill Valley, Marin. We provide free exterior assessments with written photo reports of every issue we find. No scare tactics, no pressure."
   }
