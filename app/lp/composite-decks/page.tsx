@@ -116,8 +116,8 @@ const DIFFERENTIATORS = [
   },
   {
     icon: ShieldCheck,
-    title: "Double Warranty Coverage",
-    body: "25-year manufacturer warranty on the decking itself, plus our 5-year workmanship warranty on every cut, screw, and railing connection. Both in writing.",
+    title: "25-Year Manufacturer Warranty",
+    body: "Composite boards from Trex, TimberTech, and Fiberon ship with 25-year fade and stain warranties — backed by the manufacturers themselves. We register every install in your name.",
   },
   {
     icon: Palette,
@@ -144,8 +144,8 @@ const PROCESS = [
     body: "Footings, framing, decking, railings, lighting, and finishing — typically completed in 1–3 weeks for a standard single-level deck. Multi-level and pergola builds take longer.",
   },
   {
-    title: "Final Walkthrough & Warranty",
-    body: "We walk the deck with you, ensure every detail is right, and hand over your warranty paperwork — manufacturer + Gadget Construction workmanship warranty, both in writing.",
+    title: "Final Walkthrough",
+    body: "We walk the deck with you, ensure every detail is right, and hand over your manufacturer warranty paperwork — registered in your name with Trex, TimberTech, or Fiberon.",
   },
 ];
 
@@ -195,7 +195,7 @@ export default function CompositeDecksLpPage() {
       <JsonLd
         data={serviceSchema(
           "Composite Deck Installation",
-          "Trex, TimberTech, and Fiberon certified composite deck builder serving 31 cities across the Bay Area. Multi-level decks, pergolas, railings, and LED lighting. Licensed Class B contractor (CA #1132983). 5-year workmanship warranty plus 25-year manufacturer warranty.",
+          "Trex, TimberTech, and Fiberon certified composite deck builder serving 31 cities across the Bay Area. Multi-level decks, pergolas, railings, and LED lighting. Licensed Class B contractor (CA #1132983). 25-year manufacturer fade and stain warranty on premium composite boards.",
           "$15,000–$60,000+",
         )}
       />
@@ -210,7 +210,7 @@ export default function CompositeDecksLpPage() {
           "Free on-site design consultation",
           "Fixed-price quote — no surprise change orders",
           "Trex, TimberTech & Fiberon certified installer",
-          "5-year workmanship + 25-year manufacturer warranty",
+          "25-year manufacturer fade & stain warranty",
         ]}
         backgroundImage="/images/composite-decks-hero.jpg"
         imageAlt="Multi-level composite deck with stepped design attached to a residential home in the San Francisco Bay Area"
@@ -220,7 +220,7 @@ export default function CompositeDecksLpPage() {
         formCtaText="Get My Free Consultation"
       />
 
-      <LpTrustStrip />
+      <LpTrustStrip hideWarranty />
 
       {/* Brand strip */}
       <section className="bg-white py-8 border-b border-neutral-200">
@@ -471,7 +471,7 @@ export default function CompositeDecksLpPage() {
         formCtaText="Get My Free Consultation"
       />
 
-      <LpFooter />
+      <LpFooter hideWarranty />
     </>
   );
 }

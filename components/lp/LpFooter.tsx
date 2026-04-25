@@ -4,7 +4,11 @@ import { Phone, MapPin, ShieldCheck } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 
-export default function LpFooter() {
+interface LpFooterProps {
+  hideWarranty?: boolean;
+}
+
+export default function LpFooter({ hideWarranty = false }: LpFooterProps = {}) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -55,7 +59,7 @@ export default function LpFooter() {
               <li>— Free on-site inspection</li>
               <li>— Fixed-price written estimate</li>
               <li>— Full permit handling</li>
-              <li>— {COMPANY.warranty}</li>
+              {!hideWarranty && <li>— {COMPANY.warranty}</li>}
               <li>— We respond in minutes</li>
             </ul>
           </div>
