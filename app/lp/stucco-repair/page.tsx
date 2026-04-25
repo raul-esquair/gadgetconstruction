@@ -204,7 +204,7 @@ export default function StuccoRepairLpPage() {
       </section>
 
       {/* What we repair */}
-      <section className="bg-neutral-50 py-14 md:py-20">
+      <section id="scope" className="bg-neutral-50 py-14 md:py-20 scroll-mt-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
@@ -232,7 +232,7 @@ export default function StuccoRepairLpPage() {
       </section>
 
       {/* Why Gadget */}
-      <section className="bg-white py-14 md:py-20">
+      <section id="why-gadget" className="bg-white py-14 md:py-20 scroll-mt-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
@@ -255,7 +255,7 @@ export default function StuccoRepairLpPage() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-neutral-50 py-14 md:py-20">
+      <section id="pricing" className="bg-neutral-50 py-14 md:py-20 scroll-mt-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
@@ -314,7 +314,7 @@ export default function StuccoRepairLpPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-white py-14 md:py-20">
+      <section id="process" className="bg-white py-14 md:py-20 scroll-mt-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
@@ -341,10 +341,12 @@ export default function StuccoRepairLpPage() {
         </Container>
       </section>
 
-      <FAQSection faqs={FAQS} heading="Stucco Repair — Frequently Asked Questions" background="white" />
+      <div id="faq" className="scroll-mt-20">
+        <FAQSection faqs={FAQS} heading="Stucco Repair — Frequently Asked Questions" background="white" />
+      </div>
 
       {/* Service Area */}
-      <section className="bg-white py-10 md:py-14 border-t border-neutral-200">
+      <section id="service-area" className="bg-white py-10 md:py-14 border-t border-neutral-200 scroll-mt-20">
         <Container>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8 max-w-4xl mx-auto">
             <div className="shrink-0 w-14 h-14 rounded-full bg-accent-orange/10 text-accent-orange flex items-center justify-center">
