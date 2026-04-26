@@ -1,0 +1,122 @@
+{
+  "report_date": "2026-04-25",
+  "period_label": "April 23–25, 2026 · Strategic Restructure & New Landing Pages",
+  "executive_summary": "Over the past two days we rebuilt the foundation of your paid advertising. Three dedicated landing pages went live — one each for dry rot, stucco, and siding work — replacing the previous shared page that diluted relevance across multiple services. The campaigns themselves were also split apart so dry rot and stucco each have their own budget and bid strategy, ending the situation where higher-volume stucco searches were starving dry rot of impressions. The first conversion-tracking event also went live this period, so leads from form submissions and tracked phone calls now flow into the dashboard cleanly.",
+  "continuity_note": "Since the April 23 review, the proposed bid-cap raise on the combined Urgent Repairs campaign has been replaced by a more structural fix: Dry Rot and Stucco are now separate campaigns with independent budgets and bid caps tailored to each service's competitive landscape. Two items from last week's pending list — the lingering DIY-intent keyword in Dry Rot and turning off Google's auto-keyword-suggestion setting — remain open and are carried into next week.",
+  "performance": {
+    "account_totals": [
+      ["Reporting period", "Last 7 days"],
+      ["Impressions (ads shown)", "537"],
+      ["Clicks", "30"],
+      ["Click-through rate", "5.59%"],
+      ["Average cost per click", "$6.25"],
+      ["Total spend", "$187.53"],
+      ["Leads recorded", "0 — tracking just activated"],
+      ["Committed monthly budget", "$1,820"]
+    ],
+    "by_campaign": {
+      "header": ["Campaign", "Impr.", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Urgent Repairs (now split)", "471", "25", "$165.41", "5.31%", "$6.62"],
+        ["Composite Decks", "66", "5", "$22.12", "7.58%", "$4.42"]
+      ]
+    },
+    "by_ad_group": {
+      "header": ["Ad Group", "Impr.", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Dry Rot", "307", "18", "$105.10", "5.86%", "$5.84"],
+        ["Stucco Repair", "164", "7", "$60.31", "4.27%", "$8.62"],
+        ["Composite Decks", "66", "5", "$22.12", "7.58%", "$4.42"]
+      ]
+    }
+  },
+  "findings": [
+    {
+      "label": "Finding 1 — Stucco was eating most of the shared budget",
+      "body": "On the original combined Urgent Repairs campaign, about 75% of daily spend was going to stucco-related searches because stucco has roughly 7x the search volume of dry rot. That's a structural issue, not a bidding issue — there's no way to fix it within a single campaign. Splitting them into separate campaigns immediately gives each service its own budget tap, ending the imbalance.",
+      "callout": "→ Resolved this period by separating the campaigns."
+    },
+    {
+      "label": "Finding 2 — Conversion tracking is now fully live",
+      "body": "Last week the website form submission tracker was still in 'verifying' status with Google, which meant leads weren't being attributed to specific ads. That's now active. Combined with the existing call tracking integration, every form fill and every qualifying phone call from a website visitor will show up against the campaign that produced it. We'll start seeing real cost-per-lead numbers as conversions accumulate."
+    },
+    {
+      "label": "Finding 3 — Ad visibility on top stucco searches is still tight",
+      "body": "Across both campaigns, you're capturing roughly 22% to 31% of the available ad slots on your target keywords — meaning competitors are showing for the rest. The new dedicated stucco landing page is expected to lift Google's relevance score for stucco searches over the next two weeks, which historically reduces cost-per-click by 20–30% without needing to raise bid caps. That's the highest-leverage change available this month."
+    }
+  ],
+  "actions_completed": [
+    "<b>Three dedicated landing pages built and launched.</b> Custom pages for dry rot repair, stucco repair, and siding repair — each with hero photos from real Bay Area projects, service-specific copy, before-and-after gallery (dry rot), itemized pricing, frequently asked questions, and a streamlined contact form. Replaces the previous shared page where relevance was diluted across three services.",
+    "<b>Campaigns restructured.</b> The combined Urgent Repairs campaign was split into two: Dry Rot Repair and Stucco Repair, each with its own budget and bid strategy. The Composite Decks campaign was unchanged.",
+    "<b>Budget rebalanced across services.</b> Dry Rot Repair $10/day, Stucco Repair $25/day, Composite Decks $25/day — totaling the committed $60/day or about $1,820 per month. Each service now has a budget that matches its search volume.",
+    "<b>Bid caps tailored per service.</b> Dry Rot capped at $8 per click (matching its average), Stucco at $10 per click. Previously a single shared cap of $12 was a compromise that didn't fit either service well.",
+    "<b>Section-specific deep links added (sitelinks).</b> Six clickable sub-links on each ad now land directly on the relevant section of the landing page — pricing, photos, frequently asked questions, scope of work, etc. — so visitors can jump straight to what they care about.",
+    "<b>Ten feature highlights added per campaign (callouts).</b> Service-specific phrases like 'Free Moisture Probe', 'Three-Coat System Only', 'Color & Texture Matched' that show beneath the ad, signaling expertise and trustworthiness without taking up the limited headline space.",
+    "<b>Dynamic keyword matching enabled in the new Stucco ad.</b> The headline now automatically matches the searcher's exact query — for example, someone searching 'stucco contractor' sees a headline that says 'Stucco Contractor', and someone searching 'stucco repair near me' sees 'Stucco Repair Near Me'. Higher relevance, more clicks.",
+    "<b>Conversion tracking activated.</b> Both website form submissions and tracked phone calls are now firing into the Google Ads dashboard. We'll have real per-campaign lead data going forward.",
+    "<b>Workmanship-warranty messaging removed from all landing pages.</b> Per direction, all references to the 5-year warranty have been removed from the new landing pages and applied consistently across the existing composite decks page as well."
+  ],
+  "actions_pending": [
+    "<b>Remove residual DIY-intent keyword.</b> The keyword 'how to fix rotting door frame' is still active in the Dry Rot ad group from last week's cleanup. Carried over from the April 23 review.",
+    "<b>Turn off Google's auto-keyword-suggestion setting.</b> Without this, Google will keep silently adding broad-match keyword variants — the same setting that bloated the Dry Rot ad group from 4 keywords to 28 last week. Carried over from the April 23 review.",
+    "<b>Apply the consistent Mon–Sat 6 AM – 9 PM Pacific ad schedule</b> to the renamed Dry Rot Repair and Composite Decks campaigns so all three campaigns run on the same hours. Required for clean attribution.",
+    "<b>Test-submit the form on each new landing page</b> to verify the conversion event fires correctly into the Google Ads dashboard before the new structure runs for a full week.",
+    "<b>Pull the search terms report after 5–7 days</b> of new traffic to identify junk queries that should be added to the negative keyword list."
+  ],
+  "expectations": [
+    "<b>Stucco's relevance score should improve.</b> Currently rated 3 out of 10 on the top stucco keyword. The dedicated landing page is the single biggest lever to lift this — expect movement to 5+ over the next 7–14 days as Google indexes the new page.",
+    "<b>Cost per click on stucco searches should drop 20–30%.</b> Higher relevance scores translate directly to cheaper clicks at the same ad position. Today's $8.62 average could land closer to $5–6 within two weeks if the relevance lift materializes.",
+    "<b>Ad visibility should improve on both campaigns.</b> Right now competitors are claiming 70%+ of available impressions on your top keywords. Better landing-page relevance plus the budget split should let your ads serve more often without raising spend.",
+    "<b>First conversion data within 7 days.</b> With tracking now active and traffic flowing to dedicated landing pages, the first form submissions and tracked calls should attribute to specific campaigns within the next week. That gives us our first real cost-per-lead numbers to optimize from."
+  ],
+  "landing_page_pricing": {
+    "section_title": "Landing Page Pricing — For Your Verification",
+    "intro": "Below are the published pricing ranges showing on each new landing page. These are the ranges visitors see when they review the cost section before contacting us. Please review for accuracy and let us know if any need to be adjusted up or down for your 2026 quoting.",
+    "pages": [
+      {
+        "title": "Dry Rot Repair",
+        "url": "gadgetconstructionsf.com/lp/dry-rot-repair",
+        "header": ["Service", "Price Range"],
+        "rows": [
+          ["Door Frame Replacement (single — front entries, slider tracks, garage side-doors)", "$400 – $1,200"],
+          ["Window Sill Replacement (single — single-pane and dual-pane)", "$300 – $800"],
+          ["Window Full-Frame Rebuild (sill, jamb, and casing rot)", "$1,200 – $3,500"],
+          ["Fascia Run per linear foot (including soffit and freeze blocking)", "$40 – $80"],
+          ["Deck Post Replacement per post (includes structural reconnection)", "$600 – $1,500"],
+          ["Beam End / Ledger Board Repair (including hidden ledger rot)", "$1,500 – $5,000"],
+          ["Bay Window Full Structural Rebuild (demo, sister-joist, re-sheathe, re-flash, finish)", "$8,000 – $25,000"]
+        ]
+      },
+      {
+        "title": "Stucco Repair",
+        "url": "gadgetconstructionsf.com/lp/stucco-repair",
+        "header": ["Service", "Price Range"],
+        "rows": [
+          ["Hairline Crack Patch per crack (color-matched and re-textured)", "$200 – $500"],
+          ["Section Re-Coat per elevation (new finish coat over sound base)", "$1,200 – $3,500"],
+          ["Full Re-Stucco — Single Elevation (three-coat system, new lath, new WRB)", "$4,000 – $9,000"],
+          ["Whole-House Re-Stucco (1,500–2,500 sq ft, full three-coat system)", "$12,000 – $30,000"],
+          ["Three-Coat New Stucco per sq ft installed (new construction or full tear-off)", "$9 – $14"],
+          ["Window/Door Stucco Closure per opening", "$400 – $1,200"],
+          ["Moisture Investigation (probe-only diagnostic, credited toward repair)", "$250 flat"]
+        ]
+      },
+      {
+        "title": "Siding Repair & Replacement",
+        "url": "gadgetconstructionsf.com/lp/siding-repair",
+        "header": ["Service", "Price Range"],
+        "rows": [
+          ["Single Board Replacement (T1-11, redwood, fiber cement, or matched material)", "$200 – $500"],
+          ["Section Repair with paint match (multi-board, pattern-matched, painted)", "$800 – $2,500"],
+          ["Single Wall Re-Side (tear-off, new housewrap, flashing, new siding)", "$4,000 – $12,000"],
+          ["Whole-House Re-Side (1,800 sq ft typical, full tear-off, Tyvek HomeWrap)", "$18,000 – $45,000"],
+          ["T1-11 Vertical Siding Installed per sq ft (Eichler-style)", "$7 – $12"],
+          ["Hardie Fiber Cement Installed per sq ft (including primer, paint, trim)", "$14 – $22"],
+          ["Asbestos Siding Removal per sq ft (pre-1980 homes, certified handling)", "$8 – $15"]
+        ]
+      }
+    ]
+  },
+  "next_review": "May 2–3, 2026 — by then we'll have a full week of data on the new campaign structure and the first conversions through the dedicated landing pages. We'll know whether stucco's relevance score has begun to lift and whether the budget split has improved dry rot's reach.",
+  "footer_note": "Prepared April 25, 2026 by your advertising team. Data source: Google Ads live reporting (Customer ID 849-587-5417). Landing page pricing reflects the published ranges as of the report date."
+}

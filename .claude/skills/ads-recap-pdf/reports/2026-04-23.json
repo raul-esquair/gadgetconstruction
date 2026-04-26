@@ -1,0 +1,66 @@
+{
+  "report_date": "2026-04-23",
+  "period_label": "April 21–23, 2026 · Launch + First 3 Days",
+  "executive_summary": "Your Google Ads campaigns went live on April 21, 2026. We're now three days into the first month of live spend. Total invested so far: <b>$158.74</b> across 433 ad impressions and 26 clicks. Click-through rate is <b>6.0%</b> — roughly 50% above the contractor industry average, a strong early signal of ad relevance. No leads have converted yet, but at this click volume that's expected; a reliable conversion read needs 50+ clicks of data. The first 48 hours also surfaced two issues with how the account's keywords were configured — both have been corrected as of today, with a measurable cleanup effect expected in the next 48–72 hours.",
+  "performance": {
+    "account_totals": [
+      ["Impressions", "433"],
+      ["Clicks", "26"],
+      ["Click-Through Rate", "6.00%"],
+      ["Average Cost Per Click", "$6.10"],
+      ["Total Spend", "$158.74"],
+      ["Leads Generated", "0  (expected at this click volume)"],
+      ["Committed Monthly Budget", "$1,800 / mo  ($58.96 / day)"]
+    ],
+    "by_campaign": {
+      "header": ["Campaign", "Impr.", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Urgent Repairs (Dry Rot + Stucco)", "373", "22", "$137.36", "5.90%", "$6.24"],
+        ["Planned Projects (Composite Decks)", "60", "4", "$21.38", "6.67%", "$5.35"]
+      ]
+    },
+    "by_ad_group": {
+      "header": ["Ad Group", "Impr.", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Dry Rot", "278", "17", "$95.65", "6.12%", "$5.63"],
+        ["Stucco Repair", "95", "5", "$41.71", "5.26%", "$8.34"],
+        ["Composite Decks", "60", "4", "$21.38", "6.67%", "$5.35"]
+      ]
+    }
+  },
+  "findings": [
+    {
+      "label": "Finding 1 — Ad visibility constrained by bids, not budget",
+      "body": "Our Urgent Repairs campaign was eligible to enter roughly 1,700 auctions over the period, but only won ad placement in 22% of them. The remaining 78% split into two buckets: 3% lost due to hitting daily budget, and <b>75% lost because competitors were willing to pay more per click</b> than our current $12 maximum bid. In short: budget is not the constraint — bids are.",
+      "callout": "Recommended action: raise the maximum cost-per-click cap from $12 to $16 on Urgent Repairs. Expected result: auction win rate climbs from 22% toward 30–40% without requiring additional budget."
+    },
+    {
+      "label": "Finding 2 — Keyword list had inflated 7× beyond the plan",
+      "body": "Over the first 48 hours, Google's automated keyword suggestions inflated our Dry Rot ad group from the planned 4 keywords to <b>28 active keywords</b>, most of them configured as \"Broad Match\" — which casts an extremely wide net. This caused ads to appear for irrelevant searches like <i>\"how to fix dry rot\"</i> (DIY instructions), <i>\"Trex deck colors\"</i> (product shoppers), and even competitor brand searches like <i>\"cf contracting\"</i> and <i>\"jeff myers construction.\"</i>",
+      "callout": "Quantified waste: roughly 25% of the three-day spend (~$35–45) went to searches that will not convert to leads."
+    },
+    {
+      "label": "Finding 3 — Broken keyword syntax in Composite Decks",
+      "body": "One keyword in the Composite Decks ad group was entered with incorrect syntax (missing a closing bracket), causing it to behave as Broad Match and capture dozens of \"Trex brand research\" searches — visitors shopping for deck materials, not contractor services. This single keyword pulled 30+ worthless impressions and was the primary reason ad delivery for Composite Decks collapsed after Day 1."
+    }
+  ],
+  "actions_completed": [
+    "<b>Dry Rot ad group — full reset.</b> Deleted all 28 polluted keywords and re-added the 4 original plan keywords, all now on Phrase or Exact match (no Broad).",
+    "<b>Composite Decks — broken keyword fixed.</b> Removed the malformed Broad-match entry and replaced with the correct Exact-match version. Also restored 2 keywords that had gone missing from the original plan.",
+    "<b>Stucco Repair — missing keyword added.</b> Backfilled <i>stucco contractors near me</i> (Exact match) to bring the ad group up to the full 7-keyword plan.",
+    "<b>Live performance telemetry.</b> Connected a direct pipeline to the Google Ads API for day-over-day monitoring — no more manual screenshot exports."
+  ],
+  "actions_pending": [
+    "<b>Remove one remaining DIY keyword.</b> A stray <i>how to fix rotting door frame</i> keyword survived the Dry Rot reset — needs to be deleted. Takes 30 seconds.",
+    "<b>Disable Google's auto-apply recommendations.</b> Critical. Without this step, Google will automatically re-suggest and re-add broad-match keywords within days, re-polluting the ad groups. This is the guardrail that prevents the bloat from returning.",
+    "<b>Raise Urgent Repairs maximum CPC from $12 to $16.</b> Directly addresses the 75% rank-lost-impression-share finding above."
+  ],
+  "expectations": [
+    "<b>Higher ad visibility.</b> Impression share on Urgent Repairs should climb from 22% toward 30–40% within 48 hours of the bid raise.",
+    "<b>Cleaner traffic quality.</b> Click-through rate and Quality Score should both rise as junk queries (DIY, product research, competitor brand searches) are filtered out.",
+    "<b>Potentially lower cost-per-click.</b> Improved Quality Score can unlock better ad positions at the same or lower bid — a second-order benefit of the cleanup.",
+    "<b>First lead conversions.</b> At current click rates and expected 4–5% conversion rate, the first form submission or qualifying phone call should arrive within the next 50–75 clicks (roughly 2–4 more days)."
+  ],
+  "next_review": "The next check-in is planned for <b>April 26 or 27, 2026</b> — 3 to 4 days from today. By then we'll have 72+ hours of clean post-cleanup data to measure the real effect of today's changes, enough click volume (projected 60–80 more clicks) to assess whether conversion rate is tracking to the 4–5% target, and visibility into whether the bid raise has closed the impression-share gap.",
+  "footer_note": "Prepared April 23, 2026 · Data source: Google Ads live API (Customer ID 849-587-5417) · All figures verified as of 8:10 PM PT."
+}

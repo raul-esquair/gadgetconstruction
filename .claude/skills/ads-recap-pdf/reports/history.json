@@ -1,0 +1,73 @@
+{
+  "reports": [
+    {
+      "report_date": "2026-04-23",
+      "period_label": "April 21–23, 2026 · Launch + First 3 Days",
+      "pdf_file": ".claude/skills/ads-recap-pdf/reports/Gadget-Ads-Recap-Apr23-2026.pdf",
+      "data_file": ".claude/skills/ads-recap-pdf/reports/2026-04-23.json",
+      "key_metrics": {
+        "total_spend": 158.74,
+        "total_clicks": 26,
+        "total_impressions": 433,
+        "total_conversions": 0,
+        "ctr_pct": 6.00,
+        "avg_cpc": 6.10,
+        "search_impression_share_urgent_repairs_pct": 21.8,
+        "rank_lost_impression_share_urgent_repairs_pct": 75.6
+      },
+      "actions_completed_count": 4,
+      "actions_completed_summary": [
+        "Dry Rot ad group full reset (28 → 4 keywords)",
+        "Composite Decks broken keyword fixed + 2 backfilled",
+        "Stucco Repair: stucco contractors near me (Exact) added",
+        "Google Ads MCP live telemetry verified end-to-end"
+      ],
+      "pending_actions": [
+        "Remove `how to fix rotting door frame` (Exact) from Dry Rot",
+        "Disable Google auto-apply recommendations",
+        "Raise Urgent Repairs Max CPC cap $12 → $16"
+      ]
+    },
+    {
+      "report_date": "2026-04-25",
+      "period_label": "April 23–25, 2026 · Strategic Restructure & New Landing Pages",
+      "pdf_file": ".claude/skills/ads-recap-pdf/reports/Gadget-Ads-Recap-Apr25-2026.pdf",
+      "data_file": ".claude/skills/ads-recap-pdf/reports/2026-04-25.json",
+      "key_metrics": {
+        "total_spend": 187.53,
+        "total_clicks": 30,
+        "total_impressions": 537,
+        "total_conversions": 0,
+        "ctr_pct": 5.59,
+        "avg_cpc": 6.25,
+        "search_impression_share_urgent_repairs_pct": 22.9,
+        "rank_lost_impression_share_urgent_repairs_pct": 67.2
+      },
+      "actions_completed_count": 9,
+      "actions_completed_summary": [
+        "Three dedicated landing pages launched (dry rot, stucco, siding)",
+        "Campaigns split: Dry Rot Repair + Stucco Repair as separate campaigns",
+        "Budget rebalanced: Dry Rot $10/day, Stucco $25/day, Composite Decks $25/day",
+        "Bid caps tailored per service: Dry Rot $8, Stucco $10",
+        "Section-specific deep links (sitelinks) added with anchor URLs",
+        "10 service-specific callouts added per campaign",
+        "Dynamic keyword insertion enabled in Stucco RSA Position 1 headline",
+        "LP Form Submission conversion ACTIVATED (was Inactive in last report)",
+        "Workmanship warranty messaging removed from all LPs (per client direction)"
+      ],
+      "pending_actions": [
+        "Remove `how to fix rotting door frame` (Exact) from Dry Rot — carried from last report",
+        "Disable Google auto-apply recommendations — carried from last report",
+        "Apply Mon–Sat 6 AM – 9 PM Pacific schedule to Dry Rot Repair and Composite Decks campaigns",
+        "Test-submit form on each new LP to verify conversion fires correctly",
+        "Pull search terms report after 5–7 days of new traffic for negatives expansion"
+      ],
+      "notes_for_next_review": [
+        "Watch QS movement on `stucco repair` Phrase (current QS 3 — target 5+)",
+        "Watch QS movement on `dry rot repair` Phrase (current QS 5 — target hold or rise)",
+        "First conversion data through new LPs expected within 7 days",
+        "Cost-per-click on stucco searches expected to drop 20–30% if QS lifts"
+      ]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 # Google Ads — Gadget Construction Inc.
 
-**Live as of:** 2026-04-21
+**Live as of:** 2026-04-25
 **Client:** Gadget Construction Inc. | CA Lic #1132983
-**Service Area:** Marin, San Francisco, San Mateo, Santa Clara counties
+**Service Area:** Marin, San Francisco, San Mateo, Santa Clara, Alameda, Contra Costa counties (6 counties · 31 cities)
 **Google Ads Conversion ID:** `AW-16885734093`
-**Monthly Budget (current):** $1,800/mo ($58.96/day split across 2 campaigns)
+**Monthly Budget (current):** $1,820/mo ($60/day split across 3 campaigns)
 
 ---
 
@@ -12,34 +12,54 @@
 
 | Area | Status |
 |---|---|
-| **Conversion tracking — gtag installed on site** | ✅ Live (commit `9ef5362`) |
-| **LP Form Submission conversion action** | ⏳ Inactive (awaiting Google tag verification — auto on first traffic) |
-| **LP Form Submission attached to both campaigns** | ✅ 2 of 2 |
-| **Phone call lead conversion attached to both campaigns** | ✅ 2 of 2 Active |
-| **CallRail → Google Ads integration** | ✅ Activated + goal attached to 2 of 2 campaigns (First Time Phone Call $1,500, Repeat Phone Call $500) |
-| **Account negative keyword list applied** | ✅ Applied to both campaigns |
-| **Campaign 1 — Urgent Repairs** | ✅ Enabled |
-| **Campaign 2 — Planned Projects (Composite Decks)** | ✅ Enabled |
-| **Ad Group — Dry Rot Repair** | ✅ Live (4 keywords, 15 HL + 4 desc, 3 pins) |
-| **Ad Group — Stucco Repair** | ✅ Live (7 keywords, 15 HL + 4 desc, 3 pins) |
+| **Conversion tracking — gtag installed on site** | ✅ Live |
+| **LP Form Submission conversion action** | ✅ ENABLED (was Inactive — flipped active 2026-04-25 with first traffic to new LPs) |
+| **LP Form Submission attached to all campaigns** | ✅ 3 of 3 |
+| **CallRail → Google Ads integration** | ✅ First Time Phone Call $1,500 + Repeat Phone Call $500, attached to 3 of 3 campaigns |
+| **Account negative keyword list applied** | ✅ Applied to all 3 campaigns |
+| **Campaign 1 — Dry Rot Repair** *(renamed from "Urgent Repairs")* | ✅ Enabled |
+| **Campaign 2 — Stucco Repair** *(NEW 2026-04-25 — split out of Urgent Repairs)* | ✅ Enabled |
+| **Campaign 3 — Planned Projects (Composite Decks)** | ✅ Enabled |
+| **Ad Group — Dry Rot** | ✅ Live (4 keywords, 15 HL + 4 desc, 3 pins) — final URL `/lp/dry-rot-repair` |
+| **Ad Group — Stucco Repair** *(NEW campaign)* | ✅ Live (7 keywords, 15 HL + 4 desc, 3 pins, DKI on H1) — final URL `/lp/stucco-repair` |
 | **Ad Group — Composite Decks** | ✅ Live (5 keywords, 15 HL + 4 desc, 3 pins) |
-| **Ad Group — Siding** | 🔴 Deferred (month 2+ when budget scales) |
+| **Ad Group — Stucco Repair (OLD, in Dry Rot Repair campaign)** | ⏸ Paused 2026-04-25 (replaced by new Stucco campaign — keep paused 30 days for history, then delete) |
+| **Ad Group — Siding** | 🔴 Deferred (LP `/lp/siding-repair` BUILT and ready — activate ad group when budget scales month 2+) |
 | **Ad Group — Underpinning** | 🔴 Deferred (month 2+) |
-| **Sitelinks + Callouts — Campaign 1 (Urgent Repairs)** | ✅ 6 sitelinks + 10 callouts |
-| **Sitelinks — Campaign 2 (Planned Projects)** | ✅ 6 sitelinks (incl. Composite vs. Wood Decks) |
-| **Callouts — Campaign 2 (Planned Projects)** | ✅ 10 callouts (deck-tailored mix) |
-| **Google Ads MCP (live telemetry from Claude)** | ✅ Live — verified 2026-04-21 reaches Gadget `8495875417` through Esquair MCC `7701854464`. Campaign search returns Urgent Repairs + Planned Projects. |
+| **Dedicated LPs — Dry Rot, Stucco, Siding** | ✅ All 3 launched 2026-04-25 — see Landing Pages section |
+| **Workmanship warranty messaging removed from LPs** | ✅ 2026-04-25 — per client direction; manufacturer warranty (Trex/TimberTech 25-yr) preserved on Composite Decks LP |
+| **Pricing CRO tweaks on LPs (cost-of-waiting callout, includes/not-included footnote)** | ✅ 2026-04-25 |
+| **Sitelinks (deep-link to LP sections)** | ✅ Dry Rot ad group: 6 sitelinks anchoring to `#pricing`, `#gallery`, `#process`, `#faq`, `#scope`, `#service-area` · Stucco ad group: same pattern with `#why-gadget` substituting for `#gallery` |
+| **Callouts — all 3 campaigns** | ✅ 10 service-specific callouts each (no warranty mentions) |
+| **Dynamic Keyword Insertion in Stucco RSA** | ✅ `{KeyWord:Stucco Repair}` pinned to Position 1 |
+| **Mon–Sat 6am–9pm Pacific schedule** | ✅ Applied to all 3 campaigns 2026-04-25 (account is on Central Time so entries are 08:00–23:00 to translate to 06:00–21:00 PT) |
+| **Search Partners disabled** | ✅ All 3 campaigns 2026-04-25 |
+| **Google auto-apply recommendations** | ✅ DISABLED account-wide 2026-04-25 — every toggle in "Maintain your ads" off |
+| **Google Ads MCP (live telemetry from Claude)** | ✅ Live — Gadget `8495875417` through Esquair MCC `7701854464` |
+| **Straggler — `how to fix rotting door frame` (Exact) in Dry Rot** | 🟡 Still pending removal (carried from 2026-04-23 — 0 impressions in last 7 days so low urgency) |
+| **Test-submit form on each new LP to verify conversion fires** | 🟡 Pending — do once and verify in dashboard |
+| **Time zone — account currently on Central Time** | 🟡 Pending fix — should be Pacific. Entries currently use +2 hour math. One-way change. |
+| **Client recap PDF generated** | ✅ 2026-04-25 — `Gadget-Ads-Recap-Apr25-2026.pdf` (with LP pricing tables for client verification) |
 
 ---
 
 ## Live Assets Reference
 
-### Landing Pages
-- `https://gadgetconstructionsf.com/lp/exterior-repairs` (Dry Rot / Stucco / Siding, noindex, single-step form)
-- `https://gadgetconstructionsf.com/lp/exterior-repairs#dry-rot` — Dry Rot ad group final URL
-- `https://gadgetconstructionsf.com/lp/exterior-repairs#stucco` — Stucco ad group final URL (when built)
-- `https://gadgetconstructionsf.com/lp/exterior-repairs#siding` — Siding ad group final URL (when built)
-- `https://gadgetconstructionsf.com/lp/composite-decks` — Composite Decks ad group final URL
+### Landing Pages — Dedicated Per Service (2026-04-25)
+- `https://gadgetconstructionsf.com/lp/dry-rot-repair` ✅ — Dry Rot ad group final URL
+  - Hero: real Gadget crew on scaffolding, demo of rotted bay window framing
+  - 4-image before/after gallery (wide before/after + close-up sister-joist before/after)
+  - Anchor IDs: `#scope`, `#gallery`, `#pricing`, `#process`, `#faq`, `#service-area`
+- `https://gadgetconstructionsf.com/lp/stucco-repair` ✅ — Stucco ad group final URL
+  - Hero: real Gadget crew on scaffolding, three-coat prep with masking and containment
+  - Anchor IDs: `#scope`, `#why-gadget`, `#pricing`, `#process`, `#faq`, `#service-area`
+- `https://gadgetconstructionsf.com/lp/siding-repair` ✅ — Built and ready, Siding ad group still deferred
+  - Hero: real Gadget crew installing DuPont Tyvek HomeWrap during siding tear-off
+  - Anchor IDs: same pattern (no gallery yet)
+- `https://gadgetconstructionsf.com/lp/composite-decks` ✅ — Composite Decks ad group final URL (existing, no change)
+- `https://gadgetconstructionsf.com/lp/exterior-repairs` — DEPRECATED (the old multi-service shared LP). Keep for now since `#siding` anchor still indirectly works; retire in month 2.
+
+All LPs use `noindex, follow` so they don't compete with `/services/exterior-repairs` in organic search. All forms fire `gtag('event', 'conversion', { send_to: 'AW-16885734093/jV9TCOXkkqAcEM213_M-' })`. All workmanship warranty mentions stripped per client direction (manufacturer warranty preserved where relevant on Composite Decks).
 
 ### Business Info on Ads
 - **Phone:** (650) 771-5817 (displayed number swapped by CallRail DNI per visitor)
@@ -57,35 +77,67 @@
 
 ## Campaign Snapshot
 
-### Campaign 1: Urgent Repairs — Dry Rot + Stucco
+*Restructured 2026-04-25: split former "Urgent Repairs" into two single-service campaigns. Old Stucco ad group paused inside renamed Dry Rot campaign.*
+
+### Campaign 1: Dry Rot Repair *(renamed from "Urgent Repairs" 2026-04-25)*
 
 | Setting | Value |
 |---|---|
 | **Status** | Enabled |
-| **Daily Budget** | $33/day (~$1,000/mo) |
-| **Bidding** | Clicks + Max CPC cap $12.00 (Manual CPC equivalent) |
-| **Locations** | Marin, SF, San Mateo, Santa Clara counties — Presence only |
-| **Schedule** | Mon–Sat, 6am–9pm PT |
+| **Daily Budget** | $10/day (~$300/mo) — lowered from $33/day after Stucco split out |
+| **Bidding** | Maximize Clicks + Max CPC cap $8.00 — lowered from $12 (Dry Rot avg CPC is $5.84) |
+| **Locations** | 6 counties (Marin, SF, San Mateo, Santa Clara, Alameda, Contra Costa) — Presence only |
+| **Schedule** | Mon–Sat, 6am–9pm Pacific (entered as 08:00–23:00 in current Central time zone) |
 | **Language** | English |
-| **Networks** | Search only (no Search Partners, no Display) |
+| **Networks** | Search only — Search Partners and Display unchecked |
 | **AI Max** | OFF |
-| **Sitelinks** | 6 campaign-level (Gallery, Service Areas, About, Pricing/FAQ, Contact, #stucco) |
-| **Callouts** | 10 campaign-level |
-| **Ad Groups** | 2 live (Dry Rot, Stucco) |
+| **Conversion Goals** | Submit lead forms ($1,500) + Other (First Time Phone Call $1,500 + Repeat Phone Call $500) |
+| **Negative Keyword List** | "Global negatives — all campaigns" applied |
+| **Sitelinks** | 6 ad-group-level deep-linking to LP sections (`#pricing`, `#gallery`, `#process`, `#faq`, `#scope`, `#service-area`) |
+| **Callouts** | 10 ad-group-level (Free Inspection, Free Moisture Probe, Sister-and-Replace, etc. — no warranty mentions) |
+| **Ad Groups** | 1 live (Dry Rot, 4 keywords pointing to `/lp/dry-rot-repair`) + 1 paused (old Stucco — keep 30 days for history then delete) |
 
-### Campaign 2: Planned Projects — Composite Decks
+### Campaign 2: Stucco Repair *(NEW 2026-04-25)*
+
+| Setting | Value |
+|---|---|
+| **Status** | Enabled |
+| **Daily Budget** | $25/day (~$760/mo) — sized to Stucco's higher search volume |
+| **Bidding** | Maximize Clicks + Max CPC cap $10.00 (Stucco avg CPC is $8.62) |
+| **Locations** | Same as Campaign 1 (6 counties, Presence only) |
+| **Schedule** | Same as Campaign 1 |
+| **Language** | English |
+| **Networks** | Search only |
+| **AI Max** | OFF |
+| **Conversion Goals** | Submit lead forms + Other (CallRail phone calls) |
+| **Negative Keyword List** | "Global negatives — all campaigns" applied |
+| **Sitelinks** | 6 ad-group-level deep-linking to `/lp/stucco-repair` sections (See Pricing, Patch or Re-Stucco?, 5-Step Process, What We Repair, Color & Texture Match, 31 Cities Served) |
+| **Callouts** | 10 stucco-specific (Free Moisture Probe, 3-Coat System Only, Color & Texture Matched, etc.) |
+| **Special** | DKI on H1: `{KeyWord:Stucco Repair}` pinned Position 1 — headline auto-matches searcher's keyword |
+| **Ad Groups** | 1 live (Stucco Repair, 7 keywords pointing to `/lp/stucco-repair`) |
+
+### Campaign 3: Planned Projects — Composite Decks *(unchanged)*
 
 | Setting | Value |
 |---|---|
 | **Status** | Enabled |
 | **Daily Budget** | $25.00/day (~$760/mo) |
-| **Bidding** | Clicks + Max CPC cap $10.00 |
+| **Bidding** | Maximize Clicks + Max CPC cap $10.00 |
 | **Locations** | Same as Campaign 1 |
-| **Schedule** | Same as Campaign 1 |
+| **Schedule** | Mon–Sat, 6am–9pm Pacific |
 | **AI Max** | OFF |
-| **Sitelinks** | 6 campaign-level (see Ad Extensions section) |
-| **Callouts** | 10 campaign-level (see Ad Extensions section) |
-| **Ad Groups** | 1 live (Composite Decks) |
+| **Networks** | Search only |
+| **Sitelinks** | 6 campaign-level (incl. Composite vs. Wood Decks deep-link) |
+| **Callouts** | 10 deck-tailored (no workmanship warranty — 25-yr manufacturer warranty preserved) |
+| **Ad Groups** | 1 live (Composite Decks, 5 keywords pointing to `/lp/composite-decks`) |
+
+### Total Account Allocation
+| Campaign | Daily | Monthly | Service |
+|---|---|---|---|
+| Dry Rot Repair | $10 | $300 | Lower volume, higher per-job value |
+| Stucco Repair | $25 | $760 | Higher volume, mid per-job value |
+| Composite Decks | $25 | $760 | Mid volume, highest per-job value |
+| **Total** | **$60** | **~$1,820** | (matches committed monthly budget) |
 
 ---
 
@@ -93,9 +145,9 @@
 
 Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
-### 🟢 Ad Group 1: Dry Rot Repair  *(Campaign 1)*
+### 🟢 Ad Group 1: Dry Rot Repair  *(Campaign 1: Dry Rot Repair)*
 
-**Final URL:** `/lp/exterior-repairs#dry-rot`
+**Final URL:** `/lp/dry-rot-repair` *(updated 2026-04-25 from `/lp/exterior-repairs#dry-rot`)*
 
 | Keyword | Match Type | Monthly Vol | CPC Range |
 |---------|-----------|-------------|-----------|
@@ -107,9 +159,9 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
 ---
 
-### 🟢 Ad Group 2: Stucco Repair  *(Campaign 1 — added 2026-04-21)*
+### 🟢 Ad Group 2: Stucco Repair  *(Campaign 2: Stucco Repair — moved to own campaign 2026-04-25)*
 
-**Final URL:** `/lp/exterior-repairs#stucco`
+**Final URL:** `/lp/stucco-repair` *(updated 2026-04-25 from `/lp/exterior-repairs#stucco`)*
 
 | Keyword | Match Type | Monthly Vol | CPC Range |
 |---------|-----------|-------------|-----------|
@@ -416,16 +468,96 @@ Based on current $1,800/mo budget, $10–15 avg CPC, 4–5% form CVR, 20–25% c
 
 ---
 
+## 2026-04-23 — Keyword Cleanup Session
+
+**Context — what went wrong:** First ~48 hours of data revealed Dry Rot ad group had ballooned from the planned 4 keywords to 28 enabled keywords, most on BROAD match. Composite Decks also had a broken keyword (`[composite decking installers near me` — missing close bracket) acting as broad match. The broad-match bloat was pulling junk queries like "trex deck colors", "stucco patch spray", "how to fix dry rot", and competitor brand names (e.g., "cf contracting", "jeff myers construction") — burning ~25% of spend in 3 days (~$35–45 of $158.74).
+
+**Root cause:** likely Google's "Apply optimizations" or "Keyword recommendations" widget getting auto-accepted. Broad match expanded from there.
+
+**What was done (all via Raul in the UI, verified by Claude via MCP):**
+
+1. **Dry Rot ad group:** nuclear reset. Deleted all 28 keywords, re-added the 4 from the plan:
+   - `"dry rot repair"` (Phrase)
+   - `[dry rot repair near me]` (Exact)
+   - `"dry rot contractor"` (Phrase)
+   - `"dry rot repair contractor"` (Phrase)
+
+2. **Composite Decks ad group:** removed the broken Broad-match entry and added/restored 3 Exact-match keywords from the plan:
+   - `[composite decking installers near me]` (re-added with correct brackets as Exact)
+   - `[deck builder near me]` (backfilled — was missing)
+   - `[deck building companies near me]` (backfilled — was missing)
+   - (`[deck contractors near me]`, `[deck installation companies near me]` were already present and correct)
+
+3. **Stucco Repair ad group:** added `[stucco contractors near me]` (Exact) which had been missing. Now matches plan 7/7.
+
+**Leftover to clean up:**
+- `how to fix rotting door frame` (EXACT) still enabled in Dry Rot. DIY query, should be removed — not re-added as a negative, just deleted from keyword list.
+
+**Critical account-level follow-up before next session:**
+- **Disable Google's auto-apply recommendations.** Tools & Settings → Recommendations → Auto-apply → turn off every toggle related to keyword additions, match-type changes, and "expand with broad match." Without this, the bloat will return within days.
+
+**Expected effect of cleanup (watch next MCP pull in ~48 hrs):**
+- CTR should rise on all 3 ad groups (junk traffic eliminated)
+- Composite Decks impressions should recover from near-zero (broken keyword was dragging ad-group Quality Score down)
+- Cost per click may drop (higher Quality Score = better Ad Rank at same bid)
+- Lead quality on remaining clicks should improve
+
+---
+
+## 2026-04-25 — Strategic Restructure & New Landing Pages
+
+**Context — what changed and why:** The Apr 23 plan called for raising the Urgent Repairs Max CPC $12 → $16 to address a 75.6% rank-lost impression share. Instead, we did something more structural: built 3 dedicated single-service landing pages, split Stucco out of Urgent Repairs into its own campaign, and rebalanced budgets so each service has a budget sized to its search volume. Higher Quality Score from dedicated LPs is expected to do more for CPC than raising the bid cap would have.
+
+**What was done (all completed and verified live):**
+
+1. **Three dedicated LPs launched** — `/lp/dry-rot-repair`, `/lp/stucco-repair`, `/lp/siding-repair`. Each has hyper-local copy, real Gadget project hero photos, scope of work, pricing, FAQs, and (dry rot only) a 4-image before/after gallery. All `noindex, follow`.
+2. **LP pricing CRO tweaks per page** — heading rewritten away from "Honest Pricing" to direct framing, cost-of-waiting alert callout, includes/not-included transparency footnote.
+3. **Workmanship warranty messaging removed** from all LPs per client direction. `LpTrustStrip` and `LpFooter` made configurable via `hideWarranty` prop. Manufacturer warranty (25-yr Trex/TimberTech) preserved on Composite Decks LP since it's a product, not service, warranty.
+4. **Campaign restructure** — "Urgent Repairs - Dry Rot + Stucco" renamed to "Dry Rot Repair", Stucco ad group inside it paused. New "Stucco Repair" campaign created from scratch with Stucco ad group recreated (7 keywords, RSA, sitelinks, callouts).
+5. **Budget rebalanced** — Dry Rot Repair $10/day, Stucco Repair $25/day, Composite Decks $25/day. Total $60/day = ~$1,820/mo. Stucco no longer starves Dry Rot.
+6. **CPC caps tailored per service** — Dry Rot $8 (avg CPC $5.84), Stucco $10 (avg CPC $8.62). Composite Decks unchanged at $10.
+7. **Sitelinks deep-link to LP sections** — anchor IDs added to all 3 LPs (`#scope`, `#pricing`, `#process`, `#faq`, `#service-area`, `#gallery` on dry rot, `#why-gadget` on stucco). Sitelinks point to specific sections so visitors jump straight to what they care about.
+8. **DKI on Stucco RSA** — `{KeyWord:Stucco Repair}` pinned Position 1. Headline auto-matches searcher's keyword. Same Title-Case capitalization recommended for Dry Rot RSA next session.
+9. **Mon–Sat 6am–9pm Pacific schedule** applied to all 3 campaigns. Account is on Central time so entries are 08:00–23:00 to translate to PT.
+10. **Search Partners disabled** on all 3 campaigns (was enabled by default on the renamed Dry Rot Repair).
+11. **Auto-apply recommendations DISABLED account-wide.** Every "Maintain your ads" toggle off. The setting that bloated Dry Rot from 4 → 28 keywords is now off.
+12. **LP Form Submission conversion ACTIVATED.** Was Inactive (verifying) in the Apr 23 report. Now Enabled with $1,500 value.
+13. **All 3 conversion goals attached to all 3 campaigns** — LP Form Submission ($1,500), First Time Phone Call ($1,500 via CallRail), Repeat Phone Call ($500 via CallRail).
+14. **Shared negatives list applied to new Stucco campaign** — "Global negatives — all campaigns" now covers all 3 campaigns.
+
+**Pre-restructure performance baseline (last 7 days, pulled via MCP at session end):**
+- Total: 537 impressions, 30 clicks, $187.53 spend, 0 conversions, 5.59% CTR, $6.25 avg CPC
+- Urgent Repairs (now split): 471 impr, 25 clicks, $165.41, IS 22.9%, rank-lost IS 67.2%
+  - Dry Rot ad group: 307 impr, 18 clicks, $105.10, CTR 5.86%, $5.84 CPC
+  - Stucco ad group: 164 impr, 7 clicks, $60.31, CTR 4.27%, $8.62 CPC
+- Planned Projects: 66 impr, 5 clicks, $22.12, CTR 7.58%, $4.42 CPC, IS 31.1%
+
+**Quality Score baseline (to watch against post-restructure):**
+- `dry rot repair` Phrase: QS 5
+- `stucco repair` Phrase: QS 3 ← biggest lift opportunity (target 5+ within 14 days)
+
+**Client deliverable:** `Gadget-Ads-Recap-Apr25-2026.pdf` generated and shared. Includes performance snapshot, what was done, what's next, and the LP pricing tables for client verification.
+
+---
+
 ## Immediate Next Steps
 
-1. **Within 24 hrs of Stucco launch:** confirm ad flipped from "Under review" to "Eligible" and all 7 Stucco keywords show Eligible. Spot-check that `/lp/exterior-repairs#stucco` is scrolling to the Stucco section on ad click.
-2. **Watch Stucco ad group closely week 1:** it has 1,330 mo search volume vs. Dry Rot's 160, so it will absorb most of Campaign 1's $33/day budget. If impression share < 30% with bid at $8, raise to $10 before raising campaign cap.
-3. **End of week 1:** First optimization pass based on Search terms report. Focus on `stucco contractor` queries — that phrase-match has the widest CPC spread ($8.45–$37.27).
-4. **After first CallRail calls fire:** verify in Google Ads that First Time Phone Call and Repeat Phone Call conversions are recording with the correct values ($1,500 and $500 respectively). Spot-check in CallRail that the conversion push is tagging the correct action on each call.
-5. **60–90 days in:** review the actual repeat-caller breakdown in CallRail recordings. Decide whether to raise/lower the $500 repeat value based on what % are returning prospects vs. existing customers.
-6. **Stucco RSA copy stored in status doc** (see Ad Group 2 section) — no longer requires conversation-history lookup for future regeneration.
-7. **Google Ads MCP — ACTIVATED 2026-04-21:** post-relaunch verification confirmed `.mcp.json` with `GOOGLE_ADS_LOGIN_CUSTOMER_ID=7701854464` (Esquair MCC) successfully reaches Gadget `8495875417`. `list_accessible_customers` returns `7701854464`; campaign search on `8495875417` surfaces both live campaigns (Urgent Repairs `23773779275`, Planned Projects `23773939394`). All future telemetry questions should pull live from MCP rather than relying on screenshots.
-8. **Budget reconciled to $1,800/mo (2026-04-21):** Planned Projects daily was set to $25/day at campaign creation (not $16.50 as the original plan called for). Confirmed intentional and locked in as the new committed budget. ~$258/mo above the original $1,500 plan; revisit only if Month 1 ROAS drops below 150%.
+1. **Remove `how to fix rotting door frame` (Exact) from Dry Rot ad group.** Carried from Apr 23. Low urgency (0 impressions in last 7 days) but should still be cleaned up.
+2. **Test-submit the form on each new LP** to verify the conversion fires correctly into the dashboard. Use a real phone (yours) so it doesn't get flagged as spam.
+3. **Pull search terms report after May 2** (5+ days post-restructure). Add new junk queries to "Global negatives — all campaigns" shared list.
+4. **5-day MCP check-in (May 2–3, 2026):** verify QS movement on `stucco repair` Phrase (target 3 → 5+), CPC drop on stucco searches (target 20–30% reduction), first conversions through new LPs, and impression share improvement.
+5. **Fix account time zone Central → Pacific** (one-way change). One-time 2-min fix, eliminates the +2 hour math on every schedule edit going forward. Tools → Preferences → Time zone.
+6. **Apply DKI to Dry Rot RSA Position 1** — `{KeyWord:Dry Rot Repair}` for symmetry with Stucco. Currently Dry Rot RSA still uses static headlines.
+7. **Delete the old Stucco ad group** (currently paused inside Dry Rot Repair campaign) after 30 days if new Stucco campaign is performing.
+8. **Consider activating Siding ad group** in month 2 if Stucco/Dry Rot ROAS justifies budget expansion. LP `/lp/siding-repair` is already built and ready.
+
+---
+
+## Reference (preserved from prior plan)
+
+- **Google Ads MCP — ACTIVATED 2026-04-21:** `.mcp.json` with `GOOGLE_ADS_LOGIN_CUSTOMER_ID=7701854464` (Esquair MCC) reaches Gadget `8495875417`. Campaign IDs: Dry Rot Repair `23773779275` (renamed from Urgent Repairs), Planned Projects `23773939394`. New Stucco Repair campaign ID assigned 2026-04-25 — pull via MCP next session.
+- **CallRail repeat-caller value review (60–90 days in):** decide whether $500 repeat value should be raised/lowered based on actual breakdown.
+- **Stucco RSA copy stored in status doc** (see Ad Group 2 section).
 
 ---
 
