@@ -61,15 +61,15 @@ jobs:
           echo "Auto-merging proposal PR #$first_pr"
           echo "──────────────────────────────────────────"
 
-          gh pr comment "$first_pr" --body "⏰ **Auto-merged**
+          gh pr comment "$first_pr" --repo raul-esquair/gadgetconstruction --body "⏰ **Auto-merged**
 
-This proposal was still open at the Thursday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The briefs will migrate into \`post-queue.json\` via \`merge-proposed-briefs.yml\`, and the Friday 9am PT draft automation will then pick up the next one.
+          This proposal was still open at the Thursday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The briefs will migrate into \`post-queue.json\` via \`merge-proposed-briefs.yml\`, and the Friday 9am PT draft automation will then pick up the next one.
 
-If this was a mistake:
-- Revert the merge commit on \`main\` within the next few hours (before Friday 9am PT draft fires)
-- Or edit \`content/post-queue.json\` directly to remove the unwanted briefs"
+          If this was a mistake:
+          - Revert the merge commit on \`main\` within the next few hours (before Friday 9am PT draft fires)
+          - Or edit \`content/post-queue.json\` directly to remove the unwanted briefs"
 
-          gh pr merge "$first_pr" --squash --delete-branch --admin
+          gh pr merge "$first_pr" --repo raul-esquair/gadgetconstruction --squash --delete-branch --admin
 
           # Log any remaining proposal PRs that were skipped
           remaining=$(echo "$prs" | tail -n +2)
