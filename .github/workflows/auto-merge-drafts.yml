@@ -53,11 +53,11 @@ jobs:
 
             gh pr comment "$pr" --body "⏰ **Auto-merged**
 
-This PR was still open at the Sunday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The post will publish on its scheduled date when the weekly rebuild fires Monday morning.
+            This PR was still open at the Sunday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The post will publish on its scheduled date when the weekly rebuild fires Monday morning.
 
-If this was a mistake:
-- Revert the merge on \`main\` (within a few hours, before the Monday rebuild triggers)
-- Or edit the post directly on \`main\` — it stays hidden until its scheduled date anyway"
+            If this was a mistake:
+            - Revert the merge on \`main\` (within a few hours, before the Monday rebuild triggers)
+            - Or edit the post directly on \`main\` — it stays hidden until its scheduled date anyway"
 
             gh pr merge "$pr" --squash --delete-branch --admin
           done
