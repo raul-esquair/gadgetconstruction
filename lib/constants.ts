@@ -15,12 +15,12 @@ export const COMPANY = {
   reviewCount: 3,
   url: "https://gadgetconstructionsf.com",
   address: {
-    street: "168 Hyde St. Apt. 301",
+    street: "168 Hyde St",
     city: "San Francisco",
     region: "CA",
     postalCode: "94102",
     country: "US",
-    full: "168 Hyde St. Apt. 301, San Francisco, CA 94102",
+    full: "168 Hyde St, San Francisco, CA 94102",
   },
 } as const;
 
