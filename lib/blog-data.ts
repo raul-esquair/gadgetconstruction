@@ -17,6 +17,247 @@ export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "trex-vs-timbertech-vs-fiberon-bay-area-2026",
+    featuredImage: "/images/blog-trex-vs-timbertech-vs-fiberon-bay-area-2026.png",
+    title: "Trex vs TimberTech vs Fiberon: Which Composite Decking Wins in Bay Area Weather (2026)",
+    excerpt:
+      "All three are solid composite decking brands. But Bay Area fog, salt air, and UV exposure expose different strengths. Here's how they compare — from a contractor certified in all three.",
+    date: "2026-05-04",
+    readingTime: "12 min read",
+    relatedService: "composite-decks",
+    faqs: [
+      {
+        "question": "Which composite decking brand is best for Bay Area fog and salt air?",
+        "answer": "TimberTech AZEK is the strongest performer in Bay Area fog and coastal salt air because it's 100% PVC — there's no wood fiber in the core, so moisture absorption isn't physically possible. For homes in Pacifica, the SF Sunset, or the Sausalito waterfront, AZEK's composition gives it a genuine advantage over wood-fiber composites like Trex Transcend and Fiberon Paramount. Inland, the gap between brands narrows considerably."
+      },
+      {
+        "question": "How much does composite decking cost installed in the Bay Area in 2026?",
+        "answer": "Installed composite decking in the Bay Area typically runs $20–$50 per square foot depending on brand, product tier, and site conditions. Entry-level Fiberon or Trex Enhance lands at $20–$32/sq ft installed; TimberTech AZEK runs $34–$50/sq ft installed. A standard 300 sq ft deck falls between $15,000 and $35,000 fully installed. Hillside lots, limited access, and demolition of an existing deck all push costs higher."
+      },
+      {
+        "question": "Is Trex still a good choice after its early rot problems?",
+        "answer": "Yes — Trex's pre-2013 composite had well-documented mold and moisture issues, but the product was reformulated with full capping and the problem has been resolved. Post-2015 Trex Transcend installed on fog-exposed lots in the SF Sunset has held up without the surface mold issues seen in the older generation. The 25-year warranty is shorter than competitors, but the product itself is no longer the liability it once was."
+      },
+      {
+        "question": "What's the difference between capped composite and 100% PVC decking?",
+        "answer": "Capped composite decking (like Trex Transcend and Fiberon Paramount) has a wood-fiber and recycled plastic core wrapped in a protective polymer shell. 100% PVC decking, like TimberTech AZEK, has no wood fiber at all — the entire board is cellular PVC. The practical difference is moisture: capped composite cores can still absorb some water if the cap is compromised, while PVC cores cannot. In the Bay Area fog belt, that distinction drives our coastal recommendations."
+      },
+      {
+        "question": "Does composite decking require permits in San Francisco?",
+        "answer": "Yes. A new composite deck in San Francisco requires a permit through the SF Department of Building Inspection (DBI). Permit requirements vary by deck size, height above grade, and whether structural work is involved. Marin County projects go through the Marin Community Development Agency (CDA). Most Bay Area jurisdictions require permits for decks over 200 sq ft or elevated more than 30 inches above grade — your contractor should pull the permit, not you."
+      },
+      {
+        "question": "How do Fiberon's warranties compare to Trex and TimberTech?",
+        "answer": "Fiberon's Better and Best tier products (Concordia and Paramount) carry a 50-year fade and stain warranty — matching TimberTech Legacy, Reserve, and AZEK, and outrunning Trex's 25-year coverage on all lines. Trex Enhance, Select, Transcend, and Signature are all 25-year warranties. If warranty length is a priority and your budget doesn't reach TimberTech AZEK, Fiberon Paramount offers the best warranty-to-price ratio in this comparison."
+      },
+      {
+        "question": "Can I install composite decking myself, or do I need a certified contractor?",
+        "answer": "All three manufacturers — Trex, TimberTech, and Fiberon — require installation per their current guidelines to maintain warranty coverage. Incorrect ventilation gaps, wrong fastener specs, or improper end gapping can void the warranty and create drainage problems. TimberTech AZEK is particularly contractor-sensitive due to its weight and PVC expansion behavior. DIY installation is physically possible, but a failed warranty claim on a $30,000+ deck is an expensive lesson."
+      }
+    ],
+    content: `
+## The Short Answer: Which Wins in Fog and Salt Air
+
+When comparing Trex vs TimberTech vs Fiberon for Bay Area homes, the answer depends almost entirely on where your deck sits. TimberTech AZEK leads for coastal moisture resistance — it's 100% PVC with zero wood fiber, so water absorption isn't physically possible. Trex Transcend is the safest all-around pick for inland and fog-adjacent lots. Fiberon Paramount is the value play that genuinely outperforms its price tier and matches TimberTech's 50-year fade warranty at a lower installed cost. We're certified installers for all three brands and carry no allegiance to any of them — this comparison is based on what we've actually seen fail, hold up, and surprise us across [500+ Bay Area composite deck installations](/services/composite-decks).
+
+If you want the full cost picture before you choose a brand, our [full composite deck cost breakdown](/blog/composite-deck-cost-san-francisco) covers how lot conditions, access, and permits drive the final number. But if your question right now is "which brand for my specific home," keep reading.
+
+## What These Three Brands Have in Common
+
+All three brands — Trex, TimberTech, and Fiberon — share the same core advantages over pressure-treated wood, and over the cheap composite boards you'll find at big-box stores without asking many questions.
+
+All three use recycled materials (sawdust, reclaimed wood fiber, recycled plastic) in most of their product lines. All three offer **capped composite construction** on their mid- and upper-tier lines — meaning the composite core is wrapped in a protective polymer shell that resists moisture, UV, and staining. All three carry fade and stain warranties of 25–50 years depending on the product line. All three come in tiered product families (roughly good/better/best), which is why brand name alone doesn't tell you what you're actually buying. And all three require proper hidden fasteners on their premium grooved-edge profiles to achieve the clean, seamless look that makes composite decking worth the investment.
+
+These shared characteristics are what set this composite deck brand comparison apart from the real question: which product fits your specific Bay Area microclimate. The differences that matter — particularly in fog belt and coastal conditions — show up in core composition, warranty terms, pricing, and how each product holds up under repeated fog-cycle moisture and salt air. That's where the comparison gets real.
+
+## Trex Composite Decking: The Market Leader
+
+Trex is the brand most Bay Area homeowners have already heard of. It's the largest composite decking manufacturer in the world, with the name recognition to match. But name recognition isn't the same as best-fit for your specific lot and microclimate — and in the [SF Sunset, Pacifica](/service-areas/pacifica), and [Sausalito waterfront](/service-areas/sausalito), that distinction matters more than anywhere else.
+
+### Product Lines: Enhance, Select, Transcend, Signature
+
+Trex runs four main product lines relevant to Bay Area residential projects:
+
+**Trex Enhance** is the entry-level line. It's a capped wood-plastic composite with a 25-year fade and stain warranty. Grooved boards are available for hidden fasteners, or you can use square-edge boards with face screws. This is the right choice for a budget-conscious project on a flat, inland lot — think a 300 sq ft deck in a sheltered Rockridge backyard or a covered patio in Willow Glen. It's not what we'd spec for a west-facing Sunset deck.
+
+**Trex Select** sits between Enhance and Transcend. It's a solid, unremarkable mid-range performer. In practice, most homeowners who weigh Select versus Transcend end up at Transcend.
+
+**Trex Transcend** is our most-recommended Trex product for Bay Area homes. It has a more durable capping system than Enhance, better scratch resistance, deeper color options with wood-grain profiles that hold up visually after years of fog exposure, and the same 25-year fade and stain warranty. This is the product that defines Trex's market position.
+
+**Trex Signature** is the premium hardwood-look line — deep tones, dramatic grain patterns, and a price point to match. It's what we spec when a homeowner in Pacific Heights or Noe Valley wants a composite deck that doesn't read as composite from the back door.
+
+### Warranty Terms and What They Actually Cover
+
+Trex's 25-year fade and stain warranty covers fading beyond a certain color-shift threshold (measured in Delta E units) and stains that can't be removed per Trex's cleaning protocol. What it doesn't cover: surface scratches, mold on inadequately ventilated decks, damage from improper installation, and anything caused by standing water from poor drainage.
+
+The "25 years" is the headline. The fine print matters. Trex requires the decking to be installed per their current installation guidelines — ventilation gaps, fastener specs, gapping for drainage — or the warranty is voided. We've seen DIY-installed Trex decks fail warranty claims because the ventilation gaps were wrong. Installation matters as much as the product itself.
+
+### Installed Cost per Square Foot in the Bay Area
+
+| Trex Line | Material Cost | Installed Cost (Bay Area) |
+|---|---|---|
+| Enhance | $10–$13/sq ft | $22–$32/sq ft |
+| Select | $12–$15/sq ft | $25–$35/sq ft |
+| Transcend | $14–$18/sq ft | $28–$40/sq ft |
+| Signature | $18–$24/sq ft | $34–$48/sq ft |
+
+Installed cost reflects Bay Area labor, permit costs, and standard framing on a moderate-access lot. Hillside lots, crane lifts, and demolition of an existing deck all push the number higher. Our [full composite deck cost breakdown](/blog/composite-deck-cost-san-francisco) covers how those site variables compound across the [31 cities we serve](/service-areas).
+
+### Bay Area Performance: Strengths and Weaknesses
+
+**The elephant in the room: the pre-2013 rot issue.** Early-generation Trex (pre-2010 to 2013) used an uncapped composite formula that was vulnerable to mold, mildew, and surface deterioration under persistent moisture. If you've heard a neighbor dismiss Trex, this is almost always why. That product is a different animal from what Trex sells today. Current Trex lines use capped composite construction that substantially eliminated the moisture problem. We've installed post-2015 Trex Transcend on foggy Sunset lots and haven't seen the surface mold issues that plagued the older generation.
+
+That said, Trex's 25-year warranty is shorter than TimberTech and Fiberon's 50-year coverage — and in the fog belt, that gap matters. Trex Transcend performs well on most Bay Area lots. It's not our first pick for homes directly in the coastal moisture corridor — Pacifica's Linda Mar and Rockaway Beach neighborhoods, the western edge of the SF Richmond, the [Sausalito waterfront](/service-areas/sausalito) — but it holds up solidly in the [East Bay](/service-areas/oakland), the Peninsula, and inland SF neighborhoods.
+
+## TimberTech: Premium Cap-Stock and PVC
+
+TimberTech occupies the premium tier of the composite decking market, and the AZEK line — 100% PVC, no wood fiber at all — is the most moisture-resistant composite decking product available for Bay Area residential projects. If your deck is coastal, west-facing, or in persistent fog, this is the product conversation you should be having. It's also where the Trex vs TimberTech debate gets its clearest answer for coastal homeowners.
+
+### Product Lines: Edge, Reserve, Legacy, AZEK (100% PVC)
+
+**TimberTech Edge** is the entry-level line — a capped composite with a 25-year fade warranty. It's a competent product at a competitive price, but it's not the reason most contractors specify TimberTech.
+
+**TimberTech Legacy** is the mid-range capped composite line and a solid performer. The 50-year fade and stain warranty starts here. We've spec'd Legacy on projects in [Marin County](/service-areas/mill-valley) and the [East Bay hills](/service-areas/berkeley) where the homeowner needed durability without the full AZEK price premium.
+
+**TimberTech Reserve** is the upper-tier cap-stock composite — premium appearance, 50-year warranty, rich color palette. This is the spec for high-end projects where visual quality and longevity both matter: a [Kentfield](/service-areas/san-rafael) deck overlooking a canyon, a [Tiburon](/service-areas/tiburon) waterfront terrace.
+
+**TimberTech AZEK** is in a different category entirely. It's not a wood-plastic composite — it's 100% cellular PVC. There's no wood fiber in the core, which means no moisture absorption is physically possible. In a fog-belt environment, that matters more than any other spec on this comparison sheet. AZEK also carries the industry's best warranty: 50 years on fade and stain, 30 years on the product itself. It's heavier than Trex, which means more care in handling and a more experienced installer — but the performance in coastal conditions is unmatched.
+
+### Warranty Terms
+
+TimberTech's 50-year fade and stain warranty (on Legacy, Reserve, and AZEK) is the strongest in the industry. Like Trex, the warranty requires proper installation per current TimberTech guidelines. Unlike Trex, AZEK's core composition means the warranty isn't fighting the material's natural tendencies in wet environments — the material simply doesn't absorb water.
+
+One nuance: AZEK can expand and contract more than composite products in temperature swings. Bay Area temperatures are mild enough that this isn't the same issue as in Chicago winters, but proper gapping at board ends is still important on every AZEK install we do.
+
+### Installed Cost per Square Foot
+
+| TimberTech Line | Material Cost | Installed Cost (Bay Area) |
+|---|---|---|
+| Edge | $12–$15/sq ft | $25–$35/sq ft |
+| Legacy | $14–$18/sq ft | $28–$40/sq ft |
+| Reserve | $16–$22/sq ft | $32–$46/sq ft |
+| AZEK (PVC) | $18–$26/sq ft | $34–$50/sq ft |
+
+AZEK is the most expensive product on this list. On a 400 sq ft deck in [Pacifica](/service-areas/pacifica), the material premium over Trex Transcend runs $3,000–$5,000. Against a 50-year warranty and zero moisture vulnerability, that premium is easy to justify. Against a tight budget on an inland lot, it's less obvious. See our [composite deck cost breakdown](/blog/composite-deck-cost-san-francisco) to model the full number for your lot size and conditions.
+
+### Bay Area Performance
+
+TimberTech AZEK is what we spec first for any home in the coastal moisture corridor: [Pacifica](/service-areas/pacifica) (Rockaway Beach, Linda Mar), the SF Sunset, the SF Richmond, and the [Sausalito waterfront](/service-areas/sausalito). We've watched standard composite boards on west-facing Sunset decks show surface texture changes within 8–10 years. We haven't seen that with AZEK.
+
+TimberTech Reserve and Legacy are our preferred specs for [Marin](/service-areas/mill-valley) hillside projects — Tamalpais Valley in Mill Valley, [Kentfield](/service-areas/san-rafael), [Fairfax](/service-areas/fairfax) — where the combination of shade, ambient moisture, and premium design expectations makes the 50-year capped composite the right call. TimberTech's heavier weight does require a well-organized crew and proper blocking at cut ends. This isn't a product where installation shortcuts hold up.
+
+## Fiberon: The Underdog Value Play in This Composite Deck Brand Comparison
+
+Fiberon doesn't have Trex's name recognition or TimberTech's premium positioning. What it does have is a legitimate 50-year fade and stain warranty at a price point that competes with Trex Transcend — making it the best composite decking value option that's genuinely hard to dismiss once you look at the specs.
+
+### Product Lines: Good, Better, Best Tiers
+
+Fiberon's line structure is less brand-forward than Trex or TimberTech, but the tier logic is straightforward.
+
+**Fiberon Good tier (Sanctuary, Horizon)** is the entry-level offering: capped composite, grooved-edge option available, solid at the price point. At $9–$12/sq ft in materials, it's the most affordable capped composite on this comparison list.
+
+**Fiberon Better tier (Concordia, Pro Tect Advantage)** is the mid-range line and our most-recommended Fiberon product for price-sensitive Bay Area projects. The 50-year fade and stain warranty kicks in at this tier, and the capping quality is noticeably better than the Good tier. Concordia holds up well in the [East Bay](/service-areas/oakland) and across the [Peninsula](/service-areas/san-carlos).
+
+**Fiberon Best tier (Paramount)** is the premium line — 50-year warranty, excellent capping, the closest Fiberon gets to TimberTech Reserve in visual quality. At $16–$20/sq ft in materials, it lands below TimberTech Reserve and competes directly with Trex Transcend on price while matching TimberTech's 50-year coverage. An outer Sunset Fiberon Paramount deck we completed — 450 sq ft with a pergola, $39,000 total — is a project we'd spec the same way again. You can see how that compares to typical project ranges in [our recent deck projects](/gallery).
+
+### Warranty Terms
+
+Fiberon matches TimberTech's 50-year fade and stain warranty on its Better and Best tier products. Coverage terms are similar to the other manufacturers — installation per Fiberon guidelines is required, and scratches, damage from improper cleaning, and drainage-related issues are excluded.
+
+One practical note: Fiberon products are available through most Bay Area lumber distributors. Lead times have generally been shorter than TimberTech AZEK over the past two years, which matters when you're trying to hit a permit window.
+
+### Installed Cost per Square Foot
+
+| Fiberon Line | Material Cost | Installed Cost (Bay Area) |
+|---|---|---|
+| Good Tier (Sanctuary/Horizon) | $9–$12/sq ft | $20–$30/sq ft |
+| Better Tier (Concordia) | $12–$16/sq ft | $25–$36/sq ft |
+| Best Tier (Paramount) | $16–$20/sq ft | $30–$42/sq ft |
+
+For a homeowner who wants 50-year warranty coverage without the TimberTech AZEK price premium, Fiberon Paramount is the most honest recommendation on this list. It's not the flashiest product, and Fiberon's marketing doesn't have Trex's reach — but the specs and the field performance hold up.
+
+### Bay Area Performance
+
+Fiberon's capped composite products perform well across the Bay Area's inland and moderate-climate zones — the [East Bay hills](/service-areas/berkeley), [Marin inland](/service-areas/fairfax) (Fairfax, San Anselmo), and the [Peninsula](/service-areas/menlo-park). In direct coastal exposure, we still favor AZEK's 100% PVC core over Fiberon's wood-composite core. But the capping on Paramount is strong enough that it's a legitimate choice for all but the most aggressively fog-saturated lots.
+
+We've used Fiberon Paramount on decks in [Berkeley](/service-areas/berkeley), Rockridge, and Willow Glen without issues. We've also used it on west-facing [Peninsula](/service-areas/palo-alto) lots where the homeowner needed the 50-year warranty but couldn't stretch to AZEK pricing. It's delivered in both contexts.
+
+What Fiberon doesn't have is the contractor ecosystem that Trex and TimberTech have built. Fewer certified installers in the Bay Area means it's more important to vet your contractor's specific Fiberon experience before committing. This is also relevant when you're evaluating exterior conditions — dry rot and failing substrates under an old deck can complicate any composite installation, which is why we always inspect the framing before speccing a product. Our [exterior repairs](/services/exterior-repairs) work frequently uncovers framing issues that need to be addressed before new decking goes down.
+
+## Side-by-Side Comparison: Trex vs TimberTech vs Fiberon
+
+This table covers every product line in the Trex vs TimberTech vs Fiberon comparison, with installed costs based on Bay Area labor rates and standard lot conditions.
+
+| Brand / Line | Installed Cost (Bay Area) | Fade Warranty | Moisture Resistance | Scratch Resistance | Bay Area Recommendation |
+|---|---|---|---|---|---|
+| Trex Enhance | $22–$32/sq ft | 25 years | Moderate | Moderate | Inland budget builds |
+| Trex Transcend | $28–$40/sq ft | 25 years | Good | Good | Most SF inland neighborhoods |
+| Trex Signature | $34–$48/sq ft | 25 years | Good | Very Good | Premium inland / East Bay |
+| TimberTech Edge | $25–$35/sq ft | 25 years | Good | Good | Budget TimberTech entry |
+| TimberTech Legacy | $28–$40/sq ft | 50 years | Very Good | Good | Marin hillside, East Bay |
+| TimberTech Reserve | $32–$46/sq ft | 50 years | Very Good | Very Good | Premium mid-coast |
+| TimberTech AZEK | $34–$50/sq ft | 50 years | Excellent (100% PVC) | Very Good | Coastal, fog belt, Pacifica |
+| Fiberon Good Tier | $20–$30/sq ft | 25 years | Moderate | Moderate | Budget entry, inland only |
+| Fiberon Concordia | $25–$36/sq ft | 50 years | Good | Good | Value play, inland/East Bay |
+| Fiberon Paramount | $30–$42/sq ft | 50 years | Very Good | Very Good | Value premium, fog-adjacent |
+
+The installed cost ranges assume a moderately accessible lot with standard framing. A hillside site in [Mill Valley](/service-areas/mill-valley) or a [San Francisco](/service-areas/san-francisco) rooftop deck with crane access will push every line higher — see the [full composite deck cost breakdown](/blog/composite-deck-cost-san-francisco) for how those conditions add up.
+
+## Our Real Recommendation for Bay Area Homes
+
+Here's how we actually spec this decision, depending on where your home sits and what your priorities are. This isn't a brand preference — it's a site-condition matrix based on 12+ years of [Bay Area composite deck installation](/services/composite-decks).
+
+**Coastal and fog-belt homes → TimberTech AZEK.** If your deck is in [Pacifica's](/service-areas/pacifica) Linda Mar or Rockaway Beach neighborhoods, on the western edge of the SF Sunset or Richmond, or on the [Sausalito waterfront](/service-areas/sausalito), AZEK's 100% PVC composition is the right call. The moisture advantage isn't theoretical — wood-fiber composite boards in these environments work harder for every year of their warranty. AZEK sidesteps that entirely. The price premium is real; so is the performance difference.
+
+**Inland Bay Area homes, strong all-around choice → Trex Transcend.** For [East Bay](/service-areas/oakland) homes in Rockridge, Temescal, or the [Berkeley](/service-areas/berkeley) Elmwood, [Peninsula](/service-areas/menlo-park) homes in Menlo Park and [Palo Alto](/service-areas/palo-alto), or inland SF neighborhoods like Noe Valley and Glen Park, Trex Transcend is our default recommendation. It's the most widely supported product by Bay Area contractors, the easiest to source, and the capping system has been solid since the post-2013 reformulation. The 25-year warranty is shorter than the competition — but for an inland lot away from salt air, that gap matters less in practice.
+
+**Budget-conscious but serious about longevity → Fiberon Paramount.** If you want 50-year warranty coverage and your project budget doesn't reach AZEK pricing, Fiberon Paramount is where we'd land. It's not a compromise — it's an honest value decision. The capping quality is strong, the warranty matches TimberTech's, and it's available through Bay Area distributors without the lead-time issues that AZEK sometimes carries. We'd recommend it over Trex Transcend for any budget-constrained project where warranty term is a priority.
+
+**Shade-heavy or canyon homes → Trex Transcend or TimberTech Legacy.** Decks under heavy tree canopy or in shaded canyon lots — Tamalpais Valley in [Mill Valley](/service-areas/mill-valley), parts of the [Oakland Hills](/service-areas/oakland) — face less UV stress but more ambient moisture. Both Trex Transcend and TimberTech Legacy handle this well. TimberTech Legacy gets a slight edge for its 50-year warranty in high-moisture-but-not-coastal conditions.
+
+**Premium / high-visibility projects → TimberTech Reserve.** For a Pacific Heights terrace or a [Tiburon](/service-areas/tiburon) deck where visual quality is as important as durability, TimberTech Reserve is the spec. It's the closest thing to a premium hardwood aesthetic in capped composite, and the 50-year warranty holds up the investment. If you're also considering a broader [complete remodel](/services/complete-remodel) that includes outdoor living space, the Reserve and AZEK lines integrate well with high-end interior finishes.
+
+We're certified installers for all three brands. You can see examples of each product in context across different Bay Area microclimates in [our recent deck projects](/gallery). The honest summary: all three brands are legitimate. None of them is the right answer for every project. The question is always which product fits your specific lot, microclimate, and budget — not which brand has the better marketing.
+
+## Frequently Asked Questions
+
+### Which composite decking brand is best for Bay Area fog and salt air?
+
+TimberTech AZEK is the strongest performer in Bay Area fog and coastal salt air because it's 100% PVC — there's no wood fiber in the core, so moisture absorption isn't physically possible. For homes in Pacifica, the SF Sunset, or the Sausalito waterfront, AZEK's composition gives it a genuine advantage over wood-fiber composites like Trex Transcend and Fiberon Paramount. Inland, the gap between brands narrows considerably.
+
+### How much does composite decking cost installed in the Bay Area in 2026?
+
+Installed composite decking in the Bay Area typically runs $20–$50 per square foot depending on brand, product tier, and site conditions. Entry-level Fiberon or Trex Enhance lands at $20–$32/sq ft installed; TimberTech AZEK runs $34–$50/sq ft installed. A standard 300 sq ft deck falls between $15,000 and $35,000 fully installed. Hillside lots, limited access, and demolition of an existing deck all push costs higher.
+
+### Is Trex still a good choice after its early rot problems?
+
+Yes — Trex's pre-2013 composite had well-documented mold and moisture issues, but the product was reformulated with full capping and the problem has been resolved. Post-2015 Trex Transcend installed on fog-exposed lots in the SF Sunset has held up without the surface mold issues seen in the older generation. The 25-year warranty is shorter than competitors, but the product itself is no longer the liability it once was.
+
+### What's the difference between capped composite and 100% PVC decking?
+
+Capped composite decking (like Trex Transcend and Fiberon Paramount) has a wood-fiber and recycled plastic core wrapped in a protective polymer shell. 100% PVC decking, like TimberTech AZEK, has no wood fiber at all — the entire board is cellular PVC. The practical difference is moisture: capped composite cores can still absorb some water if the cap is compromised, while PVC cores cannot. In the Bay Area fog belt, that distinction drives our coastal recommendations.
+
+### Does composite decking require permits in San Francisco?
+
+Yes. A new composite deck in San Francisco requires a permit through the SF Department of Building Inspection (DBI). Permit requirements vary by deck size, height above grade, and whether structural work is involved. Marin County projects go through the Marin Community Development Agency (CDA). Most Bay Area jurisdictions require permits for decks over 200 sq ft or elevated more than 30 inches above grade — your contractor should pull the permit, not you.
+
+### How do Fiberon's warranties compare to Trex and TimberTech?
+
+Fiberon's Better and Best tier products (Concordia and Paramount) carry a 50-year fade and stain warranty — matching TimberTech Legacy, Reserve, and AZEK, and outrunning Trex's 25-year coverage on all lines. Trex Enhance, Select, Transcend, and Signature are all 25-year warranties. If warranty length is a priority and your budget doesn't reach TimberTech AZEK, Fiberon Paramount offers the best warranty-to-price ratio in this comparison.
+
+### Can I install composite decking myself, or do I need a certified contractor?
+
+All three manufacturers — Trex, TimberTech, and Fiberon — require installation per their current guidelines to maintain warranty coverage. Incorrect ventilation gaps, wrong fastener specs, or improper end gapping can void the warranty and create drainage problems. TimberTech AZEK is particularly contractor-sensitive due to its weight and PVC expansion behavior. DIY installation is physically possible, but a failed warranty claim on a $30,000+ deck is an expensive lesson.
+
+## Ready to Get the Right Product for Your Deck?
+
+Comparing Trex vs TimberTech vs Fiberon for your specific project? We're certified installers for all three brands across [31 Bay Area cities](/service-areas). We'll walk your site, assess your exposure conditions — fog corridor, shade, slope, salt air — and recommend what's actually right for your deck, not what's easiest for us to source.
+
+We provide detailed, line-item estimates after a free site visit — with the specific product, product line, and installed cost spelled out before any work begins. No allowances, no vague "composite decking TBD." CA License #1132983. 12+ years. 500+ Bay Area projects. 5-year workmanship warranty in writing on every build.
+    `.trim(),
+  },
+
+  {
     slug: "composite-deck-cost-san-francisco",
     featuredImage: "/images/blog-composite-deck-cost-san-francisco.png",
     title: "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
