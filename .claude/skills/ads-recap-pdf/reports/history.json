@@ -68,6 +68,94 @@
         "First conversion data through new LPs expected within 7 days",
         "Cost-per-click on stucco searches expected to drop 20–30% if QS lifts"
       ]
+    },
+    {
+      "report_date": "2026-04-29",
+      "period_label": "April 25–29, 2026 · First Four Days After the Restructure",
+      "pdf_file": ".claude/skills/ads-recap-pdf/reports/Gadget-Ads-Recap-Apr29-2026.pdf",
+      "data_file": ".claude/skills/ads-recap-pdf/reports/2026-04-29.json",
+      "key_metrics": {
+        "total_spend": 143.54,
+        "total_clicks": 17,
+        "total_impressions": 248,
+        "total_conversions": 0,
+        "ctr_pct": 6.85,
+        "avg_cpc": 8.44,
+        "stucco_search_impression_share_pct": 40.9,
+        "stucco_ctr_pct": 7.83,
+        "composite_decks_impressions_4day": 3,
+        "dry_rot_active_ad_group_spend_4day": 11.81
+      },
+      "actions_completed_count": 5,
+      "actions_completed_summary": [
+        "Composite Decks Max CPC raised $10 → $20 + 6 Phrase keywords added (verified via MCP)",
+        "Conversion tracking on /lp/stucco-repair verified end-to-end via DevTools Network panel",
+        "13 search-term negatives added to shared list (DIY products, B2B materials, competitor brands, out-of-area)",
+        "Old Stucco ad group confirmed cleanly paused — $48 4/25 spend was pre-pause artifact, no leak",
+        "Lighthouse audit on /lp/stucco-repair: Performance 98 / Accessibility 96 / Best Practices 96"
+      ],
+      "pending_actions": [
+        "Test-submit form on remaining 3 LPs (dry rot, siding, composite decks)",
+        "Investigate SearchAtlas script 404 on `sa.searchatlas.com` (loaded via base64 wrapper in app/layout.tsx)",
+        "Remove `how to fix rotting door frame` (Exact) from Dry Rot — carried from 2026-04-23",
+        "Consider raising Dry Rot Max CPC $8 → $10–$12 if 38.6% rank-lost IS persists at 5/2 review (campaign underspending at $4/day actual vs $10/day cap)",
+        "Fix account time zone Central → Pacific (one-way change)",
+        "Apply DKI to Dry Rot RSA Position 1 for symmetry with Stucco",
+        "Delete old Stucco ad group on/after 2026-05-25 (30-day post-pause window)"
+      ],
+      "notes_for_next_review": [
+        "Verify Composite Decks impressions returned to 5–10/day post-fix (target: 2026-05-02)",
+        "Verify Stucco QS lift on `stucco repair` Phrase (current QS 3 — target 5+ within 7–14 days)",
+        "Watch for first attributed lead in dashboard (expected within 7 days at current click pace)",
+        "Re-pull search-terms report on 2026-05-02 for next round of negatives",
+        "Decision point on Dry Rot Max CPC raise based on full week of post-restructure data"
+      ]
+    },
+    {
+      "report_date": "2026-05-05",
+      "period_label": "April 29 – May 5, 2026 · Week 2 Post-Restructure + Landing Page Depth Pass",
+      "pdf_file": ".claude/skills/ads-recap-pdf/reports/Gadget-Ads-Recap-May5-2026.pdf",
+      "data_file": ".claude/skills/ads-recap-pdf/reports/2026-05-05.json",
+      "key_metrics": {
+        "total_spend": 210.41,
+        "total_clicks": 25,
+        "total_impressions": 360,
+        "total_conversions": 1,
+        "total_conversion_value": 1500,
+        "ctr_pct": 6.94,
+        "avg_cpc": 8.42,
+        "stucco_search_impression_share_pct": 38.8,
+        "stucco_budget_lost_impression_share_pct": 24.7,
+        "composite_decks_daily_impressions_post_fix": 5.67,
+        "composite_decks_search_impression_share_pct": 50.0,
+        "dry_rot_search_impression_share_pct": 41.1,
+        "dry_rot_first_conversion_cost": 52.70
+      },
+      "actions_completed_count": 7,
+      "actions_completed_summary": [
+        "First lead landed: Dry Rot LP form submission, $1,500 attributed value, 4/29 (28x ROAS on click cost)",
+        "Stucco LP — 5 new content sections + before/after gallery (substrate prep → finished three-coat)",
+        "Composite Decks LP — 5 new content sections + new aspirational headline + refreshed final CTA",
+        "Composite Decks RSA — pinned H1/H2/H3, DKI tuned, headlines refreshed, workmanship warranty desync removed",
+        "Dry Rot RSA — DKI pinned + fallback fix + 2 description warranty desyncs cleaned up",
+        "21 new search-term blocks added (15 broad-match DIY/out-of-scope + 6 phrase-match competitor brands)",
+        "Form-submission tests verified on remaining 3 LPs (dry rot, siding, composite decks)"
+      ],
+      "pending_actions": [
+        "Time zone fix Central → Pacific BLOCKED by Google policy (existing accounts cannot change time zones; account rebuild not worth the migration cost) — de-scoping",
+        "Investigate SearchAtlas script 404 on `sa.searchatlas.com` (carried from 2026-04-29)",
+        "Remove `how to fix rotting door frame` (Exact) from Dry Rot — carried from 2026-04-23",
+        "Decision: raise Dry Rot daily budget $10 → $15 (campaign produced $1,500 lead at 28x ROAS, 40% budget-lost IS)",
+        "Decision: consider Stucco daily budget $25 → $30 if 24.7% budget-lost IS continues climbing",
+        "Delete old paused Stucco ad group on/after 2026-05-25 (30-day post-pause window)"
+      ],
+      "notes_for_next_review": [
+        "Re-check Stucco QS on 2026-05-12 (7 days post-LP-deploy) — target QS 3 → 5+, LP experience flips BELOW → AVERAGE",
+        "Re-check Composite Decks QS on 2026-05-19 (14 days post-LP-deploy + RSA tune-up) — target QS 1 → 4-6+",
+        "First attributed Stucco lead expected any day (currently at 23 cumulative clicks, 5% expected form CVR)",
+        "Watch ad-strength rating on Composite Decks RSA flip from GOOD → EXCELLENT after Google re-evaluation (1-24 hrs after save)",
+        "Dry Rot budget decision depends on: more conversion data + whether 18.9% rank-lost IS holds or grows"
+      ]
     }
   ]
 }

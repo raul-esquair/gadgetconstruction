@@ -1,0 +1,74 @@
+{
+  "report_date": "2026-04-29",
+  "period_label": "April 25–29, 2026 · First Four Days After the Restructure",
+  "executive_summary": "Four days after the campaign restructure went live, the data is in and the picture is clear: the new dedicated stucco campaign is the early winner — click volume tripled, click-through rate jumped 83%, and ad visibility on stucco searches climbed from 23% to 41%. The composite decks campaign, on the other hand, had nearly gone dark — only three ad views in four days — because its maximum bid was set below the going market rate for those keywords. We diagnosed the cause, raised the bid ceiling, and broadened the keyword targeting in this session; we should see ad volume return within 48 hours. Conversion tracking was independently verified end-to-end on the stucco landing page, so leads from this point forward will attribute correctly to the campaign that produced them.",
+  "continuity_note": "Since the April 25 restructure recap, conversion tracking has been verified working on the stucco landing page (the dashboard's 'Tag inactive' flag was a stale-data alert, not a real failure), the first search-terms report has been pulled and 13 new junk-query blocks added, and the composite decks campaign has been unblocked after we discovered its bid ceiling was capping it out of the auction. The residual do-it-yourself search term inside the dry rot ad group remains unfinished and is carried into the next review window.",
+  "performance": {
+    "account_totals": [
+      ["Reporting period", "April 25–28, 2026 (4 days)"],
+      ["Ads shown", "248"],
+      ["Clicks", "17"],
+      ["Click-through rate", "6.85%"],
+      ["Average cost per click", "$8.44"],
+      ["Total spend", "$143.54"],
+      ["Leads recorded", "0 — see Finding 3 for context"],
+      ["Committed monthly budget", "$1,820"]
+    ],
+    "by_campaign": {
+      "header": ["Campaign", "Ads Shown", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Dry Rot Repair", "130", "7", "$60.13", "5.38%", "$8.59"],
+        ["Stucco Repair (new)", "115", "9", "$82.52", "7.83%", "$9.17"],
+        ["Composite Decks", "3", "1", "$0.89", "33.30%", "$0.89"]
+      ]
+    },
+    "by_ad_group": {
+      "header": ["Ad Group", "Ads Shown", "Clicks", "Spend", "CTR", "Avg CPC"],
+      "rows": [
+        ["Dry Rot", "69", "2", "$11.81", "2.90%", "$5.91"],
+        ["Stucco Repair (new campaign)", "115", "9", "$82.52", "7.83%", "$9.17"],
+        ["Composite Decks", "3", "1", "$0.89", "33.30%", "$0.89"]
+      ]
+    }
+  },
+  "findings": [
+    {
+      "label": "Finding 1 — Stucco is the clear winner of the restructure",
+      "body": "Comparing the new dedicated stucco campaign against the same ad group's performance before the split, every input metric improved meaningfully. Daily ad views rose 64%, daily clicks tripled, click-through rate climbed from 4.27% to 7.83% (an 83% lift), and ad visibility on target stucco searches went from 23% of available auctions to 41%. The custom landing page is doing exactly what it was built to do — visitors stay engaged, click ads more often, and Google's auction system is rewarding the higher relevance with cheaper, more frequent placement.",
+      "callout": "→ Click volume tripled. Click-through rate up 83%. Ad visibility climbed 23% → 41%."
+    },
+    {
+      "label": "Finding 2 — Composite decks campaign was nearly dark — fix applied this session",
+      "body": "The composite decks campaign produced only three ad views in four days, despite having a $25-per-day budget that was 99% unspent. The cause was a bid ceiling set at $10 per click while the actual market clearing price for Bay Area composite-deck keywords runs $10.54 to $33.22. Google's auction system can't bid you in at competitive prices when your ceiling is below the floor of the market — you only win the leftover cheap auctions, which is why total spend was $0.22 per day. We raised the bid ceiling to $20 and broadened the keyword targeting (added six new variants, including searches mentioning Trex and composite-deck contractor terminology). Ads should start showing 5–10 times per day within 48 hours.",
+      "callout": "→ Bid ceiling raised $10 → $20. Six new keyword variants added. Expect ad volume to return within 48 hours."
+    },
+    {
+      "label": "Finding 3 — Conversion tracking is verified working — zero leads is a sample-size story",
+      "body": "The dashboard showed 'Tag inactive — last activity April 21' on the lead form tracker, which initially looked alarming. The cause turned out to be a 7-day automatic staleness flag: Google marks any tracker as inactive when no leads come through for a week, and the legacy shared landing page had been retired on April 25. We performed a controlled test on the new stucco landing page and confirmed via the browser's network panel that the conversion event fires correctly on form submit. The plumbing is healthy. Zero leads on $143 of spend across 17 clicks is statistically expected at this volume — at the projected 5% form-conversion rate, we need roughly 20 clicks before the first lead lands, and we're at 17."
+    }
+  ],
+  "actions_completed": [
+    "<b>Composite decks campaign unblocked.</b> Bid ceiling raised from $10 to $20 per click to meet the market range, and six new keyword variants added: broader phrasing for the existing terms, plus 'composite deck contractor' and 'trex deck installer' to capture material-specific shopper intent. Both changes verified live in the account.",
+    "<b>Conversion tracking verified working on the stucco landing page.</b> Test-submitted the form, opened the browser's network panel, and confirmed the conversion event fires to Google with the correct identifier and a successful response. Leads from this point forward will attribute correctly to the campaign and keyword that produced them.",
+    "<b>Thirteen new search-term blocks added.</b> Pulled the four-day search-terms report from the new stucco campaign and identified queries that were eating budget without producing real prospects: do-it-yourself product searches (stucco repair kit, gap filler, sealant, mortar mix), B2B materials searches (stucco supplier), competitor brand searches (CRP Plastering, Valdez Plastering), out-of-area searches (stucco repair Portland), and intent-mismatch searches (before painting, consultant). Added to the shared block list across all three campaigns.",
+    "<b>Old stucco ad group confirmed cleanly paused.</b> The ad group that was replaced by the new stucco campaign on April 25 had accumulated $48 of spend on its final day before the pause click landed — a normal end-of-day artifact, not an ongoing leak. Verified day-by-day that zero ad views or spend have occurred since.",
+    "<b>Stucco landing page audited for technical quality.</b> Ran a full Lighthouse audit on the dedicated stucco repair page and confirmed it scores 98 out of 100 on speed and 96 out of 100 on accessibility and best-practices. The landing page is not the bottleneck on Google's relevance score — the score will lift naturally as more visitor data accumulates over the next 7 to 14 days."
+  ],
+  "actions_pending": [
+    "<b>Test-submit the form on the remaining three landing pages</b> — dry rot, siding, and composite decks — to confirm conversion tracking is firing correctly on those pages too. The stucco page is verified; we want consistency across all four.",
+    "<b>Investigate the SearchAtlas optimization script.</b> The third-party SEO script in the website's code is currently returning a 404 error on every page load — it's not blocking anything, but it's not doing the work it was billed for either. Worth either re-confirming the account is active or removing it.",
+    "<b>Remove the residual do-it-yourself keyword.</b> 'How to fix rotting door frame' (exact match) is still active in the dry rot ad group from the original keyword cleanup three weeks ago. It's currently producing zero ad views, so low urgency, but should be cleaned up.",
+    "<b>Consider raising the dry rot bid ceiling.</b> The dry rot campaign is severely underspending its budget — only $4 per day actual against a $10-per-day cap — and the data shows we're losing 39% of available ad slots to higher-bidding competitors. Raising the ceiling from $8 to $10 or $12 per click would close that gap. Recommended decision point at the May 2–3 review with a fuller week of data.",
+    "<b>Fix the account time zone setting.</b> The Google Ads account is currently configured to Central time, which means every ad-schedule edit requires a two-hour math adjustment to land the right Pacific time. A one-time switch to Pacific eliminates that friction permanently.",
+    "<b>Apply dynamic-keyword-matching to the dry rot ad.</b> The stucco ad already has it (the headline auto-matches the searcher's exact query); the dry rot ad still uses static headlines. Bringing both into the same pattern.",
+    "<b>Delete the paused old stucco ad group on or after May 25.</b> 30 days after the pause is the standard waiting period to preserve historical attribution data; after that it can be removed cleanly."
+  ],
+  "expectations": [
+    "<b>Composite decks ad volume should return within 48 hours.</b> Pre-fix: 3 ad views in 4 days. Target post-fix: 5–10 per day as the new bid ceiling and broader keywords let Google bring the campaign back into the auction.",
+    "<b>Stucco's ad relevance score should lift from 3 to 5+ within 7 to 14 days.</b> Two of the three relevance signals are currently rated below average, but the data driving those ratings is from before the restructure. As the new dedicated landing page accumulates more visitor history, both signals should re-score upward — which historically translates to 20–30% cheaper clicks at the same ad position.",
+    "<b>First lead attribution within the next 7 days.</b> With tracking confirmed working and click volume building (3 per day on stucco alone, ramping on composite decks post-fix), the first attributed form submission or qualifying phone call should land in the dashboard within the week. That gives us our first real per-campaign cost-per-lead figures.",
+    "<b>Continued click-through rate strength on stucco.</b> Three days into the new campaign the click-through rate is averaging 7.83% with one day hitting 18%. We expect this to settle into a 5–10% range as Google's auction system pulls in a wider mix of queries — strong by local services advertising standards either way."
+  ],
+  "next_review": "May 2–3, 2026 — at that point we'll have a full week of data on the new structure, the composite-decks fix will have had three to four days to take effect, and we should be looking at the first attributed leads in the dashboard. Decision point on whether to raise the dry rot bid ceiling and whether to begin scaling stucco's daily budget if returns hold.",
+  "footer_note": "Prepared April 29, 2026 by your advertising team. Data source: Google Ads live reporting (Customer ID 849-587-5417) for the period April 25–28, 2026."
+}
