@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Hammer,
   Palette,
@@ -167,8 +168,8 @@ export default function StuccoRepairLpPage() {
 
       <LpHero
         eyebrow="Stucco Repair · Bay Area Specialists"
-        headline="Stucco Repair, Bay Area — Crack Patching to Full Re-Stucco"
-        subheadline="Hairline cracks let water behind the lath in 6–12 months. We diagnose patch vs re-coat vs tear-off, three-coat repair only, color and texture matched. Free moisture probe of the substrate before quoting. CA Lic #1132983."
+        headline="Don't Let a Hairline Crack Become a $9,000 Wall"
+        subheadline="Once water gets behind cracked stucco, the framing rots in 6-12 months. We're Bay Area stucco repair specialists — we probe-test before we quote, three-coat repair only, color and texture matched to your existing finish. CA Lic #1132983."
         trustPoints={[
           "Free moisture probe — we test the substrate, not just the surface",
           "Three-coat re-stucco only — no acrylic-finish shortcuts",
@@ -197,9 +198,176 @@ export default function StuccoRepairLpPage() {
               Stucco is a three-layer system — scratch coat, brown coat, finish coat — applied over wire lath and a moisture barrier. When the system holds together, it lasts decades. When it cracks, water gets behind the finish coat and starts rotting the lath, the framing, and eventually the sheathing inside the wall.
             </p>
             <p className="mt-4 text-secondary leading-relaxed text-base md:text-lg">
-              Bay Area homes see this faster than most because of fog, foundation movement on clay soil, and aging caulk around windows. Most cracks are fixable cheaply if caught early. The trick is knowing whether you need a patch, a re-coat, or a tear-off — and most contractors over-spec because re-stucco pays better than a $400 patch.
+              Bay Area homes see this faster than most. Mill Valley fog cycles wet the wall every morning and dry it by afternoon — repeated thermal stress on every hairline. Berkeley and Oakland hillsides sit on clay soil that swells in winter rain and shrinks in summer drought, pulling the framing two directions across the year. Daly City and Pacifica take wind-driven rain straight off the Pacific that finds any caulk gap. Eichler post-and-beam homes have horizontal trim joints that telegraph stress through the stucco above. Doelger tract homes from the 1950s used early generations of metal lath that&apos;s now corroded behind sound-looking finishes.
+            </p>
+            <p className="mt-4 text-secondary leading-relaxed text-base md:text-lg">
+              Most cracks are fixable cheaply if caught early. The trick is knowing whether you need a patch, a re-coat, or a tear-off — and most contractors over-spec because re-stucco pays better than a $400 patch.
             </p>
           </div>
+        </Container>
+      </section>
+
+      {/* Diagnostic — Patch, Re-Coat, or Tear-Off? */}
+      <section className="bg-neutral-50 py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
+              Patch, Re-Coat, or Tear-Off? How to Tell.
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-secondary leading-relaxed">
+              The single biggest decision in stucco repair. Most contractors over-spec because re-stucco pays better — here are the visual cues we use before quoting.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+            {/* Patch */}
+            <div className="bg-white border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Option 1</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Hairline Patch</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">$400–$1,200 / elevation</div>
+              <p className="mt-4 text-secondary text-sm leading-relaxed">Right call when:</p>
+              <ul className="mt-2 space-y-2 text-sm text-secondary">
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Cracks under 1/16 inch (thinner than a credit card edge)</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Stucco less than 30 years old</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>No staining or efflorescence around the cracks</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Moisture meter reads dry behind the wall</span></li>
+              </ul>
+            </div>
+
+            {/* Re-Coat */}
+            <div className="bg-white border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Option 2</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Section Re-Coat</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">$3,500–$8,000 / elevation</div>
+              <p className="mt-4 text-secondary text-sm leading-relaxed">Right call when:</p>
+              <ul className="mt-2 space-y-2 text-sm text-secondary">
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Multiple cracks across one wall, none deeper than 1/8 inch</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Surface texture is failing but substrate sounds solid when tapped</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Color is sun-faded and patches would be obvious</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Moisture meter reads damp but framing is still sound</span></li>
+              </ul>
+            </div>
+
+            {/* Tear-Off */}
+            <div className="bg-white border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Option 3</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Full Tear-Off &amp; Re-Stucco</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">$8,000–$30,000+</div>
+              <p className="mt-4 text-secondary text-sm leading-relaxed">Right call when:</p>
+              <ul className="mt-2 space-y-2 text-sm text-secondary">
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Cracks deeper than 1/8 inch, or staircase patterns indicating substrate movement</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Stucco sounds hollow when tapped — delaminated from lath</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>Active staining, mold, or soft spots — water has reached framing</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-orange shrink-0">•</span><span>WRB or wire lath is failing (visible from edges, vents, fixtures)</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-sm text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+            Not sure which one your wall needs? That&apos;s what the free moisture probe inspection is for. We bring a meter, a borescope, and 12+ years of stucco diagnosis — and we tell you the cheapest option that actually fixes it.
+          </p>
+        </Container>
+      </section>
+
+      {/* Before / After proof */}
+      <section id="gallery" className="bg-white py-14 md:py-20 scroll-mt-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
+              Option 3 in Practice — Real Project Before &amp; After
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-secondary leading-relaxed">
+              Whole-elevation re-stucco on a Bay Area home. Old stucco torn off, new wire lath installed over Fortifiber JumboTex weather-resistive barrier, blue flashing tape sealed around new windows — then full three-coat application: scratch coat, brown coat, finish coat.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-6xl mx-auto">
+            <figure className="rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-200">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src="/images/stucco-wide-before.jpg"
+                  alt="Bay Area home with stucco torn off and substrate fully prepped for re-stucco — Fortifiber JumboTex weather-resistive barrier installed over new wire lath, blue flashing tape sealing new vinyl window opening, scaffolding in place, ready for three-coat application"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-accent-red text-white text-xs font-heading font-bold uppercase tracking-wider">
+                  Before
+                </div>
+              </div>
+              <figcaption className="p-4 text-sm font-heading font-semibold text-primary">
+                Substrate prepped — WRB, wire lath, window flashing
+              </figcaption>
+            </figure>
+            <figure className="rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-200">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src="/images/stucco-wide-after.jpg"
+                  alt="Same Bay Area home with three-coat stucco system fully applied over prepped substrate — smooth charcoal finish coat, integrated chimney clad in matching stucco, Gadget crew member finishing top corner detail from scaffolding"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-green-600 text-white text-xs font-heading font-bold uppercase tracking-wider">
+                  After
+                </div>
+              </div>
+              <figcaption className="p-4 text-sm font-heading font-semibold text-primary">
+                Three-coat finish applied — same wall, ready for paint
+              </figcaption>
+            </figure>
+          </div>
+        </Container>
+      </section>
+
+      {/* Bay Area Stucco Systems */}
+      <section className="bg-white py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
+              Bay Area Stucco Systems — What&apos;s Behind Your Wall
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-secondary leading-relaxed">
+              Bay Area homes use three different stucco systems depending on when they were built. Each one has different repair approaches — and most contractors only know how to handle one or two of them.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Pre-1985</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Traditional 3-Coat</h3>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Wire lath over building paper, scratch coat, brown coat, finish coat. Built to last 50+ years when properly applied. Common in Marina-style flats, Sunset stuccos, 1920s Spanish revival, 1950s ranch homes.
+              </p>
+              <p className="mt-3 text-xs text-neutral-500 leading-relaxed">
+                <span className="font-heading font-semibold text-primary">Repair approach:</span> patch with matching cement-based finish, or full three-coat re-stucco when substrate is failing. Color sampling required for invisible patches.
+              </p>
+            </div>
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">1985–2000s</div>
+              <h3 className="text-xl font-heading font-bold text-primary">One-Coat Synthetic</h3>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Foam board over framing, fiberglass mesh, single thick coat of polymer-modified stucco, synthetic finish. Common in Bay Area tract homes built late 80s through early 2000s.
+              </p>
+              <p className="mt-3 text-xs text-neutral-500 leading-relaxed">
+                <span className="font-heading font-semibold text-primary">Repair approach:</span> mesh-and-patch for small areas with acrylic finish color match. Watch for delamination at cracks — these systems fail fast once water gets in.
+              </p>
+            </div>
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">1990–Today</div>
+              <h3 className="text-xl font-heading font-bold text-primary">EIFS / Synthetic Acrylic</h3>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Exterior Insulation and Finish System: foam insulation board, base coat with fiberglass reinforcement, acrylic finish. Common in modern renovations and infill construction across the Peninsula and South Bay.
+              </p>
+              <p className="mt-3 text-xs text-neutral-500 leading-relaxed">
+                <span className="font-heading font-semibold text-primary">Repair approach:</span> patch with matching base coat and acrylic finish. Critical to maintain the drainage path — barrier-EIFS without drainage is a known failure mode.
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-sm text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+            Not sure which one your home has? Built before 1985 — almost certainly traditional 3-coat. Built 1985–2005 — likely one-coat synthetic. Modern build or addition — probably EIFS. We confirm during the inspection and repair to match.
+          </p>
         </Container>
       </section>
 
@@ -250,6 +418,67 @@ export default function StuccoRepairLpPage() {
                 <p className="mt-2 text-secondary text-sm leading-relaxed">{body}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* What Other Stucco Contractors Get Wrong */}
+      <section className="bg-primary py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading leading-tight" style={{ color: "#ffffff" }}>
+              What Other Stucco Contractors Get Wrong
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-white/80 leading-relaxed">
+              We know contractors have a bad reputation — and stucco specifically is a trade where shortcuts get sold as repairs. Here&apos;s what to watch for, and what we do instead.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">One-coat acrylic over old finish</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Skim a synthetic acrylic finish over the cracked original — looks great for six months. Then the original cracks reflect through and water finds its way behind the new coat too.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Open the cracks, repair the substrate, and apply a real three-coat system over wire lath with proper cure time between layers. The fix that lasts decades, not seasons.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Quote without probe-testing</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Walks the wall, points at cracks, gives you a number. Doesn&apos;t know whether the framing behind it is dry or already rotted — and you find out three weeks into the job when &quot;additional charges&quot; show up.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Free moisture meter and borescope inspection on every quote. You see whether the framing is dry, damp, or rotted before any number gets written down. No surprise change orders.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Color match by guess</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Mixes finish coat to &quot;look close&quot; without sampling your existing color. Six months of UV exposure later, the patch is a different color than the rest of the wall — and the only fix is to re-coat the whole elevation.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Sample your existing finish from a hidden spot, match pigment in advance, and you approve the match before application. If the wall is too sun-faded, we recommend a full elevation re-coat instead of obvious patches.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Skip the cure time</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Applies all three coats in two days, paints it the next week. Sealant traps moisture in the uncured stucco. Within 18 months: bubbling, peeling, finish failure — and a warranty fight.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Scratch coat 24–48 hour cure. Brown coat 7-day cure. Finish coat 28-day full cure before any paint or sealer. We tell you the timeline upfront and don&apos;t rush the cure to save a week.
+              </p>
+            </div>
           </div>
         </Container>
       </section>

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { CheckCircle2, Phone, Star } from "lucide-react";
 import Container from "@/components/ui/Container";
@@ -6,7 +7,7 @@ import { COMPANY } from "@/lib/constants";
 
 interface LpHeroProps {
   eyebrow: string;
-  headline: string;
+  headline: ReactNode;
   subheadline: string;
   trustPoints: string[];
   backgroundImage: string;

@@ -204,8 +204,16 @@ export default function CompositeDecksLpPage() {
 
       <LpHero
         eyebrow="Trex · TimberTech · Fiberon Certified"
-        headline="Composite Decks Built to Last 25+ Years in the Bay Area"
-        subheadline="Trex, TimberTech, and Fiberon certified installer. Zero staining, zero splinters, zero wood rot in fog and salt air. Free design consultation with a fixed-price quote."
+        headline={
+          <>
+            Have a Deck{" "}
+            <span className="underline decoration-accent-orange decoration-4 underline-offset-[6px]">
+              You
+            </span>{" "}
+            Can Be Proud Of
+          </>
+        }
+        subheadline="Bay Area composite deck builder — Trex, TimberTech, and Fiberon certified. Zero staining, zero splinters, zero rot in fog and salt air. Free on-site design consultation with sample boards in your yard. CA Lic #1132983."
         trustPoints={[
           "Free on-site design consultation",
           "Fixed-price quote — no surprise change orders",
@@ -239,6 +247,27 @@ export default function CompositeDecksLpPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* Educational — why wood doesn't last */}
+      <section className="bg-white py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
+              Why Wood Decks Don&apos;t Last in the Bay Area
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-6 text-secondary leading-relaxed text-base md:text-lg">
+              Pressure-treated lumber and redwood look great for three or four years. Then the Bay Area climate goes to work — and the maintenance treadmill starts.
+            </p>
+            <p className="mt-4 text-secondary leading-relaxed text-base md:text-lg">
+              Pacifica and Sausalito decks take wind-driven rain straight off the Pacific that finds every grain crack and forces water into the board. Marin and Berkeley shaded backyards stay damp from morning fog through afternoon — ideal conditions for mold, mildew, and slow rot under your stain. SF Sunset and Daly City sit in the fog belt where boards get wet every morning and dry every afternoon — cyclic moisture stress that no stain fully holds back. South-facing Peninsula decks bake under summer sun, opening the wood grain and accelerating UV breakdown of every coating you put on top.
+            </p>
+            <p className="mt-4 text-secondary leading-relaxed text-base md:text-lg">
+              The issue isn&apos;t the wood itself — it&apos;s that wood was never designed for this climate. Capped composite was. Polymer boards from Trex, TimberTech, and Fiberon don&apos;t absorb water, don&apos;t cup or warp under cyclic moisture, and don&apos;t break down under UV. The right product simply outlasts the climate.
+            </p>
           </div>
         </Container>
       </section>
@@ -288,6 +317,63 @@ export default function CompositeDecksLpPage() {
               ))}
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* Decision Diagnostic — Which Composite Line? */}
+      <section className="bg-white py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary leading-tight">
+              Which Composite Line Fits Your Project?
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-secondary leading-relaxed">
+              Composite isn&apos;t one product — it&apos;s three tiers across multiple manufacturers, each tuned to a different budget and aesthetic. Here&apos;s how to think about it before your design consultation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Entry-Level</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Solid-Color Capped Composite</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">~$8–$12 / sq ft material</div>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Brands: <span className="font-heading font-semibold text-primary">Trex Enhance, TimberTech EDGE Prime+, Fiberon Sanctuary.</span>
+              </p>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Capped on 3 sides for moisture protection. Solid colors — no streaking. Best for budget-conscious replacements where the deck is the destination, not the focal point. 25-year fade &amp; stain warranty.
+              </p>
+            </div>
+
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Mid-Range</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Multi-Tonal Capped Composite</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">~$12–$18 / sq ft material</div>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Brands: <span className="font-heading font-semibold text-primary">Trex Select, TimberTech AZEK Vintage, Fiberon Concordia.</span>
+              </p>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Fully capped (4-side) with realistic wood-grain streaking. Most popular tier for Bay Area builds. Wider color palette with weathered and natural finishes. 25-year fade &amp; stain warranty.
+              </p>
+            </div>
+
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-orange mb-2">Premium</div>
+              <h3 className="text-xl font-heading font-bold text-primary">Full-PVC / Tropical Hardwood Look</h3>
+              <div className="mt-1 text-sm font-heading font-semibold text-secondary">~$18–$28 / sq ft material</div>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Brands: <span className="font-heading font-semibold text-primary">Trex Transcend, TimberTech AZEK Harvest, Fiberon Paramount.</span>
+              </p>
+              <p className="mt-3 text-secondary text-sm leading-relaxed">
+                Cellular PVC or premium polymer with deep multi-tonal grain — visually closest to ipe or mahogany. Coolest underfoot in summer sun. Best for entertaining decks where the deck is the design centerpiece. 50-year structural warranty available.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-sm text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+            We bring sample boards from all three tiers to your free design consultation. You see and feel the actual finishes in your specific yard light before you commit to anything.
+          </p>
         </Container>
       </section>
 
@@ -374,6 +460,67 @@ export default function CompositeDecksLpPage() {
         </Container>
       </section>
 
+      {/* What Other Deck Builders Get Wrong */}
+      <section className="bg-primary py-14 md:py-20">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading leading-tight" style={{ color: "#ffffff" }}>
+              What Other Deck Builders Get Wrong
+            </h2>
+            <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
+            <p className="mt-5 text-white/80 leading-relaxed">
+              Composite decks have specific install requirements that wood-deck framers miss. We&apos;ve replaced enough failing &quot;composite&quot; decks built by other contractors to know exactly where the corners get cut.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Wood-deck joist spacing on a composite build</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Frames the deck at 16–24&quot; on-center like a wood deck. Composite boards flex under load — at that spacing you get a bouncy, sagging floor within a year. And it voids your manufacturer warranty.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Frame at 12–16&quot; OC depending on board profile and span — exactly to manufacturer spec. Diagonal layouts framed at 12&quot; OC. Solid floor that stays flat and rigid for the life of the deck.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">No flashing at the house attachment</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Bolts the ledger board straight to the siding without a kick-out diverter or step-flashing. Water rolls off the deck, behind the ledger, into the wall. Invisible rot for years — until the deck pulls away from the house.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Cut back the siding, install peel-and-stick membrane behind a continuous Z-flashing, then bolt the ledger over the flashing with structural lags into the rim joist. Water drains away from the house, not into it.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Mid-project board substitution</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Quotes you premium boards (Trex Transcend, TimberTech AZEK Harvest) at the design visit. Delivers entry-level boards (Enhance, EDGE Prime+) when you&apos;re not looking. You don&apos;t notice until installed and warranty paperwork shows the wrong product.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Material specifications on every quote — manufacturer, line name, color, board count. You verify the delivery against the spec sheet before install. Manufacturer warranty registered in your name with serial-traced product.
+              </p>
+            </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-7">
+              <div className="text-xs font-heading font-bold uppercase tracking-wider text-accent-red">The Shortcut</div>
+              <p className="mt-2 font-heading font-bold text-primary text-lg">Skipping the manufacturer fastener spec</p>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                Uses exposed deck screws on systems designed for hidden fasteners. Or wrong-pitch screws that mushroom the cap. Or non-stainless screws that rust-stain the boards within a season. Each one voids the manufacturer warranty.
+              </p>
+              <div className="mt-5 text-xs font-heading font-bold uppercase tracking-wider text-accent-orange">What We Do Instead</div>
+              <p className="mt-2 text-sm text-secondary leading-relaxed">
+                Brand-specific hidden-fastener systems (Trex Hideaway, TimberTech CONCEALoc, Fiberon Stowaway) where the system supports them. Stainless screws and color-matched plug fasteners on perimeter and stair noses. Warranty stays valid for the full 25 or 50 years.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Pricing */}
       <section className="bg-neutral-50 py-14 md:py-20">
         <Container>
@@ -451,7 +598,7 @@ export default function CompositeDecksLpPage() {
                 Building Decks Across 31 Bay Area Cities
               </h2>
               <p className="mt-2 text-secondary leading-relaxed">
-                Marin · San Francisco · Alameda · Contra Costa · San Mateo · Santa Clara. Coastal towns (Sausalito, Pacifica, Daly City), hillside communities (Mill Valley, Berkeley Hills, Oakland Hills), and Peninsula backyards (Burlingame, San Carlos, Palo Alto) — we build composite decks that handle the specific microclimate where you live.
+                Marin · San Francisco · Alameda · Contra Costa · San Mateo · Santa Clara. We design and build for the specific challenges of where you live — hillside multi-level builds for Mill Valley, Oakland Hills, and Berkeley grades; wind-resistant designs with reinforced railings for Pacifica and Sausalito coastal lots; small-yard maximization with privacy screening for SF Sunset and the Mission; large entertaining decks with built-in pergolas, fire pits, and outdoor kitchens for Peninsula backyards in Burlingame, San Carlos, and Palo Alto. Every build accounts for your microclimate — coastal salt air, hillside drainage, fog-belt cycling, or summer sun exposure.
               </p>
             </div>
           </div>
@@ -459,7 +606,7 @@ export default function CompositeDecksLpPage() {
       </section>
 
       <LpFinalCTA
-        heading="Ready for a Deck That Lasts 25+ Years?"
+        heading="Ready for the Deck You've Been Picturing?"
         subtext="Free on-site design consultation with sample boards in your actual yard light. Fixed-price quote. Typical install in 1–3 weeks. We respond in minutes."
         bullets={[
           "Free design consultation at your property",

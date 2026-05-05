@@ -1,6 +1,6 @@
 # Google Ads — Gadget Construction Inc.
 
-**Live as of:** 2026-04-29
+**Live as of:** 2026-05-05
 **Client:** Gadget Construction Inc. | CA Lic #1132983
 **Service Area:** Marin, San Francisco, San Mateo, Santa Clara, Alameda, Contra Costa counties (6 counties · 31 cities)
 **Google Ads Conversion ID:** `AW-16885734093`
@@ -37,8 +37,14 @@
 | **Google auto-apply recommendations** | ✅ DISABLED account-wide 2026-04-25 — every toggle in "Maintain your ads" off |
 | **Google Ads MCP (live telemetry from Claude)** | ✅ Live — Gadget `8495875417` through Esquair MCC `7701854464` |
 | **Straggler — `how to fix rotting door frame` (Exact) in Dry Rot** | 🟡 Still pending removal (carried from 2026-04-23 — 0 impressions in last 7 days so low urgency) |
-| **Test-submit form on Stucco LP to verify conversion fires** | ✅ Verified 2026-04-29 — gtag conversion event fires (status 302 ping) confirmed via DevTools Network. Dashboard "Tag inactive" flag was a 7+ day staleness signal; will flip to Active once today's hit propagates (3–24 hrs). |
+| **Test-submit form on Stucco LP to verify conversion fires** | ✅ Verified 2026-04-29 — gtag conversion event fires (status 302 ping) confirmed via DevTools Network |
 | **Test-submit form on Dry Rot + Siding + Composite Decks LPs** | 🟡 Pending — same verification on remaining 3 LPs |
+| **First conversion captured in dashboard** | ✅ 2026-04-29 — Dry Rot ad group, LP Form Submission, $1,500 value. Plumbing now confirmed end-to-end (not just network ping). $52.70 spend → 28x ROAS on this single conversion. |
+| **Stucco LP — content depth pass for QS lift (5 sections + before/after gallery)** | ✅ 2026-05-05 — pain-elimination headline, neighborhood/microclimate context, Patch/Re-Coat/Tear-Off diagnostic, Bay Area Stucco Systems section, anti-contractor section, real before/after gallery (substrate prep → finished stucco). Targets QS 3 → 5+ in 7-14 days. |
+| **Composite Decks LP — content depth pass for QS lift (5 sections)** | ✅ 2026-05-05 — aspirational headline ("Have a Deck You Can Be Proud Of"), Bay Area microclimate context, "Which Composite Line?" tier diagnostic (Trex/TimberTech/Fiberon entry/mid/premium), anti-contractor section (joist spacing, ledger flashing, board substitution, fastener spec), deepened service-area neighborhood content. Targets QS 1 → 4-6+ in 14-30 days. RSA tune-up still needed for Creative BELOW_AVERAGE component. |
+| **Composite Decks RSA tune-up** | 🟡 Pending — pin H1/H2/H3, add DKI on H1, remove "5-year workmanship warranty" desync from Description #1, swap aspirational-but-vague headlines for tighter pride/longevity-aligned ones |
+| **DKI on Dry Rot RSA** | 🟡 Pending — `{KeyWord:Dry Rot Repair}` for symmetry with Stucco RSA |
+| **21 new negatives identified from search-terms report (2026-05-05)** | 🟡 Pending — Raul to add via UI. 15 broad-match (bondo, epoxy, restorer, hardener, terminator, elastomeric, caulking, compound, acrylic, materials, commercial, landscape timbers, patching, superior stucco, cracks in stucco) + 6 phrase-match competitor brands (anderson plastering, blue eagle stucco, east of bay plastering, lopez plastering, san jose stucco & plastering, vansandt plastering) |
 | **SearchAtlas dynamic optimization script 404** | ⚠️ Discovered 2026-04-29 — `sa.searchatlas.com/a..86c6-d44ba9e99b3c` returns 404. Loaded via base64 wrapper in `app/layout.tsx`. Not blocking ads (`lazyOnload`) but not doing the SEO work it's billed for. Investigate or remove. |
 | **Time zone — account currently on Central Time** | 🟡 Pending fix — should be Pacific. Entries currently use +2 hour math. One-way change. |
 | **Client recap PDF generated** | ✅ 2026-04-25 — `Gadget-Ads-Recap-Apr25-2026.pdf` (with LP pricing tables for client verification) |
@@ -656,20 +662,147 @@ The conversion action showed "Tag inactive — Last activity Apr 21" (8 days), w
 
 ---
 
+## 2026-05-05 — 6-Day Check-In + Stucco & Composite Decks LP Depth Pass
+
+**Context — what this session did:** First check-in after the 4-day reading on 2026-04-29 (target 5-day was 2026-05-02, ran 3 days late). Pulled fresh MCP data on all 3 campaigns, audited Quality Score components per keyword, then shifted to LP work — applied the same content-depth playbook to both Stucco and Composite Decks LPs to address their LP-experience BELOW_AVERAGE QS components.
+
+### 6-day MCP performance pull (2026-04-29 → 2026-05-04)
+
+| Campaign | Impr | Clicks | Spend | CTR | Avg CPC | Search IS | Rank Lost | Budget Lost | Conv |
+|---|---|---|---|---|---|---|---|---|---|
+| Dry Rot Repair | 96 | 8 | $52.70 | 8.33% | $6.59 | 41.1% | 18.9% | 40.0%* | **1 ($1,500)** |
+| Stucco Repair | 230 | 14 | $122.37 | 6.09% | $8.74 | 38.8% | 36.5% | 24.7% | 0 |
+| Composite Decks | 34 | 3 | $35.34 | 8.82% | $11.78 | 50.0% | 40.4% | 9.6% | 0 |
+| **Total** | **360** | **25** | **$210.41** | 6.94% | $8.42 | — | — | — | **1** |
+
+*Dry Rot's 40% budget-lost IS reflects the campaign hitting its $10/day cap most days — actual daily spend $8.78.
+
+### Headline findings
+
+- **🎉 First conversion landed.** Dry Rot ad group, LP Form Submission action, $1,500 value, 2026-04-29. Single-conversion CPA: $52.70 spend = **28x ROAS** on this lead. Conversion plumbing now confirmed end-to-end via dashboard, not just network ping.
+- **Composite Decks fix from 2026-04-29 worked.** Pre-fix: 0.75 impr/day, 12.5% IS, 87.5% rank-lost. Post-fix: 5.67 impr/day, 50% IS, 40.4% rank-lost. **7.5x impression volume**, 4x IS, rank-lost cut in half. The Phrase variants + raised $20 Max CPC ceiling were the unlock. All 3 clicks came from `trex deck installer` Phrase at 33% CTR — strong material-specific intent signal.
+- **Stucco budget ceiling tightening.** Budget-lost IS climbed 0% → 8.7% → **24.7%** over the past 10 days. CTR (6-8%) and CPC ($8.74) healthy. 0 conversions on 23 total clicks borderline at 5% CVR threshold (~20 clicks for first lead).
+
+### Quality Score per ad group (current state)
+
+| Ad Group | Best Keyword | QS | Creative | LP Experience | Predicted CTR |
+|---|---|---|---|---|---|
+| Dry Rot | `dry rot repair` Phrase | 5 | ABOVE | AVERAGE ✅ | BELOW |
+| Stucco | `stucco repair` Phrase | 3 | ABOVE | BELOW ⚠️ | BELOW |
+| Stucco | `stucco contractor` Phrase | 3 | ABOVE | BELOW ⚠️ | BELOW |
+| Composite Decks | `deck builders` Exact | 1 🚨 | BELOW 🚨 | BELOW 🚨 | BELOW 🚨 |
+| Composite Decks | `deck builder near me` Exact | 1 🚨 | BELOW 🚨 | BELOW 🚨 | BELOW 🚨 |
+| Composite Decks | `deck builder near me` Phrase | 1 🚨 | BELOW 🚨 | BELOW 🚨 | BELOW 🚨 |
+
+**Diagnosis:**
+- Dry Rot LP is the gold standard — leave it alone. Predicted CTR will lift naturally as click-data accumulates.
+- Stucco needs LP work (just shipped) — Creative ABOVE means the ad copy is already working.
+- Composite Decks needs LP work (just shipped) AND RSA work (Creative BELOW means ad copy is also flagged) — the longest road.
+
+### Stucco LP — content depth pass (shipped this session)
+
+5 changes + gallery to `/lp/stucco-repair`:
+
+1. **Hero rewritten** — "Stucco Repair, Bay Area — Crack Patching to Full Re-Stucco" → **"Don't Let a Hairline Crack Become a $9,000 Wall"** (Garfinkel pain-elimination framing).
+2. **Educational opener expanded** — added a third paragraph naming Mill Valley fog cycles, Berkeley/Oakland clay-soil swelling, Daly City + Pacifica wind-driven rain, Eichler post-and-beam horizontal trim joints, Doelger 1950s metal-lath corrosion. Same E-E-A-T Experience pattern that worked on city pages.
+3. **NEW diagnostic section** — "Patch, Re-Coat, or Tear-Off? How to Tell." 3-card grid with crack width, age, staining, moisture-meter cues for each option, plus rough price ranges.
+4. **NEW stucco systems section** — "Bay Area Stucco Systems — What's Behind Your Wall." Pre-1985 traditional 3-coat / 1985-2000s one-coat synthetic / 1990-today EIFS, with repair approach per system.
+5. **NEW anti-contractor section** — "What Other Stucco Contractors Get Wrong." Dark `bg-primary` for visual variety. 4 paired cards: one-coat acrylic over old finish, quote without probe-testing, color match by guess, skip the cure time.
+6. **NEW before/after gallery** — real Bay Area whole-elevation re-stucco. Before: stripped substrate showing JumboTex WRB, wire lath, blue Fortifiber window flashing. After: full three-coat finish applied. Photos sourced from `/Pacific Construction Assets/Dry rots Repair Pics/` (combined dry-rot + re-stucco job), resized via `sips -Z 1800` to ~615KB and ~350KB. Placed at ~30% scroll depth between diagnostic and stucco-systems with narrative bridge "Option 3 in Practice — Real Project Before & After" — references the diagnostic above for tight context.
+
+### Composite Decks LP — content depth pass (shipped this session)
+
+6 changes to `/lp/composite-decks`:
+
+1. **Hero rewritten** — "Composite Decks Built to Last 25+ Years in the Bay Area" → **"Have a Deck You Can Be Proud Of"** (with brand-red 4px underline on "You" via styled span). Aspirational > pain-elimination because composite decks are an upgrade purchase, not a distress purchase. Stucco/Dry Rot use pain framing because they fix problems; Decks is halfway between trade and design and benefits from pride framing.
+2. **NEW educational opener** — "Why Wood Decks Don't Last in the Bay Area." Three paragraphs: Pacifica/Sausalito wind-driven rain, Marin/Berkeley shaded backyards, SF Sunset/Daly City fog-belt cycling, south-facing Peninsula sun exposure.
+3. **NEW decision diagnostic** — "Which Composite Line Fits Your Project?" 3-tier breakdown: Entry-Level (Trex Enhance, TimberTech EDGE Prime+, Fiberon Sanctuary, ~$8-12/sqft) / Mid-Range (Trex Select, TimberTech AZEK Vintage, Fiberon Concordia, ~$12-18/sqft) / Premium (Trex Transcend, TimberTech AZEK Harvest, Fiberon Paramount, ~$18-28/sqft).
+4. **NEW anti-contractor section** — "What Other Deck Builders Get Wrong." Dark `bg-primary`. 4 specific failures: wood-deck joist spacing on a composite build (need 12-16" OC not 16-24"), no flashing at house attachment (ledger rot), mid-project board substitution (bait-and-switch from Transcend → Enhance), skipping manufacturer fastener spec (warranty void).
+5. **Service area paragraph deepened** — replaced generic "coastal towns / hillside communities / Peninsula backyards" with deck-specific design challenges per area (hillside multi-level for Mill Valley/Oakland Hills/Berkeley, wind-resistant for Pacifica/Sausalito, small-yard maximization for SF Sunset/Mission, entertaining-focused for Burlingame/San Carlos/Palo Alto).
+6. **Final CTA heading updated** — "Ready for a Deck That Lasts 25+ Years?" → "Ready for the Deck You've Been Picturing?" (image-driven, matches new aspirational hero without verbatim repetition).
+
+### LpHero interface change
+
+Updated `components/lp/LpHero.tsx` to accept `headline: ReactNode` instead of `headline: string`. Backwards-compatible (strings still work as ReactNode). Enables passing JSX for styled headlines like the underline-on-"You" treatment in Composite Decks. Other 4 LPs (Stucco, Dry Rot, Siding, Exterior Repairs) continue working untouched.
+
+### Search terms — 21 negatives identified (pending Raul UI)
+
+DIY product queries are still the biggest junk source despite the 13 negatives we added 2026-04-29. The existing negatives missed several because they're tokenized too narrowly (e.g., `patch` doesn't catch `patching stucco`, `cost of` doesn't catch `stucco repair cost`).
+
+**15 broad-match negatives:**
+
+```
+bondo
+epoxy
+restorer
+hardener
+terminator
+elastomeric
+caulking
+compound
+acrylic
+materials
+commercial
+landscape timbers
+patching
+superior stucco
+cracks in stucco
+```
+
+**6 phrase-match competitor brand names:**
+
+```
+"anderson plastering"
+"blue eagle stucco"
+"east of bay plastering"
+"lopez plastering"
+"san jose stucco & plastering"
+"vansandt plastering"
+```
+
+Wasted spend on these queries this period: ~$33 (~16% of total). Adding saves ~$15-20/week.
+
+### What was changed this session
+
+| Change | Where | Verified |
+|---|---|---|
+| Stucco LP — 5 new content sections + before/after gallery | `app/lp/stucco-repair/page.tsx` | ✅ npm run build passing |
+| Composite Decks LP — 4 new content sections + 2 copy rewrites | `app/lp/composite-decks/page.tsx` | ✅ npm run build passing |
+| Stucco gallery photos | `public/images/stucco-wide-{before,after}.jpg` | ✅ resized via sips, served via Next.js `<Image>` |
+| `LpHero` interface — `headline: ReactNode` | `components/lp/LpHero.tsx` | ✅ backwards-compatible |
+
+### What's deferred to next session
+
+- **Composite Decks RSA tune-up** — pin H1/H2/H3, add DKI on H1 (`{KeyWord:Composite Decks}`), remove "5-year workmanship warranty" desync from Description #1 (LP correctly hides workmanship warranty since 2026-04-25 but RSA wasn't updated), swap aspirational-but-vague headlines for tighter pride/longevity-aligned ones matching the new LP. Targets the Creative BELOW_AVERAGE component blocking Composite Decks from getting above QS 1.
+- **DKI on Dry Rot RSA** — `{KeyWord:Dry Rot Repair}` for symmetry with what's working on Stucco.
+- **Time zone fix Central → Pacific** — still pending. Raul to fix via UI (Tools → Preferences → Time zone). One-way change.
+- **Test-submit forms on Dry Rot + Siding + Composite Decks LPs** — Stucco verified 2026-04-29; remaining 3 LPs still pending. Raul to test in browser.
+
+### Critical takeaways
+
+- **Conversion plumbing healthy and producing** — first $1,500 lead landed; 28x ROAS on the Dry Rot click → conversion path
+- **Composite Decks Apr 29 fix is a winner** — 7.5x impression volume in 6 days, IS quadrupled, rank-lost cut in half
+- **Stucco and Composite Decks LPs both got the QS-lift content playbook** — same template, different framing per category (pain-elimination for stucco trade, aspirational for decks design)
+- **Aspirational vs pain-elimination should be picked per category, not applied universally** — distress purchases (stucco repair, dry rot) reach into existing frustration; aspirational purchases (decks, ADUs, remodels) sell the better outcome
+- **Expected impact:** Stucco QS 3 → 5-7 in 7-14 days; Composite Decks QS 1 → 4-6 in 14-30 days (Composite Decks is the longer road because it has all 3 QS components BELOW_AVERAGE — LP fixed today, RSA next session, Predicted CTR follows)
+- **Don't chase QS 10** — target 7-8 average across the account; almost all the CPC savings sit between QS 1-5 → QS 7-8
+
+---
+
 ## Immediate Next Steps
 
-1. **Monitor Composite Decks impression volume next 48–72 hrs** (post-fix on 2026-04-29). Pre-fix: 3 impressions in 4 days. Target post-fix: 5–10 impressions/day. If still below 3/day on 2026-05-02, the bid raise wasn't the only issue and we need to dig deeper into Quality Score components.
-2. **Test-submit the form on the remaining 3 LPs** (`/lp/dry-rot-repair`, `/lp/siding-repair`, `/lp/composite-decks`). Stucco LP verified 2026-04-29. Dashboard "All conv." count should tick up within 24 hrs of each test.
-3. **Re-check Stucco Quality Score on 2026-05-09** (10 days post-restructure). Target: QS 3 → 5+, "Predicted CTR" component flips BELOW → AVERAGE, "Landing page experience" flips BELOW → AVERAGE. If LP component is still BELOW after 10 days, message-match audit (does ad copy mirror LP H1?) and scroll-depth check.
-4. **Investigate SearchAtlas script 404** — currently 404'ing on `sa.searchatlas.com`. Either re-verify the UUID with whoever set up SearchAtlas, or remove the script entirely if no longer paid. File: `app/layout.tsx` lines 62–67.
-5. **Remove `how to fix rotting door frame` (Exact) from Dry Rot ad group.** Carried from Apr 23. Low urgency (0 impressions in last 7 days) but should still be cleaned up.
-6. **Pull search terms report on 2026-05-02** (week 2 post-restructure). Add new junk queries to "Global negatives — all campaigns" shared list.
-7. **5-day MCP check-in (2026-05-02 / 2026-05-03):** verify QS movement, CPC, first conversions, IS improvement. Compare against the 4-day data captured 2026-04-29.
-8. **Fix account time zone Central → Pacific** (one-way change). One-time 2-min fix, eliminates the +2 hour math on every schedule edit going forward. Tools → Preferences → Time zone.
-9. **Apply DKI to Dry Rot RSA Position 1** — `{KeyWord:Dry Rot Repair}` for symmetry with Stucco. Currently Dry Rot RSA still uses static headlines.
+1. **Add 21 new negatives** to "Global negatives — all campaigns" shared list (15 broad-match + 6 phrase-match competitor brands — see 2026-05-05 session entry above for the copy-paste-ready list). Saves ~$15-20/week. Raul UI work, ~10 min.
+2. **Composite Decks RSA tune-up** — pin H1/H2/H3, add DKI on H1, remove "5-year workmanship warranty" from Description #1, swap aspirational-but-vague headlines for tighter pride/longevity-aligned copy matching the new LP. Targets Creative BELOW_AVERAGE QS component. ~30-45 min UI work walked through with Claude.
+3. **Apply DKI to Dry Rot RSA Position 1** — `{KeyWord:Dry Rot Repair}` for symmetry with Stucco RSA.
+4. **Test-submit the form on the remaining 3 LPs** (`/lp/dry-rot-repair`, `/lp/siding-repair`, `/lp/composite-decks`). Stucco verified 2026-04-29. Dashboard "All conv." count ticks up within 24 hrs of each test.
+5. **Fix account time zone Central → Pacific** (Tools → Preferences → Time zone). One-way change, 2-min fix, eliminates the +2 hour math on every schedule edit going forward.
+6. **Re-check Stucco Quality Score on 2026-05-12** (7 days post-LP-deploy). Target: QS 3 → 5+, LP experience flips BELOW → AVERAGE.
+7. **Re-check Composite Decks Quality Score on 2026-05-19** (14 days post-LP-deploy + RSA tune-up). Target: QS 1 → 4-5+. All 3 QS components were BELOW_AVERAGE so this is a slower lift.
+8. **Investigate SearchAtlas script 404** — currently 404'ing on `sa.searchatlas.com`. Either re-verify UUID or remove. File: `app/layout.tsx` lines 62–67.
+9. **Remove `how to fix rotting door frame` (Exact) from Dry Rot ad group.** Carried from 2026-04-23. Low urgency (0 impressions last 7 days) but should be cleaned up.
 10. **Delete the old Stucco ad group** (currently paused inside Dry Rot Repair campaign) on or after 2026-05-25 (30 days post-pause) if new Stucco campaign is performing.
-11. **Consider raising Dry Rot Max CPC $8 → $10–$12** if the 38.6% rank-lost IS persists after the 2026-05-02 check-in. Dry Rot campaign is severely underspending its $10/day budget post-restructure (~$4/day actual), so headroom exists.
-12. **Consider activating Siding ad group** in month 2 if Stucco/Dry Rot ROAS justifies budget expansion. LP `/lp/siding-repair` is already built and ready.
+11. **Consider raising Dry Rot Max CPC $8 → $10–$12** if the 18.9% rank-lost IS persists after week 3 check-in. Dry Rot is also budget-constrained (40% budget-lost IS) — could raise daily to $15 instead, since this is the campaign that just produced a $1,500 lead at 28x ROAS.
+12. **Consider activating Siding ad group** in month 2 if Stucco/Dry Rot/Composite Decks ROAS justifies budget expansion. LP `/lp/siding-repair` is built and ready.
 
 ---
 
