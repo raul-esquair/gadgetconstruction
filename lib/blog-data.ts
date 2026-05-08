@@ -17,6 +17,212 @@ export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "composite-vs-wood-decking-bay-area-2026",
+    featuredImage: "/images/blog-composite-vs-wood-decking-bay-area-2026.png",
+    title: "Composite vs Wood Decking: Why Bay Area Homeowners Are Switching in 2026",
+    excerpt:
+      "Wood has a 30-year head start on composite. So why have most Bay Area homeowners we've worked with in 2026 chosen composite? Here's the honest breakdown — including when wood still wins.",
+    date: "2026-05-11",
+    readingTime: "9 min read",
+    relatedService: "composite-decks",
+    faqs: [
+      {
+        "question": "Is composite decking really cheaper than wood over time in the Bay Area?",
+        "answer": "Yes — for most Bay Area locations. A 400 sq ft composite deck runs $18,000–$22,000 installed and requires roughly $200–$400 in maintenance over 20 years. The same deck in clear-grade redwood runs $14,000–$18,000 upfront but accumulates $18,000–$24,000 in maintenance and likely needs replacement before year 22 in fog-belt conditions. The composite vs wood decking 20-year total favors composite by $10,000–$18,000 in most Bay Area zip codes."
+      },
+      {
+        "question": "How long does a composite deck last in the Bay Area's fog and salt air?",
+        "answer": "Capped composite decking from Trex, TimberTech, or Fiberon carries 25–50 year fade and stain warranties depending on the product line. In coastal fog-belt neighborhoods like the SF Sunset, Pacifica's Linda Mar, or the Sausalito waterfront, composite holds up significantly better than wood — which typically shows structural failure at ledger boards and joist connections within 15–20 years under persistent moisture exposure."
+      },
+      {
+        "question": "What are the biggest maintenance differences between a wood deck and a composite deck?",
+        "answer": "Wood decks in the Bay Area require biannual professional staining and sealing — roughly $800–$1,500 per treatment — plus periodic board replacement as weathering progresses. Composite decks need soap-and-water cleaning once or twice a year, costing essentially nothing. The one exception: composite in heavily shaded locations can accumulate surface mildew that needs a dedicated deck wash and scrub — still a DIY job, not a contractor call."
+      },
+      {
+        "question": "Does composite decking look fake compared to real wood?",
+        "answer": "Modern capped composite — Trex Transcend, TimberTech Reserve, Fiberon Paramount — is convincing at normal viewing distance. It doesn't replicate the grain variation of actual clear-heart redwood up close. For period-sensitive homes like Victorian rowhouses in Alamo Square or Edwardian flats in the SF Richmond, natural wood grain can be architecturally important. For most standard Bay Area homes, composite aesthetics are not a meaningful drawback."
+      },
+      {
+        "question": "Should I use composite or wood decking on an Eichler or midcentury home?",
+        "answer": "Eichlers in Palo Alto's Green Gables tract or Fairglen in San Jose were designed around seamless indoor-outdoor living — and composite handles that well. The clean lines of capped composite in a warm gray or brown tone match midcentury aesthetics better than most homeowners expect. We'd specify Trex Transcend or Fiberon Paramount for most Eichler decks. If the home has original redwood board-and-batten siding, discuss grain matching with your contractor before committing."
+      },
+      {
+        "question": "Can I get permits for a composite deck in San Francisco without a full plan set?",
+        "answer": "Permit requirements in San Francisco are set by the SF Department of Building Inspection (DBI) and depend on deck size, height, and whether structural work is involved. Decks over 30 inches above grade or attached to the house typically require a building permit with plans. Material choice — composite vs wood — doesn't change the permit requirement. Factor 6–12 weeks for SF DBI permit processing into your project timeline."
+      },
+      {
+        "question": "When does a wood deck actually make more financial sense than composite?",
+        "answer": "Wood beats composite on upfront cost in every scenario — typically $4,000–$8,000 less installed for a 400 sq ft deck. It makes more financial sense on covered, protected patios in drier East Bay microclimates where maintenance costs are lower and the longevity gap narrows. If your budget is hard-constrained and you can't reach composite's upfront price, a pressure-treated deck is a legitimate short-term decision — just account for higher maintenance costs and earlier replacement."
+      }
+    ],
+    content: `
+## The Short Answer
+
+Composite vs wood decking comes down to this: composite wins on maintenance, longevity, and 20-year total cost. Wood wins on upfront price and traditional aesthetics. For a 400 sq ft deck in the Bay Area fog belt, composite typically costs **less over its lifespan** than wood — even though it costs more upfront. Most Bay Area homeowners we've worked with in 2026 have chosen composite for exactly that reason. Here's the honest breakdown, including the specific situations where wood still makes the right call.
+
+If you're still narrowing down which composite product fits your home, our [composite brand comparison](/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026) covers Trex, TimberTech, and Fiberon side by side. And if you want to see what a full build costs before you decide on materials, the [composite deck cost guide for San Francisco](/blog/composite-deck-cost-san-francisco) has real numbers from 500+ local projects.
+
+---
+
+## Why Bay Area Homeowners Used to Choose Wood
+
+For most of the 20th century, wood was the obvious choice for Bay Area decks — and not just because it was cheap. California redwood was abundant, locally milled, and genuinely suited to outdoor construction. It resists insects and rot naturally. It fit the architectural vernacular of the homes being built: the Craftsman bungalows in Rockridge and [Berkeley's Elmwood](/service-areas/berkeley), the ranch homes spreading across the Peninsula in the 1950s, the Eichlers in Green Gables (Palo Alto) and Fairglen (San Jose) that made outdoor living central to the floor plan. Cedar worked in similar ways — lighter in color, similarly rot-resistant, equally at home on a deck off a midcentury flat.
+
+The cost was reasonable. The look was familiar. And for a generation of Bay Area homeowners, maintaining a wood deck — scrubbing it down in spring, applying a fresh coat of stain — was just part of the annual rhythm of owning a home.
+
+That calculation has changed. Redwood supply has tightened significantly. In the **redwood deck vs composite** conversation, the supply side now tilts the math harder than most contractors admit. Clear-grade redwood — the knot-free, old-growth-adjacent boards that make a truly beautiful deck — is harder to source in 2026 than it was in 2006, and prices reflect it. Clear heart redwood currently runs $12–$18 per linear foot for 5/4×6 boards, versus $8–$12 five years ago. The supply constraint isn't temporary. Old-growth redwood is gone. Second-growth boards have more knots, more sapwood, and less of the natural tannin that gives redwood its durability. Cedar is more available but faces similar quality-grade compression. The "affordable, beautiful wood deck" of the 1980s is a genuinely different proposition today.
+
+---
+
+## The Case for Composite in 2026
+
+### The Maintenance Reality (Wood vs Composite)
+
+This is where the case for composite decking is most honest — and most often misrepresented. Composite isn't maintenance-free. What it is, is dramatically lower maintenance than wood.
+
+Wood decks require annual cleaning at minimum, and biannual staining and sealing to maintain appearance and slow moisture damage. On a 400 sq ft deck in a fog-belt neighborhood — the SF Sunset, the SF Richmond, [Pacifica's](/service-areas/pacifica) Linda Mar — professional refinishing means stripping old finish, sanding, and applying two coats of a UV-protective stain. A professional job on a 400 sq ft deck runs $800–$1,500 depending on condition and access. Do that every two years for 20 years, and you've spent $8,000–$15,000 on maintenance before you've replaced a single board.
+
+Composite decks require periodic soap-and-water cleaning — maybe once or twice a year to clear dirt, pollen, and mildew from shaded areas. The cost is essentially zero. No stripping, no sanding, no stain product, no contractor scheduling. On a fog-belt deck where moisture is constant, that difference compounds quickly.
+
+One place composite maintenance is underestimated: mildew in shaded areas. A composite deck under heavy tree cover in Tamalpais Valley in [Mill Valley](/service-areas/mill-valley) or on a north-facing [Oakland Hills](/service-areas/oakland) lot can accumulate surface mildew that needs more aggressive cleaning — deck wash, soft brush, rinse. It's still a Saturday-morning job, not a $1,200 contractor visit. But "occasional cleaning" and "zero maintenance" aren't the same thing.
+
+### Longevity in the Wood vs Composite Deck Debate: 20 Years vs 40+
+
+A well-maintained redwood or cedar deck lasts 15–25 years in a protected Bay Area location. In the fog belt, that range compresses. We handle [dry rot repair at wooden decks](/services/exterior-repairs) regularly in the Sunset, Pacifica, and along the [Sausalito](/service-areas/sausalito) waterfront — and the common thread is that wood decks exposed to persistent moisture fail at the structural connections first: ledger boards, post bases, joist ends where water pools and can't drain. We find significant ledger rot on about 30% of our deck replacement projects in those neighborhoods. Most of those decks are under 20 years old.
+
+Composite decking — specifically the capped products from Trex, TimberTech, and Fiberon — carries 25–50 year fade and stain warranties depending on the product line. The structural framing under any deck (wood or composite) still needs to be pressure-treated and properly detailed. But the decking surface doesn't deteriorate the same way. We've replaced Sunset District wood decks at year 17. We haven't replaced a capped composite deck in the fog belt due to material failure. That's not a marketing claim — it reflects the age of the product category in this market.
+
+### Bay Area Climate Resistance
+
+The Bay Area's climate is harder on wood than most homeowners expect when they're budgeting a project. The fog cycle — damp at night, dry in the afternoon, repeat — is particularly damaging. Wood absorbs moisture, expands, dries, contracts. Over years, that cycle checks the surface, opens grain, and creates pathways for deeper moisture penetration. UV from the afternoon sun compounds the damage.
+
+Salt air accelerates this in coastal neighborhoods. Standard zinc hardware corrodes within 5–7 years in [Pacifica](/service-areas/pacifica) or along the [Sausalito](/service-areas/sausalito) waterfront. On wood decks, corroding fasteners stain the surface — and, worse, can structurally fail over time. Our [composite deck construction in the Bay Area](/services/composite-decks) uses stainless or hot-dipped galvanized hardware throughout, which holds up in salt-air environments where standard hardware doesn't.
+
+Composite decking's capped polymer core sidesteps the moisture-absorption cycle entirely. The board doesn't expand and contract the same way wood does. On a west-facing Sunset deck that gets 200 fog days a year, that matters more than almost any other spec.
+
+### Total Cost of Ownership (20-Year Math)
+
+Here's the math most contractor websites skip. Reference project: 400 sq ft single-level deck, moderately accessible lot, mid-range materials for both options, fog-belt Bay Area location.
+
+**Cedar deck vs composite (and redwood vs composite) — installed costs:**
+
+*Wood (clear-grade redwood):* $14,000–$18,000 installed. Biannual professional refinishing at $1,000–$1,500 per treatment. Partial board replacement at year 8–10 as weather checking appears: $1,500–$2,500. Likely full replacement or major structural repair at year 18–22 in fog-belt conditions.
+
+*Composite (Trex Transcend or Fiberon Paramount):* $18,000–$22,000 installed. Cleaning supplies: $50–$100/year. No staining, no sealing, no professional refinishing. No board replacement expected before year 25.
+
+Over 20 years, the **composite or wood deck** cost question has a clear answer in the fog belt: composite costs less, even with a higher upfront price. See the full table in the next section.
+
+---
+
+## When Wood Still Makes Sense (We'll Say It)
+
+Composite is the right call for most Bay Area decks in 2026. It's not the right call for every deck. Here's where wood genuinely wins.
+
+**Period-correct restoration on Victorians and Edwardians.** If you own a Victorian rowhouse in Alamo Square, Noe Valley, or Pacific Heights, or an Edwardian flat in the Richmond or Cole Valley, composite can look out of place against original wood siding and period trim. The right call on a restoration-sensitive home is often clear-heart redwood or tight-grain Doug fir — stained to match — even knowing it requires more maintenance. Some architectural choices aren't about the 20-year spreadsheet. If you're doing a broader exterior restoration on a home like this, our [exterior repairs](/services/exterior-repairs) team can help you think through the full material spec.
+
+**Covered patios and protected locations.** Wood's weakness is moisture. Remove persistent moisture — a covered patio under a solid roof overhang in a drier East Bay location like Rockridge or [Concord](/service-areas/concord) — and the longevity gap between wood and composite narrows significantly. A protected redwood patio in a dry inland microclimate can last 30+ years with basic maintenance. The case for spending more on composite weakens in these locations.
+
+**Extreme budget constraints.** Pressure-treated pine decking runs $3–$6 per square foot in materials. Entry-level composite runs $9–$13. If your immediate budget is the binding constraint and you're not in a fog-belt location, a pressure-treated deck is a legitimate short-term decision. Be honest with yourself that you're front-loading savings against future maintenance and earlier replacement.
+
+**Homeowners who genuinely enjoy the work.** This sounds like a footnote but it's real. Some homeowners like refinishing their deck in the spring. It's outdoor work, the result looks good, and the ritual has value. If maintenance is something you want to do rather than outsource, the cost calculus shifts. Composite's selling point is that you don't think about the deck. Not everyone wants that.
+
+**Specific design requirements where real wood grain is non-negotiable.** Modern composite has gotten very good at approximating wood grain. Trex Signature, TimberTech Reserve, and Fiberon Paramount are convincing at a glance. But they're not real wood. If you're building adjacent to reclaimed barn wood or a custom furniture piece where grain matching matters, only actual wood will do.
+
+---
+
+## 20-Year Total Cost of Ownership Comparison
+
+This table answers the **composite vs wood decking** cost question directly. Reference: 400 sq ft single-level deck, fog-belt Bay Area location (SF Sunset, western Richmond, [Pacifica](/service-areas/pacifica)). All costs in 2026 dollars. Composite reference product: Trex Transcend. Wood reference product: clear-grade redwood, professionally installed.
+
+| Cost Item | Wood (Clear Redwood) | Composite (Trex Transcend) |
+|---|---|---|
+| Installed upfront cost | $14,000–$18,000 | $18,000–$22,000 |
+| Year 1–5 maintenance | $3,000–$5,000 | $200–$400 |
+| Year 5–10 maintenance | $3,000–$5,000 | $200–$400 |
+| Year 10–15 maintenance | $4,000–$6,000 + partial board replacement | $200–$400 |
+| Year 15–20 maintenance | $4,000–$6,000 + structural assessment | $200–$400 |
+| Likely replacement year | Year 18–22 (fog belt) | Year 25–40+ |
+| **20-year total (midpoint)** | **~$32,000–$42,000** | **~$19,500–$24,200** |
+
+Wood maintenance assumes biannual professional refinishing at $800–$1,500 per application, consistent with fog-belt conditions. In a protected inland location, wood maintenance costs drop roughly 40% — but composite maintenance costs stay near zero, so the gap closes rather than reverses. At no Bay Area location does wood beat composite on 20-year total cost unless you DIY all maintenance yourself. For a deeper look at what composite installation costs before the 20-year clock starts, see our [composite deck cost breakdown for San Francisco](/blog/composite-deck-cost-san-francisco).
+
+---
+
+## Environmental Considerations
+
+Neither wood nor composite has a clean ecological win. The honest answer depends on what you weight.
+
+**The case for wood:** Wood is a renewable resource. FSC-certified (Forest Stewardship Council) redwood and cedar are harvested under managed forestry practices with chain-of-custody documentation. Wood is biodegradable — at end of life, a wood deck doesn't go to landfill indefinitely. Manufacturing a wood board uses significantly less energy than manufacturing a composite board.
+
+The environmental problem with wood in practice: most decking-grade wood sold in the Bay Area is not FSC-certified. Ask your contractor or lumber supplier specifically for FSC-certified boards. It's available, it adds roughly 10–15% to material costs, and it's the only version of "sustainable wood decking" with third-party verification. Clear-grade redwood from unmanaged second-growth doesn't carry those protections.
+
+**The case for composite:** Trex boards are approximately 95% recycled content — reclaimed wood fiber and recycled plastic film, primarily from grocery bags and packaging. TimberTech and Fiberon use similar recycled-content formulas. The manufacturing process is energy-intensive, and composite boards aren't biodegradable. But the 25–50 year lifespan means one composite deck replaces two or three wood decks over the same period — less raw material consumption and less manufacturing energy over time. Composite also eliminates the staining and sealing chemicals that run off from wood decks during rain events.
+
+Neither option is clearly superior environmentally. If FSC-certified wood with no chemical maintenance is your priority, that's a legitimate position. If recycled content and reduced lifecycle replacement matters more, composite makes more sense. Most homeowners weigh these factors against performance and cost — which is honest.
+
+---
+
+## What We Recommend in 2026
+
+For most Bay Area homes, composite is the right answer in the **composite vs wood decking** decision. Here's how we spec it by situation.
+
+**Fog-belt homes in the SF Sunset, Richmond, or Pacifica:** Composite, without hesitation. TimberTech AZEK for coastal-facing decks; Trex Transcend or Fiberon Paramount for more sheltered lots. The moisture math is decisive. We wouldn't install a new wood deck on a west-facing [San Francisco](/service-areas/san-francisco) Sunset lot in 2026 and tell you it was the smart long-term choice.
+
+**Marin hillside homes in [Mill Valley](/service-areas/mill-valley), [Tiburon](/service-areas/tiburon), or Kentfield:** Composite, specifically TimberTech Legacy or Reserve. The combination of ambient moisture, shade, and premium design expectations makes capped composite the right spec. The 50-year warranty backs the investment on a home where the deck is a significant feature.
+
+**East Bay Craftsman homes in Rockridge, Temescal, or [Berkeley](/service-areas/berkeley) Elmwood:** Composite for most new builds and replacements, with an exception for period-sensitive restorations where matching the original architectural character matters more than minimizing maintenance.
+
+**Peninsula homes in [Menlo Park](/service-areas/menlo-park), [Palo Alto](/service-areas/palo-alto), or [San Carlos](/service-areas/san-carlos):** Composite in most cases — Trex Transcend or Fiberon Paramount on standard lots. The Peninsula's drier summer microclimate makes wood more viable than the fog belt, but the 20-year cost math still favors composite.
+
+**Period-correct Victorian or Edwardian homes where aesthetics are the primary constraint:** Consider wood seriously. FSC-certified clear-heart redwood, properly detailed and stained to match the home's original palette. Know what you're signing up for in maintenance, and budget accordingly. You might also want to look at our [complete remodel services](/services/complete-remodel) if the deck is part of a broader exterior project.
+
+For the full breakdown on which composite product fits your microclimate and home type, see our [composite brand comparison](/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026).
+
+If it were our own house — a 1950s ranch home on a standard Sunset lot with a west-facing backyard — we'd install Fiberon Paramount or Trex Transcend, use stainless hidden fasteners throughout, and not think about the deck surface again for 25 years. That's what the product is designed to do, and it's what the 20-year math supports.
+
+---
+
+## Frequently Asked Questions
+
+### Is composite decking really cheaper than wood over time in the Bay Area?
+
+Yes — for most Bay Area locations. A 400 sq ft composite deck runs $18,000–$22,000 installed and requires roughly $200–$400 in maintenance over 20 years. The same deck in clear-grade redwood runs $14,000–$18,000 upfront but accumulates $18,000–$24,000 in maintenance and likely needs replacement before year 22 in fog-belt conditions. The composite vs wood decking 20-year total favors composite by $10,000–$18,000 in most Bay Area zip codes.
+
+### How long does a composite deck last in the Bay Area's fog and salt air?
+
+Capped composite decking from Trex, TimberTech, or Fiberon carries 25–50 year fade and stain warranties depending on the product line. In coastal fog-belt neighborhoods like the SF Sunset, Pacifica's Linda Mar, or the Sausalito waterfront, composite holds up significantly better than wood — which typically shows structural failure at ledger boards and joist connections within 15–20 years under persistent moisture exposure.
+
+### What are the biggest maintenance differences between a wood deck and a composite deck?
+
+Wood decks in the Bay Area require biannual professional staining and sealing — roughly $800–$1,500 per treatment — plus periodic board replacement as weathering progresses. Composite decks need soap-and-water cleaning once or twice a year, costing essentially nothing. The one exception: composite in heavily shaded locations (Oakland Hills north-facing lots, for example) can accumulate surface mildew that needs a dedicated deck wash and scrub — still a DIY job, not a contractor call.
+
+### Does composite decking look fake compared to real wood?
+
+Modern capped composite — Trex Transcend, TimberTech Reserve, Fiberon Paramount — has improved significantly and is convincing at normal viewing distance. That said, it doesn't replicate the grain variation of actual clear-heart redwood up close. For period-sensitive homes like Victorian rowhouses in Alamo Square or Edwardian flats in the SF Richmond, a natural wood grain can be architecturally important. For most standard Bay Area homes, composite aesthetics are not a meaningful drawback.
+
+### Should I use composite or wood decking on an Eichler or midcentury home?
+
+Eichlers in Palo Alto's Green Gables tract or Fairglen in San Jose were designed around seamless indoor-outdoor living — and composite handles that connection well. The clean lines of capped composite in a warm gray or brown tone match midcentury aesthetics better than many homeowners expect. We'd specify Trex Transcend or Fiberon Paramount for most Eichler decks. If the existing home has original redwood board-and-batten siding you're preserving, discuss grain matching with your contractor before committing.
+
+### Can I get permits for a composite deck in San Francisco without a full plan set?
+
+Permit requirements in San Francisco are set by the SF Department of Building Inspection (DBI) and depend on deck size, height, and whether structural work is involved. Decks over 30 inches above grade or attached to the house typically require a building permit with plans. Material choice — composite vs wood — doesn't change the permit requirement. Factor 6–12 weeks for SF DBI permit processing into your project timeline. Other Bay Area jurisdictions (Marin's Community Development Agency, Oakland's Planning & Building Department) have different thresholds, so confirm locally.
+
+### When does a wood deck actually make more financial sense than composite?
+
+Wood beats composite on upfront cost in every scenario — typically $4,000–$8,000 less installed for a 400 sq ft deck. It also makes more financial sense on covered, protected patios in drier East Bay microclimates (Concord, parts of Oakland and Berkeley) where maintenance costs are lower and the longevity gap narrows. If your budget is hard-constrained right now and you can't reach composite's upfront price, a pressure-treated deck is a legitimate short-term decision — just account for higher maintenance costs and earlier replacement in your planning.
+
+---
+
+## Ready to Figure Out Which Is Right for Your Deck?
+
+The composite vs wood decking decision depends on your home's architecture, your location in the Bay Area, and how you want to use the space. There's no universal answer — but there is a right answer for your specific lot.
+
+We'll walk your site, understand your architectural context, and give you an honest recommendation — plus fixed-price estimates for both options if you want to compare. CA License #1132983. 12+ years. 500+ Bay Area projects. 5-year workmanship warranty in writing on every build. [See how we work across our 31 Bay Area service areas](/service-areas), or [contact us](/contact) to schedule a site visit.
+    `.trim(),
+  },
+
+  {
     slug: "trex-vs-timbertech-vs-fiberon-bay-area-2026",
     featuredImage: "/images/blog-trex-vs-timbertech-vs-fiberon-bay-area-2026.png",
     title: "Trex vs TimberTech vs Fiberon: Which Composite Decking Wins in Bay Area Weather (2026)",
