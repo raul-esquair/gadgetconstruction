@@ -165,6 +165,7 @@ export default async function BlogPostPage({ params }: Props) {
                     .replace(/^## (.*$)/gm, '<h2>$1</h2>')
                     .replace(/^### (.*$)/gm, '<h3>$1</h3>')
                     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
                     .replace(/^\- (.*$)/gm, '<li>$1</li>')
                     .replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`)
                     .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
