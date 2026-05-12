@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
+import { marked } from "marked";
 import { generatePageMetadata } from "@/lib/metadata";
 import { BLOG_POSTS, isPublished, getPublishedPosts } from "@/lib/blog-data";
 import { SERVICES } from "@/lib/constants";
@@ -161,23 +162,7 @@ export default async function BlogPostPage({ params }: Props) {
                   [&_hr]:border-neutral-200 [&_hr]:my-8
                 "
                 dangerouslySetInnerHTML={{
-                  __html: post.content
-                    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-                    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-                    .replace(/^\- (.*$)/gm, '<li>$1</li>')
-                    .replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`)
-                    .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
-                    .replace(/\|(.*)\|/g, (match) => {
-                      if (match.includes('---')) return '';
-                      const cells = match.split('|').filter(c => c.trim());
-                      const isHeader = BLOG_POSTS.indexOf(post) >= 0 && match === match;
-                      const tag = isHeader ? 'td' : 'td';
-                      return `<tr>${cells.map(c => `<${tag}>${c.trim()}</${tag}>`).join('')}</tr>`;
-                    })
-                    .replace(/\n\n/g, '</p><p>')
-                    .replace(/^(?!<[hultbp])/gm, (match) => match ? `<p>${match}` : match)
+                  __html: marked.parse(post.content, { gfm: true, async: false }) as string,
                 }}
               />
             </article>
