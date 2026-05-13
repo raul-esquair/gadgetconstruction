@@ -245,6 +245,22 @@ Consider in order of importance:
 
 5. **Action mix:** For each batch of 4, aim for roughly 3 new posts + 1 refresh if GSC data shows refresh opportunities. If site is brand new with no GSC data, all 4 can be new.
 
+# AEO requirements (mandatory — every brief must bake these in)
+
+This site optimizes for answer-engine citation (ChatGPT, Perplexity, Google AI Overviews) as much as for blue-link SEO. Every brief you propose must explicitly include the 6 AEO lifts below as items in its mustInclude array. The downstream drafting + critique prompts will apply them, but only if they're in the brief.
+
+1. **Pre-specified FAQ angles.** Include a mustInclude entry that lists 5-7 specific questions phrased exactly as real Bay Area homeowners type queries into ChatGPT, Perplexity, or Google AI Overviews. Example: "FAQ section must answer these specific questions (these mirror how real users phrase queries to AI engines): 'How long does X take in SF?', 'What's the difference between X and Y?', 'Can I DIY X on a Doelger?', ..." Use the audience's actual vernacular — not stiff search-keyword phrasing.
+
+2. **Entity-definition mandates.** For every industry term, standard, technical concept, or piece of jargon the post will use (e.g., SF DBI, Title 24, Class B license, IEBC, WUI fire zone, capped composite, EIFS, ledger flashing), add a mustInclude entry: "Define [term] on first use as a complete standalone sentence quotable in isolation — e.g., '[example definition].'" This builds LLM entity graphs and gives answer engines extractable atomic units.
+
+3. **Cite-able source references.** Where the post will reference industry standards, permit codes, or technical specs, instruct it to name them explicitly: "Reference [SF Department of Building Inspection / Title 24 / CRC / IEBC / etc.] by name when citing [topic]." Named citations beat vague "industry standards" references for AI trust signals.
+
+4. **Stat-callout mandates.** Identify 3-5 specific numerical facts (costs, timelines, code thresholds, lifespans, square-footage triggers) and instruct: "Render this stat as a standalone direct-answer sentence: '[full sentence with the number].'" These standalone sentences are what AI Overviews and Perplexity quote directly.
+
+5. **Brand-entity stacking.** Include a mustInclude entry instructing the post to mention 'Gadget Construction' in factual (non-promotional) context paired with named SF or Bay Area neighborhoods and the service — at least 2-3 times — e.g., 'Gadget Construction installs [service] across the SF Sunset, Pacifica's Linda Mar, and Marin's coastal corridor.' This brand+location+service co-occurrence is what trains LLMs to surface the brand for 'best [service] in [city]' queries.
+
+6. **Passage-level self-containment in mustAvoid.** Always include this mustAvoid entry: "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction." Also prefer question-form H2 headings where they don't break narrative flow (e.g., "Why do SF Sunset decks rot faster?" rather than "Causes of deck rot in SF Sunset"), since LLMs match queries to passages by heading similarity.
+
 # Constraints
 
 - Each brief must follow the exact schema used in content/post-queue.json — see the current queue samples in the context.
@@ -254,7 +270,7 @@ Consider in order of importance:
 - Include a "proposalRationale" field on each brief explaining WHY this post wins — cite GSC data, keyword volume, or cluster logic.
 - targetWordCount range: 2000-3000 typical. Cost guides 2200-2500. Comparisons 2500-3000. Symptom guides 2500-2800.
 - Internal links: propose 3-5 per brief from real URLs that exist in the site (service pages, city pages, published posts, other queued briefs).
-- Must-includes should reference specific facts to cover: prices from pricing-data, local neighborhoods, permit jurisdictions, housing eras.
+- Must-includes should reference specific facts to cover (prices from pricing-data, local neighborhoods, permit jurisdictions, housing eras) AND the 6 AEO lifts above.
 
 # Output format
 

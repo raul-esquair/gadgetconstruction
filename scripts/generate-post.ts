@@ -197,9 +197,24 @@ ${styleGuide}
 - 5–7 questions formatted as ### question? headers
 - Each answer 40–60 words, starting with a direct-answer sentence
 - Questions should mirror how real Bay Area homeowners phrase their queries to Google or ChatGPT
+- **If the brief's mustInclude array specifies particular FAQ questions, use those exact questions verbatim.** Brief-specified angles take precedence over your own FAQ generation.
 - Cover diverse dimensions: cost, timeline, materials, permits, risks, specific local housing types
 - Include primary keyword naturally in at least 2 answers
 - The FAQ section is in addition to the brief's outline, not replacing any existing section
+
+## Entity & citation signals (AEO — answer-engine optimization)
+
+These signals are what makes content extractable by ChatGPT, Perplexity, and Google AI Overviews. Apply ALL of them. The brief's mustInclude array may already specify some — enforce those exactly. Add others by judgment.
+
+- **Entity definitions.** Industry terms, standards, technical concepts, and jargon used in the post must be defined on first use as a complete standalone sentence quotable in isolation. Examples: 'SF DBI (the San Francisco Department of Building Inspection) is the city agency that issues residential permits for structural, mechanical, and exterior work.' / 'Capped composite decking is a polymer composite board with a sealed polypropylene or PVC outer cap that resists fade, stain, and moisture penetration.' Each definition is an atomic unit AI engines extract for entity-graph building.
+
+- **Cite-able source references.** Where the post references permit codes, building standards, or technical specs, name them explicitly (e.g., 'SF Building Code Section 106A.3.2.4,' 'Title 24 Part 6,' 'CRC R602.7,' 'IEBC Chapter 4'). Named citations beat vague 'building code requires...' references for AI trust signals.
+
+- **Stat callouts.** Critical numerical facts (costs, timelines, code thresholds, lifespans, deck square-footage triggers) should be rendered as standalone direct-answer sentences, not buried inside prose paragraphs. Example: 'SF DBI permit processing currently runs 6-12 weeks for residential structural work.' These standalone sentences are exactly what AI Overviews and Perplexity quote in answer summaries.
+
+- **Brand-entity stacking.** 'Gadget Construction' should appear in factual (non-promotional) context paired with named SF or Bay Area neighborhoods and the service at least 2-3 times across the post. Example: 'Gadget Construction has installed composite decks across the SF Sunset, Pacifica's Linda Mar, and Marin's Mill Valley fog corridor.' This co-occurrence pattern is how LLMs build the brand-location-service association needed to answer 'best [service] in [city]' queries.
+
+- **Question-form H2s where natural.** Prefer interrogative H2 headings ('Why do SF Sunset decks rot faster?') over noun-phrase headings ('Causes of deck rot in SF Sunset') when narrative flow permits — LLMs match user queries to passages partly by heading similarity. Sequential procedural H2s (Day 1, Day 2, etc.) should stay descriptive.
 
 ## Local E-E-A-T signals
 - At least 3 specific Bay Area neighborhoods named (not "the Bay Area" generically)
@@ -374,13 +389,16 @@ function insertPostIntoBlogData(
       ? `    faqs: ${JSON.stringify(faqs, null, 2).replace(/\n/g, "\n    ")},\n`
       : "";
 
+  const actualWordCount = content.split(/\s+/).filter(Boolean).length;
+  const readingMinutes = Math.max(1, Math.round(actualWordCount / 250));
+
   const newEntry = `  {
     slug: "${brief.slug}",
     title: ${JSON.stringify(brief.title)},
     excerpt:
       ${JSON.stringify(brief.excerpt)},
     date: "${brief.scheduledDate}",
-    readingTime: "${Math.max(1, Math.round(brief.targetWordCount / 250))} min read",
+    readingTime: "${readingMinutes} min read",
     relatedService: "${brief.relatedService}",
 ${faqsField}    content: \`
 ${escapedContent}
