@@ -172,22 +172,30 @@ export function articleSchema(post: {
   title: string;
   description: string;
   date: string;
+  dateModified?: string;
   url: string;
   image?: string;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.dateModified ?? post.date,
     author: {
       "@type": "Organization",
       name: "Gadget Construction Inc.",
+      url: "https://gadgetconstructionsf.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Gadget Construction Inc.",
+      url: "https://gadgetconstructionsf.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://gadgetconstructionsf.com/images/logo.png",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

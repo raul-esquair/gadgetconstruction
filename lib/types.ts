@@ -27,6 +27,8 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   date: string;
+  /** ISO YYYY-MM-DD — set when a post is refreshed. Defaults to `date` in schema if absent. */
+  dateModified?: string;
   featuredImage?: string;
   relatedService?: string;
   readingTime: string;

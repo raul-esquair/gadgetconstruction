@@ -15,6 +15,18 @@ export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
   return BLOG_POSTS.filter((post) => isPublished(post, now));
 }
 
+export function getRelatedPosts(
+  currentSlug: string,
+  relatedService: string | undefined,
+  limit = 3,
+  now: Date = new Date(),
+): BlogPost[] {
+  if (!relatedService) return [];
+  return getPublishedPosts(now)
+    .filter((p) => p.slug !== currentSlug && p.relatedService === relatedService)
+    .slice(0, limit);
+}
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "composite-vs-wood-decking-bay-area-2026",

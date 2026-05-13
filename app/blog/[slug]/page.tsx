@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { marked } from "marked";
 import { generatePageMetadata } from "@/lib/metadata";
-import { BLOG_POSTS, isPublished, getPublishedPosts } from "@/lib/blog-data";
+import { BLOG_POSTS, isPublished, getPublishedPosts, getRelatedPosts } from "@/lib/blog-data";
 import { SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -46,6 +46,8 @@ export default async function BlogPostPage({ params }: Props) {
     ? SERVICES.find((s) => s.slug === post.relatedService)
     : null;
 
+  const relatedPosts = getRelatedPosts(post.slug, post.relatedService, 3);
+
   return (
     <>
       <JsonLd
@@ -53,6 +55,7 @@ export default async function BlogPostPage({ params }: Props) {
           title: post.title,
           description: post.excerpt,
           date: post.date,
+          dateModified: post.dateModified,
           url: `/blog/${post.slug}`,
         })}
       />
@@ -89,6 +92,13 @@ export default async function BlogPostPage({ params }: Props) {
                 </Link>
               )}
               {relatedService && <span className="text-white/30">·</span>}
+              <Link
+                href="/about"
+                className="text-white/60 hover:text-white transition-colors"
+              >
+                By the Gadget Construction team
+              </Link>
+              <span className="text-white/30">·</span>
               <time className="text-white/60" dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString("en-US", {
                   month: "long",
@@ -218,6 +228,64 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </Container>
       </SectionWrapper>
+
+      {relatedPosts.length > 0 && (
+        <section className="bg-neutral-50 border-t border-neutral-200 py-16 md:py-20">
+          <Container>
+            <div className="max-w-5xl mx-auto">
+              <p className="text-xs font-heading font-semibold text-neutral-400 uppercase tracking-wider mb-2">
+                Continue reading
+              </p>
+              <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary mb-10">
+                Related articles
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {relatedPosts.map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/blog/${related.slug}`}
+                    className="group block rounded-xl border border-neutral-200 overflow-hidden bg-white transition-all duration-300 hover:shadow-card-hover hover:-translate-y-0.5"
+                  >
+                    <div className="aspect-[16/9] bg-neutral-100 relative overflow-hidden">
+                      {related.featuredImage ? (
+                        <Image
+                          src={related.featuredImage}
+                          alt={related.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <p className="text-sm text-neutral-400 font-heading font-medium">
+                            Featured Image
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center gap-3 text-xs text-neutral-400 mb-2">
+                        <span>
+                          {new Date(related.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
+                        <span>·</span>
+                        <span>{related.readingTime}</span>
+                      </div>
+                      <h3 className="text-base font-bold font-heading text-primary group-hover:text-accent-orange transition-colors line-clamp-2">
+                        {related.title}
+                      </h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CTABlock
         heading="Ready to Move From Research to Action?"
