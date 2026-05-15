@@ -27,7 +27,6 @@ jobs:
         env:
           GSC_SERVICE_ACCOUNT_JSON_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_BASE64 }}
         run: |
-          echo "Service account email: $(echo "$GSC_SERVICE_ACCOUNT_JSON_BASE64" | base64 -d | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).client_email))')"
           mkdir -p .gsc-report
           npx tsx scripts/fetch-gsc-data.ts > .gsc-report/report.json
           echo "Report size: $(wc -c < .gsc-report/report.json) bytes"
