@@ -130,7 +130,8 @@ content/                          # Editorial pipeline data (not shipped to prod
 scripts/                          # CLI tools (Node + Python)
   generate-post.ts                # Friday draft pipeline (Claude + OpenAI + Resend + gh)
   build-site-inventory.ts         # Rebuilds site-inventory.json
-  fetch-gsc-data.ts               # Google Search Console client
+  fetch-gsc-data.ts               # Google Search Console search performance client
+  gsc-index-coverage.ts           # Sitemap stats + per-URL inspection (PASS/NEUTRAL + reason)
   propose-next-batch.ts           # /next-content-batch implementation
   generate-month1-doc.py          # Reference impl for month-1 client doc
 
@@ -147,6 +148,8 @@ scripts/                          # CLI tools (Node + Python)
   weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
   weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
+  gsc-report.yml                  # Manual — 90-day search performance report
+  gsc-index-coverage.yml          # Manual — sitemap stats + per-URL index inspection
 
 public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
@@ -678,6 +681,23 @@ scripts/
   merge-proposed-briefs.yml    # on push to proposed-briefs.json — migrate to queue
 ```
 
+### GSC diagnostic tooling
+
+Two manual workflows for ad-hoc analysis of Google Search Console state. Both use the same `GSC_SERVICE_ACCOUNT_JSON_BASE64` secret and the Domain property `sc-domain:gadgetconstructionsf.com`.
+
+| Workflow | Script | What it answers |
+|---|---|---|
+| `gsc-report.yml` | `scripts/fetch-gsc-data.ts` | 90-day search performance: top queries, top pages, close-to-page-1 opportunities, low-CTR pages. Pulls *only pages that earned ≥1 impression* — does NOT tell you what's indexed. |
+| `gsc-index-coverage.yml` | `scripts/gsc-index-coverage.ts` | Per-URL inspection of every URL in the live sitemap: indexed vs. not, plus coverage state (`Submitted and indexed`, `URL is unknown to Google`, `Crawled - currently not indexed`, etc.). Plus sitemap submission stats. Use when you need to know what Google *knows about*, not what it *ranks*. |
+
+Run either with `gh workflow run <name> --ref main`. Both upload a JSON artifact. Download with `gh run download <run-id> -n <artifact-name> -D .gsc-report/`. The `.gsc-report/` directory is gitignored.
+
+The two reports answer fundamentally different questions and people conflate them constantly:
+- **"Why am I only seeing 3 pages in GSC?"** → could mean *only 3 are indexed* (use index-coverage) or *only 3 have earned an impression yet* (use performance). Always ask which.
+- **"Why isn't my new page ranking?"** → if it's not in the index-coverage report as `PASS`, it's not indexed yet and ranking is moot. Check coverage *before* ranking.
+
+The performance report has an `opportunities` block (close-to-page-1, low-CTR, impressions-no-clicks) that's only meaningful once the site has meaningful index coverage. On a young site with <10 indexed pages, those buckets will all be empty — not because there are no opportunities, but because there's no data to surface them yet.
+
 ### Debugging the pipeline
 
 - Check PR #N body for `## SEO Critique Pass Notes` section — documents what the critique pass changed vs. the initial draft
@@ -717,4 +737,5 @@ scripts/
 - **Internal linking target: 12-20 links per 2,500-word post** — the SEO critique pass enforces this. Briefs specify 3-5 required links; critique pass adds 8-15 more from the site inventory. Anchor text diversification: <25% exact-match. Top 30% of page gets at least 3 links.
 - **Do NOT edit `content/proposed-briefs.json` on main manually** — the `merge-proposed-briefs.yml` workflow watches it and will try to migrate whatever's there into the queue. Edit only through `/next-content-batch` PRs.
 - **`featuredImage` field is required for blog hero to render correctly** — the Friday pipeline auto-populates it. Manually-added posts need it too, or the `app/blog/[slug]/page.tsx` hero falls back to text-only.
+- **GSC property is a Domain property — siteUrl must be `sc-domain:gadgetconstructionsf.com`** — NOT `https://gadgetconstructionsf.com/`. Using the URL-prefix form returns 403 "User does not have sufficient permission for site" even when the service account is added with Full permission on the actual property. The 403 message is misleading; it really means "this exact URL is not a property the SA can access." If you see that error, run `searchconsole.sites.list()` first to confirm what the SA actually has — for this project it's only the Domain form. The service account is `seo-proposal-bot@gadget-construction-seo.iam.gserviceaccount.com` in GCP project `gadget-construction-seo` (`172973380457`). Search Console API must be enabled on that GCP project — that's a separate prerequisite from the SA having Search Console permission.
 - **Multiline shell strings inside `run: \|` need full indentation** — in GitHub Actions workflows, every body line of a `run: \|` literal block must stay at or above the block's indent, *including content lines inside double-quoted shell strings* (e.g., the body of `gh pr comment "$pr" --body "..."`). An un-indented line silently terminates the literal block; YAML then fails to parse the rest. GitHub still registers the workflow as `active` but with **zero triggers**, so schedules never fire and pushes log 0-second startup_failures with the file path as the display name. This is exactly what kept `auto-merge-drafts.yml` and `auto-merge-proposals.yml` from running between April 19 and April 29. When copying that pattern, indent the entire comment body to match the surrounding shell.
