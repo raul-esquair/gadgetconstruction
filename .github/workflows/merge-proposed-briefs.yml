@@ -62,9 +62,7 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "Migrate proposed briefs into content queue
-
-Automated migration — the briefs from content/proposed-briefs.json
-are now in post-queue.json with status=queued. The Friday draft
-automation will pick them up on their scheduled dates."
+          git commit \
+            -m "Migrate proposed briefs into content queue" \
+            -m "Automated migration — the briefs from content/proposed-briefs.json are now in post-queue.json with status=queued. The Friday draft automation will pick them up on their scheduled dates."
           git push
