@@ -17,7 +17,7 @@
 import { google } from "googleapis";
 import { JWT } from "google-auth-library";
 
-const SITE_URL = "https://gadgetconstructionsf.com/";
+const SITE_URL = "sc-domain:gadgetconstructionsf.com";
 const LOOKBACK_DAYS = 90;
 const MAX_ROWS = 100;
 

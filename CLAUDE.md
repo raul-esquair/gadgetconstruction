@@ -138,6 +138,7 @@ scripts/                          # CLI tools (Node + Python)
   monthly-seo-doc/                # /monthly-seo-doc → client .docx
   next-content-batch/             # /next-content-batch → propose 4 new briefs
   google-ads/                     # /google-ads → load status doc + iterate on campaigns
+  ads-recap-pdf/                  # /ads-recap-pdf → client-facing PDF recap of the ads session (keeps reports/ history)
 
 .github/workflows/                # Automation
   auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
@@ -716,3 +717,4 @@ scripts/
 - **Internal linking target: 12-20 links per 2,500-word post** — the SEO critique pass enforces this. Briefs specify 3-5 required links; critique pass adds 8-15 more from the site inventory. Anchor text diversification: <25% exact-match. Top 30% of page gets at least 3 links.
 - **Do NOT edit `content/proposed-briefs.json` on main manually** — the `merge-proposed-briefs.yml` workflow watches it and will try to migrate whatever's there into the queue. Edit only through `/next-content-batch` PRs.
 - **`featuredImage` field is required for blog hero to render correctly** — the Friday pipeline auto-populates it. Manually-added posts need it too, or the `app/blog/[slug]/page.tsx` hero falls back to text-only.
+- **Multiline shell strings inside `run: \|` need full indentation** — in GitHub Actions workflows, every body line of a `run: \|` literal block must stay at or above the block's indent, *including content lines inside double-quoted shell strings* (e.g., the body of `gh pr comment "$pr" --body "..."`). An un-indented line silently terminates the literal block; YAML then fails to parse the rest. GitHub still registers the workflow as `active` but with **zero triggers**, so schedules never fire and pushes log 0-second startup_failures with the file path as the display name. This is exactly what kept `auto-merge-drafts.yml` and `auto-merge-proposals.yml` from running between April 19 and April 29. When copying that pattern, indent the entire comment body to match the surrounding shell.

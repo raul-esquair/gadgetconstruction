@@ -23,21 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: List accessible GSC sites (diagnostic)
-        env:
-          GSC_SERVICE_ACCOUNT_JSON_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_BASE64 }}
-        run: |
-          npx tsx -e "
-          import { google } from 'googleapis';
-          (async () => {
-            const creds = JSON.parse(Buffer.from(process.env.GSC_SERVICE_ACCOUNT_JSON_BASE64, 'base64').toString('utf-8'));
-            const auth = new google.auth.JWT({ email: creds.client_email, key: creds.private_key, scopes: ['https://www.googleapis.com/auth/webmasters.readonly'] });
-            const sc = google.searchconsole({ version: 'v1', auth });
-            const r = await sc.sites.list();
-            console.log('SITES_ACCESSIBLE:', JSON.stringify(r.data.siteEntry, null, 2));
-          })();
-          "
-
       - name: Fetch GSC report
         env:
           GSC_SERVICE_ACCOUNT_JSON_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_BASE64 }}
