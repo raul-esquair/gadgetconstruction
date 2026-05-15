@@ -45,3 +45,6 @@ Gadget-Construction-SEO-Month-*.docx
 
 # MCP server config — contains secrets (Google Ads dev token, account IDs)
 .mcp.json
+
+# GSC diagnostic artifacts (regenerable via gsc-report.yml / gsc-index-coverage.yml workflows)
+.gsc-report/
