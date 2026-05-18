@@ -29,6 +29,285 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "foundation-underpinning-cost-san-francisco",
+    featuredImage: "/images/blog-foundation-underpinning-cost-san-francisco.png",
+    title: "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
+    excerpt:
+      "Foundation underpinning in San Francisco typically costs $15,000 to $50,000+. The method matters more than the price. Here's how helical piers, push piers, and slabjacking compare — with real SF soil conditions in mind.",
+    date: "2026-05-18",
+    readingTime: "14 min read",
+    relatedService: "concrete-foundations",
+    faqs: [
+      {
+        "question": "How much does foundation underpinning cost in San Francisco?",
+        "answer": "Foundation underpinning cost in San Francisco typically runs $15,000–$50,000+ for a complete project. Helical piers cost $2,500–$4,500 per pier installed; push piers cost $2,000–$3,500 per pier. Most SF homes need 8–16 piers. Add $3,000–$8,000 for engineering and $2,000–$5,000 for SF DBI permits. Total all-in cost for a mid-size SF home commonly lands between $25,000 and $55,000."
+      },
+      {
+        "question": "What's the difference between helical piers and push piers — and which does SF need?",
+        "answer": "Helical piers are rotated into the soil like a screw; push piers are hydraulically driven straight down using the building's weight as counterforce. In San Francisco, helical piers are preferred for Marina fill, bay mud, and Outer Sunset clay — soft soils where driving resistance is unreliable. Push piers work better on heavier Victorians and Edwardians with a well-defined load-bearing layer confirmed by a geotechnical report."
+      },
+      {
+        "question": "Is slabjacking a legitimate fix for a settling SF home?",
+        "answer": "Slabjacking is appropriate for settled garage slabs, driveways, and non-structural concrete — not for structural foundation failure. If your house shows sloping floors, diagonal wall cracks, or sticking doors, slabjacking won't stop the underlying soil movement. Applying it to the wrong problem delays the real fix and can add cost when the slabjacking material later needs to be removed before pier installation."
+      },
+      {
+        "question": "Do I need a permit for foundation underpinning in San Francisco?",
+        "answer": "Yes. SF DBI requires a building permit for all structural foundation underpinning work in San Francisco. Permit fees typically run $2,000–$5,000 depending on project valuation. You'll also need a geotechnical engineer's soil report and a structural engineer's underpinning design before DBI will issue the permit. Skipping engineering to save money upfront is the most common and most expensive mistake we see."
+      },
+      {
+        "question": "How long does foundation underpinning take in San Francisco?",
+        "answer": "Active construction runs 5–15 business days once permits are in hand. The permit and engineering phase — geotechnical report, structural design, DBI review — adds 6–12 weeks before any crew arrives. Homes in Historic Districts like Pacific Heights or Alamo Square should plan for an additional 4–8 weeks for architectural review. Total time from first call to project completion is commonly 3–5 months."
+      },
+      {
+        "question": "Can I use the Brace + Bolt program instead of underpinning?",
+        "answer": "The Brace + Bolt program provides grants up to $3,000 for seismic bolting and cripple wall bracing — a different intervention from underpinning. Seismic retrofitting addresses lateral earthquake movement; underpinning addresses vertical soil settlement. If your building is a pre-1989 soft-story with minor settling, check Brace + Bolt eligibility first. In some cases, the grant covers preventive work that avoids a $40,000 underpinning scope later."
+      },
+      {
+        "question": "What SF soil conditions make foundation underpinning more expensive?",
+        "answer": "Marina District and Mission Bay fill require piers 25–40 feet deep, adding shaft sections and time. Sites with documented bay mud typically cost 20–35% more than inland SF sites. Outer Sunset expansive clay requires engineering that accounts for seasonal shrink-swell cycles. Steep hillside sites in Bernal Heights or Twin Peaks add access complexity running $3,000–$8,000 in equipment and labor adders before pier count is considered."
+      }
+    ],
+    content: `
+## The Short Answer: SF Underpinning Cost Ranges
+
+Foundation underpinning cost in San Francisco typically runs $15,000–$50,000+ depending on method, soil conditions, and how many piers your structure needs. Helical piers cost $2,500–$4,500 per pier installed. Push piers cost $2,000–$3,500 per pier. Slabjacking is far cheaper — $500–$1,500 per injection hole — but it only addresses surface-level slab settling, not structural foundation failure. Most SF homes need 8–16 piers for a full stabilization job. Permits, engineering, and site access add another 15–30% on top. Here's how to figure out which method your home actually needs — with SF soil conditions, real cost numbers, and the honest case for doing nothing more than seismic bolting right now if that's actually your situation.
+
+---
+
+## What Is Foundation Underpinning — And When Do You Need It?
+
+Underpinning means adding structural support beneath an existing foundation that is failing, settling, or no longer adequate for the loads above it. You're not patching the foundation — you're extending it deeper into stable soil or bedrock so the structure stops moving.
+
+The clearest warning signals: floors that slope noticeably when you set a marble down, diagonal cracks running from the corners of door or window frames toward the ceiling, doors and windows that stick seasonally or won't latch at all, and visible gaps between walls and ceilings that have widened over time. If you're seeing any of those, review the [5 signs your foundation needs repair](/blog/foundation-repair-signs-san-francisco) before calling anyone — it'll help you tell active movement from old cosmetic cracking.
+
+In San Francisco specifically, these symptoms appear disproportionately in three soil situations. Marina District and Mission Bay fill is ground built on loose artificial material that consolidates over time and liquefies under seismic loading. The Outer Sunset and parts of the Richmond sit on expansive clay soils that shrink when dry and swell when wet, creating vertical movement in foundations above them. Steep hillside lots in Bernal Heights or Twin Peaks experience lateral soil movement that puts asymmetric loads on older foundations.
+
+Underpinning is not a small project. The first question is always whether you actually need it — and that answer comes from a site visit, not a phone call.
+
+---
+
+## Method 1: Helical Piers — How They Work and What They Cost
+
+### How They Work (Rotating Steel Shafts Driven to Bedrock)
+
+Helical piers are steel shafts with screw-shaped helical plates welded along their length. A hydraulic torque motor rotates them into the ground — like a corkscrew into a wine bottle — until the plates seat in a load-bearing soil layer or bedrock. A bracket then attaches to the existing foundation, transferring the load from the failing foundation down through the pier to stable ground.
+
+Depth varies by site. On a Marina fill site, a helical pier might go 20–35 feet before reaching adequate bearing capacity. On a Bernal Heights lot with competent bedrock near the surface, 10–15 feet can be enough. The crew monitors torque resistance as the pier advances — when torque reaches the engineer-specified threshold, they stop. That real-time confirmation is more reliable than visual inspection alone.
+
+### Typical Use Cases in SF
+
+Helical piers are the default recommendation for most San Francisco residential underpinning projects, for specific reasons.
+
+**Marina District fill and bay mud:** Bay mud (a term for the highly compressible, organic-rich sediment underlying much of San Francisco Bay's filled shoreline) is soft, poorly consolidated, and prone to liquefaction under seismic loading. Helical piers can be torqued through this material to underlying bedrock or dense sand layers. Push piers struggle here because they need the structure's weight as resistance — soft soil offers an easier path than the resistance needed to confirm bearing capacity.
+
+**Outer Sunset and Richmond expansive clay:** Clay soils shrink when dry and expand when wet, creating vertical foundation movement. Helical piers anchor below the zone of clay influence — typically 10–20 feet down — so seasonal moisture changes stop affecting the structure above.
+
+**Tight access sites:** Helical pier installation requires only a compact hydraulic drive head and staged pier sections. They can go in through a crawl space, alongside a neighboring building, or in a narrow side yard where excavation equipment can't fit. In San Francisco's dense rowhouse blocks — attached Victorians on Alamo Square, Mission flats sharing property lines on both sides — access constraints are the norm, not the exception.
+
+### Pros and Cons
+
+**Pros:**
+- Minimal excavation — no major digging required
+- Immediately load-bearing after installation (no curing time)
+- Works in tight access conditions common to SF rowhouses
+- Installation torque monitoring confirms bearing capacity in real time
+- Best performance in soft or unstable soils like Marina fill and Sunset clay
+
+**Cons:**
+- Higher per-pier cost than push piers
+- Requires a skilled operator with proper torque equipment — not all contractors have it
+- On very deep bedrock sites, shaft extension costs compound
+- Not the best fit for extremely heavy structures where push pier resistance capacity is a stronger match
+
+### Helical Pier Cost Per Pier and Total Project Cost
+
+| Project Scale | Pier Count | Per-Pier Cost | Pier Subtotal |
+|---|---|---|---|
+| Localized corner repair | 4–6 piers | $2,500–$4,500 | $10,000–$27,000 |
+| Mid-size home, one side | 8–10 piers | $2,500–$4,500 | $20,000–$45,000 |
+| Full perimeter stabilization | 12–16 piers | $2,500–$4,500 | $30,000–$72,000 |
+
+Engineering report and monitoring: $3,000–$8,000 depending on scope. SF DBI permit: $2,000–$5,000. **Total project cost for a typical SF home (8–12 piers, permits, and engineering): $25,000–$55,000+.**
+
+---
+
+## Method 2: Push Piers (Resistance Piers) — How They Work and What They Cost
+
+### How They Work (Hydraulic Press Driven to Load-Bearing Strata)
+
+Push piers — also called resistance piers or steel push piers — are hydraulically driven straight down through the soil using the weight of the structure above as the pushing force. Steel tube sections are added as each section advances, extending the pier incrementally until it reaches the target load-bearing stratum. A bracket attaches to the foundation footing, and hydraulic jacks lift the structure back toward its original elevation before the load transfers to the pier.
+
+Because the house itself is the counterforce, push piers require a sufficiently heavy structure to generate adequate driving force. That's why they perform best on substantial masonry, concrete, or heavy wood-frame construction — and why they're less reliable in soft soils where the resistance calculation becomes uncertain.
+
+### Typical Use Cases in SF
+
+Push piers suit San Francisco's older, heavier building stock well.
+
+**Victorian and Edwardian multi-story homes:** A three-story Victorian rowhouse in Alamo Square, Noe Valley, or the Mission carries substantial dead load — brick chimneys, heavy plaster walls, multiple floor systems. That weight is exactly what push piers need. These structures generate the driving resistance required to reliably reach bearing strata.
+
+**Edwardian flats in the Richmond or Marina:** Edwardian flats — typically two or three units stacked with heavy floor assemblies — are strong candidates for push pier installation where site access allows excavation. The heavier the building, the more predictable the performance.
+
+**Sites with a clear, consistent load-bearing layer:** When the geotechnical report shows a well-defined load-bearing stratum at a predictable depth, push piers are a reliable, cost-effective solution. The installation is more predictable when you know where you're going.
+
+### Pros and Cons
+
+**Pros:**
+- Lower per-pier cost than helical, especially on heavier structures
+- Well-proven on SF's older Victorian and Edwardian building stock
+- Can provide controlled lift to restore settled floors closer to original elevation
+- Predictable load capacity on well-defined soil profiles
+
+**Cons:**
+- Requires heavier structure to push against — unreliable on lighter buildings
+- More excavation required than helical piers
+- Soft soils like Marina fill can reduce driving resistance and complicate capacity verification
+- More site disruption — typically requires shoring, staging space, and longer installation windows
+
+### Push Pier Cost Per Pier and Total Project Cost
+
+| Project Scale | Pier Count | Per-Pier Cost | Pier Subtotal |
+|---|---|---|---|
+| Localized repair | 4–6 piers | $2,000–$3,500 | $8,000–$21,000 |
+| Mid-size home, one side | 8–10 piers | $2,000–$3,500 | $16,000–$35,000 |
+| Full perimeter stabilization | 12–16 piers | $2,000–$3,500 | $24,000–$56,000 |
+
+Engineering and permits add the same 15–30% premium as helical projects. **Total project cost for a typical Victorian or Edwardian SF home: $20,000–$50,000+**, with the lower end reflecting heavier structures where fewer piers are needed at lower per-unit cost.
+
+---
+
+## Method 3: Slabjacking / Mudjacking — How It Works and What It Costs
+
+### How It Works (Polyurethane or Concrete Slurry Injection)
+
+Slabjacking — sometimes called mudjacking — fills the void beneath a settled concrete slab by drilling small holes and injecting material under pressure until the slab rises back to grade. Traditional mudjacking uses a cement and soil slurry. Modern polyurethane foam injection (sometimes called polyjacking) uses expanding two-part foam that weighs a fraction of the slurry, cures in minutes, and requires smaller drill holes. The foam fills voids, compresses weak soil, and lifts the slab from below. A standard polyurethane injection project is typically done in a single day.
+
+### Typical Use Cases in SF
+
+Slabjacking addresses surface-level concrete settling — not structural foundation failure. The distinction matters, and it's the most important thing to understand about this method.
+
+**Appropriate uses in SF:**
+- Settled garage floor slabs in the Sunset or Richmond
+- Sunken concrete driveways and walkways
+- Cracked patio slabs that have dropped at one edge
+- Non-structural interior concrete slabs that have settled unevenly
+
+### When Slabjacking Is NOT Appropriate
+
+If your house is settling — floors sloping, walls cracking, doors sticking — slabjacking is the wrong answer. It addresses the symptom of a sunken surface slab. It does not stop ongoing soil consolidation beneath a structural foundation.
+
+We've seen homes in the Outer Sunset where a contractor performed slabjacking on a visibly settling garage slab without evaluating the adjacent house foundation — which had the same underlying soil problem. Two years later, the homeowner faced the full pier installation they needed from the start, plus the cost of removing the slabjacking material. Cheap and fast is not always the right call. If the garage slab is settling and the adjacent house shows diagonal wall cracks, evaluate the house foundation first — the [foundation repair signs](/blog/foundation-repair-signs-san-francisco) guide covers exactly what to look for.
+
+### Slabjacking Cost Per Injection and Total Project Cost
+
+| Application | Injection Holes | Per-Hole Cost | Typical Total |
+|---|---|---|---|
+| Small garage slab | 4–6 holes | $500–$1,000 | $2,000–$6,000 |
+| Driveway or walkway | 6–10 holes | $500–$1,500 | $3,000–$12,000 |
+| Large floor slab | 8–14 holes | $500–$1,500 | $4,000–$15,000 |
+
+No engineering report is typically required for non-structural slab work. Most surface slab work doesn't require SF DBI permits, but confirm with SF DBI (the San Francisco Department of Building Inspection, the city agency that issues residential permits for structural, mechanical, and exterior work) before starting any concrete work.
+
+---
+
+## Which Underpinning Method Is Right for Your SF Foundation?
+
+The method decision follows directly from what's failing and why. Here's the framework.
+
+**Structural settlement in soft or fill soils (Marina, Sunset, Mission Bay):** Helical piers. The soil profile requires deep anchoring, and the installation method works in tight urban sites with soft ground. Push piers are less reliable where soft soil undermines driving resistance.
+
+**Structural settlement on heavier Victorians or Edwardians with accessible perimeter:** Push piers, provided the geotechnical report confirms a clear load-bearing layer at reachable depth. Cost-per-pier is lower, and the building weight makes the method more predictable.
+
+**Hillside lots in Bernal Heights or Twin Peaks with lateral soil movement:** Engineering evaluation first — underpinning alone may not be the complete solution if slope stabilization or drainage is also involved. Helical piers are usually the installation method, but the scope needs to account for what's driving the movement. Our [retaining walls](/services/retaining-walls) team handles the slope side of that equation when both problems are present.
+
+**Settled garage slab, sunken driveway, or cracked patio:** Slabjacking, provided there's no evidence the house itself is moving.
+
+**Soft-story building pre-1989:** Seismic retrofitting — bolting and cripple wall bracing — is likely the first intervention, not underpinning. Underpinning addresses vertical settlement. Seismic retrofitting addresses lateral movement during an earthquake. They're different problems with different solutions.
+
+Our [foundation repair in San Francisco](/services/concrete-foundations) work covers all of these situations, but the engineering evaluation always comes before the method recommendation.
+
+---
+
+## What Drives SF Underpinning Cost Up
+
+### Site Access (Can Equipment Reach the Foundation?)
+
+San Francisco's residential density creates access problems other markets don't face. A Marina rowhouse with a shared property line on both sides, a six-foot side yard, and a basement entrance below grade may need compact equipment, hand-staged pier sections, and a longer installation window. Each factor adds cost. Budget $3,000–$8,000 in access-related cost adders for constrained sites — before pier count is even factored in.
+
+### Soil Conditions (Bay Mud, Fill, Clay, Sand)
+
+Marina District and Mission Bay fill can require piers 25–40 feet deep to reach competent bearing material. Deeper piers mean more shaft sections, more installation time, and higher cost per pier. Outer Sunset clay is shallower — typically 10–20 feet to stable material — but its expansive behavior means the engineering report needs to account for seasonal movement cycles. Sites with documented bay mud typically cost 20–35% more than inland sites with predictable soil profiles.
+
+### Number of Piers Required
+
+The engineering report specifies pier spacing based on foundation load distribution and soil capacity. A single-family home with localized corner settlement might need 4–6 piers. Full perimeter stabilization of a three-story Victorian typically requires 12–16 piers. Pier count is the largest single driver of total underpinning cost — and it can't be estimated without a geotechnical report.
+
+### SF DBI Permit and Engineering Requirements
+
+SF DBI (the San Francisco Department of Building Inspection) requires a building permit for all foundation underpinning work. Permit fees for foundation work typically run $2,000–$5,000 depending on project valuation. Beyond the permit, structural foundation work requires a licensed geotechnical engineer for the soil report and a structural engineer to design the underpinning system and specify pier placement. Engineering fees run $3,000–$8,000 for a complete scope.
+
+Do not accept a bid from a foundation contractor who hasn't included engineering costs or who is speccing pier placement without a geotechnical report. That's not a shortcut — it's a liability. If you're navigating the permit process for the first time, our [SF foundation work](/service-areas/san-francisco) page covers what DBI requires at each stage.
+
+### Historic District / Architectural Review
+
+If your home is in a Historic District — Pacific Heights, Alamo Square, parts of the Mission and Noe Valley — permit review may involve additional architectural review by SF DBI's Planning Department before foundation permits are issued. This adds 4–8 weeks in some cases and may require documentation of existing conditions before work begins. Budget for the delay, not just the cost.
+
+---
+
+## The Real Cost of Waiting on Foundation Repair
+
+Foundation problems don't stay the same size. A foundation that's settled two inches and is currently stable is a different problem than one that's actively moving. Active movement means the underlying cause — consolidating fill, shrinking clay, eroding sub-base — is still ongoing. Every year of delay widens the cracks, increases the floor slope, and allows water intrusion into the foundation system, which accelerates deterioration.
+
+The version of this that hits SF homeowners hardest: pre-Loma Prieta soft-story buildings (typically 1920s–1960s multi-unit construction with open ground floors and inadequate cripple wall bracing) that have minor foundation settling right now. The settling isn't the emergency. The earthquake vulnerability is. California's [Brace + Bolt program](https://www.earthquakebracebolt.com) offers grants up to $3,000 for qualifying SF homes to fund seismic bolting and cripple wall bracing — the preventive work that keeps a manageable problem from becoming a catastrophic one. A $3,000 seismic retrofit assisted by a Brace + Bolt grant today is a realistic alternative to a $40,000 post-earthquake underpinning job in five years. Check eligibility before assuming underpinning is your only path.
+
+For homes showing active movement rather than historical settling, the cost of waiting is more direct. Gadget Construction has handled [SF foundation work](/service-areas/san-francisco) across the Outer Sunset, Marina, and Bernal Heights where homeowners delayed acting on visible diagonal cracking for three to four years. In two of those cases, water intrusion had compromised the sill plate and lower cripple wall framing by the time we arrived — adding $8,000–$15,000 in carpentry and framing repair on top of the underpinning scope. The foundation problem was the same size. The collateral damage was not.
+
+If a [complete remodel](/services/complete-remodel) or [ADU addition](/services/adu-construction) is already in your plans, address foundation settling before breaking ground — not after. Discovering active movement mid-project adds cost and schedule disruption that a pre-construction assessment would have avoided.
+
+---
+
+## Frequently Asked Questions
+
+### How much does foundation underpinning cost in San Francisco?
+
+Foundation underpinning cost in San Francisco typically runs $15,000–$50,000+ for a complete project. Helical piers cost $2,500–$4,500 per pier installed; push piers cost $2,000–$3,500 per pier. Most SF homes need 8–16 piers. Add $3,000–$8,000 for engineering and $2,000–$5,000 for SF DBI permits. Total all-in cost for a mid-size SF home commonly lands between $25,000 and $55,000.
+
+### What's the difference between helical piers and push piers — and which does SF need?
+
+Helical piers are rotated into the soil like a screw; push piers are hydraulically driven straight down using the building's weight as counterforce. In San Francisco, helical piers are preferred for Marina fill, bay mud, and Outer Sunset clay — soft soils where driving resistance is unreliable. Push piers work better on heavier Victorians and Edwardians with a well-defined load-bearing layer confirmed by a geotechnical report.
+
+### Is slabjacking a legitimate fix for a settling SF home?
+
+Slabjacking is appropriate for settled garage slabs, driveways, and non-structural concrete — not for structural foundation failure. If your house shows sloping floors, diagonal wall cracks, or sticking doors, slabjacking won't stop the underlying soil movement. Applying it to the wrong problem delays the real fix and can add cost when the slabjacking material later needs to be removed before pier installation.
+
+### Do I need a permit for foundation underpinning in San Francisco?
+
+Yes. SF DBI requires a building permit for all structural foundation underpinning work in San Francisco. Permit fees typically run $2,000–$5,000 depending on project valuation. You'll also need a geotechnical engineer's soil report and a structural engineer's underpinning design before DBI will issue the permit. Skipping engineering to save money upfront is the most common and most expensive mistake we see.
+
+### How long does foundation underpinning take in San Francisco?
+
+A typical SF underpinning project runs 5–15 business days of active construction once permits are in hand. The permit and engineering phase — geotechnical report, structural design, DBI review — adds 6–12 weeks before any crew shows up. If your home is in a Historic District like Pacific Heights or Alamo Square, plan for an additional 4–8 weeks for architectural review. Total time from first call to project completion is commonly 3–5 months.
+
+### Can I use the Brace + Bolt program instead of underpinning?
+
+The Brace + Bolt program provides grants up to $3,000 for seismic bolting and cripple wall bracing — a different intervention from underpinning. Seismic retrofitting addresses lateral earthquake movement; underpinning addresses vertical soil settlement. If your building is a pre-1989 soft-story with minor settling, check Brace + Bolt eligibility first. In some cases, the $3,000 grant covers the preventive work that avoids a $40,000 underpinning scope down the road.
+
+### What SF soil conditions make foundation underpinning more expensive?
+
+Marina District and Mission Bay fill — loose artificial fill and bay mud — require piers 25–40 feet deep, adding shaft sections and installation time. Sites with documented bay mud typically cost 20–35% more than inland SF sites with predictable soil profiles. Outer Sunset expansive clay is shallower but requires engineering that accounts for seasonal shrink-swell cycles. Steep hillside sites in Bernal Heights or Twin Peaks add access complexity that can run $3,000–$8,000 in equipment and labor adders before pier count is considered.
+
+---
+
+## Ready to Know What Your Foundation Actually Needs?
+
+Foundation underpinning cost in San Francisco is too site-specific for a phone estimate to mean anything. Soil type, building weight, pier count, access constraints, and permit scope all vary by address — and the difference between a $15,000 helical pier job and a $55,000 full-perimeter stabilization comes down to those specifics.
+
+Gadget Construction provides free on-site assessments with written findings — no scare tactics, no pressure. We'll tell you what's happening, which method fits your soil and structure, and what each option would cost for your specific situation. CA License #1132983. 12+ years. 500+ Bay Area projects. 5-year workmanship warranty in writing on every scope of work.
+
+Schedule your free site assessment through our [contact page](/contact) — or explore the full range of [foundation repair in San Francisco](/services/concrete-foundations) we handle across all 31 cities we serve.
+    `.trim(),
+  },
+
+  {
     slug: "composite-vs-wood-decking-bay-area-2026",
     featuredImage: "/images/blog-composite-vs-wood-decking-bay-area-2026.png",
     title: "Composite vs Wood Decking: Why Bay Area Homeowners Are Switching in 2026",
