@@ -29,6 +29,264 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    featuredImage: "/images/blog-stucco-vs-hardie-board-vs-wood-siding-bay-area.png",
+    title: "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes",
+    excerpt:
+      "Fog, salt air, and fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare — including failure patterns we see every week.",
+    date: "2026-05-25",
+    readingTime: "17 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "Is Hardie board better than stucco for Bay Area homes?",
+        "answer": "It depends on the house. HardiePlank handles coastal moisture and fire exposure with fewer installation failure modes than stucco. But on a Doelger home, Spanish Revival, or any stucco-native architecture, stucco is the architecturally correct choice — and properly installed with a new WRB, it performs well for 30+ years. Neither material wins every scenario in the stucco vs Hardie board comparison."
+      },
+      {
+        "question": "How much does Hardie board siding cost to install in the Bay Area?",
+        "answer": "Hardie board siding in the Bay Area runs $14–$22 per square foot installed, including standard WRB, fasteners, and basic trim. For a typical 2,000 square foot exterior, budget $28,000–$44,000 complete. The range reflects product choice, factory vs field paint, substrate prep, and trim complexity. Always request itemized bids separating material, labor, and substrate prep."
+      },
+      {
+        "question": "Why do Eichler homes require T1-11 instead of fiber cement panels?",
+        "answer": "T1-11 plywood siding — with its characteristic vertical grooves at regular intervals — is a defining visual element of Eichler's Mid-Century Modern design. The groove spacing, reveal depth, and shadow lines are proportionally specific to the architecture. Fiber cement approximations use different proportions, visible at close range. LP SmartSide T1-11 is the recommended quality upgrade — same look, better moisture performance."
+      },
+      {
+        "question": "What happens if I install wood siding on a Pacifica or coastal home without stainless fasteners?",
+        "answer": "Standard galvanized nails corrode within 8–12 years in persistent salt air. Corroded fasteners bleed rust through paint in brown streaks that don't clean off, and eventually lose structural holding power. Any coastal home in Pacifica, Sausalito, or the SF Sunset requires stainless or hot-dipped galvanized hardware throughout. Stainless ring-shank nails cost about 15–20% more — they're not optional in salt-air zones."
+      },
+      {
+        "question": "Do I need a permit to replace siding on my San Francisco home?",
+        "answer": "Yes, in most cases. SF DBI (the San Francisco Department of Building Inspection) requires a building permit for full siding replacement. Scope including WRB replacement, structural sheathing repair, or work on a historically designated building triggers additional review. SF DBI permit processing currently runs 6–12 weeks for residential exterior work. Factor that lead time into your project schedule."
+      },
+      {
+        "question": "What is the most common siding failure pattern on Bay Area homes?",
+        "answer": "Water intrusion at siding-to-trim transitions and around window openings is the most common failure pattern across all three material types. The cause is almost always installation detail failure — missing flashing, gaps in sealant at penetrations, or improperly lapped WRB. A correctly detailed stucco installation outperforms a poorly detailed Hardie installation every time. Verify flashing spec before accepting any siding bid."
+      },
+      {
+        "question": "Is wood siding viable in the Bay Area fog belt, or should I always choose fiber cement?",
+        "answer": "Wood siding is viable on the right home with the right maintenance commitment. Cedar clapboard on a Victorian in Pacific Heights can last 40+ years with refinishing every 5–7 years. The honest math: professional repainting runs $3,000–$7,000 per cycle — $12,000–$28,000 over 20 years before any board replacement. For owners who'll keep that schedule, wood is a legitimate choice. For others, fiber cement is the more practical recommendation."
+      }
+    ],
+    content: `
+## The Short Answer
+
+For most Bay Area homes in 2026, stucco vs Hardie board comes down to one question: what was the house built with, and why? James Hardie fiber cement is the right call for coastal homes in Pacifica, WUI fire zones in the Marin hills and Oakland Hills, and any re-siding project where low maintenance is the priority. Stucco is the correct cladding for Spanish Revival, Mediterranean, and Doelger homes where it's architecturally native — not a second-best option. Wood is the right answer on Victorians, Craftsman bungalows, and Eichlers where replacing it with anything else compromises the architecture. No single material wins every scenario in the Bay Area, and the region's combination of persistent coastal moisture, wind-driven rain, wildfire exposure, and salt air means the wrong choice costs you real money. Here's the honest breakdown — with per-square-foot pricing and failure patterns from 500+ Bay Area projects.
+
+---
+
+## The Bay Area Siding Problem: Why Material Choice Here Is Different
+
+The Bay Area is genuinely brutal on exterior siding in ways that most national product literature doesn't account for — and what works in the Pacific Northwest or Midwest doesn't automatically translate here.
+
+Start with moisture. The SF Sunset and Richmond, Pacifica's Linda Mar and Rockaway Beach neighborhoods, and the Marin waterfront see persistent fog from June through September. Not occasional rain — daily damp cycles where siding absorbs moisture overnight and dries in the afternoon. That cycle is harder on wood and stucco than sustained rainfall, because repeated expansion and contraction degrades material faster than a wet-and-stays-wet climate would.
+
+Add salt air. Within roughly a mile of the bay or ocean, airborne salt accelerates corrosion of fasteners, flashing, and any unsealed metal trim. Standard galvanized nails fail in 8–12 years on [coastal home siding in Pacifica](/service-areas/pacifica). Standard caulk formulations degrade faster. A siding job that would last 30 years in Menlo Park might need major repair at year 15 on the [Sausalito waterfront](/service-areas/sausalito) if it wasn't detailed for salt exposure.
+
+Then there's wind-driven rain. The Bay Area doesn't get a lot of total precipitation, but what it gets often arrives sideways — especially on coastal-facing and hillside elevations. Water intrusion at siding seams, around window trim, and at the base of siding runs are the primary failure modes we see on [stucco and siding repair](/services/exterior-repairs) calls across the region.
+
+Fire exposure matters increasingly. The Marin hills, Oakland Hills, Berkeley Hills, and Peninsula hillsides above 500 feet are Wildland-Urban Interface (WUI) zones — areas where residential construction meets fire-prone wildland vegetation. California's building codes require non-combustible or ignition-resistant exterior materials in these zones. That requirement eliminates some siding options outright and makes Class A fire ratings a non-negotiable spec item. Any siding decision for [WUI fire zone homes in Marin](/service-areas/mill-valley) or the [Oakland Hills](/service-areas/oakland) has to clear this bar first.
+
+Any siding that works in the Bay Area has to handle all of this simultaneously. The comparison below reflects those real-world conditions, not manufacturer claims.
+
+---
+
+## Stucco: Traditional but Temperamental
+
+Stucco gets dismissed unfairly in a lot of contractor conversations. It's the correct cladding for a significant share of Bay Area homes — and when it fails, it's almost always because of installation shortcuts, not the material itself.
+
+### How Three-Coat Stucco Works
+
+Traditional three-coat stucco is a layered masonry cladding applied over a weather-resistive barrier (WRB — a housewrap or felt-paper layer that prevents moisture from penetrating the wall assembly) and galvanized wire lath. The scratch coat goes on first: a rough Portland cement and sand mix that mechanically keys into the lath. The brown coat follows, building the wall to near-final thickness. The finish coat is the visible surface, available in smooth, sand finish, or textured variations.
+
+Done correctly, three-coat stucco delivers 30–50 years of service with minimal maintenance in non-coastal locations. The system's structural weakness is at penetrations and transitions — windows, doors, hose bibs, electrical boxes, and anywhere the stucco terminates. Water that gets behind the system at those points has nowhere to drain and nowhere to dry. That detail failure is what drives the vast majority of stucco-related [exterior repair](/services/exterior-repairs) work we do across San Francisco and the Peninsula.
+
+### Why It Cracks (And What It Means)
+
+Not all stucco cracks signal the same problem. Context matters.
+
+**Hairline surface cracks** in the finish coat, particularly around corners and at control joints (intentional breaks in the stucco plane that give the cladding room to expand and contract), are normal and cosmetic. If your stucco has no control joints and has fine cracks across the field, that's why.
+
+**Diagonal cracks from window and door corners** are a more serious signal. These often indicate structural movement — house settling, a failed header above an opening, or seismic racking. The crack itself isn't the problem. The problem is what's moving behind it.
+
+**Horizontal cracks at floor lines** on multi-story homes frequently indicate a failure in the WRB, allowing water to run down through the wall assembly and wick out at floor framing. We find rotted sill plates and sheathing behind these patterns on Outer Sunset Doelgers with regularity.
+
+**The Doelger stucco-over-shiplap failure pattern:** Joseph Doelger built approximately 5,000 homes across the Sunset District and the Westlake neighborhood of Daly City between the 1940s and 1950s. His homes used stucco over shiplap sheathing (horizontal wood boards) — sound construction for the era. The problem is that the original tar paper WRB on these homes is now 70–80 years old and has largely failed. When water gets behind the stucco on a [Doelger home in Daly City](/service-areas/daly-city) or the Sunset, it saturates the shiplap directly. We've opened these walls to find shiplap that looks like wet cardboard. Re-stucco without replacing the WRB is a short-term fix that will fail the same way within 10–15 years. Any re-stucco bid for a Doelger home must explicitly include WRB replacement — if it doesn't, that's the reason the number is lower.
+
+### Cost: Stucco Installation and Repair
+
+New three-coat stucco installation runs **$7–$14 per square foot** installed, depending on substrate prep, finish texture, and whether the WRB and lath are included in scope (they should be). For a 2,000 square foot exterior, that's **$14,000–$28,000** for the stucco scope alone — not including window trim, corner bead, or paint.
+
+Full-house re-stucco — removing existing stucco, replacing WRB and lath, applying a new three-coat system — runs **$15,000–$35,000** for a typical SF single-family home. Spot repairs run **$500–$2,500** depending on crack size and underlying cause. Surface hairline cracks can be treated with elastomeric caulk and a finish coat patch. Cracks from active structural movement need the movement to stop before the surface is repaired.
+
+### Best Used On: Architectural Context
+
+Stucco is the right choice when it matches the architecture. Spanish Revival and Mediterranean homes in the Mission, Noe Valley, and Pacific Heights were designed for stucco. [Doelger homes](/service-areas/daly-city) were built with stucco and look right with stucco. Midcentury ranch homes across the Peninsula are often stucco and should stay that way.
+
+Stucco applied to a Victorian rowhouse in Alamo Square or a Craftsman bungalow in Rockridge is wrong — not because stucco is a bad material, but because it obscures the architectural character the home was built with. That's a renovation mistake, not a stucco failure.
+
+---
+
+## Hardie Board vs Stucco vs Wood: The Fiber Cement Case
+
+James Hardie fiber cement has become the default siding recommendation for the majority of new Bay Area siding projects for specific, verifiable reasons — not marketing. When homeowners compare **fiber cement vs stucco** or evaluate **hardie board vs wood siding**, fiber cement wins on versatility, fire performance, and coastal durability. It's not perfect, and it's not always right — but it earns the default position.
+
+### How Hardie Board Is Made (Cement, Sand, Cellulose Fiber)
+
+HardiePlank and the broader fiber cement family are composites of Portland cement, silica sand, and cellulose fiber — pressed and cured into planks, panels, or shingles. The material doesn't rot, doesn't support mold growth, and doesn't provide food for insects. It won't warp from moisture cycling the way wood does. It's dimensionally stable across the fog-cycle conditions that are hardest on wood siding in the Sunset, Richmond, and Pacifica.
+
+James Hardie is the dominant brand — HardiePlank lap siding, HardieShingle, HardiePanel — but LP SmartSide's fiber cement line and other manufacturers follow the same basic formulation. When we spec fiber cement, it's almost always HardiePlank or LP SmartSide; the generic category is real, but product quality varies enough that brand matters.
+
+### Warranty and Durability
+
+James Hardie's 30-year transferable warranty covers the substrate against manufacturing defects. Their ColorPlus factory finish carries a 15-year fade warranty. In practice, we've seen HardiePlank installations from the mid-2000s across [San Francisco](/service-areas/san-francisco) and [Berkeley](/service-areas/berkeley) that look essentially unchanged — holding color, holding dimension, showing no moisture damage at properly flashed seams.
+
+The failure modes for fiber cement are almost entirely installation failures, not material failures: improper flashing at windows and penetrations, end cuts that aren't primed and sealed (bare cut ends absorb moisture), and butt joints without backer rod and appropriate sealant. A Hardie installation that's cut and detailed correctly is essentially a maintenance non-event. One that isn't is how you get rot at end cuts — a contractor failure, not a product failure.
+
+One honest caveat: fiber cement is brittle and relatively heavy. It dents under direct impact more easily than wood, and at 2–3 times the weight of comparable wood boards, it requires more substantial fastening and can be awkward on complex trim profiles. It also requires paint — the factory-primed version needs a finish coat, and even the ColorPlus pre-finished version puts you on a 10–15 year repaint cycle.
+
+### Fire Rating in WUI Zones
+
+HardiePlank carries a Class A fire rating under ASTM E84 — the highest classification available. In California WUI zones, this matters concretely. Cal Fire's construction standards for Wildland-Urban Interface zones require ignition-resistant materials on exterior walls. Fiber cement meets that requirement. Untreated wood siding does not.
+
+**The Class A fire rating requirement applies to all WUI-designated parcels in California.** If you're in the Marin hills, the Oakland Hills, the Berkeley Hills above Grizzly Peak, or on the Peninsula above 500 feet, verify that your siding spec meets your jurisdiction's WUI requirements before signing any contract. Your county's fire authority can confirm; so can a permit application, which will flag non-compliant material specs before work begins. Gadget Construction has completed fiber cement re-siding projects on WUI-designated homes across the Marin hills, Mill Valley, and the [Berkeley Hills](/service-areas/berkeley) — fire authority sign-off is part of our standard pre-permit process on those jobs.
+
+### Cost: Hardie Board Installation per Square Foot
+
+Installed fiber cement siding runs **$14–$22 per square foot**, depending on product profile, paint system, trim complexity, and substrate prep. For a 2,000 square foot exterior, budget **$28,000–$44,000** for a complete re-siding scope.
+
+Get itemized bids that separate material from labor from substrate prep — that's the only way to compare quotes accurately. A bid that lumps everything into a single number is hiding something in the math.
+
+### Best Used On: Versatile Across Architectural Styles
+
+Fiber cement is the right answer for coastal homes in Pacifica and along the Sausalito waterfront where salt air makes wood maintenance intensive. It's the mandatory call for WUI homes in [Mill Valley](/service-areas/mill-valley) and the Oakland Hills where fire rating is a code requirement. It's right for midcentury ranches and tract homes getting exterior refreshes where the original wood or T1-11 has failed. It's also well-suited to contemporary new construction.
+
+It's not the right answer where architectural authenticity demands real wood — Eichlers, Victorians, Craftsman bungalows where the grain, texture, and shadow lines of actual wood siding are part of what makes the home what it is.
+
+---
+
+## Wood Siding: When Tradition Is the Correct Answer
+
+Wood siding has real weaknesses in the Bay Area climate. It also has genuine strengths that no current manufactured product fully replicates — and there are specific architectural situations where nothing else is the right call. For the **best siding options in San Francisco** Victorian and Craftsman neighborhoods, real wood still wins on period-correct projects.
+
+### Cedar and Redwood Clapboard
+
+Clear-grade cedar and redwood clapboard — horizontal overlapping boards — are the traditional siding for Victorian rowhouses in Alamo Square, Pacific Heights, the Mission, and Noe Valley, and for Edwardian flats in the Richmond and Cole Valley. The grain variation, the profile scale, and the paint holdout of properly maintained wood is genuinely different from fiber cement at close range.
+
+Supply is tighter than it was. Clear-heart redwood runs $14–$22 per linear foot for 5/4 material in 2026. Cedar is more available but has compressed in quality — the kiln-dried tight-grain boards that resist cupping and splitting are a premium, not a baseline. This supply reality is one more reason some Victorian homeowners are accepting HardiePlank lap as a compromise.
+
+### T1-11 Plywood (Eichler Siding)
+
+T1-11 is a grooved plywood panel siding used extensively in Eichler homes — the modernist tract houses built by Joseph Eichler across Palo Alto's Green Gables, Fairmeadow, and Greenmeadow tracts; Menlo Park's Felton Gables and Willows neighborhoods; and San Jose's Fairglen and Meadows tracts. The vertical groove pattern at regular intervals is a defining visual element of Eichler's Mid-Century Modern aesthetic.
+
+Replacing T1-11 with fiber cement panels that approximate the look is a documented mistake. The groove spacing, reveal depth, and shadow lines are proportionally specific to the design — fiber cement approximations use different proportions and the difference is visible at close range. Most Eichler owners who have tried the substitution report regretting it.
+
+The authentic repair and replacement spec for [Eichler homes in Palo Alto](/service-areas/palo-alto) and across the Peninsula is T1-11 plywood, primed and painted with a high-quality exterior finish system. LP SmartSide T1-11 is an engineered wood version that holds paint better than standard plywood and resists moisture more effectively — it's the upgrade we recommend on Eichlers where the original material is being replaced. It keeps the architecture intact. It also applies to Eichler tracts in [Menlo Park](/service-areas/menlo-park) and [Sunnyvale](/service-areas/sunnyvale), where the same architectural requirement applies.
+
+### Cedar Shake / Shingle
+
+Cedar shakes and shingles are the correct spec for Berkeley brown-shingle homes throughout Elmwood, Claremont, and the Berkeley Hills; Craftsman bungalows in Rockridge and Temescal; and wooded hillside homes in [Mill Valley](/service-areas/mill-valley) and Kentfield where organic texture suits the site. Cedar shingles installed with proper felt underlayment and stainless ring-shank nails can last 25–35 years before replacement — longer in drier East Bay locations, shorter in the persistent coastal fog belt.
+
+### Maintenance Reality
+
+Wood siding in the Bay Area requires refinishing every 5–8 years to maintain appearance and moisture protection. In the fog belt, that interval compresses toward 5 years. Professional repainting of a wood-sided exterior runs **$3,000–$7,000** depending on home size, condition, and prep requirements. Over 20 years, that's **$12,000–$28,000** in maintenance — before factoring in any board replacement from rot or impact damage.
+
+**Stainless fasteners are required for coastal wood siding installations.** Within roughly one mile of the bay or ocean — including [Pacifica's Linda Mar and Rockaway Beach neighborhoods](/service-areas/pacifica), the Sausalito waterfront, and the SF Sunset and Richmond — airborne salt corrodes standard galvanized nails within 8–12 years. Corroded fasteners stain siding with rust bleed-through and eventually lose structural holding power. Stainless ring-shank nails add roughly 15–20% to fastener cost and are the only correct spec in salt-air zones.
+
+### Cost: Wood Siding Installation per Square Foot
+
+| Wood Type | Installed Cost per Sq Ft |
+|---|---|
+| Cedar clapboard | $10–$16 |
+| Redwood clapboard | $14–$20 |
+| T1-11 plywood (standard) | $8–$12 |
+| LP SmartSide T1-11 (engineered) | $11–$15 |
+| Cedar shake / shingle | $14–$22 |
+
+### Best Used On: Period-Correct Restoration
+
+Wood is the right call when the architecture requires it. A Victorian on Alamo Square with original clapboard siding. A Craftsman bungalow in Rockridge where cedar shingles are part of the building's identity. An Eichler in Green Gables where T1-11 is the design intent, not a budget compromise. In these situations, fiber cement approximations don't fully deliver what the building requires — and the maintenance cost is worth paying to preserve the architecture. See our [project gallery](/gallery) for examples of period-correct wood siding restoration across the Bay Area.
+
+---
+
+## Which Siding Is Right for Your Bay Area Home?
+
+This is the practical decision framework — organized by home type, location, and exposure. The best siding option for San Francisco homes is almost always driven by architectural context first, fire and coastal exposure second.
+
+**Victorian and Edwardian homes (Alamo Square, Pacific Heights, Mission, Richmond, Cole Valley):** Wood clapboard for restoration-sensitive projects where original character matters. HardiePlank lap siding as a legitimate lower-maintenance alternative on non-historically-designated homes where budget is the primary constraint.
+
+**Eichler tracts (Palo Alto Green Gables and Fairmeadow; Menlo Park Felton Gables; San Jose Fairglen):** T1-11 only — architectural integrity is non-negotiable. LP SmartSide T1-11 as the quality upgrade. See our [Eichler homes in Palo Alto](/service-areas/palo-alto) service page for specifics.
+
+**Doelger homes and stucco ranches (Sunset, Westlake in Daly City, parts of Pacifica, St. Francis Heights):** Stucco is native to these homes and the correct re-cladding spec — provided WRB replacement is explicitly included in scope. Hardie is an option for homeowners prioritizing lower maintenance, but stucco is the architecturally correct choice. Full re-stucco on a Doelger typically runs $15,000–$35,000 with WRB included.
+
+**WUI fire zones (Marin hills, Oakland Hills, Berkeley Hills, Peninsula hills above 500 ft):** HardiePlank or HardiePanel with Class A fire rating, without exception. [WUI fire zone homes in Marin](/service-areas/mill-valley) face the most stringent requirements in the region — consult your local fire authority for current code requirements before spec'ing any material.
+
+**Coastal homes (Pacifica, Sausalito waterfront, SF Sunset, SF Richmond):** HardiePlank with stainless fasteners and full flashing detail at all penetrations. Salt air and the fog cycle make wood maintenance impractical on most [coastal home siding in Pacifica](/service-areas/pacifica) unless the owner is genuinely committed to a 5-year refinish schedule.
+
+**Craftsman bungalows (Rockridge, Temescal, Berkeley Elmwood, Willow Glen):** Cedar shingle or shake for period-correct restoration. HardieShingle as a lower-maintenance alternative that approximates the profile — acceptable on homes where historical originality isn't the primary concern.
+
+**Modern and contemporary new construction:** Any of the three systems depending on design intent. HardiePlank is the most common spec for cost-performance reasons. Stucco on contemporary designs with clean smooth-finish detailing. For new ADU construction, fiber cement is typically the spec — see our [ADU construction guide](/blog/adu-construction-san-francisco-guide) for how exterior material choice interacts with permitting.
+
+---
+
+## Installation Cost Comparison: Stucco vs Hardie Board vs Wood Siding
+
+All costs reflect Bay Area labor rates and current 2026 material pricing. Installed costs include standard WRB, fasteners, and basic trim — not window replacement, painting, or structural substrate repair.
+
+| Material | Installed Cost/Sq Ft | 20-Year Maintenance | Fire Rating | Best Architectural Fit | Bay Area Recommendation |
+|---|---|---|---|---|---|
+| Three-coat stucco | $7–$14 | Low (cosmetic repairs only) | Class A (system-dependent) | Spanish Revival, Mediterranean, Doelger ranch | Strong — correct architectural context only |
+| HardiePlank lap siding | $14–$20 | Low (repaint at 10–15 yr) | Class A | Modern, coastal, WUI, most styles | Strongest — most versatile Bay Area option |
+| HardieShingle | $16–$22 | Low (repaint at 10–15 yr) | Class A | Craftsman, shingle-style, Cape Cod | Strong — best Hardie choice for bungalows |
+| Cedar clapboard | $10–$16 | High ($12K–$28K over 20 yr) | No Class A | Victorian, Edwardian, Craftsman | Conditional — period-correct restorations |
+| Cedar shake / shingle | $14–$22 | High | No Class A | Craftsman, brown-shingle, hillside | Conditional — period-correct restorations |
+| T1-11 / LP SmartSide | $8–$15 | Moderate (repaint every 7–10 yr) | No / Class A (LP Smart) | Eichler only | Specific — Eichler architectural requirement |
+| Redwood clapboard | $14–$20 | High | No Class A | Victorian, Edwardian | Conditional — limited supply, premium cost |
+
+For a broader look at how exterior material costs fit into a full remodel budget, see our [San Francisco home remodel cost guide](/blog/home-remodel-cost-san-francisco-2026).
+
+---
+
+## Frequently Asked Questions
+
+### Is Hardie board better than stucco for Bay Area homes?
+
+It depends on the house. HardiePlank is more forgiving of installation errors and handles coastal moisture without the crack-and-water-intrusion failure patterns that affect poorly maintained stucco. But on a Doelger home, a Spanish Revival, or any stucco-native architecture, stucco is the architecturally correct choice — and properly installed with a new WRB, it performs well for 30+ years. "Better" in the stucco vs Hardie board comparison means different things for different buildings. Neither material objectively wins every scenario.
+
+### How much does Hardie board siding cost to install in the Bay Area?
+
+Hardie board siding in the Bay Area runs $14–$22 per square foot installed, including standard WRB, fasteners, and basic trim. For a typical 2,000 square foot exterior, budget $28,000–$44,000 for a complete re-siding scope. The range reflects product choice (lap plank vs shingle profile), factory finish vs field paint, substrate prep required, and trim complexity. Always request itemized bids that separate material, labor, and substrate prep.
+
+### Why do Eichler homes require T1-11 instead of fiber cement panels?
+
+T1-11 plywood siding — with its characteristic vertical grooves at regular intervals — is a defining visual element of Eichler's Mid-Century Modern design. The groove spacing, reveal depth, and shadow lines are proportionally specific to the architecture. Fiber cement panel products that approximate the look use different proportions, and the difference is visible at close range. Most Eichler owners in Palo Alto's Green Gables and Menlo Park's Felton Gables tracts who have tried the substitution report regretting it. LP SmartSide T1-11 is the recommended quality upgrade — same look, better moisture performance.
+
+### What happens if I install wood siding on a Pacifica or coastal home without stainless fasteners?
+
+Standard galvanized nails corrode within 8–12 years in persistent salt air. Corroded fasteners bleed iron oxide (rust) through the paint surface in brown streaks that don't clean off. Eventually, corroded fasteners lose structural holding power — and the siding they're holding starts to fail with them. Re-siding any coastal home in Pacifica, Sausalito, or the SF Sunset with anything less than stainless or hot-dipped galvanized hardware is a maintenance and structural problem waiting to happen. Stainless ring-shank nails cost about 15–20% more than standard fasteners. They're not optional in salt-air zones.
+
+### Do I need a permit to replace siding on my San Francisco home?
+
+Yes, in most cases. SF DBI (the San Francisco Department of Building Inspection — the city agency that issues residential permits for structural, mechanical, and exterior work) requires a building permit for full siding replacement. Scope that includes WRB replacement, structural sheathing repair, or work on a historically designated building will trigger additional review. Permit processing at SF DBI currently runs 6–12 weeks for residential exterior work, depending on project complexity and review queue. Factor that lead time into your project schedule.
+
+### What is the most common siding failure pattern on Bay Area homes?
+
+Water intrusion at siding-to-trim transitions and around window openings is the most common failure pattern we see across all three material types. The cause is almost always installation detail failure — missing or undersized flashing, gaps in sealant at penetrations, or improperly lapped WRB. The material matters less than how the installation terminates at edges and openings. A correctly detailed stucco installation outperforms a poorly detailed Hardie installation every time. This is the single most important quality indicator to verify before accepting any siding bid.
+
+### Is wood siding viable in the Bay Area fog belt, or should I always choose fiber cement?
+
+Wood siding is viable in the fog belt on the right home with the right maintenance commitment. Cedar clapboard on a Victorian in Pacific Heights or Alamo Square is architecturally appropriate and can last 40+ years with proper refinishing every 5–7 years. The honest math: professional repainting runs $3,000–$7,000 per cycle, meaning $12,000–$28,000 over 20 years before any board replacement. For homeowners who'll keep that schedule, wood is a legitimate choice. For homeowners who won't, fiber cement is the more honest recommendation.
+
+---
+
+## Ready to Know What's Right for Your Home?
+
+Choosing between stucco, Hardie board, and wood siding involves your home's architecture, fire zone designation, coastal exposure, and maintenance budget — and getting it wrong is expensive. Gadget Construction installs all three: traditional three-coat stucco, James Hardie fiber cement, and period-correct wood siding across [31 cities in the Bay Area](/service-areas).
+
+We'll walk your home, check your fire zone and coastal designation, and give you a detailed, itemized estimate — not a range, not allowances. CA License #1132983. 12+ years. 500+ Bay Area projects. 5-year workmanship warranty in writing on every scope. Schedule a site visit through our [contact page](/contact), or learn more about our [stucco and siding repair](/services/exterior-repairs) work.
+    `.trim(),
+  },
+
+  {
     slug: "foundation-underpinning-cost-san-francisco",
     featuredImage: "/images/blog-foundation-underpinning-cost-san-francisco.png",
     title: "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
