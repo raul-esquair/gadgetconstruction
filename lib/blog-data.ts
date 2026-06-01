@@ -29,6 +29,235 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "cracked-stucco-san-francisco-patch-recoat-tear-off",
+    featuredImage: "/images/blog-cracked-stucco-san-francisco-patch-recoat-tear-off.png",
+    title: "Cracked Stucco in San Francisco: When to Patch, When to Re-Coat, When to Tear Off",
+    excerpt:
+      "Hairline crack or emergency? The answer depends on what's happening behind the surface. Here's how to diagnose stucco damage on your SF home — and what each repair option actually costs.",
+    date: "2026-06-01",
+    readingTime: "15 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How much does stucco repair cost in San Francisco?",
+        "answer": "Stucco repair in San Francisco runs $400–$1,500 for a localized patch, $4,000–$9,000 per elevation for a re-coat, and $15,000–$35,000 for a full re-stucco on a typical rowhouse. The wide range reflects what's happening behind the surface — WRB condition and sheathing integrity are the biggest cost drivers, not the cracks themselves."
+      },
+      {
+        "question": "How do I know if my cracked stucco is just cosmetic or a serious problem?",
+        "answer": "Do the tap test and push test first. Tap the surface with your knuckle — a hollow drum sound means delamination, which is not cosmetic. Push on suspect areas — any flex means system failure. Then check interior walls below exterior windows for moisture staining. Hairline cracks under 1/16 inch on an otherwise solid, non-moving surface are almost always cosmetic."
+      },
+      {
+        "question": "Do I need a permit to repair stucco in San Francisco?",
+        "answer": "SF DBI requires a permit for any full re-stucco or any work that disturbs the weather-resistive barrier (WRB), regardless of patch area size. Small cosmetic patches under approximately 32 square feet that don't disturb the WRB typically don't require a permit. Work on historically designated buildings requires a permit at any scope. SF DBI permit processing for residential exterior work currently runs 6–10 weeks."
+      },
+      {
+        "question": "Why do Doelger homes in the Sunset and Daly City have so many stucco problems?",
+        "answer": "Doelger homes built between roughly 1935 and 1955 use stucco over shiplap sheathing with an original tar-paper WRB that is now 70–80 years old and failing. When the WRB fails, water penetrates directly to the shiplap, which rots quickly with no drainage path. The bay window kickout flashing is almost always the first failure point. Any stucco repair on a Doelger home should include explicit WRB inspection and, for full re-stucco, shiplap-to-plywood replacement."
+      },
+      {
+        "question": "How long does a full re-stucco take on a San Francisco home?",
+        "answer": "A full re-stucco on a typical SF single-family rowhouse takes 3–5 weeks of active construction time, not counting the SF DBI permit processing period of 6–10 weeks. Cure time between the scratch coat, brown coat, and finish coat adds roughly 5–10 days to the build schedule. Total elapsed time from permit application to project completion typically runs 3–4 months."
+      },
+      {
+        "question": "Can I re-coat my stucco instead of doing a full tear-off to save money?",
+        "answer": "A re-coat is legitimate when the underlying system — WRB, lath, and sheathing — is confirmed intact. If the system has failed, a re-coat buries the problem and buys 5–7 years at most before the same damage reappears, now with more extensive rot. The tap test, push test, and interior moisture check tell you whether a re-coat is genuinely appropriate or just deferring a larger bill."
+      },
+      {
+        "question": "What's the difference between stucco patching and re-stuccoing a house?",
+        "answer": "Stucco patching addresses isolated, localized damage — a single crack or impact area — without touching the surrounding system. Re-stuccoing a house means full tear-off of all existing stucco, replacement of the WRB and lath, and a new three-coat stucco system applied to the entire surface. Patching costs $400–$1,500 and is right for cosmetic damage. Full re-stucco costs $15,000–$35,000 and is the only option that resolves system-level failure."
+      }
+    ],
+    content: `
+## The Short Answer
+
+Stucco repair in San Francisco costs anywhere from $400 to $35,000+ — and the gap isn't arbitrary. Stucco cracks fall into four categories: cosmetic, settlement-related, structural, and system failure. Which category you're dealing with determines whether you patch, re-coat, or tear off. Most hairline cracks on Bay Area homes are cosmetic and can be patched in an afternoon. Diagonal cracks from window corners and horizontal runs near floor lines are a different problem entirely. Diagnose before you call anyone — because the category tells you which repair is honest, and which one a contractor is upselling you on.
+
+---
+
+## What Your Stucco Cracks Are Telling You
+
+Stucco cracks are a signal, not a sentence. The shape, location, and width of a crack tells you more about the cause than any surface inspection alone — here's how to read them.
+
+### Hairline Cracks (Under 1/16 Inch)
+
+Fine surface cracks in the finish coat — particularly across large flat field areas and at control joints (intentional breaks in the stucco plane designed to give the system room to expand and contract) — are almost always cosmetic. They're caused by thermal cycling: the stucco surface expands in afternoon heat and contracts overnight. After enough cycles, fine surface fractures develop. In the SF Sunset and Richmond, where daily fog-burn cycles create persistent temperature swings, hairline cracking across south- and west-facing elevations is normal and expected on stucco older than 15 years.
+
+**Urgency: cosmetic.** Seal with elastomeric caulk, match texture, and move on. If your stucco has no control joints and hairline cracks have developed across the entire field surface, the absence of control joints is the reason — not a structural problem.
+
+### Diagonal Cracks at Windows and Doors
+
+Diagonal cracks running at roughly 45 degrees from the corners of window and door openings are more serious than they look. These aren't surface cracks — they follow stress paths through the wall and almost always indicate structural movement: a settling foundation, a failed or undersized header above the opening, or seismic racking stress in the wall framing. The stucco crack is the visible symptom. The movement behind it is the problem.
+
+**Urgency: act.** Don't patch the surface without understanding what's moving. A patched diagonal crack that re-opens within 12–18 months tells you the underlying movement hasn't stopped. If the movement is foundation-related, start with our [exterior repairs service](/services/exterior-repairs) or get a structural assessment first.
+
+### Stair-Step Cracks
+
+Stair-step cracks follow a diagonal staircase pattern and are the classic sign of differential foundation settling — one part of the foundation moving at a different rate than another. On stucco-clad homes without exposed masonry, the equivalent is a diagonal crack that tracks at a stair-step angle across multiple courses of lath. If you're seeing this pattern on your Outer Sunset home or on a stucco-over-concrete-block garage in the Richmond, evaluate the foundation before touching the stucco. Our post on [foundation settling that causes stair-step cracks](/blog/foundation-repair-signs-san-francisco) covers exactly what to look for before you call a contractor.
+
+**Urgency: monitor to act.** If the crack is stable and has been the same width for years, it may be historical movement that's stopped. If it's widening, a foundation evaluation is the correct first step — not a stucco patch. For serious movement, [foundation underpinning options in SF](/blog/foundation-underpinning-cost-san-francisco) are worth understanding before you commit to any surface repair.
+
+### Horizontal Cracks
+
+Horizontal cracks running across a wall face — especially at floor lines on two-story homes — are the pattern most consistently associated with serious water intrusion. On multi-story Doelger homes in the Outer Sunset and the Westlake neighborhood of Daly City, horizontal cracks at the second-floor line frequently indicate that the WRB (weather-resistive barrier — the housewrap or felt paper layer behind the stucco that prevents moisture from penetrating the wall assembly) has failed. Water runs down through the wall assembly and wicks out at the floor framing, often saturating the sill plate and lower sheathing before the surface crack is even noticed.
+
+**Urgency: act.** A horizontal crack at a floor line with interior moisture staining below the corresponding window is a system failure signal, not a surface patching situation.
+
+### Spider / Map Cracking Across Walls
+
+A network of interconnected fine cracks spreading across a large wall area — sometimes called map cracking or alligator cracking — is the tell-tale of stucco system aging or a failed base coat bond. Unlike isolated hairline cracks, map cracking indicates the stucco system as a whole has lost its integrity. Either the finish coat has lost adhesion to the brown coat, or the entire stucco system has delaminated from the lath below. Tapping the affected area with your knuckle confirms it: a hollow drum sound means the stucco is detached from its substrate.
+
+**Urgency: re-coat or re-stucco depending on depth.** If only the finish coat is involved and the underlying system is sound, a full-elevation re-coat may be the correct fix. If the base coat and lath are compromised, you're looking at full tear-off. If you're trying to decide between stucco and an alternative cladding at this point, our comparison of [stucco vs. Hardie board vs. wood siding for Bay Area homes](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area) lays out the tradeoffs honestly.
+
+---
+
+## Option 1: Patch and Seal (When Cracked Stucco Repair Is Straightforward)
+
+Patching is the right answer for a specific set of conditions — and the wrong answer for everything else.
+
+Patching is appropriate when the damage is genuinely localized: a hairline surface crack under 1/16 inch, a small impact hole from a hose bib replacement or utility work, or a cracked control joint with an otherwise sound surrounding system. The key test is whether the underlying stucco system — the WRB, lath, base coat, and brown coat — is intact. If it is, a patch done correctly should last 5–10 years. If it isn't, the same patch will re-crack within 12–24 months as the system continues to move, and you'll have spent $400–$1,500 to delay the real repair by one construction season.
+
+**The repair process:** Clean the crack — remove loose material, blow out dust, let it dry. Apply a backer rod in wider cracks before caulking. Use an elastomeric sealant rated for exterior stucco (standard silicone doesn't bond to stucco finishes well enough to handle the thermal cycling common in the Sunset and Richmond). Match texture with a pre-mixed finish coat or a skim of dash texture, then color-coat to blend.
+
+Color matching is harder than it sounds. Stucco color fades over time, and a fresh patch on a 20-year-old exterior almost always reads as a patch. If color match matters to you, whole-elevation re-coating is cleaner than spot-patching.
+
+**Stucco patching cost: $400–$1,500** for a typical scope — one to three localized areas, including cleaning, sealant, texture match, and color coat. For [SF stucco repair](/services/exterior-repairs) calls that resolve as pure patching, that range covers the majority of work across our 500+ Bay Area projects. **Lifespan: 5–10 years** on an intact underlying system; 1–3 years if the underlying system is failing.
+
+---
+
+## Option 2: Re-Coat / Color Coat (When It Makes Sense for Your Stucco)
+
+A re-coat addresses the entire surface of an elevation — or the whole house — without touching the underlying stucco system. It's the right answer when the system below is sound but the surface has widespread cosmetic issues that patching alone can't fix cleanly.
+
+Re-coating is appropriate when: surface cracking is widespread but shallow (finish coat only, not into the brown coat); the existing color is so faded that spot patches won't blend; or you're refreshing an entire elevation after a targeted repair for a consistent appearance.
+
+**The process:** Pressure-wash the entire surface, let it fully dry (typically 48–72 hours minimum — important in the Sunset where surfaces can hold moisture for days), fill any open cracks with elastomeric sealant before the coat goes on, apply a full elastomeric base coat across the surface, then a finish color coat over everything. A well-executed re-coat covers surface cracking, restores color uniformity, and adds a layer of elastomeric protection.
+
+**The critical caveat:** A re-coat does not address anything behind the surface. If the WRB has failed, if the lath is rusting, if the sheathing is compromised — a re-coat buries those problems. It may make the exterior look better for 5–7 years while water continues to infiltrate the wall assembly and rot the framing behind it. A re-coat is only the correct option after you've confirmed the underlying system is intact.
+
+**Re-stucco house San Francisco cost for a re-coat: $4,000–$9,000 per elevation** for a typical SF rowhouse, depending on elevation size, surface prep required, and finish texture. A full-house re-coat — all elevations — typically runs $12,000–$22,000 for a 1,500–2,500 sq ft single-family home. **Lifespan: 10–15 years** on a sound underlying system.
+
+---
+
+## Option 3: Full Re-Stucco (When Stucco Replacement Is Your Only Real Option)
+
+Full stucco replacement means tear-off: remove all existing stucco, inspect and repair the substrate beneath, install a new WRB, new wire lath, and a complete three-coat stucco system. It's not the most expensive option because contractors want to upsell it — it's the most expensive option because it's the only option that actually solves system-level failure.
+
+Re-stucco is the correct call when: the WRB is compromised across large areas and water has penetrated the wall assembly; the lath is corroded (rust bleed-through at the surface is a clear tell); the sheathing behind the lath is soft, crumbling, or visibly rotted when you probe at corners and window heads; horizontal cracking is extensive; or there's interior evidence of chronic moisture — staining at floor-wall intersections, soft drywall below windows, or visible rust at screws or nails on interior walls.
+
+**The process:** Strip all existing stucco to the substrate. Inspect sheathing and framing — replace damaged sections as found (this is where unexpected cost increases happen; budget a 15–20% contingency). Install a new code-compliant WRB, typically Grade D building paper or a vapor-permeable housewrap product. Install new galvanized or stainless wire lath. Apply scratch coat, brown coat, and finish coat in sequence with proper cure time between each coat. For coastal homes in [Pacifica](/service-areas/pacifica) and the Outer Sunset, stainless lath fasteners are the correct specification — standard galvanized corrodes in 8–12 years in persistent salt air.
+
+**Full re-stucco cost: $15,000–$35,000** for a typical SF single-family rowhouse, including WRB, lath, three-coat system, and basic trim — but not window replacement, paint, or structural framing repair beyond what's found during tear-off. The range reflects home size, substrate condition discovered at tear-off, and finish texture. **Lifespan: 50+ years** on a correctly detailed three-coat system with proper WRB installation.
+
+See our [stucco repair throughout San Francisco](/service-areas/san-francisco) page for the full scope of what a re-stucco involves, and our [exterior repairs service](/services/exterior-repairs) for how we approach everything from the surface inward.
+
+---
+
+## The Doelger Home Problem: A Hyper-Local SF Stucco Failure Pattern
+
+This section applies specifically to homeowners in the Outer Sunset, Inner Sunset, the Richmond, and the Westlake neighborhood of Daly City — and if your home was built between roughly 1935 and 1955, read this carefully before accepting any stucco bid.
+
+Joseph Doelger built approximately 5,000 homes across San Francisco's Sunset District and the Westlake area in Daly City using stucco applied over shiplap sheathing (horizontal wood boards, typically 1×6 or 1×8 nominal, installed diagonally or horizontally as structural wall sheathing). That was sound, standard construction for the era. The problem is that the original tar-paper WRB on these homes is now 70–80 years old and has largely failed. It wasn't designed to last a century. When it goes, water that gets behind the stucco — through cracked control joints, failed kickout flashing at bay windows, or deteriorated sealant at window heads — hits the shiplap directly and has nowhere to drain.
+
+Gadget Construction has opened Doelger walls in the Outer Sunset and found shiplap that looks like wet cardboard. Fully saturated, structurally failed, in some cases supporting active mold growth in the wall cavity. The stucco on the outside can look acceptable right up until it doesn't — because stucco is a rigid system that holds its shape even after its substrate has failed beneath it.
+
+**The bay window is almost always ground zero.** Kickout flashing (a diverter that directs water away from the wall where a roofline or projecting element meets a vertical surface) at Doelger bay windows was often installed without adequate kickout geometry or has simply failed with age. Water runs down the wall face, wicks behind the stucco at the bay window surround, and saturates the shiplap in that corner. You can often identify a Doelger water intrusion problem by soft spots around the bay window perimeter — push on the stucco in that area and any give at all is a red flag.
+
+**What this means for bids:** Any re-stucco bid on a Doelger home must explicitly include WRB replacement and shiplap inspection — not as an allowance, not as a "we'll see what we find," but as a specified line item. A bid that omits WRB replacement on a 1940s or 1950s Doelger isn't a better price — it's a shorter repair. The same water problem will recur within 10–15 years on a re-stucco that doesn't address the WRB. Our [Westlake Doelger stucco repair](/service-areas/daly-city) work has included shiplap replacement with modern plywood sheathing and a new WRB system on every full tear-off project — because there's no other way to deliver a repair that actually holds.
+
+Doelger-era homes in [Pacifica](/service-areas/pacifica) (particularly Linda Mar and Rockaway Beach neighborhoods) face the same shiplap failure pattern with the added accelerant of persistent coastal salt air. The degradation timeline is faster there than in inland SF neighborhoods.
+
+---
+
+## How to Tell Which Stucco Repair Option You Actually Need
+
+Before you call a single contractor, do this walk-around. It takes 20 minutes and will save you from being sold the wrong repair.
+
+**1. Tap test.** Work your knuckle across suspect areas — pay particular attention to wide field areas and the stucco around windows and doors. A solid thud means the stucco is bonded to its substrate. A hollow drum sound means it's delaminated. Any area that drums hollow is a system failure zone, not a cracked stucco patch candidate.
+
+**2. Push test.** On areas with visible cracking, push firmly with your palm. Any flex or give means the underlying system is compromised. Sound stucco over intact lath and sheathing doesn't move.
+
+**3. Interior moisture check.** Go inside and look at the walls below every exterior window, at floor-wall joints on exterior walls, and at the base of exterior walls in closets and built-ins. Brown staining, soft drywall, bubbling paint, or a musty smell is evidence of active or historic water intrusion. If interior walls show moisture evidence, the decision is already made: you need tear-off, not a patch.
+
+**4. Measure crack widths.** A credit card is roughly 1/32 inch thick; a standard matchbook cover is about 1/16 inch. If a crack accepts a credit card edge with room to spare, you're looking at 1/8 inch or more — that's a structural-level crack. A crack that wide is not a cosmetic stucco patching situation.
+
+**5. Map the crack distribution.** Isolated cracks in one area = likely localized cause (impact, differential movement at a penetration). Cracks clustered at all window and door corners = structural movement. Cracks distributed evenly across entire elevations = system-level aging or WRB failure.
+
+The combination of these five checks narrows the category considerably. If you've done them and you're still uncertain, a hands-on assessment is the right next step — and it should happen before you commit to any repair option or sign any contract.
+
+---
+
+## Permit Reality: When You Need One for Stucco Repair in SF
+
+SF DBI (the San Francisco Department of Building Inspection — the city agency that issues residential building permits for structural, mechanical, and exterior work) has specific triggers for stucco work. Know them before you plan scope or schedule.
+
+**Permit required:**
+- Full re-stucco — any scope that removes and replaces the stucco system
+- Any work that disturbs the WRB, even on a partial area (SF Building Code Section 106A applies to work affecting the weather-resistive barrier as part of the building envelope)
+- Work on a historically designated building, regardless of scope size
+- Any stucco work that's part of a broader permitted project (window replacement, siding change, structural repair)
+
+**Permit typically not required:**
+- Cosmetic patching under approximately 32 square feet that doesn't disturb the WRB
+- Elastomeric color-coat application to an existing sound surface
+- Sealant work at individual cracks or joints
+
+The WRB-disturbance trigger is the one that catches homeowners off guard. A re-coat that stays entirely on the surface finish doesn't require a permit. A repair that opens the wall to replace a section of failed WRB does — even if the patch area is small. When in doubt, confirm directly with SF DBI before starting work. A permitted scope gets inspected; inspection catches sheathing and framing problems that no surface assessment can see.
+
+**SF DBI permit processing currently runs 6–10 weeks for residential exterior work**, depending on project valuation and current review queue. Factor that into your schedule if you're planning a full re-stucco before the rainy season. Gadget Construction handles all permit pulling and inspection scheduling as part of every full re-stucco scope — it's not an add-on. If you're also evaluating roofing or window work alongside a re-stucco, combining scopes under one permit can reduce both cost and processing time; see our [roofing service](/services/roofing) and [complete remodel](/services/complete-remodel) pages for how we coordinate multi-trade exterior projects.
+
+---
+
+## Repair Option Summary
+
+| Option | Best For | Typical Cost | Lifespan | SF DBI Permit Required? |
+|---|---|---|---|---|
+| Patch and seal | Isolated hairline cracks, impact damage, sound system | $400–$1,500 | 5–10 years | No (under 32 sq ft, no WRB disturbance) |
+| Re-coat / color coat | Widespread surface cracking, faded color, sound underlying system | $4,000–$9,000/elevation | 10–15 years | No (surface only) |
+| Full re-stucco | Failed WRB, rotted sheathing, horizontal cracking, Doelger system failure | $15,000–$35,000 | 50+ years | Yes |
+
+---
+
+## Frequently Asked Questions
+
+### How much does stucco repair cost in San Francisco?
+
+Stucco repair in San Francisco runs $400–$1,500 for a localized patch, $4,000–$9,000 per elevation for a re-coat, and $15,000–$35,000 for a full re-stucco on a typical rowhouse. The wide range reflects what's happening behind the surface — WRB condition and sheathing integrity are the biggest cost drivers, not the cracks themselves.
+
+### How do I know if my cracked stucco is just cosmetic or a serious problem?
+
+Do the tap test and push test first. Tap the surface with your knuckle — a hollow drum sound means delamination, which is not cosmetic. Push on suspect areas — any flex means system failure. Then check interior walls below exterior windows for moisture staining. Hairline cracks under 1/16 inch on an otherwise solid, non-moving surface are almost always cosmetic.
+
+### Do I need a permit to repair stucco in San Francisco?
+
+SF DBI requires a permit for any full re-stucco or any work that disturbs the weather-resistive barrier (WRB), regardless of patch area size. Small cosmetic patches under approximately 32 square feet that don't disturb the WRB typically don't require a permit. Work on historically designated buildings requires a permit at any scope. SF DBI permit processing for residential exterior work currently runs 6–10 weeks.
+
+### Why do Doelger homes in the Sunset and Daly City have so many stucco problems?
+
+Doelger homes built between roughly 1935 and 1955 use stucco over shiplap sheathing with an original tar-paper WRB that is now 70–80 years old and failing. When the WRB fails, water penetrates directly to the shiplap — which rots quickly with no drainage path. The bay window kickout flashing is almost always the first failure point. Any stucco repair on a Doelger home should include explicit WRB inspection and, for full re-stucco, shiplap-to-plywood replacement.
+
+### How long does a full re-stucco take on a San Francisco home?
+
+A full re-stucco on a typical SF single-family rowhouse takes 3–5 weeks of active construction time, not counting the SF DBI permit processing period of 6–10 weeks. Cure time between the scratch coat, brown coat, and finish coat adds roughly 5–10 days to the build schedule. Total elapsed time from permit application to project completion typically runs 3–4 months.
+
+### Can I re-coat my stucco instead of doing a full tear-off to save money?
+
+A re-coat is legitimate when the underlying system — WRB, lath, and sheathing — is confirmed intact. If the system has failed, a re-coat buries the problem and buys 5–7 years at most before the same damage reappears, now with more extensive rot. The diagnostic walk-around (tap test, push test, interior moisture check) tells you whether a re-coat is genuinely appropriate or whether it's just deferring a larger bill.
+
+### What's the difference between stucco patching and re-stuccoing a house?
+
+Stucco patching addresses isolated, localized damage — a single crack or impact area — without touching the surrounding system. Re-stuccoing a house means full tear-off of all existing stucco, replacement of the WRB and lath, and a new three-coat stucco system applied to the entire surface. Patching costs $400–$1,500 and is right for cosmetic damage. Full re-stucco costs $15,000–$35,000 and is the only option that resolves system-level failure.
+
+---
+
+## Ready to Know Which Option Your Home Actually Needs?
+
+Not sure whether you're looking at a $500 patch or a $25,000 re-stucco? The crack pattern alone won't always tell you — the condition of the WRB and sheathing behind it is what makes the call. Gadget Construction provides free on-site stucco assessments with written findings. We'll photograph the damage, probe for underlying issues, and give you honest recommendations — not a sales pitch for the most expensive option.
+
+CA License #1132983. 12+ years. 500+ Bay Area projects, including [stucco repair throughout San Francisco](/service-areas/san-francisco), the Outer Sunset, Richmond, [Westlake Doelger stucco repair in Daly City](/service-areas/daly-city), and Pacifica. 5-year workmanship warranty in writing on every scope. Schedule your site assessment through our [contact page](/contact), or learn more about our full range of [exterior repair services](/services/exterior-repairs).
+    `.trim(),
+  },
+
+  {
     slug: "stucco-vs-hardie-board-vs-wood-siding-bay-area",
     featuredImage: "/images/blog-stucco-vs-hardie-board-vs-wood-siding-bay-area.png",
     title: "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes",
