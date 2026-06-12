@@ -29,6 +29,269 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "siding-replacement-cost-san-francisco-2026",
+    featuredImage: "/images/blog-siding-replacement-cost-san-francisco-2026.png",
+    title: "Siding Replacement Cost in San Francisco: Hardie, Wood, Cedar & Composite Compared",
+    excerpt:
+      "Full-house siding replacement in San Francisco typically costs $25,000 to $85,000+. Here's what each material actually costs per square foot — plus the hidden costs most contractors don't mention in the bid.",
+    date: "2026-06-15",
+    readingTime: "14 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How much does full-house siding replacement cost in San Francisco?",
+        "answer": "Siding replacement cost in San Francisco runs $25,000–$85,000+ for a typical 2,000 sq ft home. James Hardie HardiePlank installed runs $28,000–$44,000. Engineered wood composite runs $24,000–$36,000. Cedar or redwood runs $20,000–$32,000. Add 15–25% for scaffolding, permits, and dry rot contingency before accepting any bid."
+      },
+      {
+        "question": "Is dry rot always discovered during siding replacement in the Bay Area?",
+        "answer": "Dry rot discovery during siding replacement is common, not rare, on Bay Area homes that haven't had siding work in 20+ years — which describes most of the Sunset, Richmond, Oakland, and Marin hillside housing stock. Gadget Construction finds evidence of active or prior rot on the majority of full-replacement projects. Budget a 10–20% contingency and insist on an explicit allowance in any written bid."
+      },
+      {
+        "question": "Do I need a permit for siding replacement in San Francisco?",
+        "answer": "Yes. SF DBI requires a permit for any full siding replacement that disturbs the existing weather-resistive barrier. The permit costs $2,000–$6,000 depending on project valuation, and SF DBI permit processing currently runs 6–10 weeks for residential exterior work. Any contractor bidding a full SF siding replacement without a permit line item is a red flag."
+      },
+      {
+        "question": "What siding material is best for homes in San Francisco's fog belt?",
+        "answer": "James Hardie HardiePlank HZ10 is the most reliable material for homes in SF's fog belt — specifically the Sunset, Richmond, and Pacifica coastal corridor. HZ10 is Hardie's coastal climate specification, rated for persistent moisture and salt air. LP SmartSide performs well inland. Avoid vinyl in the fog belt: it fades, can't be repainted, and doesn't match Bay Area architecture."
+      },
+      {
+        "question": "Does siding replacement affect resale value in San Francisco?",
+        "answer": "Yes, significantly. New siding is one of the highest-ROI exterior projects on SF homes. Hardie and engineered wood composite are expected by buyers in Noe Valley, Pacific Heights, and Rockridge. Vinyl siding actively hurts resale on period homes — buyers and agents in SF associate it with deferred maintenance, not cost savings."
+      },
+      {
+        "question": "How long does siding replacement take on a typical SF home?",
+        "answer": "A full-house siding replacement on a 2,000 sq ft SF home takes 3–5 weeks of active construction, not counting permit processing. SF DBI permit processing adds 6–10 weeks to the total schedule before work can start. Dry rot discovery can add 3–7 days of framing repair mid-project. Plan for a 3–4 month total timeline from contract signing to completion."
+      },
+      {
+        "question": "What's the difference between Hardie board and engineered wood composite siding?",
+        "answer": "Hardie board (fiber cement) is made from portland cement, sand, and cellulose fibers — dimensionally stable, non-combustible, 30-year warranty. Engineered wood composite (LP SmartSide) uses wood fiber bonded with resins, looks more like natural wood, carries a 50-year warranty, but requires more frequent repainting in coastal climates. Hardie is typically specified for salt-air and WUI fire zones; LP SmartSide performs well inland."
+      }
+    ],
+    content: `
+## The Short Answer: SF Siding Replacement Cost Ranges
+
+Siding replacement cost in San Francisco runs $25,000–$85,000+ for a typical 2,000 sq ft home, depending on material, existing conditions, and what's discovered when the old cladding comes off. James Hardie HardiePlank installed runs $28,000–$44,000. Engineered wood composite runs $24,000–$36,000. Cedar or redwood runs $20,000–$32,000. Vinyl is cheaper at $12,000–$20,000 — but it's the wrong choice for most SF homes, and we'll explain exactly why below.
+
+Every one of those ranges assumes clean walls and a straightforward scope. Before you accept any bid, add 15–25% for scaffolding, permits, and dry rot discovery. Those three line items are where most [Bay Area siding replacement](/services/exterior-repairs) estimates fall apart — and where contractors who win on price usually make it back in change orders.
+
+---
+
+## What's Included in Siding Replacement Cost
+
+A complete siding replacement scope covers far more than the panels themselves — material is roughly 40–50% of total job cost on a well-scoped bid.
+
+Here's what a complete scope includes, and what most bids quietly leave out.
+
+**What a complete siding replacement scope includes:**
+
+- Full removal and disposal of existing siding
+- Inspection of underlying sheathing for rot, moisture damage, and delamination
+- New WRB (weather-resistive barrier — the moisture membrane between your sheathing and siding, typically Grade D building paper or a vapor-permeable housewrap like Tyvek HomeWrap)
+- New flashing at all window and door openings, corners, and roof-to-wall junctions
+- New siding material, installed to manufacturer specifications
+- New trim, corner boards, and window surrounds
+- Prime and paint or factory finish, depending on material
+- SF DBI permit (SF DBI, the San Francisco Department of Building Inspection, is the city agency that issues and inspects residential exterior permits for any scope that disturbs the existing WRB or cladding) and inspection scheduling
+
+**What's typically not included:**
+
+- Dry rot repair beyond surface-level findings — most bids carry this as a vague allowance or leave it out entirely
+- Structural framing repairs discovered at sheathing removal
+- Window replacement, even if windows are removed and reinstalled during siding work
+- Lead paint testing and containment on pre-1978 homes
+
+A bid that looks $8,000 cheaper may simply be missing the WRB line item or carrying no dry rot allowance. Know the difference before you compare numbers. See our [exterior repair services](/services/exterior-repairs) page for a complete scope breakdown.
+
+---
+
+## Siding Replacement Cost by Material Type
+
+The four materials used on Bay Area siding replacement projects differ significantly in upfront cost, long-term maintenance, and climate suitability. Here's what each actually costs installed — not just the material price.
+
+### Hardie Board (Fiber Cement): $14–$22 per sq ft installed
+
+James Hardie HardiePlank is the most commonly specified material on Bay Area siding replacement projects. The installed cost of $14–$22 per sq ft covers material, labor, trim, WRB, and flashing. For a 2,000 sq ft home with typical elevation complexity, that's $28,000–$44,000 — and it's the right baseline for most homes in [San Francisco](/service-areas/san-francisco), [Oakland](/service-areas/oakland), and [Berkeley](/service-areas/berkeley).
+
+The correct product for homes in [Pacifica](/service-areas/pacifica), the SF Sunset, the SF Richmond, and anywhere within a mile of the bay or ocean is HardiePlank HZ10 — Hardie's coastal climate specification. HZ10 is rated for persistent coastal moisture and salt air. The standard HZ5 spec is not. Factory-primed panels cost slightly more but hold paint significantly longer than field-primed material. On homes in the Inner and Outer Richmond, we specify HZ10 as standard.
+
+**Warranty:** 30-year product warranty. **Maintenance over 20 years:** repaint every 12–15 years, roughly $3,000–$6,000 per repainting on a typical SF home. **Best for:** most Bay Area homes — fog belt performance is excellent, doesn't rot, doesn't attract termites. **Worst for:** homes in SF Article 10 historic districts where fiber cement's appearance may not satisfy architectural review requirements.
+
+For a direct comparison of Hardie against stucco and wood options, see [how to choose your siding material](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area).
+
+### Engineered Wood Composite: $12–$18 per sq ft installed
+
+Engineered wood composite siding — LP SmartSide is the dominant brand — runs $12–$18 per sq ft installed, or $24,000–$36,000 for a 2,000 sq ft home. Don't confuse engineered wood composite with fiber cement. These are different products with different failure modes. LP SmartSide uses wood fiber and resins bonded under pressure and finished with a textured overlay. It reads more like natural wood than fiber cement, which matters on homes where Hardie's appearance is too contemporary for the architecture.
+
+LP SmartSide carries a 50-year limited warranty and performs well in the Bay Area fog belt. Its vulnerability: if cut ends aren't properly primed and sealed, or if water-tight trim details fail at openings, moisture penetrates and compromises the core. **Maintenance:** repainting every 10–12 years in coastal climates — a shorter cycle than Hardie. Over 20 years, maintenance runs roughly $5,000–$9,000 on a typical SF home. **Best for:** homes in [Rockridge](/service-areas/oakland), Temescal, or Willow Glen where natural wood texture matters. **Worst for:** direct salt-air exposure within a half-mile of the coast — stick with Hardie HZ10 in that zone.
+
+### Cedar and Redwood Natural Wood: $10–$16 per sq ft installed
+
+Natural wood siding — clear-grade cedar shingles, bevel cedar lap, or redwood channel siding — runs $10–$16 per sq ft installed, or $20,000–$32,000 for a 2,000 sq ft home. The lower installed cost is misleading. Wood carries the highest ongoing maintenance cost of any option here. Repainting or re-staining every 5–8 years is realistic in the Bay Area fog belt. Over 20 years, maintenance on a wood-sided SF home typically runs $12,000–$20,000 in repainting and spot rot repair — costs that don't appear in the installed-cost comparison.
+
+That said, wood is the correct material for certain homes. Victorian and Edwardian rowhouses in Alamo Square, Pacific Heights, and Noe Valley have original wood detailing that fiber cement won't replicate at the same quality. For those homes, maintaining authenticity often requires wood.
+
+On WUI (wildland-urban interface — California fire-zone designation for homes near wildland fuel) homes in the Oakland Hills, Berkeley Hills, or Marin, California Building Code requires fire-retardant-treated wood or non-combustible alternatives. Standard cedar doesn't qualify in WUI zones. **Warranty:** none — durability depends entirely on maintenance. **Best for:** historic character homes, non-fire-zone applications where authentic appearance matters. **Worst for:** WUI zones, persistent salt-air exposure, owners who can't commit to a 6-year repaint cycle.
+
+### Vinyl: $6–$10 per sq ft installed (Why We Don't Recommend It for SF)
+
+Vinyl siding runs $6–$10 per sq ft installed, or $12,000–$20,000 for a 2,000 sq ft home. It's the cheapest upfront option, and we'll tell you exactly why it's the wrong one for most Bay Area homes.
+
+Vinyl doesn't rot — that's its main selling point. But the drawbacks are specific and significant. First, it doesn't match the architectural character of Victorians, Edwardians, Doelger homes, or Craftsman bungalows. It reads as an out-of-place retrofit on any home with period detailing and will hurt resale in neighborhoods like Noe Valley, the Mission, or Rockridge. Second, vinyl warps and buckles near heat sources — a west-facing wall with sustained afternoon sun creates visible panel distortion. Third, in North Bay and Peninsula WUI zones, vinyl is non-compliant with fire-resistance requirements. Fourth, when the factory color fades (typically within 10–15 years), the entire system requires replacement. You can't repaint vinyl the way you repaint Hardie or wood.
+
+If your primary driver is the lowest possible upfront cost, vinyl gets you there. But the 20-year total cost of ownership isn't as favorable as it looks at installation. On any Bay Area home where resale matters, engineered wood composite is a better choice at a similar price point.
+
+| Material | Installed Cost / sq ft | Full House (2,000 sq ft) | Warranty | Repaint Cycle |
+|---|---|---|---|---|
+| James Hardie HardiePlank | $14–$22 | $28,000–$44,000 | 30 years | 12–15 years |
+| LP SmartSide (engineered wood) | $12–$18 | $24,000–$36,000 | 50 years | 10–12 years |
+| Cedar / Redwood (natural wood) | $10–$16 | $20,000–$32,000 | None | 5–8 years |
+| Vinyl | $6–$10 | $12,000–$20,000 | 10–15 years | Not paintable |
+
+---
+
+## What Drives Siding Replacement Cost Up in San Francisco
+
+The per-square-foot rates above are the floor — not the ceiling. These are the specific line items that move a $28,000 estimate to $44,000 before you sign the contract.
+
+### Demolition of Existing Siding
+
+Demo runs $2–$4 per sq ft of elevation, or $4,000–$8,000 on a 2,000 sq ft home. Multi-layer removal — original shiplap, a layer of original stucco applied over it, and a second skim coat from a 1980s repair — is common on [Doelger homes in Westlake Daly City](/service-areas/daly-city) and the Outer Sunset, and it pushes demo toward the high end or beyond. A bid that doesn't break out demo as a separate line item is bundling it somewhere in the install rate. Confirm this explicitly before comparing numbers.
+
+### Why Dry Rot Discovery During Siding Work Is Common (Not Rare)
+
+Dry rot discovery during siding replacement is one of the most underestimated line items in any siding bid — and it is not rare. On Bay Area homes where siding hasn't been replaced in 20+ years, which describes most of the housing stock in the Sunset, Richmond, [Oakland](/service-areas/oakland), Rockridge, Temescal, and Marin hillside towns, [dry rot discovery during siding work](/blog/dry-rot-bay-area-homes-spot-repair-cost) is common. Gadget Construction finds evidence of active or prior rot on the majority of full-replacement projects.
+
+A 10–20% contingency on the siding budget is not pessimistic — it reflects what the walls actually look like when they open. At $4,000–$12,000 for a whole-wall dry rot repair, finding two or three compromised bays during demo can add $8,000–$24,000 with no warning. A well-written bid includes an explicit dry rot allowance: a fixed dollar figure and a stated unit rate (e.g., $85 per linear foot of compromised framing) rather than a vague "dry rot repair as needed." If a bid is silent on this, ask for the allowance in writing before you sign.
+
+### Scaffolding for 2- and 3-Story SF Rowhouses
+
+Scaffolding is the most commonly omitted line item in siding bids and one of the most expensive surprises when it arrives as a change order. On a single-story home, ladders cover access. On a 2–3 story SF rowhouse — which describes the majority of homes in Pacific Heights, Noe Valley, the Mission, and the Inner Richmond — full elevation scaffolding is required for safe siding installation. Scaffolding on a 3-story SF rowhouse runs $8–$15 per sq ft of elevation, or roughly $6,000–$14,000 for a typical project. That number should appear as a named line item on every bid for a multi-story home. If it doesn't, ask directly: "Is scaffolding included, and where is it on this estimate?"
+
+### Historic District and Architectural Review
+
+SF's Article 10 historic districts cover portions of Alamo Square, the Haight, the Mission, Noe Valley, and Pacific Heights. Homes within these districts require approval from the Historic Preservation Commission or SF Planning Department before any exterior siding change. The review process adds $2,000–$8,000 in fees, documentation, and architect time, and it constrains material choices — fiber cement is sometimes rejected in favor of wood on contributing structures. If your address is in or adjacent to a historic district, confirm the review requirement before finalizing your material selection. It's an irrelevant detail until it delays your project by four months.
+
+### SF DBI Permit Costs
+
+SF DBI requires a permit for any full siding replacement, including any scope that disturbs the existing WRB. The permit itself runs $2,000–$6,000 depending on project valuation. SF DBI permit processing for residential exterior work currently runs 6–10 weeks. Budget the permit as a line item and build the processing time into your schedule. Starting unpermitted work on an exterior siding project in San Francisco is not a gray area.
+
+---
+
+## Hidden Costs Most Contractors Don't Mention in the Bid
+
+A complete siding replacement bid has more line items than most homeowners expect. Here's what silence on a bid typically means — and what to ask before you sign.
+
+**"Dry rot repair as needed" with no dollar figure.** This is the most common source of siding project budget overruns. It means the contractor bills you at whatever rate they choose, for however much rot they find, after the walls are open and you have no leverage. A legitimate bid includes a specific dry rot allowance — a fixed dollar amount and a unit rate if work exceeds it.
+
+**No scaffolding line item.** On any home taller than one story, scaffolding is a real and substantial cost. If it's absent from the bid, it's coming as a change order.
+
+**No permit line item.** Any SF contractor proposing full siding replacement without a permit line item is either planning unpermitted work or will present the permit cost as a separate invoice after you've signed. Either is a red flag.
+
+**No trim allowance.** Corner boards, window surrounds, frieze boards, and belly bands are separate from siding panels — additional labor and material. If trim isn't named on the bid, ask how it's priced and what's included.
+
+**Lead paint testing on pre-1978 homes.** EPA RRP (Renovation, Repair, and Painting Rule — the federal regulation requiring certified lead-safe work practices on pre-1978 residential construction) applies to the entire exterior on a full siding replacement. Lead paint testing runs $500–$1,500. Certified containment and disposal, if lead is confirmed, adds cost beyond that. If a contractor bids a pre-1978 home without mentioning lead compliance, ask directly. The liability is yours if it's skipped — not the contractor's.
+
+For a deeper look at what's commonly found behind old SF cladding — especially on stucco-over-shiplap homes — see our guide to [cracked stucco repair in San Francisco](/blog/cracked-stucco-san-francisco-patch-recoat-tear-off).
+
+---
+
+## Real Project Pricing from 2026 Bay Area Siding Jobs
+
+Numbers become meaningful when they're attached to specific homes. Here are three recent Gadget Construction siding replacement projects with actual line-item breakdowns.
+
+**Project 1: Noe Valley Victorian, Hardie Lap Replacement**
+2,400 sq ft of elevation, 3-story rowhouse, original wood bevel siding removed. Scope: full demo, new WRB, full-elevation scaffolding, HardiePlank HZ10 lap siding, new window trim and corner boards, prime and paint.
+
+| Line Item | Cost |
+|---|---|
+| Demo and disposal | $8,200 |
+| Scaffolding (3-story) | $11,400 |
+| WRB (housewrap) | $2,800 |
+| Hardie material and install | $26,500 |
+| Trim and corner details | $4,100 |
+| Dry rot repair (12% discovery) | $5,800 |
+| SF DBI permit | $3,600 |
+| Prime and paint | $5,900 |
+| **Total** | **$68,300** |
+
+The 12% dry rot discovery — two window rough openings and a section of rim joist at the front bay — added $5,800 to a project originally scoped at approximately $62,000. That's a typical outcome on a Noe Valley Victorian that hadn't had its siding touched since the 1980s.
+
+**Project 2: Mill Valley Canyon Home, Cedar Shingle Replacement**
+1,800 sq ft of elevation, Tamalpais Valley neighborhood in [Mill Valley](/service-areas/mill-valley), original T1-11 removed and replaced with clear-grade cedar shingles. T1-11 is large-format plywood panel siding common on 1970s–1980s construction. Marin CDA (Marin Community Development Agency — the county agency that issues building permits for unincorporated Marin and several incorporated cities) permit. WUI fire-zone designation required fire-retardant-treated cedar and class-A roof coordination — not a standard cedar spec.
+
+| Line Item | Cost |
+|---|---|
+| Demo and disposal | $5,400 |
+| WRB | $2,100 |
+| Fire-retardant cedar shingles and install | $22,800 |
+| Trim and corner details | $3,200 |
+| Dry rot repair (8% discovery) | $2,900 |
+| Marin CDA permit | $2,600 |
+| Prime and stain | $4,100 |
+| **Total** | **$43,100** |
+
+**Project 3: Westlake Daly City Doelger, Stucco Removal and Hardie Plank Installation**
+1,600 sq ft of elevation, 1948 Doelger home in the [Westlake neighborhood of Daly City](/service-areas/daly-city), original stucco over shiplap removed. Scope included full shiplap-to-plywood sheathing replacement (shiplap found saturated at bay window and front elevation), new WRB, HardiePlank installation, new trim and window surrounds, Daly City Department of Economic & Community Development permit.
+
+| Line Item | Cost |
+|---|---|
+| Stucco demo and disposal | $7,100 |
+| Shiplap-to-plywood sheathing replacement | $6,400 |
+| WRB | $1,900 |
+| Hardie material and install | $21,200 |
+| Trim, window surrounds, corner boards | $4,800 |
+| Dry rot repair (additional framing) | $3,600 |
+| Permit (Daly City DECD) | $2,200 |
+| Prime and paint | $4,500 |
+| **Total** | **$51,700** |
+
+The Doelger project illustrates the pattern we see repeatedly on Westlake homes. The initial scope was estimated at roughly $38,000 before the shiplap condition was confirmed. Opening the wall revealed the full picture — saturated sheathing, compromised framing, and a bay window rough opening that needed full reconstruction. That delta from $38,000 to $51,700 is not an outlier. It's what Doelger walls look like when they haven't been opened in 40+ years.
+
+For context on what drives that gap, see our [dry rot discovery guide](/blog/dry-rot-bay-area-homes-spot-repair-cost) and [how to choose your siding material](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area).
+
+---
+
+## Frequently Asked Questions
+
+### How much does full-house siding replacement cost in San Francisco?
+
+Siding replacement cost in San Francisco runs $25,000–$85,000+ for a typical 2,000 sq ft home. James Hardie HardiePlank installed runs $28,000–$44,000. Engineered wood composite runs $24,000–$36,000. Cedar or redwood runs $20,000–$32,000. Add 15–25% for scaffolding, permits, and dry rot contingency before accepting any bid.
+
+### Is dry rot always discovered during siding replacement in the Bay Area?
+
+Dry rot discovery during siding replacement is common, not rare, on Bay Area homes that haven't had siding work in 20+ years — which describes most of the Sunset, Richmond, Oakland, and Marin hillside housing stock. Gadget Construction finds evidence of active or prior rot on the majority of full-replacement projects. Budget a 10–20% contingency on your siding budget and insist on an explicit allowance in any written bid.
+
+### Do I need a permit for siding replacement in San Francisco?
+
+Yes. SF DBI requires a permit for any full siding replacement that disturbs the existing weather-resistive barrier. The permit costs $2,000–$6,000 depending on project valuation, and SF DBI permit processing currently runs 6–10 weeks for residential exterior work. Any contractor bidding a full SF siding replacement without a permit line item is a red flag.
+
+### What siding material is best for homes in San Francisco's fog belt?
+
+James Hardie HardiePlank HZ10 is the most reliable material for homes in SF's fog belt — specifically the Sunset, Richmond, and Pacifica coastal corridor. HZ10 is Hardie's coastal climate specification, rated for persistent moisture and salt air. LP SmartSide is a strong second choice for areas outside the immediate salt-air zone. Avoid vinyl in the fog belt: it fades, can't be repainted, and doesn't match Bay Area architecture.
+
+### Does siding replacement affect resale value in San Francisco?
+
+Yes, significantly. New siding is one of the highest-ROI exterior projects on SF homes. Hardie and engineered wood composite read as premium finishes and are expected by buyers in neighborhoods like Noe Valley, Pacific Heights, and Rockridge. Vinyl siding actively hurts resale on period homes — buyers and agents in SF associate it with deferred maintenance, not cost savings.
+
+### How long does siding replacement take on a typical SF home?
+
+A typical full-house siding replacement on a 2,000 sq ft SF home takes 3–5 weeks of active construction, not counting permit processing. SF DBI permit processing adds 6–10 weeks to the total schedule before work can start. Dry rot discovery can add 3–7 days of framing repair mid-project. Plan for a 3–4 month total timeline from contract signing to completion.
+
+### What's the difference between Hardie board and engineered wood composite siding?
+
+Hardie board (fiber cement) is made from portland cement, sand, and cellulose fibers. It's dimensionally stable, non-combustible, and carries a 30-year warranty. Engineered wood composite (LP SmartSide) is made from wood fiber bonded with resins. It looks more like natural wood, carries a 50-year warranty, but requires more frequent repainting in coastal climates and is more vulnerable to moisture intrusion at unsealed cut ends. Hardie is typically specified for salt-air and WUI fire zones; LP SmartSide performs well inland.
+
+---
+
+## Ready to Get a Real Number for Your Siding Project?
+
+[Bay Area siding replacement](/services/exterior-repairs) costs hinge on what's behind the existing cladding — and you won't know that until a contractor walks the home and puts it in writing. Gadget Construction (CA License #1132983) provides itemized, fixed-price estimates with explicit dry rot allowances, scaffolding costs, and permit fees included. No mystery change orders after the walls are open.
+
+We've completed 500+ projects across [San Francisco](/service-areas/san-francisco), [Oakland](/service-areas/oakland), [Berkeley](/service-areas/berkeley), [Palo Alto](/service-areas/palo-alto), [Mill Valley](/service-areas/mill-valley), and [Pacifica](/service-areas/pacifica) — with a 5-year workmanship warranty in writing on every scope. Schedule your free on-site assessment through our [contact page](/contact).
+    `.trim(),
+  },
+
+  {
     slug: "dry-rot-bay-area-homes-spot-repair-cost",
     featuredImage: "/images/blog-dry-rot-bay-area-homes-spot-repair-cost.png",
     title: "Dry Rot in Bay Area Homes: How to Spot It Before It Eats Your Framing (and What Repair Actually Costs)",
