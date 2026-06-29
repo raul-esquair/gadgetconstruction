@@ -29,6 +29,248 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "5-exterior-repairs-coastal-bay-area-homes-always-need",
+    featuredImage: "/images/blog-5-exterior-repairs-coastal-bay-area-homes-always-need.png",
+    title: "The 5 Exterior Repairs Coastal Bay Area Homes Always Need (Sunset, Marin, Pacifica, Daly City)",
+    excerpt:
+      "Coastal Bay Area homes wear out differently than inland homes. Fog, salt air, and wind-driven rain guarantee these five exterior repairs — on a predictable cycle. Here's what to expect and when.",
+    date: "2026-06-29",
+    readingTime: "14 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How much does coastal home exterior repair cost in the Bay Area?",
+        "answer": "Annual exterior maintenance for a coastal Bay Area home — Sunset, Pacifica, Sausalito, Daly City — runs $3,000–$8,000 in years with no major project active. Major projects cluster at predictable milestones: $8,000–$15,000 at year 10 for repaint and caulk, $5,000–$15,000 at year 15 for dry rot and stucco, and $20,000–$50,000 at year 20 for siding or stucco system decisions. Budget 1–2% of home value per year as a long-term maintenance reserve."
+      },
+      {
+        "question": "How long does exterior paint last on a coastal Bay Area home?",
+        "answer": "Exterior paint on a fog-belt home in the Sunset, Richmond, or Pacifica typically lasts 5–8 years — roughly half the 10–15-year lifespan inland homes see in Walnut Creek or Palo Alto. Salt air breaks the bond between paint and substrate, while fog moisture prevents the paint film from fully curing between weather events. Budget for a repaint cycle of 6–8 years on any coastal Bay Area home."
+      },
+      {
+        "question": "What causes dry rot in Bay Area coastal homes, and how do I spot it early?",
+        "answer": "Dry rot (active fungal decay) occurs when wood moisture content stays above roughly 20% — a threshold the Bay Area fog belt maintains year-round on exposed wood surfaces. Early signs include a soft spot when you press a screwdriver tip into a window sill or deck ledger, paint bubbling on sill faces, and a spongy feeling near fascia edges. Caught at the sill-only stage, repair runs $800–$2,500. Caught after rot spreads to framing, expect $4,000–$12,000 per window."
+      },
+      {
+        "question": "Do I need a permit for exterior repairs in San Francisco or Pacifica?",
+        "answer": "Most cosmetic exterior repairs — paint, caulk, gutter replacement, and limited dry rot spot repair — don't require a permit from the SF DBI (San Francisco Department of Building Inspection) or Pacifica's Building and Safety Division. Structural repairs involving framing, ledger replacement, or full siding replacement typically do require permits. Confirm with the relevant jurisdiction before work begins — unpermitted structural work can surface as a problem at resale."
+      },
+      {
+        "question": "Which siding material holds up best in the coastal Bay Area fog belt?",
+        "answer": "James Hardie HardiePlank HZ10 (the coastal climate specification of fiber cement siding) outperforms wood, stucco, and standard composite panels in coastal Bay Area conditions. Installed with stainless steel fasteners and properly flashed at all openings, HZ10 carries a 30-year substrate warranty and doesn't rot or lose paint adhesion on the fog-belt schedule that wood siding does. Full-house replacement costs $28,000–$50,000+ installed — typically less than three wood repaint cycles over 20 years."
+      },
+      {
+        "question": "How often should I inspect my deck ledger on a coastal Bay Area home?",
+        "answer": "Deck ledgers on coastal Bay Area homes should be inspected every 3–5 years using a flathead screwdriver probe at the ledger-to-house junction. If the tip sinks more than ¼ inch without force, active rot is present. Multiple Bay Area deck collapses have been traced to rotted ledger connections with no surface warning signs. Ledger replacement costs $1,500–$4,000 — far less than the liability of a failed deck."
+      },
+      {
+        "question": "Is Pacifica worse for exterior wear than other Bay Area coastal cities?",
+        "answer": "Yes. Pacifica — specifically Linda Mar and Rockaway Beach — sees the highest combined salt air concentration and atmospheric river rainfall volume of any Bay Area coastal community. Homes there face paint failure on the short end of the 5–8 year coastal range, and gutter corrosion that runs 20–30% faster than homes in Sausalito or Tiburon, which have more topographic wind protection. Pacifica coastal home exterior repair budgets should be set at the higher end of the ranges in this post."
+      }
+    ],
+    content: `
+## The Short Answer: Coastal Bay Area Homes Wear Out Differently
+
+Coastal home exterior repair in the Bay Area isn't optional maintenance — it's a predictable schedule. If you live within 5 miles of the Pacific — the Sunset, Richmond, Pacifica, Daly City, Sausalito, or coastal Marin — your home is aging faster than an identical house in Walnut Creek or Los Altos. Fog, salt air, and wind-driven rain attack specific systems in specific patterns on a consistent timeline. These five repairs aren't maybes. They're certainties. Here's what fails, when it fails, and what it costs when you catch it early versus late.
+
+Gadget Construction (CA License #1132983) has documented these failure patterns across 500+ Bay Area projects over 12+ years. The pricing below comes from actual coastal Bay Area jobs, not national averages.
+
+---
+
+## Why Do Coastal Bay Area Homes Fail Faster?
+
+Coastal Bay Area homes fail faster because they face four simultaneous environmental stresses — salt air, persistent fog moisture, wind-driven rain, and amplified UV — that inland homes never experience in combination. Understanding each one tells you where to look first on your own home.
+
+### Salt Air (Accelerates Paint and Fastener Corrosion)
+
+Salt air doesn't just corrode metal. It pulls moisture into paint film, breaks the bond between paint and substrate, and accelerates oxidation of any uncoated fastener. Inland homes in Walnut Creek or Palo Alto might get 12–15 years from an exterior paint job. The same paint system on a home in Rockaway Beach in Pacifica or the Outer Sunset typically lasts 5–8 years before it's visibly failing.
+
+Standard galvanized joist hangers, deck screws, and gutter brackets — designed for normal residential exposure — corrode to the point of structural concern within 10–12 years in direct coastal exposure. For [Sausalito hillside exterior repairs](/service-areas/sausalito), Gadget Construction specifies stainless steel hardware as standard, not an upgrade.
+
+### Fog Exposure (Permanent Moisture in Wood)
+
+Wood begins to rot when its moisture content stays above roughly 20% for extended periods. The fog belt keeps it there. Homes in the Inner and Outer Sunset, Linda Mar in Pacifica, and coastal Marin spend 200+ days per year in conditions that would be considered persistently wet anywhere else. The wood doesn't dry out between events. Sill plates, window sills, fascia boards, and deck ledgers absorb fog moisture overnight, partially dry by midday, and re-saturate the next morning. That cycle accelerates biological decay far faster than periodic rain events alone.
+
+### Wind-Driven Rain (Water Where Flashing Wasn't Designed to Stop It)
+
+During Bay Area atmospheric river events — the kind that dumped 6–10 inches on the Peninsula and Marin in January 2023 — rain hits coastal homes horizontally. Flashing details designed for vertical rainfall don't stop water arriving at a 45-degree angle under sustained wind pressure.
+
+Kickout flashing (the metal diverter where a roof slope meets a sidewall, designed to throw water away from the wall) fails first. Window head flashing — the metal cap above window frames that sheds roof runoff — is the second failure point. You'll find the damage 12–18 months after the storm event, when the framing that got wet has had time to rot. Our [services/roofing](/services/roofing) page covers how roof-to-wall transitions should be detailed to handle coastal wind-driven conditions.
+
+### UV from Reflected Ocean Light
+
+Ocean reflection amplifies UV exposure on west-facing and south-facing elevations. UV intensity on a fog-belt home's west elevation runs roughly 20% higher than inland comparisons. UV breaks down paint binders and oxidizes wood extractives faster — part of why paint fails on schedule in coastal zones. This is also why stucco color fades visibly on west-facing walls of Sunset and Richmond homes within 8–10 years of application, even when the stucco itself is structurally intact.
+
+---
+
+## Repair #1: Dry Rot at Window Sills and Bay Windows
+
+Dry rot at window sills and bay windows is the single most common coastal home exterior repair in the Bay Area — and the one where timing matters most. Window sills are horizontal surfaces that collect moisture. Bay windows compound the problem by creating a recessed cavity beneath the sill where water pools, evaporation is limited, and wood stays wet indefinitely.
+
+A typical coastal home — say, a 1950s Doelger in the Outer Sunset or the Westlake neighborhood of Daly City — shows soft spots at window sills within 10–15 years of the last exterior renovation. By year 20 without intervention, the rot is typically active and spreading into the rough opening framing.
+
+**Dry rot repair costs vary dramatically based on how early you act:**
+
+- **Caught early** (sill only, no framing involvement): $800–$2,500 per window
+- **Caught late** (framing, king studs, or rough opening compromised): $4,000–$12,000 per window
+
+[Westlake Doelger home exterior work](/service-areas/daly-city) presents a specific pattern we see repeatedly: stucco applied directly over original shiplap sheathing at the bay window, with no drainage plane behind it. When that stucco cracks — and it always does — water enters the wall cavity and sits against the shiplap with no exit path. By the time you see interior staining or a soft spot on the sill exterior, the shiplap is often saturated for 2–3 feet in every direction from the visible damage point.
+
+For more detail on what to look for and what remediation actually costs, read our guide on [how to spot and repair dry rot](/blog/dry-rot-bay-area-homes-spot-repair-cost). And because dry rot at bay windows is rarely an isolated failure — stucco cracks and siding failures typically accompany it — see our [stucco vs. Hardie board vs. wood siding comparison](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area) for how to think about the full wall system.
+
+---
+
+## Repair #2: Stucco Cracking and Spalling
+
+Stucco cracking and spalling is the second most predictable coastal home exterior repair on Bay Area homes — and the most dangerous one to defer. The mechanism isn't freeze-thaw in the traditional sense — Bay Area coastal temps rarely drop below freezing — but thermal cycling with persistent moisture does similar damage. Stucco expands in afternoon heat and contracts overnight in cold fog. Repeated over decades, that cycling opens hairline cracks at control joints, corners, and around openings.
+
+Wind-driven rain drives water through those cracks, wetting the WRB (weather-resistive barrier — the moisture membrane between sheathing and stucco) or, on older Sunset and Richmond homes, soaking directly into shiplap sheathing with no WRB present at all.
+
+**Stucco repair timeline on a typical coastal Sunset or Richmond home:**
+
+- **Year 15–20:** Surface cracking visible; re-coat is the right call
+- **Year 30–40:** Spalling (surface layer delaminating), bulk moisture intrusion, and staining; full re-stucco may be required
+
+| Repair Scope | Cost Range |
+|---|---|
+| Patch (isolated cracks, single elevation) | $400–$1,500 |
+| Re-coat (one elevation, intact substrate) | $4,000–$9,000 |
+| Full re-stucco (whole-house, new WRB) | $15,000–$35,000 |
+
+The question homeowners on stucco homes consistently ask wrong is: "Should I patch or re-coat?" The right question is: "Is the WRB still intact behind the surface?" If the WRB has been compromised — or if the home pre-dates WRB requirements and has raw shiplap behind the stucco — patching the surface doesn't solve the water management problem. It defers it expensively.
+
+Our [full guide to stucco repair decisions](/blog/cracked-stucco-san-francisco-patch-recoat-tear-off) walks through how to distinguish a surface repair from a system replacement. For the material comparison between stucco and alternatives for coastal homes, see [stucco vs. Hardie board vs. wood siding for Bay Area homes](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area).
+
+---
+
+## Repair #3: Siding Failure and Paint Peeling
+
+Siding failure on coastal Bay Area homes follows a schedule that consistently surprises homeowners comparing notes with friends in Orinda or Pleasanton. Paint longevity drops from 10–15 years inland to 5–8 years in the fog belt. Once paint fails, bare wood faces the full combination of salt air, fog moisture, and amplified UV — and decay begins within 2–3 seasons.
+
+Cedar and redwood hold up meaningfully better than pine in coastal exposure. T1-11 plywood siding — large-format grooved plywood panels common on 1970s and 1980s construction — is the most vulnerable wood product in coastal zones. T1-11 is a sheet good, and when the factory finish fails and the face veneers delaminate, the panel begins to fail structurally, not just aesthetically. Homes in San Mateo's coastal Eichler tracts and certain 1970s Mill Valley neighborhoods with T1-11 are overdue for this reckoning right now.
+
+**The right solution for most coastal Bay Area homes is James Hardie HardiePlank HZ10** — the coastal climate specification, rated for persistent moisture and salt air. Installed with stainless steel fasteners and properly flashed at all openings, HardiePlank on a coastal home won't need replacement in your lifetime. Our [siding replacement cost breakdown](/blog/siding-replacement-cost-san-francisco-2026) covers the full material comparison with installed cost per square foot.
+
+| Scope | Cost Range |
+|---|---|
+| Repaint (full exterior, typical SF home) | $8,000–$18,000 |
+| Wood siding replacement (full house) | $20,000–$35,000 |
+| Hardie HZ10 replacement (full house) | $28,000–$50,000+ |
+
+The repaint cost repeats every 5–8 years in coastal zones. Over 20 years, three repaints on a wood-sided home can exceed the premium cost of switching to fiber cement once. That cycle cost is part of the material decision. For [Sunset and Richmond exterior repairs](/service-areas/san-francisco), we're increasingly recommending HardiePlank on any home where the existing wood siding is already past its second repaint.
+
+---
+
+## Repair #4: Deck Ledger Board and Fascia Rot
+
+The deck ledger-to-house connection is the second most common dry rot location on coastal Bay Area homes — and the most dangerous one to ignore. The deck ledger board (the framing member bolted to the house rim joist that carries the outer end of the deck joists) sits in a difficult flashing detail. When ledger flashing fails, water enters the gap between the ledger and house sheathing with no exit path. It sits there and saturates both the ledger and the rim joist behind it.
+
+Multiple Bay Area deck collapses in the past decade have been traced to rotted ledger connections that were invisible from the surface. On coastal homes in Sausalito, Tiburon, and the Sunset — where this detail has been wet for years — the decay can be extensive before any visible sign appears at the deck surface. For a detailed look at how hillside deck construction handles these details differently, see our guide to [hillside and multi-level deck construction in SF and Marin](/blog/hillside-multi-level-deck-construction-sf-marin).
+
+Fascia rot — the painted trim boards wrapping rooflines and eave edges — is the third most common coastal failure point. Fascia faces skyward at the top edge, collects fog and rain, and is typically painted rather than sealed on all faces. When paint fails on the top surface, wood decays from the top down. By the time the face shows visible deterioration, the back face is often already soft.
+
+**Inspection cadence for coastal homes:** Every 3–5 years, probe the deck ledger at the ledger-to-house junction with a flathead screwdriver. If the tip sinks more than ¼ inch without force, you have active rot. Don't defer — a failed ledger is a safety failure, not a maintenance decision.
+
+| Repair | Cost Range |
+|---|---|
+| Deck ledger board replacement | $1,500–$4,000 |
+| Fascia replacement (single elevation) | $2,000–$6,000 |
+
+If ledger rot has progressed to the rim joist or adjacent framing, that repair overlaps with foundation-adjacent structural work — see [5 signs your San Francisco home needs foundation repair](/blog/foundation-repair-signs-san-francisco) for how to assess whether structural framing damage has migrated downward.
+
+---
+
+## Repair #5: Gutter and Downspout Failure
+
+Gutter and downspout failure is the most underestimated coastal home exterior repair — until failed gutters cause the other four repairs on this list. Aluminum and galvanized steel gutters corrode faster in salt air. Seams in sectional gutter systems (the type installed on most Bay Area homes before seamless gutters became standard) open at the lap joints within 10–15 years of coastal exposure. Downspout brackets corrode, pull away from the fascia, and allow the downspout to shift until it's no longer directing water away from the foundation.
+
+There's a second failure mode specific to the fog belt: biological growth. Consistent moisture keeps gutters perpetually damp, accelerating moss, lichen, and algae growth inside the gutter trough. That organic accumulation clogs downspout inlets and holds additional moisture against the gutter bottom — accelerating corrosion from the inside out.
+
+Failed gutters don't just cause basement flooding. They dump concentrated roof runoff at your foundation and along exterior walls — exactly the conditions that drive dry rot and stucco failures in Repairs #1 and #2.
+
+**Recommended replacement:** Seamless aluminum gutters with factory-applied coastal-rated coating, or copper gutters on homes where appearance matters. Copper develops a patina in salt air but doesn't corrode structurally. K-style profile with oversized 3×4 downspouts handles the volume of atmospheric river events.
+
+- Full gutter and downspout replacement: $2,000–$5,000 for a typical SF or Pacifica home
+- **Inspection cadence:** Every spring — clear organic debris from downspout inlets before fog season starts
+
+For [Pacifica coastal home repairs](/service-areas/pacifica), gutter replacement is frequently the first project we recommend. The homes in Linda Mar and Rockaway Beach see the highest combined salt air and atmospheric river volume of any Bay Area coastal community. Fix the gutters first and you slow the decay rate of everything else. For [Tiburon](/service-areas/tiburon) and [Mill Valley](/service-areas/mill-valley) hillside homes, failed downspouts also contribute to slope erosion — a secondary problem that can involve retaining walls and is addressed in our [retaining walls service page](/services/retaining-walls).
+
+---
+
+## The 10-Year Maintenance Rhythm for Coastal Bay Area Homes
+
+Coastal exterior maintenance isn't a series of surprises — it's a predictable schedule. Plan for it on this timeline and you'll spend significantly less than responding to failures reactively.
+
+| Milestone | Expected Work | Budget |
+|---|---|---|
+| Year 5 | Exterior inspection; caulk refresh at all penetrations; gutter cleaning and joint seal | $2,000–$5,000 |
+| Year 10 | Full repaint or restain; replace failed caulk and trim sealant; probe ledger and sills | $8,000–$15,000 |
+| Year 15 | Dry rot repairs at window sills, fascia, and ledger; stucco crack repair; gutter replacement if not done | $5,000–$15,000 |
+| Year 20 | Siding or stucco system decision; structural deck review; full ledger inspection | $20,000–$50,000 |
+| Year 25–30 | Full exterior refresh: siding replacement, stucco tear-off, deck rebuild | $50,000–$150,000 |
+
+The year-20 milestone is where most coastal homeowners feel blindsided — not because the work is unexpected, but because deferred maintenance from skipped 5-year and 10-year interventions has compounded the scope. A $4,000 sill repair at year 8 prevents the $14,000 rough-opening reconstruction at year 22. The math is consistent across hundreds of projects.
+
+**Long-term planning anchor:** Budget 1–2% of home value per year for coastal exterior maintenance. A $1.5M Sunset home should be accruing $15,000–$30,000 per year in a maintenance reserve. That's not alarmist — it's what Bay Area coastal home exterior repair actually costs at this schedule.
+
+---
+
+## How to Budget for Ongoing Coastal Home Maintenance
+
+The average annual exterior maintenance spend for a coastal Bay Area home runs $3,000–$8,000 in years where no major project is active. That covers paint touchups, caulk refresh, gutter maintenance, probe inspections, and the spot repairs that appear every year on any home facing the Pacific.
+
+Major projects — siding replacement, stucco re-coat, deck rebuild, ledger repair — cluster in the year-10, year-15, and year-20 windows above. Budget those separately at $20,000–$50,000 when the cycle arrives.
+
+Three practical steps to protect your budget:
+
+**Get an exterior walkaround every 2 years.** Not a full project — a documented inspection with photos of every suspect area. Tracking change over time tells you whether a hairline stucco crack is stable or widening. You can't make that call without baseline photos from 2 years earlier.
+
+**Act when you notice something.** The most expensive phrase in coastal home maintenance is "we'll keep an eye on it." Decay that's visible is already advanced. [Bay Area exterior repairs across 31 cities](/services/exterior-repairs) are always cheaper at the spot-repair stage than at the full-system-replacement stage.
+
+**Don't compare repair cycles to inland neighbors.** A friend in Orinda repainting every 12 years isn't wrong — they're just in a different climate. Your 6-year repaint cycle in the Outer Sunset is correct for your conditions. Build it into your budget. If you're planning broader updates alongside exterior repairs, see how exterior work integrates with larger scope in our [home remodel cost guide for San Francisco](/blog/home-remodel-cost-san-francisco-2026).
+
+---
+
+## Frequently Asked Questions
+
+### How much does coastal home exterior repair cost in the Bay Area?
+
+Annual exterior maintenance for a coastal Bay Area home — Sunset, Pacifica, Sausalito, Daly City — runs $3,000–$8,000 in years with no major project active. Major projects cluster at predictable milestones: $8,000–$15,000 at year 10 for repaint and caulk, $5,000–$15,000 at year 15 for dry rot and stucco, and $20,000–$50,000 at year 20 for siding or stucco system decisions. Budget 1–2% of home value per year as a long-term maintenance reserve.
+
+### How long does exterior paint last on a coastal Bay Area home?
+
+Exterior paint on a fog-belt home in the Sunset, Richmond, or Pacifica typically lasts 5–8 years — roughly half the 10–15-year lifespan inland homes see in Walnut Creek or Palo Alto. Salt air breaks the bond between paint and substrate, while fog moisture prevents the paint film from fully curing between weather events. Budget for a repaint cycle of 6–8 years on any coastal Bay Area home.
+
+### What causes dry rot in Bay Area coastal homes, and how do I spot it early?
+
+Dry rot (active fungal decay) occurs when wood moisture content stays above roughly 20% — a threshold the Bay Area fog belt maintains year-round on exposed wood surfaces. Early signs include a soft spot when you press a key or screwdriver tip into a window sill or deck ledger, discoloration or paint bubbling on sill faces, and a slightly spongy feeling underfoot near fascia edges. Caught at the sill-only stage, repair runs $800–$2,500. Caught after the rot spreads to framing, expect $4,000–$12,000 per window.
+
+### Do I need a permit for exterior repairs in San Francisco or Pacifica?
+
+Most cosmetic exterior repairs — paint, caulk, gutter replacement, and limited dry rot spot repair — don't require a permit from the SF DBI (San Francisco Department of Building Inspection) or Pacifica's Building and Safety Division. Structural repairs involving framing, ledger replacement, or full siding replacement typically do require permits. When in doubt, confirm with the relevant jurisdiction before work begins — unpermitted structural work can surface as a problem at resale.
+
+### Which siding material holds up best in the coastal Bay Area fog belt?
+
+James Hardie HardiePlank HZ10 (the coastal climate specification of fiber cement siding) outperforms wood, stucco, and standard composite panels in coastal Bay Area conditions. Installed with stainless steel fasteners and properly flashed at all openings, HZ10 carries a 30-year substrate warranty and doesn't rot, delaminate, or lose paint adhesion on the fog-belt schedule that wood siding does. It costs $28,000–$50,000+ installed for a full-house replacement — but that's typically cheaper over 20 years than three repaint cycles on wood siding.
+
+### How often should I inspect my deck ledger on a coastal Bay Area home?
+
+Deck ledgers on coastal Bay Area homes should be inspected every 3–5 years using a flathead screwdriver probe at the ledger-to-house junction. If the tip sinks more than ¼ inch without force, active rot is present. Multiple Bay Area deck collapses have been traced to rotted ledger connections that showed no surface warning signs. Ledger replacement costs $1,500–$4,000 — far less than the liability of a failed deck.
+
+### Is Pacifica worse for exterior wear than other Bay Area coastal cities?
+
+Yes. Pacifica — specifically Linda Mar and Rockaway Beach — sees the highest combined salt air concentration and atmospheric river rainfall volume of any Bay Area coastal community. Homes there face paint failure on the short end of the 5–8 year coastal range, and gutter corrosion that runs 20–30% faster than homes in Sausalito or Tiburon, which have more topographic wind protection. Pacifica coastal home exterior repair budgets should be set at the higher end of the ranges cited in this post.
+
+---
+
+## Ready to Know Where Your Coastal Home Actually Stands?
+
+Exterior decay on coastal Bay Area homes hides well — until it doesn't. Gadget Construction (CA License #1132983) has been repairing coastal Bay Area homes for 12+ years: the Sunset, Richmond, [Pacifica coastal home repairs](/service-areas/pacifica), [Westlake Doelger home exterior work](/service-areas/daly-city), [Sausalito hillside exterior repairs](/service-areas/sausalito), Mill Valley, Tiburon, and across coastal Marin. We handle [Bay Area exterior repairs across 31 cities](/services/exterior-repairs) with a 5-year workmanship warranty, in writing, on every repair.
+
+We provide free exterior assessments with a written photo report documenting every issue we find — no scare tactics, no pressure, no obligation to proceed. You'll leave the assessment knowing exactly what your home needs, in what order, and what it costs. Schedule your site visit through our [contact page](/contact).
+    `.trim(),
+  },
+
+  {
     slug: "hillside-multi-level-deck-construction-sf-marin",
     featuredImage: "/images/blog-hillside-multi-level-deck-construction-sf-marin.png",
     title: "Hillside & Multi-Level Deck Construction in SF and Marin: What Makes It Different (and More Expensive)",
