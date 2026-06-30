@@ -1,131 +1,261 @@
 [
   {
-    "slug": "deck-permit-san-francisco-dbi-guide",
+    "slug": "foundation-underpinning-cost-bay-area-2026",
     "scheduledDate": "2026-07-06",
-    "status": "queued",
-    "title": "Do You Need a Permit for a Deck in San Francisco? DBI Rules, Costs, and Timeline (2026)",
-    "metaTitle": "SF Deck Permit Guide (2026) | DBI Rules, Costs & Timeline",
-    "excerpt": "Most SF decks need a DBI permit — and the 30-inch rule is just the start. Here's exactly when you need one, what it costs, how long it takes, and what happens if you skip it.",
-    "primaryKeyword": "deck permit san francisco",
+    "status": "planned",
+    "title": "Foundation Underpinning Cost in the Bay Area (2026): Helical Piers, Push Piers, and What Drives the Price",
+    "metaTitle": "Foundation Underpinning Cost Bay Area (2026) | Real Pier Pricing",
+    "excerpt": "Foundation underpinning in the Bay Area runs $15,000 to $80,000+ depending on method, soil, and pier count. Here's what each method actually costs — with real numbers from Marin hillsides, SF Marina fill, and Oakland clay.",
+    "primaryKeyword": "foundation underpinning cost bay area",
     "secondaryKeywords": [
-      "do i need a permit for a deck sf",
-      "sf dbi deck permit",
-      "deck permit cost san francisco",
-      "san francisco deck building code",
-      "unpermitted deck san francisco"
+      "helical piers cost bay area",
+      "push piers cost",
+      "foundation underpinning contractors",
+      "under pinning cost",
+      "foundation repair cost bay area"
     ],
-    "relatedService": "composite-decks",
+    "relatedService": "concrete-foundations",
     "targetWordCount": 2400,
-    "geoFocus": "SF-anchored",
+    "geoFocus": "Bay Area-wide",
     "citiesReferenced": [
       "San Francisco",
-      "Noe Valley",
-      "Bernal Heights",
-      "Twin Peaks",
+      "Marina",
       "Sunset",
-      "Richmond"
+      "Oakland",
+      "Berkeley",
+      "Mill Valley",
+      "Sausalito",
+      "Daly City"
     ],
     "outline": [
       {
-        "h2": "The Short Answer: When SF Decks Need a Permit",
-        "notes": "2-4 sentences. Any deck more than 30 inches above grade at any point requires a SF DBI building permit. Decks attached to the house almost always need one regardless of height (because of ledger attachment). Ground-level freestanding decks under 30 inches and under 200 sq ft generally don't. Permit costs run $800-$3,500. Timeline 6-16 weeks for over-the-counter, longer with plan review."
+        "h2": "The Short Answer: Bay Area Underpinning Cost Ranges",
+        "notes": "Helical piers $2,500-$4,500 each. Push piers $2,000-$3,500 each. Most projects need 6-18 piers = $15K-$80K. Bay Area projects run 20-30% above national averages due to soil complexity, seismic engineering, and permit costs."
       },
       {
-        "h2": "When Do You Need a Deck Permit in San Francisco?",
+        "h2": "What Is Foundation Underpinning?",
+        "notes": "Define underpinning as a complete standalone sentence. Cover when you need it: settling, sloping floors, stair-step cracks, doors that won't close. Link to existing foundation signs post."
+      },
+      {
+        "h2": "How Much Do Helical Piers Cost in the Bay Area?",
         "h3": [
-          "The 30-Inch Above Grade Rule",
-          "Attached vs Freestanding Decks",
-          "Replacement and Repair Thresholds",
-          "Decks Over Habitable Space (Roof Decks)"
+          "Cost Per Pier and Typical Project Total",
+          "When Helical Piers Are the Right Call",
+          "Marin Hillside and Steep-Slope Premium"
         ],
-        "notes": "Walk through each scenario with specific code references. SFBC follows CRC Section R105.2 modified by SF amendments. Ledger attachment to existing structure triggers structural review regardless of height. Like-for-like board replacement under specific scope is exempt. Roof decks ALWAYS require permit + structural engineering."
+        "notes": "Helical piers $2,500-$4,500 per pier installed. Define helical pier as standalone sentence. Best for: hillside Marin homes, limited-access SF backyards, lighter Victorians. Mention Mill Valley and Berkeley Hills as common use cases."
       },
       {
-        "h2": "How Much Does a SF Deck Permit Cost?",
+        "h2": "How Much Do Push Piers Cost in the Bay Area?",
         "h3": [
-          "DBI Permit Fees ($800–$3,500)",
-          "Structural Plan Check ($400–$1,800)",
-          "Structural Engineer Stamp ($2,000–$6,000)",
-          "Historic / Planning Review (Some Neighborhoods)"
+          "Cost Per Pier and Typical Project Total",
+          "When Push Piers Make Sense",
+          "Heavy Structures and Deep Bedrock"
         ],
-        "notes": "Real DBI fee breakdown. Permit fee scales with valuation. Plan check separate. Engineer stamp required for hillside, multi-level, elevated, roof decks. Planning review in historic districts (Alamo Square, Liberty Hill) adds $1,500-$4,000."
+        "notes": "Push piers $2,000-$3,500 per pier. Define push pier as standalone sentence. Best for: heavier Edwardian/Victorian rowhouses, SF flatlands with good bedrock access. Mention Alamo Square, Pacific Heights, Richmond as use cases."
       },
       {
-        "h2": "SF DBI Permit Timeline: What to Actually Expect",
-        "notes": "Over-the-counter (OTC) for simple decks: 1-2 visits, 4-8 weeks. Standard plan review: 8-16 weeks. Complex (hillside, roof deck): 4-8 months. Pre-application meeting can speed things up. Mention common reasons for kickback (missing soils info, undersized footings, railing detail)."
+        "h2": "Why Bay Area Underpinning Costs More Than the National Average",
+        "h3": [
+          "Soil Conditions (Marina Fill, Bay Mud, Sunset Clay)",
+          "Seismic Engineering Requirements",
+          "Permit Costs by Jurisdiction (SF DBI, Oakland, Marin CDA)",
+          "Site Access Constraints"
+        ],
+        "notes": "Each soil type gets a standalone-sentence definition. Engineering reports $3K-$8K. SF DBI permits $2K-$5K. Oakland Planning & Building permits typically $1,500-$4,000. Marin CDA can run higher with geotech requirements."
       },
       {
-        "h2": "What Happens If You Build Without a Permit",
-        "notes": "Real consequences. DBI can issue a Notice of Violation, require demolition, fine 9x permit fee. Unpermitted decks surface during sale (3R report). Insurance won't cover injuries on unpermitted structures. Home buyers' lenders may require legalization. The cost to legalize after the fact is usually 2-3x what it would've been upfront."
+        "h2": "Real Bay Area Project Examples",
+        "notes": "Three concrete examples with line-item breakdowns. Example 1: Marina District 1920s home, 12 helical piers, $48K. Example 2: Berkeley Elmwood Craftsman, 8 push piers, $26K. Example 3: Mill Valley hillside, 14 helical piers + drainage, $72K."
       },
       {
-        "h2": "FAQ: What Bay Area Homeowners Actually Ask",
-        "notes": "FAQ section answering 6 real questions phrased like AI engine queries (see mustInclude)."
+        "h2": "Red Flags in Underpinning Bids",
+        "notes": "Per-pier pricing without engineering report. No mention of permits. No geotech reference. 'Lifetime warranty' without manufacturer backing. Vague pier count ('we'll figure it out'). Cash-only pricing."
       },
       {
-        "h2": "Ready to Pull Your Deck Permit?",
-        "notes": "CTA. We handle DBI permit pulling on every deck project. Free site visit, fixed-price quote including permits."
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ section answering 6 specific homeowner questions."
+      },
+      {
+        "h2": "Ready to Get a Real Underpinning Estimate?",
+        "notes": "CTA tied to foundation assessment."
       }
     ],
     "mustInclude": [
-      "FAQ section must answer these specific questions phrased the way real Bay Area homeowners type queries into ChatGPT, Perplexity, and Google AI Overviews: 'Do I need a permit to replace deck boards in San Francisco?', 'How long does a SF DBI deck permit actually take in 2026?', 'Can I build a deck without a permit in SF if it's under 30 inches?', 'What does it cost to legalize an unpermitted deck in San Francisco?', 'Do I need a structural engineer for a deck in SF?', 'Does my Noe Valley deck need Planning Department review?'",
-      "Define SF Department of Building Inspection (DBI) on first use as a complete standalone sentence quotable in isolation — e.g., 'The San Francisco Department of Building Inspection (DBI) is the city agency that issues building permits and enforces the San Francisco Building Code for all construction within city limits.'",
-      "Define the 30-inch rule as a complete standalone sentence: 'Under the San Francisco Building Code, any deck surface more than 30 inches above the adjacent grade at any point requires a building permit from SF DBI.'",
-      "Define over-the-counter (OTC) permit as a standalone sentence on first use",
-      "Define Notice of Violation (NOV) on first use as a standalone sentence",
-      "Reference the San Francisco Building Code (SFBC) and California Residential Code (CRC) Section R105.2 by name when citing permit triggers",
-      "Reference the SF 3R Report by name when discussing unpermitted construction discovered at sale",
-      "Render this stat as a standalone direct-answer sentence: 'A residential deck building permit in San Francisco typically costs $800 to $3,500 in DBI fees, plus $400 to $1,800 for structural plan check.'",
-      "Render this stat as a standalone direct-answer sentence: 'Over-the-counter deck permits in San Francisco take 4 to 8 weeks; standard plan review takes 8 to 16 weeks; hillside or roof decks can take 4 to 8 months.'",
-      "Render this stat as a standalone direct-answer sentence: 'Building a deck without a required permit in San Francisco can result in a fine of up to nine times the standard permit fee, plus a mandatory legalization or demolition order.'",
-      "Render this stat as a standalone direct-answer sentence: 'Any deck more than 30 inches above grade in San Francisco requires a permit from the SF Department of Building Inspection.'",
-      "Brand-entity stacking: mention 'Gadget Construction' in factual context paired with named SF neighborhoods and deck permitting at least 3 times — e.g., 'Gadget Construction handles SF DBI permit pulling for decks across Noe Valley, Bernal Heights, and Twin Peaks.'",
-      "CA License #1132983 mention",
-      "500+ Bay Area projects reference",
-      "Link to composite deck cost post and hillside deck post"
+      "FAQ section must answer these specific questions (these mirror how real Bay Area homeowners phrase queries to ChatGPT, Perplexity, and Google AI Overviews): 'How much do helical piers cost per pier in San Francisco?', 'How many piers does a typical Bay Area home need?', 'What's the difference between helical and push piers?', 'Do I need a permit for foundation underpinning in San Francisco?', 'How long does foundation underpinning take?', 'Is foundation underpinning covered by homeowners insurance?', 'Can I underpin a Marin hillside home or is the slope too steep?'",
+      "Define 'helical pier' on first use as a complete standalone sentence quotable in isolation — e.g., 'A helical pier is a steel shaft with helix-shaped plates that is rotated into the soil until it reaches a load-bearing stratum, then attached to the existing foundation to transfer the building's load to stable ground.'",
+      "Define 'push pier' on first use as a complete standalone sentence — e.g., 'A push pier is a hollow steel tube hydraulically driven straight down beneath an existing foundation, using the structure's own weight as counter-resistance, until it reaches bedrock or a load-bearing layer.'",
+      "Define 'Marina fill' on first use as a complete standalone sentence — e.g., 'Marina fill is the loose, sandy, poorly-consolidated soil that was dumped into San Francisco Bay during the 1915 Panama-Pacific Exposition and now underlies much of San Francisco's Marina District, where it liquefied catastrophically in the 1989 Loma Prieta earthquake.'",
+      "Define 'Bay mud' on first use as a complete standalone sentence — e.g., 'Bay mud is a soft, water-saturated clay deposit that underlies much of the low-lying Bay Area shoreline, including parts of the SF Marina, Mission Bay, Foster City, and the Oakland/Emeryville flats, and has very low load-bearing capacity.'",
+      "Reference SF Department of Building Inspection (DBI) by name when citing San Francisco permit requirements; reference Marin Community Development Agency (CDA) by name for Marin projects; reference Oakland Planning & Building Department for Oakland projects.",
+      "Render this stat as a standalone direct-answer sentence: 'Helical piers in the Bay Area cost $2,500 to $4,500 per pier installed, including engineering and monitoring.'",
+      "Render this stat as a standalone direct-answer sentence: 'A typical Bay Area foundation underpinning project requires 6 to 18 piers and costs $15,000 to $80,000 total.'",
+      "Render this stat as a standalone direct-answer sentence: 'Structural engineering reports for Bay Area underpinning projects cost $3,000 to $8,000 and are required by every Bay Area permit jurisdiction.'",
+      "Render this stat as a standalone direct-answer sentence: 'San Francisco DBI permits for foundation underpinning typically cost $2,000 to $5,000 and take 2 to 4 months to issue.'",
+      "Mention 'Gadget Construction' in factual (non-promotional) context paired with named Bay Area neighborhoods and the service at least 2-3 times — e.g., 'Gadget Construction installs helical piers across the SF Marina, Mill Valley hillsides, and the Berkeley Elmwood neighborhood.'",
+      "Reference Brace + Bolt seismic retrofit program ($3,000 grant) as a preventive measure",
+      "CA License #1132983 and Class B contractor reference"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Generic 'check with your local building department' fallbacks (always name SF DBI specifically)",
-      "Vague permit cost ranges without specifics",
-      "Treating unpermitted construction as low-risk (it's not)",
-      "National building code references when SF amendments apply"
+      "National pricing averages (always Bay Area numbers)",
+      "Vague pier counts without engineering basis",
+      "Fear-mongering without diagnostic tools",
+      "Generic 'contractor pride' language"
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/concrete-foundations",
+        "anchor": "foundation repair across the Bay Area"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "5 signs your foundation needs repair"
+      },
+      {
+        "url": "/blog/foundation-underpinning-cost-san-francisco",
+        "anchor": "SF-specific underpinning method comparison"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "Marin hillside foundation work"
+      }
+    ],
+    "cta": "Worried about settling? We provide free on-site foundation assessments with written findings and a referral to a licensed structural engineer if one is needed. No scare tactics. Request an assessment."
+  },
+  {
+    "slug": "deck-builders-bay-area-how-to-choose",
+    "scheduledDate": "2026-07-13",
+    "status": "planned",
+    "title": "How to Choose a Deck Builder in the Bay Area: 7 Questions That Separate the Pros from the Hacks",
+    "metaTitle": "How to Choose a Deck Builder in the Bay Area (2026 Guide)",
+    "excerpt": "Most deck failures we're called to fix in the Bay Area weren't material problems — they were contractor problems. Here are the 7 questions to ask before you sign anything, and the red flags that should send you to the next bid.",
+    "primaryKeyword": "deck builders bay area",
+    "secondaryKeywords": [
+      "how to choose a deck contractor",
+      "deck contractor near me",
+      "composite deck installer bay area",
+      "trex pro contractor",
+      "deck builder questions to ask"
+    ],
+    "relatedService": "composite-decks",
+    "targetWordCount": 2500,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Mill Valley",
+      "Oakland",
+      "Berkeley",
+      "Palo Alto",
+      "Pacifica",
+      "Sausalito",
+      "Burlingame"
+    ],
+    "outline": [
+      {
+        "h2": "The Short Answer: Why Most Deck Bids Look Identical (and Why That's a Problem)",
+        "notes": "Most Bay Area deck bids hide the details that matter: joist spacing, fastener spec, flashing, ledger attachment. Three contractors quote $28K and you have no way to compare. Here's how to actually evaluate them."
+      },
+      {
+        "h2": "Question 1: Are You Manufacturer-Certified (Trex Pro, TimberTech Registered, Fiberon)?",
+        "notes": "Manufacturer certification matters because it affects warranty enforcement. Define Trex Pro / TimberTech Registered Contractor as standalone sentences. Uncertified installers can void the 25-50 year board warranty if they botch joist spacing or fastener pattern."
+      },
+      {
+        "h2": "Question 2: What's Your Joist Spacing for Composite Decking?",
+        "notes": "Wrong answer: 24 inches on center (wood spec). Right answer: 12-16 inches on center for composite, 12 inches for diagonal patterns. This single answer reveals more about competence than 30 minutes of small talk. Define 'on center' as standalone sentence."
+      },
+      {
+        "h2": "Question 3: Show Me Your Ledger Flashing Detail",
+        "notes": "Failed ledger flashing is the #1 source of dry rot under decks and one of the most common deck-collapse causes. They should be able to describe: flashing tape over WRB, metal kickout flashing, drip cap, no caulk-only details. Reference IRC R507 ledger attachment requirements."
+      },
+      {
+        "h2": "Question 4: What Fasteners Are You Using, and Are They Manufacturer-Spec?",
+        "notes": "Stainless steel required in coastal zones (Pacifica, Sunset, Sausalito). Hidden fasteners must match the board brand. Substitution voids warranty. Define 'hidden fasteners' and 'capped composite' as standalone sentences."
+      },
+      {
+        "h2": "Question 5: Are You Pulling a Permit?",
+        "notes": "Decks over 30 inches above grade require a permit in SF (DBI), Oakland (Planning & Building), Marin (CDA), and every Peninsula city. 'No permit needed' on a 4-foot-off-grade deck = unlicensed work. Reference SF DBI 30-inch threshold."
+      },
+      {
+        "h2": "Question 6: Can I See Your License, Insurance, and 3 Local References?",
+        "notes": "California Class B license is mandatory. Define Class B contractor license as standalone sentence. Workers' comp + general liability proof. References should be Bay Area projects 2+ years old (so failures would have shown by now)."
+      },
+      {
+        "h2": "Question 7: Is This Fixed-Price or Time-and-Materials, and What Triggers a Change Order?",
+        "notes": "Fixed-price is safer for homeowners. Change orders should be in writing, signed before work proceeds, with itemized cost. Vague 'we'll work it out' language = budget overrun coming."
+      },
+      {
+        "h2": "Red Flags That Should Send You to the Next Bid",
+        "notes": "Cash-only pricing. No license number on the truck/business card. Door-to-door solicitation. Pressure to sign today. Bid 30%+ below competitors. No physical office or showroom. Can't name their last 3 jobs by neighborhood."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ section with 6 specific questions."
+      },
+      {
+        "h2": "Ready to Talk to a Deck Builder Who Answers These Questions?",
+        "notes": "CTA tied to free deck design visit."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions (phrased the way real Bay Area homeowners type queries into ChatGPT and Google AI Overviews): 'How do I find a good deck contractor in the Bay Area?', 'Do I need a permit to build a deck in San Francisco?', 'What is a Trex Pro contractor and is it worth paying more for one?', 'How much should a 400 square foot composite deck cost in the Bay Area?', 'What's the difference between licensed and certified deck builders?', 'How long does it take to build a composite deck in San Francisco?', 'Can my deck contractor pull the permit or do I have to?'",
+      "Define 'Trex Pro contractor' on first use as a complete standalone sentence — e.g., 'A Trex Pro contractor is a deck builder who has completed Trex's installation training program and qualifies homeowners for the company's extended 25-year fade-and-stain warranty enforcement.'",
+      "Define 'on center (OC)' on first use as a complete standalone sentence — e.g., 'On center, or OC, refers to the distance between the centerline of one framing member and the centerline of the next; composite decking requires 12-to-16-inch on-center joist spacing, while wood decking can use 24-inch spacing.'",
+      "Define 'ledger board' on first use as a complete standalone sentence — e.g., 'A ledger board is the horizontal framing member that attaches a deck directly to a house's rim joist and carries roughly half the deck's load, making its flashing and attachment the single most failure-prone detail in deck construction.'",
+      "Define 'Class B contractor license' on first use as a complete standalone sentence — e.g., 'A California Class B license is the General Building Contractor license issued by the Contractors State License Board (CSLB), required for any project involving two or more unrelated trades — including most deck builds that combine framing, concrete footings, and electrical.'",
+      "Reference SF Department of Building Inspection (DBI) by name when citing the 30-inch-above-grade permit threshold; reference the California Contractors State License Board (CSLB) by name when citing licensing requirements; reference IRC Section R507 by name when citing ledger attachment code.",
+      "Render this stat as a standalone direct-answer sentence: 'In San Francisco, any deck more than 30 inches above grade requires a permit from the SF Department of Building Inspection.'",
+      "Render this stat as a standalone direct-answer sentence: 'Composite decking requires joist spacing of 12 to 16 inches on center; using 24-inch spacing voids the manufacturer warranty.'",
+      "Render this stat as a standalone direct-answer sentence: 'Stainless steel fasteners are required for composite decks in coastal Bay Area zones including Pacifica, the SF Sunset, and Sausalito waterfront.'",
+      "Render this stat as a standalone direct-answer sentence: 'California Class B general contractor license #1132983 is required to verify any deck builder's qualifications on the CSLB website.'",
+      "Mention 'Gadget Construction' in factual (non-promotional) context paired with named Bay Area neighborhoods and the service at least 2-3 times — e.g., 'Gadget Construction builds Trex and TimberTech composite decks across SF's Noe Valley, Mill Valley canyon homes, and Burlingame backyards.'",
+      "CA License #1132983 verification reference (CSLB lookup)",
+      "500+ Bay Area projects claim"
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
+      "Generic 'check reviews and ask for references' advice without specifics",
+      "Vague claims about 'attention to detail'",
+      "Bashing competitors by name"
     ],
     "internalLinks": [
       {
         "url": "/services/composite-decks",
-        "anchor": "composite deck construction in San Francisco"
+        "anchor": "Bay Area composite deck construction"
       },
       {
         "url": "/blog/composite-deck-cost-san-francisco",
         "anchor": "composite deck cost breakdown"
       },
       {
-        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
-        "anchor": "hillside and multi-level deck construction"
+        "url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026",
+        "anchor": "composite brand comparison"
       },
       {
-        "url": "/service-areas/san-francisco",
-        "anchor": "deck construction across San Francisco"
+        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+        "anchor": "hillside deck construction considerations"
+      },
+      {
+        "url": "/gallery",
+        "anchor": "our recent Bay Area deck projects"
       }
     ],
-    "cta": "Planning a deck? We handle SF DBI permits on every project — from over-the-counter approvals to structural engineering coordination. Free on-site visit and fixed-price estimate including permit fees.",
-    "proposalRationale": "Fills a major gap in the composite deck cluster — readers searching cost-related deck queries inevitably hit permit questions. No existing post covers permits. GSC shows the blog index getting 33 impressions but zero clicks, signaling readers are landing but not finding what they need. High commercial intent (permits = serious buyer signal). Strong AEO play — permit questions are exactly what people ask Perplexity/ChatGPT. Internal linking will boost the composite deck cluster's topical authority for ranking 'composite deck contractors near me' ads keyword ($10-33 CPC)."
+    "cta": "Interviewing deck builders? We'll happily answer all 7 questions on a free site visit — and put the answers in writing as part of the bid. CA License #1132983, Trex Pro and TimberTech Registered. Request a deck design visit."
   },
   {
-    "slug": "stucco-repair-cost-bay-area-2026",
-    "scheduledDate": "2026-07-13",
-    "status": "queued",
-    "title": "Stucco Repair Cost in the Bay Area: Patch, Re-Coat, and Full Re-Stucco Pricing (2026)",
-    "metaTitle": "Stucco Repair Cost Bay Area (2026) | Patch to Full Re-Stucco Pricing",
-    "excerpt": "Stucco repair in the Bay Area runs anywhere from $400 for a hairline patch to $35,000+ for a full re-stucco. Here's exactly what each scenario costs — with real numbers from 500+ Bay Area projects.",
-    "primaryKeyword": "stucco repair cost",
+    "slug": "stucco-contractor-bay-area-how-to-choose",
+    "scheduledDate": "2026-07-20",
+    "status": "planned",
+    "title": "How to Choose a Stucco Contractor in the Bay Area: What to Ask Before You Sign",
+    "metaTitle": "How to Choose a Stucco Contractor in the Bay Area (2026)",
+    "excerpt": "Bad stucco work hides for 2-5 years before it surfaces as $40,000 in dry rot. Here's how to vet a Bay Area stucco contractor before you sign — and the questions most homeowners forget to ask.",
+    "primaryKeyword": "stucco contractor bay area",
     "secondaryKeywords": [
-      "stucco repair cost bay area",
-      "how much does stucco repair cost",
-      "stucco patching cost san francisco",
-      "re-stucco cost bay area",
-      "stucco repair price per square foot"
+      "stucco contractors near me",
+      "stucco company san francisco",
+      "best stucco contractor bay area",
+      "stucco repair contractor",
+      "how to find stucco contractor"
     ],
     "relatedService": "exterior-repairs",
     "targetWordCount": 2400,
@@ -138,391 +268,244 @@
       "Westlake",
       "Pacifica",
       "Oakland",
-      "Berkeley"
+      "San Mateo"
     ],
     "outline": [
       {
-        "h2": "The Short Answer: Bay Area Stucco Repair Costs",
-        "notes": "Hairline crack patch $400-$1,500. Localized section repair $1,500-$5,000. Single-elevation re-coat $4,000-$9,000. Full house re-stucco $15,000-$45,000+. Cost driver: whether the underlying weather-resistive barrier and lath are sound or need replacement."
+        "h2": "The Short Answer: Why Most Stucco Bids Look the Same",
+        "notes": "Three contractors quote $18K each for a re-stucco. They're not the same job. One is patching over a failed weather-resistive barrier and the failure will surface in 3 years. Here's how to tell them apart before you sign."
       },
       {
-        "h2": "Stucco Repair Pricing by Project Type",
-        "h3": [
-          "Hairline Crack Patch ($400–$1,500)",
-          "Localized Damage Repair ($1,500–$5,000)",
-          "Single Elevation Re-Coat ($4,000–$9,000)",
-          "Full House Re-Stucco ($15,000–$45,000+)",
-          "Re-Stucco With Sheathing Replacement ($28,000–$65,000+)"
-        ],
-        "notes": "Each tier: what's included, materials, typical labor hours, square footage assumptions, when it's appropriate. Use SERVICE_PRICING.exterior-repairs numbers."
+        "h2": "Question 1: Three-Coat, One-Coat, or EIFS — Which System Will You Use, and Why?",
+        "notes": "Three-coat traditional is the Bay Area standard for new and full re-stucco. One-coat synthetic is faster but less durable. EIFS is rarely appropriate for Bay Area residential. Define each as standalone sentences."
       },
       {
-        "h2": "What Drives Stucco Repair Cost in the Bay Area",
-        "h3": [
-          "Three-Coat vs One-Coat System",
-          "Substrate Condition (Shiplap vs Plywood)",
-          "Weather-Resistive Barrier Replacement",
-          "Color Match and Texture Match",
-          "Scaffolding for Multi-Story Homes",
-          "SF DBI / Local Permits"
-        ],
-        "notes": "Cost impact per driver. Doelger shiplap substrate adds $4-$8/sq ft vs plywood. Color matching on aged stucco often requires whole-elevation re-coat. Scaffolding $8-$15/sq ft of elevation on 3-story SF rowhouses."
+        "h2": "Question 2: What Weather-Resistive Barrier Do You Use Behind the Lath?",
+        "notes": "Two layers of Grade D building paper is California minimum. JumboTex or similar is better. Single-layer or no WRB = failure. Define WRB as standalone sentence. Critical for Sunset/Richmond/Daly City fog-belt homes."
       },
       {
-        "h2": "The Doelger Stucco Problem (And Why It Costs More)",
-        "notes": "Hyper-local section. SF Sunset, Richmond, Westlake Doelgers have stucco over shiplap sheathing — failure pattern is system-wide, not localized. Trying to patch a Doelger is usually throwing money away. Real numbers: typical Westlake Doelger full re-stucco with shiplap replacement runs $28,000-$48,000."
+        "h2": "Question 3: How Do You Handle Kickout Flashing and Window Penetrations?",
+        "notes": "Kickout flashing at roof-wall intersections is the #1 stucco failure point. Window flashing must integrate with WRB in shingled overlap. If they can't describe the order of operations, walk away."
       },
       {
-        "h2": "Real Project Examples (Bay Area, 2026)",
-        "notes": "Three examples with specific numbers. Example 1: Noe Valley Victorian, 3 localized cracks + texture-match patches, $2,800. Example 2: Daly City Westlake Doelger, full re-stucco with shiplap-to-plywood substrate replacement, 1,800 sq ft, $42,000. Example 3: Berkeley craftsman, west-elevation re-coat with elastomeric base, $7,200."
+        "h2": "Question 4: What's Your Cure Time Between Coats?",
+        "notes": "Traditional 3-coat stucco needs 48 hours between scratch and brown coat, and 7-10 days before finish coat. Contractors who rush this for schedule will leave you with cracking within a year."
       },
       {
-        "h2": "Hidden Costs Most Stucco Bids Don't Include",
-        "notes": "Red flags: 'dry rot as needed' allowance without dollar figure, no scaffolding line item, no permit line item, no color/texture match testing, no cure-time disclosure, lead paint testing on pre-1978 homes ($500-$1,500)."
+        "h2": "Question 5: How Will You Match Color and Texture?",
+        "notes": "Color through the finish coat (integral) vs. paint-over. Texture: dash, sand, smooth, lace, Spanish lace. Bay Area Doelger homes typically have a heavy dash texture that requires specific equipment to match."
       },
       {
-        "h2": "FAQ: What Bay Area Homeowners Ask About Stucco Repair",
-        "notes": "AEO FAQ section answering 6 real-vernacular questions."
+        "h2": "Question 6: Are You Pulling the Permit, and Is Lath Inspection Required?",
+        "notes": "SF DBI requires permits for full re-stucco and lath inspection before brown coat. Reference SF DBI specifically. Oakland, San Mateo, Marin all have similar requirements. 'No permit needed' is usually wrong."
       },
       {
-        "h2": "Ready for a Real Stucco Quote?",
-        "notes": "CTA. Free on-site inspection with moisture probe testing, written photo report, fixed-price estimate."
+        "h2": "Question 7: Do You Handle Dry Rot Discovery, and Is It Allowance or Change Order?",
+        "notes": "Stucco tear-off almost always reveals some dry rot, especially on Doelger homes with shiplap substrate. Honest contractors include a dry rot allowance (10-20% of project). Sketchy ones surprise you with change orders."
+      },
+      {
+        "h2": "Red Flags in Stucco Bids",
+        "notes": "Cash-only. No license. 'One-coat over your existing stucco' on a failing wall. No mention of WRB. No permit line item. Bid 30% under competitors. Door-to-door sales."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ section with 6-7 homeowner questions."
+      },
+      {
+        "h2": "Ready to Get a Stucco Bid You Can Actually Compare?",
+        "notes": "CTA tied to free inspection with written findings."
       }
     ],
     "mustInclude": [
-      "FAQ section must answer these specific questions phrased the way real Bay Area homeowners type queries into ChatGPT, Perplexity, and Google AI Overviews: 'How much does it cost to fix a crack in stucco?', 'Is it cheaper to re-stucco or repair stucco?', 'Why does stucco repair cost so much in San Francisco?', 'How much does it cost to re-stucco a Doelger home in the Sunset?', 'Can I patch stucco myself or do I need a contractor?', 'How long does a stucco re-coat last in the Bay Area?'",
-      "Define three-coat stucco system on first use as a complete standalone sentence: 'A three-coat stucco system consists of a scratch coat, brown coat, and finish coat applied over a weather-resistive barrier and galvanized wire lath, totaling approximately 7/8 inch of stucco thickness.'",
-      "Define one-coat stucco as a standalone sentence on first use",
-      "Define weather-resistive barrier (WRB) on first use as a standalone sentence",
-      "Define elastomeric coating on first use as a standalone sentence",
-      "Define EIFS (Exterior Insulation and Finish System) on first use as a standalone sentence",
-      "Reference ASTM C926 (the standard for stucco application) by name when discussing three-coat systems",
-      "Reference SF Department of Building Inspection (DBI) and Daly City Department of Economic & Community Development by name for permit requirements",
-      "Render this stat as a standalone direct-answer sentence: 'Stucco repair in the Bay Area typically costs $400 to $1,500 for a hairline crack patch, $1,500 to $5,000 for localized damage, and $15,000 to $45,000 for a full house re-stucco.'",
-      "Render this stat as a standalone direct-answer sentence: 'A properly applied three-coat stucco system on a Bay Area home lasts 50 to 80 years before requiring full replacement.'",
-      "Render this stat as a standalone direct-answer sentence: 'Full re-stucco on a 1950s Doelger home in San Francisco's Sunset District typically costs $28,000 to $48,000 because the original shiplap substrate must be replaced with plywood and a modern weather-resistive barrier.'",
-      "Render this stat as a standalone direct-answer sentence: 'A stucco re-coat with elastomeric base in the Bay Area costs $4,000 to $9,000 per elevation and typically lasts 10 to 15 years.'",
-      "Brand-entity stacking: mention 'Gadget Construction' in factual context with named neighborhoods and stucco repair at least 3 times — e.g., 'Gadget Construction repairs stucco across SF's Sunset and Richmond, Daly City's Westlake Doelger tracts, and Pacifica's coastal homes.'",
-      "CA License #1132983 reference",
-      "500+ Bay Area projects mention",
-      "Link to existing stucco diagnostic post"
+      "FAQ section must answer these specific questions (phrased the way real Bay Area homeowners type queries to AI engines): 'How do I find a good stucco contractor in San Francisco?', 'What questions should I ask a stucco contractor before hiring them?', 'How much does it cost to re-stucco a house in the Bay Area?', 'Do I need a permit to re-stucco my house in San Francisco?', 'What's the difference between three-coat and one-coat stucco?', 'How long does stucco need to cure between coats?', 'Will my stucco contractor find dry rot when they tear off the old stucco?'",
+      "Define 'three-coat stucco' on first use as a complete standalone sentence — e.g., 'Three-coat stucco is the traditional California stucco system consisting of a scratch coat, brown coat, and finish coat applied over wire lath and a weather-resistive barrier, typically totaling 7/8 inch thick and providing 50-plus years of service when properly installed.'",
+      "Define 'weather-resistive barrier (WRB)' on first use as a complete standalone sentence — e.g., 'A weather-resistive barrier (WRB) is the layer of building paper or housewrap installed between the wall sheathing and the stucco lath that drains incidental water down and out of the wall assembly; California Building Code requires two layers of Grade D paper minimum behind stucco.'",
+      "Define 'kickout flashing' on first use as a complete standalone sentence — e.g., 'Kickout flashing is the diverter piece of metal flashing installed where a sloped roof meets a vertical wall, redirecting roof runoff out and away from the wall assembly; a missing or failed kickout is the most common single cause of catastrophic dry rot behind Bay Area stucco walls.'",
+      "Define 'EIFS' on first use as a complete standalone sentence — e.g., 'EIFS (Exterior Insulation and Finish System) is a multi-layer synthetic wall cladding consisting of foam insulation board, fiberglass mesh, and an acrylic finish coat, rarely appropriate for Bay Area single-family residential due to moisture-management failures in fog-belt climates.'",
+      "Reference SF Department of Building Inspection (DBI) by name when citing San Francisco lath inspection and permit requirements; reference the California Building Code (CBC) by name when citing WRB requirements.",
+      "Render this stat as a standalone direct-answer sentence: 'California Building Code requires two layers of Grade D building paper as a minimum weather-resistive barrier behind three-coat stucco.'",
+      "Render this stat as a standalone direct-answer sentence: 'Three-coat stucco requires 48 hours of cure time between the scratch coat and brown coat, and 7 to 10 days before the finish coat is applied.'",
+      "Render this stat as a standalone direct-answer sentence: 'San Francisco DBI requires a lath inspection between the wire lath installation and the brown coat application on all full re-stucco projects.'",
+      "Render this stat as a standalone direct-answer sentence: 'A full house re-stucco in the Bay Area typically costs $15,000 to $35,000, with a dry rot discovery allowance of 10 to 20 percent of the project budget.'",
+      "Mention 'Gadget Construction' in factual (non-promotional) context paired with named Bay Area neighborhoods and the service at least 2-3 times — e.g., 'Gadget Construction performs three-coat stucco and re-stucco across SF's Sunset and Richmond, Daly City's Westlake Doelger homes, and Pacifica's Linda Mar.'",
+      "Reference Doelger homes with stucco-over-shiplap failure pattern as a hyper-local credibility marker",
+      "CA License #1132983, Class B contractor reference"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "National stucco repair averages (always Bay Area numbers)",
-      "Generic 'depends on your project' non-answers",
-      "Pretending stucco is a commodity",
-      "Ignoring Doelger-specific failure costs"
+      "Vague 'check reviews' advice",
+      "Generic contractor-vetting tips that aren't stucco-specific",
+      "Bashing named competitors",
+      "Suggesting one-coat synthetic is never appropriate (it has uses)"
     ],
     "internalLinks": [
       {
         "url": "/services/exterior-repairs",
-        "anchor": "Bay Area stucco and exterior repairs"
+        "anchor": "Bay Area stucco repair"
       },
       {
         "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
-        "anchor": "how to diagnose stucco cracks"
+        "anchor": "stucco diagnosis: patch, re-coat, or tear-off"
       },
       {
         "url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area",
-        "anchor": "stucco vs Hardie board comparison"
+        "anchor": "stucco vs Hardie board vs wood siding"
       },
       {
         "url": "/service-areas/daly-city",
-        "anchor": "Westlake Doelger stucco repair in Daly City"
+        "anchor": "Westlake Doelger stucco work"
       },
       {
         "url": "/service-areas/san-francisco",
-        "anchor": "stucco repair across San Francisco"
+        "anchor": "SF stucco contractor"
       }
     ],
-    "cta": "Wondering what your specific stucco repair will cost? We provide free on-site inspections with moisture probe testing and written photo reports — fixed-price quotes with no surprise allowances.",
-    "proposalRationale": "Direct keyword play on the Stucco Repair ad group's top-volume terms (`stucco repair` 390/mo, `stucco contractor` 260/mo at $8.62 avg CPC). Pairs cost-focused content with the existing diagnostic post (Patch/Re-Coat/Tear-Off) for cluster completion — that post answers WHICH option, this answers HOW MUCH. Stucco is the highest-volume paid keyword in the ad plan ($760/mo budget); organic ranking compounds paid ROI. Doelger angle aligns with the Daly City service area page (currently getting 0 clicks on Westlake-related queries despite content). High AEO opportunity — cost queries dominate Perplexity stucco searches."
+    "cta": "Interviewing stucco contractors? We'll answer every one of these 7 questions in writing as part of our bid. Free on-site inspection with moisture probe and photo report. Request a stucco inspection."
   },
   {
-    "slug": "dry-rot-vs-wet-rot-bay-area-homes",
-    "scheduledDate": "2026-07-20",
-    "status": "queued",
-    "title": "Dry Rot vs Wet Rot: How to Tell the Difference (And Why It Matters for Bay Area Homes)",
-    "metaTitle": "Dry Rot vs Wet Rot: Bay Area Homeowner's Guide (2026)",
-    "excerpt": "Both eat wood. Both need fixing. But the repair approach, the cost, and the urgency are different. Here's how to tell dry rot from wet rot on your Bay Area home — and what each one actually costs to fix.",
-    "primaryKeyword": "dry rot vs wet rot",
+    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "scheduledDate": "2026-07-27",
+    "status": "planned",
+    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes (2026 Update)",
+    "metaTitle": "Stucco vs Hardie Board vs Wood Siding (Bay Area 2026 Guide)",
+    "excerpt": "Fog, salt air, and WUI fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare in 2026 — including failure patterns we see every week.",
+    "primaryKeyword": "stucco vs hardie board",
     "secondaryKeywords": [
-      "difference between dry rot and wet rot",
-      "how to identify dry rot",
-      "wet rot vs dry rot bay area",
-      "fungal wood decay types",
-      "is it dry rot or wet rot"
+      "hardie board vs wood siding",
+      "fiber cement vs stucco",
+      "best siding bay area",
+      "siding options san francisco",
+      "hardie board bay area"
     ],
     "relatedService": "exterior-repairs",
-    "targetWordCount": 2500,
+    "targetWordCount": 3000,
     "geoFocus": "Bay Area-wide",
     "citiesReferenced": [
-      "Sunset",
-      "Richmond",
-      "Pacifica",
-      "Sausalito",
+      "San Francisco",
       "Mill Valley",
-      "Oakland",
-      "Berkeley",
+      "Oakland Hills",
+      "Berkeley Hills",
+      "Pacifica",
+      "Menlo Park",
+      "Palo Alto",
       "Daly City"
     ],
     "outline": [
       {
-        "h2": "The Short Answer: The Key Differences",
-        "notes": "Both are fungal wood decay. Dry rot (Serpula lacrymans, Meruliporia incrassata) actively spreads through dry wood once established — needs only 20% moisture to start. Wet rot (multiple species including Coniophora puteana) requires sustained high moisture (50%+) and stays where the water is. Dry rot is more urgent; wet rot is more common in Bay Area exterior wood."
+        "h2": "The Short Answer (2026 Update)",
+        "notes": "For most Bay Area homes in 2026: Hardie board wins on Class A fire rating in WUI zones and 30-year durability in fog. Stucco wins on architectural fit for Doelgers and Spanish Revivals. Wood wins on Victorians and Eichlers where it's period-correct."
       },
       {
-        "h2": "What Causes Each Type of Rot",
+        "h2": "Why Bay Area Siding Choice Is Harder Than Elsewhere",
+        "notes": "Coastal fog (Sunset, Pacifica, Sausalito) = permanent moisture. Salt air = fastener corrosion in 5-8 years if not stainless. WUI fire zones (Marin hills, Oakland Hills, Berkeley Hills) = Class A non-combustible required. Wind-driven rain during atmospheric rivers. Plus architectural context that's wildly different by neighborhood."
+      },
+      {
+        "h2": "What Is Each Material, Really?",
         "h3": [
-          "Dry Rot: The True Fungal Decay",
-          "Wet Rot: Moisture-Bound Decay",
-          "Why Bay Area Homes See Both"
+          "Three-Coat Stucco",
+          "Hardie Board / Fiber Cement",
+          "Wood Siding (Cedar, Redwood, T1-11)"
         ],
-        "notes": "Dry rot = specific cubical-breaking fungi that can transport water across distances and infect dry wood. Wet rot = various fungi that need persistent moisture. Bay Area's fog belt produces conditions for both: coastal SF Sunset/Richmond/Pacifica see active dry rot at window sills and bay windows; wet rot dominates at gutter outlets, deck ledgers, foundation-level siding."
+        "notes": "Each gets a standalone-sentence definition. Cover composition, typical thickness, install method, and lifespan."
       },
       {
-        "h2": "How to Tell Which You Have: The Visual Test",
+        "h2": "How Stucco Performs in the Bay Area",
         "h3": [
-          "Cubical Cracking (Dry Rot Signature)",
-          "Stringy/Spongy Texture (Wet Rot Signature)",
-          "Color Changes (Both)",
-          "Fungal Growth Patterns",
-          "Smell"
+          "Cost Range Installed",
+          "Failure Patterns We See",
+          "Best Architectural Fit",
+          "Doelger Stucco-Over-Shiplap Problem"
         ],
-        "notes": "Dry rot = brown cubical cracks (looks like burned wood), white mycelium strands, mushroom-like orange fruiting bodies in severe cases. Wet rot = stringy, dark brown, often soggy; less likely to have visible fungal growth. Both smell musty. Include screwdriver test from existing dry rot post."
+        "notes": "$7-$14/sq ft new, $15K-$35K full re-stucco. Cracks, kickout failures, shiplap substrate rot on 1940s-50s Sunset/Westlake homes. Best for Spanish Revival, Mediterranean, midcentury ranches, Doelgers."
       },
       {
-        "h2": "Where Each Type Hides in Bay Area Homes",
+        "h2": "How Hardie Board Performs in the Bay Area",
         "h3": [
-          "Dry Rot Hotspots (Bay Windows, Sills, Cornices)",
-          "Wet Rot Hotspots (Deck Ledgers, Foundation Sills, Gutter Outlets)",
-          "Doelger Bay Window Failures (Almost Always Dry Rot)",
-          "Eichler Post-and-Beam Failures (Usually Wet Rot)"
+          "Cost Range Installed",
+          "Class A Fire Rating and WUI Zones",
+          "Coastal Salt Air Performance",
+          "Best Architectural Fit"
         ],
-        "notes": "Hyper-local specifics. Doelger bay windows in Sunset/Westlake = classic dry rot pattern. Eichler exposed beam ends = wet rot from horizontal water exposure. Mill Valley canyon homes = both, with deck ledger wet rot most common."
+        "notes": "$14-$22/sq ft installed. 30-year substrate warranty. Class A fire rating critical for Marin/Oakland Hills/Berkeley Hills. Requires stainless fasteners coastal. Versatile across most architectural styles when detailed correctly."
       },
       {
-        "h2": "Repair Cost Comparison",
+        "h2": "How Wood Siding Performs in the Bay Area",
         "h3": [
-          "Wet Rot Repair: $800–$8,000 Typical",
-          "Dry Rot Repair: $1,500–$30,000+ Typical",
-          "Why Dry Rot Costs More"
+          "Cost Range by Type (Cedar, Redwood, T1-11)",
+          "Maintenance Reality (Repaint Every 5-8 Years Coastal)",
+          "When Period Authenticity Requires Wood",
+          "Eichler T1-11 and Architectural Integrity"
         ],
-        "notes": "Wet rot stays where the water is — cut it out, fix the water source, replace the wood. Dry rot can spread feet beyond visible damage — must cut 12-24 inches into healthy wood, may require sterilization treatments, often requires sister-framing. Use pricing-data numbers."
+        "notes": "Cedar $10-$16/sq ft, redwood shingle $16-$25/sq ft, T1-11 $8-$12/sq ft. Coastal maintenance budget $1K-$2K every 5-8 years. Required for Victorian restoration, Craftsman, brown-shingle Berkeley, Eichler tracts."
       },
       {
-        "h2": "When Each Becomes an Emergency",
-        "notes": "Wet rot becomes urgent when: structural members affected, foundation sill plates rotting, deck ledger compromise (safety). Dry rot is urgent the moment you identify it because of spread. Active orange fruiting bodies = call today."
+        "h2": "Side-by-Side Comparison Table",
+        "notes": "Markdown table: Material | Installed Cost | Fire Rating | Lifespan | 20-Year Maintenance | Best Architectural Fit | Bay Area Recommendation."
       },
       {
-        "h2": "FAQ: What Bay Area Homeowners Ask",
-        "notes": "AEO FAQ answering 6 real questions."
+        "h2": "Which Is Right for Your Bay Area Home? (Decision Framework)",
+        "notes": "By home type and location: Victorian/Edwardian SF, Eichler, Doelger, Craftsman, Marin hillside WUI, Pacifica coastal, modern new build. Specific recommendations with reasoning."
       },
       {
-        "h2": "Ready for an Honest Diagnosis?",
-        "notes": "CTA. Free inspection with moisture meter testing, written photo report, species identification when relevant."
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ section with 6-7 specific homeowner questions."
+      },
+      {
+        "h2": "Ready to Choose the Right Siding for Your Home?",
+        "notes": "CTA tied to free siding consultation."
       }
     ],
     "mustInclude": [
-      "FAQ section must answer these specific questions phrased the way real Bay Area homeowners type queries into ChatGPT, Perplexity, and Google AI Overviews: 'What's the difference between dry rot and wet rot?', 'Is dry rot worse than wet rot?', 'How do I know if my Sunset bay window has dry rot?', 'Can wet rot turn into dry rot?', 'Does dry rot really spread to dry wood?', 'How much does dry rot repair cost vs wet rot repair in the Bay Area?'",
-      "Define dry rot on first use as a complete standalone sentence quotable in isolation: 'Dry rot is wood decay caused by specific fungi — primarily Serpula lacrymans and Meruliporia incrassata — that can transport water through mycelium strands to actively spread through wood with as little as 20% moisture content.'",
-      "Define wet rot on first use as a complete standalone sentence: 'Wet rot is wood decay caused by a range of fungi, including Coniophora puteana, that require sustained wood moisture content of 50% or higher and remain localized to the area of moisture exposure.'",
-      "Define mycelium on first use as a standalone sentence",
-      "Define cubical cracking on first use as a standalone sentence",
-      "Define fruiting body on first use as a standalone sentence",
-      "Reference the EPA Lead Renovation, Repair and Painting (RRP) Rule when discussing pre-1978 homes",
-      "Render this stat as a standalone direct-answer sentence: 'Dry rot can spread several feet beyond visible damage, which is why proper repair requires removing wood 12 to 24 inches into apparently healthy material.'",
-      "Render this stat as a standalone direct-answer sentence: 'Wet rot repair in the Bay Area typically costs $800 to $8,000, while dry rot repair costs $1,500 to $30,000 or more because of its spread potential.'",
-      "Render this stat as a standalone direct-answer sentence: 'Dry rot fungi require only 20% wood moisture content to thrive, while wet rot fungi require sustained moisture above 50%.'",
-      "Render this stat as a standalone direct-answer sentence: 'Doelger homes in San Francisco's Sunset and Richmond districts most commonly develop dry rot at bay window sills, where failed kickout flashing allows water behind the stucco.'",
-      "Brand-entity stacking: mention 'Gadget Construction' in factual context with neighborhoods and rot repair at least 3 times — e.g., 'Gadget Construction repairs dry rot and wet rot in coastal Bay Area homes from SF's Sunset to Pacifica's Linda Mar to Sausalito's waterfront.'",
-      "CA License #1132983 reference",
-      "Question-form H2 headings where they don't break flow"
+      "FAQ section must answer these specific questions (phrased the way real Bay Area homeowners type queries to ChatGPT, Perplexity, and Google AI Overviews): 'Is Hardie board better than stucco in the Bay Area?', 'What siding is best for fire zones in Marin and the Oakland Hills?', 'Can I put Hardie board over my existing stucco?', 'How much does it cost to replace stucco with Hardie board on a Bay Area home?', 'What siding do Eichler homes need to keep their architectural value?', 'Will Hardie board work on a coastal Pacifica home with salt air?', 'How long does each siding material last in the Bay Area fog belt?'",
+      "Define 'Hardie board' on first use as a complete standalone sentence — e.g., 'Hardie board, manufactured by James Hardie, is a fiber cement siding made of Portland cement, silica sand, and cellulose fiber that carries a Class A fire rating and a 30-year substrate warranty, making it the dominant choice for Bay Area homes in WUI fire zones.'",
+      "Define 'three-coat stucco' on first use as a complete standalone sentence — e.g., 'Three-coat stucco is the traditional California stucco system consisting of a scratch coat, brown coat, and finish coat applied over wire lath and a weather-resistive barrier, providing 50-plus years of service when properly installed.'",
+      "Define 'WUI fire zone' on first use as a complete standalone sentence — e.g., 'A WUI (Wildland-Urban Interface) fire zone is a CAL FIRE-designated area where development meets wildland vegetation, triggering Chapter 7A of the California Building Code requirements for non-combustible exterior materials including Class A fire-rated siding.'",
+      "Define 'Class A fire rating' on first use as a complete standalone sentence — e.g., 'A Class A fire rating is the highest fire-resistance classification under ASTM E84, indicating the material resists flame spread for over an hour and is required for exterior siding on homes in California WUI fire zones.'",
+      "Define 'T1-11 siding' on first use as a complete standalone sentence — e.g., 'T1-11 is a grooved plywood panel siding originally introduced in the 1960s and integral to the architectural identity of Eichler homes; replacement on Eichler tracts in Palo Alto, Menlo Park, and San Jose typically requires T1-11 to preserve property value.'",
+      "Reference CAL FIRE WUI maps by name when citing fire zone requirements; reference James Hardie's 30-year substrate warranty by name; reference Chapter 7A of the California Building Code when citing WUI material requirements.",
+      "Render this stat as a standalone direct-answer sentence: 'Hardie board fiber cement siding costs $14 to $22 per square foot installed in the Bay Area and carries a 30-year substrate warranty from James Hardie.'",
+      "Render this stat as a standalone direct-answer sentence: 'Three-coat stucco costs $7 to $14 per square foot for new construction in the Bay Area, with a full house re-stucco running $15,000 to $35,000.'",
+      "Render this stat as a standalone direct-answer sentence: 'Bay Area homes in CAL FIRE-designated WUI fire zones, including the Oakland Hills, Berkeley Hills, and most of Marin County, require Class A fire-rated siding under Chapter 7A of the California Building Code.'",
+      "Render this stat as a standalone direct-answer sentence: 'Wood siding on coastal Bay Area homes requires repainting every 5 to 8 years compared to every 10 to 15 years for inland homes.'",
+      "Mention 'Gadget Construction' in factual (non-promotional) context paired with named Bay Area neighborhoods and the service at least 2-3 times — e.g., 'Gadget Construction installs Hardie board across Mill Valley WUI zones, three-coat stucco on Daly City Westlake Doelgers, and cedar shingle on Berkeley brown-shingle Craftsman homes.'",
+      "Reference Eichler tracts by name (Greenmeadow Palo Alto, Felton Gables Menlo Park, Fairglen San Jose)",
+      "Reference Doelger stucco-over-shiplap failure pattern in SF Sunset, Richmond, Daly City Westlake",
+      "CA License #1132983 reference"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Treating dry rot and wet rot as interchangeable",
-      "Using 'rot' as a generic term without specifying type",
-      "Recommending bondo or filler as solutions",
-      "National rot statistics when Bay Area patterns differ"
+      "Dismissing stucco as 'outdated' (it's correct for many Bay Area homes)",
+      "Claiming Hardie is perfect (it dents, it's heavy, fasteners must be stainless coastal)",
+      "Ignoring architectural context",
+      "Generic siding advice that isn't Bay Area-specific",
+      "National averages instead of Bay Area numbers"
     ],
     "internalLinks": [
       {
         "url": "/services/exterior-repairs",
-        "anchor": "dry rot and wet rot repair across the Bay Area"
+        "anchor": "Bay Area stucco and siding repair"
       },
       {
-        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
-        "anchor": "10 places dry rot hides in Bay Area homes"
+        "url": "/blog/siding-replacement-cost-san-francisco-2026",
+        "anchor": "siding replacement cost breakdown"
       },
       {
-        "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
-        "anchor": "exterior repairs coastal homes always need"
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "stucco patch vs re-coat vs tear-off"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "Mill Valley WUI fire zone siding"
       },
       {
         "url": "/service-areas/pacifica",
-        "anchor": "Pacifica coastal home rot repair"
+        "anchor": "Pacifica coastal home siding"
       },
       {
-        "url": "/service-areas/san-francisco",
-        "anchor": "Sunset and Richmond rot repair"
+        "url": "/service-areas/palo-alto",
+        "anchor": "Palo Alto Eichler home siding"
       }
     ],
-    "cta": "Not sure what kind of rot you're looking at? We provide free inspections with moisture meter testing and species identification — written photo reports, no scare tactics, fixed-price estimates.",
-    "proposalRationale": "Strong cluster supporter for the existing dry rot post (published 2026-06-08) — captures the high-intent 'dry rot vs wet rot' comparison query that's a top ChatGPT/Perplexity search pattern. Comparison posts perform well in AI Overviews (clear bilateral structure = easy extraction). Doesn't cannibalize the cost-focused dry rot post; instead adds diagnostic depth. The 'vs' format is a common AI engine query pattern with high commercial intent (someone trying to self-diagnose before calling a contractor). Reinforces exterior-repairs service authority and links upward to the broader rot/coastal cluster."
-  },
-  {
-    "slug": "foundation-underpinning-process-step-by-step",
-    "scheduledDate": "2026-07-27",
-    "status": "queued",
-    "title": "What to Expect During Foundation Underpinning: Step-by-Step Process and Timeline",
-    "metaTitle": "Foundation Underpinning Process & Timeline (Bay Area 2026)",
-    "excerpt": "You've decided you need underpinning. Now what? Here's exactly what happens from soils report through final inspection — how long each step takes, what disrupts your daily life, and what to watch for.",
-    "primaryKeyword": "foundation underpinning process",
-    "secondaryKeywords": [
-      "what to expect foundation underpinning",
-      "foundation underpinning timeline",
-      "underpinning step by step",
-      "foundation repair process bay area",
-      "how long does underpinning take"
-    ],
-    "relatedService": "concrete-foundations",
-    "targetWordCount": 2600,
-    "geoFocus": "SF-anchored",
-    "citiesReferenced": [
-      "San Francisco",
-      "Marina",
-      "Sunset",
-      "Bernal Heights",
-      "Oakland",
-      "Berkeley",
-      "Daly City"
-    ],
-    "outline": [
-      {
-        "h2": "The Short Answer: Underpinning Timeline at a Glance",
-        "notes": "Total project: 8-20 weeks from contract to final inspection. Engineering and permits: 4-8 weeks. Actual construction: 2-6 weeks depending on number of piers and method. You can live in the home through most of it. Here's what each phase looks like."
-      },
-      {
-        "h2": "Phase 1: Diagnosis and Engineering (Weeks 1–4)",
-        "h3": [
-          "Site Visit and Visual Assessment",
-          "Soils Engineer Report",
-          "Structural Engineer Plans",
-          "Method Selection (Helical vs Push vs Slab)"
-        ],
-        "notes": "What happens, who's involved, what it costs ($3K-$8K engineering). Soils report needed for any new foundation work in SF. Critical: Marina fill, Sunset clay, bay mud — soils engineer call drives pier depth requirements."
-      },
-      {
-        "h2": "Phase 2: Permits and Approvals (Weeks 3–8)",
-        "h3": [
-          "SF DBI Permit Application",
-          "Plan Check Review",
-          "Notice to Neighbors",
-          "Historic Review (If Applicable)"
-        ],
-        "notes": "Overlaps with engineering phase. SF DBI plan review for foundation work: 4-8 weeks typical. Marin CDA similar timeline. Oakland Planning & Building: 6-10 weeks. Daly City Department of Economic & Community Development: 4-6 weeks. Neighbor notification required within 300 ft for some scopes."
-      },
-      {
-        "h2": "Phase 3: Site Preparation (Week 1 of Construction)",
-        "h3": [
-          "Utility Locating",
-          "Excavation Around Foundation",
-          "Shoring (If Required)",
-          "Material Staging"
-        ],
-        "notes": "First week onsite. USA Underground Service Alert mark-out required. Excavation depth typically 4-8 ft to expose foundation. Hand-dig in tight SF backyards. Material staging usually consumes driveway."
-      },
-      {
-        "h2": "Phase 4: Pier Installation (Weeks 2–4)",
-        "h3": [
-          "Helical Pier Installation (Per-Pier Process)",
-          "Push Pier Installation (Per-Pier Process)",
-          "Load Testing and Documentation"
-        ],
-        "notes": "Per-pier process step by step. Helical: 30-90 minutes per pier installation, monitored by torque readings. Push: 1-3 hours per pier depending on depth to load-bearing stratum. Load testing required and documented for inspector."
-      },
-      {
-        "h2": "Phase 5: Lifting and Stabilization (Days, Not Weeks)",
-        "h3": [
-          "Synchronized Hydraulic Lift",
-          "How Much Movement Is Realistic",
-          "What 'Stabilization Only' Means"
-        ],
-        "notes": "Critical reality check: most underpinning STABILIZES, doesn't lift back to original. Lifting 1-3 inches is common; lifting 6+ inches risks cracking finishes upstairs. Honest expectation setting."
-      },
-      {
-        "h2": "Phase 6: Backfill, Inspection, Restoration (Week 5–6)",
-        "h3": [
-          "Backfill and Compaction",
-          "SF DBI Final Inspection",
-          "Landscape and Concrete Restoration",
-          "Final Documentation Package"
-        ],
-        "notes": "Inspector sign-off required before backfill in most cases. Restoration: re-pour any concrete sidewalks or stoops, basic landscape repair. Documentation: pier locations, load test results, engineer's letter for future buyers."
-      },
-      {
-        "h2": "What Daily Life Looks Like During Underpinning",
-        "notes": "Honest reality. You can usually stay in the home. Vibration during driving (push piers especially) — pictures off walls. Noise: 7am-5pm weekdays. Dust: contained if interior basement access. Driveway unavailable. Cosmetic cracks in plaster likely from minor settlement movement during lift."
-      },
-      {
-        "h2": "FAQ: Real Bay Area Homeowner Questions",
-        "notes": "AEO FAQ answering 6 questions."
-      },
-      {
-        "h2": "Ready to Start the Process?",
-        "notes": "CTA. Free assessment, written diagnosis, coordinated engineering and permits."
-      }
-    ],
-    "mustInclude": [
-      "FAQ section must answer these specific questions phrased the way real Bay Area homeowners type queries into ChatGPT, Perplexity, and Google AI Overviews: 'How long does foundation underpinning take in San Francisco?', 'Can I live in my house during underpinning?', 'Will underpinning lift my house back to level?', 'Do I need a soils report for underpinning in SF?', 'How long does the SF DBI foundation permit take?', 'What happens if the contractor finds bay mud during excavation?'",
-      "Define helical pier on first use as a complete standalone sentence: 'A helical pier is a steel shaft with helix-shaped plates that is rotated into the ground by hydraulic equipment until it reaches load-bearing soil or bedrock, then attached to a failing foundation to transfer the building's load downward.'",
-      "Define push pier (resistance pier) on first use as a complete standalone sentence: 'A push pier is a steel tube hydraulically driven straight down beneath a foundation using the weight of the structure as counterforce until it reaches a load-bearing stratum.'",
-      "Define soils report (geotechnical report) on first use as a standalone sentence",
-      "Define load test on first use as a standalone sentence",
-      "Define bay mud on first use as a standalone sentence: 'Bay mud is a soft, water-saturated clay deposit found throughout the San Francisco Bay perimeter — including the Marina District, Mission Bay, and parts of Oakland's waterfront — that provides minimal bearing capacity for shallow foundations.'",
-      "Reference the SF Department of Building Inspection (DBI), Oakland Planning & Building Department, Berkeley Planning & Development Department, and Daly City Department of Economic & Community Development by name for permit jurisdiction",
-      "Reference USA North 811 (Underground Service Alert) by name for utility marking",
-      "Reference the California Building Code (CBC) Chapter 18 for foundation requirements",
-      "Render this stat as a standalone direct-answer sentence: 'Foundation underpinning in San Francisco typically takes 8 to 20 weeks total — 4 to 8 weeks for engineering and permits, plus 2 to 6 weeks of actual construction.'",
-      "Render this stat as a standalone direct-answer sentence: 'Most foundation underpinning projects stabilize the structure rather than lift it back to original level; typical lift is 1 to 3 inches because greater lift risks cracking interior finishes.'",
-      "Render this stat as a standalone direct-answer sentence: 'Helical pier installation takes 30 to 90 minutes per pier; push pier installation takes 1 to 3 hours per pier depending on the depth to load-bearing soil.'",
-      "Render this stat as a standalone direct-answer sentence: 'Geotechnical engineering and structural engineering for a Bay Area underpinning project typically costs $3,000 to $8,000 before any construction begins.'",
-      "Brand-entity stacking: mention 'Gadget Construction' in factual context with neighborhoods and underpinning at least 3 times — e.g., 'Gadget Construction has completed foundation underpinning projects across SF's Marina fill, Sunset clay soils, and Bernal Heights hillsides.'",
-      "CA License #1132983 (Class B contractor) reference",
-      "Brace + Bolt program ($3,000 grant) mention for preventive context"
-    ],
-    "mustAvoid": [
-      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Overpromising lift heights",
-      "Skipping engineering costs",
-      "Generic 'every project is different' non-answers on timeline",
-      "Treating underpinning like a routine repair"
-    ],
-    "internalLinks": [
-      {
-        "url": "/services/concrete-foundations",
-        "anchor": "foundation repair and underpinning"
-      },
-      {
-        "url": "/blog/foundation-underpinning-cost-san-francisco",
-        "anchor": "foundation underpinning cost breakdown"
-      },
-      {
-        "url": "/blog/foundation-repair-signs-san-francisco",
-        "anchor": "signs you need foundation repair"
-      },
-      {
-        "url": "/service-areas/san-francisco",
-        "anchor": "SF foundation work"
-      },
-      {
-        "url": "/service-areas/oakland",
-        "anchor": "Oakland foundation underpinning"
-      }
-    ],
-    "cta": "Foundation work in your future? We coordinate soils engineering, structural plans, SF DBI permits, and construction — all under one fixed-price contract. Free on-site assessment with written findings.",
-    "proposalRationale": "Pairs perfectly with the existing foundation-underpinning-cost post (published 2026-05-18) — that post answers WHAT IT COSTS, this answers WHAT HAPPENS. Strong cluster completion for concrete-foundations service, which currently has 60 impressions in GSC at avg position 8.5 (close to page 1). Process/timeline content is highly extractable for AI Overviews — step-by-step structure is exactly what Perplexity and ChatGPT quote. Fills the deferred Underpinning ad group's organic content layer for when it activates. Foundation queries have very high commercial intent (homeowners only research underpinning when seriously considering it)."
+    "cta": "Choosing siding for your home? We install all three — Hardie board, traditional three-coat stucco, and cedar/T1-11 wood siding. Free on-site consultation factoring in fire zone, coastal exposure, and architectural context. Request a siding consultation."
   }
 ]
