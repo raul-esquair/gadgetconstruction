@@ -3,100 +3,113 @@
     "slug": "foundation-repair-cost-bay-area-2026",
     "scheduledDate": "2026-07-06",
     "status": "planned",
-    "title": "Foundation Repair Cost in the Bay Area (2026): What You'll Actually Pay by Problem Type",
-    "metaTitle": "Foundation Repair Cost Bay Area (2026) | Real Prices by Problem",
-    "excerpt": "Foundation repair in the Bay Area typically runs $3,500 to $50,000+ depending on what's actually wrong. Here's what each problem type costs — with real numbers from 500+ Bay Area projects, not national averages.",
+    "title": "Foundation Repair Cost in the Bay Area: What You'll Actually Pay in 2026 (By Method and Damage Level)",
+    "metaTitle": "Foundation Repair Cost Bay Area (2026) | Real Prices by Method",
+    "excerpt": "Foundation repair in the Bay Area typically runs $5,000 for minor crack injection to $80,000+ for full underpinning. Here's what each method costs, which one your home actually needs, and the questions to ask before signing anything.",
     "primaryKeyword": "foundation repair cost bay area",
     "secondaryKeywords": [
-      "foundation repair cost san francisco",
+      "foundation repair cost",
       "how much does foundation repair cost",
-      "cost to fix foundation bay area",
       "foundation crack repair cost",
-      "seismic retrofit cost san francisco"
+      "seismic retrofit cost san francisco",
+      "house leveling cost bay area"
     ],
     "relatedService": "concrete-foundations",
-    "targetWordCount": 2500,
+    "targetWordCount": 2600,
     "geoFocus": "Bay Area-wide",
     "citiesReferenced": [
       "San Francisco",
       "Oakland",
       "Berkeley",
-      "Marina District",
+      "Marina",
       "Sunset",
       "Bernal Heights",
       "Daly City",
-      "Mill Valley"
+      "Mill Valley",
+      "Alameda"
     ],
     "outline": [
       {
-        "h2": "The Short Answer: Foundation Repair Cost Ranges in the Bay Area",
-        "notes": "Give the range upfront: crack sealing $500-$3,500; seismic retrofit (bolting + cripple wall bracing) $5,000-$15,000; partial underpinning $15,000-$35,000; full underpinning $35,000-$80,000+; foundation replacement $60,000-$150,000+. Explain that the problem type — not the house size — is what drives the number."
+        "h2": "The Short Answer: Bay Area Foundation Repair Cost Ranges",
+        "notes": "Crack injection $500-$2,500. Seismic bolting / soft-story retrofit $5,000-$15,000 (Brace + Bolt eligible for $3K grant). Partial underpinning (4-8 piers) $12,000-$30,000. Full underpinning (10-20 piers) $30,000-$80,000+. House leveling / re-shimming $8,000-$25,000. Method matters more than total — most homes don't need the most expensive option."
       },
       {
-        "h2": "Why Bay Area Foundation Repair Costs More Than the National Average",
-        "notes": "Explain 4 specific drivers: (1) soil variability (Marina fill, Sunset expansive clay, bay mud, Oakland alluvial), (2) seismic code requirements (CRC and CBC seismic provisions), (3) hillside access challenges, (4) SF DBI permit costs and structural engineering requirements. National averages of $4,500-$10,000 don't apply here."
-      },
-      {
-        "h2": "Cost by Foundation Problem Type",
+        "h2": "What Foundation Problem Do You Actually Have?",
         "h3": [
-          "Crack Sealing and Injection ($500–$3,500)",
-          "Seismic Bolting & Cripple Wall Bracing ($5,000–$15,000)",
-          "Partial Underpinning (2–6 piers, $15,000–$35,000)",
-          "Full Underpinning (8–16 piers, $35,000–$80,000+)",
-          "Full Foundation Replacement ($60,000–$150,000+)"
+          "Cosmetic Cracks vs Structural Cracks",
+          "Settling vs Heaving",
+          "Soft-Story vs Foundation Failure",
+          "Seismic Vulnerability vs Active Damage"
         ],
-        "notes": "For each tier: what triggers this level of repair, what's included in the price, typical timeline, example neighborhood. Reference the underpinning post for method-specific pricing. Include the Earthquake Brace + Bolt grant program ($3,000 rebate) under seismic bolting."
+        "notes": "Diagnostic framework. Diagonal cracks from window/door corners = settling. Horizontal cracks in stem walls = lateral pressure. Stair-step cracks in brick/stucco = differential settlement. Sloping floors measured with a marble test. Sticking doors on one side of house. Explain that a house that survived 1989 Loma Prieta may still be soft-story vulnerable — separate issue from active settlement."
       },
       {
-        "h2": "What Drives Your Specific Number Up or Down",
+        "h2": "Repair Method 1: Crack Injection ($500–$2,500)",
+        "notes": "Epoxy or polyurethane injection into non-structural cracks. Appropriate for: hairline cracks in stem walls, cosmetic cracks in slabs, moisture intrusion at cold joints. Not appropriate for: active movement, structural cracks over 1/4 inch. Cost per crack: $300-$800. Lifespan of repair: permanent if underlying movement has stopped."
+      },
+      {
+        "h2": "Repair Method 2: Seismic Retrofit / Brace + Bolt ($5,000–$15,000)",
         "h3": [
-          "Soil Type (Fill vs Clay vs Bay Mud vs Bedrock)",
-          "Site Access (Basement, Crawl Space, Hillside)",
-          "Structural Engineering Reports ($3,000–$8,000)",
-          "SF DBI and East Bay Permit Costs",
-          "Historic District or HOA Review"
+          "What Bolting and Bracing Actually Does",
+          "SF Earthquake Brace + Bolt $3,000 Grant Program",
+          "Which Homes Qualify (Pre-1980 Cripple Wall Homes)"
         ],
-        "notes": "Explain each with dollar impact. Marina fill = deeper piers = more expensive. Crawl space with 24 inches of clearance = 30% labor premium. SF DBI plan check + permit = $2,000-$5,000. Berkeley Planning & Development permit = separate fee schedule. Historic district (Alamo Square, parts of Berkeley) adds architectural review."
+        "notes": "Not repair — prevention. Bolts sill plate to foundation, adds plywood shear panels to cripple walls. Typical SF Victorian/Edwardian: $6,000-$12,000. Brace + Bolt grant covers $3,000 for eligible pre-1980 homes with cripple walls in participating cities (SF, Oakland, Berkeley, Alameda, others). Cost after grant often $3,000-$9,000. Reference the ABAG-run program by name."
       },
       {
-        "h2": "Three Real Project Examples with Line Items",
-        "notes": "Concrete case studies with itemized breakdowns. Example 1: 1920s Berkeley Elmwood bungalow, seismic bolting + cripple wall bracing, $11,400 (minus $3K B+B grant = $8,400 net). Example 2: Marina District Edwardian flat, 6 helical piers for partial underpinning, $28,500 including engineering. Example 3: Bernal Heights hillside home, 12 push piers + drainage remediation, $62,000. Each shows engineering, permit, labor, materials, contingency."
+        "h2": "Repair Method 3: Underpinning ($12,000–$80,000+)",
+        "notes": "Brief overview only — link to the deeper underpinning post. Helical piers, push piers, slabjacking. When it's needed vs when contractors oversell it. Marina fill and Sunset clay examples. Cross-link to /blog/foundation-underpinning-cost-san-francisco."
+      },
+      {
+        "h2": "Repair Method 4: House Leveling and Re-Shimming ($8,000–$25,000)",
+        "notes": "For homes on post-and-pier or perimeter foundations where the house has settled but the foundation itself is sound. Jack the house, add new shims/posts, adjust for level. Common on Bernal Heights Victorians and Berkeley bungalows. Faster and cheaper than underpinning when the foundation itself isn't failing."
+      },
+      {
+        "h2": "What Drives Cost Up in the Bay Area",
+        "h3": [
+          "Engineering Reports and Structural Stamps",
+          "SF DBI / Oakland Planning & Building / Berkeley Planning Permits",
+          "Access Constraints (Steep Streets, Tight Basements)",
+          "Historic District Review",
+          "Soil Testing on Fill and Bay Mud"
+        ],
+        "notes": "Engineering $3K-$8K. Permits vary by jurisdiction — SF DBI $2K-$5K, Oakland $1.5K-$4K, Berkeley $1.5K-$4K. Soil testing (required on Marina fill, Mission Bay, parts of West Berkeley) $2K-$5K."
       },
       {
         "h2": "Red Flags in Foundation Repair Bids",
-        "notes": "What bad contractors do: quote without a structural engineer's report, use 'per pier' pricing without specifying method, exclude permit costs from the bid, offer 'lifetime warranties' that die when the company folds, pressure you toward the most expensive method when a cheaper one works. Also cover 'foundation inspection' scare tactics from door-to-door salespeople."
+        "notes": "1. Free inspection that ends in same-day 'sign now for a discount.' 2. Quotes without an engineer's stamp for underpinning. 3. Slabjacking recommended for whole-house settlement (wrong tool). 4. Bids that don't line-item engineering, permits, or contingency. 5. Warranty language that's verbal only. 6. No specific pier count and depth. 7. Contractor won't name the specific method."
       },
       {
-        "h2": "How to Budget Realistically for Your Situation",
-        "notes": "Practical framework: get 2-3 bids from licensed structural contractors (not door-knockers), require an engineer's report before signing, budget 15% contingency for surprises found during excavation, verify contractor's Class B license and CSLB standing. Encourage readers to start with the free B+B assessment if their house is pre-1979."
-      },
-      {
-        "h2": "Ready to Get a Real Foundation Number?",
-        "notes": "CTA. Free on-site assessment with written findings, no scare tactics. Mention Gadget Construction serves 31 Bay Area cities and works with independent structural engineers."
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ block with 6-7 questions phrased as real homeowners type into ChatGPT/Perplexity — see mustInclude below."
       }
     ],
     "mustInclude": [
-      "Pricing tiers by problem type (crack seal → replacement) with dollar ranges",
-      "Earthquake Brace + Bolt program mentioned ($3,000 grant)",
-      "Three real project examples with itemized breakdowns",
-      "SF DBI, Berkeley Planning & Development, Marin CDA named specifically",
-      "Bay Area soil types called out (Marina fill, Sunset clay, bay mud, Oakland alluvial)",
-      "Gadget Construction mentioned in factual context paired with named Bay Area neighborhoods and foundation service — at least 2-3 times — e.g., 'Gadget Construction has repaired foundations across the Marina District, Bernal Heights hillsides, and Berkeley Elmwood bungalows.'",
-      "FAQ section must answer these specific questions (mirror how real users type into ChatGPT/Perplexity/AI Overviews): 'How much does foundation repair cost in San Francisco?', 'Is foundation repair covered by homeowners insurance in California?', 'Do I need a structural engineer before I get foundation bids?', 'What's the cheapest way to fix a foundation crack?', 'How long does foundation repair take from bid to finish?', 'Can I sell my house with foundation problems in the Bay Area?', 'Is the Earthquake Brace + Bolt grant worth it?'",
-      "Define these terms on first use as complete standalone sentences quotable in isolation: 'Underpinning is the process of extending an existing foundation deeper or wider to reach load-bearing soil or bedrock, typically using helical piers, push piers, or concrete piers.' 'The Earthquake Brace + Bolt program is a California grant providing up to $3,000 to help homeowners retrofit older houses by bolting the wood frame to the concrete foundation and bracing cripple walls.' 'A cripple wall is the short wood-framed wall between a home's foundation and its first floor, common in pre-1979 California homes and a primary seismic failure point.' 'A Class B General Building Contractor license is the California license required for any project involving two or more unrelated building trades — including foundation work.'",
-      "Reference SF Department of Building Inspection (DBI), California Residential Code (CRC), and the Earthquake Brace + Bolt program by name when citing permits and standards",
-      "Render these stats as standalone direct-answer sentences: 'Seismic bolting and cripple wall bracing in the Bay Area typically costs $5,000 to $15,000, minus a $3,000 Earthquake Brace + Bolt grant for eligible pre-1979 homes.' 'Full foundation underpinning in San Francisco averages $35,000 to $80,000 for a typical single-family home, depending on soil type and number of piers required.' 'Structural engineering reports for Bay Area foundation projects run $3,000 to $8,000 and are required by SF DBI before any underpinning permit will be issued.'"
+      "Reference specific pricing from SERVICE_PRICING.concrete-foundations",
+      "SF Earthquake Brace + Bolt program ($3,000 grant) with the ABAG name",
+      "SF DBI, Oakland Planning & Building, Berkeley Planning & Development named by their full jurisdiction names",
+      "Marina fill, Sunset clay, bay mud, Bernal Heights slope as soil-specific examples",
+      "Cross-link to the existing underpinning post and foundation signs post",
+      "FAQ section must answer these specific questions phrased as homeowners actually type into ChatGPT and Perplexity: 'How much does foundation repair cost in San Francisco?', 'Is foundation crack repair covered by homeowners insurance in California?', 'Do I need an engineer for foundation repair in the Bay Area?', 'What's the cheapest foundation repair option that actually works?', 'How long does foundation repair take on a Victorian?', 'Can I get a Brace + Bolt grant if I already retrofit?', 'What's the difference between house leveling and underpinning?'",
+      "Define each of these terms on first use as a standalone quotable sentence: 'Underpinning is the process of installing new structural supports beneath an existing foundation to transfer the building's load to deeper, more stable soil or bedrock.' Define seismic retrofit, cripple wall, soft-story, helical pier, push pier, and slabjacking the same way",
+      "Reference SF Earthquake Brace + Bolt program (ABAG-administered) by name when discussing seismic retrofit grants; reference the California Existing Building Code (CEBC) when discussing retrofit requirements; reference SF DBI Bulletin AB-094 for soft-story if applicable",
+      "Render this stat as a standalone direct-answer sentence: 'Foundation crack injection in the Bay Area typically costs $500 to $2,500 per project, with individual cracks running $300 to $800 each.'",
+      "Render this stat as a standalone direct-answer sentence: 'The San Francisco Earthquake Brace + Bolt program provides eligible homeowners a $3,000 grant toward seismic retrofit of pre-1980 cripple wall homes.'",
+      "Render this stat as a standalone direct-answer sentence: 'Full foundation underpinning in San Francisco costs $30,000 to $80,000 or more, depending on pier count, soil conditions, and site access.'",
+      "Render this stat as a standalone direct-answer sentence: 'A structural engineer's stamp for Bay Area foundation repair typically costs $3,000 to $8,000 and is required by SF DBI for any underpinning permit.'",
+      "Mention Gadget Construction in factual context tied to service + neighborhood at least 3 times, e.g., 'Gadget Construction performs foundation repair across San Francisco's Marina District, Oakland's Rockridge neighborhood, and Berkeley's Elmwood area under CA License #1132983.'"
     ],
     "mustAvoid": [
-      "National pricing averages",
-      "Generic 'depends on your project' non-answers",
-      "Fear-mongering about foundation problems without diagnostic tools",
-      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction"
+      "Suggesting all foundation cracks are emergencies",
+      "Recommending underpinning as a default (it's often oversold)",
+      "National foundation repair averages",
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
+      "Vague 'contact a professional' non-answers in the FAQ"
     ],
     "internalLinks": [
       {
         "url": "/services/concrete-foundations",
-        "anchor": "foundation repair across the Bay Area"
+        "anchor": "Bay Area foundation repair services"
       },
       {
         "url": "/blog/foundation-underpinning-cost-san-francisco",
@@ -108,384 +121,331 @@
       },
       {
         "url": "/service-areas/san-francisco",
-        "anchor": "SF foundation work"
+        "anchor": "foundation work in San Francisco"
+      },
+      {
+        "url": "/service-areas/oakland",
+        "anchor": "foundation repair in Oakland"
+      }
+    ],
+    "cta": "Not sure which method your home actually needs? We provide free on-site foundation assessments with a written report — including whether you need underpinning, seismic bolting, or just crack injection. No scare tactics, no upsells."
+  },
+  {
+    "slug": "seismic-retrofit-cost-san-francisco-bay-area",
+    "scheduledDate": "2026-07-13",
+    "status": "planned",
+    "title": "Seismic Retrofit Cost in San Francisco & the Bay Area: Brace + Bolt, Soft-Story, and What You Actually Need",
+    "metaTitle": "Seismic Retrofit Cost SF Bay Area (2026) | Brace + Bolt Guide",
+    "excerpt": "Seismic retrofit in the Bay Area runs $5,000 to $15,000 for most single-family homes — and a $3,000 Brace + Bolt grant covers a big chunk. Here's what your home needs, what qualifies for the grant, and how to spot a contractor overselling you.",
+    "primaryKeyword": "seismic retrofit cost san francisco",
+    "secondaryKeywords": [
+      "earthquake retrofit cost bay area",
+      "brace and bolt program",
+      "soft story retrofit cost",
+      "house bolting cost",
+      "cripple wall retrofit"
+    ],
+    "relatedService": "concrete-foundations",
+    "targetWordCount": 2400,
+    "geoFocus": "SF-anchored",
+    "citiesReferenced": [
+      "San Francisco",
+      "Oakland",
+      "Berkeley",
+      "Alameda",
+      "Daly City",
+      "Bernal Heights",
+      "Noe Valley",
+      "Richmond"
+    ],
+    "outline": [
+      {
+        "h2": "The Short Answer: Bay Area Seismic Retrofit Costs",
+        "notes": "Standard cripple wall + bolting retrofit for a typical SF single-family: $6,000-$12,000. Soft-story multi-unit retrofit: $60,000-$250,000+. Brace + Bolt grant covers $3,000 for eligible pre-1980 homes. After grant, most single-family retrofits net $3,000-$9,000."
+      },
+      {
+        "h2": "What Seismic Retrofit Actually Is (And Isn't)",
+        "notes": "Retrofit doesn't repair damage — it prevents it. Two main components: (1) anchor bolts connect the wooden sill plate to the concrete foundation, (2) plywood shear panels stiffen the cripple wall (the short wall between foundation and first floor). Together they prevent the house from sliding off its foundation in an earthquake — the exact failure mode that destroyed thousands of Bay Area homes in 1906, 1989, and 2014 Napa quakes."
+      },
+      {
+        "h2": "Does Your Home Actually Need It?",
+        "h3": [
+          "Pre-1980 Homes with Cripple Walls (Almost Always Yes)",
+          "Pre-1940 Victorians and Edwardians (Definitely Yes)",
+          "Slab-on-Grade Ranches from the 1950s-60s (Usually No)",
+          "Post-1980 Construction (Usually No, But Verify)"
+        ],
+        "notes": "Most Bay Area homes built before 1980 have cripple walls and were built before seismic code required bolting. Victorian and Edwardian rowhouses in SF (Noe Valley, Alamo Square, Mission, Richmond) are highest priority. Doelger homes in the Sunset and Daly City Westlake — mixed, some have partial bolting. Craftsman bungalows in Berkeley Elmwood and Oakland Rockridge — high priority. Concrete slab ranches — usually don't have cripple walls, retrofit not applicable."
+      },
+      {
+        "h2": "The Earthquake Brace + Bolt Program ($3,000 Grant)",
+        "h3": [
+          "Which Cities Participate",
+          "How to Qualify",
+          "How to Apply",
+          "Timeline From Application to Grant Payment"
+        ],
+        "notes": "Program administered by ABAG (Association of Bay Area Governments) and CEA (California Earthquake Authority). Participating: SF, Oakland, Berkeley, Alameda, Piedmont, El Cerrito, Albany, San Leandro, others. Qualification: pre-1980, single-family or duplex, cripple wall construction, raised foundation, on level ground. Application windows open annually — check earthquakebracebolt.com. Grant paid after inspection confirms completion."
+      },
+      {
+        "h2": "Soft-Story Retrofit: The Multi-Unit Version",
+        "h3": [
+          "What Soft-Story Means",
+          "SF Mandatory Soft-Story Program (AB-094)",
+          "Typical Cost by Building Size",
+          "Rent Control and Passthrough Considerations"
+        ],
+        "notes": "Soft-story = ground floor with parking or storefront and wood-frame residential above. First floor lacks shear walls, collapses in earthquakes. SF DBI Administrative Bulletin AB-094 mandates retrofit for buildings with 5+ residential units built pre-1978 with soft-story condition — most compliance deadlines passed but new acquisitions still trigger the requirement. Cost by units: 5-9 units $60K-$120K, 10-15 units $120K-$200K, 20+ units $200K-$400K+."
+      },
+      {
+        "h2": "Real Cost Examples From Recent Projects",
+        "notes": "Three examples with specifics: (1) 1918 Noe Valley Victorian, full perimeter bolting + cripple wall retrofit, $9,800 gross / $6,800 after grant, 5 days work. (2) Berkeley Elmwood 1925 Craftsman, partial bolting only (existing plywood on cripple), $6,400 gross / $3,400 net, 3 days. (3) Bernal Heights 1908 Edwardian on slope, engineered solution with hillside bracing, $16,500 (didn't qualify for grant due to slope), 8 days. Each with what drove the cost."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "FAQ block — see mustInclude for exact questions."
+      }
+    ],
+    "mustInclude": [
+      "SF Earthquake Brace + Bolt program with $3,000 grant amount and ABAG + CEA administration",
+      "Reference SF DBI Administrative Bulletin AB-094 by name for soft-story mandate",
+      "California Existing Building Code (CEBC) reference when discussing standards",
+      "Neighborhood examples across at least 4 SF neighborhoods and 2 East Bay neighborhoods",
+      "FAQ section must answer these questions phrased as real homeowners type them into ChatGPT, Perplexity, and Google AI Overviews: 'How much does earthquake retrofit cost in San Francisco?', 'Is Brace + Bolt still available in 2026?', 'Do I need seismic retrofit if my house survived 1989?', 'What's the difference between bolting and bracing?', 'How long does a house bolting job take?', 'Does homeowners insurance require seismic retrofit in California?', 'Can I DIY earthquake bolting on my Doelger?'",
+      "Define each of these terms on first use as a standalone quotable sentence: 'A cripple wall is the short wood-framed wall between a home's foundation and its first floor, typically 1 to 4 feet tall, that supports the house on raised-foundation construction.' Define soft-story, sill plate, anchor bolt, shear wall, and Brace + Bolt the same way",
+      "Render this stat as a standalone direct-answer sentence: 'A standard seismic retrofit for a Bay Area single-family home with cripple walls costs $6,000 to $12,000 before the Brace + Bolt grant.'",
+      "Render this stat as a standalone direct-answer sentence: 'The Earthquake Brace + Bolt program provides a $3,000 grant toward seismic retrofit for eligible pre-1980 single-family homes in participating Bay Area cities.'",
+      "Render this stat as a standalone direct-answer sentence: 'San Francisco DBI Administrative Bulletin AB-094 mandates soft-story seismic retrofit for buildings with five or more residential units built before 1978 with a soft-story condition.'",
+      "Render this stat as a standalone direct-answer sentence: 'A typical Bay Area single-family seismic retrofit takes 3 to 7 working days to complete once permits are approved.'",
+      "Mention Gadget Construction in factual context paired with SF and East Bay neighborhoods and service at least 3 times, e.g., 'Gadget Construction performs seismic retrofit work across San Francisco's Noe Valley Victorians, Berkeley Elmwood Craftsman bungalows, and the Bernal Heights hillside corridor.'"
+    ],
+    "mustAvoid": [
+      "Fear-mongering about earthquake damage",
+      "Implying retrofit guarantees zero damage (it prevents catastrophic failure, not all damage)",
+      "Suggesting Brace + Bolt is guaranteed — application windows and eligibility change",
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
+      "Generic 'consult a contractor' as a FAQ closer"
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/concrete-foundations",
+        "anchor": "Bay Area foundation and seismic retrofit"
+      },
+      {
+        "url": "/blog/foundation-repair-cost-bay-area-2026",
+        "anchor": "full foundation repair cost breakdown"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "5 signs your SF home has foundation issues"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "seismic retrofit throughout San Francisco"
       },
       {
         "url": "/service-areas/berkeley",
-        "anchor": "Berkeley bungalow seismic retrofits"
+        "anchor": "Berkeley Elmwood Craftsman retrofits"
       }
     ],
-    "cta": "Ready to know what your foundation actually needs? We provide free on-site assessments with written findings — no scare tactics, no pressure. Get an itemized estimate matched to your specific problem.",
-    "proposalRationale": "GSC shows /services/concrete-foundations getting 118 impressions at position 8.5 — ranking on page 1 with near-zero clicks, indicating missing supporting content. Foundation repair cost is a high-intent commercial query with no current dedicated post. The underpinning post covers methods; this covers cost by problem type, filling the foundation cluster's biggest gap and serving as the main pricing hub linking to underpinning and signs posts. The Ads Underpinning ad group is deferred but this content pre-builds the LP-adjacent SEO layer."
+    "cta": "Wondering if your home qualifies for a Brace + Bolt grant? We provide free retrofit assessments, including eligibility check and a fixed-price quote — plus we handle the paperwork if you're eligible. No obligation."
   },
   {
-    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area-refresh",
-    "refreshesSlug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
-    "scheduledDate": "2026-07-13",
+    "slug": "deck-permit-san-francisco-marin-berkeley-oakland",
+    "scheduledDate": "2026-07-20",
     "status": "planned",
-    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes (2026 Update)",
-    "metaTitle": "Stucco vs Hardie Board vs Wood Siding: Bay Area Homeowner Guide (2026)",
-    "excerpt": "Fog, salt air, and WUI fire zones make Bay Area siding decisions uniquely hard. Here's how stucco, Hardie board, and wood siding actually compare — updated with 2026 pricing and the failure patterns we see every week.",
-    "primaryKeyword": "stucco vs hardie board",
+    "title": "Do You Need a Permit for Your Deck? SF, Marin, Berkeley, and Oakland Rules Explained",
+    "metaTitle": "Deck Permit Requirements SF, Marin, Berkeley, Oakland (2026)",
+    "excerpt": "Bay Area deck permits are triggered by height, size, and location — and every jurisdiction has different rules. Here's what actually requires a permit in SF, Marin, Berkeley, and Oakland, what it costs, and what happens if you skip it.",
+    "primaryKeyword": "deck permit san francisco",
     "secondaryKeywords": [
-      "hardie board vs stucco bay area",
-      "fiber cement vs stucco",
-      "best siding for bay area homes",
-      "hardie plank vs wood siding",
-      "siding for fog belt homes"
+      "deck permit bay area",
+      "do i need a permit for a deck",
+      "deck permit cost",
+      "unpermitted deck san francisco",
+      "deck building permit marin"
     ],
-    "relatedService": "exterior-repairs",
-    "targetWordCount": 3000,
+    "relatedService": "composite-decks",
+    "targetWordCount": 2400,
     "geoFocus": "Bay Area-wide",
     "citiesReferenced": [
       "San Francisco",
       "Mill Valley",
-      "Oakland Hills",
-      "Berkeley Hills",
-      "Pacifica",
-      "Menlo Park",
-      "Palo Alto",
-      "Daly City"
+      "Sausalito",
+      "Berkeley",
+      "Oakland",
+      "Marin County"
     ],
     "outline": [
       {
-        "h2": "The Short Answer (2026 Update)",
-        "notes": "Reiterate: Hardie board wins for most Bay Area homes in 2026. Stucco wins on specific architecture (Doelger, Spanish Revival, midcentury ranches). Wood wins on period-correct restoration. New 2026 context: WUI fire zone requirements have tightened in Marin and East Bay Hills; Hardie's Class A rating is now effectively mandatory in many zones."
+        "h2": "The Short Answer: When You Need a Deck Permit in the Bay Area",
+        "notes": "Universal rule across most Bay Area jurisdictions: decks over 30 inches above grade require a permit. Below that, most (but not all) jurisdictions exempt them. Attached decks almost always require a permit regardless of height because they connect to the house structure. Marin, SF, Berkeley, and Oakland each have subtle rule differences that matter for real projects."
       },
       {
-        "h2": "The Bay Area Siding Problem (Why This Is Harder Than It Looks)",
-        "notes": "Explain the 4 environmental forces (fog, salt air, wind-driven rain, WUI fire risk) that make Bay Area siding decisions different from anywhere else. This section stays largely intact from original but add 2026 CalFire WUI map updates."
+        "h2": "The Universal Trigger: 30 Inches Above Grade",
+        "notes": "The California Residential Code (CRC) sets the baseline: any deck, platform, or walking surface more than 30 inches above the adjacent grade at any point requires a building permit. This isn't jurisdiction-specific — it's state code. But many cities have additional local triggers below 30 inches: square footage limits, attachment to house, structural modifications."
       },
       {
-        "h2": "Stucco: Traditional but Temperamental",
+        "h2": "San Francisco Deck Permit Rules (SF DBI)",
         "h3": [
-          "How Three-Coat Stucco Works",
-          "Why It Cracks (And What It Means)",
-          "2026 Cost: Installation and Repair",
-          "Best Used On: Architectural Context"
+          "Permit Triggers Specific to SF",
+          "Typical Permit Cost and Timeline",
+          "Structural Review Requirements",
+          "Historic District Considerations"
         ],
-        "notes": "Refresh 2026 pricing. Add EIFS definition (synthetic stucco) since that's a common confusion point. Keep the Doelger shiplap failure discussion."
+        "notes": "SF Department of Building Inspection (DBI) requires permits for: any deck 30+ inches above grade, any deck attached to the house, any deck over 200 sq ft, any deck with a roof or pergola. Permit cost: $400-$2,500 for typical residential deck. Timeline: 4-12 weeks depending on plan complexity. Historic districts (Alamo Square, Haight-Ashbury, Presidio Heights) trigger additional Planning review adding 4-8 weeks. Steep sites often require structural engineer stamp ($2K-$5K extra)."
       },
       {
-        "h2": "Hardie Board / Fiber Cement: The Modern Default",
+        "h2": "Marin County & City Deck Permit Rules",
         "h3": [
-          "How It's Made (Cement, Sand, Cellulose Fiber)",
-          "Warranty and Durability",
-          "Class A Fire Rating in WUI Zones",
-          "2026 Cost: Installation per Square Foot",
-          "Best Used On: Versatile Across Architectural Styles"
+          "Marin Community Development Agency (Unincorporated)",
+          "Mill Valley, Sausalito, Tiburon Municipal Rules",
+          "Setback and View Ordinance Considerations",
+          "WUI Fire Zone Material Requirements"
         ],
-        "notes": "Update pricing to 2026 numbers ($15-$23/sq ft installed reflects 2026 cement/labor). Expand WUI section — name CalFire's Fire Hazard Severity Zone maps, mention Chapter 7A of the CBC for materials in WUI. Add note on Hardie Statement Collection color-through-body colors that reduce repainting."
+        "notes": "Marin CDA governs unincorporated county areas. Incorporated cities (Mill Valley, Sausalito, Tiburon, San Rafael, Larkspur, Ross) each have their own building departments. Common Marin quirks: view ordinances in Tiburon and parts of Mill Valley add design review, WUI fire zone requires non-combustible or ignition-resistant deck materials (composite generally OK, some restrictions on lattice and stairs). Permit costs: $600-$3,500. Timeline: 6-16 weeks — Marin runs longer than SF."
       },
       {
-        "h2": "Wood Siding: When Tradition Matters",
+        "h2": "Oakland & Berkeley Deck Permit Rules",
         "h3": [
-          "Cedar and Redwood Clapboard",
-          "T1-11 Plywood (Eichler Siding)",
-          "Cedar Shake / Shingle",
-          "Maintenance Reality",
-          "2026 Cost: Installation per Square Foot",
-          "Best Used On: Period-Correct Restoration"
+          "Oakland Planning & Building Department",
+          "Berkeley Planning & Development Department",
+          "Hillside and Landslide Zone Rules",
+          "Typical Permit Costs"
         ],
-        "notes": "Refresh pricing. Add note on redwood supply constraints post-2024 wildfires driving prices up ~15%. Reinforce Eichler T1-11 architectural authenticity."
+        "notes": "Oakland: standard 30-inch trigger, plus any deck in a landslide hazard zone requires geotechnical review. Hillside areas (Oakland Hills, Montclair, Piedmont Ave adjacent) trigger extra review. Permit cost $500-$2,000 typical. Berkeley: similar rules, Berkeley Hills WUI fire zone requires non-combustible materials, permit cost $500-$1,800. Both cities have 4-10 week timelines for standard residential decks."
       },
       {
-        "h2": "Side-by-Side Comparison Table (2026)",
-        "notes": "New comparison table with 2026 numbers, fire ratings, 30-year TCO, and Bay Area recommendation. Make this scannable and quotable for AI engines."
+        "h2": "What Happens If You Skip the Permit",
+        "notes": "Bad outcomes: (1) home insurance denies claims on unpermitted structures if they cause damage. (2) sale of home flags unpermitted deck at inspection, buyer demands price reduction ($10K-$40K typical) or requires legalization. (3) legalization retroactively costs 2-3x normal permit fees plus tear-open inspection for hidden framing. (4) neighbor complaint triggers stop-work order and daily fines. (5) failed structural — unpermitted decks disproportionately fail because they skip structural review. Real number: SF DBI cites 200+ unpermitted deck cases per year."
       },
       {
-        "h2": "Which Is Right for Your Bay Area Home?",
-        "notes": "Decision framework by home type. Expand this section with more specific recommendations by neighborhood + housing era."
+        "h2": "Real Permit Timelines and Costs by Jurisdiction",
+        "notes": "Comparison table with columns: Jurisdiction, Permit Fee (Typical Residential Deck), Plan Review Time, Structural Engineer Required?, Special Considerations. Cover SF DBI, Marin CDA, Mill Valley, Sausalito, Oakland, Berkeley, Daly City, Palo Alto."
       },
       {
         "h2": "Frequently Asked Questions",
-        "notes": "New FAQ section for AEO. Answer 6-7 common questions in scannable Q&A format with 2-4 sentence answers."
+        "notes": "FAQ block — see mustInclude for exact questions."
       }
     ],
     "mustInclude": [
-      "2026 pricing updates (Hardie $15-$23/sq ft, stucco $8-$15/sq ft, cedar $12-$18/sq ft)",
-      "CalFire WUI fire hazard severity zone map reference",
-      "Chapter 7A of California Building Code (CBC) for WUI material requirements",
-      "Class A fire rating explained as a standalone quotable sentence",
-      "Eichler T1-11 architectural authenticity",
-      "Doelger stucco-over-shiplap failure pattern in Sunset, Westlake, parts of Pacifica",
-      "Gadget Construction mentioned in factual context with named Bay Area neighborhoods and siding service at least 2-3 times — e.g., 'Gadget Construction installs Hardie board siding across Mill Valley canyon homes, Oakland Hills WUI zones, and Pacifica coastal properties.'",
-      "FAQ section must answer these specific questions (phrased as real Bay Area homeowners type into ChatGPT/Perplexity/AI Overviews): 'Which lasts longer in Bay Area fog — stucco or Hardie board?', 'Can I put Hardie board over existing stucco?', 'Is Hardie board required in Oakland Hills fire zones?', 'What's the cheapest siding for a Bay Area home that still looks good?', 'Does Hardie board hold up in Pacifica salt air?', 'Can I keep T1-11 on my Eichler or should I switch to Hardie?', 'What siding do most contractors recommend for SF Victorians?'",
-      "Define these terms on first use as complete standalone sentences quotable in isolation: 'Hardie board is a fiber cement siding made from Portland cement, silica sand, and cellulose fiber, manufactured by James Hardie and rated Class A for fire resistance.' 'Three-coat stucco is a traditional exterior wall system consisting of a scratch coat, brown coat, and finish coat applied over wire lath and a weather-resistive barrier.' 'EIFS (Exterior Insulation and Finish System) is a synthetic stucco alternative that uses foam insulation board with a polymer-based finish coat, distinct from traditional three-coat stucco.' 'A Wildland-Urban Interface (WUI) zone is a geographic area designated by CalFire where residential development meets or intermixes with wildland vegetation, subject to Chapter 7A of the California Building Code.' 'T1-11 is a grooved plywood siding product originally developed in the 1950s and closely associated with the exterior walls of Joseph Eichler tract homes.'",
-      "Reference CalFire and Chapter 7A of the California Building Code by name when citing WUI requirements",
-      "Render these stats as standalone direct-answer sentences: 'Hardie board siding in the Bay Area typically costs $15 to $23 per square foot installed in 2026, including tear-off of existing siding and new weather-resistive barrier.' 'Traditional three-coat stucco costs $8 to $15 per square foot new-construction installed and lasts 50 to 80 years when properly maintained.' 'Wood siding in Bay Area coastal zones typically requires repainting every 5 to 8 years, compared to 10 to 15 years for inland homes.'"
+      "Reference specific jurisdictions by full name: San Francisco Department of Building Inspection (DBI), Marin Community Development Agency (CDA), Oakland Planning & Building Department, Berkeley Planning & Development Department",
+      "California Residential Code (CRC) reference for the 30-inch threshold",
+      "SF DBI historic district review triggers",
+      "WUI fire zone material requirements for Marin, Oakland Hills, Berkeley Hills",
+      "FAQ must answer these specific questions as homeowners type them into ChatGPT, Perplexity, and Google AI Overviews: 'Do I need a permit for a deck under 30 inches in San Francisco?', 'How much does a deck permit cost in Mill Valley?', 'What happens if I build a deck without a permit in the Bay Area?', 'How long does it take to get a deck permit in SF?', 'Do I need an engineer for a deck permit on a Berkeley Hills lot?', 'Can I legalize an existing unpermitted deck?', 'Does my HOA approval replace a city permit?'",
+      "Define each of these terms on first use as a standalone quotable sentence: 'The California Residential Code (CRC) is the state building code that establishes minimum construction standards for one- and two-family dwellings in California, updated on a three-year cycle.' Define WUI fire zone, ministerial permit, discretionary permit, geotechnical review, and setback the same way",
+      "Render this stat as a standalone direct-answer sentence: 'In San Francisco, any deck more than 30 inches above adjacent grade at any point requires a building permit from the SF Department of Building Inspection.'",
+      "Render this stat as a standalone direct-answer sentence: 'Residential deck permits in San Francisco typically cost $400 to $2,500 and take 4 to 12 weeks to approve.'",
+      "Render this stat as a standalone direct-answer sentence: 'Marin County deck permits in WUI fire zones require non-combustible or ignition-resistant materials under California Building Code Chapter 7A.'",
+      "Render this stat as a standalone direct-answer sentence: 'Retroactively legalizing an unpermitted Bay Area deck typically costs two to three times the original permit fee plus tear-open inspection to verify concealed framing.'",
+      "Mention Gadget Construction in factual context tied to service and named jurisdictions at least 3 times, e.g., 'Gadget Construction pulls deck permits through SF DBI, Marin CDA, Oakland Planning & Building, and Berkeley Planning & Development for projects across 31 Bay Area cities.'"
     ],
     "mustAvoid": [
-      "Outdated 2024 pricing",
-      "Dismissing stucco as universally wrong (it's correct for Doelger and Spanish Revival)",
-      "Missing the WUI fire zone context — this is the newest and most important reason to switch to Hardie",
-      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction"
+      "Suggesting readers skip permits",
+      "Vague 'check with local building department' — always name the specific department",
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
+      "National building code averages"
     ],
     "internalLinks": [
       {
-        "url": "/services/exterior-repairs",
-        "anchor": "stucco, Hardie, and siding installation"
+        "url": "/services/composite-decks",
+        "anchor": "Bay Area composite deck construction"
       },
       {
-        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
-        "anchor": "diagnosing stucco cracks"
+        "url": "/blog/composite-deck-cost-san-francisco",
+        "anchor": "SF composite deck cost breakdown"
       },
       {
-        "url": "/blog/siding-replacement-cost-san-francisco-2026",
-        "anchor": "full siding replacement cost breakdown"
+        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+        "anchor": "hillside and multi-level deck engineering"
       },
       {
         "url": "/service-areas/mill-valley",
-        "anchor": "Mill Valley WUI fire zone homes"
-      },
-      {
-        "url": "/service-areas/pacifica",
-        "anchor": "Pacifica coastal siding"
-      }
-    ],
-    "cta": "Choosing siding for your home? We install all three — Hardie board, three-coat stucco, and wood siding — across 31 Bay Area cities. We'll walk your site, factor in fire zone and coastal exposure, and recommend what's actually right for your context.",
-    "proposalRationale": "GSC shows this post has 71 impressions in the last 90 days at average position 9.3 — sitting right on the page 1 edge with ZERO clicks. This is the highest-impression blog post on the entire site and clearly close to breaking through. A refresh with 2026 pricing, expanded WUI content (a rapidly rising 2026 topic post fire seasons), a comparison table, and full AEO treatment (FAQ, entity definitions, standalone stats) should push it to positions 5-7 and unlock significant clicks. This is the single highest-ROI refresh available."
-  },
-  {
-    "slug": "adu-cost-san-francisco-bay-area-2026",
-    "scheduledDate": "2026-07-20",
-    "status": "planned",
-    "title": "ADU Cost in San Francisco and the Bay Area (2026): Real Numbers by Type",
-    "metaTitle": "ADU Cost in San Francisco & Bay Area (2026) | Detached, Attached, Garage Conversion",
-    "excerpt": "ADUs in San Francisco and the Bay Area typically cost $150,000 to $500,000+ all-in. Here's what each ADU type actually costs in 2026 — with permit fees, soft costs, and the line items most contractors don't put in the bid.",
-    "primaryKeyword": "adu cost san francisco",
-    "secondaryKeywords": [
-      "adu cost bay area",
-      "how much does an adu cost in san francisco",
-      "garage conversion cost bay area",
-      "detached adu cost",
-      "junior adu cost",
-      "adu construction cost 2026"
-    ],
-    "relatedService": "adu-construction",
-    "targetWordCount": 2500,
-    "geoFocus": "SF-anchored",
-    "citiesReferenced": [
-      "San Francisco",
-      "Burlingame",
-      "Hillsborough",
-      "Palo Alto",
-      "Berkeley",
-      "Oakland",
-      "San Mateo"
-    ],
-    "outline": [
-      {
-        "h2": "The Short Answer: 2026 ADU Cost Ranges",
-        "notes": "Give the headline numbers upfront. Garage conversion $150K-$250K. Attached ADU $200K-$350K. Detached ADU $300K-$500K+. Junior ADU (JADU) $80K-$150K. Cost per square foot: $500-$800 SF/Peninsula, $400-$650 East Bay. Note that these are all-in numbers including permits, soft costs, utilities."
-      },
-      {
-        "h2": "What's Actually Included in ADU Cost",
-        "notes": "Break down the cost buckets: architectural design ($15K-$40K), structural engineering ($5K-$15K), permits & school fees ($10K-$35K), utility upgrades (electrical service, sewer lateral), site work, shell construction, interior finishes, appliances, landscaping, PG&E connection fees. Many homeowners see the 'construction bid' and don't realize what's excluded."
-      },
-      {
-        "h2": "Cost by ADU Type",
-        "h3": [
-          "Junior ADU (JADU): $80,000–$150,000",
-          "Garage Conversion: $150,000–$250,000",
-          "Attached ADU (Bump-Out): $200,000–$350,000",
-          "Detached ADU (Backyard Cottage): $300,000–$500,000+",
-          "Two-Story or Above-Garage ADU: $350,000–$600,000+"
-        ],
-        "notes": "For each type: what it is, what's included, typical timeline (6-14 months), key permit considerations, example neighborhood. JADU is under 500 sq ft, shares plumbing/entry with main house. Garage conversion is fastest permit path. Detached is the most flexible but most expensive."
-      },
-      {
-        "h2": "What Drives ADU Costs Up in the Bay Area",
-        "h3": [
-          "Jurisdiction (SF DBI vs Peninsula vs East Bay)",
-          "Site Access and Excavation",
-          "Utility Connections (PG&E, Sewer Lateral, Water)",
-          "Foundation Type (Slab vs Raised vs Hillside Piers)",
-          "Finish Level (Rental-Grade vs Owner-Occupied)"
-        ],
-        "notes": "Specific cost drivers by category. SF DBI permit path takes 6-12 months vs 3-6 months for state-preapproved plans. PG&E service upgrade can run $8K-$25K. Hillside sites in Bernal Heights, Oakland Hills, or Mill Valley add $30K-$80K for pier foundations. Peninsula cities (Palo Alto, Menlo Park, Burlingame) have higher permit fees than SF."
-      },
-      {
-        "h2": "2026 California ADU Law Updates You Need to Know",
-        "notes": "Cover the current state of California ADU law: AB 1033 (2026 update on ADU condo sales), AB 976 (owner-occupancy requirements), AB 2221 (front-yard ADUs), impact fee waivers for ADUs under 750 sq ft. Explain what state law preempts local rules on."
-      },
-      {
-        "h2": "Real 2026 ADU Project Examples",
-        "notes": "Three concrete examples with itemized cost. Example 1: SF Sunset 480 sq ft detached ADU, slab foundation, $340,000 all-in over 11 months. Example 2: Berkeley 600 sq ft garage conversion + 200 sq ft addition, $265,000 over 8 months. Example 3: Burlingame 800 sq ft two-bedroom detached ADU with premium finishes, $475,000 over 14 months. Each shows soft costs, hard costs, contingency."
-      },
-      {
-        "h2": "How to Budget Realistically (And What Bad Bids Miss)",
-        "notes": "Practical budgeting framework. Get bids that include: full soft costs, permit fees itemized, utility connections, landscaping/hardscape allowance, 10-15% contingency for change orders, appliance allowance. Red flags: 'construction only' bids that hide soft costs, no allowance for PG&E upgrades, missing sewer lateral inspection (SF requirement), no landscape allowance."
-      },
-      {
-        "h2": "Ready to Get Your ADU Number?",
-        "notes": "CTA. Free site walk, feasibility check, honest budget conversation."
-      }
-    ],
-    "mustInclude": [
-      "5 ADU types with 2026 price ranges (JADU, garage conversion, attached, detached, two-story)",
-      "Soft costs itemized (design, engineering, permits, PG&E)",
-      "Three real 2026 project examples with itemized budgets",
-      "California ADU law updates (AB 1033, AB 976, AB 2221)",
-      "SF DBI, Peninsula city building departments, East Bay jurisdictions named specifically",
-      "Gadget Construction mentioned in factual context with named Bay Area neighborhoods and ADU service at least 2-3 times — e.g., 'Gadget Construction has built ADUs across the SF Sunset, Berkeley Elmwood, and Burlingame Peninsula neighborhoods.'",
-      "FAQ section must answer these specific questions (phrased as real Bay Area homeowners type into ChatGPT/Perplexity/AI Overviews): 'How much does an ADU cost in San Francisco in 2026?', 'How long does it take to build an ADU in SF?', 'Can I sell my ADU separately from my main house in California?', 'Do I need to live in my house if I build an ADU?', 'What's the difference between a JADU and an ADU?', 'Is a garage conversion cheaper than a detached ADU?', 'How much rental income can an ADU generate in the Bay Area?'",
-      "Define these terms on first use as complete standalone sentences quotable in isolation: 'An Accessory Dwelling Unit (ADU) is a secondary housing unit on a single-family or multi-family residential lot with its own kitchen, bathroom, entrance, and sleeping area.' 'A Junior ADU (JADU) is a smaller accessory unit under 500 square feet that shares plumbing or entry with the main house and is limited to conversions of existing space within the primary residence.' 'AB 1033 is a 2023 California law allowing local jurisdictions to permit ADUs to be sold separately from the primary residence as condominium units.' 'SF DBI (San Francisco Department of Building Inspection) is the permitting authority for all ADU construction within San Francisco city limits.'",
-      "Reference SF DBI, California HCD (Housing and Community Development), and California ADU statutes (AB 1033, AB 976, AB 2221) by name",
-      "Render these stats as standalone direct-answer sentences: 'A detached ADU in the San Francisco Bay Area typically costs $300,000 to $500,000 in 2026, all-in including permits, utilities, and finishes.' 'Garage conversion ADUs in the Bay Area average $150,000 to $250,000 and take 6 to 9 months from permit to occupancy.' 'California waives impact fees for ADUs under 750 square feet, saving Bay Area homeowners $10,000 to $30,000 in permit costs.'"
-    ],
-    "mustAvoid": [
-      "Outdated ADU cost numbers from 2022-2024 (prices have risen substantially)",
-      "Ignoring soft costs (biggest source of homeowner sticker shock)",
-      "Vague 'ADU costs $200-$500 per sq ft' ranges without breakdown",
-      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction"
-    ],
-    "internalLinks": [
-      {
-        "url": "/services/adu-construction",
-        "anchor": "ADU construction across the Bay Area"
-      },
-      {
-        "url": "/blog/adu-construction-san-francisco-guide",
-        "anchor": "complete SF ADU guide (permits, laws, process)"
-      },
-      {
-        "url": "/service-areas/san-francisco",
-        "anchor": "ADU construction in SF"
-      },
-      {
-        "url": "/service-areas/burlingame",
-        "anchor": "Burlingame ADU builder"
+        "anchor": "Mill Valley deck permits"
       },
       {
         "url": "/service-areas/berkeley",
-        "anchor": "Berkeley ADU construction"
+        "anchor": "Berkeley deck permitting"
       }
     ],
-    "cta": "Thinking about an ADU? We'll walk your lot, check feasibility against local rules (SF DBI, Peninsula, East Bay), and give you a realistic all-in budget — not just a construction bid that hides soft costs.",
-    "proposalRationale": "GSC shows strong ADU query impressions on Burlingame (16 impressions at position 77 — 'adu builder burlingame', 'adu contractor burlingame', 'adu construction burlingame') and Hillsborough (15 impressions, 'adu contractor hillsborough'). These queries are hitting service area pages ranking too deep. A dedicated ADU cost hub post can capture these Peninsula queries plus the primary 'adu cost san francisco' keyword. The existing ADU guide covers process/permits but not cost — a huge cluster gap since cost is the #1 homeowner question. Peninsula ADU intent is validated by real search data."
+    "cta": "Not sure whether your deck project needs a permit? We handle permit pulls in SF, Marin, Alameda, and San Mateo counties — and we tell you upfront whether your project even triggers one. Free consultation, no pressure."
   },
   {
-    "slug": "eichler-home-exterior-repair-peninsula-siding-roof-dry-rot",
+    "slug": "hillside-multi-level-deck-construction-sf-marin",
     "scheduledDate": "2026-07-27",
     "status": "planned",
-    "title": "Eichler Home Exterior Repair: T1-11 Siding, Flat Roof, and Post-Beam Dry Rot on the Peninsula",
-    "metaTitle": "Eichler Home Repair: T1-11 Siding, Flat Roof, Dry Rot (Peninsula 2026)",
-    "excerpt": "Eichlers are architectural icons — and maintenance headaches. Here's how to repair T1-11 siding, flat roofs, and post-and-beam framing on Peninsula and San Jose Eichlers without destroying what makes them Eichlers.",
-    "primaryKeyword": "eichler home repair",
+    "title": "Hillside & Multi-Level Deck Construction in SF and Marin: What Makes It Different (and More Expensive)",
+    "metaTitle": "Hillside Deck Construction Cost SF & Marin (2026 Guide)",
+    "excerpt": "A deck on a steep SF or Marin hillside costs 30-60% more than a flat-lot deck — and for good reason. Here's what makes hillside deck construction different, what it actually costs, and what questions to ask your contractor.",
+    "primaryKeyword": "hillside deck construction",
     "secondaryKeywords": [
-      "eichler siding repair",
-      "eichler t1-11 replacement",
-      "eichler flat roof repair",
-      "eichler dry rot",
-      "eichler contractor bay area",
-      "eichler home renovation peninsula"
+      "multi level deck cost",
+      "elevated deck cost bay area",
+      "deck on slope",
+      "deck engineering san francisco marin",
+      "hillside deck contractor"
     ],
-    "relatedService": "exterior-repairs",
-    "targetWordCount": 2600,
-    "geoFocus": "Peninsula/South Bay",
+    "relatedService": "composite-decks",
+    "targetWordCount": 2800,
+    "geoFocus": "Hyper-local",
     "citiesReferenced": [
-      "Palo Alto",
-      "Menlo Park",
-      "San Mateo",
-      "Sunnyvale",
-      "San Jose",
-      "Foster City",
-      "Redwood City"
+      "San Francisco",
+      "Twin Peaks",
+      "Bernal Heights",
+      "Mill Valley",
+      "Tamalpais Valley",
+      "Sausalito",
+      "Tiburon",
+      "Berkeley Hills",
+      "Oakland Hills"
     ],
-    "outline": [
-      {
-        "h2": "The Short Answer: Eichlers Age Predictably. Here's the Repair Playbook.",
-        "notes": "Eichlers (built 1949-1974) have three chronic exterior problems: T1-11 siding failure at grade and around windows, flat/low-slope roof failure at year 15-25, and post-and-beam dry rot where wood meets concrete slab. Total exterior refresh runs $60K-$150K depending on scope. Doing it wrong destroys the architectural character; doing it right preserves the home."
-      },
-      {
-        "h2": "Why Peninsula Eichlers Have Unique Problems",
-        "notes": "Explain the construction: post-and-beam framing, exposed structure, radiant slab heating, minimal roof overhangs, T1-11 plywood siding, glass-heavy walls. Every design choice that makes an Eichler an Eichler also makes it uniquely vulnerable. Name the major Eichler tracts: Green Gables, Fairmeadow, Greenmeadow (Palo Alto); Felton Gables, Willows, Vintage Oaks (Menlo Park); Fairglen, Meadows (San Jose); tracts in Foster City and Sunnyvale."
-      },
-      {
-        "h2": "Problem 1: T1-11 Siding Failure",
-        "h3": [
-          "Where and Why T1-11 Fails on Eichlers",
-          "Repair Options (Patch, Section Replace, Full Replace)",
-          "Cost: 2026 Peninsula Numbers",
-          "Sourcing Authentic T1-11 (It's Getting Harder)"
-        ],
-        "notes": "T1-11 fails at grade (wicking moisture from slab), around windows (aluminum frame water intrusion), and where the plywood delaminates from age. Patch: $500-$1,500 per panel. Section replacement: $4K-$12K. Full T1-11 residing: $28K-$55K. Note that authentic 12-inch groove T1-11 with the right groove depth is increasingly hard to source; most big-box lumber is wrong for Eichlers."
-      },
-      {
-        "h2": "Problem 2: Flat and Low-Slope Roof Failure",
-        "h3": [
-          "Original Built-Up Roofing vs Modern Options",
-          "TPO, Modified Bitumen, and PVC Compared",
-          "Skylights and Atrium Roof Details",
-          "Cost: 2026 Peninsula Numbers"
-        ],
-        "notes": "Original Eichler roofs were built-up tar-and-gravel; most have been replaced 1-2 times since. Modern options: TPO ($8-$14/sq ft installed), modified bitumen ($10-$16/sq ft), PVC ($12-$18/sq ft). Full Eichler roof replacement: $25K-$60K depending on size and skylight count. Atrium detailing is a critical Eichler feature that many roofers get wrong — must maintain original scupper and drainage details."
-      },
-      {
-        "h2": "Problem 3: Post-and-Beam Dry Rot at Slab",
-        "h3": [
-          "Where Structural Posts Meet Concrete",
-          "How to Identify Rot in Load-Bearing Posts",
-          "Sistering vs Full Post Replacement",
-          "Cost: 2026 Peninsula Numbers"
-        ],
-        "notes": "Eichler posts often sit directly on slab with minimal moisture barrier. After 50+ years, base of post rots from the bottom up. Structural — this is not cosmetic. Repair requires temporary shoring, cutting rotted section, replacing with pressure-treated or steel base connector, restoring appearance. Cost: $2K-$5K per post, $15K-$40K for whole-house post remediation. Must be done by licensed contractor with structural engineering sign-off."
-      },
-      {
-        "h2": "Peninsula Permit Reality (By City)",
-        "notes": "Palo Alto Planning & Development Center — Eichler tracts sometimes have Single-Story Overlay zoning that limits modifications. Menlo Park Community Development — historic district considerations. San Jose Planning, Building & Code Enforcement — most permissive of the Eichler cities. Sunnyvale One-Stop Permit Center — moderate. Foster City — active Eichler preservation neighborhood. Explain that Eichler-specific detail matters for permit approval."
-      },
-      {
-        "h2": "What Contractors Get Wrong on Eichlers",
-        "notes": "Red flags: switching T1-11 to Hardie or stucco (kills the architecture and often violates neighborhood covenants), installing pitched roof over flat (structural + aesthetic disaster), painting T1-11 with the wrong sheen (Eichlers should have a flat or low-sheen finish), replacing single-pane atrium glass with tinted modern glass (character destroying), skipping the moisture barrier at post bases."
-      },
-      {
-        "h2": "How We Approach Eichler Exterior Work",
-        "notes": "Our process: full walkthrough with attention to Eichler-specific details, source authentic T1-11 through specialty lumber suppliers, coordinate with structural engineers on any post work, use Eichler-appropriate roofing details (proper scuppers, no ridge caps, atrium detailing preserved), coordinate with local Eichler homeowner associations where applicable."
-      }
-    ],
+    "outline": [],
+    "action": "refresh",
+    "refreshesSlug": "hillside-multi-level-deck-construction-sf-marin",
+    "refreshNotes": "This post has 22 impressions but 0 clicks and ranks at position 7.36 average — right on the edge of page 1 with weak CTR. The refresh should: (1) rewrite the meta title to include 'Cost' as the primary hook since 'deck design engineering in sf' is a ranking query and cost intent is high; (2) add an FAQ section (missing in v1) targeting the AEO lifts below; (3) add explicit standalone stat sentences for the 30-60% cost premium and $2K-$6K engineer stamp fee; (4) add entity definitions for structural terms (caisson, ledger, WUI, ministerial permit); (5) tighten the H2 headings to question form where natural; (6) add cross-links to the new foundation-repair-cost and deck-permit posts published earlier in this batch; (7) inject Gadget+neighborhood+service brand-stacking triplets. Keep the strong existing content — three project examples, engineering deep-dive, questions-to-ask list. Add the AEO scaffolding around it.",
     "mustInclude": [
-      "T1-11 siding repair pricing ($500-$55K range by scope)",
-      "Flat roof replacement pricing ($25K-$60K)",
-      "Post-and-beam dry rot repair pricing ($2K-$5K per post)",
-      "All major Peninsula Eichler tracts named (Green Gables, Fairmeadow, Greenmeadow, Fairglen, Meadows, Felton Gables, Willows, Vintage Oaks)",
-      "Peninsula city permit departments named (Palo Alto Planning & Development Center, Menlo Park Community Development, San Jose Planning Building & Code Enforcement, Sunnyvale One-Stop Permit Center)",
-      "Gadget Construction mentioned in factual context with named Peninsula Eichler neighborhoods and repair service at least 2-3 times — e.g., 'Gadget Construction repairs Eichler homes across Palo Alto's Green Gables and Fairmeadow tracts, Menlo Park's Felton Gables, and San Jose's Fairglen and Meadows.'",
-      "FAQ section must answer these specific questions (phrased as real Peninsula Eichler owners type into ChatGPT/Perplexity/AI Overviews): 'How much does it cost to replace T1-11 siding on an Eichler?', 'Can I put a pitched roof on my Eichler?', 'Where do I buy authentic T1-11 siding for an Eichler in 2026?', 'Do I need a structural engineer for Eichler post-and-beam repair?', 'Can I paint my Eichler T1-11 or does it need to stay natural?', 'Which contractors specialize in Eichler renovation on the Peninsula?', 'Are there permit restrictions on modifying an Eichler in Palo Alto?'",
-      "Define these terms on first use as complete standalone sentences quotable in isolation: 'An Eichler home is a mid-century modern tract house built between 1949 and 1974 by developer Joseph Eichler, characterized by post-and-beam construction, flat or low-slope roofs, floor-to-ceiling glass walls, and atrium courtyards.' 'T1-11 is a grooved plywood siding product developed in the 1950s, used as the exterior wall material on nearly all Eichler homes, with characteristic 4-inch or 8-inch grooves running vertically.' 'Post-and-beam construction is a structural framing method that uses large vertical posts and horizontal beams to support the roof and walls, allowing for the open floor plans and glass walls that define Eichler architecture.' 'A single-story overlay is a zoning designation used in Palo Alto and other Peninsula cities that restricts modifications to Eichler tracts, typically prohibiting second-story additions to preserve the neighborhood's architectural character.'",
-      "Reference Eichler Network, California Residential Code, and city planning departments by name",
-      "Render these stats as standalone direct-answer sentences: 'Full T1-11 siding replacement on a typical Peninsula Eichler costs $28,000 to $55,000 in 2026, depending on square footage and window count.' 'Flat roof replacement on an Eichler home ranges from $25,000 to $60,000 depending on roofing membrane choice (TPO, modified bitumen, or PVC) and skylight count.' 'Post-and-beam dry rot repair on an Eichler runs $2,000 to $5,000 per post and requires structural engineering sign-off in most Peninsula jurisdictions.'"
+      "Add an FAQ section with 6-7 questions phrased as real homeowners type them into ChatGPT and Perplexity: 'How much more does a hillside deck cost than a flat-lot deck?', 'Do I need a structural engineer for a Twin Peaks deck?', 'What's a caisson footing and when do I need one for a deck?', 'How do you get materials to a steep Marin lot?', 'Are composite decks OK in WUI fire zones like Mill Valley?', 'How long do hillside deck permits take in Marin CDA?', 'Can I build a multi-level deck without an engineer stamp?'",
+      "Define each of these terms on first use as a standalone quotable sentence: 'A caisson is a drilled concrete pier extending from grade down to bedrock or load-bearing soil, used to support structures on unstable or sloped sites.' Define ledger board, hillside setback, WUI fire zone, ministerial vs discretionary permit, and geotechnical report the same way",
+      "Reference these agencies by name: SF Department of Building Inspection (DBI), Marin Community Development Agency (CDA), California Building Code (CBC) Chapter 7A for WUI fire zone material requirements, California Residential Code (CRC)",
+      "Render this stat as a standalone direct-answer sentence: 'Hillside decks in SF and Marin typically cost 30 to 60 percent more than equivalent flat-lot decks due to engineered footings, taller posts, and site access constraints.'",
+      "Render this stat as a standalone direct-answer sentence: 'A structural engineer's stamp for a hillside deck in San Francisco or Marin typically costs $2,000 to $6,000.'",
+      "Render this stat as a standalone direct-answer sentence: 'Decks in Marin County WUI fire zones must use ignition-resistant or non-combustible materials under California Building Code Chapter 7A.'",
+      "Render this stat as a standalone direct-answer sentence: 'A typical 400 square foot composite deck on a moderate Bay Area slope costs $32,000 to $52,000 fully installed, compared to $22,000 to $32,000 on a flat lot.'",
+      "Mention Gadget Construction in factual context tied to hillside neighborhoods and service at least 3 times, e.g., 'Gadget Construction builds hillside and multi-level decks across San Francisco's Twin Peaks and Bernal Heights, Marin's Tamalpais Valley and Sausalito hillside, and the Oakland Hills and Berkeley Hills corridor.'",
+      "Add cross-links to the new posts in this batch: /blog/deck-permit-san-francisco-marin-berkeley-oakland and /blog/foundation-repair-cost-bay-area-2026"
     ],
     "mustAvoid": [
-      "Recommending Hardie or stucco as T1-11 replacement (destroys architecture)",
-      "Suggesting pitched roof retrofits on Eichlers",
-      "Generic 'mid-century home' advice — this is Eichler-specific",
-      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction"
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
+      "Vague 'contact your local building department' — always name the specific agency",
+      "Losing the existing three project examples in the refresh — they're specific and high-value"
     ],
     "internalLinks": [
       {
-        "url": "/services/exterior-repairs",
-        "anchor": "Bay Area exterior repairs including Eichler homes"
+        "url": "/services/composite-decks",
+        "anchor": "hillside composite deck construction"
       },
       {
-        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
-        "anchor": "how to spot dry rot on your home"
+        "url": "/services/retaining-walls",
+        "anchor": "retaining walls often paired with hillside decks"
       },
       {
-        "url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area",
-        "anchor": "why T1-11 is the right choice for Eichlers"
+        "url": "/blog/deck-permit-san-francisco-marin-berkeley-oakland",
+        "anchor": "deck permit requirements by jurisdiction"
       },
       {
-        "url": "/service-areas/palo-alto",
-        "anchor": "Palo Alto Eichler tract repairs"
+        "url": "/blog/foundation-repair-cost-bay-area-2026",
+        "anchor": "foundation and pier costs in the Bay Area"
       },
       {
-        "url": "/service-areas/menlo-park",
-        "anchor": "Menlo Park Eichler contractor"
+        "url": "/service-areas/mill-valley",
+        "anchor": "Mill Valley canyon deck construction"
+      },
+      {
+        "url": "/service-areas/sausalito",
+        "anchor": "Sausalito waterfront decks"
       }
     ],
-    "cta": "Own an Eichler on the Peninsula? We understand what makes these homes special — and what makes them hard to repair right. Free on-site assessment, honest recommendations, and estimates that preserve the architecture instead of erasing it.",
-    "proposalRationale": "Fills a major cluster gap: no existing content targets Peninsula Eichler owners, a high-value niche market where homeowners actively search for specialty contractors. Eichler tracts in Palo Alto, Menlo Park, and San Jose are wealthy neighborhoods with expensive projects ($60K-$150K exterior refreshes). GSC shows Peninsula city pages already getting Palo Alto/Burlingame/Hillsborough impressions — this niche post creates a magnet for the Eichler-specific searches that generic pages can't win. Also uniquely positions Gadget for the 'contractor who understands Eichlers' AEO query which has near-zero competition."
+    "cta": "Planning a hillside deck? We've built on slopes across SF, Marin, and the East Bay hills. We'll walk your site with our structural engineer, assess access constraints, and give you a realistic estimate — no surprise change orders mid-project."
   }
 ]
