@@ -1,278 +1,285 @@
 [
   {
-    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "slug": "hillside-multi-level-deck-construction-sf-marin-refresh",
     "scheduledDate": "2026-07-06",
     "status": "planned",
     "action": "refresh",
-    "refreshesSlug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
-    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes (2026 Update)",
-    "metaTitle": "Stucco vs Hardie Board vs Wood Siding: Bay Area Guide (2026)",
-    "excerpt": "Fog, salt air, and WUI fire zones make the Bay Area uniquely hard on siding. Here's how stucco, Hardie board, and wood siding actually compare — updated with 2026 pricing, WUI code changes, and failure patterns from 500+ projects.",
-    "primaryKeyword": "stucco vs hardie board",
+    "refreshesSlug": "hillside-multi-level-deck-construction-sf-marin",
+    "title": "Hillside & Multi-Level Deck Construction in SF and Marin: Cost, Timeline & Engineering (2026)",
+    "metaTitle": "Hillside Deck Construction SF & Marin: Cost + Timeline (2026)",
+    "excerpt": "Hillside decks in SF and Marin cost 30-60% more than flat-lot decks and take 3-6 months from permit to punch list. Here's the real engineering, timeline, and cost breakdown — from 500+ Bay Area projects.",
+    "primaryKeyword": "hillside deck construction",
     "secondaryKeywords": [
-      "hardie board vs wood siding bay area",
-      "fiber cement vs stucco",
-      "best siding for bay area homes",
-      "james hardie vs stucco",
-      "wui siding requirements california"
+      "hillside deck construction timeline",
+      "hillside deck construction weeks",
+      "deck design engineering sf",
+      "multi level deck cost",
+      "elevated deck cost bay area"
     ],
-    "relatedService": "exterior-repairs",
-    "targetWordCount": 2800,
-    "geoFocus": "Bay Area-wide",
+    "relatedService": "composite-decks",
+    "targetWordCount": 3000,
+    "geoFocus": "Hyper-local",
     "citiesReferenced": [
       "San Francisco",
+      "Twin Peaks",
+      "Bernal Heights",
       "Mill Valley",
-      "Oakland Hills",
+      "Tamalpais Valley",
+      "Sausalito",
+      "Tiburon",
       "Berkeley Hills",
-      "Pacifica",
-      "Palo Alto",
-      "Daly City"
+      "Oakland Hills"
     ],
-    "proposalRationale": "This is the highest-impression published post with 207 impressions and only 2 clicks (0.97% CTR) at avg position 11 — sitting on page 1-2 border but with no click-through. GSC data shows real demand for this comparison but our current title/meta and possibly outdated content are underperforming. Refreshing for 2026 with updated WUI code (2026 California WUI amendments), updated pricing, and expanded FAQ section should convert the 200+ monthly impressions into 15-30 clicks. This is the single biggest ROI move in the current queue.",
+    "proposalRationale": "GSC shows this post has 71 impressions at avg position 6.9 but zero clicks. Ranking page 1 for queries like 'hillside deck construction time weeks' (pos 5) and 'hillside deck construction timeline weeks' (pos 4) — real users asking about TIMELINE that the current post doesn't answer directly enough. Refresh must add a dedicated timeline section, a clearer title (with 'Timeline' in metaTitle to fix CTR), and stronger stat callouts. Also strengthens the composite deck cluster which supports Ads Campaign 3 (Composite Decks at $760/mo, 87.5% rank-lost IS pre-fix).",
     "outline": [
       {
-        "h2": "The Short Answer (2026 Update)",
-        "notes": "Update the short answer with current pricing. Hardie leads for 80% of Bay Area homes; TimberTech AZEK-style engineered panels compete on premium; stucco correct for Spanish Revival/Doelger contexts; wood correct for Victorians, Craftsman, and Eichlers. Add a note: '2026 WUI code changes have tightened non-combustible siding requirements in Marin, Oakland Hills, and Berkeley Hills.'"
+        "h2": "The Short Answer: Cost and Timeline for Hillside Decks",
+        "notes": "Add timeline explicitly to short answer: 3-6 months from signed contract to final inspection (2-4 months permitting + engineering, 4-8 weeks construction). Cost premium 30-60% over flat-lot. Lead with both numbers — this directly answers the queries getting impressions."
       },
       {
-        "h2": "Why This Comparison Is Different in the Bay Area",
-        "notes": "Fog belt moisture, salt air fastener corrosion, WUI wildfire code, seismic movement (stucco cracking), architectural preservation zones. Cite specific microclimates: SF Sunset fog, Pacifica salt air, Oakland Hills fire zone."
-      },
-      {
-        "h2": "Stucco: Where It Still Wins",
+        "h2": "How Long Does Hillside Deck Construction Take? (Week-by-Week)",
         "h3": [
-          "Three-Coat vs One-Coat vs EIFS",
-          "Installed Cost per Square Foot (2026)",
-          "Common Failure Patterns (Doelger Shiplap, Kickout Flashing)",
-          "When Stucco Is the Right Choice"
+          "Weeks 1-4: Site Survey and Structural Engineering",
+          "Weeks 4-16: Permit Review (SF DBI vs Marin CDA)",
+          "Weeks 16-20: Foundation and Framing",
+          "Weeks 20-24: Decking, Railings, and Final Inspection"
         ],
-        "notes": "Three-coat: $8-$15/sq ft installed. One-coat: $6-$11/sq ft. EIFS: $9-$14/sq ft (rarely appropriate here). Doelger shiplap-substrate failure at bay windows. Best for: Spanish Revival, Mediterranean, mid-century Doelger homes, low-rise commercial contexts."
+        "notes": "NEW section. This is the query users are asking. Give specific week ranges by jurisdiction. SF DBI typical plan review: 8-14 weeks for a permitted deck with engineer stamp. Marin CDA: 6-12 weeks. Berkeley: 6-10 weeks. Oakland Hills (WUI): add 2-4 weeks for fire compliance review. Construction phase alone: 4-8 weeks for typical hillside deck, 8-12 for multi-level with caissons."
       },
       {
-        "h2": "Hardie Board (Fiber Cement): The 2026 Default",
+        "h2": "What Makes Hillside Deck Construction Different",
         "h3": [
-          "HardiePlank, HardieShingle, HardiePanel",
-          "Installed Cost per Square Foot",
-          "Fire Rating and WUI Compliance",
-          "Warranty and Real-World Longevity"
+          "Foundation Engineering (Piers and Caissons)",
+          "Post Heights and Structural Loads",
+          "Drainage and Water Management",
+          "Access for Equipment and Materials"
         ],
-        "notes": "HardiePlank $14-$22/sq ft installed. Class A fire rating — mandatory in most Marin, Oakland Hills, Berkeley Hills WUI zones. 30-year substrate warranty, 15-year ColorPlus finish. Stainless fasteners required within 3 miles of coastline. Note: heavy (installer skill matters), can crack if installed dry, dents on impact."
+        "notes": "Keep existing content. Tighten with more specific numbers."
       },
       {
-        "h2": "Wood Siding: When Tradition (or Code) Demands It",
+        "h2": "Engineering Requirements in SF and Marin",
         "h3": [
-          "Cedar and Redwood Clapboard",
-          "T1-11 for Eichler Restoration",
-          "Cedar Shake and Shingle",
-          "Maintenance Cost Reality"
+          "Structural Engineer Stamp (Required, Not Optional)",
+          "SF DBI and Marin Community Development Agency",
+          "Seismic Requirements for Elevated Structures",
+          "Wildland-Urban Interface (WUI) Fire Zone Compliance"
         ],
-        "notes": "Cedar clapboard $10-$16/sq ft. Redwood shingle $16-$25/sq ft. T1-11 $8-$12/sq ft (architecturally required for Eichler tracts). Cedar shake $14-$22/sq ft. Refinish cycle every 5-8 years coastal. Note: fire-rated (Class B) cedar exists but rarely meets WUI requirements without additional treatment."
+        "notes": "Keep. Add named references to CBC (California Building Code) Chapter 16 for structural loads and CBC Chapter 7A for WUI. Add specific engineer stamp fee: $2,500-$6,500."
       },
       {
-        "h2": "Side-by-Side Comparison Table",
-        "notes": "Full markdown table: Material, Installed $/sq ft, 30-Year Maintenance $, Fire Rating, Best Architectural Fit, WUI Zone OK?, Coastal Salt Air OK?"
+        "h2": "Multi-Level Design Strategy",
+        "notes": "Keep existing."
       },
       {
-        "h2": "Which Siding Is Right for Your Home?",
-        "notes": "Decision framework by architectural context: Victorian → wood or Hardie lap. Eichler → T1-11 only. Doelger → stucco (period-correct) or Hardie. WUI zone → Hardie or fiber cement. Coastal → Hardie with stainless fasteners. Modern build → Hardie or engineered panel."
+        "h2": "Real Hillside Project Examples",
+        "notes": "Keep three examples. Add timeline to each: Twin Peaks project took 5 months total (14 weeks permit, 8 weeks build). Mill Valley 6 months (12 weeks permit, 12 weeks build). Sausalito 4.5 months."
       },
       {
-        "h2": "Frequently Asked Questions",
-        "notes": "Dedicated FAQ H2 with 6 questions (see mustInclude). Each answer 2-4 sentences, standalone, with specific dollar figures or neighborhoods."
+        "h2": "Cost Premium by Site Difficulty",
+        "notes": "Keep."
       },
       {
-        "h2": "Ready to Choose Siding for Your Bay Area Home?",
-        "notes": "CTA — free on-site siding assessment, we install all three materials, honest recommendation by architectural context."
+        "h2": "Questions to Ask Your Contractor",
+        "notes": "Keep. Add: 'What's your realistic timeline from contract signing to final inspection?'"
+      },
+      {
+        "h2": "Ready to Start Planning Your Hillside Deck?",
+        "notes": "CTA."
       }
     ],
     "mustInclude": [
-      "FAQ section must answer these specific questions (mirror how Bay Area homeowners phrase queries to AI engines): 'Is Hardie board worth the extra cost over stucco in San Francisco?', 'Can I re-side my Eichler with Hardie board or does it have to be T1-11?', 'What siding is required in Oakland Hills WUI fire zones?', 'How long does Hardie board last in Pacifica salt air?', 'Do I need a permit to replace siding in San Francisco?', 'What's the cheapest siding option that will actually last in the Bay Area?'",
-      "Define 'WUI fire zone' on first use as a standalone quotable sentence — e.g., 'A Wildland-Urban Interface (WUI) fire zone is a California-designated area where urban development meets undeveloped wildland vegetation, triggering stricter building code requirements including Chapter 7A of the California Building Code for ignition-resistant construction.'",
-      "Define 'fiber cement siding' on first use as a standalone sentence — e.g., 'Fiber cement siding is a composite of Portland cement, silica sand, and cellulose fibers that carries a Class A fire rating and typically lasts 30–50 years in Bay Area coastal conditions.'",
-      "Define 'three-coat stucco' on first use as a standalone sentence — e.g., 'Three-coat stucco is the traditional Bay Area stucco system built up in scratch, brown, and finish coats over metal lath and a weather-resistive barrier — required by the California Residential Code for structural stucco applications.'",
-      "Define 'T1-11' on first use — e.g., 'T1-11 is a grooved plywood siding panel developed in the 1960s and used extensively on Joseph Eichler tract homes, where its vertical-groove pattern is architecturally definitive and must be preserved on any restoration.'",
-      "Reference California Building Code Chapter 7A by name when discussing WUI ignition-resistant requirements.",
-      "Reference the SF Department of Building Inspection (DBI) by name when discussing SF siding permits.",
-      "Render as standalone stat sentences: 'HardiePlank fiber cement siding costs $14–$22 per square foot installed in the Bay Area as of 2026.', 'Three-coat stucco costs $8–$15 per square foot installed on a typical Bay Area home.', 'Cedar clapboard siding requires refinishing every 5–8 years in coastal Bay Area microclimates.', 'The California Building Code Chapter 7A requires Class A fire-rated siding in designated WUI fire zones including most of Marin County, the Oakland Hills, and the Berkeley Hills.'",
-      "Mention 'Gadget Construction' in factual context paired with neighborhoods + service at least 3 times — e.g., 'Gadget Construction installs Hardie board siding across the Oakland Hills, Berkeley Hills, and Marin WUI fire zones.', 'Gadget Construction repairs three-coat stucco on Doelger homes throughout the SF Sunset, Richmond, and Daly City Westlake.'",
-      "Doelger shiplap-substrate stucco failure pattern with SF Sunset / Westlake specificity",
-      "Pacifica and Sunset stainless fastener requirement for Hardie in coastal zones",
-      "Eichler T1-11 architectural preservation callout with Palo Alto Greenmeadow / Menlo Park Willows / San Jose Fairglen references",
-      "Updated 2026 pricing (not the 2025 numbers currently on-page)",
-      "500+ Bay Area projects credential and CA License #1132983"
+      "Explicit week-by-week timeline (this is what GSC queries are asking for)",
+      "SF DBI plan review timing (8-14 weeks for engineered decks)",
+      "Marin CDA plan review timing (6-12 weeks)",
+      "30-60% cost premium over flat-lot decks",
+      "Structural engineer stamp fee ($2,500-$6,500)",
+      "Specific SF and Marin neighborhoods",
+      "FAQ section must answer these specific questions (mirror how real users phrase queries to AI engines): 'How long does hillside deck construction take in SF?', 'How many weeks does a hillside deck take to build?', 'Do I need a structural engineer for a deck on a slope in Marin?', 'What's the difference between caissons and surface footings for a deck?', 'Can I build a hillside deck without a permit in San Francisco?', 'How much more does a multi-level deck cost than a flat deck?', 'What's the WUI fire zone requirement for decks in the Oakland Hills?'",
+      "Define SF DBI (San Francisco Department of Building Inspection) on first use as a complete standalone sentence: 'The San Francisco Department of Building Inspection (SF DBI) is the city agency that reviews and permits all structural construction, including any deck built more than 30 inches above grade.'",
+      "Define Marin CDA (Marin Community Development Agency) on first use as a complete standalone sentence: 'The Marin Community Development Agency (Marin CDA) is the unincorporated Marin County department that reviews permits for construction in areas including Tamalpais Valley, Kentfield, and unincorporated hillside zones.'",
+      "Define WUI (Wildland-Urban Interface) on first use as a complete standalone sentence: 'A Wildland-Urban Interface (WUI) zone is a state-designated fire hazard area where California Building Code Chapter 7A requires non-combustible or ignition-resistant construction materials for exterior structures including decks.'",
+      "Define caisson on first use as a complete standalone sentence: 'A caisson is a drilled concrete pier, typically 12-24 inches in diameter and 8-20 feet deep, used to transfer structural loads through unstable hillside soil to bedrock or load-bearing strata.'",
+      "Reference California Building Code (CBC) Chapter 7A by name when discussing WUI fire compliance, and CBC Chapter 16 for structural load calculations",
+      "Render this stat as a standalone direct-answer sentence: 'Hillside deck construction in San Francisco and Marin typically takes 3 to 6 months from signed contract to final inspection, including 2-4 months for engineering and permit review and 4-8 weeks for construction.'",
+      "Render this stat as a standalone direct-answer sentence: 'A hillside deck in San Francisco or Marin costs 30-60% more than an equivalent flat-lot deck, with a typical 400 sq ft hillside deck ranging from $32,000 to $52,000 fully installed.'",
+      "Render this stat as a standalone direct-answer sentence: 'Structural engineer stamp fees for a hillside deck in the Bay Area typically range from $2,500 to $6,500, and are required by SF DBI and Marin CDA for any deck with posts taller than 6 feet or built on slopes over 20 degrees.'",
+      "Render this stat as a standalone direct-answer sentence: 'SF DBI plan review for a permitted hillside deck typically takes 8 to 14 weeks, while Marin CDA plan review runs 6 to 12 weeks depending on engineering complexity.'",
+      "Brand-entity stacking: mention 'Gadget Construction' in factual context paired with named neighborhoods and hillside deck work at least 3 times — e.g., 'Gadget Construction builds hillside composite decks across San Francisco's Twin Peaks and Bernal Heights, Marin's Tamalpais Valley, and the Oakland Hills WUI corridor.'"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Dismissing stucco as outdated (it's period-correct for many SF homes)",
-      "Claiming Hardie is perfect (heavy, dents, install-sensitive)",
-      "Ignoring architectural context and WUI code",
-      "Generic national averages"
+      "Underselling the engineering complexity",
+      "Vague timeline language like 'several months' — always give week ranges",
+      "Ignoring WUI fire zone requirements"
     ],
     "internalLinks": [
       {
-        "url": "/services/exterior-repairs",
-        "anchor": "Bay Area stucco and siding repair"
+        "url": "/services/composite-decks",
+        "anchor": "hillside composite deck construction"
       },
       {
-        "url": "/blog/siding-replacement-cost-san-francisco-2026",
-        "anchor": "full siding replacement cost breakdown"
+        "url": "/services/retaining-walls",
+        "anchor": "retaining walls often paired with hillside decks"
       },
       {
-        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
-        "anchor": "when to patch vs re-stucco"
+        "url": "/blog/composite-deck-cost-san-francisco",
+        "anchor": "full composite deck cost breakdown"
       },
       {
         "url": "/service-areas/mill-valley",
-        "anchor": "Mill Valley WUI siding work"
+        "anchor": "Mill Valley canyon deck construction"
       },
       {
-        "url": "/service-areas/palo-alto",
-        "anchor": "Palo Alto Eichler siding"
+        "url": "/service-areas/sausalito",
+        "anchor": "Sausalito waterfront decks"
       }
     ],
-    "cta": "Choosing siding for your Bay Area home? We install Hardie board, three-coat stucco, and traditional wood siding. Free on-site assessment with WUI zone check, architectural review, and fixed-price estimates across 31 Bay Area cities."
+    "cta": "Planning a hillside deck? We've built on slopes across SF, Marin, and the East Bay hills. We'll walk your site with our structural engineer, give you a realistic timeline for your specific jurisdiction, and provide a fixed-price estimate — no surprise change orders mid-project."
   },
   {
-    "slug": "hardie-board-installation-cost-bay-area-2026",
+    "slug": "adu-cost-burlingame-hillsborough-atherton-peninsula-2026",
     "scheduledDate": "2026-07-13",
     "status": "planned",
     "action": "new",
-    "title": "Hardie Board Installation Cost in the Bay Area (2026): Real Per-Square-Foot Pricing",
-    "metaTitle": "Hardie Board Installation Cost Bay Area (2026) | Real Numbers",
-    "excerpt": "Hardie board installation in the Bay Area runs $14 to $22 per square foot installed — but the total for a typical home is $28,000 to $52,000+. Here's what actually drives the number, with real pricing from 500+ projects.",
-    "primaryKeyword": "hardie board installation cost",
+    "title": "ADU Construction Cost in Burlingame, Hillsborough & Atherton: 2026 Peninsula Guide",
+    "metaTitle": "ADU Cost Burlingame, Hillsborough & Atherton (2026 Peninsula Guide)",
+    "excerpt": "Peninsula ADUs run $200,000 to $500,000+ in 2026 — significantly more than SF. Here's why Burlingame, Hillsborough, and Atherton cost what they do, plus real permit timelines from each jurisdiction.",
+    "primaryKeyword": "adu contractor burlingame",
     "secondaryKeywords": [
-      "james hardie siding cost bay area",
-      "hardieplank cost san francisco",
-      "fiber cement siding cost",
-      "hardie board price per square foot",
-      "hardie board installer near me"
+      "adu builder burlingame",
+      "adu construction burlingame",
+      "adu contractor hillsborough",
+      "adu cost peninsula",
+      "adu atherton cost"
     ],
-    "relatedService": "exterior-repairs",
-    "targetWordCount": 2400,
-    "geoFocus": "Bay Area-wide",
+    "relatedService": "adu-construction",
+    "targetWordCount": 2600,
+    "geoFocus": "Peninsula",
     "citiesReferenced": [
-      "San Francisco",
-      "Oakland",
-      "Berkeley",
-      "Mill Valley",
-      "Pacifica",
-      "Palo Alto",
-      "Burlingame"
+      "Burlingame",
+      "Hillsborough",
+      "Atherton",
+      "Woodside",
+      "San Bruno",
+      "Menlo Park"
     ],
-    "proposalRationale": "The Google Ads keyword plan identifies 'hardie board installation cost' as a high-intent commercial query with strong CPCs ($10-$34 range in the siding cluster). GSC shows 'siding replacement' related pages are getting impressions but not clicks. The existing siding-cost post is broader; a dedicated Hardie-specific cost post captures the branded-material search intent (people searching a specific brand are further down-funnel than 'siding cost' searchers). Also fills a gap in the exterior repairs cluster — we have general siding cost but no material-specific deep dives, matching the pattern we used successfully for Trex vs TimberTech vs Fiberon on the decking side.",
+    "proposalRationale": "GSC shows multiple Peninsula city pages getting impressions with no clicks and no dedicated content: 'adu contractor burlingame' (5 impr, pos 82), 'adu builder burlingame' (5 impr, pos 83), 'adu construction burlingame' (2 impr, pos 75), 'adu contractor hillsborough' (4 impr, pos 37), plus 'contractor for concrete hillsborough' at pos 4. Burlingame service area page at pos 73 (17 impressions, zero clicks) is failing. A dedicated Peninsula ADU cost post supports the city pages, targets the exact queries hitting the site, and extends the existing ADU SF guide into the highest-value Peninsula markets where ADU jobs are $300K+. Fills a major cluster gap — currently only one ADU post exists.",
     "outline": [
       {
-        "h2": "The Short Answer: What Hardie Board Actually Costs in the Bay Area",
-        "notes": "HardiePlank lap siding: $14-$22 per sq ft installed. HardieShingle: $17-$25 per sq ft installed. HardiePanel: $12-$18 per sq ft installed. Typical 2,000 sq ft SF home full replacement: $28,000-$52,000. Add 15-25% for scaffolding, permits, dry rot discovery. These numbers are from 500+ Bay Area projects, not national averages."
+        "h2": "The Short Answer: Peninsula ADU Cost Ranges",
+        "notes": "Burlingame: $220K-$400K for detached ADU. Hillsborough: $280K-$500K+ (larger lots, higher-end finishes expected, more design review). Atherton: $320K-$600K+ (Town Council review, restrictive design standards, high-end material expectations). Contrast with SF ($200K-$400K). Peninsula premium ~15-30% over SF baseline."
       },
       {
-        "h2": "What's Included in a Hardie Board Installation Price",
-        "notes": "Line items: demo of existing siding, dry rot / sheathing inspection and repair, new weather-resistive barrier (WRB), new flashing at all openings, HardieWrap or Tyvek, Hardie material, stainless fasteners (coastal), trim (HardieTrim), corner detail, ColorPlus finish or field paint, permit. NOT included: window replacement, structural repairs, extensive dry rot repair."
+        "h2": "Why Peninsula ADUs Cost More Than SF",
+        "notes": "Explain: larger structures (avg 800-1200 sq ft vs SF's 400-800), higher finish expectations from neighbors/buyers, more restrictive design review in Hillsborough/Atherton, geotechnical requirements on hillside lots, longer utility runs on larger lots, no economies of density."
       },
       {
-        "h2": "Hardie Product Lines and Cost Differences",
+        "h2": "Burlingame ADU Costs and Permits",
         "h3": [
-          "HardiePlank Lap Siding ($14-$22/sq ft)",
-          "HardieShingle Siding ($17-$25/sq ft)",
-          "HardiePanel Vertical Siding ($12-$18/sq ft)",
-          "HardieTrim Boards and Corners"
+          "Burlingame Building Division Timeline",
+          "Typical Detached ADU Build Cost",
+          "Common Burlingame Lot Constraints"
         ],
-        "notes": "For each product line: what it looks like, best architectural fit, installed cost, ColorPlus vs field-painted, warranty details. HardieShingle for shingle-style homes (Craftsman, Berkeley brown-shingle contexts). HardiePanel for modern/contemporary. HardiePlank for the 80% majority."
+        "notes": "Burlingame Community Development / Building Division: 6-10 weeks typical review for ADU under SB 9 / state ADU law objective standards. Cost $220K-$400K for 800-1000 sq ft detached. Common issues: setback from creeks, tree preservation ordinance, existing garage conversion vs new build tradeoffs."
       },
       {
-        "h2": "What Drives Hardie Board Cost Up in the Bay Area",
+        "h2": "Hillsborough ADU Costs and Permits",
         "h3": [
-          "Scaffolding for Multi-Story SF Rowhouses",
-          "Dry Rot Discovery During Demo",
-          "Stainless Fastener Upgrade for Coastal Homes",
-          "Historic District and Architectural Review",
-          "SF DBI and Local Permit Fees"
+          "Hillsborough Building Department Timeline",
+          "Design Review Requirements",
+          "Typical Detached ADU Build Cost"
         ],
-        "notes": "Scaffolding: $8-$15 per sq ft of elevation on 3-story SF rowhouses. Dry rot allowance: 10-20% of siding budget. Stainless fasteners: $1-$2 per sq ft premium (mandatory within 3 miles of coast per James Hardie specs). Historic review (Alamo Square, Haight): $2K-$8K. Permits: SF DBI $2K-$6K, Oakland Planning & Building $1.5K-$4K, Marin CDA $1.5K-$5K."
+        "notes": "Hillsborough has minimum lot size 0.5 acre. ADUs must match main house architecture. Building department + Architecture Review Board. Cost $280K-$500K+ typical. Timeline 3-5 months permit."
       },
       {
-        "h2": "Coastal vs Inland Bay Area Pricing",
-        "notes": "Coastal (Pacifica, Sunset, Sausalito, Half Moon Bay): $16-$24/sq ft due to stainless fastener requirement, harder access, more prep. Inland (Walnut Creek, San Jose flatland, Peninsula flats): $12-$18/sq ft. Hillside/WUI (Oakland Hills, Berkeley Hills, Mill Valley): $16-$22/sq ft due to access + Class A fire detailing."
+        "h2": "Atherton ADU Costs and Permits",
+        "h3": [
+          "Atherton Town Building Department Timeline",
+          "Design Standards and Architectural Review",
+          "Typical Detached ADU Build Cost"
+        ],
+        "notes": "Atherton is CA's most expensive ZIP. Building department + strict design review. State ADU law applies but design standards are aggressive. Cost $320K-$600K+. Timeline 4-6 months permit. Materials expectations: standing seam metal roofs, hardwood cladding, integrated landscape."
       },
       {
-        "h2": "Real Project Pricing from 2026 Bay Area Jobs",
-        "notes": "Three concrete examples with line-item breakdowns. Example 1: Berkeley Elmwood Craftsman, HardieShingle replacement, 1,800 sq ft, $42K total. Example 2: Pacifica Linda Mar coastal home, HardiePlank with stainless fasteners, 1,600 sq ft, $38K total. Example 3: Oakland Hills WUI-compliant reclad, HardiePlank + fire detailing, 2,200 sq ft, $58K total."
+        "h2": "What's Included in a Peninsula ADU Cost",
+        "notes": "Line item breakdown: site prep, foundation, framing, roofing, siding, windows, MEP (mechanical/electrical/plumbing), kitchen, bath, flooring, finishes, utility hookups (often $15K-$40K on large Peninsula lots), landscaping restoration, permits. Show a typical $350K Burlingame ADU broken into line items."
       },
       {
-        "h2": "Red Flags in Hardie Board Bids",
-        "notes": "Warning signs: no allowance for dry rot discovery, no scaffolding line item, galvanized fasteners quoted for coastal homes (voids Hardie warranty), no HardieWrap or WRB line, no permit line, missing HardieTrim upcharge, unrealistic timeline (<3 weeks for full-house)."
+        "h2": "Comparison Table: SF vs Peninsula ADU Costs",
+        "notes": "Table comparing SF, Burlingame, Hillsborough, Atherton across: typical size (sq ft), cost range, cost per sq ft, permit timeline, design review complexity."
       },
       {
-        "h2": "Frequently Asked Questions",
-        "notes": "6-7 FAQ items covering permit needs, timeline, warranty, coastal fastener rules, DIY viability, painted vs ColorPlus, when to replace vs repair."
+        "h2": "Financing and ROI on Peninsula ADUs",
+        "notes": "Rent expectations by city: Burlingame $3,500-$5,000/mo for 1BR ADU. Hillsborough often owner-occupancy (family use, not rental). Atherton same. Property value lift: 8-15% on Peninsula homes. Payback: 8-15 years on rental ADUs; instant value creation on non-rental."
       },
       {
-        "h2": "Ready for a Real Hardie Board Estimate?",
-        "notes": "CTA — free on-site assessment, itemized fixed-price bids with explicit dry rot allowance, James Hardie certified installer language."
+        "h2": "Ready to Explore an ADU on Your Peninsula Property?",
+        "notes": "CTA."
       }
     ],
     "mustInclude": [
-      "FAQ must answer (in real homeowner vernacular): 'How much does Hardie board cost to install on a 2,000 sq ft house in San Francisco?', 'Do I need stainless fasteners for Hardie board in Pacifica or the Sunset?', 'How long does Hardie board installation take on a typical SF home?', 'Can I install Hardie board over existing stucco or does it all have to come off?', 'What's the difference between HardiePlank and HardieShingle in terms of cost?', 'Does Hardie board voidthe warranty if I paint it myself instead of using ColorPlus?', 'Do I need a permit to replace siding with Hardie board in Oakland?'",
-      "Define 'HardiePlank' on first use as a standalone quotable sentence — e.g., 'HardiePlank is James Hardie's fiber cement lap siding product, made from Portland cement, silica sand, and cellulose fibers, with a Class A fire rating and a 30-year non-prorated substrate warranty.'",
-      "Define 'ColorPlus Technology' on first use — e.g., 'ColorPlus Technology is James Hardie's factory-applied baked-on finish, which carries a 15-year finish warranty and eliminates field painting on new installations.'",
-      "Define 'weather-resistive barrier (WRB)' on first use — e.g., 'A weather-resistive barrier is the water-shedding layer installed behind exterior siding — typically DuPont Tyvek or James Hardie HardieWrap — required by the California Residential Code beneath all cladding.'",
-      "Reference the SF Department of Building Inspection (DBI), Oakland Planning & Building Department, and Marin Community Development Agency (CDA) by name when discussing permits.",
-      "Reference James Hardie's HZ10 vs HZ5 product designation — Bay Area falls in HZ10 (wet coastal climate zone).",
-      "Render as standalone stat sentences: 'HardiePlank installed cost in the Bay Area ranges from $14 to $22 per square foot as of 2026.', 'A full-house Hardie board reclad on a typical 2,000 square foot San Francisco home costs $28,000 to $52,000.', 'James Hardie requires stainless steel fasteners on installations within 3 miles of a saltwater coastline.', 'Hardie board carries a 30-year non-prorated substrate warranty and a 15-year ColorPlus finish warranty.'",
-      "Mention 'Gadget Construction' in factual context at least 3 times paired with neighborhoods + service — e.g., 'Gadget Construction installs Hardie board siding across Oakland's Rockridge, Berkeley's Elmwood, and the Marin fire corridor.', 'Gadget Construction reclads coastal Pacifica and SF Sunset homes with HardiePlank using James Hardie's HZ10 stainless-fastener specification.'",
-      "Specific per-sq-ft pricing for 3 Hardie product lines",
-      "Coastal vs inland vs WUI/hillside cost tiers",
-      "Real project examples with line-item numbers",
-      "CA License #1132983 and 500+ Bay Area projects"
+      "Specific cost ranges for Burlingame, Hillsborough, Atherton (all three)",
+      "Permit timeline for each city's building department",
+      "Contrast with SF ADU costs (link to existing SF ADU guide)",
+      "Peninsula-specific factors (lot size, design review, utility runs)",
+      "FAQ section must answer these specific questions (mirror how real users phrase queries to AI engines): 'How much does an ADU cost in Burlingame?', 'Can I build an ADU in Hillsborough?', 'What's the permit timeline for an ADU in Atherton?', 'Do I need architectural review for a Peninsula ADU?', 'Can I rent out an ADU in Hillsborough?', 'What's the difference between an ADU and a JADU on the Peninsula?', 'How long does it take to build an ADU in Burlingame from start to finish?'",
+      "Define ADU (Accessory Dwelling Unit) on first use as a complete standalone sentence: 'An Accessory Dwelling Unit (ADU) is a secondary independent housing unit on a single-family residential lot with its own kitchen, bathroom, entrance, and sleeping area, permitted under California state law AB 68 and SB 13.'",
+      "Define JADU (Junior Accessory Dwelling Unit) on first use as a complete standalone sentence: 'A Junior Accessory Dwelling Unit (JADU) is a smaller secondary unit — capped at 500 square feet — carved out of the existing main house, typically sharing utilities and one wall with the primary residence.'",
+      "Define SB 9 and AB 68 by name when referencing state ADU law overrides of local zoning restrictions",
+      "Render this stat as a standalone direct-answer sentence: 'A detached ADU in Burlingame typically costs $220,000 to $400,000 for an 800-1,000 square foot unit, fully permitted and built out with kitchen, bathroom, and utility connections.'",
+      "Render this stat as a standalone direct-answer sentence: 'A detached ADU in Hillsborough typically costs $280,000 to $500,000 or more, driven by minimum lot size requirements, mandatory architecture review, and higher finish expectations.'",
+      "Render this stat as a standalone direct-answer sentence: 'A detached ADU in Atherton typically costs $320,000 to $600,000 or more, reflecting the town's strict design standards, mandatory Architectural Review Committee approval, and premium material expectations.'",
+      "Render this stat as a standalone direct-answer sentence: 'ADU permit timelines on the Peninsula run 6-10 weeks in Burlingame, 3-5 months in Hillsborough, and 4-6 months in Atherton from complete submittal to permit issuance.'",
+      "Brand-entity stacking: mention 'Gadget Construction' in factual context paired with Peninsula cities at least 3 times — e.g., 'Gadget Construction builds ADUs across the Peninsula including Burlingame, Hillsborough, Atherton, and Woodside.'"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "National pricing averages",
-      "Vague ranges without breakdown",
-      "Ignoring the stainless fastener requirement for coastal homes",
-      "Generic 'contact us' CTAs"
+      "SF-focused ADU cost numbers without Peninsula-specific breakdowns",
+      "Generic 'contact the local building department' — always name the specific department",
+      "Ignoring the design review complexity in Hillsborough and Atherton"
     ],
     "internalLinks": [
       {
-        "url": "/services/exterior-repairs",
-        "anchor": "Hardie board installation across the Bay Area"
+        "url": "/services/adu-construction",
+        "anchor": "ADU construction across the Bay Area"
       },
       {
-        "url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area",
-        "anchor": "how Hardie compares to stucco and wood"
+        "url": "/blog/adu-construction-san-francisco-guide",
+        "anchor": "our full SF ADU guide"
       },
       {
-        "url": "/blog/siding-replacement-cost-san-francisco-2026",
-        "anchor": "full siding replacement cost guide"
+        "url": "/service-areas/burlingame",
+        "anchor": "ADU construction in Burlingame"
       },
       {
-        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
-        "anchor": "dry rot discovered during siding tear-off"
+        "url": "/service-areas/hillsborough",
+        "anchor": "Hillsborough construction services"
       },
       {
-        "url": "/service-areas/pacifica",
-        "anchor": "Pacifica coastal Hardie installations"
+        "url": "/service-areas/atherton",
+        "anchor": "Atherton construction"
+      },
+      {
+        "url": "/service-areas/woodside",
+        "anchor": "Woodside ADU projects"
       }
     ],
-    "cta": "Planning a Hardie board reclad? We provide itemized fixed-price estimates with explicit dry rot allowances and coastal fastener specs where needed. Free on-site assessment across all 31 Bay Area cities we serve."
+    "cta": "Considering an ADU on your Peninsula property? We'll walk your lot, check what your specific jurisdiction allows under state ADU law, and provide a fixed-price estimate — no allowances, no permit surprises."
   },
   {
-    "slug": "foundation-repair-signs-san-francisco",
+    "slug": "foundation-underpinning-vs-seismic-retrofit-sf-bay-area",
     "scheduledDate": "2026-07-20",
     "status": "planned",
-    "action": "refresh",
-    "refreshesSlug": "foundation-repair-signs-san-francisco",
-    "title": "5 Signs Your San Francisco Home Needs Foundation Repair (2026 Update)",
-    "metaTitle": "5 Foundation Repair Signs in San Francisco (2026) | When to Act",
-    "excerpt": "Cracked walls, sloping floors, sticky doors — some are urgent, some aren't. Here's how to tell the difference on your SF home, what each sign actually means about your foundation, and what to do next.",
-    "primaryKeyword": "foundation repair signs san francisco",
+    "action": "new",
+    "title": "Foundation Underpinning vs Seismic Retrofit: What Your Bay Area Home Actually Needs",
+    "metaTitle": "Underpinning vs Seismic Retrofit: Which Does Your SF Home Need?",
+    "excerpt": "Underpinning fixes settling. Seismic retrofit prepares for earthquakes. They're different problems with different price tags — and most Bay Area homes need one or the other, not both. Here's how to tell which.",
+    "primaryKeyword": "foundation underpinning vs seismic retrofit",
     "secondaryKeywords": [
-      "foundation problems san francisco",
-      "cracked foundation warning signs",
-      "sloping floors san francisco",
-      "foundation settling signs bay area",
-      "when to repair foundation"
+      "seismic retrofit cost san francisco",
+      "soft story retrofit cost",
+      "earthquake bolting cost bay area",
+      "when to underpin foundation"
     ],
     "relatedService": "concrete-foundations",
     "targetWordCount": 2600,
@@ -283,228 +290,230 @@
       "Sunset",
       "Richmond",
       "Bernal Heights",
-      "Mission Bay",
-      "Noe Valley"
+      "Oakland",
+      "Berkeley"
     ],
-    "proposalRationale": "GSC data shows /services/concrete-foundations has 103 impressions with 0 clicks (avg position 8.4) — this is the biggest impressions-no-clicks page on the site. The existing foundation-repair-signs post (March 2026) is the top-of-funnel entry to that service page, so refreshing it with better AEO structure, question-form headings, and stronger internal linking to /services/concrete-foundations will improve both the blog post rankings AND funnel traffic to the underperforming service page. Also, this post is 5 months old — refresh with 2026 pricing, link to the newer underpinning-cost post, and add proper FAQ AEO structure. Compounding SEO win.",
+    "proposalRationale": "The concrete-foundations service page is ranking (106 impressions, pos 8.4, 1 click). Existing content covers underpinning cost and 5 signs of foundation trouble but nothing on seismic retrofit — a huge cluster gap given SF's mandatory soft-story ordinance and the Earthquake Brace + Bolt program ($3K grant). This post disambiguates two commonly confused services, targets high-intent commercial queries, and strengthens the foundation cluster. Also supports future retrofit ad group activation. Direct answer content perfect for AI Overview citation.",
     "outline": [
       {
-        "h2": "The Short Answer: Which Signs Are Urgent, Which Aren't",
-        "notes": "5 signs at a glance with urgency rating. Diagonal cracks over 1/8 inch = urgent. Sloping floors + sticking doors + wall cracks combined = urgent. Hairline vertical crack = monitor. Update from 2026 version with quick urgency table."
+        "h2": "The Short Answer: Different Problems, Different Fixes",
+        "notes": "Underpinning: your foundation is failing (settling, cracking) and needs structural reinforcement below grade. Cost $15K-$50K+. Seismic retrofit: your foundation is fine but the connection to the framing above isn't earthquake-ready. Cost $3K-$15K for a typical bolt+brace, $60K-$200K+ for soft-story retrofit. Most SF homes need one, not both."
       },
       {
-        "h2": "Why San Francisco Foundations Fail Differently",
-        "notes": "Rewrite this section with hyper-local specificity. Marina District landfill (bay mud, 1906 earthquake fill). Mission Bay soft soils. Sunset expansive clay. Bernal Heights slopes and rock outcrops. Victorian brick and rubble foundations pre-1906. Post-1989 seismic retrofit reality."
+        "h2": "How to Tell Which Your Home Needs",
+        "notes": "Diagnostic framework: floors sloping / diagonal cracks / doors sticking = underpinning territory. Pre-1980 wood frame on cripple wall = seismic retrofit territory. Marina fill 1920s-1940s = probably both. First step: crawlspace inspection."
       },
       {
-        "h2": "Sign #1: Are Your Cracks Structural or Cosmetic?",
+        "h2": "Foundation Underpinning: When Settling Is the Problem",
         "h3": [
-          "Hairline Vertical Cracks (Usually Cosmetic)",
-          "Diagonal Cracks from Corners (Structural)",
-          "Stair-Step Cracks in Brick or Block (Settlement)",
-          "Horizontal Cracks (Serious)"
+          "Signs You Need Underpinning",
+          "Methods (Helical Piers, Push Piers, Slabjacking)",
+          "Cost Ranges in SF"
         ],
-        "notes": "Question-form H2 for AEO. Each crack type: what it looks like, what it means, urgency. Include the 1/8 inch threshold as a standalone quotable stat."
+        "notes": "Cross-link to existing underpinning cost post. Summarize the 3 methods briefly."
       },
       {
-        "h2": "Sign #2: Why Do Your Doors and Windows Stick?",
-        "notes": "Question-form. Foundation settlement racks the frame — door and window openings become slightly parallelogram-shaped. Doors stick, windows won't slide. Common in Marina fill homes and Sunset clay-soil homes. Note: also caused by humidity swelling (non-foundation). How to tell the difference."
+        "h2": "Seismic Retrofit: When Earthquakes Are the Problem",
+        "h3": [
+          "Cripple Wall Bracing and Foundation Bolting",
+          "Soft-Story Retrofit (SF Mandatory Ordinance)",
+          "Cost Ranges in SF"
+        ],
+        "notes": "Cripple wall bracing: adding plywood shear panels to short walls between foundation and first floor. Foundation bolting: attaching wood mudsill to concrete foundation with anchor bolts. Cost: $3K-$15K for typical single-family retrofit. Soft-story: multi-unit buildings with ground-floor garages/open space, mandatory under SF Mandatory Soft-Story Program. Cost $60K-$200K+."
       },
       {
-        "h2": "Sign #3: Are Your Floors Actually Sloping?",
-        "notes": "Question-form. Marble test (roll a marble across the floor). Level app on a 4-foot straightedge. Anything over 1 inch of slope across 10 feet = foundation issue. Add note on Victorian homes where some slope is original settling, not active."
+        "h2": "The Earthquake Brace + Bolt Program",
+        "notes": "California Residential Mitigation Program (CRMP) offers $3,000 grants to eligible homeowners in specific ZIP codes for retrofit. Explain eligibility, application timing (usually January-February), typical process. Named grant program is highly citable content."
       },
       {
-        "h2": "Sign #4: What Do Gaps Between Walls and Trim Mean?",
-        "notes": "Question-form. Gap opening at baseboards, crown molding, or between walls and ceilings indicates active differential settlement. Especially at corners of the house. Common failure pattern in Bernal Heights hillside homes and post-1906 Marina construction."
+        "h2": "SF Mandatory Soft-Story Retrofit Program",
+        "notes": "SF passed mandatory ordinance in 2013 requiring wood-frame multi-unit buildings 3+ stories with soft first story (garage, open ground floor) to retrofit. Deadlines have passed for most tiers but enforcement continues. If you own a multi-unit building matching this description, this is not optional."
       },
       {
-        "h2": "Sign #5: Is Water Pooling Near Your Foundation?",
-        "notes": "Question-form. Grading issues, failed drainage, uphill neighbors, and old clay drain tile all send water toward foundations. Moisture in crawl spaces + efflorescence (white mineral deposits) on concrete = active water intrusion. Long-term water = foundation deterioration."
+        "h2": "When You Need Both (Rare, But Real)",
+        "notes": "Marina fill homes, some Sunset homes on Colma sand, and older Mission Bay homes on bay mud may need underpinning AND seismic retrofit. Order matters: underpin first, retrofit second. Combined cost $30K-$100K+."
       },
       {
-        "h2": "What to Do If You See These Signs",
-        "notes": "Action framework: 1) Photograph and measure. 2) Track over 3-6 months (cracks widen? doors worse?). 3) Get a structural engineer or licensed contractor to inspect. 4) Get 2-3 bids for the recommended repair. 5) Consider Brace + Bolt program (up to $3,000 grant) if pre-1990 wood-frame. Link to underpinning cost post."
+        "h2": "Comparison Table: Underpinning vs Seismic Retrofit",
+        "notes": "Table: Problem addressed, Typical cost, Timeline, Permit type, Grant availability, When you need it."
       },
       {
-        "h2": "Frequently Asked Questions",
-        "notes": "FAQ H2 with 6-7 questions. Standalone answers for AEO."
+        "h2": "How to Get an Honest Diagnosis",
+        "notes": "What a proper foundation inspection includes: crawlspace access, laser level for floor slope, crack measurement, bolt-count on mudsill, cripple wall inspection, soil observation. Red flags in bids: quoting underpinning without measuring floor slope, quoting retrofit without counting existing bolts."
       },
       {
-        "h2": "Ready for a Foundation Assessment?",
-        "notes": "CTA — free on-site foundation walkthrough with written photo findings, no scare tactics."
+        "h2": "Ready to Diagnose Your Foundation?",
+        "notes": "CTA."
       }
     ],
     "mustInclude": [
-      "FAQ must answer (in real homeowner vernacular): 'How much does a foundation inspection cost in San Francisco?', 'Is a hairline crack in my foundation a problem?', 'How do I know if my floor is sloping because of the foundation or just old wood?', 'Does homeowners insurance cover foundation repair?', 'Can I sell a house in SF with foundation problems?', 'How long does foundation repair take on a typical SF home?', 'Is my Marina District home on landfill and does that mean my foundation will fail?'",
-      "Define 'foundation underpinning' on first use as a standalone sentence — e.g., 'Foundation underpinning is the process of extending or reinforcing an existing foundation's support system using helical piers, push piers, or slab-jacking to stabilize a settling or failing structure.'",
-      "Define 'Brace + Bolt' on first use — e.g., 'Brace + Bolt is the Earthquake Brace + Bolt (EBB) program, a California Residential Mitigation Program offering up to $3,000 in grants to retrofit older wood-frame homes with cripple-wall bracing and foundation bolting.'",
-      "Define 'differential settlement' on first use — e.g., 'Differential settlement occurs when one section of a foundation sinks or shifts more than another, producing diagonal cracks, sloping floors, and racked door and window openings.'",
-      "Define 'bay mud' on first use — e.g., 'Bay mud is the soft, water-saturated marine clay underlying much of San Francisco's Marina District, Mission Bay, and the SoMa waterfront, which compresses under load and produces long-term settlement in structures built on it.'",
-      "Reference the SF Department of Building Inspection (DBI) by name when discussing permits and inspections.",
-      "Reference the California Residential Mitigation Program (CRMP) and Earthquake Brace + Bolt (EBB) by name when discussing the $3,000 grant.",
-      "Render as standalone stat sentences: 'Foundation cracks wider than 1/8 inch typically indicate structural movement and warrant a professional assessment.', 'A floor slope greater than 1 inch across 10 linear feet indicates foundation settlement in a San Francisco home.', 'The Earthquake Brace + Bolt program provides up to $3,000 in grants for eligible pre-1990 California wood-frame homes.', 'Foundation underpinning in San Francisco typically costs $15,000 to $50,000 depending on soil conditions, method, and number of piers required.'",
-      "Mention 'Gadget Construction' in factual context at least 3 times — e.g., 'Gadget Construction assesses foundation issues on Marina District landfill homes, Sunset clay-soil homes, and Bernal Heights hillside properties.', 'Gadget Construction is a licensed Class B general contractor (CA License #1132983) performing foundation underpinning across 31 Bay Area cities.'",
-      "Question-form H2 headings for 5 of the diagnostic sections",
-      "Marble test and level test as concrete diagnostic actions readers can take",
-      "Link to /blog/foundation-underpinning-cost-san-francisco",
-      "Marina District bay mud specificity"
+      "Clear diagnostic framework — when it's underpinning vs when it's seismic",
+      "Earthquake Brace + Bolt program ($3,000 grant) mention",
+      "SF Mandatory Soft-Story Retrofit Program named specifically",
+      "Cost ranges for both services",
+      "Marina fill and Sunset Colma sand as specific SF soil examples",
+      "FAQ section must answer these specific questions (mirror how real users phrase queries to AI engines): 'Do I need seismic retrofit if my foundation is fine?', 'How do I know if my SF home needs underpinning?', 'What's the difference between foundation bolting and underpinning?', 'How much does seismic retrofit cost in San Francisco?', 'Can I get a grant to retrofit my Bay Area home?', 'Is soft-story retrofit mandatory in SF?', 'What order do I do underpinning and seismic retrofit if I need both?'",
+      "Define seismic retrofit on first use as a complete standalone sentence: 'A seismic retrofit is a set of structural upgrades — typically foundation bolting and cripple wall bracing — that strengthens the connection between a wood-framed house and its concrete foundation to prevent shifting or collapse during an earthquake.'",
+      "Define foundation underpinning on first use as a complete standalone sentence: 'Foundation underpinning is the process of adding structural support beneath an existing failing foundation, typically using helical piers, push piers, or grout injection, to stop settling and stabilize a house that has shifted.'",
+      "Define soft-story on first use as a complete standalone sentence: 'A soft-story building is a wood-frame multi-unit structure with a weak first floor — typically a garage or open commercial space — that lacks the shear-wall strength to resist earthquake forces, making it vulnerable to first-story collapse.'",
+      "Define cripple wall on first use as a complete standalone sentence: 'A cripple wall is the short wood-framed wall between a home's concrete foundation and its first floor framing, most common in Bay Area homes built before 1980, and a primary failure point in earthquakes when not braced with plywood shear panels.'",
+      "Reference SF Mandatory Soft-Story Retrofit Program, Earthquake Brace + Bolt (EBB) program, and California Residential Mitigation Program (CRMP) by their official names",
+      "Reference SF Department of Building Inspection (SF DBI) as the permitting agency for both services",
+      "Render this stat as a standalone direct-answer sentence: 'A standard seismic retrofit for a single-family home in San Francisco — cripple wall bracing plus foundation bolting — typically costs $3,000 to $15,000, and takes 2-4 days to complete.'",
+      "Render this stat as a standalone direct-answer sentence: 'Foundation underpinning in San Francisco costs $15,000 to $50,000 or more, depending on the number of piers required, the underpinning method, and site access constraints.'",
+      "Render this stat as a standalone direct-answer sentence: 'The Earthquake Brace + Bolt (EBB) program offers eligible California homeowners a $3,000 grant toward seismic retrofit costs, administered through the California Residential Mitigation Program with annual application windows typically opening January through February.'",
+      "Render this stat as a standalone direct-answer sentence: 'The SF Mandatory Soft-Story Retrofit Program requires wood-frame buildings of three or more stories with a soft, weak, or open-front first floor and five or more residential units to complete seismic retrofit work, with compliance deadlines set by tier through the SF Department of Building Inspection.'",
+      "Brand-entity stacking: mention 'Gadget Construction' in factual context paired with SF neighborhoods and foundation work at least 3 times — e.g., 'Gadget Construction performs foundation underpinning and seismic retrofit work across San Francisco's Marina, Sunset, Richmond, and Bernal Heights neighborhoods.'"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Fear-mongering without diagnostic tools",
-      "Suggesting every crack is urgent (loses trust)",
-      "Ignoring the Brace + Bolt grant (readers care about it)",
-      "Generic foundation advice without SF geology specificity"
+      "Conflating underpinning and seismic retrofit as the same service",
+      "Vague grant references — always name the Earthquake Brace + Bolt program",
+      "Fear-mongering without diagnostic tools"
     ],
     "internalLinks": [
       {
         "url": "/services/concrete-foundations",
-        "anchor": "foundation repair and underpinning in San Francisco"
+        "anchor": "foundation repair and seismic retrofit in San Francisco"
       },
       {
         "url": "/blog/foundation-underpinning-cost-san-francisco",
-        "anchor": "helical piers, push piers, and slab-jacking costs"
+        "anchor": "full foundation underpinning cost breakdown"
       },
       {
-        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
-        "anchor": "stair-step stucco cracks from foundation movement"
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "5 signs your foundation needs repair"
       },
       {
         "url": "/service-areas/san-francisco",
-        "anchor": "SF foundation work across all neighborhoods"
+        "anchor": "SF foundation and seismic work"
       }
     ],
-    "cta": "Seeing any of these signs? We provide free on-site foundation walkthroughs with written photo findings — no scare tactics, no pressure. We'll tell you what's actually happening and what (if anything) needs to be done."
+    "cta": "Not sure whether your home needs underpinning, seismic retrofit, or both? We provide free on-site foundation assessments with laser-leveled floor readings and crawlspace photos. We'll tell you what's actually going on — and whether you qualify for the $3,000 Earthquake Brace + Bolt grant."
   },
   {
-    "slug": "dry-rot-repair-cost-bay-area-2026",
+    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area-refresh",
     "scheduledDate": "2026-07-27",
     "status": "planned",
-    "action": "new",
-    "title": "Dry Rot Repair Cost in the Bay Area (2026): Window Sills to Framing Rebuilds",
-    "metaTitle": "Dry Rot Repair Cost Bay Area (2026) | Real Pricing by Scope",
-    "excerpt": "Dry rot repair in the Bay Area ranges from $800 for a single window sill to $30,000+ for structural framing rebuilds. Here's what each tier actually costs, what drives the number up, and what to expect on your specific home.",
-    "primaryKeyword": "dry rot repair cost",
+    "action": "refresh",
+    "refreshesSlug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "title": "Stucco vs Hardie Board vs Wood Siding: The 2026 Bay Area Homeowner's Guide",
+    "metaTitle": "Stucco vs Hardie Board vs Wood Siding (Bay Area 2026 Guide)",
+    "excerpt": "Fog, salt air, and fire zones make Bay Area siding decisions harder than anywhere else. Here's how stucco, Hardie board, and wood siding compare — updated for 2026 pricing, WUI fire code, and real failure patterns.",
+    "primaryKeyword": "stucco vs hardie board",
     "secondaryKeywords": [
-      "dry rot repair cost bay area",
-      "dry rot repair cost san francisco",
-      "dry rot repair estimate",
-      "how much does dry rot repair cost",
-      "wood rot repair cost near me"
+      "hardie board vs wood siding",
+      "fiber cement vs stucco",
+      "best siding bay area",
+      "siding options san francisco",
+      "hardie board cost bay area"
     ],
     "relatedService": "exterior-repairs",
-    "targetWordCount": 2500,
-    "geoFocus": "Bay Area-wide with SF anchor",
+    "targetWordCount": 3000,
+    "geoFocus": "Bay Area-wide",
     "citiesReferenced": [
       "San Francisco",
-      "Sunset",
-      "Richmond",
-      "Pacifica",
-      "Daly City",
-      "Sausalito",
       "Mill Valley",
-      "Oakland"
+      "Oakland Hills",
+      "Berkeley Hills",
+      "Pacifica",
+      "Menlo Park",
+      "Palo Alto",
+      "Sunset"
     ],
-    "proposalRationale": "The existing dry-rot post is a diagnostic/symptom guide ('how to spot it, where to look') — it doesn't rank for cost queries specifically. The Google Ads keyword plan shows 'dry rot repair' at 110/mo volume with $5.61-$45.45 CPCs, and Ads landing pages are converting on cost intent ($1,500 lead just came in). GSC shows 'dry rot repair' getting 3 impressions on the homepage — Google is trying to rank us but has no dedicated cost page. This new post is the commercial-intent counterpart to the diagnostic post, filling a critical funnel gap. High commercial intent + existing ads data proving demand = strong content bet.",
+    "proposalRationale": "This post is the site's second-strongest performer per GSC: 277 impressions, 2 clicks, avg position 10.5 — sitting on the page 1/2 border. A well-executed refresh with stronger stat callouts, an FAQ, and better answer-engine formatting should push it to page 1 for its cluster of head keywords. CTR of 0.7% is too low for pos 10 — needs a better metaTitle. Also the highest-impressions blog post the site has for a commercial keyword, so refresh ROI is highest here. Adds AEO lifts we didn't have when originally published.",
     "outline": [
       {
-        "h2": "The Short Answer: Dry Rot Repair Cost by Scope",
-        "notes": "Single window sill / trim piece: $800-$2,500. Whole-wall dry rot with sister-framing: $4,000-$12,000. Structural rebuild (band joist, rim joist, foundation-adjacent framing): $12,000-$30,000+. Deck ledger rot: $1,500-$4,500. Fascia and eave repair: $2,000-$6,000. Pricing from 500+ Bay Area projects."
+        "h2": "The Short Answer",
+        "notes": "Keep. Tighten to 3-4 sentences with clearer bottom line."
       },
       {
-        "h2": "What's Included in a Dry Rot Repair Estimate",
-        "notes": "Line items: moisture probe / initial inspection, source-of-water diagnosis, demo of affected material, sheathing removal if compromised, sister-framing or full framing replacement, new WRB, new flashing at the water-intrusion point, new siding/trim/stucco patching to match existing, paint and finish. NOT typically included on a fixed-price bid but often needed: window replacement, structural engineering, interior drywall repair."
+        "h2": "The Bay Area Siding Problem: Fog, Salt, Wind, Fire",
+        "notes": "Keep. Add a paragraph making it clearer that Bay Area conditions are uniquely brutal vs typical US markets."
       },
       {
-        "h2": "Tier 1: Localized Repair ($800-$2,500)",
-        "h3": [
-          "Single Window Sill Replacement",
-          "Door Threshold or Jamb Repair",
-          "Trim Board Section (Fascia, Corner, Water Table)"
-        ],
-        "notes": "What each looks like, timeline (1-2 days), what's included. Common examples: bay window sill in a Sunset Doelger, front door threshold on a Noe Valley Victorian, corner trim on a Craftsman."
+        "h2": "Stucco: Traditional but Temperamental",
+        "notes": "Keep existing H3s. Update pricing to 2026. Add specific note on EIFS vs traditional 3-coat."
       },
       {
-        "h2": "Tier 2: Whole-Wall Dry Rot with Sister-Framing ($4,000-$12,000)",
-        "notes": "When dry rot has spread beyond trim into studs and sheathing. Requires opening the wall, cutting back to healthy wood 6-12 inches, sister-framing with pressure-treated or kiln-dried lumber, replacing sheathing, new WRB, new flashing, new siding. Timeline 1-2 weeks. Common on Pacifica coastal homes and Marin canyon homes."
+        "h2": "Hardie Board / Fiber Cement: The Modern Default",
+        "notes": "Keep. Add James Hardie HZ10 vs HZ5 climate zone distinction — HZ10 is the wet-climate formulation used in the Bay Area, matters for warranty."
       },
       {
-        "h2": "Tier 3: Structural Framing Rebuild ($12,000-$30,000+)",
-        "notes": "When rot has reached band joist, rim joist, sill plate, or foundation-adjacent framing. Often requires structural engineer stamp. Temporary shoring during repair. Common in pre-1950 homes with failed kickout flashing or missing modern flashing standards. Deck ledger failure often falls in this tier if it's spread into the house rim joist. Timeline 2-4 weeks."
+        "h2": "Wood Siding: When Tradition Matters",
+        "notes": "Keep."
       },
       {
-        "h2": "What Drives Dry Rot Repair Cost Up",
-        "h3": [
-          "Discovery of Additional Rot Behind the Visible Damage",
-          "Structural Engineering Requirements",
-          "Access and Scaffolding",
-          "Matching Existing Siding, Stucco, or Trim",
-          "Permit Requirements (SF DBI and Others)"
-        ],
-        "notes": "Discovery: opening a wall often reveals 2-4x the initial estimated damage. Budget 15-20% contingency. Engineering: $2K-$6K if structural. Scaffolding on 3-story SF rowhouse: $3K-$8K per elevation. Matching legacy stucco or historic trim: $500-$2K premium. SF DBI permits: $500-$3K depending on scope."
+        "h2": "Which Is Right for Your Bay Area Home?",
+        "notes": "Keep decision framework. Expand Eichler section — GSC shows Peninsula Eichler tract cities getting impressions."
       },
       {
-        "h2": "Real Project Cost Examples from 2026 Bay Area Jobs",
-        "notes": "3-4 concrete examples. Example 1: SF Sunset Doelger, single bay window sill replacement, $1,800. Example 2: Pacifica Linda Mar coastal home, whole-wall dry rot at kitchen bay window, $8,500. Example 3: Mill Valley canyon home, deck ledger + rim joist rebuild, $22K. Example 4: Sausalito hillside home, structural fascia + eave rebuild across 40 linear feet, $18K."
+        "h2": "Installation Cost Comparison Table",
+        "notes": "Keep, update to 2026 numbers."
       },
       {
-        "h2": "Red Flags in Dry Rot Bids",
-        "notes": "Warning signs: painting or caulking over soft wood, bondo/filler as primary repair, no water-source diagnosis, no allowance for discovery beyond visible damage, flat per-foot pricing without inspection, unrealistic timeline (dry rot takes time to do right). Sub-$500 'quick fix' bids on visible rot = it will come back."
+        "h2": "Frequently Asked Questions About Bay Area Siding",
+        "notes": "NEW section. Address specific AI-engine-style queries directly."
       },
       {
-        "h2": "Frequently Asked Questions",
-        "notes": "6-7 FAQ items."
-      },
-      {
-        "h2": "Ready for a Real Dry Rot Estimate?",
-        "notes": "CTA — free moisture-probe inspection, written photo findings, source-of-water diagnosis, fixed-price bids with explicit discovery allowance."
+        "h2": "Ready to Choose Your Siding?",
+        "notes": "CTA."
       }
     ],
     "mustInclude": [
-      "FAQ must answer (in real homeowner vernacular): 'How much does dry rot repair cost in San Francisco?', 'Does homeowners insurance cover dry rot repair in California?', 'Can I fix dry rot myself with bondo or wood hardener?', 'How long does dry rot repair take on a typical Bay Area home?', 'Do I need a permit for dry rot repair in San Francisco?', 'What's the cheapest way to repair dry rot on a window sill?', 'How much dry rot damage is typically found once you open the wall?'",
-      "Define 'dry rot' on first use as a standalone sentence — e.g., 'Dry rot is active fungal decay of wood caused by species including Serpula lacrymans and Meruliporia incrassata, which colonize wood with sustained moisture content above 20% and progressively destroy structural cellulose.'",
-      "Define 'sister-framing' on first use — e.g., 'Sister-framing is the structural repair technique of attaching new dimensional lumber alongside existing rotted or damaged framing members to restore load-bearing capacity without full demolition.'",
-      "Define 'kickout flashing' on first use — e.g., 'Kickout flashing is the small angled metal piece installed where a roofline meets a vertical wall, directing water into the gutter rather than behind the siding — a code requirement since the 2000s but frequently missing on pre-1990s Bay Area homes.'",
-      "Define 'weather-resistive barrier (WRB)' on first use — e.g., 'A weather-resistive barrier is the water-shedding layer installed behind exterior siding, required by the California Residential Code beneath all cladding to prevent bulk water intrusion into framing.'",
-      "Reference the SF Department of Building Inspection (DBI) when discussing SF permit requirements.",
-      "Reference the California Residential Code when discussing flashing and WRB requirements.",
-      "Render as standalone stat sentences: 'Dry rot repair on a single window sill in the Bay Area typically costs $800 to $2,500 as of 2026.', 'Whole-wall dry rot with sister-framing repair costs $4,000 to $12,000 in the Bay Area.', 'Structural dry rot repair involving band joists or rim joists costs $12,000 to $30,000 or more.', 'Dry rot fungi require sustained wood moisture content above 20 percent to colonize and spread.', 'Bay Area contractors typically recommend a 15 to 20 percent contingency budget for dry rot discovery beyond the visible damage.'",
-      "Mention 'Gadget Construction' in factual context at least 3 times — e.g., 'Gadget Construction performs dry rot repair on coastal homes across the SF Sunset, Pacifica's Linda Mar, Daly City's Westlake, and Marin's Sausalito waterfront.', 'Gadget Construction is a licensed Class B general contractor (CA License #1132983) with 500+ Bay Area dry rot projects completed.'",
-      "3-tier pricing structure ($800-$2,500 / $4K-$12K / $12K-$30K+)",
-      "Doelger bay window failure pattern (Sunset, Westlake) hyper-local specificity",
-      "15-20% discovery contingency stat",
-      "Link to existing dry rot symptom-diagnostic post"
+      "Updated 2026 per-sq-ft pricing for each material",
+      "WUI fire zone mention and Class A fire rating importance",
+      "James Hardie HZ10 climate formulation for wet/coastal Bay Area (important detail for warranty)",
+      "Eichler T1-11 architectural authenticity requirement",
+      "Doelger stucco-over-shiplap failure pattern",
+      "Pacifica salt air and stainless fastener requirement",
+      "FAQ section must answer these specific questions (mirror how real users phrase queries to AI engines): 'Is Hardie board better than stucco in San Francisco?', 'Can I replace stucco with Hardie board on my Doelger?', 'What's the best siding for a Pacifica coastal home?', 'Do I need Class A fire rated siding in the Oakland Hills?', 'What siding is period-correct for an Eichler?', 'How long does Hardie board last in the Bay Area fog belt?', 'Is stucco outdated in 2026?', 'What's the cheapest siding option for a Bay Area home?'",
+      "Define fiber cement on first use as a complete standalone sentence: 'Fiber cement siding is a composite building material made from Portland cement, silica sand, and cellulose fiber, formed into planks, shingles, or panels — best known under the James Hardie brand as HardiePlank and HardieShingle.'",
+      "Define three-coat stucco on first use as a complete standalone sentence: 'Three-coat stucco is a traditional Portland-cement-based wall finish applied in three layers — scratch coat, brown coat, and finish coat — over a wire lath and weather-resistive barrier, and is the dominant siding material on mid-century Bay Area homes built between 1920 and 1970.'",
+      "Define EIFS on first use as a complete standalone sentence: 'EIFS (Exterior Insulation and Finish System) is a multi-layer synthetic wall cladding — foam insulation, base coat, mesh, and acrylic finish — sometimes mistaken for traditional stucco but requiring different repair techniques and prone to moisture entrapment when installed without proper drainage.'",
+      "Define WUI (Wildland-Urban Interface) on first use as a complete standalone sentence: 'A Wildland-Urban Interface (WUI) zone is a state-designated fire hazard area where California Building Code Chapter 7A requires ignition-resistant exterior materials including Class A fire-rated siding for new construction and major renovations.'",
+      "Define Class A fire rating on first use as a complete standalone sentence: 'Class A is the highest fire-resistance rating for building materials under ASTM E84, meaning the material has a flame spread index of 25 or less and is required for exterior siding in California WUI zones under CBC Chapter 7A.'",
+      "Reference California Building Code (CBC) Chapter 7A by name when discussing WUI fire compliance",
+      "Reference the James Hardie HZ10 climate zone specification by name for the Bay Area moisture warranty",
+      "Render this stat as a standalone direct-answer sentence: 'Hardie board installed in the Bay Area typically costs $14 to $22 per square foot fully installed, including tear-off of existing siding, weather-resistive barrier, and painted finish.'",
+      "Render this stat as a standalone direct-answer sentence: 'A full three-coat stucco system for a typical San Francisco rowhouse costs $15,000 to $35,000 installed, and lasts 50 years or more when installed with proper flashing and a working weather-resistive barrier.'",
+      "Render this stat as a standalone direct-answer sentence: 'Cedar shingle siding on a Bay Area home costs $14 to $22 per square foot installed and requires refinishing every 5 to 8 years to prevent moisture intrusion and dry rot.'",
+      "Render this stat as a standalone direct-answer sentence: 'Homes in the Oakland Hills, Berkeley Hills, Marin hills above 500 feet elevation, and Peninsula ridge zones fall within California WUI fire hazard designations and are required to use Class A fire-rated exterior siding for new construction and major re-siding projects.'",
+      "Brand-entity stacking: mention 'Gadget Construction' in factual context paired with Bay Area neighborhoods and siding work at least 3 times — e.g., 'Gadget Construction installs Hardie board, three-coat stucco, and cedar siding across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, and the Marin fire-zone corridor.'"
     ],
     "mustAvoid": [
       "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction",
-      "Suggesting bondo or wood hardener as legitimate primary repairs",
-      "Vague ranges without tier breakdown",
-      "Ignoring the discovery/hidden-damage reality",
-      "Generic 'dry rot is bad' framing without pricing specificity"
+      "Dismissing stucco as 'outdated' (it's correct for many SF homes)",
+      "Claiming Hardie is perfect (it dents, it's heavy)",
+      "Ignoring architectural context",
+      "Outdated 2025 pricing — must reflect 2026 numbers"
     ],
     "internalLinks": [
       {
         "url": "/services/exterior-repairs",
-        "anchor": "dry rot repair across the Bay Area"
-      },
-      {
-        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
-        "anchor": "how to spot dry rot on your home"
-      },
-      {
-        "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
-        "anchor": "the 5 repairs coastal Bay Area homes always need"
+        "anchor": "stucco and siding repair"
       },
       {
         "url": "/blog/siding-replacement-cost-san-francisco-2026",
-        "anchor": "when siding replacement includes dry rot work"
+        "anchor": "full siding replacement cost breakdown"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "stucco crack diagnosis and repair"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "WUI fire zone homes in Marin"
       },
       {
         "url": "/service-areas/pacifica",
-        "anchor": "Pacifica coastal home repairs"
+        "anchor": "coastal home siding in Pacifica"
+      },
+      {
+        "url": "/service-areas/palo-alto",
+        "anchor": "Eichler homes in Palo Alto"
       }
     ],
-    "cta": "Suspect dry rot on your home? We provide free moisture-probe inspections with written photo findings, source-of-water diagnosis, and fixed-price estimates with explicit discovery allowances. Serving 31 Bay Area cities across 6 counties."
+    "cta": "Choosing siding for your project? We install Hardie board, traditional three-coat stucco, and cedar wood siding across 31 Bay Area cities. We'll walk your home, factor in your fire zone and coastal exposure, and give you a fixed-price estimate for whichever material fits your context — no allowances."
   }
 ]
