@@ -15,6 +15,18 @@ export function getPublishedPosts(now: Date = new Date()): BlogPost[] {
   return BLOG_POSTS.filter((post) => isPublished(post, now));
 }
 
+/**
+ * Look up a single published post by slug. Returns undefined for unknown or
+ * future-dated slugs, so callers can't accidentally surface an unpublished post.
+ */
+export function getPostBySlug(
+  slug: string,
+  now: Date = new Date(),
+): BlogPost | undefined {
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  return post && isPublished(post, now) ? post : undefined;
+}
+
 export function getRelatedPosts(
   currentSlug: string,
   relatedService: string | undefined,

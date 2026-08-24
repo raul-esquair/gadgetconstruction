@@ -19,6 +19,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "adu-construction")!;
 const data = SERVICE_PAGES["adu-construction"];
@@ -61,6 +62,16 @@ export default function ADUConstructionPage() {
       <ProcessSteps steps={data.process} heading="Our ADU Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
       <ServiceGallery serviceName="ADU" categorySlug="adu-construction" />
+
+      <ServiceGuides
+
+        serviceSlug="adu-construction"
+
+        heading="ADU Planning Guides"
+
+        eyebrow="Before you break ground"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

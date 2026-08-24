@@ -19,6 +19,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "retaining-walls")!;
 const data = SERVICE_PAGES["retaining-walls"];
@@ -61,6 +62,16 @@ export default function RetainingWallsPage() {
       <ProcessSteps steps={data.process} heading="Our Retaining Wall Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
       <ServiceGallery serviceName="Retaining Wall" categorySlug="retaining-walls" />
+
+      <ServiceGuides
+
+        serviceSlug="retaining-walls"
+
+        heading="Retaining Wall Guides"
+
+        eyebrow="Before you build"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

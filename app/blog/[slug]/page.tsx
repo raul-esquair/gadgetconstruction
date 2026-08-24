@@ -13,6 +13,7 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import Button from "@/components/ui/Button";
 import JsonLd, { articleSchema, faqSchema } from "@/components/seo/JsonLd";
 import CTABlock from "@/components/sections/CTABlock";
+import { blurProps } from "@/lib/blur";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -126,6 +127,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
               <Image
                 src={post.featuredImage}
+                {...blurProps(post.featuredImage)}
                 alt={post.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 1024px"
@@ -250,6 +252,7 @@ export default async function BlogPostPage({ params }: Props) {
                       {related.featuredImage ? (
                         <Image
                           src={related.featuredImage}
+                          {...blurProps(related.featuredImage)}
                           alt={related.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"

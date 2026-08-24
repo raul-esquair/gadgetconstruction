@@ -19,6 +19,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "complete-remodel")!;
 const data = SERVICE_PAGES["complete-remodel"];
@@ -61,6 +62,16 @@ export default function CompleteRemodelPage() {
       <ProcessSteps steps={data.process} heading="Our Remodeling Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
       <ServiceGallery serviceName="Remodeling" categorySlug="complete-remodel" />
+
+      <ServiceGuides
+
+        serviceSlug="complete-remodel"
+
+        heading="Remodel Planning Guides"
+
+        eyebrow="Before you demo"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

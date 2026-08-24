@@ -4,6 +4,7 @@ import { CheckCircle2, Phone, Star } from "lucide-react";
 import Container from "@/components/ui/Container";
 import LpQuickForm from "@/components/lp/LpQuickForm";
 import { COMPANY } from "@/lib/constants";
+import { blurProps } from "@/lib/blur";
 
 interface LpHeroProps {
   eyebrow: string;
@@ -35,6 +36,7 @@ export default function LpHero({
       <div className="absolute inset-0">
         <Image
           src={backgroundImage}
+          {...blurProps(backgroundImage)}
           alt={imageAlt}
           fill
           className="object-cover opacity-40"

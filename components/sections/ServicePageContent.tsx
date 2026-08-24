@@ -8,6 +8,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import type { ServicePageData } from "@/lib/services-data";
 import { GALLERY_PROJECTS } from "@/lib/gallery-data";
+import { blurProps } from "@/lib/blur";
 
 interface ServiceIntroProps {
   data: ServicePageData["intro"];
@@ -147,6 +148,7 @@ export function ServiceGallery({ serviceName, categorySlug }: ServiceGalleryProp
                 >
                   <Image
                     src={project.image!}
+                    {...blurProps(project.image!)}
                     alt={`${project.title} — ${serviceName} project in ${project.location} by Gadget Construction`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -167,6 +169,7 @@ export function ServiceGallery({ serviceName, categorySlug }: ServiceGalleryProp
                 >
                   <Image
                     src="/images/logo.png"
+                    {...blurProps("/images/logo.png")}
                     alt={`${serviceName} project ${i}`}
                     fill
                     className="object-contain p-16 opacity-10"

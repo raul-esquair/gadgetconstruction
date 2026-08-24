@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { blurProps } from "@/lib/blur";
 
 interface BeforeAfterProps {
   beforeImage: string;
@@ -66,6 +67,7 @@ export default function BeforeAfter({
         {/* After image (full background) */}
         <Image
           src={afterImage}
+          {...blurProps(afterImage)}
           alt={afterAlt}
           fill
           className="object-cover"
@@ -79,6 +81,7 @@ export default function BeforeAfter({
         >
           <Image
             src={beforeImage}
+            {...blurProps(beforeImage)}
             alt={beforeAlt}
             fill
             className="object-cover"

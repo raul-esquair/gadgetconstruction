@@ -13,6 +13,7 @@ import LpHero from "@/components/lp/LpHero";
 import LpTrustStrip from "@/components/lp/LpTrustStrip";
 import LpFooter from "@/components/lp/LpFooter";
 import LpFinalCTA from "@/components/lp/LpFinalCTA";
+import { blurProps } from "@/lib/blur";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Composite Decks — Bay Area Deck Builder | Trex, TimberTech & Fiberon",
@@ -417,6 +418,7 @@ export default function CompositeDecksLpPage() {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={item.src}
+                    {...blurProps(item.src)}
                     alt={item.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"

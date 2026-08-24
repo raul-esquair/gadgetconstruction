@@ -21,6 +21,7 @@ import { SERVICE_PRICING } from "@/lib/pricing-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "exterior-repairs")!;
 const data = SERVICE_PAGES["exterior-repairs"];
@@ -99,6 +100,11 @@ export default function ExteriorRepairsPage() {
       <ServiceGallery
         serviceName="Exterior Repair"
         categorySlug="exterior-repairs"
+      />
+      <ServiceGuides
+        serviceSlug="exterior-repairs"
+        heading="Repair Planning Guides"
+        eyebrow="Before you patch"
       />
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

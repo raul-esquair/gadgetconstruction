@@ -25,6 +25,7 @@ import LpHero from "@/components/lp/LpHero";
 import LpTrustStrip from "@/components/lp/LpTrustStrip";
 import LpFooter from "@/components/lp/LpFooter";
 import LpFinalCTA from "@/components/lp/LpFinalCTA";
+import { blurProps } from "@/lib/blur";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Stucco Repair, Bay Area — Crack Patching to Full Re-Stucco | Free Inspection",
@@ -287,6 +288,7 @@ export default function StuccoRepairLpPage() {
               <div className="relative aspect-[16/9]">
                 <Image
                   src="/images/stucco-wide-before.jpg"
+                  {...blurProps("/images/stucco-wide-before.jpg")}
                   alt="Bay Area home with stucco torn off and substrate fully prepped for re-stucco — Fortifiber JumboTex weather-resistive barrier installed over new wire lath, blue flashing tape sealing new vinyl window opening, scaffolding in place, ready for three-coat application"
                   fill
                   className="object-cover"
@@ -304,6 +306,7 @@ export default function StuccoRepairLpPage() {
               <div className="relative aspect-[16/9]">
                 <Image
                   src="/images/stucco-wide-after.jpg"
+                  {...blurProps("/images/stucco-wide-after.jpg")}
                   alt="Same Bay Area home with three-coat stucco system fully applied over prepped substrate — smooth charcoal finish coat, integrated chimney clad in matching stucco, Gadget crew member finishing top corner detail from scaffolding"
                   fill
                   className="object-cover"
