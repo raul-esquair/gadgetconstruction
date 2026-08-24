@@ -23,7 +23,10 @@ Website for **Gadget Construction Inc.**, a Class B general contractor serving 3
 npm run dev      # Start dev server (localhost:3000)
 npm run build    # Production build — must pass with 0 errors before committing
 npm run lint     # ESLint check
+npm run blur:gen # Regenerate lib/blur-map.json after adding/changing images
 ```
+
+`prebuild` runs `blur:gen` automatically, so `npm run build` always has a current blur map.
 
 **Always run `npm run build` before committing.** The build catches TypeScript errors that dev mode doesn't.
 
@@ -95,6 +98,7 @@ components/
     ServicePageContent.tsx        # Service page sections (Intro, Scope, Differentiators, Gallery)
     CityPageContent.tsx           # City page sections (Intro, Insight, Services)
     NeighboringCities.tsx         # Cross-linking between nearby city pages
+    ServiceGuides.tsx             # Curated blog guides module on each service page
   layout/
     Header.tsx                    # Transparent→white header, dark mobile menu, estimate button pop-in
     Footer.tsx                    # 4-column footer with white logo + license bar
@@ -114,6 +118,10 @@ lib/                              # Data & utilities
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
   metadata.ts                     # generatePageMetadata() helper (supports ogType, publishedTime)
+  seo/entities.ts                 # Canonical schema.org entity IDs + the owner Person object
+  service-guides.ts               # Curated service slug → blog post slugs (internal linking)
+  blur.ts                         # blurProps() helper for next/image placeholders
+  blur-map.json                   # Auto-generated path → base64 blur lookup (npm run blur:gen)
   utils.ts                        # cn() helper + getBookingUrgency() context-aware season text
   logo-base64.ts                  # White logo as base64 constant (used by OG image)
 
@@ -134,6 +142,10 @@ scripts/                          # CLI tools (Node + Python)
   fetch-gsc-data.ts               # Google Search Console search performance client
   gsc-index-coverage.ts           # Sitemap stats + per-URL inspection (PASS/NEUTRAL + reason)
   propose-next-batch.ts           # /next-content-batch implementation
+  migrate-proposed-briefs.mjs     # proposed-briefs.json → post-queue.json (both merge paths)
+  resubmit-sitemap.ts             # Re-queue the sitemap in GSC after each publish
+  submit-indexnow.ts              # Push new URLs to IndexNow (Bing/Yandex)
+  generate-blur-map.mjs           # Builds lib/blur-map.json from public/images
   generate-month1-doc.py          # Reference impl for month-1 client doc
 
 .claude/skills/                   # Claude Code slash-command skills
@@ -148,7 +160,7 @@ scripts/                          # CLI tools (Node + Python)
   merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue (human merges only)
   weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
-  weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
+  weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild + sitemap resubmit + IndexNow
   gsc-report.yml                  # Manual — 90-day search performance report
   gsc-index-coverage.yml          # Manual — sitemap stats + per-URL index inspection
 
@@ -636,6 +648,7 @@ Run monthly when queue is low (or automatically — see below). `.claude/skills/
 | `RESEND_API_KEY` | weekly-draft | Send HTML review emails to admin@esquair.com + info@gadgetconstructionsf.com |
 | `NETLIFY_BUILD_HOOK_URL` | weekly-publish | Triggers Netlify rebuild on Monday 07:00 UTC |
 | `GSC_SERVICE_ACCOUNT_JSON_BASE64` | next-content-batch | Base64-encoded GCP service account JSON for Search Console API reads |
+| `GSC_PROPERTY_URL` | weekly-publish | Search Console property id for the sitemap resubmit — must be `sc-domain:gadgetconstructionsf.com` |
 | `GITHUB_TOKEN` | all workflows | Auto-provided by GitHub Actions for gh CLI (branch push, PR create) |
 
 ### Brief schema (`content/post-queue.json`)
@@ -738,6 +751,9 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Auto-merge contract** — leave a drafts/* PR open past Sunday 23:00 PT = implicit approval (Monday publish). Close PR = explicit rejection (brief stays `queued` on main, re-drafts next Friday). Do NOT leave PRs open with intent to revisit later unless you mean to ship them.
 - **FAQ rich results restricted to health/gov since 2023** — the `faqSchema()` still ships because it captures People Also Ask + LLM answer-engine citation (ChatGPT, Perplexity, Google AI Overviews), NOT because we expect the old FAQ rich result display. Keep generating FAQ blocks anyway.
 - **Internal linking target: 12-20 links per 2,500-word post** — the SEO critique pass enforces this. Briefs specify 3-5 required links; critique pass adds 8-15 more from the site inventory. Anchor text diversification: <25% exact-match. Top 30% of page gets at least 3 links.
+- **The IndexNow key file in `public/` must stay in sync with `scripts/submit-indexnow.ts`** — IndexNow verifies ownership by fetching `https://gadgetconstructionsf.com/<key>.txt` and matching its contents to the submitted key. Rename or delete that file and every submission silently fails. Google does not consume IndexNow at all; this is a Bing/Yandex accelerator only.
+- **Blog author is an `@id` reference, not an inline object** — `articleSchema()` emits `author: { "@id": OWNER_ID }`, and the full Person is defined once per page inside `localBusinessSchema().founder`. That resolves only because the LocalBusiness block renders on every page from the root layout. If a page ever drops it, its author reference dangles.
+- **`lib/blur-map.json` ships in the client bundle** — Hero, ServicesGrid, BeforeAfter, gallery, WhyChooseUs and ServicePageContent are client components, so importing `blurProps` pulls the whole ~28KB map into client JS. That cost is paid once (shared chunk) as soon as any client component uses it, so wiring the remaining images is free. If it ever needs trimming, pass `blurDataURL` down from server parents instead.
 - **A `GITHUB_TOKEN` push does NOT trigger push-triggered workflows** — GitHub suppresses it to prevent recursion. `auto-merge-proposals.yml` squash-merges the weekly proposal PR with the default token, so `merge-proposed-briefs.yml` (trigger: `push` on `content/proposed-briefs.json`) never fired for a bot merge. Six proposal PRs merged between 2026-05-15 and 2026-08-23 with zero briefs reaching the queue; `weekly-draft.yml` then logged "No queued posts remaining. Skipping draft generation." and exited **green** every Friday for eight weeks. Nothing alerted because every workflow reported success. Fixed by having `auto-merge-proposals.yml` run `scripts/migrate-proposed-briefs.mjs` inline after merging. Anywhere else in this repo where one workflow's push is meant to wake another, the same rule applies — do the work inline or use a PAT.
 - **`scheduledDate` on a brief becomes the post's publish date** — a brief whose date has already passed publishes the moment its draft PR merges, skipping the review window entirely. `migrate-proposed-briefs.mjs` reassigns consecutive Monday slots at least 6 days out at migration time, and `propose-next-batch.ts` clamps its date cursor to today.
 - **`generate-post.ts` has no refresh path** — a brief with `action: "refresh"` would be drafted as a brand-new post at `<original-slug>-refresh`, cannibalizing the page it was meant to update. `migrate-proposed-briefs.mjs` quarantines those into `content/refresh-briefs.json` instead of queueing them. Handle refreshes by editing the existing post in `lib/blog-data.ts`.

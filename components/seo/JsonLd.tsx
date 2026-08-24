@@ -1,3 +1,5 @@
+import { BUSINESS_ID, OWNER_ID, ownerPerson } from "@/lib/seo/entities";
+
 interface JsonLdProps {
   data: Record<string, unknown>;
 }
@@ -15,7 +17,11 @@ export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
+    "@id": BUSINESS_ID,
     name: "Gadget Construction Inc.",
+    // Full Person definition lives here, on every page. Blog posts then
+    // reference it by @id instead of restating a disconnected author name.
+    founder: ownerPerson,
     description:
       "San Francisco's trusted general contractor for 12+ years. Concrete foundations, remodels, decks, roofing & ADU construction. 500+ projects completed.",
     telephone: "+16507715817",
@@ -183,13 +189,13 @@ export function articleSchema(post: {
     description: post.description,
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
-    author: {
-      "@type": "Organization",
-      name: "Gadget Construction Inc.",
-      url: "https://gadgetconstructionsf.com",
-    },
+    // Reference the canonical owner entity by @id — the full Person is defined
+    // on the same page via localBusinessSchema.founder, so Google resolves the
+    // author to the business's owner rather than an orphan name.
+    author: { "@id": OWNER_ID },
     publisher: {
       "@type": "Organization",
+      "@id": BUSINESS_ID,
       name: "Gadget Construction Inc.",
       url: "https://gadgetconstructionsf.com",
       logo: {

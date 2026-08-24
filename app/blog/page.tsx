@@ -9,6 +9,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import PageHeader from "@/components/sections/PageHeader";
 import CTABlock from "@/components/sections/CTABlock";
+import { blurProps } from "@/lib/blur";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Blog | Insights & Guides for San Francisco Homeowners",
@@ -47,6 +48,7 @@ export default function BlogPage() {
                   {post.featuredImage ? (
                     <Image
                       src={post.featuredImage}
+                      {...blurProps(post.featuredImage)}
                       alt={post.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"

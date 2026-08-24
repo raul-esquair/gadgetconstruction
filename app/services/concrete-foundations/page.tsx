@@ -19,6 +19,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "concrete-foundations")!;
 const data = SERVICE_PAGES["concrete-foundations"];
@@ -61,6 +62,16 @@ export default function ConcreteFoundationsPage() {
       <ProcessSteps steps={data.process} heading="Our Foundation Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
       <ServiceGallery serviceName="Foundation" categorySlug="concrete-foundations" />
+
+      <ServiceGuides
+
+        serviceSlug="concrete-foundations"
+
+        heading="Foundation Planning Guides"
+
+        eyebrow="Before you dig"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

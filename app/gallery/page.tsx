@@ -13,6 +13,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import CTABlock from "@/components/sections/CTABlock";
 import { cn } from "@/lib/utils";
+import { blurProps } from "@/lib/blur";
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -66,6 +67,7 @@ export default function GalleryPage() {
                     {project.image ? (
                       <Image
                         src={project.image}
+                        {...blurProps(project.image)}
                         alt={`${project.title} — ${project.category} project in ${project.location} by Gadget Construction`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -75,6 +77,7 @@ export default function GalleryPage() {
                     ) : (
                       <Image
                         src="/images/logo.png"
+                        {...blurProps("/images/logo.png")}
                         alt={project.title}
                         fill
                         className="object-contain p-16 opacity-[0.06] group-hover:scale-105 transition-transform duration-700"

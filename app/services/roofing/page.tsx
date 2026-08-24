@@ -20,6 +20,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "roofing")!;
 const data = SERVICE_PAGES["roofing"];
@@ -82,6 +83,16 @@ export default function RoofingPage() {
           </div>
         </Container>
       </SectionWrapper>
+
+      <ServiceGuides
+
+        serviceSlug="roofing"
+
+        heading="Roofing Guides"
+
+        eyebrow="Before you re-roof"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

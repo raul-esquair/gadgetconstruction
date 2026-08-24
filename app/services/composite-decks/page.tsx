@@ -19,6 +19,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
 import CTABlock from "@/components/sections/CTABlock";
+import ServiceGuides from "@/components/sections/ServiceGuides";
 
 const service = SERVICES.find((s) => s.slug === "composite-decks")!;
 const data = SERVICE_PAGES["composite-decks"];
@@ -61,6 +62,16 @@ export default function CompositeDecksPage() {
       <ProcessSteps steps={data.process} heading="Our Deck Building Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
       <ServiceGallery serviceName="Composite Deck" categorySlug="composite-decks" />
+
+      <ServiceGuides
+
+        serviceSlug="composite-decks"
+
+        heading="Deck Planning Guides"
+
+        eyebrow="Before you build"
+
+      />
 
       <FAQSection faqs={data.faqs} background="light" />
       <CTABlock

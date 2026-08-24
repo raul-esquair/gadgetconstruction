@@ -8,6 +8,7 @@ import HeroCTA from "@/components/sections/HeroCTA";
 import Container from "@/components/ui/Container";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { blurProps } from "@/lib/blur";
 
 interface HeroProps {
   headline: string;
@@ -98,6 +99,7 @@ export default function Hero({
         <div ref={parallaxRef} className="absolute inset-0 will-change-transform md:scale-110">
           <Image
             src={backgroundImage}
+            {...blurProps(backgroundImage)}
             alt={imageAlt}
             fill
             className="object-cover animate-[ken-burns_20s_ease-in-out_infinite_alternate]"

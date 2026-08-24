@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-blur-map.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blur:gen": "node scripts/generate-blur-map.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -28,6 +30,8 @@
     "googleapis": "^171.4.0",
     "marked": "^18.0.2",
     "openai": "^6.34.0",
+    "plaiceholder": "^3.0.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"

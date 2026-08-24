@@ -25,6 +25,7 @@ import LpHero from "@/components/lp/LpHero";
 import LpTrustStrip from "@/components/lp/LpTrustStrip";
 import LpFooter from "@/components/lp/LpFooter";
 import LpFinalCTA from "@/components/lp/LpFinalCTA";
+import { blurProps } from "@/lib/blur";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Dry Rot Repair — Bay Area Specialists | Free Inspection",
@@ -272,6 +273,7 @@ export default function DryRotRepairLpPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/dry-rot-wide-before.jpg"
+                  {...blurProps("/images/dry-rot-wide-before.jpg")}
                   alt="Bay window header beam fully rotted and exposed during stucco demolition — full extent of structural water damage visible across the wall"
                   fill
                   className="object-cover"
@@ -289,6 +291,7 @@ export default function DryRotRepairLpPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/dry-rot-wide-after.jpg"
+                  {...blurProps("/images/dry-rot-wide-after.jpg")}
                   alt="Bay window header beam rebuilt with new pressure-treated lumber, wall containment installed, ready for stucco closure"
                   fill
                   className="object-cover"
@@ -306,6 +309,7 @@ export default function DryRotRepairLpPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/dry-rot-before.jpg"
+                  {...blurProps("/images/dry-rot-before.jpg")}
                   alt="Close-up of rotted bay window joists exposed during demolition — debris, water damage, and decayed framing visible inside the structural cavity"
                   fill
                   className="object-cover"
@@ -323,6 +327,7 @@ export default function DryRotRepairLpPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/dry-rot-after.jpg"
+                  {...blurProps("/images/dry-rot-after.jpg")}
                   alt="New sister-joist framing installed and new dual-pane window in place — clean carpentry detail ready for sheathing and stucco closure"
                   fill
                   className="object-cover"

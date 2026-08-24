@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { FOUNDER_STORY } from "@/lib/about-data";
+import { blurProps } from "@/lib/blur";
 
 export default function FounderStory() {
   return (
@@ -11,6 +12,7 @@ export default function FounderStory() {
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
             <Image
               src={FOUNDER_STORY.image.src}
+              {...blurProps(FOUNDER_STORY.image.src)}
               alt={FOUNDER_STORY.image.alt}
               fill
               className="object-cover"

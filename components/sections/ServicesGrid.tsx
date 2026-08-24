@@ -10,6 +10,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import { SERVICES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { blurProps } from "@/lib/blur";
 
 // Bento layout: first 2 services are large (high-value), rest are compact
 const BENTO_LAYOUT = [
@@ -118,6 +119,7 @@ export default function ServicesGrid() {
                   <div className="absolute inset-0 bg-neutral-200">
                     <Image
                       src={service.image}
+                      {...blurProps(service.image)}
                       alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                       fill
                       sizes="100vw"
@@ -177,6 +179,7 @@ export default function ServicesGrid() {
                     <div className="absolute inset-0 bg-neutral-200">
                       <Image
                         src={service.image}
+                        {...blurProps(service.image)}
                         alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 640px"
@@ -217,6 +220,7 @@ export default function ServicesGrid() {
                   <div className="absolute inset-0 bg-neutral-100">
                     <Image
                       src={service.image}
+                      {...blurProps(service.image)}
                       alt={SERVICE_IMAGE_ALT[service.slug] || service.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"

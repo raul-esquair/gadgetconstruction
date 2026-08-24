@@ -7,6 +7,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import { DIFFERENTIATORS } from "@/lib/constants";
 import type { Differentiator } from "@/lib/types";
+import { blurProps } from "@/lib/blur";
 
 interface WhyChooseUsProps {
   items?: Differentiator[];
@@ -23,6 +24,7 @@ export default function WhyChooseUs({
     <section className="relative py-12 md:py-20 overflow-hidden">
       <Image
         src={backgroundImage}
+        {...blurProps(backgroundImage)}
         alt=""
         fill
         className="object-cover"
