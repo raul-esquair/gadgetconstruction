@@ -122,14 +122,19 @@ async function main(): Promise<void> {
     gscReport = { newSite: true, error: msg };
   }
 
-  // 3. Figure out next scheduled date (Monday after last queued/scheduled brief)
-  const lastDate =
+  // 3. Figure out next scheduled date (Monday after last queued/scheduled brief).
+  // Clamped to today so a stalled queue can't produce briefs dated in the past —
+  // scheduledDate becomes the post's publish date, and a past date publishes the
+  // instant the draft merges. (The 2026-07 batch was re-proposed six times with
+  // dates that kept receding into the past because the queue never advanced.)
+  const lastQueuedDate =
     queue.length > 0
       ? queue
           .map((b: { scheduledDate: string }) => b.scheduledDate)
           .sort()
           .at(-1)!
       : todayIso();
+  const lastDate = lastQueuedDate > todayIso() ? lastQueuedDate : todayIso();
 
   const scheduledDates: string[] = [];
   let cursor = lastDate;

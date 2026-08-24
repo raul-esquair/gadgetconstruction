@@ -1,0 +1,131 @@
+[
+  {
+    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area-refresh",
+    "scheduledDate": "2026-07-06",
+    "status": "planned",
+    "action": "refresh",
+    "refreshesSlug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes (2026 Update)",
+    "metaTitle": "Stucco vs Hardie Board vs Wood Siding: Bay Area Guide (2026)",
+    "excerpt": "Fog, salt air, and WUI fire zones make Bay Area siding decisions unlike anywhere else. Updated 2026 comparison of stucco, Hardie board, and wood siding — with failure patterns from 500+ projects.",
+    "primaryKeyword": "stucco vs hardie board",
+    "secondaryKeywords": [
+      "hardie board vs wood siding bay area",
+      "fiber cement vs stucco",
+      "best siding bay area",
+      "james hardie vs stucco california"
+    ],
+    "relatedService": "exterior-repairs",
+    "targetWordCount": 2800,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Mill Valley",
+      "Oakland Hills",
+      "Berkeley Hills",
+      "Pacifica",
+      "Palo Alto",
+      "Daly City"
+    ],
+    "proposalRationale": "GSC shows this post pulled 346 impressions (highest of any blog page) but only 2 clicks — 0.58% CTR at avg position 10.3. That's a title/meta/snippet problem, not a ranking problem. Post is on the cusp of page 1 for a competitive query but the current title reads like a comparison catalog. A refresh with (a) sharper title/meta targeting AI-Overview snippet extraction, (b) added FAQ block hitting AI-engine queries, (c) explicit entity definitions (WUI, Class A, EIFS, three-coat), and (d) a stat-callout section with standalone quotable sentences should double CTR and push into top 5. Highest-leverage single action in the batch.",
+    "outline": [
+      {
+        "h2": "The Short Answer (2026)",
+        "notes": "Rewrite existing opener with tighter direct-answer framing. Lead with: 'For most Bay Area homes in 2026, James Hardie fiber cement is the right choice — it's Class A fire-rated, handles fog and salt air, and installs across nearly every architectural style.' Then 2 sentences of nuance (stucco for Doelger/Spanish/Mediterranean; wood for period restoration and Eichlers)."
+      },
+      {
+        "h2": "Why Is Bay Area Siding Different From the Rest of California?",
+        "notes": "Question-form H2 for LLM passage matching. Cover the 4 environmental attackers (fog, salt, wind-driven rain, WUI fire exposure). Add stat callout: 'Bay Area coastal homes see paint failure in 5–8 years versus 12–15 years for inland California homes.'"
+      },
+      {
+        "h2": "How Does Three-Coat Stucco Perform in the Bay Area?",
+        "h3": [
+          "How Traditional Three-Coat Stucco Works",
+          "Where Stucco Wins (Doelgers, Spanish Revival, Mediterranean)",
+          "Where Stucco Fails (Coastal Without Proper WRB Detail)",
+          "Installed Cost 2026: $7–$14 per sq ft"
+        ],
+        "notes": "Keep existing content but tighten. Add entity definition: 'Three-coat stucco is a cement-based wall cladding applied in three layers — scratch coat, brown coat, and finish coat — over metal lath and a weather-resistive barrier.' Reference Doelger stucco-over-shiplap failure pattern."
+      },
+      {
+        "h2": "Is James Hardie Fiber Cement Worth the Premium?",
+        "h3": [
+          "What Hardie Board Is (Portland Cement + Silica + Cellulose Fiber)",
+          "Class A Fire Rating and WUI Zone Compliance",
+          "Coastal Performance With Stainless Fasteners",
+          "Installed Cost 2026: $14–$22 per sq ft"
+        ],
+        "notes": "Entity definition: 'James Hardie fiber cement siding is a composite cladding made from Portland cement, silica sand, and cellulose fibers, engineered for a 30-year substrate warranty and 15-year ColorPlus finish warranty.' Cite Cal Fire Chapter 7A for WUI compliance."
+      },
+      {
+        "h2": "When Does Wood Siding Still Make Sense?",
+        "h3": [
+          "Cedar and Redwood Clapboard (Victorians)",
+          "T1-11 Plywood (Eichler Architectural Authenticity)",
+          "Cedar Shake and Shingle (Craftsman, Berkeley Brown-Shingles)",
+          "Installed Cost 2026 by Type"
+        ],
+        "notes": "Add explicit line: 'On Eichler tract homes in Green Gables, Fairmeadow, Felton Gables, and Fairglen, T1-11 plywood siding is the only siding material that preserves the architectural authenticity of Joseph Eichler's original design.'"
+      },
+      {
+        "h2": "Side-by-Side Comparison Table (2026 Pricing)",
+        "notes": "Keep and update table. Columns: Material, Installed Cost/sq ft, 30-Year Maintenance, Fire Rating, Best Fit, Bay Area Score."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "NEW section. FAQ formatted with question H3s. Answer questions phrased how homeowners actually type them into ChatGPT/Perplexity."
+      },
+      {
+        "h2": "Ready to Choose Siding for Your Bay Area Home?",
+        "notes": "Tighten existing CTA. Specify what free assessment includes: written material recommendation, per-sq-ft estimate, dry rot allowance."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions using the vernacular Bay Area homeowners actually type into ChatGPT/Perplexity/Google AI Overviews: 'Is Hardie board worth it in San Francisco?', 'Can I install Hardie board over old stucco?', 'What siding is required in a WUI fire zone in Marin?', 'How long does stucco last on a Doelger home in the Sunset?', 'Is T1-11 still available for Eichler restoration?', 'What's cheaper — re-stucco or Hardie replacement?', 'Do I need a permit to replace siding in San Francisco?'",
+      "Define WUI on first use as a standalone quotable sentence: 'A Wildland-Urban Interface (WUI) zone is a state-designated fire-hazard area — including most of Marin County, the Oakland and Berkeley Hills, and Peninsula hills above 500 feet — where California Building Code Chapter 7A requires non-combustible or ignition-resistant exterior materials.'",
+      "Define Class A fire rating as a standalone sentence: 'A Class A fire rating is the highest exterior wall covering rating under ASTM E84, indicating the material resists flame spread and is code-compliant for WUI zones.'",
+      "Define three-coat stucco as a standalone sentence (see outline).",
+      "Define James Hardie ColorPlus finish as a standalone sentence with warranty term.",
+      "Reference California Building Code Chapter 7A by name for WUI compliance.",
+      "Reference SF Department of Building Inspection (DBI) by name for permit thresholds.",
+      "Reference ASTM E84 standard for fire rating.",
+      "Stat callout as standalone sentence: 'James Hardie fiber cement siding costs $14–$22 per square foot installed in the Bay Area in 2026, roughly 40% more than three-coat stucco but with a 30-year substrate warranty.'",
+      "Stat callout as standalone sentence: 'Bay Area coastal homes experience exterior paint failure in 5–8 years, roughly half the lifespan of paint on inland California homes.'",
+      "Stat callout as standalone sentence: 'A full-house re-stucco on a 2,000 sq ft San Francisco rowhouse costs $15,000–$35,000 in 2026, including three-coat system, new weather-resistive barrier, and DBI permits.'",
+      "Brand-entity stacking: mention 'Gadget Construction' in factual context at least 3 times paired with named neighborhoods and services — e.g., 'Gadget Construction installs James Hardie siding across the SF Sunset, Pacifica's Linda Mar, and Mill Valley's WUI fire zones.'",
+      "Doelger stucco-over-shiplap failure pattern with SF Sunset/Westlake specificity.",
+      "Eichler T1-11 architectural authenticity requirement with named tracts.",
+      "Pacifica salt air and stainless fastener requirement."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Dismissing stucco as 'outdated' (it's correct for many SF homes).",
+      "Claiming Hardie is perfect (it dents, it's heavy, it's contractor-sensitive).",
+      "Ignoring architectural context.",
+      "Generic 'siding options' language that could apply to any state."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area siding and stucco repair"
+      },
+      {
+        "url": "/blog/siding-replacement-cost-san-francisco-2026",
+        "anchor": "full siding replacement cost breakdown"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "when to patch, re-coat, or tear off stucco"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "Mill Valley WUI fire zone siding"
+      },
+      {
+        "url": "/service-areas/palo-alto",
+        "anchor": "Eichler homes in Palo Alto"
+      }
+    ],
+    "cta": "Choosing siding for your Bay Area home? Gadget Construction installs James Hardie, three-coat stucco, and wood siding across 31 cities. Free on-site assessment includes written material recommendation, per-sq-ft estimate, and dry rot allowance — no vague ranges."
+  }
+]
