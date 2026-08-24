@@ -111,7 +111,7 @@ we don't re-derive them every session:
 
 - **Google Ads Conversion ID:** `AW-16885734093`
 - **LP Form Submission `send_to`:** `AW-16885734093/jV9TCOXkkqAcEM213_M-`
-- **Real business phone:** (650) 771-5817 (CallRail DNI swaps the display)
+- **Real business phone:** (628) 233-3589 (changed 2026-08-24; CallRail DNI swaps the display)
 - **CA License:** #1132983
 - **Avg lead value:** $1,500 (used at conversion-action level for Smart Bidding)
 - **Domain:** gadgetconstructionsf.com
