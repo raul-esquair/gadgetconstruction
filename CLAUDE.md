@@ -123,6 +123,7 @@ hooks/
 content/                          # Editorial pipeline data (not shipped to production)
   post-queue.json                 # 10 briefs (status: queued → drafted → published)
   proposed-briefs.json            # Staging from /next-content-batch (normally [])
+  refresh-briefs.json             # Refresh briefs parked for manual handling (drafter can't do in-place refreshes)
   proposed-briefs-summary.md      # Human-readable proposal summary
   site-inventory.json             # Auto-generated, 48 URLs for internal linking
   style-reference.md              # Voice guide for AI drafting passes
@@ -144,7 +145,7 @@ scripts/                          # CLI tools (Node + Python)
 .github/workflows/                # Automation
   auto-propose-batch.yml          # Tue 16:00 UTC — propose next batch if queue is low
   auto-merge-proposals.yml        # Fri 07:00 UTC — auto-merge pending proposal PRs
-  merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue
+  merge-proposed-briefs.yml       # On proposed-briefs.json change — migrate to queue (human merges only)
   weekly-draft.yml                # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml           # Sun 23:00 PT — auto-merge pending drafts
   weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild
@@ -535,7 +536,7 @@ These were research-backed decisions — don't revert without reason:
 - **Draft email delivery** — PR creation also sends an HTML email via Resend to `DRAFT_REVIEW_EMAILS` (currently `admin@esquair.com` and `info@gadgetconstructionsf.com`) from `estimates@gadgetconstructionsf.com`. Email includes: featured image rendered inline (via GitHub raw URL) AND attached as a real PNG file, metadata card, rendered markdown body, CTA button to PR.
 - **Auto-merge safety net** — `auto-merge-drafts.yml` fires Sunday 23:00 PT (Monday 07:00 UTC), squash-merges any still-open `drafts/*` PR so posts land on main before the Monday publish rebuild. Contract: leave PR open = implicit approval, close PR = explicit rejection, edit PR = still auto-merges.
 - **Monthly client doc skill** — `/monthly-seo-doc` invokes `.claude/skills/monthly-seo-doc/generate.py` (python-docx). Auto-detects the next 4 unpublished briefs, writes custom client rationale + target audience per post, produces `Gadget-Construction-SEO-Month-N.docx`. Filename pattern ignored by .gitignore (regenerable via skill).
-- **Content batch proposal skill** — `/next-content-batch` invokes `scripts/propose-next-batch.ts`. Pulls 90 days of Google Search Console data, reads existing queue + published posts + services + cities + Google Ads keyword plan, calls Claude Opus 4.7 to propose 4 new briefs (mix of new posts and refreshes if GSC data supports). Writes to `content/proposed-briefs.json` + summary, opens PR for review. On merge, `merge-proposed-briefs.yml` workflow detects the file change and migrates briefs into `post-queue.json` with `status: "queued"`. Cost: ~$0.50-$1.50 per batch.
+- **Content batch proposal skill** — `/next-content-batch` invokes `scripts/propose-next-batch.ts`. Pulls 90 days of Google Search Console data, reads existing queue + published posts + services + cities + Google Ads keyword plan, calls Claude Opus 4.7 to propose 4 new briefs (mix of new posts and refreshes if GSC data supports). Writes to `content/proposed-briefs.json` + summary, opens PR for review. On merge, the briefs migrate into `post-queue.json` with `status: "queued"` via `scripts/migrate-proposed-briefs.mjs` — called by `merge-proposed-briefs.yml` for a human merge, or inline by `auto-merge-proposals.yml` for a bot merge. Cost: ~$0.50-$1.50 per batch.
 - **10-post SEO content plan locked** — `content/post-queue.json` contains 10 detailed briefs for Weeks 1-10 (2026-04-27 through 2026-06-29). Primary focus: composite decks (4 posts), exterior repairs (4 posts), foundation underpinning (1 post), coastal cluster hub (1 post). Geographic mix per Option B: SF-anchored + Bay Area-wide + hyper-local. All briefs have complete outline, keywords, internal links, must-includes, CTA.
 - **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
@@ -577,8 +578,8 @@ Complete end-to-end pipeline for AI-generated blog posts. Runs on GitHub Actions
 Tuesday  16:00 UTC  (~9am PDT)  → auto-propose-batch.yml    — if queue runway ≤ 4, AI proposes 4 new briefs, opens proposal PR, emails
 Tue-Thu                          → human review window for  — edit, merge, or close the proposal PR
                                     proposal PR (optional)
-Friday   07:00 UTC  (~11pm Thu) → auto-merge-proposals.yml  — squash-merges any still-open proposals/* PR
-                                    → merge triggers merge-proposed-briefs.yml → briefs migrate to post-queue.json
+Friday   07:00 UTC  (~11pm Thu) → auto-merge-proposals.yml  — squash-merges any still-open proposals/* PR,
+                                    then runs the migration itself → briefs land in post-queue.json as "queued"
 Friday   16:00 UTC  (~9am PDT)  → weekly-draft.yml          — AI drafts next queued post, opens draft PR, emails review copy
 Fri-Sun                          → human review window for   — edit, merge, or close the draft PR
                                     draft PR (optional)
@@ -620,7 +621,7 @@ Run monthly before client meetings. `.claude/skills/monthly-seo-doc/` contains `
 
 ### The /next-content-batch skill
 
-Run monthly when queue is low (or automatically — see below). `.claude/skills/next-content-batch/SKILL.md` + `scripts/propose-next-batch.ts`. Pulls 90 days of GSC data via service-account auth, combines with post-queue + published posts + services + ads plan, calls Claude Opus 4.7 (default — override with `MODEL=claude-sonnet-4-6`) to propose 4 briefs. Opens `proposals/content-batch-<date>` PR. On merge, `merge-proposed-briefs.yml` migrates briefs from `content/proposed-briefs.json` into `content/post-queue.json`.
+Run monthly when queue is low (or automatically — see below). `.claude/skills/next-content-batch/SKILL.md` + `scripts/propose-next-batch.ts`. Pulls 90 days of GSC data via service-account auth, combines with post-queue + published posts + services + ads plan, calls Claude Opus 4.7 (default — override with `MODEL=claude-sonnet-4-6`) to propose 4 briefs. Opens `proposals/content-batch-<date>` PR. On merge, `scripts/migrate-proposed-briefs.mjs` migrates briefs from `content/proposed-briefs.json` into `content/post-queue.json`. Scheduled dates are clamped to today, so a stalled queue can't emit briefs dated in the past.
 
 ### Auto-trigger proposal when queue is low
 
@@ -659,6 +660,7 @@ Editing published-post status back to "queued" triggers a regeneration on next F
 content/
   post-queue.json              # 10 briefs, manually edited or via /next-content-batch
   proposed-briefs.json         # staging for /next-content-batch output (normally empty [])
+  refresh-briefs.json          # refresh briefs held back from the queue for manual handling
   proposed-briefs-summary.md   # human-readable summary for the proposal PR
   site-inventory.json          # auto-generated list of 48 linkable URLs
   style-reference.md           # voice guide loaded by the drafting passes
@@ -668,6 +670,7 @@ scripts/
   build-site-inventory.ts      # rebuilds site-inventory.json from repo state
   fetch-gsc-data.ts            # Search Console API client
   propose-next-batch.ts        # /next-content-batch implementation
+  migrate-proposed-briefs.mjs  # proposed-briefs.json → post-queue.json (shared by both merge paths)
   generate-month1-doc.py       # reference impl for month-1 client doc (superseded by skill)
 
 .claude/skills/
@@ -678,7 +681,7 @@ scripts/
   weekly-draft.yml             # Fri 16:00 UTC — AI draft + PR + email
   auto-merge-drafts.yml        # Sun 23:00 PT — merge any open drafts/* PR
   weekly-publish.yml           # Mon 14:00 UTC — Netlify rebuild
-  merge-proposed-briefs.yml    # on push to proposed-briefs.json — migrate to queue
+  merge-proposed-briefs.yml    # on push to proposed-briefs.json — migrate to queue (human merges only)
 ```
 
 ### GSC diagnostic tooling
@@ -735,6 +738,9 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Auto-merge contract** — leave a drafts/* PR open past Sunday 23:00 PT = implicit approval (Monday publish). Close PR = explicit rejection (brief stays `queued` on main, re-drafts next Friday). Do NOT leave PRs open with intent to revisit later unless you mean to ship them.
 - **FAQ rich results restricted to health/gov since 2023** — the `faqSchema()` still ships because it captures People Also Ask + LLM answer-engine citation (ChatGPT, Perplexity, Google AI Overviews), NOT because we expect the old FAQ rich result display. Keep generating FAQ blocks anyway.
 - **Internal linking target: 12-20 links per 2,500-word post** — the SEO critique pass enforces this. Briefs specify 3-5 required links; critique pass adds 8-15 more from the site inventory. Anchor text diversification: <25% exact-match. Top 30% of page gets at least 3 links.
+- **A `GITHUB_TOKEN` push does NOT trigger push-triggered workflows** — GitHub suppresses it to prevent recursion. `auto-merge-proposals.yml` squash-merges the weekly proposal PR with the default token, so `merge-proposed-briefs.yml` (trigger: `push` on `content/proposed-briefs.json`) never fired for a bot merge. Six proposal PRs merged between 2026-05-15 and 2026-08-23 with zero briefs reaching the queue; `weekly-draft.yml` then logged "No queued posts remaining. Skipping draft generation." and exited **green** every Friday for eight weeks. Nothing alerted because every workflow reported success. Fixed by having `auto-merge-proposals.yml` run `scripts/migrate-proposed-briefs.mjs` inline after merging. Anywhere else in this repo where one workflow's push is meant to wake another, the same rule applies — do the work inline or use a PAT.
+- **`scheduledDate` on a brief becomes the post's publish date** — a brief whose date has already passed publishes the moment its draft PR merges, skipping the review window entirely. `migrate-proposed-briefs.mjs` reassigns consecutive Monday slots at least 6 days out at migration time, and `propose-next-batch.ts` clamps its date cursor to today.
+- **`generate-post.ts` has no refresh path** — a brief with `action: "refresh"` would be drafted as a brand-new post at `<original-slug>-refresh`, cannibalizing the page it was meant to update. `migrate-proposed-briefs.mjs` quarantines those into `content/refresh-briefs.json` instead of queueing them. Handle refreshes by editing the existing post in `lib/blog-data.ts`.
 - **Do NOT edit `content/proposed-briefs.json` on main manually** — the `merge-proposed-briefs.yml` workflow watches it and will try to migrate whatever's there into the queue. Edit only through `/next-content-batch` PRs.
 - **`featuredImage` field is required for blog hero to render correctly** — the Friday pipeline auto-populates it. Manually-added posts need it too, or the `app/blog/[slug]/page.tsx` hero falls back to text-only.
 - **GSC property is a Domain property — siteUrl must be `sc-domain:gadgetconstructionsf.com`** — NOT `https://gadgetconstructionsf.com/`. Using the URL-prefix form returns 403 "User does not have sufficient permission for site" even when the service account is added with Full permission on the actual property. The 403 message is misleading; it really means "this exact URL is not a property the SA can access." If you see that error, run `searchconsole.sites.list()` first to confirm what the SA actually has — for this project it's only the Domain form. The service account is `seo-proposal-bot@gadget-construction-seo.iam.gserviceaccount.com` in GCP project `gadget-construction-seo` (`172973380457`). Search Console API must be enabled on that GCP project — that's a separate prerequisite from the SA having Search Console permission.

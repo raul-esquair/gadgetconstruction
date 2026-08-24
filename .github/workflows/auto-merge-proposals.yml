@@ -2,9 +2,15 @@ name: Auto-merge open content proposal PRs
 
 # Safety net that closes the content-planning loop. If the proposal PR opened
 # by auto-propose-batch.yml on Tuesday still hasn't been merged by Thursday
-# night, this workflow auto-merges it. That triggers merge-proposed-briefs.yml
-# to migrate the briefs into post-queue.json so the Friday draft automation
-# sees them.
+# night, this workflow auto-merges it and then migrates the briefs into
+# post-queue.json itself, so the Friday draft automation sees them.
+#
+# It migrates inline rather than leaning on merge-proposed-briefs.yml: pushes
+# made with the default GITHUB_TOKEN do not fire push-triggered workflows, so
+# that workflow never ran for a bot merge. Six proposal PRs merged between
+# 2026-05-15 and 2026-08-23 without a single brief reaching the queue, which
+# starved weekly-draft.yml for eight weeks while every run still reported
+# success. Both paths now call scripts/migrate-proposed-briefs.mjs.
 #
 # Contract:
 #   - Leave proposal PR open → implicit approval → auto-merges Thursday night
@@ -13,8 +19,7 @@ name: Auto-merge open content proposal PRs
 #
 # Full weekly cadence (fully automated):
 #   Tue 16:00 UTC  → auto-propose-batch.yml      (opens proposal PR if queue low)
-#   Fri 07:00 UTC  → auto-merge-proposals.yml    (this workflow, merges pending proposal)
-#   Fri 07:01 UTC  → merge-proposed-briefs.yml   (triggered on push — migrates to queue)
+#   Fri 07:00 UTC  → auto-merge-proposals.yml    (this workflow — merges pending proposal AND migrates to queue)
 #   Fri 16:00 UTC  → weekly-draft.yml            (generates draft from fresh queue)
 #   Sun 23:00 PT   → auto-merge-drafts.yml       (merges pending draft PR)
 #   Mon 14:00 UTC  → weekly-publish.yml          (Netlify rebuild — post goes live)
@@ -35,6 +40,11 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
       - name: Find and merge open proposal PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -75,7 +85,7 @@ jobs:
 
           gh pr comment "$first_pr" --repo raul-esquair/gadgetconstruction --body "⏰ **Auto-merged**
 
-          This proposal was still open at the Thursday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The briefs will migrate into \`post-queue.json\` via \`merge-proposed-briefs.yml\`, and the Friday 9am PT draft automation will then pick up the next one.
+          This proposal was still open at the Thursday 11pm PT deadline, so it's being auto-merged per the default-approve pipeline policy. The briefs will migrate into \`post-queue.json\` in the next step of this same workflow run, and the Friday 9am PT draft automation will then pick up the next one.
 
           If this was a mistake:
           - Revert the merge commit on \`main\` within the next few hours (before Friday 9am PT draft fires)
@@ -96,3 +106,23 @@ jobs:
 
           echo ""
           echo "Auto-merge pass complete."
+
+      - name: Migrate merged briefs into the queue
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          node scripts/migrate-proposed-briefs.mjs
+
+      - name: Commit + push migrated queue
+        run: |
+          git config user.email "noreply@gadgetconstructionsf.com"
+          git config user.name "Gadget Construction Bot"
+          git add content/post-queue.json content/proposed-briefs.json content/refresh-briefs.json
+          if git diff --cached --quiet; then
+            echo "Nothing to migrate — queue unchanged."
+            exit 0
+          fi
+          git commit \
+            -m "Migrate proposed briefs into content queue" \
+            -m "Automated migration following the auto-merge of the weekly proposal PR. Briefs are now in post-queue.json with status=queued for the Friday draft run."
+          git push
