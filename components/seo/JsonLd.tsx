@@ -24,7 +24,7 @@ export function localBusinessSchema() {
     founder: ownerPerson,
     description:
       "San Francisco's trusted general contractor for 12+ years. Concrete foundations, remodels, decks, roofing & ADU construction. 500+ projects completed.",
-    telephone: "+16507715817",
+    telephone: "+16282333589",
     url: "https://gadgetconstructionsf.com",
     areaServed: [
       {
@@ -109,7 +109,7 @@ export function serviceSchema(
     provider: {
       "@type": "GeneralContractor",
       name: "Gadget Construction Inc.",
-      telephone: "+16507715817",
+      telephone: "+16282333589",
       url: "https://gadgetconstructionsf.com",
     },
     areaServed: {
@@ -145,7 +145,7 @@ export function multiServiceGraphSchema(params: {
       provider: {
         "@type": "GeneralContractor",
         name: "Gadget Construction Inc.",
-        telephone: "+16507715817",
+        telephone: "+16282333589",
         url: "https://gadgetconstructionsf.com",
       },
       areaServed: [
