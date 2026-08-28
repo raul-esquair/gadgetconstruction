@@ -159,6 +159,11 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
       trigger instanceof HTMLElement
         ? trigger
         : (document.activeElement as HTMLElement | null);
+    // Always start from a clean offset — a dismiss-by-drag can leave a spring
+    // mid-flight, and the sheet must never open anywhere but centred.
+    dragSpring.current?.stop();
+    dragSpring.current = null;
+    dragY.current = 0;
     setIsPresent(true);
     setIsOpen(true);
     setHasOpened(true);
@@ -184,6 +189,12 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
       onComplete: () => {
         openSpring.current = null;
         if (!isOpen) {
+          // The dismiss drag spring is still running here: it targets the panel
+          // height and has a longer response than the open spring, so without
+          // this it would overwrite dragY *after* the reset and leave the sheet
+          // parked one panel-height down for the next open.
+          dragSpring.current?.stop();
+          dragSpring.current = null;
           dragY.current = 0;
           setIsPresent(false);
         }
