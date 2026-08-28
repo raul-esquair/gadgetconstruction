@@ -38,3 +38,15 @@ export function getBookingUrgency(): string {
 
   return `Limited availability — currently booking for ${season} ${bookingYear}`;
 }
+
+/**
+ * Viewers who opt out of transparency get solid surfaces instead of blurred
+ * ones. Read at paint time rather than cached — the setting can change mid-session.
+ */
+export function prefersReducedTransparency(): boolean {
+  if (typeof window === "undefined") return false;
+  return (
+    window.matchMedia("(prefers-reduced-transparency: reduce)").matches ||
+    window.matchMedia("(prefers-contrast: more)").matches
+  );
+}

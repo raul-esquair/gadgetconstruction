@@ -40,7 +40,7 @@ export default function FAQSection({
             <div
               key={index}
               className={cn(
-                "border border-neutral-200 rounded-xl overflow-hidden will-change-[opacity,transform] transition-all duration-500",
+                "border border-neutral-200 rounded-xl overflow-hidden will-change-[opacity,transform] transition-[opacity,transform] duration-500",
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               )}
               style={{
@@ -66,11 +66,14 @@ export default function FAQSection({
               </button>
               <div
                 className={cn(
-                  "overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]",
-                  openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  // grid-rows 0fr->1fr animates to the answer's real height. A
+                  // max-h cap transitions the cap, not the content: it snaps then
+                  // lingers, and silently clips any answer taller than the cap.
+                  "grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]",
+                  openIndex === index ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                 )}
               >
-                <div className="px-5 pb-5 text-secondary text-sm leading-relaxed">
+                <div className="min-h-0 overflow-hidden px-5 pb-5 text-secondary text-sm leading-relaxed">
                   {faq.answer}
                 </div>
               </div>

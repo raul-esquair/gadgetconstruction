@@ -97,9 +97,25 @@ export default function Header() {
           ? "bg-white shadow-none"
           : isTransparent
           ? "bg-transparent shadow-none"
-          : "bg-white shadow-header border-b border-neutral-200/50"
+          : cn(
+              "shadow-header",
+              // Solid by default; translucent only where the browser can
+              // actually blur, and solid again if the viewer asked for
+              // reduced transparency or more contrast.
+              "bg-white supports-[backdrop-filter]:bg-white/80 supports-[backdrop-filter]:backdrop-blur-xl supports-[backdrop-filter]:backdrop-saturate-150",
+              "[@media(prefers-reduced-transparency:reduce)]:bg-white [@media(prefers-reduced-transparency:reduce)]:backdrop-filter-none",
+              "[@media(prefers-contrast:more)]:bg-white [@media(prefers-contrast:more)]:border-b [@media(prefers-contrast:more)]:border-neutral-500"
+            )
       )}
     >
+      {/* Scroll edge — a soft fade where content passes under the bar, in
+          place of a hard divider. Only drawn when the bar is opaque chrome. */}
+      {!isTransparent && !isMobileMenuOpen && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-full h-6 bg-gradient-to-b from-black/[0.06] to-transparent"
+        />
+      )}
       <Container>
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
@@ -235,16 +251,16 @@ export default function Header() {
       {/* Desktop Services Panel — megamenu with thumbnails */}
       <div
         className={cn(
-          "hidden lg:block overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "hidden lg:grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
           isTransparent
-            ? "border-t border-white/10 bg-primary/40 backdrop-blur-md"
+            ? "border-t border-white/10 bg-primary/40 backdrop-blur-md [@media(prefers-reduced-transparency:reduce)]:bg-primary [@media(prefers-reduced-transparency:reduce)]:backdrop-filter-none"
             : "border-t border-neutral-100 bg-white shadow-lg",
-          isServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isServicesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         )}
         onMouseEnter={openServices}
         onMouseLeave={closeServices}
       >
-        <Container>
+        <Container className="min-h-0 overflow-hidden">
           <div className="grid grid-cols-3 xl:grid-cols-4 gap-2 py-5">
             {SERVICES.map((service, svcIdx) => (
               <Link
@@ -362,11 +378,11 @@ export default function Header() {
                   </button>
                   <div
                     className={cn(
-                      "overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                      isServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                      "grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                      isServicesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                     )}
                   >
-                    <div className="pl-9 pb-3 space-y-0.5 border-l-2 border-accent-orange/20 ml-[3px]">
+                    <div className="min-h-0 overflow-hidden pl-9 pb-3 space-y-0.5 border-l-2 border-accent-orange/20 ml-[3px]">
                       {SERVICES.map((service, svcIndex) => (
                         <Link
                           key={service.slug}

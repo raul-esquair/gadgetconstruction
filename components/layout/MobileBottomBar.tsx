@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Phone, FileText } from "lucide-react";
 import { useEstimateModal } from "@/components/ui/EstimateModal";
@@ -11,6 +11,7 @@ export default function MobileBottomBar() {
   const pathname = usePathname();
   const { open } = useEstimateModal();
   const [isVisible, setIsVisible] = useState(false);
+  const estimateRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const heroCTAs = document.querySelector("[data-hero-cta]");
@@ -57,14 +58,15 @@ export default function MobileBottomBar() {
       <div className="grid grid-cols-2 divide-x divide-neutral-200">
         <a
           href={COMPANY.phoneHref}
-          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-primary font-heading active:bg-neutral-50 transition-colors"
+          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-primary font-heading active:bg-neutral-50 active:scale-[0.97] motion-reduce:active:scale-100 transition-[background-color,transform] duration-100 ease-out"
         >
           <Phone size={18} className="text-accent-orange" />
           Call Now
         </a>
         <button
-          onClick={open}
-          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-primary btn-concrete font-heading cursor-pointer"
+          ref={estimateRef}
+          onClick={() => open(estimateRef.current)}
+          className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-primary btn-concrete font-heading cursor-pointer transition-transform duration-100 ease-out active:scale-[0.97] motion-reduce:active:scale-100"
         >
           <FileText size={18} />
           Free Estimate

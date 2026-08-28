@@ -71,11 +71,11 @@ components/
     Card.tsx, Badge.tsx           # Basic UI elements
     FormField.tsx                 # Input/textarea/select with validation
     MultiStepForm.tsx             # 3-step progressive form with directional transitions (7 service options)
-    EstimateModal.tsx             # Context provider + modal + EstimateButton component
+    EstimateModal.tsx             # Context provider + spring-driven sheet (drag-to-dismiss) + EstimateButton
     AnimateOnScroll.tsx           # Binary scroll-trigger wrapper (uses useInView)
-    RevealOnScroll.tsx            # Scroll-POSITION-linked animation (proportional to scroll)
+    RevealOnScroll.tsx            # Scroll-POSITION-linked animation (subscribes to lib/scroll-driver)
     StatsCounter.tsx              # Animated count-up on scroll
-    BeforeAfter.tsx               # Draggable image comparison slider
+    BeforeAfter.tsx               # Draggable image comparison slider (pointer capture + momentum)
   sections/                       # Full-width page sections
     Hero.tsx                      # Hero with bg image, Ken Burns, stagger, parallax (desktop only), imageAlt prop for SEO
     HeroCTA.tsx                   # Client wrapper for modal trigger in server Hero
@@ -120,13 +120,17 @@ lib/                              # Data & utilities
   metadata.ts                     # generatePageMetadata() helper (supports ogType, publishedTime)
   seo/entities.ts                 # Canonical schema.org entity IDs + the owner Person object
   service-guides.ts               # Curated service slug → blog post slugs (internal linking)
+  spring.ts                       # Apple-style springs (damping/response), project(), rubberband(), VelocityTracker
+  scroll-driver.ts                # ONE shared scroll listener + rAF for the page, read/write batched
+  button-styles.ts                # Shared button base/variant/size classes (Button + EstimateButton)
   blur.ts                         # blurProps() helper for next/image placeholders
   blur-map.json                   # Auto-generated path → base64 blur lookup (npm run blur:gen)
-  utils.ts                        # cn() helper + getBookingUrgency() context-aware season text
+  utils.ts                        # cn() helper + getBookingUrgency() + prefersReducedTransparency()
   logo-base64.ts                  # White logo as base64 constant (used by OG image)
 
 hooks/
   useInView.ts                    # IntersectionObserver hook (binary trigger, fires once)
+  useReducedMotion.ts             # prefers-reduced-motion via useSyncExternalStore (tracks live changes)
 
 content/                          # Editorial pipeline data (not shipped to production)
   post-queue.json                 # 10 briefs (status: queued → drafted → published)
@@ -299,11 +303,12 @@ import { EstimateButton } from "@/components/ui/EstimateModal";
 
 The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all section CTAs.
 
-### Animation System (Three Layers)
+### Animation System (Four Layers)
 
 **Layer 1: Hero Stagger + Parallax (`Hero.tsx`)**
 - Hero is a client component with `useState` for load trigger
-- Elements stagger in on page load: urgency badge (0ms) → headline (150ms) → subheadline (350ms) → CTA (550ms) → trust line (700ms)
+- Entrance arms on a **double `requestAnimationFrame`, never a timer**. The `<h1>` is the LCP element and Chrome does not count an `opacity: 0` element as painted, so every ms of arming delay is a ms of LCP. A `setTimeout(100)` here previously cost ~100ms for nothing.
+- Elements stagger in on page load: urgency badge (0ms) → headline (60ms) → subheadline (160ms) → CTA (260ms) → trust line (360ms), each 700ms. Keep the cascade short for the same LCP reason.
 - Uses blur-to-sharp transition (`blur-[2px]` → `blur-0`) for cinematic feel
 - Hero background image has Ken Burns effect (`@keyframes ken-burns`, 20s cycle)
 - **Parallax** (desktop only, `md:` and up): background moves at 0.3x scroll speed via `requestAnimationFrame`. `scale(1.1)` buffer prevents edge reveal. Disabled on mobile to avoid image cutoff.
@@ -312,7 +317,8 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 
 **Layer 2: Scroll-Position-Linked (`RevealOnScroll.tsx`) — PRIMARY SYSTEM**
 - Animation progress is **proportional to scroll position**, not binary on/off
-- Uses `getBoundingClientRect()` on each scroll frame to calculate element's exact position
+- Subscribes to **`lib/scroll-driver.ts`** — one scroll listener and one rAF for the entire page. Each subscriber supplies a `measure()` (layout reads only) and an `apply()` (style writes only); the driver runs *every* subscriber's reads before *any* writes. Do not add a per-component `window.addEventListener("scroll", ...)`; 20 reveals each interleaving `getBoundingClientRect()` with a style write forced 20 layout recalcs per frame.
+- `measure()` returning `null` means "no write needed this frame" — it does NOT unsubscribe. Ending a subscription is always explicit.
 - Travel zone = **65% of viewport height** — element animates from bottom edge to just above center
 - Progress mapped through `easeOutExpo` curve for natural deceleration
 - **One-way only** — once progress hits 100%, element locks via `locked.current = true` and scroll listener disconnects. Scrolling back up does NOT reverse the animation.
@@ -324,17 +330,31 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - IntersectionObserver fires once → CSS transition plays
 - Used for: section headings, service area section, founder story
 
+**Layer 4: Springs (`lib/spring.ts`) — anything the user can touch**
+- CSS transitions and `@keyframes` cannot be grabbed and reversed mid-flight: they animate on a fixed schedule from a fixed start. Springs animate from the *current* value and carry velocity, which is what makes an animation interruptible.
+- Two parameters, per Apple: **damping** (1.0 = critically damped, no overshoot) and **response** (roughly seconds to target — NOT a duration; a spring has none). Presets: `SPRING_MOVE` (1.0/0.4), `SPRING_SHEET` (0.8/0.3), `SPRING_FLICK` (0.85/0.35).
+- **Bounce only when the gesture carried momentum.** Overshoot on a flicked card feels right; overshoot on a menu that just faded in looks cheap.
+- `springTo()` returns a handle whose `stop()` reports live **value and velocity** — re-target by starting a new spring from both, never from the logical target, or you get a visible jump and a velocity "brick wall".
+- `project(velocity)` gives the resting point of a flick (iOS deceleration, exponential-decay form — *not* the textbook `v²/2a`). Pick the snap target from the projection, then hand the release velocity to the spring, so there is no seam between dragging and animating.
+- `VelocityTracker` keeps a ~100ms position history; older samples make a flick read as a slow drag.
+- Used by: `BeforeAfter` (drag + momentum), `EstimateModal` (open/close + drag-to-dismiss).
+
 **Performance rules:**
 - Only animate `transform` and `opacity` (GPU-composited)
 - `will-change-[opacity,transform]` on all animated elements
 - `{ passive: true }` on all scroll listeners
 - `requestAnimationFrame` for scroll-linked updates
-- `prefers-reduced-motion` respected in all animation hooks
+- **Never read layout in the same loop that writes styles.** Read all, then write all (see `lib/scroll-driver.ts`).
+- `prefers-reduced-motion` respected in all animation hooks, and via a global `[class*="animate-"] { animation: none }` rule in globals.css that catches every Tailwind `animate-*` utility including arbitrary ones
+- Use `transition-[opacity,transform]`, never `transition-all` — the latter animates layout properties too
 
 **Key learnings:**
 - `intersectionRatio` doesn't work for position-linked animations on small elements (ratio jumps 0→1 instantly). Use `getBoundingClientRect()` instead.
 - When rendering both desktop and mobile versions of a component (e.g., ProcessSteps), put the `ref` on an always-visible wrapper div, not on a `hidden md:block` div — hidden elements don't trigger IntersectionObserver.
 - 65% viewport travel zone is the professional standard. 40% feels rushed.
+- **`prefers-reduced-motion` must never disable direct manipulation.** It means the interface does not move of its own accord — it does not mean the user cannot move things. Suppress entrance/exit transforms and ambient loops; always keep 1:1 drag tracking. Getting this wrong made the modal's drag-to-dismiss silently dead for anyone with the setting on.
+- **A pointer-capture drag surface must not contain a clickable control.** `setPointerCapture` retargets `pointerup` to the capturing element, so the browser fires the `click` there and a button *inside* it can never activate. Make the button a sibling. This is what broke the modal's X.
+- **Lazy-mounted content inside an animating container resizes it mid-animation.** `EstimateModal` mounts its form on `requestIdleCallback` rather than on first open, because a `440px` placeholder swapping for the real form during the open spring produced a visible judder on the first open only.
 
 ### TrustBar — Marquee Conveyor Belt
 
@@ -531,6 +551,8 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Done (Recently Completed)
 
+- **Apple fluid-interface pass (2026-08-28)** — audited every animated surface against Apple's *Designing Fluid Interfaces* rules. New `lib/spring.ts` (hand-written, no dependency, per the zero-animation-libraries rule), `lib/scroll-driver.ts` (one shared scroll loop, read/write batched), `lib/button-styles.ts`, `hooks/useReducedMotion.ts`. `BeforeAfter` rebuilt on Pointer Events with capture, grab offset, `touch-pan-y` and momentum; `EstimateModal` rebuilt as an interruptible spring-driven sheet with trigger-anchored `transform-origin`, focus trap/restore and drag-to-dismiss; the 150ms step gate removed from `MultiStepForm`; Hero entrance re-armed on rAF and shortened for LCP; four `max-h` collapses converted to `grid-rows`; size-specific tracking/leading added to the type scale; header made translucent chrome; `prefers-reduced-motion` extended to the four unguarded ambient loops, plus new `prefers-reduced-transparency` and `prefers-contrast` support. Deleted 70 lines of unreferenced scroll-timeline CSS and the dead `--font-size-*` tokens. All eight areas verified manually in the browser. Branch `fluid-interface-pass`.
+- **Native CSS scroll-timeline was deliberately NOT adopted** — the deleted `.scroll-reveal-*` block used `animation-timeline: view()`, which runs on the compositor and would outperform the JS driver. It was removed rather than wired up because its `entry 0% cover 25%` range would change the feel of every reveal on the site, and the 65% travel zone is a documented deliberate choice. Revisit as a design decision, not a cleanup.
 - **Founder story → "rooted in place" pivot** — About page's `FounderStory` section now opens with an SF skyline shot from a Bay Area hilltop (`/images/about-sf-skyline.jpg`, 685KB) instead of a logo placeholder. Heading: `Twelve Years. 31 Cities. One Backyard.` Three paragraphs name specific neighborhoods (Sunset, Berkeley hillsides, Daly City), housing stock by architect (Eichler, Doelger), and the SF permit authority (DBI). Component now consumes `FOUNDER_STORY` from `lib/about-data.ts` (previously had divergent hardcoded copy). The `image: { src, alt }` field is now part of FOUNDER_STORY.
 - **Exterior repairs service page** — `/services/exterior-repairs` covers dry rot, stucco, and siding as three subservices on one URL. 1,400+ words, 6-item scope, 5-step process, 4 differentiators, 8 FAQs, itemized pricing. Uses a custom `multiServiceGraphSchema()` helper that emits a `@graph` with three separate `Service` nodes (Dry Rot Repair, Stucco Repair, Siding Installation) per 2026 SEO research. Exterior Repairs is now the 7th entry in `SERVICES`.
 - **31 city cross-linking to exterior-repairs** — every city page links into the new service with varied anchor text via the new optional `serviceAnchors?: Partial<Record<string, string>>` field on `CityData`. Examples: "Doelger Home Stucco & Dry Rot Repair" (Daly City), "Eichler T1-11 Siding & Exterior Repair" (Menlo Park), "Craftsman Home Dry Rot & Siding Repair" (Berkeley). Rendered by `CityServices` in CityPageContent.tsx.
@@ -735,7 +757,11 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
 - **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards
 - **Parallax is desktop-only** — `scale(1.1)` causes image cutoff on mobile viewports
-- **`EstimateButton` and `Button` are separate components** — both need changes applied independently (different `whitespace` rules, etc.)
+- **`EstimateButton` and `Button` share `lib/button-styles.ts`** — they are still separate components (one polymorphic/server, one a client modal trigger) but both compose `BUTTON_BASE` / `BUTTON_VARIANTS` / `BUTTON_SIZES`. They had silently drifted: the primary CTA on the site was missing the press feedback the secondary one had. Change styling in `lib/button-styles.ts` so it lands on both, never in one component.
+- **Never use `max-h-[X] / max-h-0` to expand a panel** — it transitions the *cap*, not the content, so the panel appears to snap open then linger for the rest of the duration, and anything taller than the cap is silently clipped (FAQ answers over 384px and county panels over 600px were being cut off). Use `grid` + `grid-rows-[0fr] → grid-rows-[1fr]` with an inner `min-h-0 overflow-hidden` child, which animates to the content's real height.
+- **A collapsing panel needs content to collapse.** Clearing state on close makes the content vanish instantly while an empty box animates shut — the enter is animated and the exit is not. Retain the last value through the exit (see `renderedCounty` in `ServiceArea.tsx`).
+- **Tracking and leading belong to the SIZE, not the element.** They live in the `--text-*--letter-spacing` / `--text-*--line-height` theme variables in globals.css, so every `text-*` utility carries the right values with no per-component classes. Do not add a blanket `letter-spacing` — a single fixed value is wrong somewhere on the scale by definition. (Tailwind v4's namespace is `--text-*`; the old `--font-size-*` tokens matched nothing and generated no CSS.)
+- **Translucent chrome is guarded three ways** — `supports-[backdrop-filter]` for browsers that can't blur, plus `prefers-reduced-transparency` and `prefers-contrast: more` to go solid. Any new `backdrop-blur` surface needs an opaque background under those two queries; the global rule in globals.css only removes the blur, it can't invent a background. The modal sets its blur from JS, so it calls `prefersReducedTransparency()` from `lib/utils.ts` itself.
 - **`RevealOnScroll` breaks `position: sticky`** — it wraps children in a div that disrupts the sticky parent relationship. Use inline `IntersectionObserver` instead (see `StickyCard` in ServicesGrid.tsx)
 - **iOS Safari ignores `user-scalable=no`** since iOS 10 — don't try to prevent zoom via viewport meta. Use CSS overflow clipping instead.
 - **OG image on Netlify** — `fs.readFile` and `process.cwd()` don't work in serverless. Embed assets as base64 constants or fetch via absolute URL.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   CheckCircle,
   Landmark,
@@ -59,7 +59,10 @@ export default function MultiStepForm({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [direction, setDirection] = useState<"forward" | "back">("forward");
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  // The step swaps on the same frame as the tap; `entering` only holds the
+  // incoming panel at its offset for one frame so it can slide in from the
+  // direction of travel. Nothing gates the step change itself.
+  const [entering, setEntering] = useState(false);
 
   const [formData, setFormData] = useState({
     service: "",
@@ -101,24 +104,30 @@ export default function MultiStepForm({
   }
 
   function nextStep() {
-    if (validateStep()) {
-      setDirection("forward");
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setStep((s) => Math.min(s + 1, 3));
-        setIsTransitioning(false);
-      }, 150);
-    }
+    if (!validateStep()) return;
+    setDirection("forward");
+    setStep((s) => Math.min(s + 1, 3));
+    setEntering(true);
   }
 
   function prevStep() {
     setDirection("back");
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setStep((s) => Math.max(s - 1, 1));
-      setIsTransitioning(false);
-    }, 150);
+    setStep((s) => Math.max(s - 1, 1));
+    setEntering(true);
   }
+
+  // Double rAF: let the browser paint the offset start state, then transition.
+  useEffect(() => {
+    if (!entering) return;
+    let inner = 0;
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setEntering(false));
+    });
+    return () => {
+      cancelAnimationFrame(outer);
+      cancelAnimationFrame(inner);
+    };
+  }, [entering]);
 
   async function handleSubmit() {
     if (!validateStep()) return;
@@ -203,11 +212,11 @@ export default function MultiStepForm({
       {/* Step content with transition */}
       <div
         className={cn(
-          "transition-all duration-200",
-          isTransitioning
+          "transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[opacity,transform] motion-reduce:transition-opacity motion-reduce:duration-150",
+          entering
             ? direction === "forward"
-              ? "opacity-0 translate-x-4"
-              : "opacity-0 -translate-x-4"
+              ? "opacity-0 translate-x-4 motion-reduce:translate-x-0"
+              : "opacity-0 -translate-x-4 motion-reduce:translate-x-0"
             : "opacity-100 translate-x-0"
         )}
       >
