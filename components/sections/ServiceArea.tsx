@@ -26,9 +26,16 @@ interface ServiceAreaProps {
 export default function ServiceArea({ showCTA = true }: ServiceAreaProps) {
   const [activeCounty, setActiveCounty] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  // Retained separately from activeCounty so the panel still has content to
+  // collapse on the way out. Clearing it on close made the panel vanish
+  // instantly while an empty box animated shut — enter and exit have to
+  // travel the same path.
+  const [renderedCounty, setRenderedCounty] = useState<string | null>(null);
 
   const handleCountyClick = (countyFull: string) => {
-    setActiveCounty((prev) => (prev === countyFull ? null : countyFull));
+    const next = activeCounty === countyFull ? null : countyFull;
+    setActiveCounty(next);
+    if (next) setRenderedCounty(next);
   };
 
   // Scroll panel into view when opened
@@ -41,8 +48,9 @@ export default function ServiceArea({ showCTA = true }: ServiceAreaProps) {
     }
   }, [activeCounty]);
 
-  const activeCities = activeCounty ? citiesByCounty[activeCounty] || [] : [];
-  const activeColor = COUNTIES.find((c) => c.full === activeCounty)?.color || "bg-accent-orange";
+  const activeCities = renderedCounty ? citiesByCounty[renderedCounty] || [] : [];
+  const activeColor =
+    COUNTIES.find((c) => c.full === renderedCounty)?.color || "bg-accent-orange";
 
   return (
     <SectionWrapper>
@@ -99,11 +107,13 @@ export default function ServiceArea({ showCTA = true }: ServiceAreaProps) {
         <div
           ref={panelRef}
           className={`
-            mt-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-            ${activeCounty ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}
+            mt-6 grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+            ${activeCounty ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
           `}
+          aria-hidden={!activeCounty}
         >
-          {activeCounty && (
+          <div className="min-h-0 overflow-hidden">
+          {renderedCounty && (
             <div className="rounded-2xl border border-neutral-200 bg-white shadow-lg p-6 md:p-8">
               {/* County header */}
               <div className="flex items-center gap-3 mb-6">
@@ -152,6 +162,7 @@ export default function ServiceArea({ showCTA = true }: ServiceAreaProps) {
               </div>
             </div>
           )}
+          </div>
         </div>
 
         {showCTA && !activeCounty && (

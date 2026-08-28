@@ -9,6 +9,7 @@ import Container from "@/components/ui/Container";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { blurProps } from "@/lib/blur";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface HeroProps {
   headline: string;
@@ -43,20 +44,28 @@ export default function Hero({
 }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const reducedMotion = useReducedMotion();
 
+  // Arm on the first painted frame, not on a timer. The h1 is the LCP element
+  // and Chrome ignores it while opacity is 0 — every ms of arming delay is a
+  // ms of LCP, so this is a double rAF rather than a setTimeout.
   useEffect(() => {
-    // Small delay to ensure DOM is ready, then trigger entrance
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
+    let inner = 0;
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setIsLoaded(true));
+    });
+    return () => {
+      cancelAnimationFrame(outer);
+      cancelAnimationFrame(inner);
+    };
   }, []);
 
   // Parallax: background moves at 0.3x scroll speed (desktop only)
   useEffect(() => {
     const el = parallaxRef.current;
     if (!el) return;
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isMobile = window.innerWidth < 768;
-    if (prefersReducedMotion || isMobile) return;
+    if (reducedMotion || isMobile) return;
 
     let ticking = false;
     const handleScroll = () => {
@@ -70,18 +79,23 @@ export default function Hero({
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      el.style.transform = "";
+    };
+  }, [reducedMotion]);
 
   const stagger = (delay: number) => ({
     className: cn(
-      "transition-all duration-1000 will-change-[opacity,transform]",
+      "transition-[opacity,transform,filter] duration-700 will-change-[opacity,transform]",
       isLoaded
         ? "opacity-100 translate-y-0 blur-0"
+        : reducedMotion
+        ? "opacity-0"
         : "opacity-0 translate-y-8 blur-[2px]"
     ),
     style: {
-      transitionDelay: `${delay}ms`,
+      transitionDelay: `${reducedMotion ? Math.min(delay, 120) : delay}ms`,
       transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
     },
   });
@@ -125,7 +139,7 @@ export default function Hero({
           {/* Urgency badge — enters first */}
           {urgencyText && (
             <div {...stagger(0)}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 backdrop-blur-sm [@media(prefers-reduced-transparency:reduce)]:bg-white/25 [@media(prefers-contrast:more)]:bg-primary [@media(prefers-contrast:more)]:border-white">
                 <Calendar size={14} className="text-white" />
                 <span className="text-sm font-medium text-white">
                   {urgencyText}
@@ -135,7 +149,7 @@ export default function Hero({
           )}
 
           {/* Headline — enters at 150ms */}
-          <div {...stagger(150)}>
+          <div {...stagger(60)}>
             <h1
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight font-heading"
               style={{ color: "#ffffff" }}
@@ -145,14 +159,14 @@ export default function Hero({
           </div>
 
           {/* Subheadline — enters at 350ms */}
-          <div {...stagger(350)}>
+          <div {...stagger(160)}>
             <p className="mt-5 md:mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
               {subheadline}
             </p>
           </div>
 
           {/* CTAs — enter at 550ms */}
-          <div {...stagger(550)} data-hero-cta>
+          <div {...stagger(260)} data-hero-cta>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4">
               {openModal ? (
                 <HeroCTA text={ctaText} />
@@ -175,7 +189,7 @@ export default function Hero({
 
           {/* Trust line — enters last at 700ms */}
           {showTrustPills && (
-            <div {...stagger(700)}>
+            <div {...stagger(360)}>
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs md:text-sm text-white/50 font-medium">
                 <span>Class B General Contractor</span>
                 <span className="hidden sm:inline">·</span>
@@ -192,10 +206,10 @@ export default function Hero({
       {showScrollIndicator && (
         <div
           className={cn(
-            "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle transition-opacity duration-1000",
+            "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle transition-opacity duration-700",
             isLoaded ? "opacity-100" : "opacity-0"
           )}
-          style={{ transitionDelay: "1000ms" }}
+          style={{ transitionDelay: "500ms" }}
         >
           <ChevronDown size={28} className="text-white/50" />
         </div>

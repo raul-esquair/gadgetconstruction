@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { subscribeToScroll } from "@/lib/scroll-driver";
 
 type AnimationType = "fade-up" | "fade-in" | "slide-left" | "slide-right" | "scale-up" | "scale-rotate" | "bubble";
 
@@ -25,72 +26,66 @@ export default function RevealOnScroll({
     const el = ref.current;
     if (!el) return;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReducedMotion) {
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motionQuery.matches) {
       applyStyles(el, animation, 1, blur);
       return;
     }
 
     let locked = false;
-    let active = false;
-    let ticking = false;
     let lastProgress = -1;
+    let unsubscribe: (() => void) | null = null;
 
-    const update = () => {
-      ticking = false;
-      if (locked) return;
-      const rect = el.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const distanceFromBottom = windowHeight - rect.top;
-      const travelZone = windowHeight * 0.65;
-      const progress = Math.min(1, Math.max(0, distanceFromBottom / travelZone));
-
-      if (Math.abs(progress - lastProgress) < 0.005 && progress < 1) return;
-      lastProgress = progress;
-
-      applyStyles(el, animation, progress, blur);
-
-      if (progress >= 1) {
-        locked = true;
-        active = false;
-      }
+    // Reads happen in measure, writes in apply — the driver runs every
+    // subscriber's reads before any writes, so layout is computed once a frame.
+    const subscriber = {
+      measure: () => {
+        // null means "no write needed this frame" — the subscription only ends
+        // via unsubscribe, below.
+        if (locked) return null;
+        const rect = el.getBoundingClientRect();
+        const travelZone = window.innerHeight * 0.65;
+        const distanceFromBottom = window.innerHeight - rect.top;
+        const progress = Math.min(1, Math.max(0, distanceFromBottom / travelZone));
+        if (Math.abs(progress - lastProgress) < 0.005 && progress < 1) return null;
+        lastProgress = progress;
+        return progress;
+      },
+      apply: (progress: number) => {
+        applyStyles(el, animation, progress, blur);
+        if (progress >= 1) {
+          locked = true;
+          el.style.willChange = "auto";
+          unsubscribe?.();
+        }
+      },
     };
 
+    // Only pay for elements currently on screen; the IntersectionObserver
+    // callback is cheap and keeps the shared loop's subscriber set small.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (locked) return;
         if (entry.isIntersecting) {
-          active = true;
-          if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(update);
-          }
+          if (!unsubscribe) unsubscribe = subscribeToScroll(subscriber);
         } else {
-          active = false;
+          unsubscribe?.();
+          unsubscribe = null;
         }
       },
       { threshold: 0, rootMargin: "0px" }
     );
 
-    const handleScroll = () => {
-      if (!active || locked || ticking) return;
-      ticking = true;
-      requestAnimationFrame(update);
-    };
-
     observer.observe(el);
-    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
+      unsubscribe?.();
     };
   }, [animation, blur]);
 
   // Initial styles (progress 0) — rendered in SSR and first client paint.
-  // useEffect above then drives updates via direct DOM writes.
+  // The effect above then drives updates via direct DOM writes.
   const initialStyle = getProgressStyles(animation, 0, blur);
 
   return (

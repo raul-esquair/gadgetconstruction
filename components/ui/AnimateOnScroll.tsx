@@ -50,7 +50,7 @@ export default function AnimateOnScroll({
     <div
       ref={ref}
       className={cn(
-        "transition-all will-change-[opacity,transform]",
+        "transition-[opacity,transform] will-change-[opacity,transform]",
         isInView ? styles.visible : styles.hidden,
         className
       )}
@@ -90,7 +90,7 @@ export function Stagger({
         <div
           key={index}
           className={cn(
-            "transition-all will-change-[opacity,transform]",
+            "transition-[opacity,transform] will-change-[opacity,transform]",
             isInView ? styles.visible : styles.hidden
           )}
           style={{
