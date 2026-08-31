@@ -41,6 +41,268 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "hardie-board-installation-cost-bay-area-2026",
+    featuredImage: "/images/blog-hardie-board-installation-cost-bay-area-2026.png",
+    title: "James Hardie Installation Cost in the Bay Area (2026): Real Numbers from 500+ Projects",
+    excerpt:
+      "James Hardie fiber cement installation costs $14–$22 per sq ft in the Bay Area — but the price varies by ~$8 depending on 6 factors most contractors don't itemize. Here's the real breakdown.",
+    date: "2026-08-31",
+    readingTime: "14 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How much does Hardie board cost per square foot installed in San Francisco?",
+        "answer": "HardiePlank lap siding in San Francisco runs $14–$18 per square foot installed, including HZ10-rated material, 316 stainless fasteners, WRB, trim, and labor. A typical 2-story Sunset or Richmond rowhouse with 2,000 sq ft of exterior elevation runs $32,000–$52,000 total before scaffolding, which adds $8–$15 per square foot of elevation."
+      },
+      {
+        "question": "Is Hardie board more expensive than stucco in California?",
+        "answer": "Yes, upfront. Full stucco re-coat runs $15,000–$35,000 on a typical Bay Area home; full Hardie fiber cement replacement runs $28,000–$55,000+. Over a 30-year horizon, however, stucco requires recoating every 15–20 years in the fog belt. Three stucco cycles can exceed the one-time cost of switching to Hardie, which carries a 30-year substrate warranty."
+      },
+      {
+        "question": "Can I put Hardie board over existing stucco, or do I need to tear off?",
+        "answer": "Tear-off is almost always correct. Installing Hardie over stucco traps moisture between cladding layers with no drainage path — the exact condition that causes dry rot and water damage. It also raises wall thickness at openings, complicating flashing. Gadget Construction recommends tear-off on every pre-1980 Bay Area home where budget allows; hidden damage revealed at tear-off justifies it nearly every time."
+      },
+      {
+        "question": "How long does a Hardie installation take on a typical SF rowhouse?",
+        "answer": "Construction itself takes 3–5 weeks on a standard 2-story SF rowhouse: tear-off, WRB, HardiePlank, and trim. Add 4–8 weeks for SF DBI permit processing before work begins. Total timeline from signed contract to final inspection is 8–14 weeks. Dry rot discovered at tear-off adds 1–2 weeks depending on framing repair extent."
+      },
+      {
+        "question": "Does Hardie board require stainless fasteners in Pacifica or Sausalito?",
+        "answer": "Yes. All coastal Bay Area Hardie installations — Pacifica's Linda Mar, the Outer Sunset, Sausalito, and anywhere within 5 miles of the Pacific — require 316-grade stainless steel fasteners per the James Hardie Best Practices Installation Guide. Galvanized fasteners corrode within 8–12 years in salt-air environments, staining fiber cement faces and eventually compromising the hold. The stainless premium is 8–12% on fastener cost."
+      },
+      {
+        "question": "What's the difference between HardiePlank and HardieShingle?",
+        "answer": "HardiePlank is a horizontal lap siding board — the most common Hardie product in the Bay Area, correct for Doelger homes, Craftsman bungalows, and postwar ranches — running $14–$18/sq ft installed. HardieShingle mimics staggered cedar shake and is architecturally correct for brown-shingle homes in Rockridge, Berkeley Elmwood, and Piedmont Avenue. HardieShingle runs $16–$22/sq ft because staggered placement requires more labor per square foot."
+      },
+      {
+        "question": "Do I need a permit to replace siding with Hardie in San Francisco?",
+        "answer": "Yes. SF DBI requires a permit for full exterior siding replacement, including any Hardie swap for stucco, wood, or T1-11. Permits run $1,500–$3,500 with 4–8 weeks of plan review when WRB or sheathing are replaced. Unpermitted siding work becomes a disclosure issue at resale. Oakland Planning & Building Department and the Marin Community Development Agency have equivalent permit requirements."
+      }
+    ],
+    content: `
+## The Short Answer: What Hardie Board Installation Costs in the Bay Area in 2026
+
+James Hardie fiber cement siding costs $14–$22 per square foot installed in the Bay Area in 2026, including material, corrosion-resistant fasteners, and labor — but excluding scaffolding, permits, and dry rot repair. A full-house James Hardie installation on a typical 2,000 sq ft San Francisco rowhouse costs $32,000–$52,000 in 2026, with scaffolding adding $8–$15 per square foot of elevation. Add 15–25% to either number for scaffolding, permits, and whatever dry rot turns up when the old cladding comes off. Here's the real breakdown — from [500+ Bay Area projects completed by Gadget Construction](/about), not national averages.
+
+Most contractors quote hardie board installation cost as a single number. That number is meaningless without knowing what it includes — and most bids don't say. This post fixes that.
+
+---
+
+## What Does the Installed Hardie Board Price Actually Include?
+
+The per-square-foot hardie board installation cost on a legitimate bid covers a specific, defined scope. Most homeowners don't know what's baked in — and most contractors don't volunteer what isn't.
+
+**What $14–$22/sq ft includes:**
+
+- James Hardie fiber cement panels, planks, or shingles (material cost)
+- Corrosion-resistant or stainless steel fasteners per the James Hardie Best Practices Installation Guide for fastener spacing and clearance requirements
+- WRB installation or replacement — a weather-resistive barrier (WRB) is the moisture-management membrane installed between the structural sheathing and the exterior cladding; it is the first line of defense against water intrusion behind the siding field
+- HardieTrim and corner boards at all exterior terminations
+- Kickout flashing and window head flashing at all openings
+- Labor to tear off existing cladding, prep the substrate, and install
+- Site cleanup and debris disposal
+
+**What $14–$22/sq ft does NOT include:**
+
+- Scaffolding ($8–$15 per square foot of elevation — priced separately on any multi-story or rowhouse project)
+- Building permits (varies by jurisdiction — see the permit section below)
+- Dry rot repair discovered after tear-off
+- Lead paint testing on pre-1978 homes (required under the EPA RRP — Renovation, Repair, and Painting — Rule, the federal regulation requiring EPA Lead-Safe Certified contractors when disturbing more than six square feet of painted surface on pre-1978 homes)
+- Paint coat beyond the factory ColorPlus finish (if you're specifying primed-for-paint instead of ColorPlus, add painter costs separately)
+- Historic district review fees
+
+If a bid folds scaffolding and permits into the per-square-foot number without line-iteming them, you can't tell whether the number is fair. Ask for every line item separated. Our [Bay Area Hardie board installation](/services/exterior-repairs) estimates show every cost broken out — no bundled surprises.
+
+---
+
+## Hardie Product Line Pricing: Plank, Shingle, Panel, Trim
+
+James Hardie fiber cement siding is a composite cladding made from Portland cement, silica sand, and cellulose fiber, manufactured with a 30-year substrate warranty and 15-year ColorPlus finish warranty when installed to manufacturer specifications.
+
+HZ10 is James Hardie's product classification for climate zones with humidity, seismic activity, and coastal salt exposure — the required specification for all Bay Area installations. Non-HZ10 Hardie products aren't rated for the Bay Area's combined coastal, seismic, and fog-belt conditions. Specifying HZ10 is the minimum correct product choice here, not an optional upgrade.
+
+### HardiePlank Lap Siding ($14–$18/sq ft installed)
+
+HardiePlank is the default choice for the widest range of Bay Area home styles — the 1950s Doelger homes in the [Outer Sunset and the Westlake neighborhood of Daly City](/service-areas/daly-city), the Craftsman bungalows in Rockridge and Temescal, and the postwar ranches throughout San Mateo County. It installs horizontally in lapped courses, replicating the look of traditional wood clapboard. ColorPlus factory-applied finish runs $1.50–$2.50/sq ft more than primed-for-paint but eliminates the first paint cycle and carries the 15-year warranty. For most Bay Area homeowners, ColorPlus pencils out ahead of primed within 8 years.
+
+### HardieShingle ($16–$22/sq ft installed)
+
+HardieShingle mimics the staggered cedar shingle profile of Bay Area brown-shingles — the Craftsman and Arts-and-Crafts era homes concentrated in Rockridge, the [Berkeley Elmwood, and Piedmont Avenue neighborhoods in Oakland](/service-areas/oakland). It's also architecturally appropriate for the bungalow tracts in Willow Glen. Installation labor runs higher than HardiePlank because each staggered course requires individual piece placement rather than board runs. The premium is worth it on shingle-style homes where HardiePlank would read as architecturally wrong.
+
+### HardiePanel Vertical ($13–$17/sq ft installed)
+
+HardiePanel is a large-format vertical board, typically installed with batten strips over the seams. It reads as contemporary or modern farmhouse and is most appropriate on mid-century flat-roof homes, ADU garage conversions, and architectural accent zones. It's the lower-labor option in the line because fewer pieces cover more area. Eichler tracts in Green Gables and Fairmeadow in [Palo Alto](/service-areas/palo-alto) occasionally specify HardiePanel for ADU or garage siding when the aesthetic needs to integrate with original horizontal T1-11 (T1-11 is a grooved plywood panel siding common on 1960s–1980s homes and outbuildings throughout the Bay Area).
+
+### HardieTrim and Corner Boards
+
+HardieTrim is priced by linear foot, not square foot. Installed cost runs $8–$14 per linear foot for corner boards, window surrounds, and frieze boards. On a 2-story SF rowhouse with significant window trim detail, HardieTrim can add $3,000–$8,000 to a project — a cost that often surprises homeowners who price the siding field accurately but forget the trim perimeter. All HardieTrim in coastal zones requires the same stainless fastener specification as the field siding.
+
+For a full comparison of how these fiber cement options stack up against stucco and wood alternatives, see our guide on [comparing Hardie board to stucco and wood](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area).
+
+---
+
+## What Drives Hardie Board Installation Costs Up in the Bay Area?
+
+Six factors push the james hardie cost bay area above the floor. Most contractor bids don't itemize them. They should.
+
+### Coastal Zones: Why Stainless Fasteners Are Non-Negotiable
+
+Coastal Bay Area Hardie installations require 316-grade stainless steel fasteners, adding roughly 8–12% to material cost but preventing fastener failure in salt-air environments. Standard hot-dipped galvanized fasteners — which meet the James Hardie Best Practices Installation Guide for non-coastal zones — corrode to the point of failure within 8–12 years in Pacifica's Linda Mar, the Outer Sunset, Sausalito, and coastal Marin. When a fastener head corrodes, it stains the fiber cement face and eventually compromises the hold. Specifying 316 stainless throughout is not an upgrade — it's the correct specification for any home within 5 miles of the Pacific.
+
+For [coastal Pacifica Hardie installation](/service-areas/pacifica), Gadget Construction uses 316 stainless as standard on every project. Homes in Rockaway Beach and Linda Mar see the highest salt-air concentration of any Bay Area coastal community. Galvanized fasteners on those homes are a 10-year maintenance problem waiting to appear.
+
+These coastal exposure risks extend well beyond siding. Our guide to [exterior repairs coastal Bay Area homes always need](/blog/5-exterior-repairs-coastal-bay-area-homes-always-need) covers the full pattern.
+
+### WUI Fire Zones: Non-Combustible Trim and Ember-Resistant Vents
+
+California Building Code Chapter 7A governs construction in WUI (wildland-urban interface) zones — Marin, the Oakland Hills, the Berkeley Hills, and portions of Twin Peaks and Bernal Heights. In WUI zones, Hardie fiber cement qualifies as ignition-resistant cladding, which is one reason it's the dominant material recommendation in those areas. But the entire wall assembly has to comply — not just the siding field. That means non-combustible trim, ember-resistant vent covers at soffit and gable penetrations, and careful attention to gaps where embers can lodge. WUI-compliant detailing adds $2,000–$5,000 to a full-house Hardie installation, depending on how many penetrations and vent locations need upgrading.
+
+Gadget Construction installs James Hardie siding across [Mill Valley](/service-areas/mill-valley)'s WUI fire zones, the Oakland Hills, and Berkeley Hills — where Chapter 7A compliance is not optional.
+
+### Historic Districts: Alamo Square, Haight, Ashbury Heights
+
+San Francisco has significant historic district overlay zones — Alamo Square, the Haight, and Ashbury Heights include blocks where exterior material changes require review beyond a standard DBI permit. Historic district review can add $2,000–$8,000 to a project in administrative fees and documentation, and it can require that the installation replicate original siding profiles precisely — which may limit product choice. Before specifying HardiePlank on a Victorian rowhouse in Alamo Square, verify the overlay zone designation with the SF DBI (San Francisco Department of Building Inspection), the city agency that issues residential permits for structural, mechanical, and exterior work.
+
+### Why 3-Story SF Rowhouse Scaffolding Adds So Much
+
+Scaffolding on a 3-story San Francisco rowhouse — the standard configuration in the Mission, Noe Valley, Pacific Heights, and the Richmond — runs $8–$15 per square foot of elevation area and is almost always billed as a separate line item. On a 2,000 sq ft exterior elevation, that adds $16,000–$30,000 to the project before a single plank of Hardie is installed. This is the number that surprises homeowners who priced based on hardie board price per square foot material cost alone. Scaffolding is not optional on a 3-story rowhouse — it's a Cal/OSHA requirement for work above 7.5 feet without a ladder-access alternative.
+
+### Dry Rot Discovery During Tear-Off
+
+Dry rot discovery during Hardie tear-off adds 10–20% to project cost on Bay Area homes built before 1980. The combination of original wood cladding, minimal or absent WRB, and 40+ years of fog-belt moisture creates conditions where sheathing, framing, and window rough openings can be saturated well beyond the surface damage. On a Westlake Doelger in Daly City or a 1960s home in the Berkeley Hills, the tear-off is where the real condition of the wall reveals itself. See our detailed guide on [dry rot discovery during siding tear-off](/blog/dry-rot-bay-area-homes-spot-repair-cost) for what repair costs at each stage of damage.
+
+The only honest way to handle dry rot in a Hardie bid is with an explicit discovery allowance — a named dollar figure ($3,000–$8,000 is typical) that covers likely scope, with a defined unit rate for anything beyond that. A bid that says "dry rot repair as needed" with no number is not a real bid.
+
+### SF DBI, Oakland Planning & Building, and Marin CDA Permits
+
+Permit cost and timeline vary by jurisdiction — and naming the jurisdiction matters for your budget:
+
+- **SF DBI (San Francisco Department of Building Inspection):** Full exterior siding replacement requires a permit. Expect $1,500–$3,500 depending on project valuation. Plan review for rowhouses with structural involvement (common when WRB and sheathing are replaced) adds 4–8 weeks. SF DBI permit processing currently runs 6–12 weeks for residential structural work.
+- **Oakland Planning & Building Department:** Siding replacement permits run $800–$2,000. Oakland's process is typically faster than SF DBI for straightforward residential siding scopes.
+- **Marin Community Development Agency (CDA):** Permit fees in unincorporated Marin and several incorporated Marin cities run through the CDA at $1,200–$2,800. WUI zone projects add a fire-compliance review step that can add 3–6 weeks to permitting.
+
+Any bid without a permit line item either excludes permits or buries them where you can't see the number. Both are problems.
+
+---
+
+## How Much Does a Full-House Hardie Installation Cost?
+
+Three real project tiers from [Bay Area Hardie board installation](/services/exterior-repairs) projects completed by Gadget Construction. Numbers are 2026 actuals, not national estimates adjusted for California.
+
+**Small Single-Story Home — Daly City, Westlake Neighborhood (1,200 sq ft elevation)**
+
+| Line Item | Cost |
+|---|---|
+| HardiePlank HZ10 material | $7,200 |
+| 316 stainless fasteners | $800 |
+| WRB (Henry Blueskin or equivalent) | $1,800 |
+| HardieTrim and corner boards | $2,400 |
+| Labor — tear-off, substrate prep, install | $8,600 |
+| Dry rot allowance | $3,500 |
+| Daly City permit (Dept. of Economic & Community Development) | $1,100 |
+| **Total** | **$25,400** |
+
+No scaffolding on this single-story scope — the entire elevation is ladder-accessible. The dry rot allowance was nearly fully consumed: two window sills and a corner post had active rot that extended into the rough framing.
+
+**Typical 2-Story SF Rowhouse — Richmond District (2,000 sq ft elevation)**
+
+A full-house James Hardie installation on a typical 2,000 sq ft San Francisco rowhouse costs $32,000–$52,000 in 2026, with scaffolding adding $8–$15 per square foot of elevation.
+
+| Line Item | Cost |
+|---|---|
+| HardiePlank HZ10 material | $12,400 |
+| 316 stainless fasteners | $1,400 |
+| WRB replacement (full house) | $3,200 |
+| HardieTrim and window surrounds | $5,600 |
+| Labor — tear-off, install | $14,800 |
+| Scaffolding (2-story rowhouse) | $9,200 |
+| Dry rot allowance | $4,500 |
+| SF DBI permit | $2,600 |
+| **Total** | **$53,700** |
+
+This project landed at the upper end of the typical range because the existing stucco tear-off uncovered shiplap sheathing with no WRB, requiring full barrier installation before the Hardie could go on. For how stucco tear-off compares to other siding removal scenarios, see [cracked stucco: when to patch, re-coat, or tear off](/blog/cracked-stucco-san-francisco-patch-recoat-tear-off).
+
+**Large Hillside Home — Mill Valley WUI Zone (2,800 sq ft elevation)**
+
+| Line Item | Cost |
+|---|---|
+| HardiePlank HZ10 material | $18,600 |
+| 316 stainless fasteners | $2,100 |
+| WRB replacement (full house) | $4,400 |
+| HardieTrim and corner boards | $7,200 |
+| Non-combustible WUI trim upgrades | $3,800 |
+| Ember-resistant vent covers | $1,400 |
+| Labor — tear-off, install | $19,600 |
+| Scaffolding (2-story hillside, irregular access) | $14,800 |
+| Dry rot allowance | $6,000 |
+| Marin CDA permit with WUI review | $2,700 |
+| **Total** | **$80,600** |
+
+WUI compliance on this Mill Valley project added roughly $5,200 in materials and detailing beyond a standard coastal installation. The scaffolding ran high because the hillside lot required cantilevered staging rather than standard ground-set frames — a cost pattern also common in [hillside deck construction in SF and Marin](/blog/hillside-multi-level-deck-construction-sf-marin).
+
+For the full material matrix — including how hardie plank installation cost san francisco compares to cedar, engineered wood, and stucco — the [full siding replacement cost breakdown](/blog/siding-replacement-cost-san-francisco-2026) covers every option with 2026 Bay Area pricing.
+
+---
+
+## Red Flags in Hardie Installation Bids
+
+Gadget Construction has reviewed competitor bids on projects we eventually won across [San Francisco](/service-areas/san-francisco), [Oakland](/service-areas/oakland), and [Berkeley](/service-areas/berkeley). Here's what we see consistently — and what every homeowner on a Hardie project should catch before signing.
+
+**No scaffolding line item.** On any 2-story or 3-story project, scaffolding is a real cost. If it's not on the bid, it's either excluded or buried in a lump labor number where you can't track it. Ask directly: "Is scaffolding included, and what's the dollar amount?"
+
+**"Dry rot repair as needed" with no dollar figure.** This phrase is not a bid. It's an open-ended change order waiting to happen. A legitimate bid includes a named allowance — $3,000, $5,000, whatever the contractor's experience on comparable homes suggests — with a unit rate for scope beyond that.
+
+**No permit line item.** Permits are required for full siding replacement at SF DBI, Oakland Planning & Building, and Marin CDA. If there's no permit number on the bid, the contractor is either planning to pull no permit (a liability you inherit at resale) or rolling it into overhead invisibly.
+
+**No fastener specification.** Ask specifically: "What fastener specification are you using?" In coastal zones — anything within 5 miles of the Pacific — the answer must be 316-grade stainless. Galvanized fasteners in Pacifica or Sausalito are the wrong specification per the James Hardie Best Practices Installation Guide for coastal exposure. A contractor who doesn't know the difference is not a Hardie-experienced contractor.
+
+**No WRB replacement line item.** On homes built before 1980, the existing WRB (if any) is likely degraded or absent. Installing Hardie over a failed moisture barrier solves the surface problem and leaves the water management problem intact. Ask: "Are you replacing the WRB, and what product are you using?"
+
+**No lead paint testing acknowledgment on pre-1978 homes.** Under the EPA RRP (Renovation, Repair, and Painting) Rule, any contractor disturbing more than six square feet of painted surface on a pre-1978 home must be EPA Lead-Safe Certified and follow specific containment protocols. If a bid on an older home doesn't mention this, the contractor isn't RRP-compliant — which is a federal requirement, not a suggestion.
+
+**Non-HZ10 product specification.** Confirm the product spec includes "HZ10" — the coastal climate designation required for Bay Area installations. Standard James Hardie products not rated for humid, seismic, and salt-air environments won't meet local conditions. HZ10 is not a premium upgrade — it's the minimum correct specification.
+
+---
+
+## Frequently Asked Questions
+
+### How much does Hardie board cost per square foot installed in San Francisco?
+
+HardiePlank lap siding in San Francisco runs $14–$18 per square foot installed, including HZ10-rated material, 316 stainless fasteners, WRB, trim, and labor. A typical 2-story Richmond or Sunset rowhouse with 2,000 sq ft of exterior elevation runs $32,000–$52,000 total — before scaffolding, which adds $8–$15 per square foot of elevation on multi-story homes. Scaffolding on a 3-story SF rowhouse can add $16,000–$30,000 to the installed total.
+
+### Is Hardie board more expensive than stucco in California?
+
+Yes — upfront. A full stucco re-coat runs $15,000–$35,000 on a comparable home, while full Hardie replacement runs $28,000–$55,000+. But stucco cracks and requires recoating on a 15–20-year cycle in the Bay Area fog belt. Over 30 years, three stucco interventions can exceed the one-time cost of switching to Hardie — which carries a 30-year substrate warranty and doesn't require re-coating. The detailed cost math is covered in our guide on [comparing Hardie board to stucco and wood](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area).
+
+### Can I put Hardie board over existing stucco, or do I need to tear off?
+
+Tear-off is almost always the correct answer, not overlay. Installing Hardie over stucco traps moisture between two cladding layers with no drainage path — exactly the condition that causes the rot and water damage you're trying to prevent. It also raises wall thickness at openings, complicating flashing and trim details. The only case where overlay might be considered is if the stucco is structurally sound, the added wall weight is within framing capacity, and an engineer confirms the assembly. Gadget Construction recommends tear-off on every project where budget allows — the hidden condition revealed at tear-off justifies it on almost every Bay Area home built before 1980.
+
+### How long does a Hardie installation take on a typical SF rowhouse?
+
+A standard 2-story SF rowhouse hardie plank installation — tear-off, WRB, HardiePlank, trim — takes 3–5 weeks of construction time. Add 4–8 weeks for SF DBI permit processing before construction starts. Total project timeline from signed contract to final inspection: 8–14 weeks. If dry rot is discovered at tear-off, add 1–2 weeks depending on the extent of framing repair required.
+
+### Does Hardie board require stainless fasteners in Pacifica or Sausalito?
+
+Yes. Coastal Bay Area Hardie installations — including Pacifica's Linda Mar and Rockaway Beach, the Outer Sunset, and all of Sausalito — require 316-grade stainless steel fasteners per both the James Hardie Best Practices Installation Guide and standard coastal construction practice. Galvanized fasteners corrode in salt-air environments within 8–12 years, causing staining on the fiber cement face and eventually compromising the hold. Stainless adds 8–12% to fastener cost. It's the correct specification, not an upgrade.
+
+### What's the difference between HardiePlank and HardieShingle?
+
+HardiePlank is a horizontal lap siding board — the most common Hardie product in the Bay Area, appropriate for Doelger homes, Craftsman bungalows, and postwar ranches. It installs in continuous horizontal courses and runs $14–$18/sq ft installed. HardieShingle is a staggered individual-shingle panel that mimics cedar shake siding — architecturally correct for brown-shingle homes in the Berkeley Elmwood, Rockridge, and Piedmont Avenue neighborhoods of Oakland. HardieShingle runs $16–$22/sq ft installed because the staggered course placement requires more labor time per square foot of coverage.
+
+### Do I need a permit to replace siding with Hardie in San Francisco?
+
+Yes. Full exterior siding replacement requires a permit from SF DBI (the San Francisco Department of Building Inspection). This includes Hardie replacement of stucco, wood, or T1-11. Cosmetic repairs — spot patching, paint — don't require a permit. But a full tear-off and reclad is a structural alteration to the exterior envelope. SF DBI permits for siding replacement run $1,500–$3,500 and require plan review when WRB and sheathing are replaced. Unpermitted siding work surfaces as a disclosure issue at resale. Oakland Planning & Building Department and the Marin CDA have equivalent requirements in their jurisdictions.
+
+---
+
+## Ready to Get a Real Hardie Number?
+
+Planning a Hardie installation? Gadget Construction (CA License #1132983) provides itemized, fixed-price estimates with explicit allowances for dry rot discovery, scaffolding, and permits — no vague per-square-foot numbers, no surprise change orders after tear-off reveals what's behind the old cladding. Gadget Construction installs James Hardie siding across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Oakland's Rockridge and Berkeley Hills, and Mill Valley's WUI fire zones — 31 cities across 6 Bay Area counties, with a 5-year workmanship warranty in writing on every project. Schedule your free on-site assessment through our [Bay Area Hardie board installation](/services/exterior-repairs) service page.
+    `.trim(),
+  },
+
+  {
     slug: "5-exterior-repairs-coastal-bay-area-homes-always-need",
     featuredImage: "/images/blog-5-exterior-repairs-coastal-bay-area-homes-always-need.png",
     title: "The 5 Exterior Repairs Coastal Bay Area Homes Always Need (Sunset, Marin, Pacifica, Daly City)",
