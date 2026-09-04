@@ -41,6 +41,263 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-long-does-foundation-underpinning-take-san-francisco",
+    featuredImage: "/images/blog-how-long-does-foundation-underpinning-take-san-francisco.png",
+    title: "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
+    excerpt:
+      "Foundation underpinning in San Francisco typically takes 6–16 weeks from engineering to final inspection — but the timeline splits into 5 phases most contractors don't explain. Here's what to actually expect.",
+    date: "2026-09-07",
+    readingTime: "14 min read",
+    relatedService: "concrete-foundations",
+    faqs: [
+      {
+        "question": "How long does foundation underpinning take on a Victorian?",
+        "answer": "Foundation underpinning on a San Francisco Victorian rowhouse typically takes 12–16 weeks total. Push piers are the standard method on pre-1900 rowhouse footings, and historic district overlay review at SF DBI adds 2–4 weeks to plan review alone. A 14-pier push pier project on an Alamo Square Victorian runs roughly 15 weeks from engineering to final DBI sign-off."
+      },
+      {
+        "question": "Can I live in my house during underpinning?",
+        "answer": "In most cases, yes. Helical and push pier installation happens in the basement or crawl space, so occupied floors remain usable. Expect noise, vibration, and dust during the 1–3 weeks of active installation. If underpinning is combined with soft-story retrofit work under CEBC Chapter A4, portions of the ground floor may be temporarily inaccessible during construction."
+      },
+      {
+        "question": "Do you need a permit for foundation underpinning in San Francisco?",
+        "answer": "Yes. SF DBI requires a permit for all foundation underpinning — helical piers, push piers, and slabjacking of structural slabs — with no residential exemption. The permit requires stamped engineered plans, plan review, a rough inspection before backfill, and a final inspection. Projects without permits appear as open violations during title search at resale."
+      },
+      {
+        "question": "How long does SF DBI take to approve foundation plans?",
+        "answer": "SF DBI plan review for foundation underpinning takes 3–5 weeks for standard projects. Projects referred to the Structural Advisory Committee — a panel of senior DBI engineers reviewing complex structural work — extend to 8 weeks or longer. Historic district overlays add another 2–4 weeks. The permit phase is the most common source of schedule surprises on SF foundation underpinning projects."
+      },
+      {
+        "question": "Is helical pier installation faster than push piers?",
+        "answer": "Yes. Helical pier crews complete 4–6 piers per day; push pier installation runs 4–5 piers per day because each pier requires footing excavation, bracket placement, and load monitoring. For a 12-pier project, helical installation runs 2–3 days versus 3–4 days for push piers. The larger difference appears in permitting — push pier projects on Victorians more frequently trigger historic district review."
+      },
+      {
+        "question": "What delays foundation repair projects in San Francisco?",
+        "answer": "The five most common delay sources: SF DBI plan review running long (especially Structural Advisory Committee referrals, adding 4–6 weeks); historic district overlay review on Victorian and Edwardian homes; geotechnical boring requirements in Marina fill or bay mud areas; utility conflicts discovered during excavation; and winter atmospheric river rain events from November through March."
+      },
+      {
+        "question": "How long is the warranty on foundation underpinning?",
+        "answer": "Gadget Construction provides a 5-year workmanship warranty in writing on every foundation underpinning project, covering bracket placement, pier depth verification, load transfer, and backfill compaction. Pier manufacturers carry separate product warranties of 25–50 years on the pier material itself. Both warranties should be documented in writing before you sign a contract."
+      }
+    ],
+    content: `
+## The Short Answer: SF Foundation Underpinning Takes 6–16 Weeks
+
+Foundation underpinning in San Francisco takes 6–16 weeks from engineering to final DBI inspection, with permit review alone consuming 3–8 weeks of the timeline. That stat surprises most homeowners — because contractors quote installation days, not total project time. Straightforward helical pier projects on accessible sites run 6–9 weeks. Push pier projects on Victorians or sites requiring Structural Advisory Committee review can hit 15 weeks or longer. Slabjacking takes 1–3 days of actual work but 2–4 weeks total once engineering and scheduling are factored in.
+
+If you've already confirmed your home needs underpinning — check [5 signs your SF foundation needs repair](/blog/foundation-repair-signs-san-francisco) if you're still in diagnostic mode — this is the week-by-week breakdown you need before signing a contract. Data from [SF foundation underpinning services](/services/concrete-foundations) across 500+ Bay Area projects, not national estimates.
+
+Most contractors hand you an installation timeline. They don't explain the four other phases that determine when your project actually finishes.
+
+---
+
+## Phase 1: Engineering and Assessment (2–5 Weeks)
+
+Every legitimate foundation underpinning project starts with a licensed structural engineer — not a contractor with a tape measure. This phase covers site visit and visual assessment, load calculations, pier design (number, diameter, spacing, and target depth), and stamped engineered plans for permit submittal. Without stamped plans, SF DBI won't open a permit file.
+
+Engineering for a standard SF residential underpinning project runs $3,000–$8,000 and takes 2–5 weeks depending on soil complexity. The range is wide because Bay Area soil conditions vary sharply by neighborhood.
+
+### Where Soil Conditions Add Time
+
+Marina District homes sit on engineered fill placed during the 1906 earthquake cleanup and the 1915 Panama-Pacific Exposition — a soil type with poor bearing capacity and significant liquefaction risk. Any Marina District underpinning project requires soil borings and a geotechnical report before the structural engineer can finalize pier depth and load calculations. That geotechnical step adds 2–3 weeks to engineering alone.
+
+Sunset District homes sit on sandy clay that moves seasonally with moisture content. Bay mud — the soft, compressible marine sediment underlying much of the Mission Bay area and portions of SoMa — requires even deeper pier designs to reach load-bearing strata, with geotechnical reports that differ materially from the Marina fill analysis.
+
+Hillside sites in Bernal Heights require slope stability analysis in addition to standard load calculations, which pushes engineering toward the 5-week end of the range. [Berkeley foundation projects](/service-areas/berkeley) on the hillside above Claremont present similar slope-stability requirements, as do sites in [Mill Valley](/service-areas/mill-valley) on Marin's steeper ridgelines.
+
+**Red flag:** Any contractor who skips engineering and goes straight to a pier quote is cutting a step that exists to protect your home. A pier design without stamped plans isn't a design — it's a guess. Skipping engineering means skipping the permit, which means skipping the inspection. That chain of shortcuts surfaces as an open permit violation at resale — and creates personal liability if the repair fails.
+
+---
+
+## Phase 2: How Long Does SF DBI Take to Approve Foundation Underpinning Plans? (3–8 Weeks)
+
+The SF Department of Building Inspection (SF DBI) is the city agency that issues residential permits for structural, mechanical, and exterior work in San Francisco. SF DBI requires a permit for all foundation underpinning — helical piers, push piers, and slabjacking of structural slabs. There's no residential exemption, regardless of whether the work is confined to the basement.
+
+SF DBI plan review for foundation underpinning takes 3–5 weeks for standard projects, extending to 8+ weeks for projects requiring Structural Advisory Committee review. Permit fees run $2,000–$5,000 depending on project valuation.
+
+The SF DBI Structural Advisory Committee is a panel of senior DBI engineers that reviews foundation and structural projects falling outside standard prescriptive compliance — unusual soil conditions, complex load paths, or hillside sites where California Residential Code (CRC) Section R403 foundation requirements don't cleanly apply. If your project gets referred to the Structural Advisory Committee, add 4–6 weeks to your permit timeline. Your engineer can estimate the probability before submittal based on site conditions, but it can't be guaranteed.
+
+### Historic Districts Add Another Layer
+
+A push pier project on a Victorian in Alamo Square or the Haight requires DBI review of any exterior disturbance — even work that's mostly below grade. Historic district overlay review adds 2–4 weeks to plan approval and is the single most consistent source of schedule surprise on SF foundation projects involving pre-1900 housing stock.
+
+### Other Bay Area Jurisdictions
+
+- **Oakland Planning & Building Department:** 3–5 weeks for standard residential underpinning. [Oakland foundation projects](/service-areas/oakland) involving hillside sites in the Montclair or Redwood Heights neighborhoods may trigger additional geotechnical review.
+- **Marin Community Development Agency (CDA):** 3–6 weeks, with additional time for WUI (wildland-urban interface) or hillside overlay review in Marin hillside cities like [Mill Valley](/service-areas/mill-valley) and [San Rafael](/service-areas/san-rafael).
+- **Berkeley Planning & Development Department:** 3–5 weeks; Berkeley Hills sites frequently require geotechnical review consistent with Oakland's hillside standards.
+
+**Over-the-counter permit:** For genuinely simple projects — limited slabjacking with no structural framing involvement — SF DBI may allow over-the-counter permit issuance in a single visit. Don't count on this for any helical or push pier scope.
+
+---
+
+## Phase 3: Site Prep and Mobilization (3–5 Days)
+
+Site prep is the most underestimated phase in a foundation underpinning timeline. It's short, but it has real dependencies that can't be rushed.
+
+USA 811 is the national call-before-you-dig utility locate service that dispatches utility companies to mark underground lines before excavation begins. USA 811 locates require a minimum of 2 full business days from request to completion under California law. This is not a formality. Unmarked gas lines and conduit runs exist under San Francisco foundations built before 1960 — and hitting one stops the project immediately.
+
+Beyond utility locates, mobilization involves:
+
+- Protection of existing interior finishes where access runs through living space
+- Dust barriers at all penetrations into occupied areas
+- Equipment staging — on steep SF streets like those in Bernal Heights or Noe Valley, getting a hydraulic pier driver to the work face can require crane lifts or specialized rigging that adds a full working day
+- Neighbor notification on shared property line projects — a practical necessity on SF lots where zero-lot-line conditions put the work within feet of adjacent foundations
+
+On a typical accessible Marina or Sunset site, mobilization runs 3 days. On a steep Bernal Heights site with access restrictions, plan for 5.
+
+---
+
+## Phase 4: How Long Does Foundation Underpinning Installation Take? (1–4 Weeks by Method)
+
+The installation phase is where foundation underpinning timelines diverge most sharply by method. Helical piers, push piers, and slabjacking aren't interchangeable in duration — or in the site conditions where each is appropriate. For a full comparison of method costs, see the [helical piers vs push piers vs slabjacking cost breakdown](/blog/foundation-underpinning-cost-san-francisco).
+
+### Helical Pier Installation Timeline: 1–2 Weeks for a Typical 8–16 Pier Project
+
+A helical pier is a steel shaft with helical plates that is hydraulically rotated into soil until it reaches load-bearing strata or bedrock, providing immediate structural support for a failing foundation.
+
+Helical pier installation crews complete 4–6 piers per day on accessible Bay Area sites, meaning a typical 12-pier project's actual installation runs 2–3 working days. With crew mobilization, bracket installation, and lift verification, a 12-pier project runs 5–7 working days total — call it 1.5 weeks. A scope of 20–24 piers on a full perimeter extends to 2 weeks.
+
+A typical 12-pier helical underpinning project on a San Francisco Marina District home takes 8–10 weeks total, including engineering, DBI permit, installation, and final inspection. That figure accounts for Marina fill's deep drive requirements — piers in Marina fill typically run 30–50 feet to reach bearing, which slows installation to 3–4 piers per day rather than the standard 4–6.
+
+Helical piers also perform well in the sandy clay soils common in the Sunset District, where seasonal moisture movement is the primary driver of differential settlement. Gadget Construction has installed helical pier underpinning across San Francisco's Marina District, Sunset settling, and Bernal Heights hillside sites — as well as in [Pacifica](/service-areas/pacifica) Linda Mar and [Daly City](/service-areas/daly-city) Westlake Doelger homes where sandy fill over serpentine creates comparable bearing challenges.
+
+### Push Pier Installation Timeline: 2–3 Weeks (Victorians and Multi-Unit)
+
+A push pier is a steel tube hydraulically driven into the ground using the weight of the existing structure as counterforce, transferring building load to a deeper load-bearing layer.
+
+Push pier installation runs slower than helical because the method requires excavating pier access points beneath the existing footing, installing a bracket against the footing face, and then hydraulically driving the pier against the building's own weight. That counterforce requirement means the work moves pier-by-pier with load monitoring at each station. On a Victorian rowhouse in Alamo Square — where the footing configuration is rarely uniform and excavation happens in a confined basement — expect 4–5 piers per day rather than 6. A 14-pier push pier project runs 3 working days of driving plus excavation and bracket work, typically 2–3 weeks total construction time.
+
+Multi-unit buildings add further complexity. The California Existing Building Code (CEBC) Chapter A4 (Seismic Retrofit) is the California code section governing earthquake-hazard reduction in existing buildings — it applies when seismic retrofit scope is combined with underpinning, which can require concurrent soft-story or cripple wall work that extends installation to 4 weeks. Edwardian-era flats in the Richmond and Cole Valley are a common trigger for this combined scope.
+
+### Slabjacking Timeline: 1–3 Days (Surface-Level Only)
+
+Slabjacking is a foundation-repair method that injects polyurethane foam or cement-based slurry beneath a settled concrete slab to raise and re-support it, typically used for garage floors and non-structural slabs.
+
+Slabjacking is fast because it requires no excavation. Drilling injection ports into the slab, injecting material, and monitoring lift is a one-crew operation. A typical Bernal Heights garage floor — two bays, 8–10 injection ports — takes a single day. A larger concrete apron or multi-section garage slab extends to 3 days. The total project timeline from signed contract to completion runs 2–4 weeks, with most of that time in engineering and scheduling, not construction.
+
+### Weather Delays
+
+Winter atmospheric river events — affecting the Bay Area from November through March — add 3–7 days of weather delay on average to exterior foundation work. Open pier excavations flood in heavy rain. Build a weather buffer into any foundation repair project scheduled between November and March.
+
+---
+
+## Phase 5: DBI Inspection and Sign-Off (1–3 Weeks)
+
+SF DBI inspections for foundation underpinning happen in two stages: a rough inspection during installation (required before backfill) and a final inspection after backfill and cleanup. Scheduling either inspection through SF DBI runs 2–5 business days from request to inspector arrival.
+
+For pier projects, the rough inspection may happen per-pier or per-day depending on the inspector's call. If an inspector requires per-pier sign-off on a 12-pier helical project, installation slows significantly — each pier waits for next-day inspection before the crew advances. This happens more often on projects with complex engineering or inspectors unfamiliar with the helical method.
+
+After final inspection, SF DBI issues a Certificate of Final Completion, which closes the permit. That document matters at resale — it's the evidence the work was inspected and approved, not just completed. Projects without final inspection sign-off appear as open permit violations during title search. Unpermitted foundation work also creates personal liability if the repair fails, because there's no inspection record establishing code compliance.
+
+Engineered fill and compaction testing may add one additional inspection day if the structural engineer specifies a third-party compaction report before the permit closes.
+
+---
+
+## What Extends the Foundation Underpinning Timeline in San Francisco?
+
+Specific conditions that push a foundation repair schedule past the standard 6–16 week range:
+
+- **Bay mud or Marina fill requiring extended pier depths:** Piers driven 40–60 feet rather than the typical 20–30 feet slow installation to 3–4 piers per day, adding 3–7 days to the installation phase
+- **Historic district review (Alamo Square, the Haight, Mission Dolores):** Adds 2–4 weeks to DBI plan review; affects all pre-1900 housing in designated historic overlay zones
+- **Structural Advisory Committee referral:** Adds 4–6 weeks to the permit timeline — the single largest source of project extension on complex SF foundation underpinning projects
+- **Utility conflicts discovered mid-excavation:** Unmarked conduit or abandoned sewer laterals can halt excavation for 3–10 days while utilities are relocated or rerouted
+- **Winter rain (November–March):** Open excavations in active rain conditions add 3–7 days of weather delay on average; atmospheric river events can shut a job site for 2–4 consecutive days
+- **Neighboring property access negotiations:** On zero-lot-line SF lots, working from the neighboring side requires neighbor consent. When neighbors are unavailable or uncooperative, project start can slip 1–4 weeks
+
+If your site has more than one of these conditions — a Marina Victorian near the historic overlay boundary, for example — stack the delays rather than average them.
+
+---
+
+## Real SF Underpinning Timelines: Three Actual Projects
+
+Three projects from [foundation work throughout San Francisco](/service-areas/san-francisco), broken down phase by phase. These represent the typical range Gadget Construction sees across the 500+ Bay Area projects in our portfolio.
+
+### Marina District — 12-Pier Helical Underpinning (1930s 2-Story)
+
+| Phase | Duration |
+|---|---|
+| Structural engineering + geotechnical boring | 4 weeks |
+| SF DBI plan review and permit | 4 weeks |
+| Site prep and mobilization | 3 days |
+| Helical pier installation (12 piers, Marina fill, 40-ft depth) | 8 days |
+| DBI rough and final inspection + backfill | 1 week |
+| **Total** | **~9 weeks** |
+
+Geotechnical boring added a full week to the engineering phase because of the Marina fill soil profile. Pier installation ran 3–4 piers per day rather than the standard 4–6, because deep drives in fill require slower torque monitoring. No weather delays — the project ran March through May.
+
+### Alamo Square Victorian — 14-Pier Push Pier Underpinning (1890s 3-Story Rowhouse)
+
+| Phase | Duration |
+|---|---|
+| Structural engineering | 3 weeks |
+| SF DBI plan review — historic district overlay | 7 weeks |
+| Site prep and mobilization | 4 days |
+| Push pier excavation, bracket install, driving | 14 days |
+| DBI inspections and permit closeout | 2 weeks |
+| **Total** | **~15 weeks** |
+
+Historic district review added 3 weeks to DBI processing. The inspector required per-pier sign-off before advancing, extending installation by 4 days. This project is representative of what Victorian underpinning in a historic overlay zone actually takes — plan for 14–16 weeks, not 6–8.
+
+### Bernal Heights — Garage Slab Slabjacking (1960s Single-Family)
+
+| Phase | Duration |
+|---|---|
+| Engineering assessment (no stamped plans required) | 1 week |
+| DBI permit — over the counter | Same day |
+| Mobilization and utility locate | 2 days |
+| Slabjacking (12 injection ports, two-bay garage) | 1 day |
+| Final inspection | 3 days |
+| **Total** | **~3 weeks** |
+
+Slabjacking on a non-structural slab qualified for over-the-counter permitting at SF DBI. Total construction time was one day. The 3-week project timeline is almost entirely pre-construction process. For [Oakland foundation projects](/service-areas/oakland) with comparable slab scope, the timeline is similar — Oakland Planning & Building Department runs comparable over-the-counter processing for simple slab repair. [Berkeley](/service-areas/berkeley) projects of this type run on a comparable schedule through the Berkeley Planning & Development Department.
+
+---
+
+## Frequently Asked Questions
+
+### How long does foundation underpinning take on a Victorian?
+
+Foundation underpinning on a San Francisco Victorian rowhouse typically takes 12–16 weeks total. Push piers are the standard method on pre-1900 rowhouse footings — and push pier installation on a confined Victorian basement with non-uniform footings runs slower than on modern accessible foundations. Historic district overlay review at SF DBI adds 2–4 weeks to plan review. A 14-pier push pier project on an Alamo Square Victorian runs roughly 15 weeks from engineering to final DBI sign-off. Budget for the longer end if your home is in a designated historic overlay zone.
+
+### Can I live in my house during underpinning?
+
+In most cases, yes — but with real limitations. Helical and push pier installation work happens in the basement or crawl space, not in living areas, so occupied floors remain usable during the 1–3 weeks of active installation. Expect noise, vibration, and dust during work hours. Access to the basement or garage will be restricted. If the underpinning is combined with a soft-story retrofit or interior structural work under CEBC Chapter A4, portions of the ground floor may be temporarily inaccessible. Gadget Construction installs dust barriers at all penetrations into occupied space on every interior-access project.
+
+### Do you need a permit for foundation underpinning in San Francisco?
+
+Yes. SF DBI requires a permit for all foundation underpinning work — helical piers, push piers, and slabjacking of structural slabs. The permit requires stamped engineered plans, plan review, a rough inspection during installation (before backfill), and a final inspection before permit closeout. Projects completed without permits appear as open violations during title search at resale. Unpermitted foundation work also creates personal liability if the repair fails — there's no inspection record to establish the work was performed to code. For related permit considerations, see the [ADU construction guide](/blog/adu-construction-san-francisco-guide), which covers how open foundation violations affect ADU permitting eligibility.
+
+### How long does SF DBI take to approve foundation plans?
+
+SF DBI plan review for foundation underpinning takes 3–5 weeks for standard projects. Projects referred to the SF DBI Structural Advisory Committee — a panel of senior DBI engineers that reviews complex structural work outside standard prescriptive compliance — can extend to 8 weeks or longer. Historic district overlays add another 2–4 weeks on top of standard review. Over-the-counter approval is possible for simple slabjacking on non-structural slabs. The permit phase is the most common source of timeline surprises on SF foundation underpinning projects, and the one most contractors fail to explain upfront.
+
+### Is helical pier installation faster than push piers?
+
+Yes. Helical pier crews complete 4–6 piers per day on accessible sites. Push pier installation runs 4–5 piers per day because each pier requires footing excavation, bracket placement, and load monitoring before advancing. For a 12-pier project, helical installation runs 2–3 days; push piers run 3–4 days. The larger difference appears in the permit phase — push pier projects on Victorians more frequently trigger historic district review, adding weeks before installation begins. For a full comparison of method costs and site-condition fit, see the [helical piers vs push piers vs slabjacking cost breakdown](/blog/foundation-underpinning-cost-san-francisco).
+
+### What delays foundation repair projects in San Francisco?
+
+The five most common delay sources on SF foundation underpinning projects, in order of frequency: SF DBI plan review running longer than expected — especially Structural Advisory Committee referrals, which add 4–6 weeks; historic district overlay review on Victorian and Edwardian-era homes; geotechnical boring requirements in Marina fill or bay mud neighborhoods; utility conflicts discovered during excavation; and winter atmospheric river rain events between November and March. Knowing which apply to your specific site before signing a contract lets you build an accurate foundation repair schedule, not an optimistic one.
+
+### How long is the warranty on foundation underpinning?
+
+Gadget Construction provides a 5-year workmanship warranty in writing on every foundation underpinning project — covering bracket placement, pier depth verification, load transfer, and backfill compaction. Pier manufacturers carry separate product warranties of 25–50 years on the pier material itself. Both the contractor workmanship warranty and the manufacturer product warranty should be documented in writing before you sign a contract. If a contractor doesn't specify warranty terms in the bid, ask for them in writing before committing. A verbal warranty on a foundation repair is worth nothing at resale.
+
+### What are the early signs that my SF foundation actually needs underpinning?
+
+Diagonal cracks at window and door corners, doors and windows that won't latch, visible floor slope measurable with a standard level, and gaps between exterior walls and adjacent structures are the four most consistent early indicators of differential foundation settlement. For a full diagnostic walkthrough covering how to distinguish active settlement from normal aging — and which signs warrant an immediate engineering assessment — see [5 signs your SF foundation needs repair](/blog/foundation-repair-signs-san-francisco).
+
+---
+
+## Ready to Start Your SF Foundation Underpinning?
+
+Foundation underpinning timelines in San Francisco are driven by engineering requirements, DBI permit review, and site conditions — not just installation days. The difference between a 9-week project and a 15-week project is almost always permitting and soil complexity, not crew speed.
+
+Gadget Construction (CA License #1132983) provides free on-site assessments with written phase-by-phase timelines — engineering through DBI sign-off, with realistic ranges for your specific site conditions. Gadget Construction handles foundation underpinning across San Francisco's Marina District, Sunset, and Bernal Heights hillside sites — and across [31 cities in 6 Bay Area counties](/service-areas). Schedule your assessment through our [SF foundation underpinning services](/services/concrete-foundations) page.
+    `.trim(),
+  },
+
+  {
     slug: "hardie-board-installation-cost-bay-area-2026",
     featuredImage: "/images/blog-hardie-board-installation-cost-bay-area-2026.png",
     title: "James Hardie Installation Cost in the Bay Area (2026): Real Numbers from 500+ Projects",
