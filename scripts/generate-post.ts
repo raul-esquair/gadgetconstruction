@@ -156,6 +156,8 @@ interface RevisionResult {
   revisedPost: string;
   faqs: Array<{ question: string; answer: string }>;
   seoNotes: string;
+  /** SERP title, <=60 chars. Undefined when no usable candidate was produced. */
+  metaTitle?: string;
 }
 
 function buildCritiqueSystemPrompt(styleGuide: string): string {
@@ -222,6 +224,24 @@ These signals are what makes content extractable by ChatGPT, Perplexity, and Goo
 - Housing era / architectural style referenced (Doelger, Eichler, Victorian, Craftsman, etc.)
 - Specific climate or terrain detail (fog belt, clay soil, WUI fire zone, etc.)
 
+## Meta title (the <title> tag — NOT the on-page H1)
+
+The post's H1 stays as the brief's editorial headline. You are writing a SEPARATE, shorter
+title that appears in Google results. These are different jobs and the SERP one is strict:
+
+- **Hard limit 60 characters.** Google truncates around 600px; anything past ~60 chars is
+  never seen by a searcher. Count them. A 61-character title is a failure, not a near-miss.
+- **Lead with the primary keyword**, as close to character 0 as reads naturally. If the post
+  targets a cost query, the word "Cost" belongs in the first half, not the last.
+- **Do NOT append the brand.** The site drops the "| Gadget Construction Inc." suffix for any
+  post that supplies a meta title, so spending characters on the company name wastes budget
+  the searcher would otherwise see.
+- Do not use a "Primary | Secondary" split unless the whole thing still fits in 60 — that
+  pattern is what pushed previous titles to 70+.
+- Include the year only when the post is genuinely year-specific (cost and comparison posts).
+- It must be unique against every title in the site inventory. Near-sibling posts (cost vs.
+  timeline vs. brand comparison on the same service) must be distinguishable at a glance.
+
 ## Voice guardrails
 - No banned phrases from the style guide ("we pride ourselves on," stock language, etc.)
 - Contractions preserved
@@ -230,11 +250,15 @@ These signals are what makes content extractable by ChatGPT, Perplexity, and Goo
 
 # Output format — this is strict
 
-Respond with EXACTLY three XML-tagged blocks, in order. No preamble, no commentary between them.
+Respond with EXACTLY four XML-tagged blocks, in order. No preamble, no commentary between them.
 
 <revised_post>
 (the full revised markdown of the post, including the new FAQ section before the CTA)
 </revised_post>
+
+<meta_title>
+(the SERP title — see the Meta title rules above. Plain text, one line, no quotes around it, no markdown.)
+</meta_title>
 
 <faqs>
 [
@@ -268,7 +292,7 @@ ${draft}
 ${JSON.stringify(inventory, null, 2)}
 </site_inventory>
 
-Apply the full SEO critique checklist. Return the three XML-tagged blocks per the output format.`;
+Apply the full SEO critique checklist. Return the four XML-tagged blocks per the output format.`;
 }
 
 async function critiqueAndRevise(
@@ -309,10 +333,14 @@ async function critiqueAndRevise(
   return parseCritiqueResponse(text.text);
 }
 
+/** Google truncates the SERP title around 600px, which is ~60 characters. */
+const META_TITLE_MAX = 60;
+
 function parseCritiqueResponse(raw: string): RevisionResult {
   const postMatch = raw.match(/<revised_post>([\s\S]*?)<\/revised_post>/);
   const faqsMatch = raw.match(/<faqs>([\s\S]*?)<\/faqs>/);
   const notesMatch = raw.match(/<seo_notes>([\s\S]*?)<\/seo_notes>/);
+  const metaMatch = raw.match(/<meta_title>([\s\S]*?)<\/meta_title>/);
 
   if (!postMatch) {
     throw new Error(
@@ -333,11 +361,53 @@ function parseCritiqueResponse(raw: string): RevisionResult {
     }
   }
 
+  // Strip quotes/markdown the model sometimes wraps the line in. Length is
+  // validated by the caller, which owns the fallback chain.
+  const metaTitle = metaMatch?.[1]
+    ?.trim()
+    .replace(/^#+\s*/, "")
+    .replace(/^["'`]|["'`]$/g, "")
+    .trim();
+
   return {
     revisedPost: postMatch[1].trim(),
     faqs,
     seoNotes: notesMatch?.[1]?.trim() ?? "",
+    metaTitle: metaTitle || undefined,
   };
+}
+
+/**
+ * Pick the SERP title, preferring the critique pass's line but falling back to
+ * the brief's own metaTitle. Briefs are authored with metaTitles that regularly
+ * run 65-75 chars, so length is checked on every candidate rather than trusted.
+ * Last resort is the longest-shot candidate over nothing at all: even an
+ * over-length metaTitle beats omitting the field, since omitting it re-appends
+ * the 27-char brand suffix to an already-long editorial headline.
+ */
+function resolveMetaTitle(
+  fromCritique: string | undefined,
+  fromBrief: string | undefined,
+): string | undefined {
+  const candidates = [fromCritique, fromBrief]
+    .map((c) => c?.trim())
+    .filter((c): c is string => Boolean(c));
+
+  const fitting = candidates.find((c) => c.length <= META_TITLE_MAX);
+  if (fitting) return fitting;
+
+  if (candidates.length === 0) {
+    console.warn("No meta title candidate — post will fall back to its H1.");
+    return undefined;
+  }
+
+  const shortest = candidates.reduce((a, b) => (a.length <= b.length ? a : b));
+  console.warn(
+    `No meta title candidate within ${META_TITLE_MAX} chars ` +
+      `(${candidates.map((c) => c.length).join(", ")}). ` +
+      `Using the shortest at ${shortest.length}: "${shortest}"`,
+  );
+  return shortest;
 }
 
 // ──────────── Call Claude ────────────
@@ -378,6 +448,7 @@ function insertPostIntoBlogData(
   brief: Brief,
   content: string,
   faqs: Array<{ question: string; answer: string }> = [],
+  metaTitle?: string,
 ): void {
   const file = readFileSync(BLOG_DATA_PATH, "utf8");
 
@@ -389,13 +460,17 @@ function insertPostIntoBlogData(
       ? `    faqs: ${JSON.stringify(faqs, null, 2).replace(/\n/g, "\n    ")},\n`
       : "";
 
+  const metaTitleField = metaTitle
+    ? `    metaTitle: ${JSON.stringify(metaTitle)},\n`
+    : "";
+
   const actualWordCount = content.split(/\s+/).filter(Boolean).length;
   const readingMinutes = Math.max(1, Math.round(actualWordCount / 250));
 
   const newEntry = `  {
     slug: "${brief.slug}",
     title: ${JSON.stringify(brief.title)},
-    excerpt:
+${metaTitleField}    excerpt:
       ${JSON.stringify(brief.excerpt)},
     date: "${brief.scheduledDate}",
     readingTime: "${readingMinutes} min read",
@@ -717,6 +792,7 @@ function createDraftPR(
   imagePath: string | null,
   seoNotes: string,
   faqCount: number,
+  metaTitle?: string,
 ): string {
   const branch = `drafts/${brief.slug}`;
 
@@ -764,10 +840,14 @@ Saved as \`public${imagePath}\` and wired to the post's \`featuredImage\` field.
 `
     : "";
 
+  const metaTitleLine = metaTitle
+    ? `**SERP title:** ${metaTitle} _(${metaTitle.length}/60 chars)_\n`
+    : `**SERP title:** ⚠️ none produced — the post will fall back to its H1 plus the brand suffix, which truncates in Google. Add a \`metaTitle\` before merging.\n`;
+
   const prBody = `## 📝 Auto-generated draft for ${brief.scheduledDate}
 
-**Title:** ${brief.title}
-**Primary keyword:** \`${brief.primaryKeyword}\`
+**Title (on-page H1):** ${brief.title}
+${metaTitleLine}**Primary keyword:** \`${brief.primaryKeyword}\`
 **Target service:** \`/services/${brief.relatedService}\`
 **Target word count:** ${brief.targetWordCount}
 **Generated with:** ${MODEL}
@@ -787,6 +867,7 @@ ${seoNotes}
 - [ ] CTA matches the brief
 - [ ] No banned phrases ("we pride ourselves on", stock language, etc.)
 - [ ] Headline and excerpt read well
+- [ ] SERP title is <=60 chars, leads with the primary keyword, and is distinct from sibling posts
 
 ## How to edit
 
@@ -852,9 +933,19 @@ async function main(): Promise<void> {
   const draft = await generatePost(next);
 
   // ── Pass 2: SEO critique + revision + FAQ generation ──
-  const { revisedPost, faqs, seoNotes } = await critiqueAndRevise(next, draft);
+  const {
+    revisedPost,
+    faqs,
+    seoNotes,
+    metaTitle: critiqueMetaTitle,
+  } = await critiqueAndRevise(next, draft);
+
+  const metaTitle = resolveMetaTitle(critiqueMetaTitle, next.metaTitle);
 
   console.log(`FAQs generated: ${faqs.length}`);
+  if (metaTitle) {
+    console.log(`Meta title (${metaTitle.length} chars): ${metaTitle}`);
+  }
   if (seoNotes) {
     console.log("\nSEO notes from critique pass:\n" + seoNotes);
   }
@@ -866,12 +957,14 @@ async function main(): Promise<void> {
     console.log(finalContent);
     console.log("\n──────────── FAQs ────────────\n");
     console.log(JSON.stringify(faqs, null, 2));
+    console.log("\n──────────── Meta title ────────────\n");
+    console.log(metaTitle ?? "(none — post falls back to its H1)");
     console.log("\n──────────── END DRY RUN ────────────\n");
     console.log("No files modified. No PR created.");
     return;
   }
 
-  insertPostIntoBlogData(next, finalContent, faqs);
+  insertPostIntoBlogData(next, finalContent, faqs, metaTitle);
 
   // Generate and save featured image (non-fatal — post can ship without one)
   let imagePath: string | null = null;
@@ -890,7 +983,7 @@ async function main(): Promise<void> {
   saveQueue(updatedQueue);
   console.log(`Updated ${next.slug} status: queued → drafted`);
 
-  const prUrl = createDraftPR(next, imagePath, seoNotes, faqs.length);
+  const prUrl = createDraftPR(next, imagePath, seoNotes, faqs.length, metaTitle);
 
   try {
     await sendDraftEmail(next, finalContent, prUrl, imagePath);

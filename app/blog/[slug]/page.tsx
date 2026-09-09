@@ -29,11 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post || !isPublished(post)) return {};
 
   return generatePageMetadata({
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     ogType: "article",
     publishedTime: post.date,
+    // A metaTitle is written to stand alone at ~60 chars; appending the brand
+    // template would only push it past what the SERP renders.
+    titleAbsolute: Boolean(post.metaTitle),
   });
 }
 

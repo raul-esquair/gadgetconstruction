@@ -44,6 +44,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-long-does-foundation-underpinning-take-san-francisco",
     featuredImage: "/images/blog-how-long-does-foundation-underpinning-take-san-francisco.png",
     title: "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
+    metaTitle: "How Long Does Foundation Underpinning Take in SF?",
     excerpt:
       "Foundation underpinning in San Francisco typically takes 6–16 weeks from engineering to final inspection — but the timeline splits into 5 phases most contractors don't explain. Here's what to actually expect.",
     date: "2026-09-07",
@@ -301,6 +302,7 @@ Gadget Construction (CA License #1132983) provides free on-site assessments with
     slug: "hardie-board-installation-cost-bay-area-2026",
     featuredImage: "/images/blog-hardie-board-installation-cost-bay-area-2026.png",
     title: "James Hardie Installation Cost in the Bay Area (2026): Real Numbers from 500+ Projects",
+    metaTitle: "Hardie Board Installation Cost in the Bay Area (2026)",
     excerpt:
       "James Hardie fiber cement installation costs $14–$22 per sq ft in the Bay Area — but the price varies by ~$8 depending on 6 factors most contractors don't itemize. Here's the real breakdown.",
     date: "2026-08-31",
@@ -563,6 +565,7 @@ Planning a Hardie installation? Gadget Construction (CA License #1132983) provid
     slug: "5-exterior-repairs-coastal-bay-area-homes-always-need",
     featuredImage: "/images/blog-5-exterior-repairs-coastal-bay-area-homes-always-need.png",
     title: "The 5 Exterior Repairs Coastal Bay Area Homes Always Need (Sunset, Marin, Pacifica, Daly City)",
+    metaTitle: "5 Exterior Repairs Coastal Bay Area Homes Always Need",
     excerpt:
       "Coastal Bay Area homes wear out differently than inland homes. Fog, salt air, and wind-driven rain guarantee these five exterior repairs — on a predictable cycle. Here's what to expect and when.",
     date: "2026-06-29",
@@ -805,6 +808,7 @@ We provide free exterior assessments with a written photo report documenting eve
     slug: "hillside-multi-level-deck-construction-sf-marin",
     featuredImage: "/images/blog-hillside-multi-level-deck-construction-sf-marin.png",
     title: "Hillside & Multi-Level Deck Construction in SF and Marin: What Makes It Different (and More Expensive)",
+    metaTitle: "Hillside Deck Construction in SF & Marin: Cost & Timeline",
     excerpt:
       "A deck on a steep SF or Marin hillside costs 30-60% more than a flat-lot deck — and for good reason. Here's what makes hillside deck construction different, what it actually costs, and what questions to ask your contractor.",
     date: "2026-06-22",
@@ -1084,6 +1088,7 @@ Planning a hillside deck in Twin Peaks, Bernal Heights, Noe Valley, [Mill Valley
     slug: "siding-replacement-cost-san-francisco-2026",
     featuredImage: "/images/blog-siding-replacement-cost-san-francisco-2026.png",
     title: "Siding Replacement Cost in San Francisco: Hardie, Wood, Cedar & Composite Compared",
+    metaTitle: "Siding Replacement Cost in San Francisco (2026)",
     excerpt:
       "Full-house siding replacement in San Francisco typically costs $25,000 to $85,000+. Here's what each material actually costs per square foot — plus the hidden costs most contractors don't mention in the bid.",
     date: "2026-06-15",
@@ -1347,6 +1352,7 @@ We've completed 500+ projects across [San Francisco](/service-areas/san-francisc
     slug: "dry-rot-bay-area-homes-spot-repair-cost",
     featuredImage: "/images/blog-dry-rot-bay-area-homes-spot-repair-cost.png",
     title: "Dry Rot in Bay Area Homes: How to Spot It Before It Eats Your Framing (and What Repair Actually Costs)",
+    metaTitle: "Dry Rot Repair Cost in the Bay Area (2026 Prices)",
     excerpt:
       "Dry rot isn't dry — it's active fungal decay, and it spreads. Here's how to spot it in your Bay Area home before it eats your framing, where to look first, and what repair actually costs.",
     date: "2026-06-08",
@@ -1611,6 +1617,7 @@ Gadget Construction provides free dry rot inspections with written findings and 
     slug: "cracked-stucco-san-francisco-patch-recoat-tear-off",
     featuredImage: "/images/blog-cracked-stucco-san-francisco-patch-recoat-tear-off.png",
     title: "Cracked Stucco in San Francisco: When to Patch, When to Re-Coat, When to Tear Off",
+    metaTitle: "Cracked Stucco in San Francisco: Patch or Tear Off?",
     excerpt:
       "Hairline crack or emergency? The answer depends on what's happening behind the surface. Here's how to diagnose stucco damage on your SF home — and what each repair option actually costs.",
     date: "2026-06-01",
@@ -1840,6 +1847,7 @@ CA License #1132983. 12+ years. 500+ Bay Area projects, including [stucco repair
     slug: "stucco-vs-hardie-board-vs-wood-siding-bay-area",
     featuredImage: "/images/blog-stucco-vs-hardie-board-vs-wood-siding-bay-area.png",
     title: "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes",
+    metaTitle: "Stucco vs Hardie Board vs Wood Siding (Bay Area 2026)",
     excerpt:
       "Fog, salt air, and fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare — including failure patterns we see every week.",
     date: "2026-05-25",
@@ -2098,6 +2106,7 @@ We'll walk your home, check your fire zone and coastal designation, and give you
     slug: "foundation-underpinning-cost-san-francisco",
     featuredImage: "/images/blog-foundation-underpinning-cost-san-francisco.png",
     title: "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
+    metaTitle: "Foundation Underpinning Cost in San Francisco (2026)",
     excerpt:
       "Foundation underpinning in San Francisco typically costs $15,000 to $50,000+. The method matters more than the price. Here's how helical piers, push piers, and slabjacking compare — with real SF soil conditions in mind.",
     date: "2026-05-18",
@@ -2377,6 +2386,7 @@ Schedule your free site assessment through our [contact page](/contact) — or e
     slug: "composite-vs-wood-decking-bay-area-2026",
     featuredImage: "/images/blog-composite-vs-wood-decking-bay-area-2026.png",
     title: "Composite vs Wood Decking: Why Bay Area Homeowners Are Switching in 2026",
+    metaTitle: "Composite vs Wood Decking: Bay Area Guide (2026)",
     excerpt:
       "Wood has a 30-year head start on composite. So why have most Bay Area homeowners we've worked with in 2026 chosen composite? Here's the honest breakdown — including when wood still wins.",
     date: "2026-05-11",
@@ -2583,6 +2593,7 @@ We'll walk your site, understand your architectural context, and give you an hon
     slug: "trex-vs-timbertech-vs-fiberon-bay-area-2026",
     featuredImage: "/images/blog-trex-vs-timbertech-vs-fiberon-bay-area-2026.png",
     title: "Trex vs TimberTech vs Fiberon: Which Composite Decking Wins in Bay Area Weather (2026)",
+    metaTitle: "Trex vs TimberTech vs Fiberon: Bay Area Guide (2026)",
     excerpt:
       "All three are solid composite decking brands. But Bay Area fog, salt air, and UV exposure expose different strengths. Here's how they compare — from a contractor certified in all three.",
     date: "2026-05-04",
@@ -2824,6 +2835,7 @@ We provide detailed, line-item estimates after a free site visit — with the sp
     slug: "composite-deck-cost-san-francisco",
     featuredImage: "/images/blog-composite-deck-cost-san-francisco.png",
     title: "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
+    metaTitle: "Composite Deck Cost in San Francisco (2026 Prices)",
     excerpt:
       "Composite decks in San Francisco typically run $15,000 to $60,000+. Here's what actually drives the range — with pricing from 500+ Bay Area projects, not national averages.",
     date: "2026-04-27",
@@ -3054,6 +3066,7 @@ We provide detailed, line-item estimates after a free site visit — no allowanc
   {
     slug: "home-remodel-cost-san-francisco-2026",
     title: "How Much Does a Home Remodel Cost in San Francisco? (2026 Guide)",
+    metaTitle: "Home Remodel Cost in San Francisco (2026 Guide)",
     excerpt:
       "San Francisco is one of the most expensive remodeling markets in the country. Here's what projects actually cost — with real numbers, not national averages.",
     date: "2026-04-01",
@@ -3137,6 +3150,7 @@ Gadget Construction provides detailed, itemized estimates with no obligation. We
     slug: "adu-construction-san-francisco-guide",
     title:
       "ADU Construction in SF: Costs, Permits & Everything You Need to Know",
+    metaTitle: "ADU Construction Cost & Permits in San Francisco",
     excerpt:
       "Thinking about building an ADU in San Francisco? Here's the complete guide — from California law to DBI permits to actual construction costs.",
     date: "2026-03-15",
@@ -3266,6 +3280,7 @@ No obligation. No pressure. Just the information you need to make a smart decisi
   {
     slug: "foundation-repair-signs-san-francisco",
     title: "5 Signs Your San Francisco Home Needs Foundation Repair",
+    metaTitle: "5 Signs Your San Francisco Home Needs Foundation Repair",
     excerpt:
       "Cracks in the walls? Doors that won't close? Here are the warning signs that your foundation needs attention — and what to do about them.",
     date: "2026-03-01",
