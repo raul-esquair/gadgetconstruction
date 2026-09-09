@@ -24,6 +24,15 @@ export interface FAQ {
 export interface BlogPost {
   slug: string;
   title: string;
+  /**
+   * SERP title, used in place of `title` in <title> when present.
+   * Google truncates around 60 characters, so the editorial headline in
+   * `title` (which stays the on-page H1) is usually far too long to survive
+   * intact. Keep this <=60 chars and lead with the query the post targets.
+   * When set, the `| Gadget Construction Inc.` layout suffix is dropped so
+   * none of that budget is spent on branding the searcher never sees.
+   */
+  metaTitle?: string;
   excerpt: string;
   content: string;
   date: string;

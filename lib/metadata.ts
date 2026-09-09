@@ -9,6 +9,12 @@ interface PageMetadataOptions {
   ogType?: "website" | "article";
   publishedTime?: string;
   noindex?: boolean;
+  /**
+   * Bypass the root layout's `%s | Gadget Construction Inc.` template so the
+   * whole ~60-char SERP budget belongs to `title`. Only set this when `title`
+   * is already written as a standalone SERP title.
+   */
+  titleAbsolute?: boolean;
 }
 
 export function generatePageMetadata({
@@ -19,11 +25,16 @@ export function generatePageMetadata({
   ogType = "website",
   publishedTime,
   noindex = false,
+  titleAbsolute = false,
 }: PageMetadataOptions): Metadata {
   const url = `${COMPANY.url}${path}`;
 
   return {
-    title,
+    // Only the <title> needs the {absolute} wrapper; the layout's title
+    // template does not apply to OG/Twitter, so those take the plain string.
+    // They receive the same (short) title, which suits social cards fine —
+    // they truncate around the same length the SERP does.
+    title: titleAbsolute ? { absolute: title } : title,
     description,
     openGraph: {
       title,
