@@ -1,11 +1,24 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 export async function POST(request: Request) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
     const { name, phone, email, service, timeline, scope, message } = body;
+    // Which button produced the lead, e.g. "Homepage hero picker — /".
+    const leadSource = [body.source, body.page]
+      .filter((v): v is string => typeof v === "string" && v.length > 0)
+      .map((v) => escapeHtml(v.slice(0, 120)))
+      .join(" — ");
 
     if (!name || !phone || !service) {
       return NextResponse.json(
@@ -74,6 +87,11 @@ export async function POST(request: Request) {
             <tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #eee; color: #888; vertical-align: top;">Scope</td>
               <td style="padding: 10px 0; border-bottom: 1px solid #eee; color: #222;">${scope}</td>
+            </tr>` : ""}
+            ${leadSource ? `
+            <tr>
+              <td style="padding: 10px 0; border-bottom: 1px solid #eee; color: #888; vertical-align: top;">Source</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #eee; color: #222;">${leadSource}</td>
             </tr>` : ""}
             ${message ? `
             <tr>

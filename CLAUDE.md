@@ -79,6 +79,7 @@ components/
   sections/                       # Full-width page sections
     Hero.tsx                      # Hero with bg image, Ken Burns, stagger, parallax (desktop only), imageAlt prop for SEO
     HeroCTA.tsx                   # Client wrapper for modal trigger in server Hero
+    HeroEstimateForm.tsx          # Homepage hero's desktop CTA: inline two-step form card (SSR'd, no modal)
     SectionCTA.tsx                # Client wrapper for modal trigger in server sections
     PageHeader.tsx                # Reusable dark page header for non-hero pages (extends behind transparent header)
     TrustBar.tsx                  # Marquee conveyor belt with 5 animated stats (slides up from bottom)
@@ -106,6 +107,8 @@ components/
   seo/
     JsonLd.tsx                    # Structured data (LocalBusiness, Service, FAQ, Article, Breadcrumb, HowTo)
     Breadcrumbs.tsx               # Visual breadcrumbs + BreadcrumbList schema
+  analytics/
+    PhoneClickTracker.tsx         # One delegated listener → phone_click for every tel: link
 
 lib/                              # Data & utilities
   constants.ts                    # COMPANY, SERVICES, NAV_LINKS, TESTIMONIALS, DIFFERENTIATORS, PROCESS_STEPS, STATS, TRUST_BAR_ITEMS
@@ -113,7 +116,7 @@ lib/                              # Data & utilities
   services-data.ts                # SERVICE_PAGES — full copy for each service page
   service-areas-data.ts           # SERVICE_AREAS — 31 cities with tier, county, FAQs, content
   blog-data.ts                    # BLOG_POSTS array (3 seed posts)
-  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (18 projects, 4 with real images)
+  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (15 projects, all real images)
   about-data.ts                   # FOUNDER_STORY, VALUES, CREDENTIALS
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
@@ -126,6 +129,7 @@ lib/                              # Data & utilities
   blur.ts                         # blurProps() helper for next/image placeholders
   blur-map.json                   # Auto-generated path → base64 blur lookup (npm run blur:gen)
   utils.ts                        # cn() helper + getBookingUrgency() + prefersReducedTransparency()
+  track.ts                        # track() → GA4 funnel events; no-op until NEXT_PUBLIC_GA_MEASUREMENT_ID is set
   logo-base64.ts                  # White logo as base64 constant (used by OG image)
 
 hooks/
@@ -297,14 +301,20 @@ import { EstimateButton } from "@/components/ui/EstimateModal";
 - `HeroCTA` — renders EstimateButton inside the Hero section
 - `SectionCTA` — renders EstimateButton with centered layout for any section
 
-The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all section CTAs.
+The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all section CTAs. On the homepage, desktop never gets the modal from the hero — the hero *is* the form; the header button only pops in once that form has scrolled away.
+
+**Attribution:** `open(trigger, { source })`. `source` is a label like `"Header button"`; the form posts it with `page` and the lead email shows it as a **Source** row. Give every new trigger a `source` (`EstimateButton` takes it as a prop; inline `MultiStepForm`s take it directly), or its leads arrive as a generic "Estimate button".
+
+**Two-step form (homepage only):** `MultiStepForm twoStep` runs service → contact, skipping timeline/budget. Tapping a service advances by itself (Continue only reappears after Back). Height is trimmed for the hero: no "Step N of 2" line (the progress bar says it; an `sr-only` live region reads it to screen readers), and name + phone share a row. Its progress bar is compact and centred, with a forward nudge on step 1: a red glint runs along the connector (`step-glint`) and the "2" pings as it lands (`step-ping`). Both are keyframes in globals.css sharing one 3.2s cycle so the ping always meets the glint, with a rest at the end so it reads as a gesture. They unmount on step 2, where the connector fills via `scale-x` instead. As `animate-[…]` utilities they fall under the global reduced-motion kill switch, and their resting state is `opacity-0`, so reduced motion shows a plain static bar. The optional message box stays — the owner wanted the extra detail. In the hero card, step 1 is ~370px and step 2 ~475px; the card grows evenly about its centre and the headline doesn't move. Everything on `/` uses it — hero card, `CTABlock twoStep`, and the modal (`EstimateModalProvider` sets it from `pathname === "/"` and keys the form on it, since step N means a different step in each mode). Every other page keeps the 3-step form.
 
 ### Animation System (Four Layers)
 
 **Layer 1: Hero Stagger + Parallax (`Hero.tsx`)**
 - Hero is a client component with `useState` for load trigger
 - Entrance arms on a **double `requestAnimationFrame`, never a timer**. The `<h1>` is the LCP element and Chrome does not count an `opacity: 0` element as painted, so every ms of arming delay is a ms of LCP. A `setTimeout(100)` here previously cost ~100ms for nothing.
-- Elements stagger in on page load: urgency badge (0ms) → headline (60ms) → subheadline (160ms) → CTA (260ms) → trust line (360ms), each 700ms. Keep the cascade short for the same LCP reason.
+- Elements stagger in on page load: urgency badge (0ms) → headline (60ms) → subheadline/highlights (160ms) → aside (200ms) → CTA (260ms), each 700ms. Keep the cascade short for the same LCP reason.
+- Homepage-only props (all opt-in, other heroes are untouched): `headlineClassName` (merged over the size scale via `cn`), `highlights` (checkmark list in place of the subheadline), `aside` (right-hand column at `lg+`; the CTA button then renders below `lg` only).
+- **With an `aside`, `data-hero-cta` moves to the whole grid.** The header pop-in and `MobileBottomBar` watch the first `[data-hero-cta]` and test `bottom < 0`. Put it on an element that is `display:none` at some breakpoint and it reports `bottom: 0` forever, so they never appear.
 - Uses blur-to-sharp transition (`blur-[2px]` → `blur-0`) for cinematic feel
 - Hero background image has Ken Burns effect (`@keyframes ken-burns`, 20s cycle)
 - **Parallax** (desktop only, `md:` and up): background moves at 0.3x scroll speed via `requestAnimationFrame`. `scale(1.1)` buffer prevents edge reveal. Disabled on mobile to avoid image cutoff.
@@ -524,6 +534,8 @@ These were research-backed decisions — don't revert without reason:
 - **"Minutes" not "24 hours"** response time promise (15-22% conversion lift)
 - **Urgency badge** on hero — context-aware via `getBookingUrgency()` in `lib/utils.ts`, auto-updates by season/year
 - **3 CTAs max on homepage** (hero, after testimonials, CTABlock) — reduced from 5 to lower cognitive load
+- **Homepage hero has ONE action** (2026-09-11). Desktop: the two-step form inline on the right, submitting in place — no modal. Mobile/tablet (below `lg`): a single full-width "Get Free Quote" button that opens the modal, because there's no room for the form. The modal is reserved for after the visitor scrolls out of the hero. The phone number was removed from the hero on purpose, to avoid decision fatigue — it stays in the header, the mobile bottom bar and the modal. The hero is deliberately sparse: badge, headline, three checkmarks, form. The license line and review line were tried and removed for focus. Do not add a second hero CTA or more hero copy back.
+- **Hero headline names the work and the place** — "Bay Area Foundations, Remodels & Repairs — Without the Contractor Nightmares". The old pain-only headline never said what Gadget builds; a searcher could not tell above the fold.
 - **TrustBar as marquee** not static — adds visual energy + fits 5 stats without taking vertical space
 - **Pricing ranges on service pages** (10-20% conversion lift vs. no pricing)
 - **"Why Us vs Others" differentiation section** using anti-contractor framework
@@ -539,6 +551,7 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Pending
 
+- **Roofing retirement — off-site cleanup (owner/agency, not code).** The site is done (PR #29, live 2026-09-11). Still outstanding: remove roofing from the Google Business Profile service list and from Yelp, Houzz, BuildZoom, Angi and any other directory; in GSC, run URL Inspection on `/services` → Request indexing so Google picks up the redirect sooner. The Google Ads plan never included roofing, so ads need nothing.
 - **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live (separate from CallRail which is now wired up for call attribution)
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
@@ -547,9 +560,11 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Done (Recently Completed)
 
+- **Homepage hero CRO pass (2026-09-11)** — new headline naming services + region (a no-break space before the em dash so it never starts a line); subheadline paragraph → 3 checkmark proof points; trust line, review line, phone link and scroll chevron removed; the CTA is an inline two-step form card on desktop (`HeroEstimateForm` via `Hero aside`) and a full-width "Get Free Quote" modal button below `lg`. The homepage's form is two-step everywhere (hero, modal, CTA block). Headline sizes: 26px mobile / 40px `lg` / 48px `xl` — 4 lines at every width, and at 1440×900 the whole hero is 720px. An interim version that used six service chips to open the modal was replaced the same day. Measurement shipped alongside: every lead email now carries a Source row (which trigger + page), and GA4 funnel events (`estimate_open`, `estimate_step`, `generate_lead`, `phone_click`) fire once `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set in Netlify. Events go to GA4 only, never the Ads tag, so Smart Bidding's inputs are unchanged.
+
 - **New homepage hero (2026-09-11)** — `/images/hero-foundation-crew.jpg` replaces the interim dusk-deck placeholder that stood in after roofing was retired. It is a real Gadget job photo of the crew tying rebar in a foundation trench, lightly enhanced in ChatGPT. Converted from a 3.0 MB PNG to a 370 KB mozjpeg (the hero `<h1>` is the LCP element). Desktop crop puts the red-shirted worker right of the headline; the mobile portrait crop centers the rebar trench and cuts him off at the edge.
 
-- **Roofing retired as a service (2026-09-09)** — the owner pulled roofing from the business, so it came out of the site entirely. Removed: `/services/roofing` (301 → `/services` via `next.config.ts`, because the URL was indexed), the `Roofing` entry in `SERVICES`, its `SERVICE_PAGES` block, `SERVICE_PRICING.roofing`, the `roofing` gallery category and its one project, the roofing option in `MultiStepForm`, the roofing `Offer` in `localBusinessSchema()`, and `"Roofing"` from `knowsAbout` in `lib/seo/entities.ts`. `exterior-repairs` took roofing's slot in the `ServicesGrid` bento (it had never been in the grid), which keeps the 2-large + 4-compact layout intact. Across the 31 city pages: 21 `topServices` entries, 10 roofing FAQs, 17 meta descriptions/hero subheadlines, and 11 body passages were purged or rewritten — Sausalito got a replacement salt-air FAQ so it stayed at its tier-3 floor of 3. Three blog posts had `/services/roofing` links repointed to `/services/exterior-repairs`. Seven images deleted. Roof language now survives only as architectural context (kickout flashing, rooflines, roof trusses, Eichler flat roofs), which is correct for the dry-rot content and reads as expertise, not as a service offer.
+- **Roofing retired as a service (2026-09-09)** — the owner pulled roofing from the business, so it came out of the site entirely. Removed: `/services/roofing` (permanent redirect → `/services` via `next.config.ts`, because the URL was indexed; Next.js answers `permanent: true` with a **308**, which Google treats exactly like a 301), the `Roofing` entry in `SERVICES`, its `SERVICE_PAGES` block, `SERVICE_PRICING.roofing`, the `roofing` gallery category and its one project, the roofing option in `MultiStepForm`, the roofing `Offer` in `localBusinessSchema()`, and `"Roofing"` from `knowsAbout` in `lib/seo/entities.ts`. `exterior-repairs` took roofing's slot in the `ServicesGrid` bento (it had never been in the grid), which keeps the 2-large + 4-compact layout intact. Across the 31 city pages: 21 `topServices` entries, 10 roofing FAQs, 17 meta descriptions/hero subheadlines, and 11 body passages were purged or rewritten — Sausalito got a replacement salt-air FAQ so it stayed at its tier-3 floor of 3. Three blog posts had `/services/roofing` links repointed to `/services/exterior-repairs`. Seven images deleted. Shipped in PR #29 (merged + live 2026-09-11). Roof language now survives only as architectural context (kickout flashing, rooflines, roof trusses, Eichler flat roofs), which is correct for the dry-rot content and reads as expertise, not as a service offer.
 
 - **SERP titles fixed sitewide + in the pipeline (2026-09-08)** — new optional `BlogPost.metaTitle` and `generatePageMetadata({ titleAbsolute })` decouple the Google title from the on-page H1; all 15 posts rewritten to 47-57 chars. The pipeline was writing the defect: briefs already carried a `metaTitle` that `generate-post.ts` never read, and the proposal prompt never capped its length. Critique pass now emits a `<meta_title>` block under 60-char rules, `resolveMetaTitle()` owns the fallback chain (critique line → brief's metaTitle → shortest over-length candidate → omit), `propose-next-batch.ts` caps at 60, and the draft PR body prints the title with its character count. PR #27. Driven by GSC: the blog earned 69% of impressions but converted at 0.3-0.7% CTR against ~2.5-5% par for its positions, while the homepage sat at par.
 - **Apple fluid-interface pass (2026-08-28)** — audited every animated surface against Apple's *Designing Fluid Interfaces* rules. New `lib/spring.ts` (hand-written, no dependency, per the zero-animation-libraries rule), `lib/scroll-driver.ts` (one shared scroll loop, read/write batched), `lib/button-styles.ts`, `hooks/useReducedMotion.ts`. `BeforeAfter` rebuilt on Pointer Events with capture, grab offset, `touch-pan-y` and momentum; `EstimateModal` rebuilt as an interruptible spring-driven sheet with trigger-anchored `transform-origin`, focus trap/restore and drag-to-dismiss; the 150ms step gate removed from `MultiStepForm`; Hero entrance re-armed on rAF and shortened for LCP; four `max-h` collapses converted to `grid-rows`; size-specific tracking/leading added to the type scale; header made translucent chrome; `prefers-reduced-motion` extended to the four unguarded ambient loops, plus new `prefers-reduced-transparency` and `prefers-contrast` support. Deleted 70 lines of unreferenced scroll-timeline CSS and the dead `--font-size-*` tokens. All eight areas verified manually in the browser. Branch `fluid-interface-pass`.
@@ -756,7 +771,7 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 ## Key Gotchas
 
 - **Phone photos carry an EXIF orientation tag, and only some tools honour it.** Five images in `public/images` (`dry-rot-hero`, `stucco-hero`, `siding-hero`, `dry-rot-before`, `dry-rot-after`) are stored landscape with orientation `6`, meaning a viewer is expected to rotate them 90° to display them upright and portrait. `next/image` honours the tag, so the rendered photo has always been correct — and `scripts/optimize-images.ts` already calls `.rotate()`. `scripts/generate-blur-map.mjs` did **not**, so it built every placeholder from the unrotated pixels and painted a landscape blur under a portrait photo — a sideways smear that snapped upright on load. Fixed 2026-09-09 by piping through `sharp(raw).rotate()` before `getPlaiceholder`. Any new tool that reads these files directly needs the same `.rotate()`, and any new phone photo added to `public/images` inherits the same tag. Check with `sharp(f).metadata().orientation` — anything other than `1` or undefined needs rotating before you measure or sample it.
-- **Roofing is retired — do not reintroduce it.** No service page, no `SERVICES` entry, no form option, no schema `Offer`, no gallery category. `/services/roofing` is a permanent redirect in `next.config.ts`; deleting that redirect resurrects a 404 on a URL Google has indexed. Roof *vocabulary* is still correct where a roof is the cause of an exterior-repair problem (kickout flashing, roof-to-wall transitions, fascia) or where it describes the architecture (Eichler flat roofs, Victorian rooflines) — that copy is deliberate and should stay. What must never come back is roofing framed as work Gadget sells. The AI content pipeline does not know this: `content/post-queue.json` briefs and `/next-content-batch` proposals should be checked for roofing angles before they draft.
+- **Roofing is retired — do not reintroduce it.** No service page, no `SERVICES` entry, no form option, no schema `Offer`, no gallery category. `/services/roofing` is a permanent redirect in `next.config.ts`; deleting that redirect resurrects a 404 on a URL Google has indexed. Roof *vocabulary* is still correct where a roof is the cause of an exterior-repair problem (kickout flashing, roof-to-wall transitions, fascia) or where it describes the architecture (Eichler flat roofs, Victorian rooflines) — that copy is deliberate and should stay. What must never come back is roofing framed as work Gadget sells. The content pipeline is mostly covered: `propose-next-batch.ts` builds its service list from `SERVICES`, which no longer has roofing. But it also feeds the model 90 days of GSC queries, and the site ranked for roofing terms, so a proposal can still chase a roofing query — reject any proposal PR that does.
 - **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
 - **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards
 - **Parallax is desktop-only** — `scale(1.1)` causes image cutoff on mobile viewports

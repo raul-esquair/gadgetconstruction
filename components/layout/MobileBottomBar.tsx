@@ -65,7 +65,7 @@ export default function MobileBottomBar() {
         </a>
         <button
           ref={estimateRef}
-          onClick={() => open(estimateRef.current)}
+          onClick={() => open(estimateRef.current, { source: "Mobile bottom bar" })}
           className="flex items-center justify-center gap-2 py-3.5 text-sm font-semibold text-primary btn-concrete font-heading cursor-pointer transition-transform duration-100 ease-out active:scale-[0.97] motion-reduce:active:scale-100"
         >
           <FileText size={18} />

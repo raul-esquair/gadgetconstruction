@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import HeroEstimateForm from "@/components/sections/HeroEstimateForm";
 import TrustBar from "@/components/sections/TrustBar";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import DifferentiationSection from "@/components/sections/DifferentiationSection";
@@ -17,14 +18,21 @@ export default function HomePage() {
     <>
       <JsonLd data={howToSchema(PROCESS_STEPS)} />
       <Hero
-        headline="Get Rid of Contractor Nightmares Once and For All"
-        subheadline="500+ Bay Area projects across 31 cities. Fixed-price contracts. Full permit handling. A 5-year warranty. And a crew that responds in minutes, not days."
+        // No-break space keeps the dash on the end of a line, never the start
+        headline={"Bay Area Foundations, Remodels & Repairs — Without the Contractor Nightmares"}
+        headlineClassName="text-[1.625rem] lg:text-[2.5rem] xl:text-5xl text-balance"
+        highlights={[
+          "Fixed-price contracts",
+          "We handle every permit",
+          "5-year workmanship warranty",
+        ]}
         backgroundImage="/images/hero-foundation-crew.jpg"
         imageAlt="Gadget Construction crew tying rebar in a trenched concrete foundation footing in a Bay Area backyard"
         urgencyText={getBookingUrgency()}
         openModal
-        showTrustPills
-        showScrollIndicator
+        ctaText="Get Free Quote"
+        showPhone={false}
+        aside={<HeroEstimateForm />}
       />
       <section className="bg-white border-b border-neutral-200 py-3 md:py-4">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-center">
@@ -38,7 +46,7 @@ export default function HomePage() {
       <GallerySection showCTA={false} />
       <TestimonialsSection />
       <ServiceArea showCTA={false} />
-      <CTABlock />
+      <CTABlock twoStep />
     </>
   );
 }
