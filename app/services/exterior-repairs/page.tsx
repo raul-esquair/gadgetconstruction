@@ -73,7 +73,7 @@ export default function ExteriorRepairsPage() {
         headline={data.hero.headline}
         subheadline={data.hero.subheadline}
         ctaText={data.hero.ctaText}
-        backgroundImage="/images/why-choose-us-bg.jpg"
+        backgroundImage="/images/stucco-wide-after.jpg"
         imageAlt="Finished residential exterior in the San Francisco Bay Area after dry rot repair and siding work by Gadget Construction"
         openModal
         compact

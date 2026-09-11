@@ -16,7 +16,6 @@ export const PROJECT_CATEGORIES = [
   { label: "Foundations", slug: "concrete-foundations" },
   { label: "Retaining Walls", slug: "retaining-walls" },
   { label: "Decks", slug: "composite-decks" },
-  { label: "Roofing", slug: "roofing" },
   { label: "ADUs", slug: "adu-construction" },
 ];
 
@@ -141,16 +140,6 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     description: "Built a spacious gray composite deck designed for outdoor entertaining — featuring a modern fire pit, patio heater, lounge seating area, built-in BBQ zone under a steel pergola, and lush perimeter landscaping for privacy.",
     scope: ["Gray composite decking", "Oval fire pit with bench seating", "Steel pergola with BBQ zone", "Patio heater integration", "Privacy landscaping"],
     image: "/images/gallery-composite-deck-firepit.jpg",
-  },
-  {
-    slug: "richmond-roof-replacement",
-    title: "Complete Re-Roof with Architectural Shingles",
-    category: "Roofing",
-    categorySlug: "roofing",
-    location: "Bay Area",
-    description: "Full tear-off and re-roof on a modern home with a multi-angle roofline — new architectural shingles, ridge vents, skylights preserved, and clean valley flashing throughout.",
-    scope: ["Full tear-off & re-roof", "Architectural shingles", "Ridge vent installation", "Skylight flashing", "Title 24 compliant"],
-    image: "/images/gallery-roofing-shingles.jpg",
   },
   {
     slug: "berkeley-backyard-adu",

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     default: `${COMPANY.name} | Bay Area General Contractor | Licensed & Insured`,
     template: `%s | ${COMPANY.name}`,
   },
-  description: `${COMPANY.name} — licensed Bay Area general contractor serving 31 cities across 6 counties for 12+ years. Concrete foundations, remodels, ADUs, decks, roofing, retaining walls & exterior repairs. 500+ projects completed. Free estimates. CA Lic #${COMPANY.license}.`,
+  description: `${COMPANY.name} — licensed Bay Area general contractor serving 31 cities across 6 counties for 12+ years. Concrete foundations, remodels, ADUs, decks, retaining walls & exterior repairs. 500+ projects completed. Free estimates. CA Lic #${COMPANY.license}.`,
   openGraph: {
     type: "website",
     locale: "en_US",

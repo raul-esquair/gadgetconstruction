@@ -78,15 +78,6 @@
     ]
   },
   {
-    "url": "/services/roofing",
-    "type": "service",
-    "title": "Roofing",
-    "summary": "Weather-tight protection installed right the first time",
-    "tags": [
-      "roofing"
-    ]
-  },
-  {
     "url": "/services/adu-construction",
     "type": "service",
     "title": "ADU Construction",
@@ -443,6 +434,126 @@
       "city",
       "santa-clara-county",
       "tier-1"
+    ]
+  },
+  {
+    "url": "/blog/how-long-does-foundation-underpinning-take-san-francisco",
+    "type": "blog",
+    "title": "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
+    "summary": "Foundation underpinning in San Francisco typically takes 6–16 weeks from engineering to final inspection — but the timeline splits into 5 phases most contractors don't explain. Here's what to actually expect.",
+    "tags": [
+      "concrete-foundations",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/hardie-board-installation-cost-bay-area-2026",
+    "type": "blog",
+    "title": "James Hardie Installation Cost in the Bay Area (2026): Real Numbers from 500+ Projects",
+    "summary": "James Hardie fiber cement installation costs $14–$22 per sq ft in the Bay Area — but the price varies by ~$8 depending on 6 factors most contractors don't itemize. Here's the real breakdown.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
+    "type": "blog",
+    "title": "The 5 Exterior Repairs Coastal Bay Area Homes Always Need (Sunset, Marin, Pacifica, Daly City)",
+    "summary": "Coastal Bay Area homes wear out differently than inland homes. Fog, salt air, and wind-driven rain guarantee these five exterior repairs — on a predictable cycle. Here's what to expect and when.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+    "type": "blog",
+    "title": "Hillside & Multi-Level Deck Construction in SF and Marin: What Makes It Different (and More Expensive)",
+    "summary": "A deck on a steep SF or Marin hillside costs 30-60% more than a flat-lot deck — and for good reason. Here's what makes hillside deck construction different, what it actually costs, and what questions to ask your contractor.",
+    "tags": [
+      "composite-decks",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/siding-replacement-cost-san-francisco-2026",
+    "type": "blog",
+    "title": "Siding Replacement Cost in San Francisco: Hardie, Wood, Cedar & Composite Compared",
+    "summary": "Full-house siding replacement in San Francisco typically costs $25,000 to $85,000+. Here's what each material actually costs per square foot — plus the hidden costs most contractors don't mention in the bid.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+    "type": "blog",
+    "title": "Dry Rot in Bay Area Homes: How to Spot It Before It Eats Your Framing (and What Repair Actually Costs)",
+    "summary": "Dry rot isn't dry — it's active fungal decay, and it spreads. Here's how to spot it in your Bay Area home before it eats your framing, where to look first, and what repair actually costs.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+    "type": "blog",
+    "title": "Cracked Stucco in San Francisco: When to Patch, When to Re-Coat, When to Tear Off",
+    "summary": "Hairline crack or emergency? The answer depends on what's happening behind the surface. Here's how to diagnose stucco damage on your SF home — and what each repair option actually costs.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "type": "blog",
+    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes",
+    "summary": "Fog, salt air, and fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare — including failure patterns we see every week.",
+    "tags": [
+      "exterior-repairs",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/foundation-underpinning-cost-san-francisco",
+    "type": "blog",
+    "title": "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
+    "summary": "Foundation underpinning in San Francisco typically costs $15,000 to $50,000+. The method matters more than the price. Here's how helical piers, push piers, and slabjacking compare — with real SF soil conditions in mind.",
+    "tags": [
+      "concrete-foundations",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/composite-vs-wood-decking-bay-area-2026",
+    "type": "blog",
+    "title": "Composite vs Wood Decking: Why Bay Area Homeowners Are Switching in 2026",
+    "summary": "Wood has a 30-year head start on composite. So why have most Bay Area homeowners we've worked with in 2026 chosen composite? Here's the honest breakdown — including when wood still wins.",
+    "tags": [
+      "composite-decks",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026",
+    "type": "blog",
+    "title": "Trex vs TimberTech vs Fiberon: Which Composite Decking Wins in Bay Area Weather (2026)",
+    "summary": "All three are solid composite decking brands. But Bay Area fog, salt air, and UV exposure expose different strengths. Here's how they compare — from a contractor certified in all three.",
+    "tags": [
+      "composite-decks",
+      "blog"
+    ]
+  },
+  {
+    "url": "/blog/composite-deck-cost-san-francisco",
+    "type": "blog",
+    "title": "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
+    "summary": "Composite decks in San Francisco typically run $15,000 to $60,000+. Here's what actually drives the range — with pricing from 500+ Bay Area projects, not national averages.",
+    "tags": [
+      "composite-decks",
+      "blog"
     ]
   },
   {

@@ -10,8 +10,8 @@ import { blurProps } from "@/lib/blur";
  *
  * Beyond UX, this is a crawl path: it puts real contextual links from the
  * service pages into blog posts that Google has never fetched. Renders nothing
- * when a service has no curated guides, so roofing and retaining-walls stay
- * clean until they have content.
+ * when a service has no curated guides, so retaining-walls stays
+ * clean until it has content.
  */
 export default function ServiceGuides({
   serviceSlug,

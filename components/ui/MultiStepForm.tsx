@@ -7,7 +7,6 @@ import {
   Layers,
   Hammer,
   Fence,
-  Home,
   Building2,
   Wrench,
   ArrowRight,
@@ -23,7 +22,6 @@ const SERVICE_OPTIONS = [
   { value: "retaining-walls", label: "Retaining Walls", icon: Layers },
   { value: "complete-remodel", label: "Complete Remodel", icon: Hammer },
   { value: "composite-decks", label: "Composite Decks", icon: Fence },
-  { value: "roofing", label: "Roofing", icon: Home },
   { value: "adu-construction", label: "ADU Construction", icon: Building2 },
   { value: "concrete-foundations", label: "Concrete Foundations & Slabs", icon: Landmark },
 ];

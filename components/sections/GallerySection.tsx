@@ -132,11 +132,11 @@ export default function GallerySection({ showCTA = true }: GallerySectionProps) 
         <PixelReveal>
           <div className="max-w-3xl mx-auto">
             <BeforeAfter
-              beforeImage="/images/roofing-before.jpg"
-              afterImage="/images/roofing-after.jpg"
-              beforeAlt="Damaged gazebo roof before replacement by Gadget Construction in the Bay Area"
-              afterAlt="Newly installed shingle roof on gazebo after replacement by Gadget Construction in the Bay Area"
-              caption="Gazebo Roof Replacement — Full tear-off and re-roof with architectural shingles"
+              beforeImage="/images/stucco-wide-before.jpg"
+              afterImage="/images/stucco-wide-after.jpg"
+              beforeAlt="Bay Area home stripped to wire lath and building paper before re-stucco by Gadget Construction"
+              afterAlt="Same Bay Area home with a finished stucco exterior after re-stucco by Gadget Construction"
+              caption="Full Re-Stucco — Tear-off to lath, new weather barrier, three-coat stucco"
             />
           </div>
         </PixelReveal>
