@@ -6,7 +6,9 @@ import Footer from "@/components/layout/Footer";
 import MobileBottomBar from "@/components/layout/MobileBottomBar";
 import { EstimateModalProvider } from "@/components/ui/EstimateModal";
 import JsonLd, { localBusinessSchema } from "@/components/seo/JsonLd";
+import PhoneClickTracker from "@/components/analytics/PhoneClickTracker";
 import { COMPANY } from "@/lib/constants";
+import { GA_MEASUREMENT_ID } from "@/lib/track";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -76,8 +78,9 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-16885734093"
         />
         <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16885734093');`}
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16885734093');${GA_MEASUREMENT_ID ? `gtag('config','${GA_MEASUREMENT_ID}');` : ""}`}
         </Script>
+        <PhoneClickTracker />
         <EstimateModalProvider>
           <a
             href="#main-content"

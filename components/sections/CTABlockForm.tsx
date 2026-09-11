@@ -8,7 +8,7 @@ const MultiStepForm = dynamic(() => import("@/components/ui/MultiStepForm"), {
   loading: () => <div className="h-[440px]" aria-hidden="true" />,
 });
 
-export default function CTABlockForm() {
+export default function CTABlockForm({ twoStep = false }: { twoStep?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
 
@@ -34,7 +34,7 @@ export default function CTABlockForm() {
 
   return (
     <div ref={ref}>
-      {shouldLoad ? <MultiStepForm variant="light" /> : <div className="h-[440px]" aria-hidden="true" />}
+      {shouldLoad ? <MultiStepForm variant="light" source="Inline form (CTA block)" twoStep={twoStep} /> : <div className="h-[440px]" aria-hidden="true" />}
     </div>
   );
 }

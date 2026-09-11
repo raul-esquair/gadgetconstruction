@@ -15,7 +15,7 @@ export default function SectionCTA({
 }: SectionCTAProps) {
   return (
     <div className="text-center mt-10">
-      <EstimateButton variant={variant} size={size}>
+      <EstimateButton variant={variant} size={size} source="Section button">
         {children}
       </EstimateButton>
     </div>

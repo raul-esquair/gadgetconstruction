@@ -16,6 +16,7 @@ import {
 import Button from "@/components/ui/Button";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/track";
 
 const SERVICE_OPTIONS = [
   { value: "exterior-repairs", label: "Exterior Repairs", icon: Wrench },
@@ -25,6 +26,14 @@ const SERVICE_OPTIONS = [
   { value: "adu-construction", label: "ADU Construction", icon: Building2 },
   { value: "concrete-foundations", label: "Concrete Foundations & Slabs", icon: Landmark },
 ];
+
+type StepId = "service" | "project" | "contact";
+
+const STEP_LABELS: Record<StepId, string> = {
+  service: "Select your service",
+  project: "Tell us about your project",
+  contact: "Your contact info",
+};
 
 const TIMELINE_OPTIONS = [
   { value: "asap", label: "As soon as possible" },
@@ -45,14 +54,27 @@ interface MultiStepFormProps {
   variant?: "light" | "dark";
   onSuccess?: () => void;
   className?: string;
+  /** Lead-attribution label, sent with the submission. */
+  source?: string;
+  /**
+   * Service → contact, skipping timeline/budget. Picking a service advances
+   * on its own, so the whole form is one tap plus the contact fields.
+   */
+  twoStep?: boolean;
 }
 
 export default function MultiStepForm({
   variant = "light",
   onSuccess,
   className,
+  source = "Estimate form",
+  twoStep = false,
 }: MultiStepFormProps) {
+  const steps: StepId[] = twoStep
+    ? ["service", "contact"]
+    : ["service", "project", "contact"];
   const [step, setStep] = useState(1);
+  const current = steps[step - 1];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -84,10 +106,10 @@ export default function MultiStepForm({
   function validateStep(): boolean {
     const newErrors: Record<string, string> = {};
 
-    if (step === 1 && !formData.service) {
+    if (current === "service" && !formData.service) {
       newErrors.service = "Please select a service";
     }
-    if (step === 3) {
+    if (current === "contact") {
       if (!formData.name.trim()) newErrors.name = "Please enter your name";
       if (!formData.phone.trim()) newErrors.phone = "Please enter your phone number";
       if (!formData.email.trim()) {
@@ -101,11 +123,21 @@ export default function MultiStepForm({
     return Object.keys(newErrors).length === 0;
   }
 
+  function advance(service: string) {
+    track("estimate_step", { step_completed: step, service, source });
+    setDirection("forward");
+    setStep((s) => Math.min(s + 1, steps.length));
+    setEntering(true);
+  }
+
   function nextStep() {
     if (!validateStep()) return;
-    setDirection("forward");
-    setStep((s) => Math.min(s + 1, 3));
-    setEntering(true);
+    advance(formData.service);
+  }
+
+  function selectService(value: string) {
+    updateField("service", value);
+    if (twoStep) advance(value);
   }
 
   function prevStep() {
@@ -135,11 +167,12 @@ export default function MultiStepForm({
       await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, source, page: window.location.pathname }),
       });
     } catch {
       // Show success regardless for UX
     }
+    track("generate_lead", { service: formData.service, source });
     setIsSubmitting(false);
     setIsSubmitted(true);
     onSuccess?.();
@@ -170,42 +203,85 @@ export default function MultiStepForm({
     );
   }
 
+  const stepDot = (s: number) => (
+    <div
+      className={cn(
+        "relative w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-heading shrink-0 transition-colors",
+        s <= step
+          ? "bg-accent-orange text-white"
+          : isDark
+          ? "bg-white/10 text-white/40"
+          : "bg-neutral-200 text-neutral-400"
+      )}
+    >
+      {s < step ? <CheckCircle size={14} /> : s}
+    </div>
+  );
+
   return (
     <div className={className}>
-      {/* Progress Bar */}
-      <div className="flex items-center gap-2 mb-6">
-        {[1, 2, 3].map((s) => (
-          <div key={s} className="flex-1 flex items-center gap-2">
+      {twoStep ? (
+        <>
+          {/* Compact, centred, and nudging forward: a glint runs toward
+              step 2 and step 2 pings as it lands. Stops once step 2 is
+              reached; the line fills from the left instead. */}
+          <p className="sr-only" aria-live="polite">
+            Step {step} of {steps.length}: {STEP_LABELS[current]}
+          </p>
+          <div className="flex items-center justify-center gap-2.5 mb-5" aria-hidden="true">
+            {stepDot(1)}
             <div
               className={cn(
-                "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-heading shrink-0 transition-colors",
-                s <= step
-                  ? "bg-accent-orange text-white"
-                  : isDark
-                  ? "bg-white/10 text-white/40"
-                  : "bg-neutral-200 text-neutral-400"
+                "relative w-24 h-1 rounded-full overflow-hidden",
+                isDark ? "bg-white/10" : "bg-neutral-200"
               )}
             >
-              {s < step ? <CheckCircle size={14} /> : s}
-            </div>
-            {s < 3 && (
-              <div
+              <span
                 className={cn(
-                  "flex-1 h-1 rounded-full transition-colors",
-                  s < step
-                    ? "bg-accent-orange"
-                    : isDark
-                    ? "bg-white/10"
-                    : "bg-neutral-200"
+                  "absolute inset-0 origin-left bg-accent-orange transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none",
+                  step > 1 ? "scale-x-100" : "scale-x-0"
                 )}
               />
-            )}
+              {step === 1 && (
+                <span className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-transparent via-accent-orange to-transparent opacity-0 animate-[step-glint_3.2s_ease-in-out_infinite]" />
+              )}
+            </div>
+            <div className="relative">
+              {step === 1 && (
+                <span className="absolute inset-0 rounded-full border-2 border-accent-orange opacity-0 animate-[step-ping_3.2s_ease-out_infinite]" />
+              )}
+              {stepDot(2)}
+            </div>
           </div>
-        ))}
-      </div>
-      <p className={cn("text-xs mb-5 font-medium", isDark ? "text-white/50" : "text-neutral-400")}>
-        Step {step} of 3 — {step === 1 ? "Select your service" : step === 2 ? "Tell us about your project" : "Your contact info"} — Takes under 30 seconds
-      </p>
+        </>
+      ) : (
+        <div className="flex items-center gap-2 mb-6">
+          {steps.map((_, i) => i + 1).map((s) => (
+            <div key={s} className="flex-1 flex items-center gap-2">
+              {stepDot(s)}
+              {s < steps.length && (
+                <div
+                  className={cn(
+                    "flex-1 h-1 rounded-full transition-colors",
+                    s < step
+                      ? "bg-accent-orange"
+                      : isDark
+                      ? "bg-white/10"
+                      : "bg-neutral-200"
+                  )}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      {/* Two-step leaves the progress bar to say where you are — the form
+          sits in the hero, where every line of height counts. */}
+      {!twoStep && (
+        <p className={cn("text-xs mb-5 font-medium", isDark ? "text-white/50" : "text-neutral-400")}>
+          Step {step} of {steps.length} — {STEP_LABELS[current]} — Takes under 30 seconds
+        </p>
+      )}
 
       {/* Step content with transition */}
       <div
@@ -218,8 +294,8 @@ export default function MultiStepForm({
             : "opacity-100 translate-x-0"
         )}
       >
-      {/* Step 1: Service Selection */}
-      {step === 1 && (
+      {/* Service Selection */}
+      {current === "service" && (
         <div className="space-y-3">
           <p className={cn("font-heading font-semibold text-sm mb-3", isDark ? "text-white" : "text-primary")}>
             What type of project are you planning?
@@ -233,7 +309,7 @@ export default function MultiStepForm({
                 <button
                   key={opt.value}
                   type="button"
-                  onClick={() => updateField("service", opt.value)}
+                  onClick={() => selectService(opt.value)}
                   className={cn(
                     "flex items-center gap-2.5 p-3 rounded-lg border text-left text-sm font-medium transition-all cursor-pointer",
                     isLast && "col-span-2",
@@ -253,14 +329,18 @@ export default function MultiStepForm({
           {errors.service && (
             <p className="text-sm text-accent-red">{errors.service}</p>
           )}
-          <Button type="button" fullWidth onClick={nextStep} className="mt-4">
-            Continue <ArrowRight size={16} />
-          </Button>
+          {/* Two-step advances on tap; Continue only returns once the
+              visitor has come Back with a service already chosen. */}
+          {(!twoStep || formData.service) && (
+            <Button type="button" fullWidth onClick={nextStep} className="mt-4">
+              Continue <ArrowRight size={16} />
+            </Button>
+          )}
         </div>
       )}
 
-      {/* Step 2: Project Scope */}
-      {step === 2 && (
+      {/* Project Scope */}
+      {current === "project" && (
         <div className="space-y-4">
           <div>
             <p className={cn("font-heading font-semibold text-sm mb-2.5", isDark ? "text-white" : "text-primary")}>
@@ -336,41 +416,45 @@ export default function MultiStepForm({
         </div>
       )}
 
-      {/* Step 3: Contact Info */}
-      {step === 3 && (
+      {/* Contact Info */}
+      {current === "contact" && (
         <div className="space-y-3.5">
           <p className={cn("font-heading font-semibold text-sm mb-1", isDark ? "text-white" : "text-primary")}>
             Where should we send your free estimate?
           </p>
-          <div>
-            <input
-              type="text"
-              placeholder="Your name"
-              value={formData.name}
-              onChange={(e) => updateField("name", e.target.value)}
-              className={cn(
-                "w-full rounded-lg border px-4 py-3 text-sm transition-colors focus:border-accent-orange focus:ring-1 focus:ring-accent-orange focus:outline-none",
-                isDark
-                  ? "bg-white/5 border-white/10 text-white placeholder:text-white/30"
-                  : "bg-white border-neutral-200 text-primary placeholder:text-neutral-300"
-              )}
-            />
-            {errors.name && <p className="text-xs text-accent-red mt-1">{errors.name}</p>}
-          </div>
-          <div>
-            <input
-              type="tel"
-              placeholder="Phone number"
-              value={formData.phone}
-              onChange={(e) => updateField("phone", e.target.value)}
-              className={cn(
-                "w-full rounded-lg border px-4 py-3 text-sm transition-colors focus:border-accent-orange focus:ring-1 focus:ring-accent-orange focus:outline-none",
-                isDark
-                  ? "bg-white/5 border-white/10 text-white placeholder:text-white/30"
-                  : "bg-white border-neutral-200 text-primary placeholder:text-neutral-300"
-              )}
-            />
-            {errors.phone && <p className="text-xs text-accent-red mt-1">{errors.phone}</p>}
+          {/* Two-step pairs name + phone from sm up — it lives in the hero,
+              where the contact step's height is what the hero card grows to. */}
+          <div className={cn(twoStep ? "grid sm:grid-cols-2 gap-3.5" : "space-y-3.5")}>
+            <div>
+              <input
+                type="text"
+                placeholder="Your name"
+                value={formData.name}
+                onChange={(e) => updateField("name", e.target.value)}
+                className={cn(
+                  "w-full rounded-lg border px-4 py-3 text-sm transition-colors focus:border-accent-orange focus:ring-1 focus:ring-accent-orange focus:outline-none",
+                  isDark
+                    ? "bg-white/5 border-white/10 text-white placeholder:text-white/30"
+                    : "bg-white border-neutral-200 text-primary placeholder:text-neutral-300"
+                )}
+              />
+              {errors.name && <p className="text-xs text-accent-red mt-1">{errors.name}</p>}
+            </div>
+            <div>
+              <input
+                type="tel"
+                placeholder="Phone number"
+                value={formData.phone}
+                onChange={(e) => updateField("phone", e.target.value)}
+                className={cn(
+                  "w-full rounded-lg border px-4 py-3 text-sm transition-colors focus:border-accent-orange focus:ring-1 focus:ring-accent-orange focus:outline-none",
+                  isDark
+                    ? "bg-white/5 border-white/10 text-white placeholder:text-white/30"
+                    : "bg-white border-neutral-200 text-primary placeholder:text-neutral-300"
+                )}
+              />
+              {errors.phone && <p className="text-xs text-accent-red mt-1">{errors.phone}</p>}
+            </div>
           </div>
           <div>
             <input

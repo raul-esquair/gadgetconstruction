@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
 import Image from "next/image";
-import { Phone, ChevronDown, Calendar } from "lucide-react";
+import { Phone, ChevronDown, Calendar, Check } from "lucide-react";
 import Button from "@/components/ui/Button";
 import HeroCTA from "@/components/sections/HeroCTA";
 import Container from "@/components/ui/Container";
@@ -13,13 +13,21 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface HeroProps {
   headline: string;
-  subheadline: string;
+  /** Merged over the default size scale, e.g. a larger mobile size. */
+  headlineClassName?: string;
+  subheadline?: string;
+  /** Scannable proof points rendered as checkmarks under the headline. */
+  highlights?: string[];
+  /**
+   * Right-hand column on desktop (lg+), e.g. an inline form. The CTA button
+   * then shows below lg only, where there is no room for the aside.
+   */
+  aside?: ReactNode;
   ctaText?: string;
   ctaHref?: string;
   openModal?: boolean;
   showPhone?: boolean;
   showScrollIndicator?: boolean;
-  showTrustPills?: boolean;
   urgencyText?: string;
   backgroundImage?: string;
   imageAlt?: string;
@@ -29,13 +37,15 @@ interface HeroProps {
 
 export default function Hero({
   headline,
+  headlineClassName,
   subheadline,
+  highlights,
+  aside,
   ctaText = "Get Your Free Estimate",
   ctaHref = "/contact",
   openModal = false,
   showPhone = true,
   showScrollIndicator = false,
-  showTrustPills = false,
   urgencyText,
   backgroundImage,
   imageAlt = "",
@@ -135,68 +145,96 @@ export default function Hero({
       )}
 
       <Container className="relative z-10">
-        <div className="max-w-3xl">
-          {/* Urgency badge — enters first */}
-          {urgencyText && (
-            <div {...stagger(0)}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 backdrop-blur-sm [@media(prefers-reduced-transparency:reduce)]:bg-white/25 [@media(prefers-contrast:more)]:bg-primary [@media(prefers-contrast:more)]:border-white">
-                <Calendar size={14} className="text-white" />
-                <span className="text-sm font-medium text-white">
-                  {urgencyText}
-                </span>
-              </div>
-            </div>
+        {/* With an aside, the sentinel the header and mobile bar watch is the
+            whole grid: on desktop the CTA is the aside, on mobile the button.
+            (A display:none sentinel reports bottom 0 and never "passes".) */}
+        <div
+          className={cn(
+            aside &&
+              "lg:grid lg:grid-cols-[minmax(0,1fr)_24rem] xl:grid-cols-[minmax(0,1fr)_27rem] lg:gap-12 xl:gap-16 lg:items-center"
           )}
+          {...(aside ? { "data-hero-cta": "" } : {})}
+        >
+          <div className="max-w-3xl">
+            {/* Urgency badge — enters first */}
+            {urgencyText && (
+              <div {...stagger(0)}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 backdrop-blur-sm [@media(prefers-reduced-transparency:reduce)]:bg-white/25 [@media(prefers-contrast:more)]:bg-primary [@media(prefers-contrast:more)]:border-white">
+                  <Calendar size={14} className="text-white" />
+                  <span className="text-sm font-medium text-white">
+                    {urgencyText}
+                  </span>
+                </div>
+              </div>
+            )}
 
-          {/* Headline — enters at 150ms */}
-          <div {...stagger(60)}>
-            <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight font-heading"
-              style={{ color: "#ffffff" }}
-            >
-              {headline}
-            </h1>
-          </div>
+            {/* Headline — enters at 150ms */}
+            <div {...stagger(60)}>
+              <h1
+                className={cn(
+                  "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight font-heading",
+                  headlineClassName
+                )}
+                style={{ color: "#ffffff" }}
+              >
+                {headline}
+              </h1>
+            </div>
 
-          {/* Subheadline — enters at 350ms */}
-          <div {...stagger(160)}>
-            <p className="mt-5 md:mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
-              {subheadline}
-            </p>
-          </div>
+            {/* Subheadline and/or proof points */}
+            {(subheadline || highlights) && (
+              <div {...stagger(160)}>
+                {subheadline && (
+                  <p className="mt-5 md:mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
+                    {subheadline}
+                  </p>
+                )}
+                {highlights && (
+                  <ul className="mt-5 md:mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2.5 text-base font-medium text-white">
+                    {highlights.map((item) => (
+                      <li key={item} className="flex items-center gap-2.5">
+                        <span className="flex items-center justify-center w-5 h-5 rounded-full bg-accent-orange shrink-0" aria-hidden="true">
+                          <Check size={13} strokeWidth={3} className="text-white" />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
 
-          {/* CTAs — enter at 550ms */}
-          <div {...stagger(260)} data-hero-cta>
-            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4">
-              {openModal ? (
-                <HeroCTA text={ctaText} />
-              ) : (
-                <Button href={ctaHref} size="lg">
-                  {ctaText}
-                </Button>
-              )}
-              {showPhone && (
-                <a
-                  href={COMPANY.phoneHref}
-                  className="flex items-center gap-2 text-white/90 hover:text-accent-orange transition-colors font-heading font-semibold text-lg"
-                >
-                  <Phone size={20} />
-                  Or call {COMPANY.phone}
-                </a>
-              )}
+            {/* CTAs — with an aside, mobile/tablet only */}
+            <div {...stagger(260)} {...(aside ? {} : { "data-hero-cta": "" })}>
+              <div
+                className={cn(
+                  "mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4",
+                  aside && "lg:hidden"
+                )}
+              >
+                {openModal ? (
+                  <HeroCTA text={ctaText} className={cn(aside && "w-full sm:w-auto")} />
+                ) : (
+                  <Button href={ctaHref} size="lg">
+                    {ctaText}
+                  </Button>
+                )}
+                {showPhone && (
+                  <a
+                    href={COMPANY.phoneHref}
+                    className="flex items-center gap-2 text-white/90 hover:text-accent-orange transition-colors font-heading font-semibold text-lg"
+                  >
+                    <Phone size={20} />
+                    Or call {COMPANY.phone}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 
-          {/* Trust line — enters last at 700ms */}
-          {showTrustPills && (
-            <div {...stagger(360)}>
-              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs md:text-sm text-white/50 font-medium">
-                <span>Class B General Contractor</span>
-                <span className="hidden sm:inline">·</span>
-                <span>Licensed &amp; Insured</span>
-                <span className="hidden sm:inline">·</span>
-                <span>CA Lic #{COMPANY.license}</span>
-              </div>
+          {aside && (
+            <div className="hidden lg:block">
+              <div {...stagger(200)}>{aside}</div>
             </div>
           )}
         </div>

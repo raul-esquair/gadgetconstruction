@@ -16,6 +16,7 @@ import { usePathname } from "next/navigation";
 import { X, Phone } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import { cn, prefersReducedTransparency } from "@/lib/utils";
+import { track } from "@/lib/track";
 import {
   BUTTON_BASE,
   BUTTON_VARIANTS,
@@ -53,9 +54,14 @@ const FOCUSABLE =
   'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
 // ---- Context ----
+export interface EstimateOpenOptions {
+  /** Where the lead came from — lands in the lead email and GA4. */
+  source?: string;
+}
+
 interface EstimateModalContextType {
   /** Pass the triggering element so the sheet can scale out of it. */
-  open: (trigger?: HTMLElement | null) => void;
+  open: (trigger?: HTMLElement | null, options?: EstimateOpenOptions) => void;
   close: () => void;
   isOpen: boolean;
 }
@@ -81,6 +87,10 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
   // Stays true through the exit animation so the sheet has something to animate.
   const [isPresent, setIsPresent] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
+  const [source, setSource] = useState("Estimate button");
+  // The homepage runs the short form everywhere it appears (hero, CTA block,
+  // and this modal), so a visitor never meets two different forms on one page.
+  const twoStep = pathname === "/";
 
   const overlayRef = useRef<HTMLDivElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
@@ -153,12 +163,15 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
     return () => clearTimeout(t);
   }, [hasOpened]);
 
-  const open = useCallback((trigger?: HTMLElement | null) => {
+  const open = useCallback((trigger?: HTMLElement | null, options?: EstimateOpenOptions) => {
     // Guarded: `onClick={open}` would otherwise hand us a SyntheticEvent.
     triggerRef.current =
       trigger instanceof HTMLElement
         ? trigger
         : (document.activeElement as HTMLElement | null);
+    const nextSource = options?.source ?? "Estimate button";
+    setSource(nextSource);
+    track("estimate_open", { source: nextSource });
     // Always start from a clean offset — a dismiss-by-drag can leave a spring
     // mid-flight, and the sheet must never open anywhere but centred.
     dragSpring.current?.stop();
@@ -416,13 +429,17 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
                 id={titleId}
                 className="text-xl font-extrabold font-heading text-primary pr-8"
               >
-                {isLp ? "Get Your Free Quote" : "Get Your Free Estimate"}
+                {isLp || twoStep ? "Get Your Free Quote" : "Get Your Free Estimate"}
               </h2>
-              <p className="text-sm text-secondary mt-1">
-                {isLp
-                  ? "Takes under 20 seconds. We respond in minutes."
-                  : "Three quick steps — takes under 30 seconds. We respond in minutes."}
-              </p>
+              {/* The homepage's two-step form goes straight from title to
+                  progress bar, same as the hero card. */}
+              {!twoStep && (
+                <p className="text-sm text-secondary mt-1">
+                  {isLp
+                    ? "Takes under 20 seconds. We respond in minutes."
+                    : "Three quick steps — takes under 30 seconds. We respond in minutes."}
+                </p>
+              )}
             </div>
           </div>
 
@@ -432,7 +449,15 @@ export function EstimateModalProvider({ children }: { children: ReactNode }) {
               (isLp ? (
                 <LpQuickForm service={lpService} onSuccess={() => {}} />
               ) : (
-                <MultiStepForm variant="light" onSuccess={() => {}} />
+                <MultiStepForm
+                  // Remount on the switch: a step index means a different
+                  // step in each mode.
+                  key={twoStep ? "two-step" : "three-step"}
+                  variant="light"
+                  source={source}
+                  twoStep={twoStep}
+                  onSuccess={() => {}}
+                />
               ))}
           </div>
 
@@ -459,6 +484,8 @@ interface EstimateButtonProps {
   size?: ButtonSize;
   fullWidth?: boolean;
   className?: string;
+  /** Lead-attribution label, e.g. "Header button". */
+  source?: string;
 }
 
 export function EstimateButton({
@@ -467,6 +494,7 @@ export function EstimateButton({
   size = "md",
   fullWidth = false,
   className,
+  source,
 }: EstimateButtonProps) {
   const { open } = useEstimateModal();
   const ref = useRef<HTMLButtonElement>(null);
@@ -474,7 +502,7 @@ export function EstimateButton({
   return (
     <button
       ref={ref}
-      onClick={() => open(ref.current)}
+      onClick={() => open(ref.current, { source })}
       className={cn(
         BUTTON_BASE,
         BUTTON_VARIANTS[variant],

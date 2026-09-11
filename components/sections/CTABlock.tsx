@@ -6,11 +6,14 @@ import { COMPANY } from "@/lib/constants";
 interface CTABlockProps {
   heading?: string;
   subtext?: string;
+  /** Service → contact only (the homepage's form). */
+  twoStep?: boolean;
 }
 
 export default function CTABlock({
   heading = "Ready to Start Your Project?",
   subtext = "Get a free, no-obligation estimate. We respond in minutes — not hours.",
+  twoStep = false,
 }: CTABlockProps) {
   return (
     <section className="bg-gradient-to-br from-primary via-primary/95 to-neutral-700 py-16 md:py-24">
@@ -35,7 +38,7 @@ export default function CTABlock({
 
           {/* Right: Multi-step Form (lazy-loaded on scroll-in) */}
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl">
-            <CTABlockForm />
+            <CTABlockForm twoStep={twoStep} />
           </div>
         </div>
       </Container>
