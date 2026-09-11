@@ -41,6 +41,244 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "composite-deck-permits-bay-area-sf-marin-east-bay",
+    featuredImage: "/images/blog-composite-deck-permits-bay-area-sf-marin-east-bay.png",
+    title: "Do You Need a Permit for a Composite Deck in the Bay Area? (SF, Marin, East Bay)",
+    metaTitle: "Deck Permit Requirements in the Bay Area: SF, Marin & East Bay",
+    excerpt:
+      "Most Bay Area cities require a permit for any deck over 30 inches above grade — but the rules and timelines differ by jurisdiction. Here's what's required in SF, Marin, Oakland, Berkeley, and the Peninsula.",
+    date: "2026-09-14",
+    readingTime: "15 min read",
+    relatedService: "composite-decks",
+    faqs: [
+      {
+        "question": "Do I need a permit for a low deck in San Francisco?",
+        "answer": "It depends on height and attachment. If the deck is under 30 inches above grade at every point and fully detached from the house, SF DBI likely doesn't require a permit. If it's attached via a ledger board — even at 18 inches above grade — SF DBI requires a permit regardless of height. The ledger connection is the structural and seismic concern, not just the elevation."
+      },
+      {
+        "question": "What size deck requires a permit in California?",
+        "answer": "California Residential Code Section R105.2 sets the statewide threshold: any deck over 30 inches above grade at any point requires a building permit. There is no statewide square footage exemption for attached decks. Some Bay Area jurisdictions allow freestanding platforms under 200 square feet and under 30 inches without a permit, but no jurisdiction exempts ledger-attached decks regardless of size."
+      },
+      {
+        "question": "How much does a deck permit cost in SF?",
+        "answer": "SF DBI deck permit fees in 2026 run $1,200–$4,500 depending on project valuation. A simple 200-square-foot rear-yard deck runs $1,200–$1,800. A multi-level hillside deck with engineered plans runs $2,800–$4,500. If the project triggers Structural Advisory Committee review, add a separate $500–$800 SAC fee on top. Permit costs should appear as a line item on every legitimate deck bid."
+      },
+      {
+        "question": "How long does SF DBI take to approve a deck permit?",
+        "answer": "SF DBI deck permit review takes 2–8 weeks depending on complexity, with over-the-counter approval available for simple ground-level decks and Structural Advisory Committee review adding 4–6 weeks for hillside and multi-level projects. Simple rear-yard decks on flat Sunset or Richmond lots with complete plan sets can qualify for same-visit approval. Hillside lots in Bernal Heights or Twin Peaks run 6–8 weeks minimum."
+      },
+      {
+        "question": "Can I build a deck without a permit in Marin County?",
+        "answer": "No — not for any deck attached to your house or over 30 inches above grade. The Marin Community Development Agency (CDA) and each incorporated Marin city apply CRC Section R105.2 without exemption for attached decks. Consequences include stop-work orders, fines, potential demolition requirements, and insurance exclusions. Marin CDA conducts code enforcement sweeps in fire-risk areas specifically targeting non-compliant hillside decks."
+      },
+      {
+        "question": "Do I need a structural engineer for my deck in Mill Valley?",
+        "answer": "Almost certainly yes. Mill Valley's hillside topology — most of Tamalpais Valley and the neighborhoods above Miller Avenue sit on slopes exceeding 10–15% grade — triggers the structural engineer requirement for most deck projects. WUI zone requirements under Chapter 7A expand the engineering scope further. Engineer fees for a Mill Valley hillside deck run $2,000–$4,500, paid before permit submittal."
+      },
+      {
+        "question": "What happens if I get caught building a deck without a permit in Oakland?",
+        "answer": "The Oakland Planning & Building Department can issue an immediate stop-work order, require opening the deck for framing inspection, mandate code compliance upgrades (footings, ledger hardware, guardrails), and impose fines of $500–$5,000+ per violation. Oakland Hills decks violating Chapter 7A WUI requirements face additional fire-code penalties. Retroactive permits in Oakland typically cost 50–100% more than permits pulled before construction."
+      }
+    ],
+    content: `
+## The Short Answer: Yes, in Most Bay Area Cities
+
+Any deck over 30 inches above grade requires a building permit in nearly every Bay Area jurisdiction under California Residential Code Section R105.2. Ground-level platforms that sit under 30 inches, cover less than 200 square feet, and are fully detached from the house are usually exempt — everything else requires a permit. Getting the deck permit bay area process right before you break ground determines your project timeline, your material choices, and whether your deck is insurable.
+
+Permit review timelines range from same-day over-the-counter approval at SF DBI for simple ground-level decks to 10+ weeks in Oakland for hillside projects with WUI review. Bay Area deck permit fees range from $1,200 to $4,500 in 2026, with San Francisco and Palo Alto at the high end and unincorporated Marin County typically at the low end. For full cost context, see our breakdown of [SF composite deck cost including permits](/blog/composite-deck-cost-san-francisco) — permit fees belong on the line-item budget from day one.
+
+Gadget Construction (CA License #1132983) has managed this process across 500+ Bay Area projects. The jurisdictional differences are real and material — what follows is what we've learned pulling permits through SF DBI, the Marin CDA, Oakland Planning & Building, and every Peninsula city we serve.
+
+---
+
+## Why Do Bay Area Cities Require Deck Permits?
+
+Deck permits exist because deck failures are real — not because building departments need more paperwork.
+
+Three specific risks drive the deck permit bay area requirement. First, structural attachment: a deck bolted to a house transfers lateral and gravity loads into the rim joist and band framing. A bad ledger connection is the single most common cause of deck collapse. California Residential Code (CRC) Section R507 — the deck-specific chapter of California's residential building code — governs ledger attachment, post-to-beam connections, footing depth, and guardrail load requirements. An inspector checking your deck is verifying all of it.
+
+Second, seismic loading. The Bay Area sits in a Seismic Design Category D zone — the second-highest classification under the CRC. Guardrail posts, ledger bolts, and footing depth are all sized for lateral seismic forces that don't apply in Phoenix or Raleigh. A deck built to Midwest standards may fail structurally in the Oakland Hills.
+
+Third, fire and egress in WUI zones. A wildland-urban interface (WUI) zone is a geographic area where structures abut or intermix with wildland vegetation, creating elevated wildfire risk — and California Building Code Chapter 7A governs construction materials and detailing in those zones, including deck boards, skirting, and the gap between deck framing and ground. In the Oakland Hills, Berkeley Hills, and Marin, composite deck board selection is a fire-code issue, not just an aesthetic one. See our guide to [hillside deck engineering and permit requirements](/blog/hillside-multi-level-deck-construction-sf-marin) for how Chapter 7A affects material scope and cost.
+
+Deck collapse case history is not hypothetical. A partial deck collapse in the Berkeley Hills injured three people in 2016 due to corroded ledger hardware on an unpermitted structure. The homeowner's insurance denied the claim. Permit inspections exist specifically to catch that hardware before it fails, not after.
+
+---
+
+## San Francisco DBI Deck Permit Requirements
+
+The SF Department of Building Inspection (DBI) is the city agency that issues residential permits for structural, mechanical, and exterior work in San Francisco. SF DBI requires a permit for all deck construction over 30 inches above grade, all ledger-attached decks regardless of height, and any deck serving as an egress path from a dwelling unit.
+
+This is one of the most common deck permit questions SF homeowners search: *do I need a permit for a deck in San Francisco?* The short answer is yes — for almost any deck attached to your house.
+
+### The 30-Inch Rule
+
+California Residential Code Section R105.2 sets the statewide threshold that any deck over 30 inches above grade at any point requires a building permit, though individual jurisdictions may impose stricter requirements. SF DBI applies the 30-inch rule strictly — there is no square footage exemption for attached decks in San Francisco, regardless of size. A 60-square-foot attached balcony 32 inches above grade needs a permit. A freestanding 150-square-foot ground-level platform under 30 inches in a flat Sunset District backyard likely does not.
+
+### Required Plans and Drawings
+
+SF DBI requires permit-ready drawings that show plan view and elevation of the deck, framing layout with member sizes, ledger attachment detail, footing size and depth, and guardrail design. For simple rectangular ground-level decks, a contractor-prepared set of drawings may be sufficient for over-the-counter submittal. Multi-level, cantilevered, or hillside-attached decks move to the counter submission queue with longer review windows.
+
+### Structural Engineer Stamp (When Required)
+
+SF DBI requires a structural engineer's stamped plans for any deck on a hillside lot with more than 10% slope, multi-level decks with level changes exceeding 30 inches, decks on soft-story buildings, and any deck where a prior permit's engineer of record flagged framing concerns. [Hillside deck engineering and permit requirements](/blog/hillside-multi-level-deck-construction-sf-marin) in Bernal Heights, Twin Peaks, and Glen Park almost always trigger this requirement. Engineering adds $2,000–$5,000 to the project before permit fees begin.
+
+### DBI Review Timeline: 2–8 Weeks
+
+SF DBI deck permit review takes 2–8 weeks depending on complexity, with over-the-counter approval available for simple ground-level decks and Structural Advisory Committee review adding 4–6 weeks for hillside and multi-level projects. Simple rectangular decks on flat lots — a rear-yard deck on a Sunset District or [San Francisco](/service-areas/san-francisco) Doelger — can qualify for over-the-counter approval in a single visit if plans are complete. Historic district overlay review in Alamo Square, the Haight, or Ashbury Heights adds 2–4 weeks on top of standard plan review. Never count on the fast end of the range for any deck in a historic overlay zone or on a hillside lot.
+
+### Permit Fees: $1,200–$4,500
+
+SF DBI deck permit fees in 2026 run $1,200–$4,500 depending on project valuation. A simple 200-square-foot ground-level deck lands in the $1,200–$1,800 range. A 400-square-foot multi-level hillside deck with engineered plans runs $2,800–$4,500. Fee calculation is based on the declared project valuation — underdeclaring valuation to reduce fees is a code violation and surfaces as a discrepancy when the property sells. For full [SF composite deck cost including permits](/blog/composite-deck-cost-san-francisco), those permit fees belong in the line-item budget from day one.
+
+---
+
+## Marin County Deck Permits (Mill Valley, Sausalito, Tiburon, Kentfield)
+
+The Marin Community Development Agency (CDA) is the county department that reviews and permits construction in unincorporated Marin County, while each incorporated city (Mill Valley, Sausalito, Tiburon, San Rafael, Ross, Larkspur) operates its own building department.
+
+Marin County deck permit requirements — particularly the WUI fire zone rules — are the most complex in the Bay Area for single-family residential decks. Getting the jurisdiction right before you submit plans is the first step.
+
+### Marin Community Development Agency (CDA)
+
+Unincorporated Marin — Tamalpais Valley, Sleepy Hollow, Kentfield, and rural areas outside city limits — routes permits through the Marin CDA. CDA deck permits follow CRC Section R105.2 and R507 and apply the 30-inch rule without local exemptions. Permit fees for unincorporated Marin run $1,200–$2,400 for standard residential decks, making the CDA the lower-cost end of Bay Area permitting.
+
+### Incorporated Cities vs. Unincorporated County
+
+Every Marin city inside an incorporated boundary runs its own process. Mill Valley's building division is part of the Mill Valley Community Development Department. Sausalito runs through the Sausalito Community Development Department. Tiburon, Ross, and [San Rafael](/service-areas/san-rafael) each have independent building departments. Before submitting plans anywhere in Marin, confirm which jurisdiction actually governs your parcel — city limits in Tamalpais Valley and Kentfield are not where most homeowners assume they are.
+
+Gadget Construction pulls [Mill Valley WUI deck construction](/service-areas/mill-valley) permits through the correct jurisdictional department on every project, which matters because submitting to the wrong agency delays the clock by weeks. We've handled [Sausalito](/service-areas/sausalito) and [Tiburon](/service-areas/tiburon) permit submissions as well — the department is different in each city even though they share county geography.
+
+### WUI Fire Zone Requirements
+
+Marin has the highest density of WUI-zoned residential parcels of any Bay Area county. California Building Code Chapter 7A — the code chapter governing construction in wildland-urban interface zones — requires ignition-resistant materials on deck surfaces, skirting, and structural framing exposed to ember intrusion in WUI areas. For composite deck selection, the deck board product must carry a Class A fire rating. Trex Transcend, TimberTech AZEK, and Fiberon Paramount all qualify. Standard pressure-treated wood decking does not. Our [Trex vs. TimberTech vs. Fiberon comparison](/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026) covers fire ratings and Bay Area performance side by side.
+
+Chapter 7A compliance in [Mill Valley WUI deck construction](/service-areas/mill-valley) also governs the gap between the deck surface and the ground — no gaps greater than one-quarter inch that could allow ember accumulation beneath the deck frame. Marin CDA inspectors specifically check this detail. It is not optional.
+
+### Timeline: 3–8 Weeks
+
+Standard deck permits in Mill Valley and unincorporated Marin run 3–5 weeks. Projects with WUI overlay review — which includes most Marin hillside parcels — run 5–8 weeks. Slope-hazard review by the Marin CDA engineering staff applies to sites above 15% grade, covering most of Tamalpais Valley and the hillside neighborhoods of [Sausalito](/service-areas/sausalito). If your Marin deck project involves a hillside lot and WUI zone review, budget 8 weeks for permitting before construction begins.
+
+---
+
+## East Bay Deck Permits (Oakland, Berkeley, Piedmont)
+
+East Bay deck permit requirements track California state code closely, but Oakland's WUI zone and Berkeley's Landmarks Preservation Commission add jurisdiction-specific layers that affect timeline and material scope.
+
+### Oakland Planning & Building Department
+
+The Oakland Planning & Building Department issues deck permits for all of Oakland, including the hillside neighborhoods of Montclair, Redwood Heights, and Joaquin Miller. Standard permit review for a straightforward rear-yard deck in Temescal, Rockridge, or Fruitvale runs 4–6 weeks. The 30-inch rule applies, and Oakland follows CRC Section R507 without significant local modification for non-hillside sites.
+
+For [Oakland Hills deck projects](/service-areas/oakland), the process adds complexity. WUI overlay review in the Oakland Hills — the zone above Highway 13 that includes the Montclair District and areas adjacent to Joaquin Miller Park — requires Chapter 7A compliance on all decking materials, identical to Marin's requirements. Oakland Planning & Building also requires slope-stability review for lots above 15% grade, which can add an engineering step and 2–4 weeks to permit review.
+
+### Berkeley Planning & Development Department
+
+The Berkeley Planning & Development Department handles deck permits for all of [Berkeley](/service-areas/berkeley), including the Berkeley Hills above Claremont. Standard review for a flat-site deck runs 4–6 weeks. Berkeley is unusual in that the Berkeley Landmarks Preservation Commission (LPC) — the city's historic review body that evaluates exterior alterations to landmark-designated or historically contributing structures — may have jurisdiction over decks on pre-1940 homes in areas like Elmwood, Claremont, or Panoramic Hill. The LPC review process can add 3–6 weeks to permitting. Confirm LPC review status before submitting permit plans to the Berkeley Planning & Development Department.
+
+### Oakland Hills WUI Zone Requirements
+
+The Oakland Hills WUI zone requires Chapter 7A-compliant deck materials on all new deck construction and significant deck replacements. Composite deck boards must carry a Class A fire rating. Skirting — the material enclosing the space between the deck frame and the ground — must be non-combustible or ignition-resistant in Oakland Hills WUI parcels. This requirement is consistently underestimated in contractor bids for Oakland Hills projects. If a deck bid for an Oakland Hills home doesn't mention Chapter 7A compliance or fire-rated materials, the contractor either doesn't know the requirement applies or is planning to skip it. For more on composite material performance in fire zones, see our [composite vs. wood decking comparison](/blog/composite-vs-wood-decking-bay-area-2026).
+
+### Timeline: 4–10 Weeks
+
+Standard Oakland deck permits: 4–6 weeks. Berkeley standard: 4–6 weeks. Oakland Hills with WUI and slope review: 7–10 weeks. Berkeley with LPC review: 8–12 weeks. The Oakland Hills and Berkeley Hills represent the longest permitting timelines in the East Bay — driven by WUI overlay and geotechnical review, not administrative backlog.
+
+---
+
+## Peninsula Deck Permits (Palo Alto, Menlo Park, Daly City)
+
+Every Peninsula city runs its own building department — there's no county-wide process equivalent to the Marin CDA. The 30-inch rule applies uniformly across deck permit requirements in California, but review timelines vary sharply by city.
+
+**Palo Alto** runs permit review through the Palo Alto Development Services Department, which is consistently the slowest permitting authority on the Peninsula. Standard residential deck permits in [Palo Alto](/service-areas/palo-alto) take 6–12 weeks — a function of staffing levels and review volume, not project complexity. A simple rear-yard Eichler deck in Green Gables or Fairmeadow that would get over-the-counter approval in Daly City takes 8 weeks in Palo Alto. Budget accordingly. Palo Alto is also home to the Bay Area's highest concentration of Eichler homes — roughly 2,200 — and Eichler decks often require special attention to post-and-beam framing connections that standard plan-check reviewers may flag for additional documentation.
+
+**Menlo Park** processes deck permits through the Menlo Park Building Division with timelines of 4–8 weeks for standard residential projects in neighborhoods like The Willows and Allied Arts. [Menlo Park](/service-areas/menlo-park)'s review is more predictable than Palo Alto's and generally completes toward the faster end of the Peninsula range.
+
+**Daly City** routes permits through the Daly City Department of Economic & Community Development. Review timelines for standard deck permits in [Daly City](/service-areas/daly-city) run 3–5 weeks. Westlake neighborhood Doelger homes — single-story with accessible rear yards — represent the most common Daly City deck scope and typically qualify for the faster end of that range. Permit fees in Daly City run $900–$2,000 for standard residential decks, lower than either SF or Palo Alto.
+
+**Burlingame** and **San Mateo** each run their own departments with timelines of 4–8 weeks. [Burlingame](/service-areas/burlingame)'s pre-1940 housing stock can trigger historic review on Craftsman bungalows, similar to Berkeley's LPC process.
+
+For [permitted composite deck construction](/services/composite-decks) across Peninsula cities, confirm the jurisdiction before planning the project timeline — the difference between Palo Alto and Daly City is 6–8 weeks of real calendar time.
+
+---
+
+## What Happens If You Build Without a Permit
+
+Building a deck without a permit in San Francisco can result in stop-work orders, fines of $500–$5,000+, mandatory tear-down, and voided homeowner insurance coverage on the structure. The same consequences apply in Oakland, Berkeley, and every Marin jurisdiction.
+
+The "nobody will find out" assumption fails in the Bay Area for three consistent reasons.
+
+First, building departments do targeted neighborhood sweeps. SF DBI conducts complaint-based and proactive code enforcement in residential neighborhoods — unpermitted construction visible from the street or adjacent properties generates complaints that trigger inspections within weeks.
+
+Second, neighbors report. On zero-lot-line SF lots, Marin hillside parcels with close neighbors, and [Oakland](/service-areas/oakland) Hills streets where lots are narrow, construction noise draws attention. An unpermitted deck that takes three weeks to build is visible to every adjacent neighbor for three weeks.
+
+Third, disclosure at sale triggers an audit. When you sell a Bay Area home, your agent and title company will flag any open permit violations and any work that doesn't appear in the permit record. An unpermitted deck shows up as a disclosure requirement. At that point, your options are: pull a retroactive permit (which requires tearing into the framing for inspection access, fixing anything that doesn't meet code, and paying double fees), tear down the deck, or negotiate a price credit to the buyer — none of which are cheap.
+
+The financial exposure beyond fines: homeowner insurance policies for most Bay Area carriers specifically exclude liability claims arising from unpermitted structures. A deck collapse injuring a guest on an unpermitted deck is an uninsured event. The Berkeley Hills collapse in 2016 is the regional case study — the homeowner paid out of pocket. This risk applies equally to an unpermitted deck on a Doelger in Westlake or a hillside deck above Montclair.
+
+---
+
+## How Long Does the Deck Permit Process Take by Jurisdiction?
+
+Timeline by jurisdiction, based on 2026 permit processing and Gadget Construction's direct experience pulling permits across these departments on 500+ Bay Area projects.
+
+| Jurisdiction | Department | Standard Timeline | Hillside/WUI Timeline | Engineer Stamp Required | Historic Review Possible |
+|---|---|---|---|---|---|
+| San Francisco | SF DBI | 2–5 weeks | 6–8 weeks | Yes, hillside + multi-level | Yes, 2–4 weeks added |
+| Mill Valley | Mill Valley Community Dev. | 3–5 weeks | 6–8 weeks | Yes, WUI + hillside | No |
+| Unincorporated Marin | Marin CDA | 3–5 weeks | 5–8 weeks | Yes, slope >15% | No |
+| Oakland (flat) | Oakland Planning & Building | 4–6 weeks | 7–10 weeks | Yes, hillside | Rare |
+| Berkeley | Berkeley Planning & Dev. | 4–6 weeks | 6–8 weeks | Yes, hillside | Yes, LPC adds 3–6 weeks |
+| Palo Alto | Palo Alto Development Services | 6–12 weeks | 8–14 weeks | Yes, hillside | No |
+| Menlo Park | Menlo Park Building Division | 4–8 weeks | 6–10 weeks | Yes, hillside | No |
+| Daly City | Dept. of Economic & Community Dev. | 3–5 weeks | 5–7 weeks | Rarely | No |
+
+"Standard" assumes a flat-site, single-level, rear-yard deck with complete plan submission. Missing documents, incomplete drawings, or a plan check correction letter adds 2–4 weeks regardless of jurisdiction.
+
+Gadget Construction pulls composite deck permits across San Francisco's DBI, Mill Valley's Marin CDA jurisdiction, and Oakland Planning & Building Department as standard project scope — not a separate add-on service.
+
+---
+
+## Frequently Asked Questions
+
+### Do I need a permit for a low deck in San Francisco?
+
+It depends on height and attachment. If the deck is under 30 inches above grade at every point and fully detached from the house, SF DBI likely doesn't require a permit. If it's attached to the house via a ledger board — even at 18 inches above grade — SF DBI requires a permit regardless of height. The ledger connection is the structural and seismic concern, not just the elevation. When in doubt, submit a preliminary project assessment to SF DBI — the cost is minimal and the answer is definitive.
+
+### What size deck requires a permit in California?
+
+California Residential Code Section R105.2 sets the statewide threshold: any deck over 30 inches above grade at any point requires a building permit. There is no statewide square footage exemption for attached decks. Some Bay Area jurisdictions allow freestanding platforms under 200 square feet and 30 inches to proceed without a permit — Daly City and unincorporated Marin generally follow this interpretation — but no Bay Area jurisdiction exempts ledger-attached decks from the permit requirement regardless of size.
+
+### How much does a deck permit cost in SF?
+
+SF DBI deck permit fees in 2026 run $1,200–$4,500 depending on project valuation. A simple 200-square-foot rear-yard deck runs $1,200–$1,800. A multi-level hillside deck with engineered plans runs $2,800–$4,500. If the project triggers Structural Advisory Committee review, add a separate $500–$800 SAC fee on top. Permit costs should appear as a line item on every legitimate deck bid — if they're absent, ask.
+
+### How long does SF DBI take to approve a deck permit?
+
+SF DBI deck permit review takes 2–8 weeks depending on complexity, with over-the-counter approval available for simple ground-level decks and Structural Advisory Committee review adding 4–6 weeks for hillside and multi-level projects. Simple rear-yard decks on flat Sunset or Richmond lots with complete plan sets can qualify for over-the-counter approval in a single DBI visit. Hillside lots in Bernal Heights or Twin Peaks, and any project in a historic district overlay zone, run 6–8 weeks minimum.
+
+### Can I build a deck without a permit in Marin County?
+
+No — not for any deck that's attached to your house or over 30 inches above grade. The Marin Community Development Agency (CDA) and each incorporated Marin city apply CRC Section R105.2 without exemption for attached decks. The consequences match San Francisco: stop-work orders, fines, potential demolition requirement, and insurance exclusions. Marin CDA also conducts code enforcement sweeps in fire-risk areas — hillside decks that don't comply with Chapter 7A WUI requirements are specifically targeted during those sweeps.
+
+### Do I need a structural engineer for my deck in Mill Valley?
+
+Almost certainly yes. Mill Valley's hillside topology — most of Tamalpais Valley and the neighborhoods above Miller Avenue sit on slopes exceeding 10–15% grade — triggers the structural engineer requirement for most deck projects. Add WUI zone requirements under Chapter 7A, and the engineering scope expands to include fire-resistant material verification and framing-exposure detailing. Engineer fees for a Mill Valley hillside deck run $2,000–$4,500, paid before permit submittal. For the full picture on [hillside deck engineering and permit requirements](/blog/hillside-multi-level-deck-construction-sf-marin) in Marin, the engineering phase is a fixed cost of the project, not an optional upgrade.
+
+### What happens if I get caught building a deck without a permit in Oakland?
+
+The Oakland Planning & Building Department can issue an immediate stop-work order, require that the deck be opened for inspection (which means removing decking to expose framing), bring the structure to current code compliance — which may require footing upgrades, ledger hardware replacement, and guardrail reconstruction — and impose fines of $500–$5,000+ per violation. Oakland Hills unpermitted decks that violate Chapter 7A WUI requirements face an additional fire-code compliance pathway with separate penalties. The retroactive permit process in Oakland typically costs 50–100% more than a standard permit pulled before construction, because plan-check fees are doubled for after-the-fact permitting.
+
+---
+
+## Ready to Permit and Build Your Bay Area Composite Deck?
+
+Deck permit bay area requirements across SF DBI, the Marin CDA, Oakland Planning & Building, and Peninsula cities aren't a minor detail — they determine your project timeline, your material choices, and whether your deck is insurable. Getting the permit right costs less than getting it wrong.
+
+Gadget Construction (CA License #1132983) handles all permit pulling, structural engineer coordination, and inspection scheduling as part of every [permitted composite deck construction](/services/composite-decks) project — SF DBI, Marin CDA, Oakland Planning & Building, Berkeley Planning & Development, Daly City Department of Economic & Community Development, and every Peninsula jurisdiction we serve. Schedule a free on-site assessment across 31 Bay Area cities. You'll get a line-item estimate that includes permit fees, engineering costs, and inspection scheduling — no allowances, no surprises.
+    `.trim(),
+  },
+
+  {
     slug: "how-long-does-foundation-underpinning-take-san-francisco",
     featuredImage: "/images/blog-how-long-does-foundation-underpinning-take-san-francisco.png",
     title: "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
