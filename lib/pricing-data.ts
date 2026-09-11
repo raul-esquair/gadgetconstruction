@@ -26,13 +26,6 @@ export const SERVICE_PRICING: Record<string, { service: string; range: string; n
     { service: "Deck with Pergola", range: "$25,000–$50,000", note: "Composite deck + shade structure" },
     { service: "Railing System Only", range: "$3,000–$8,000", note: "Cable, glass, or composite rails" },
   ],
-  roofing: [
-    { service: "Full Re-Roof (composition shingle)", range: "$15,000–$25,000", note: "1,200–1,800 sq ft roof area" },
-    { service: "Full Re-Roof (architectural shingle)", range: "$20,000–$35,000", note: "Premium materials, steep pitch" },
-    { service: "Roof Repair", range: "$1,500–$8,000", note: "Leak repair, flashing, partial replacement" },
-    { service: "Gutter Installation", range: "$2,000–$5,000", note: "Seamless aluminum with guards" },
-    { service: "Skylight Installation", range: "$3,000–$8,000", note: "Including flashing and interior finish" },
-  ],
   "exterior-repairs": [
     { service: "Dry Rot Patch (single window sill / trim piece)", range: "$800–$2,500", note: "Localized repair, no framing replacement" },
     { service: "Whole-Wall Dry Rot + Framing Replacement", range: "$4,000–$12,000", note: "Sister-framing, new sheathing, WRB, flashing" },

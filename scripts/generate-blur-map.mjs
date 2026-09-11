@@ -4,6 +4,7 @@
 // Also runs automatically before `npm run build` via the `prebuild` script.
 
 import { getPlaiceholder } from "plaiceholder";
+import sharp from "sharp";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -45,7 +46,16 @@ async function main() {
   for (const file of files) {
     const webPath = "/" + file.split(path.sep).join("/");
     if (SKIP.has(webPath)) continue;
-    const buffer = await fs.readFile(path.join(PUBLIC, file));
+    const raw = await fs.readFile(path.join(PUBLIC, file));
+    // Phone photos carry an EXIF orientation tag: the pixels are stored one
+    // way and a viewer is expected to rotate them. next/image honours that
+    // tag, so the rendered image is upright — but plaiceholder does not, so
+    // the placeholder was generated from the UNrotated pixels. That put a
+    // landscape blur under a portrait photo: a sideways smear that snapped
+    // upright on load. sharp's .rotate() with no argument applies the EXIF
+    // orientation and strips the tag, so the placeholder matches what
+    // next/image will actually paint.
+    const buffer = await sharp(raw).rotate().toBuffer();
     const { base64 } = await getPlaiceholder(buffer, { size: 10 });
     map[webPath] = base64;
   }

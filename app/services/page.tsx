@@ -14,7 +14,7 @@ import CTABlock from "@/components/sections/CTABlock";
 export const metadata: Metadata = generatePageMetadata({
   title: "Our Services | San Francisco General Contractor",
   description:
-    "Concrete foundations, retaining walls, home remodels, composite decks, roofing & ADU construction in San Francisco. Licensed, insured, 5-year warranty. Free estimates.",
+    "Concrete foundations, retaining walls, home remodels, composite decks, exterior repairs & ADU construction in San Francisco. Licensed, insured, 5-year warranty. Free estimates.",
   path: "/services",
 });
 

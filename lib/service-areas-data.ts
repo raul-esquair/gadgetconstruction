@@ -61,23 +61,22 @@ export const SERVICE_AREAS: CityData[] = [
     ],
     constructionInsight: {
       heading: "Hillside Construction Requires Hillside Experience",
-      description: "Mill Valley's steep terrain means every project involves slope analysis, specialized foundations, drainage engineering, and often limited access for equipment and materials. Homes in WUI fire zones also require fire-resistant roofing, siding, and defensible space. We've built on slopes throughout Marin — this is work we understand deeply.",
+      description: "Mill Valley's steep terrain means every project involves slope analysis, specialized foundations, drainage engineering, and often limited access for equipment and materials. Homes in WUI fire zones also require fire-resistant siding, decking, and defensible space. We've built on slopes throughout Marin — this is work we understand deeply.",
     },
     housingStock: "71% single-family detached. Median construction year 1958. 27% built before 1940. Mid-century ranches and Craftsman cottages on hillside lots. Values range $1.6M–$3M+.",
-    topServices: ["retaining-walls", "composite-decks", "complete-remodel", "roofing", "concrete-foundations", "adu-construction", "exterior-repairs"],
+    topServices: ["retaining-walls", "composite-decks", "complete-remodel", "concrete-foundations", "adu-construction", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Canyon Home Dry Rot & Exterior Repair" },
     exteriorRepairsContext:
       "Mill Valley's canyons hold moisture year-round. Redwoods shade everything, fog settles overnight, and rain doesn't dry out for days after it stops. That climate is brutal on siding. Cedar and redwood clapboard — the defining Mill Valley aesthetic — needs proper back-priming, concealed fasteners, and aggressive flashing detail to survive 20+ years. We've rebuilt exterior envelopes on homes throughout Tamalpais Valley, Homestead Valley, and the downtown hillside. Fix it right the first time and it lasts. Do a bad patch job and you're back in three years.",
     neighboringCities: ["sausalito", "tiburon", "san-anselmo", "san-rafael"],
     faqs: [
       { question: "How much does a hillside deck cost in Mill Valley?", answer: "Hillside composite decks in Mill Valley typically cost $25,000–$60,000+ depending on the slope, size, foundation requirements, and railing systems. Steep lots often require engineered pier foundations that add to the cost. We provide detailed estimates after a site visit." },
-      { question: "Do I need fire-resistant roofing in Mill Valley?", answer: "If your home is in a designated Wildland-Urban Interface (WUI) zone — and many Mill Valley hillside homes are — California building code requires fire-resistant roofing materials (Class A rated). We install only compliant materials and can advise on your specific zone requirements." },
       { question: "Can you build an ADU on a steep lot in Mill Valley?", answer: "Yes, though hillside ADUs require creative engineering — stepped foundations, retaining walls, and sometimes crane-assisted construction. We've built ADUs on challenging Marin slopes and handle the full process from feasibility assessment through permits and construction." },
       { question: "How do you get materials to hillside homes in Mill Valley?", answer: "Narrow roads and steep driveways are common in Mill Valley. We plan material logistics before construction begins — sometimes using smaller vehicles, staging areas, or crane lifts. This is part of the site assessment we do during the estimate phase." },
       { question: "What's the permit process like in Mill Valley?", answer: "Permits are handled by the City of Mill Valley. Timelines vary by project scope — simple remodels may take 4–6 weeks, while new construction or ADUs can take 3–6 months for plan review. We manage the entire permit process for you." },
       { question: "How much does a home remodel cost in Mill Valley?", answer: "Mill Valley remodels typically run $250–$500 per square foot depending on scope. Kitchen remodels average $100,000–$200,000. The hillside location, access challenges, and premium finish expectations in Mill Valley push costs above flat-lot projects. We provide line-item estimates so you know exactly where every dollar goes." },
     ],
-    metaDescription: "Trusted general contractor in Mill Valley, CA. Hillside construction, retaining walls, fire-zone roofing, remodels & ADUs. 12+ years, 500+ projects. Free estimates.",
+    metaDescription: "Trusted general contractor in Mill Valley, CA. Hillside construction, retaining walls, decks, remodels & ADUs. 12+ years, 500+ projects. Free estimates.",
   },
   {
     slug: "sausalito",
@@ -91,24 +90,24 @@ export const SERVICE_AREAS: CityData[] = [
     heroSubheadline: "Steep hillside builds, salt-air resistant materials, and renovations with Bay views worth protecting.",
     intro: [
       "Sausalito's hillside homes cling to steep terrain overlooking Richardson Bay — accessible by stairs, served by narrow lanes, and exposed to salt air that corrodes anything not built to resist it. Construction here isn't standard. It requires a contractor who understands the physics of building on a slope and the chemistry of building near saltwater.",
-      "We've worked on Sausalito's hillsides and waterfront, installing retaining walls that hold against saturated soil, roofs that resist salt corrosion, and foundations that anchor homes to bedrock. Every project starts with understanding your specific site — because in Sausalito, no two lots present the same challenge.",
+      "We've worked on Sausalito's hillsides and waterfront, installing retaining walls that hold against saturated soil, siding and trim that resist salt corrosion, and foundations that anchor homes to bedrock. Every project starts with understanding your specific site — because in Sausalito, no two lots present the same challenge.",
     ],
     constructionInsight: {
       heading: "Salt Air Changes Everything",
-      description: "Standard materials fail faster in Sausalito's marine environment. Salt air corrodes metal fasteners, degrades wood, and shortens the lifespan of conventional roofing. We specify marine-grade hardware, composite decking, and corrosion-resistant materials as standard practice for waterfront and hillside builds.",
+      description: "Standard materials fail faster in Sausalito's marine environment. Salt air corrodes metal fasteners, degrades wood, and shortens the lifespan of conventional siding and trim. We specify marine-grade hardware, composite decking, and corrosion-resistant materials as standard practice for waterfront and hillside builds.",
     },
     housingStock: "40% single-family detached — lower than typical for Marin. Hillside homes with Bay views. Houseboat community at the waterfront. Median resident age 55.",
-    topServices: ["retaining-walls", "roofing", "composite-decks", "exterior-repairs"],
+    topServices: ["retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Hillside Home Dry Rot & Stucco Repair" },
     exteriorRepairsContext:
       "Sausalito homes are often hillside, often wooden, and almost always managing some form of water intrusion. Tight houses built into the grade create drainage challenges: water runs down the slope and pools behind siding that was never designed to hold it back. Older homes on the waterfront carry saltwater corrosion on fasteners and flashing. We've fixed dry rot on hillside homes where the first sign was a soft spot near a kitchen window, then traced it back through sheathing, framing, and into the band joist — that's the level of repair this terrain demands.",
     neighboringCities: ["mill-valley", "tiburon"],
     faqs: [
       { question: "Can you work on homes only accessible by stairs in Sausalito?", answer: "Yes. Many Sausalito homes have stair-only access. We plan material transport, use specialized equipment when needed, and factor access logistics into every estimate. It's a challenge we've handled many times." },
-      { question: "What roofing materials work best in Sausalito's salt air?", answer: "We recommend architectural asphalt shingles with algae-resistant coatings, metal roofing with Kynar finishes, or composite slate for salt-air environments. Standard materials corrode and fail faster near the waterfront." },
       { question: "How much does a retaining wall cost in Sausalito?", answer: "Sausalito retaining walls typically cost $300–$600 per linear foot due to steep terrain and access challenges. Complex hillside stabilization projects can range from $20,000–$80,000+. We provide exact estimates after a site evaluation." },
+      { question: "What exterior materials hold up in Sausalito's salt air?", answer: "Salt air corrodes standard fasteners and flashing within a few years, and it drives moisture into any gap in the siding. We spec stainless or hot-dip galvanized fasteners, marine-grade flashing, composite decking, and fiber cement or properly primed wood siding. On waterfront and exposed hillside homes, material choice is the difference between a repair that lasts 25 years and one you redo in six." },
     ],
-    metaDescription: "General contractor serving Sausalito, CA. Hillside construction, salt-air resistant roofing, retaining walls & remodels. Licensed, insured, 5-year warranty.",
+    metaDescription: "General contractor serving Sausalito, CA. Hillside construction, salt-air exterior repairs, retaining walls & remodels. Licensed, insured, 5-year warranty.",
   },
   {
     slug: "tiburon",
@@ -129,7 +128,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "In Tiburon, the view IS the property value. Renovations here often center on maximizing sightlines — opening floor plans, installing floor-to-ceiling windows, building view decks, and reconfiguring rooflines. We approach every Tiburon project with the view as a design driver, not an afterthought.",
     },
     housingStock: "66% single-family detached. 46% built 1940s–1960s. Waterfront and view properties. Median home value ~$4.5M — among the highest in Marin.",
-    topServices: ["complete-remodel", "composite-decks", "roofing", "exterior-repairs"],
+    topServices: ["complete-remodel", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Waterfront Home Exterior & Siding Repair" },
     neighboringCities: ["mill-valley", "sausalito"],
     faqs: [
@@ -137,7 +136,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "Can you build a deck that handles Tiburon's wind and salt exposure?", answer: "Absolutely. We use composite decking (Trex/TimberTech) with marine-grade hardware and cable railing systems designed for wind exposure. Composite won't rot, warp, or corrode like wood in Tiburon's marine climate." },
       { question: "Do mid-century homes in Tiburon need earthquake retrofitting?", answer: "Many do. Homes built in the 1940s–1960s often have unbolted foundations and cripple walls that are vulnerable in an earthquake. We assess your foundation and recommend the appropriate level of seismic retrofit." },
     ],
-    metaDescription: "Premium general contractor in Tiburon, CA. Luxury remodels, view-maximizing decks, roofing & seismic retrofit. 12+ years experience. Free consultations.",
+    metaDescription: "Premium general contractor in Tiburon, CA. Luxury remodels, view-maximizing decks, exterior repairs & seismic retrofit. 12+ years experience. Free consultations.",
   },
   {
     slug: "fairfax",
@@ -188,7 +187,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "San Rafael processes more building permits than any other city in Marin. We've navigated the City's review process dozens of times, understand their specific requirements, and maintain the kind of track record with local inspectors that keeps projects moving without delays.",
     },
     housingStock: "47% single-family detached — more housing diversity than other Marin cities. 45% built 1940s–1960s. Mix of mid-range and upscale neighborhoods. Median value ~$1.5M.",
-    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "retaining-walls", "roofing", "composite-decks", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Stucco, Siding & Dry Rot Repair" },
     exteriorRepairsContext:
       "San Rafael's older housing stock spans a century — 1920s bungalows in Gerstle Park, mid-century ranches across Terra Linda, and wood-framed Craftsman homes near Dominican. Each era carries its own dry rot failure patterns: aging redwood siding that's lost its back-priming, stucco installed during later renovations over original lath, window frames that weren't flashed to modern standards. We diagnose the root cause — where water is actually getting in — and rebuild from the sheathing out so the repair lasts another 25 years.",
@@ -201,7 +200,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "How long does a full home remodel take in San Rafael?", answer: "A full remodel typically takes 4–8 months of construction, depending on scope. Add 2–4 months for the City's permit review. Kitchen-only projects run 8–14 weeks on-site. We give you a specific timeline before work begins and stick to it." },
       { question: "What areas of San Rafael do you serve?", answer: "All of them. Downtown, Canal, Dominican, Gerstle Park, Sun Valley, Lucas Valley, Terra Linda, Marinwood, and the surrounding unincorporated areas. If it's in San Rafael, we've worked there." },
     ],
-    metaDescription: "Trusted general contractor in San Rafael, CA. Kitchen remodels, foundations, ADUs, retaining walls & roofing. Marin's largest market. 500+ projects. Free estimates.",
+    metaDescription: "Trusted general contractor in San Rafael, CA. Kitchen remodels, foundations, ADUs, retaining walls & exterior repairs. Marin's largest market. Free estimates.",
   },
 
   // ============================================================
@@ -226,7 +225,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Richmond is in the direct path of the Hayward Fault. While earthquake retrofitting is currently voluntary here, the risk is real — and the City provides template retrofit plans to reduce engineering costs. We perform seismic assessments, install foundation bolting, and brace cripple walls to protect your home and your family.",
     },
     housingStock: "45% built 1940s–1960s, many WWII-era worker housing. 11% pre-1939. Mix of older bungalows and post-war tract homes. More affordable than most Bay Area markets.",
-    topServices: ["concrete-foundations", "complete-remodel", "roofing", "exterior-repairs"],
+    topServices: ["concrete-foundations", "complete-remodel", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Stucco & Siding Repair" },
     neighboringCities: ["berkeley", "san-rafael"],
     faqs: [
@@ -246,26 +245,25 @@ export const SERVICE_AREAS: CityData[] = [
     medianHomeValue: "$750K",
     permitAuthority: "City of Concord",
     heroHeadline: "General Contractor in Concord, California",
-    heroSubheadline: "Kitchen and bath remodels, roofing, and ADU construction for the largest city in Contra Costa County.",
+    heroSubheadline: "Kitchen and bath remodels, exterior repairs, and ADU construction for the largest city in Contra Costa County.",
     intro: [
-      "Concord's housing boom happened in the 1970s — and those homes are now 50+ years old. The kitchens are dated, the bathrooms are original, the roofs are approaching end-of-life, and the single-pane windows haven't been efficient for decades. For homeowners who bought into Concord's BART-accessible, family-friendly neighborhoods, renovation is the path that makes financial sense.",
+      "Concord's housing boom happened in the 1970s — and those homes are now 50+ years old. The kitchens are dated, the bathrooms are original, the siding and trim are weathering through, and the single-pane windows haven't been efficient for decades. For homeowners who bought into Concord's BART-accessible, family-friendly neighborhoods, renovation is the path that makes financial sense.",
       "We help Concord homeowners get the most from their renovation investment — updated kitchens that reflect how families actually live, bathrooms that feel modern instead of vintage, and ADUs that add rental income or space for family. The work is straightforward, the pricing is transparent, and the results last.",
     ],
     constructionInsight: {
       heading: "1970s Housing Stock Hitting Renovation Age",
-      description: "Concord's largest housing cohort was built in the 1970s — an era of adequate but unexciting construction. These homes have predictable renovation needs: kitchen and bath updates, roof replacement, window upgrades, and HVAC modernization. The consistency of the housing stock means we can estimate accurately and build efficiently.",
+      description: "Concord's largest housing cohort was built in the 1970s — an era of adequate but unexciting construction. These homes have predictable renovation needs: kitchen and bath updates, siding and trim repair, window upgrades, and HVAC modernization. The consistency of the housing stock means we can estimate accurately and build efficiently.",
     },
     housingStock: "58% single-family detached. 43% built 1970–1999. Suburban character with BART access. Median value ~$750K. Largest city in Contra Costa.",
-    topServices: ["complete-remodel", "roofing", "adu-construction", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Suburban Home Exterior Repair" },
     neighboringCities: ["richmond"],
     faqs: [
       { question: "How much does a kitchen remodel cost in Concord?", answer: "Kitchen remodels in Concord are among the more affordable in the Bay Area — $40,000–$90,000 for a mid-range renovation, $90,000–$150,000 for high-end. The 1970s-era kitchens common in Concord typically need new cabinets, countertops, flooring, and often layout reconfiguration." },
-      { question: "When should I replace my roof in Concord?", answer: "Most Concord homes have asphalt composition roofs with 25–30 year lifespans. If your home was built in the 1970s–1990s and hasn't been re-roofed, it's likely due or overdue. Signs: curling shingles, granule loss, visible wear. Concord re-roofs typically cost $12,000–$25,000." },
       { question: "Is building an ADU worth it in Concord?", answer: "Concord's suburban lots often have room for detached ADUs, and the rental market is strong near BART stations. A well-built ADU can generate $1,500–$2,500/month while adding $150,000–$250,000 to property value. Construction costs run $150,000–$300,000." },
       { question: "What's the permit timeline in Concord?", answer: "Concord generally processes permits faster than coastal cities. Simple remodel permits can be issued in 2–4 weeks. ADU and new construction permits typically take 6–12 weeks for plan review. We manage the entire process through the City of Concord's digital permitting system." },
     ],
-    metaDescription: "General contractor in Concord, CA. Kitchen remodels, roof replacement, ADU construction for 1970s-era homes. Transparent pricing, 5-year warranty. Free estimates.",
+    metaDescription: "General contractor in Concord, CA. Kitchen remodels, exterior repairs, ADU construction for 1970s-era homes. Transparent pricing, 5-year warranty. Free estimates.",
   },
 
   // ============================================================
@@ -291,7 +289,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Berkeley has one of the highest concentrations of Craftsman-era homes in California. These homes feature old-growth timber framing, original millwork, built-in cabinetry, and details that would cost a fortune to reproduce today. Renovation should preserve these elements while upgrading the structure, systems, and seismic resilience. It takes a contractor who sees the difference between a detail worth saving and a problem that needs fixing.",
     },
     housingStock: "Median construction year 1944 — one of the oldest in the Bay Area. 46% built before 1940. Craftsman bungalows, Mediterranean, Victorians. Berkeley Hills homes command $1.5M+ premiums.",
-    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "roofing", "retaining-walls", "composite-decks", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Craftsman Home Dry Rot & Siding Repair" },
     exteriorRepairsContext:
       "Berkeley's Craftsman and brown-shingle homes are some of the most beautiful in the Bay Area — and some of the most moisture-vulnerable. Original redwood and cedar shingles were built to last 50+ years with proper maintenance, but by the third or fourth coat of paint, dry rot behind the trim and at the foundation water table is often already advanced. Stucco homes across north Berkeley and the hills carry their own failure patterns at parapet walls and chimney flashings. We've worked on homes from the 1910s through mid-century across every Berkeley neighborhood.",
@@ -302,7 +300,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "How serious is the earthquake risk in Berkeley?", answer: "Very serious. The Hayward Fault runs through the Berkeley Hills. Homes on or near the fault face significant seismic risk, especially pre-1940 homes with unbolted foundations. Seismic retrofitting is one of our core services — we assess, engineer, and install foundation bolting and cripple wall bracing." },
       { question: "Can I build an ADU in Berkeley?", answer: "Berkeley is one of the top ADU-building cities in the Bay Area. Detached ADUs up to 1,200 sq ft are permitted on most residential lots. Note: Berkeley currently requires owner-occupancy for ADU properties. We handle the full design-build process including Berkeley's specific requirements." },
       { question: "What's the permit timeline in Berkeley?", answer: "Berkeley permit review typically takes 8–16 weeks for remodels and 12–20 weeks for ADUs and new construction. Berkeley's building department has specific green building and historic preservation requirements that can extend review. We prepare code-compliant submittals that minimize back-and-forth." },
-      { question: "Do you work in the Berkeley Hills fire zone?", answer: "Yes. The Berkeley Hills are designated WUI fire zones, requiring fire-resistant roofing, siding, and defensible space. We install fire-rated materials and design projects that meet the Hills Overlay requirements. Retaining walls and decks in the hills are built to fire-zone standards." },
+      { question: "Do you work in the Berkeley Hills fire zone?", answer: "Yes. The Berkeley Hills are designated WUI fire zones, requiring fire-resistant siding, decking, and defensible space. We install fire-rated materials and design projects that meet the Hills Overlay requirements. Retaining walls and decks in the hills are built to fire-zone standards." },
     ],
     metaDescription: "General contractor in Berkeley, CA. Craftsman home renovation, seismic retrofit, ADUs & green building specialists. 12+ years, 500+ projects. Free estimates.",
   },
@@ -326,7 +324,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Oakland's mandatory soft-story retrofit program targets multi-family buildings most vulnerable to earthquake collapse. For single-family homeowners, retrofit is technically voluntary — but with the Hayward Fault less than 5 miles away, we treat it as essential. Foundation bolting and cripple wall bracing can be the difference between a home that survives an earthquake and one that doesn't.",
     },
     housingStock: "Most housing built before 1980. Victorians in West Oakland, Adams Point, Rockridge. Post-war bungalows in East Oakland. Hills homes with panoramic views. Wide value range by neighborhood.",
-    topServices: ["concrete-foundations", "complete-remodel", "adu-construction", "roofing", "retaining-walls", "composite-decks", "exterior-repairs"],
+    topServices: ["concrete-foundations", "complete-remodel", "adu-construction", "retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Bungalow Stucco, Siding & Dry Rot Repair" },
     exteriorRepairsContext:
       "Oakland's housing stock is a mix of every style the Bay Area has produced — Craftsman bungalows in Rockridge and Temescal, Victorians in Adams Point, stucco Mediterranean homes in the Oakland hills, mid-century ranches in Laurel and Glenview. Each brings its own exterior repair signature. Hills homes face wind-driven rain and fire hardening requirements. Flatland bungalows show dry rot at porches, fascia, and water tables. Stucco hills homes crack around control joints and at chimney transitions. We know where the water actually comes in, by neighborhood.",
@@ -335,7 +333,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "Is my Oakland building required to get a seismic retrofit?", answer: "If you own a soft-story multi-family building (wood-frame, 3+ stories or 5+ units, built before 1991), Oakland's mandatory retrofit ordinance likely applies to you. Single-family homes are not required but strongly recommended given Oakland's proximity to the Hayward Fault. We perform assessments for both." },
       { question: "How much does a Victorian renovation cost in Oakland?", answer: "Victorian renovations in Oakland typically run $200–$400 per square foot. These homes require specialized knowledge — balloon framing, plaster walls, original millwork preservation, and foundation work on 100+ year old structures. Kitchen remodels in Victorians average $80,000–$160,000." },
       { question: "Can I build an ADU in Oakland without living on the property?", answer: "Yes. Unlike many cities, Oakland does NOT require owner-occupancy for properties with ADUs. This makes Oakland one of the most investor-friendly ADU markets in the Bay Area. Detached ADUs up to 1,200 sq ft are permitted on most residential lots." },
-      { question: "Do you work in the Oakland Hills fire zone?", answer: "Yes. The Oakland Hills — site of the devastating 1991 firestorm — are designated WUI fire zones with strict building requirements. We install fire-rated roofing, use fire-resistant materials for decks and siding, and design projects that meet the Hills fire safety standards." },
+      { question: "Do you work in the Oakland Hills fire zone?", answer: "Yes. The Oakland Hills — site of the devastating 1991 firestorm — are designated WUI fire zones with strict building requirements. We use fire-resistant materials for decks and siding, and design projects that meet the Hills fire safety standards." },
       { question: "What's Oakland's permit timeline like?", answer: "Oakland's permit processing has historically been slower than neighboring cities — plan review can take 12–20 weeks for remodels and 16–24 weeks for new construction/ADUs. We prepare thorough, code-compliant submittals to minimize revision cycles. Once permitted, we move fast on construction." },
       { question: "How much does an ADU cost to build in Oakland?", answer: "Oakland ADU costs typically range from $150,000–$350,000 depending on type (garage conversion vs. new detached), size, and finishes. Garage conversions start around $100,000–$180,000. The rental income potential ($1,800–$3,500/month) makes the investment math compelling." },
     ],
@@ -365,7 +363,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "San Francisco's Department of Building Inspection is notoriously complex to navigate. We've processed hundreds of permits through DBI — for remodels, ADUs, foundations, and seismic retrofits. We know the submission requirements, the review timeline expectations, and the inspection standards. When you hire us, you don't touch a single permit form.",
     },
     housingStock: "Victorians from 1850s–1900s. Edwardians (post-1906 rebuild). Soft-story multi-family (pre-1978). Median value ~$1.5M. Median price per sq ft $976.",
-    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "roofing", "retaining-walls", "composite-decks", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Dry Rot, Stucco & Siding Repair" },
     exteriorRepairsContext:
       "San Francisco's housing stock punishes exterior finishes. Fog-belt neighborhoods like the Sunset and Richmond sit in a permanent moisture envelope — Doelger rowhouses from the 1930s–50s with their stucco-over-shiplap sheathing are the classic failure case, where water finds every missed kickout flashing around bay windows. Victorian and Edwardian homes carry their own dry rot risks at cornices, bay trim, and ground-floor water tables. We've repaired stucco, dry rot, and siding on every housing type this city has built.",
@@ -378,7 +376,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "How long does a DBI permit take?", answer: "Simple remodel permits: 4–8 weeks. Kitchen/bath with structural changes: 8–16 weeks. ADU permits: 12–20 weeks. Full renovation or new construction: 16–24+ weeks. SF's permit timeline is longer than most Bay Area cities, but our experience with DBI helps minimize delays." },
       { question: "Do foundation problems vary by SF neighborhood?", answer: "Significantly. Homes in the Marina and SOMA sit on fill soil with high liquefaction risk. The Sunset and Richmond have expansive clay that shifts with moisture. Hillside neighborhoods (Twin Peaks, Noe Valley, Pacific Heights) face slope and drainage challenges. We assess your specific site conditions before recommending a solution." },
     ],
-    metaDescription: "San Francisco's trusted general contractor for 12+ years. Victorian remodels, seismic retrofit, ADUs, foundations & roofing. 500+ SF projects. CA Lic #1132983.",
+    metaDescription: "San Francisco's trusted general contractor for 12+ years. Victorian remodels, seismic retrofit, ADUs, foundations & dry rot repair. 500+ SF projects. CA Lic #1132983.",
   },
 
   // ============================================================
@@ -393,7 +391,7 @@ export const SERVICE_AREAS: CityData[] = [
     medianHomeValue: "$1.1M",
     permitAuthority: "City of Daly City",
     heroHeadline: "General Contractor in Daly City, California",
-    heroSubheadline: "Doelger home specialists. Fog-resistant roofing. And renovations that bring mid-century charm into the modern era.",
+    heroSubheadline: "Doelger home specialists. Stucco and dry rot repair. And renovations that bring mid-century charm into the modern era.",
     intro: [
       "If you own a home in Daly City's Westlake neighborhood, there's a good chance Henry Doelger built it. Between 1948 and 1962, Doelger constructed 11,000 homes here — split-level layouts, picture windows, hardwood floors — creating one of America's first master-planned suburbs. The folk song \"Little Boxes\" was written about these streets.",
       "Seventy-plus years later, these homes are ready for their next chapter. The layouts that felt innovative in 1955 now feel cramped. The original kitchens need more than a facelift. The foundations have weathered decades of fog-belt moisture. And the single-pane windows haven't been efficient since the Carter administration.",
@@ -403,18 +401,17 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Doelger homes share predictable construction patterns — which means we know what we'll find behind the walls before we open them. Standard floor plans, consistent framing, and repeatable solutions let us estimate accurately and build efficiently. If you own a Doelger home, we've renovated dozens just like it.",
     },
     housingStock: "Famous Westlake/Doelger homes (1948–1962). 11,000 mid-century tract homes. Split-level layouts, hardwood floors. Coastal fog exposure.",
-    topServices: ["complete-remodel", "roofing", "concrete-foundations", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Doelger Home Stucco & Dry Rot Repair" },
     exteriorRepairsContext:
       "Daly City's Westlake neighborhood is a museum of 1949–1956 Henry Doelger tract homes — consistent architecture, consistent predictable failure patterns. Stucco-over-shiplap construction was state of the art for its era, but 70+ years of ocean-driven fog and wind have exposed every weakness: failed kickout flashing at roof-wall intersections, soft wood behind bay windows, spreading dry rot at the party walls between adjacent units. We know exactly what's behind the stucco on a Westlake home before we cut into it.",
     neighboringCities: ["san-francisco", "south-san-francisco", "pacifica"],
     faqs: [
       { question: "How much does it cost to remodel a Doelger home in Daly City?", answer: "Doelger home remodels typically run $150–$300 per square foot. Kitchen remodels average $60,000–$120,000. The predictable construction of Doelger homes means fewer surprises behind the walls — which helps keep costs on estimate. We've renovated dozens of Doelger homes and know what to expect." },
-      { question: "What roofing materials work best in Daly City's fog?", answer: "Daly City's constant fog and moisture require roofing materials that resist algae growth and moisture damage. We recommend architectural shingles with algae-resistant coatings or composite materials rated for marine climates. Standard shingles deteriorate faster in the fog belt." },
       { question: "Can I open up the floor plan in my Doelger home?", answer: "Usually yes. Most Doelger split-level layouts have interior walls that can be removed or modified to create open-concept living spaces. Some walls are load-bearing and require header/beam installation. We assess the structure and engineer proper support before removing any walls." },
       { question: "Can I build an ADU in Daly City?", answer: "Yes. Daly City's residential lots can accommodate ADUs under California law. Detached units up to 1,200 sq ft are permitted on most single-family lots. With Daly City's proximity to SF and BART, ADUs command strong rental income — $1,800–$2,800/month." },
     ],
-    metaDescription: "General contractor in Daly City, CA. Doelger home remodel specialists, fog-resistant roofing, foundations & ADUs. 12+ years experience. Free estimates.",
+    metaDescription: "General contractor in Daly City, CA. Doelger home remodel specialists, stucco & dry rot repair, foundations & ADUs. 12+ years experience. Free estimates.",
   },
   {
     slug: "south-san-francisco",
@@ -456,7 +453,7 @@ export const SERVICE_AREAS: CityData[] = [
     heroHeadline: "General Contractor in Millbrae, California",
     heroSubheadline: "Post-war home renovations, hillside retaining walls, and ADU construction in the Peninsula's transit hub.",
     intro: [
-      "Millbrae's post-war homes are now 60–80 years old — the age when kitchens, bathrooms, roofing, and foundations all need attention at once. Add the city's position as a major BART/Caltrain interchange, and you have a market where renovation investment pays off in both quality of life and property value.",
+      "Millbrae's post-war homes are now 60–80 years old — the age when kitchens, bathrooms, exteriors, and foundations all need attention at once. Add the city's position as a major BART/Caltrain interchange, and you have a market where renovation investment pays off in both quality of life and property value.",
       "We help Millbrae homeowners bring mid-century homes into the modern era while preserving the neighborhood character that makes this city desirable.",
     ],
     constructionInsight: {
@@ -521,7 +518,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Burlingame's older homes (30% pre-1940) need more than cosmetic updates. Behind the plaster walls, you'll often find outdated electrical, galvanized plumbing, and foundations that predate seismic codes. Renovation here means upgrading infrastructure while preserving the character that makes Burlingame properties worth $3M.",
     },
     housingStock: "30% built before 1940. Walkable downtown character. Values $2.6M–$3.0M, up to $8M for premium. Charming older neighborhoods with mature landscaping.",
-    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "roofing", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Dry Rot & Exterior Repair" },
     neighboringCities: ["hillsborough", "san-carlos", "millbrae"],
     faqs: [
@@ -544,21 +541,20 @@ export const SERVICE_AREAS: CityData[] = [
     heroSubheadline: "Estate-scale renovation, ADU construction, and premium craftsmanship for one of the Peninsula's most exclusive communities.",
     intro: [
       "Hillsborough is exclusively residential — no commercial properties, no mixed-use, no compromise on quality. Every project here is held to the highest standard by both the homeowners who commission the work and the Town's strict architectural review process.",
-      "We approach Hillsborough projects accordingly. Premium materials, meticulous execution, and the kind of attention to detail that estate-scale homes require. Whether you're renovating a mid-century estate, adding an ADU to meet the Town's state housing mandates, or replacing a roof that's been protecting a $5M+ home — the standard is absolute.",
+      "We approach Hillsborough projects accordingly. Premium materials, meticulous execution, and the kind of attention to detail that estate-scale homes require. Whether you're renovating a mid-century estate, adding an ADU to meet the Town's state housing mandates, or restoring the exterior envelope on a $5M+ home — the standard is absolute.",
     ],
     constructionInsight: {
       heading: "ADU Mandates Create Opportunity",
       description: "Hillsborough relies heavily on ADU construction to meet California's state housing mandates — over 50% of the Town's allocated housing units are expected to come from ADUs. For homeowners, this means the Town is motivated to approve ADU applications, and a well-built ADU on a Hillsborough lot adds significant value to an already premium property.",
     },
     housingStock: "41% built 1940s–1960s. Exclusively residential — no commercial. Large lots, estate-scale homes. Median $5M–$6M. Strict architectural review.",
-    topServices: ["complete-remodel", "adu-construction", "roofing", "concrete-foundations", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Estate Home Exterior & Stucco Repair" },
     neighboringCities: ["burlingame", "san-carlos"],
     faqs: [
       { question: "How does Hillsborough's architectural review work?", answer: "The Town of Hillsborough requires design review for exterior modifications, new construction, and ADUs. Plans must meet aesthetic guidelines that preserve the Town's residential character. We prepare submittals that satisfy review requirements and coordinate with the Town throughout the process." },
       { question: "How much does an estate remodel cost in Hillsborough?", answer: "Hillsborough estate remodels typically run $400–$700+ per square foot, reflecting the premium materials, craftsmanship, and finish quality that properties in this market demand. Complete estate renovations can range from $500,000 to $2M+ depending on scope." },
       { question: "Can I build an ADU in Hillsborough?", answer: "Yes — and the Town is actively encouraging it. Over 50% of Hillsborough's state housing mandate is expected to be met through ADU construction. Hillsborough ADUs are premium projects — high-end finishes, thoughtful architecture, and seamless integration with existing estates. We handle the full process." },
-      { question: "What kind of roofing do Hillsborough estates need?", answer: "Estate-scale homes in Hillsborough typically require premium roofing materials — architectural slate, high-end tile, or standing-seam metal. Complex rooflines and large surface areas make quality installation critical. We install roofing systems that match the home's character and last 40–75+ years." },
     ],
     metaDescription: "Premium general contractor in Hillsborough, CA. Estate renovation, ADU construction & luxury remodels. Strict architectural review expertise. Free consultations.",
   },
@@ -571,7 +567,7 @@ export const SERVICE_AREAS: CityData[] = [
     medianHomeValue: "$1.8M",
     permitAuthority: "City of Foster City",
     heroHeadline: "General Contractor in Foster City, California",
-    heroSubheadline: "Foundation specialists for a city built on fill. Plus remodels, roofing, and ADU construction on the Peninsula's lagoon community.",
+    heroSubheadline: "Foundation specialists for a city built on fill. Plus remodels, exterior repairs, and ADU construction on the Peninsula's lagoon community.",
     intro: [
       "Foster City was built on 18 million cubic yards of sand dredged from the Bay in the 1960s. That's not a fun fact — it's a construction reality. Every foundation, every slab, every structure in Foster City sits on fill soil that's still settling. The city is sinking up to 2 centimeters per year.",
       "For homeowners, this means foundation work isn't optional — it's inevitable. Cracks appear. Floors shift. Doors that used to close fine start sticking. And the contractor you hire needs to understand fill-soil engineering, not just standard construction.",
@@ -588,9 +584,8 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "Why do Foster City homes have foundation problems?", answer: "Foster City is built entirely on fill soil — reclaimed Bay marshland. This fill is still compacting, causing the city to sink up to 2cm per year. Foundations settle unevenly, leading to cracks, shifting floors, and structural stress. Foundation engineering here must account for ongoing settlement." },
       { question: "How much does foundation repair cost in Foster City?", answer: "Foundation repairs in Foster City range from $10,000 for crack repair and leveling to $50,000–$100,000+ for significant underpinning or replacement. The fill-soil conditions often require pier-based solutions that anchor to more stable layers below the fill." },
       { question: "Is it safe to build an ADU in Foster City?", answer: "Yes, with proper engineering. ADU foundations in Foster City need to account for fill-soil conditions — typically deeper footings or pier systems. We design every Foster City project for the specific soil conditions on your lot." },
-      { question: "When should I replace my roof in Foster City?", answer: "Most Foster City homes were built in the 1970s–1980s. If the original roof hasn't been replaced, it's 40–50 years old and likely past its lifespan. Signs: visible wear, leaks after rain, curling shingles. Re-roofing typically costs $15,000–$30,000 depending on size and material." },
     ],
-    metaDescription: "General contractor in Foster City, CA. Fill-soil foundation specialists, home remodels, roofing & ADUs. Engineered for Foster City's unique conditions. Free estimates.",
+    metaDescription: "General contractor in Foster City, CA. Fill-soil foundation specialists, home remodels, exterior repairs & ADUs. Engineered for Foster City's unique conditions. Free estimates.",
   },
   {
     slug: "belmont",
@@ -640,7 +635,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "San Carlos's strong school district creates a stable, long-term homeowner base. These families invest in renovation rather than moving — kitchen and bath updates, room additions for growing families, and ADUs for multigenerational living or income. The renovation ROI in San Carlos is consistently strong because demand for family homes here never weakens.",
     },
     housingStock: "Median construction year 1961. 27% built before 1949. Family-oriented neighborhoods. Strong schools drive demand. Values ~$2.3M.",
-    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "roofing", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Dry Rot & Siding Repair" },
     neighboringCities: ["belmont", "burlingame", "hillsborough"],
     faqs: [
@@ -660,28 +655,27 @@ export const SERVICE_AREAS: CityData[] = [
     medianHomeValue: "$1.3M",
     permitAuthority: "City of Pacifica",
     heroHeadline: "General Contractor in Pacifica, California",
-    heroSubheadline: "Coastal construction specialists. Weather-resistant roofing, foundation assessment, and renovations built to handle what the ocean throws at them.",
+    heroSubheadline: "Coastal construction specialists. Weather-resistant exterior repairs, foundation assessment, and renovations built to handle what the ocean throws at them.",
     intro: [
       "Pacifica's coastline is retreating. Bluffs erode 1.5–2 feet per year on average. Homes have been condemned and demolished as cliffs give way beneath them. King tides cause millions in damage. This is a beautiful place to live — and one of the most demanding places to build.",
       "Construction in Pacifica means thinking about salt air, constant fog, coastal erosion, and the Coastal Commission's regulations. It means specifying materials that resist corrosion, designing drainage that manages storm runoff, and understanding which properties face risks that no amount of construction can mitigate.",
     ],
     constructionInsight: {
       heading: "The Coast Doesn't Compromise",
-      description: "Pacifica's coastal environment destroys standard construction materials faster than anywhere else in the Bay Area. Salt air corrodes metal fasteners. Fog drives moisture into every gap. Wind accelerates wear on roofing and siding. We spec marine-grade hardware, composite materials, and weather-resistant systems as standard practice for every Pacifica project.",
+      description: "Pacifica's coastal environment destroys standard construction materials faster than anywhere else in the Bay Area. Salt air corrodes metal fasteners. Fog drives moisture into every gap. Wind accelerates wear on siding, trim, and decking. We spec marine-grade hardware, composite materials, and weather-resistant systems as standard practice for every Pacifica project.",
     },
     housingStock: "60% built 1940s–1960s. 68% owner-occupied. Coastal community. Severe erosion risk on bluff properties. Values $1.2M–$1.4M.",
-    topServices: ["roofing", "concrete-foundations", "complete-remodel", "composite-decks", "exterior-repairs"],
+    topServices: ["concrete-foundations", "complete-remodel", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Coastal Home Dry Rot & Siding Repair" },
     exteriorRepairsContext:
       "Pacifica homes take the harshest weather in the Bay Area. Salt air eats nails and fasteners. Wind-driven rain hits siding from angles flat-lot homes never see. The marine layer doesn't lift for weeks. If your stucco is cracking, your siding is warping, or you're seeing peeling paint on the windward elevation, the framing behind the wall is almost certainly holding moisture. We replace Hardie board, redwood siding, and stucco systems across Rockaway Beach, Linda Mar, and Pacific Manor — built to survive what's actually out there.",
     neighboringCities: ["daly-city", "san-bruno"],
     faqs: [
-      { question: "What roofing materials last longest in Pacifica?", answer: "In Pacifica's salt-air, fog-heavy environment, we recommend architectural shingles with algae-resistant coatings, composite slate, or standing-seam metal with Kynar finishes. Standard materials fail 20–30% faster on the coast. We only install materials rated for marine exposure." },
       { question: "Should I get a foundation assessment in Pacifica?", answer: "If your home is on or near the coastal bluffs, absolutely. Bluff properties face erosion risk that can undermine foundations. Even inland Pacifica homes should be assessed if they're 60+ years old — the fog-belt moisture accelerates concrete deterioration." },
       { question: "Why is composite decking better than wood in Pacifica?", answer: "Wood decks in Pacifica's climate rot, warp, and gray within a few years. Salt air and constant moisture accelerate deterioration. Composite decking (Trex/TimberTech) resists all of it — no rot, no splinters, no staining, no maintenance. It costs more upfront but lasts 25–50 years vs. 5–10 for wood." },
       { question: "Does Pacifica have special building regulations?", answer: "Yes. Properties in the Coastal Zone are subject to California Coastal Commission review in addition to City of Pacifica permits. Bluff-adjacent construction has additional setback and engineering requirements. We navigate both regulatory processes for coastal projects." },
     ],
-    metaDescription: "General contractor in Pacifica, CA. Coastal construction specialists — weather-resistant roofing, foundation assessment, composite decks & remodels. Free estimates.",
+    metaDescription: "General contractor in Pacifica, CA. Coastal construction specialists — weather-resistant exterior repairs, foundation assessment, composite decks & remodels. Free estimates.",
   },
   {
     slug: "woodside",
@@ -702,15 +696,15 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Woodside's large lots and state housing mandates create an ideal ADU market. Unlike dense suburban ADUs, Woodside ADUs are often designed as premium standalone guest houses — higher-end finishes, architectural integration with the main estate, and the privacy that large lots afford. The Town is motivated to approve ADU applications, making this one of the smoothest permitting environments on the Peninsula for ADU construction.",
     },
     housingStock: "Rural estate character. 1+ acre lots typical. Equestrian community. Median value $5.2M+. Septic systems in many areas. WUI fire zone.",
-    topServices: ["adu-construction", "complete-remodel", "roofing", "retaining-walls", "exterior-repairs"],
+    topServices: ["adu-construction", "complete-remodel", "retaining-walls", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Estate Home Dry Rot & Exterior Repair" },
     neighboringCities: ["atherton", "palo-alto"],
     faqs: [
       { question: "How much does an ADU/guest house cost in Woodside?", answer: "Woodside ADUs are premium projects — typically $300,000–$500,000+ for a detached guest house with high-end finishes, architectural design, and full utilities. The Town's support for ADU construction and the property values ($5M+) make this a strong investment." },
-      { question: "Does Woodside require fire-resistant construction?", answer: "Yes. Much of Woodside is in a WUI fire zone, requiring fire-resistant roofing (Class A), fire-rated siding, and defensible space. We build to all fire-zone requirements and can advise on material selections that meet code while matching your aesthetic." },
+      { question: "Does Woodside require fire-resistant construction?", answer: "Yes. Much of Woodside is in a WUI fire zone, requiring fire-rated siding, decking, and defensible space. We build to all fire-zone requirements and can advise on material selections that meet code while matching your aesthetic." },
       { question: "Can I renovate my Woodside estate in phases?", answer: "Absolutely. Many Woodside estate renovations are phased over 1–3 years to manage budget and minimize disruption. We create a phased plan during the estimate stage, prioritizing the most impactful work first and coordinating later phases to build on earlier improvements." },
     ],
-    metaDescription: "General contractor in Woodside, CA. Estate renovation, ADU guest houses, fire-zone roofing & retaining walls. Premium craftsmanship for the Peninsula's finest. Free estimates.",
+    metaDescription: "General contractor in Woodside, CA. Estate renovation, ADU guest houses, fire-zone construction & retaining walls. Premium craftsmanship for the Peninsula's finest. Free estimates.",
   },
   {
     slug: "atherton",
@@ -731,7 +725,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Atherton's $8M+ properties demand construction quality that matches their value. This isn't a market for value-engineering or cutting corners. Premium hardwoods, custom millwork, designer fixtures, and craftsmanship that will be scrutinized by homeowners who know the difference between good and exceptional. We deliver exceptional.",
     },
     housingStock: "Large lots (1+ acres in West Atherton). Gated estates. California Ranch and Mid-Century Modern. Median $8M, ranging to $20M–$30M. Assessed value $17.4B.",
-    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "roofing", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Estate Home Exterior & Stucco Repair" },
     neighboringCities: ["menlo-park", "woodside", "palo-alto"],
     faqs: [
@@ -789,28 +783,27 @@ export const SERVICE_AREAS: CityData[] = [
     heroSubheadline: "Eichler home renovation specialists. ADU experts. And the precision craftsmanship that Palo Alto's market demands.",
     intro: [
       "Palo Alto is home to the highest concentration of Eichler homes in the world — roughly 2,200 mid-century modern masterpieces designed by Joseph Eichler in the 1950s and 60s. These homes are architectural icons: post-and-beam construction, walls of glass, radiant floor heating, flat roofs, and indoor-outdoor atriums that blur the line between house and landscape.",
-      "Renovating an Eichler is not standard construction. Radiant floor heating systems run through the concrete slab — puncture it and you have a major repair. Flat roofs require specialized waterproofing that pitched-roof contractors don't understand. Post-and-beam structural systems don't follow conventional framing rules. You need a contractor who knows these homes.",
+      "Renovating an Eichler is not standard construction. Radiant floor heating systems run through the concrete slab — puncture it and you have a major repair. Floor-to-ceiling glass walls sit in original steel and wood frames that most contractors will happily rip out and ruin. Post-and-beam structural systems don't follow conventional framing rules. You need a contractor who knows these homes.",
       "Beyond Eichlers, Palo Alto's tech-wealth-driven market demands precision across every project type — ADUs for Stanford graduate students, complete remodels with open-concept kitchens, and whole-home renovations that preserve mid-century character while upgrading for modern life.",
     ],
     constructionInsight: {
       heading: "Eichler Homes Require Eichler Knowledge",
-      description: "Eichler renovation is a specialty. The concrete slab contains radiant heating tubes that must be mapped before any floor work. The flat roof membrane needs a waterproofing system designed for zero-pitch — standard roofing techniques fail. The post-and-beam structure means walls aren't load-bearing in conventional ways. We understand these systems because we've worked on them extensively.",
+      description: "Eichler renovation is a specialty. The concrete slab contains radiant heating tubes that must be mapped before any floor work. The original mahogany siding and glass-wall glazing need period-correct detailing, not off-the-shelf replacements. The post-and-beam structure means walls aren't load-bearing in conventional ways. We understand these systems because we've worked on them extensively.",
     },
     housingStock: "~2,200 Eichler homes — highest concentration worldwide. Also ranch homes and newer construction. 46% built 1940s–1960s. Median $3.5M–$4.1M. Stanford influence.",
-    topServices: ["complete-remodel", "roofing", "concrete-foundations", "adu-construction", "composite-decks", "retaining-walls", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "composite-decks", "retaining-walls", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Eichler & Ranch Home Exterior Repair" },
     exteriorRepairsContext:
       "Palo Alto has one of the most distinctive housing stocks in the Bay Area — original Eichler tract developments across Greenmeadow, Fairmeadow, and Green Gables built with T1-11 siding on post-and-beam framing. That siding's vertical grooves are beautiful but notorious water traps: failed paint means rot starts within two winters. Adjacent stucco ranches from the same era have their own failure patterns at low eaves and around windows. T1-11 replacement with proper flashing is very different work from stucco repair — we do both correctly.",
     neighboringCities: ["menlo-park", "los-altos", "mountain-view"],
     faqs: [
-      { question: "How much does an Eichler remodel cost in Palo Alto?", answer: "Eichler remodels in Palo Alto run $300–$550 per square foot. Kitchen remodels average $120,000–$250,000. The specialized requirements — radiant floor heating, flat roof systems, atrium restoration, post-and-beam structural work — add cost compared to conventional homes. But the result preserves a mid-century icon." },
+      { question: "How much does an Eichler remodel cost in Palo Alto?", answer: "Eichler remodels in Palo Alto run $300–$550 per square foot. Kitchen remodels average $120,000–$250,000. The specialized requirements — radiant floor heating, atrium restoration, post-and-beam structural work, and the glass-wall detailing these homes depend on — add cost compared to conventional homes. But the result preserves a mid-century icon." },
       { question: "Can you fix radiant floor heating in an Eichler?", answer: "Yes. We locate and map the radiant heating tubes in the concrete slab before any work begins. If tubes are damaged, we can reroute sections or convert to alternative heating systems. Avoiding damage is always the goal — we plan floor penetrations carefully around the existing system." },
-      { question: "What's the best roofing for an Eichler flat roof?", answer: "Eichler flat roofs need a membrane system — typically TPO, PVC, or modified bitumen — with proper drainage slope built into the substrate. Standard shingle roofing doesn't work on flat roofs. We install membrane systems designed for zero-pitch applications with 20–30 year lifespans." },
       { question: "How much does an ADU cost in Palo Alto?", answer: "ADU construction in Palo Alto typically costs $250,000–$450,000 for a detached unit. Given property values of $3.5M+, the ROI is strong — both in property value (adding $300,000–$500,000+) and rental income ($2,500–$4,500/month given Stanford/tech demand)." },
       { question: "Can I build an ADU on my Eichler lot?", answer: "In most cases, yes. Palo Alto's Eichler neighborhoods typically have lot sizes that accommodate detached ADUs within setback requirements. We design ADUs that complement the mid-century modern aesthetic of the main home. The City's ADU policies have been streamlined in recent years." },
       { question: "What's the permit process like in Palo Alto?", answer: "Palo Alto's permit review takes 8–16 weeks for remodels and 12–20 weeks for ADUs. Some neighborhoods have additional design review. We prepare code-compliant plans and manage the full process. Our experience with the City's requirements helps minimize revision cycles." },
     ],
-    metaDescription: "General contractor in Palo Alto, CA. Eichler home renovation specialists, ADU construction, flat roof experts. 2,200 Eichlers, we know them inside out. Free estimates.",
+    metaDescription: "General contractor in Palo Alto, CA. Eichler home renovation specialists, ADU construction, post-and-beam experts. 2,200 Eichlers, we know them inside out. Free estimates.",
   },
   {
     slug: "los-altos",
@@ -831,7 +824,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Los Altos's ultra-competitive market means homeowners who already own are better off renovating than selling and re-buying. The cost of a comprehensive remodel — even at $400+ per square foot — is often less than the premium they'd pay to buy a comparable updated home in this market. We help owners think through the renovation-vs-move math.",
     },
     housingStock: "Ranch and Mid-Century homes. 70% of transactions close above asking. Median $5.1M. Larger parcels than neighboring cities. One-third sell $500K+ over list.",
-    topServices: ["complete-remodel", "adu-construction", "composite-decks", "roofing", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Ranch Home Stucco & Siding Repair" },
     neighboringCities: ["palo-alto", "mountain-view", "cupertino"],
     faqs: [
@@ -860,13 +853,12 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Mountain View's extreme jobs-housing imbalance means housing demand consistently outpaces supply. Renovated homes and properties with ADUs command premium prices. The math is straightforward: invest in your existing property, and the tech-driven market rewards you.",
     },
     housingStock: "Mix of Eichler tracts, mid-century ranch homes, and newer construction. Google HQ drives demand. 61% renters. Values ~$2M.",
-    topServices: ["complete-remodel", "adu-construction", "roofing", "concrete-foundations", "exterior-repairs"],
+    topServices: ["complete-remodel", "adu-construction", "concrete-foundations", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Dry Rot & Exterior Repair" },
     neighboringCities: ["palo-alto", "sunnyvale", "los-altos"],
     faqs: [
-      { question: "How much does an Eichler remodel cost in Mountain View?", answer: "Eichler remodels in Mountain View run $250–$450 per square foot — slightly lower than Palo Alto due to lower property values. The same specialized requirements apply: radiant floor heating, flat roof systems, and post-and-beam structural understanding." },
+      { question: "How much does an Eichler remodel cost in Mountain View?", answer: "Eichler remodels in Mountain View run $250–$450 per square foot — slightly lower than Palo Alto due to lower property values. The same specialized requirements apply: radiant floor heating, post-and-beam structural understanding, and period-correct glass-wall detailing." },
       { question: "Can I build an ADU in Mountain View?", answer: "Yes, and Mountain View's housing demand makes it one of the strongest ADU rental markets in Silicon Valley. Detached ADUs cost $200,000–$350,000. Rental income potential: $2,200–$3,800/month given proximity to Google and other tech employers." },
-      { question: "What type of roofing do Eichler homes in Mountain View need?", answer: "Eichler flat roofs require membrane roofing systems (TPO, PVC, or modified bitumen). Standard shingles don't work on flat pitches. We install membrane systems with 20–30 year lifespans and proper drainage slope built into the substrate." },
       { question: "How long does a mid-century home remodel take in Mountain View?", answer: "Kitchen remodels: 8–14 weeks. Whole-home renovations: 4–8 months. Add 8–16 weeks for City of Mountain View permit review. We provide specific timelines during the estimate phase and stick to them." },
     ],
     metaDescription: "General contractor in Mountain View, CA. Eichler renovation, ADU construction & mid-century remodels. Near Google HQ, strong rental market. Free estimates.",
@@ -890,16 +882,15 @@ export const SERVICE_AREAS: CityData[] = [
       description: "Sunnyvale's 1,000+ Eichler homes represent one of the highest-volume Eichler renovation markets in the Bay Area. At $2M median values (vs. $3.8M in Palo Alto), Sunnyvale Eichler owners can invest in renovation knowing the per-dollar return is strong. We bring the same Eichler expertise here at a more favorable price point.",
     },
     housingStock: "1,000+ Eichler homes. Ranch homes from aerospace/defense era. Median value ~$2M. Mix of mid-century single-family and newer multifamily.",
-    topServices: ["complete-remodel", "roofing", "concrete-foundations", "adu-construction", "exterior-repairs"],
+    topServices: ["complete-remodel", "concrete-foundations", "adu-construction", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Stucco & Siding Repair" },
     neighboringCities: ["mountain-view", "santa-clara", "cupertino"],
     faqs: [
-      { question: "How much does an Eichler remodel cost in Sunnyvale?", answer: "Sunnyvale Eichler remodels typically run $200–$400 per square foot — the most accessible Eichler renovation market in Silicon Valley. Kitchen remodels average $80,000–$160,000. The same specialized knowledge is required (radiant floors, flat roofs, post-and-beam), but the price point makes comprehensive renovation more feasible." },
-      { question: "Can I replace the flat roof on my Sunnyvale Eichler?", answer: "Yes. Eichler flat roofs need membrane systems (TPO, PVC, or modified bitumen). We've replaced dozens of Eichler roofs across Sunnyvale and Palo Alto. Typical cost: $20,000–$40,000 depending on size. Properly installed, a new membrane roof lasts 25–30 years." },
+      { question: "How much does an Eichler remodel cost in Sunnyvale?", answer: "Sunnyvale Eichler remodels typically run $200–$400 per square foot — the most accessible Eichler renovation market in Silicon Valley. Kitchen remodels average $80,000–$160,000. The same specialized knowledge is required (radiant floors, post-and-beam framing, original glass-wall detailing), but the price point makes comprehensive renovation more feasible." },
       { question: "How much does an ADU cost in Sunnyvale?", answer: "ADU construction in Sunnyvale costs $175,000–$325,000 for a detached unit. Sunnyvale's suburban lot sizes accommodate ADUs well, and rental demand from Apple, Lockheed Martin, and other local employers keeps income potential strong at $2,000–$3,200/month." },
       { question: "Do ranch homes in Sunnyvale need foundation work?", answer: "Many do. Post-war slab-on-grade foundations in Sunnyvale are 50–70 years old and may show cracking, settling, or moisture intrusion. We assess your slab and recommend repair options — typically crack injection, leveling, or pier support for significant settlement." },
     ],
-    metaDescription: "General contractor in Sunnyvale, CA. 1,000+ Eichler homes — we know them. Mid-century remodels, flat roof replacement, ADUs & foundations. Free estimates.",
+    metaDescription: "General contractor in Sunnyvale, CA. 1,000+ Eichler homes — we know them. Mid-century remodels, exterior repairs, ADUs & foundations. Free estimates.",
   },
   {
     slug: "santa-clara",
@@ -913,7 +904,7 @@ export const SERVICE_AREAS: CityData[] = [
     heroSubheadline: "Foundation work on liquefaction-prone soil, mid-century remodels, and ADU construction with pre-approved plans.",
     intro: [
       "Santa Clara sits on what were historically wet meadows — and the soil remembers. Liquefaction risk is significant across much of the city, meaning foundation work here requires understanding how saturated, loose soil behaves during seismic events. Standard foundation approaches don't account for this.",
-      "Beyond the soil, Santa Clara's mid-century housing stock is reaching the age where comprehensive renovation makes sense — kitchens, bathrooms, roofing, and the foundation work that the soil conditions make especially important.",
+      "Beyond the soil, Santa Clara's mid-century housing stock is reaching the age where comprehensive renovation makes sense — kitchens, bathrooms, exterior repairs, and the foundation work that the soil conditions make especially important.",
     ],
     constructionInsight: {
       heading: "Pre-Approved ADU Plans Save Time and Money",
@@ -979,7 +970,7 @@ export const SERVICE_AREAS: CityData[] = [
       description: "San Jose's valley-floor soil is predominantly expansive clay — it swells when wet and contracts when dry, creating seasonal ground movement that stresses foundations year after year. Over 50+ years, this movement cracks slabs, shifts footings, and creates the uneven floors and sticking doors that San Jose homeowners know well. Every foundation project we do in San Jose is engineered for clay-soil conditions.",
     },
     housingStock: "Wide variety: Victorian downtown, 1970s suburbs, new construction. Constrained land supply. Median $1.7M–$2.0M. Eichler neighborhoods in some areas. Largest South Bay jurisdiction.",
-    topServices: ["concrete-foundations", "complete-remodel", "adu-construction", "roofing", "retaining-walls", "composite-decks", "exterior-repairs"],
+    topServices: ["concrete-foundations", "complete-remodel", "adu-construction", "retaining-walls", "composite-decks", "exterior-repairs"],
     serviceAnchors: { "exterior-repairs": "Home Exterior Repair & Siding Replacement" },
     exteriorRepairsContext:
       "San Jose covers more housing styles than any other Bay Area city — Victorian downtown, Craftsman bungalows in Willow Glen, stucco ranches across Cambrian Park and Almaden, mid-century Eichlers in Fairglen and the Meadows, modern tracts in Silver Creek and Berryessa. Stucco tract homes from the 1960s–80s often have hairline cracks at windows that hide moisture damage in the sheathing. 1940s–50s wood-sided homes show dry rot at fascia and trim. We've worked on every San Jose neighborhood and every exterior finish type.",
@@ -992,7 +983,7 @@ export const SERVICE_AREAS: CityData[] = [
       { question: "What's the permit timeline in San Jose?", answer: "San Jose is the largest permit-issuing jurisdiction in the South Bay. Simple remodel permits: 4–8 weeks. Kitchen/bath with structural changes: 8–14 weeks. ADU permits: 10–16 weeks. We manage the City's digital permitting process and keep you updated on timeline." },
       { question: "Do San Jose hillside homes need retaining walls?", answer: "Homes in the east foothills (Evergreen, Silver Creek, Alum Rock) often need retaining walls for slope stabilization, driveway support, or yard usability. Costs range from $200–$500 per linear foot depending on height, material, and access. We engineer every wall for the specific slope and soil conditions." },
     ],
-    metaDescription: "General contractor in San Jose, CA. Foundation specialists for clay soil, kitchen remodels, ADU construction & roofing. Bay Area's largest city. 500+ projects. Free estimates.",
+    metaDescription: "General contractor in San Jose, CA. Foundation specialists for clay soil, kitchen remodels, ADU construction & exterior repairs. Bay Area's largest city. Free estimates.",
   },
 ];
 

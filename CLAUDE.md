@@ -13,7 +13,7 @@ Website for **Gadget Construction Inc.**, a Class B general contractor serving 3
 - **License:** CA #1132983
 - **Warranty:** 5-year workmanship
 - **Service area:** 31 cities across Marin, Contra Costa, Alameda, San Francisco, San Mateo, and Santa Clara counties
-- **Services:** Concrete Foundations, Retaining Walls, Complete Remodels, Composite Decks, Roofing, ADU Construction, Exterior Repairs
+- **Services:** Concrete Foundations, Retaining Walls, Complete Remodels, Composite Decks, ADU Construction, Exterior Repairs
 - **Site URL:** https://gadgetconstructionsf.com
 - **Tagline:** "Built Right. On Time. Guaranteed."
 
@@ -50,7 +50,7 @@ app/                              # Pages (App Router)
   page.tsx                        # Homepage (with HowTo schema, context-aware urgency badge)
   globals.css                     # Design tokens, keyframes, base styles, btn-concrete, overflow-x:clip
   opengraph-image.tsx             # Dynamic OG image (1200x630, logo + CTA + credentials)
-  sitemap.ts                      # Auto-generated sitemap for all 51 routes with priority tiers
+  sitemap.ts                      # Auto-generated sitemap for all 58 routes with priority tiers
   robots.ts                       # Robots.txt (allows all, blocks /api/, points to sitemap)
   about/page.tsx
   contact/page.tsx
@@ -58,7 +58,7 @@ app/                              # Pages (App Router)
   blog/page.tsx
   blog/[slug]/page.tsx
   services/page.tsx               # Services hub
-  services/*/page.tsx             # 6 individual service pages
+  services/*/page.tsx             # 6 individual service pages (roofing retired 2026-09-09)
   service-areas/page.tsx          # Service areas hub (31 cities grouped by county)
   service-areas/[city]/page.tsx   # 31 individual city SEO pages (with FAQ schema)
   api/contact/route.ts            # Form submission endpoint
@@ -70,7 +70,7 @@ components/
     SectionWrapper.tsx            # Section with bg variants (white/light/dark/gradient)
     Card.tsx, Badge.tsx           # Basic UI elements
     FormField.tsx                 # Input/textarea/select with validation
-    MultiStepForm.tsx             # 3-step progressive form with directional transitions (7 service options)
+    MultiStepForm.tsx             # 3-step progressive form with directional transitions (6 service options)
     EstimateModal.tsx             # Context provider + spring-driven sheet (drag-to-dismiss) + EstimateButton
     AnimateOnScroll.tsx           # Binary scroll-trigger wrapper (uses useInView)
     RevealOnScroll.tsx            # Scroll-POSITION-linked animation (subscribes to lib/scroll-driver)
@@ -171,22 +171,19 @@ scripts/                          # CLI tools (Node + Python)
 public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
   logo-white.png                  # Company logo — white version (for dark backgrounds, footer, OG image)
-  hero-bg.jpg                     # Homepage hero (crew on roof)
-  why-choose-us-bg.jpg            # WhyChooseUs section background (finished roof)
+  hero-foundation-crew.jpg        # Homepage hero (Gadget crew tying rebar in a foundation trench; lightly AI-enhanced)
   adu-construction.jpg            # ADU service card image (bento grid)
   complete-remodel.jpg            # Remodel service card image (bento grid)
   composite-decks.jpg             # Deck service card image (bento grid)
   concrete-foundations.jpg        # Foundation service card image (bento grid)
-  roofing.jpg                     # Roofing service card image (bento grid)
   retaining-walls.jpg             # Retaining wall service card image (bento grid)
   composite-decks-hero.jpg        # Composite decks service page hero
-  roofing-hero.jpg                # Roofing service page hero
   adu-construction-hero.jpg       # ADU construction service page hero
   retaining-walls-hero.jpg        # Retaining walls service page hero
   concrete-foundations-hero.jpg   # Concrete foundations service page hero (renamed from concrete-foundations.jpg)
   complete-remodel-hero.jpg       # Complete remodel service page hero
-  roofing-before.jpg              # Before/after: gazebo roof before replacement
-  roofing-after.jpg               # Before/after: gazebo roof after replacement
+  stucco-wide-before.jpg          # Before/after: wire lath & building paper before re-stucco
+  stucco-wide-after.jpg           # Before/after: finished stucco wall (also exterior-repairs hero)
   gallery-composite-deck-pergola.jpg  # Gallery: deck with pergola & LED lighting
   gallery-composite-deck-spa.jpg      # Gallery: spa deck with hot tub & privacy screens
   gallery-composite-deck-railing.jpg  # Gallery: wraparound deck with railing
@@ -203,7 +200,6 @@ public/images/
   gallery-adu-insulation.jpg         # Gallery: ADU insulation installation
   gallery-adu-framing.jpg            # Gallery: two-story ADU framing phase
   gallery-adu-housewrap.jpg          # Gallery: ADU Tyvek housewrap installation
-  gallery-roofing-shingles.jpg       # Gallery: architectural shingles on modern home
 ```
 
 ### Data Flow
@@ -423,7 +419,7 @@ Premium mobile menu with two visual modes:
 ### Multi-Step Form
 
 3-step progressive form: Service Selection → Timeline/Budget → Contact Info
-- **7 service options** in 2-column grid: Exterior Repairs, Retaining Walls, Complete Remodel, Composite Decks, Roofing, ADU Construction, Concrete Foundations & Slabs (spans full width as last odd item)
+- **6 service options** in 2-column grid: Exterior Repairs, Retaining Walls, Complete Remodel, Composite Decks, ADU Construction, Concrete Foundations & Slabs
 - Step transitions animate with directional slide (forward = slide right, back = slide left)
 - 150ms fade-out, content swaps, fades in from opposite direction
 - Progress bar with numbered circles
@@ -434,7 +430,7 @@ Premium mobile menu with two visual modes:
 
 **Desktop (`sm:` and up):** Asymmetric bento layout:
 - 2 large "Featured Service" cards (Complete Remodel + ADU) spanning 2 columns
-- 4 compact cards (Foundations, Retaining Walls, Decks, Roofing) in a row
+- 4 compact cards (Foundations, Retaining Walls, Decks, Exterior Repairs) in a row
 - `SERVICE_IMAGES` map has real photos for all 6 services; `SERVICE_IMAGE_ALT` provides SEO alt text
 - Large cards slide in from left/right, compact cards scale up via `RevealOnScroll`
 
@@ -481,7 +477,7 @@ Audited against 2026 Google standards (April 2026). All critical items addressed
 - 33 FAQ entries across service pages
 
 ### Crawlability
-- `app/sitemap.ts` — auto-generated sitemap for all 51 routes, with priority tiers by page type and city tier
+- `app/sitemap.ts` — auto-generated sitemap for all 58 routes, with priority tiers by page type and city tier
 - `app/robots.ts` — allows all crawling, blocks `/api/`, points to sitemap
 - Self-referencing canonical URLs on all pages
 
@@ -546,10 +542,14 @@ These were research-backed decisions — don't revert without reason:
 - **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live (separate from CallRail which is now wired up for call attribution)
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
-- **Exterior repairs hero image** — service page currently uses `/images/why-choose-us-bg.jpg` as placeholder. Swap `backgroundImage` on `app/services/exterior-repairs/page.tsx:75` when a real photo is available.
+- **Exterior repairs hero image** — service page and `/lp/exterior-repairs` use `/images/stucco-wide-after.jpg` (a real job, but still scaffolded). Swap `backgroundImage` on `app/services/exterior-repairs/page.tsx:76` when a clean finished-exterior photo is available.
 - **Gallery photos for exterior repairs** — no gallery entries tagged `categorySlug: "exterior-repairs"` yet. When added, the ServiceGallery will auto-populate on the page.
 
 ## What's Done (Recently Completed)
+
+- **New homepage hero (2026-09-11)** — `/images/hero-foundation-crew.jpg` replaces the interim dusk-deck placeholder that stood in after roofing was retired. It is a real Gadget job photo of the crew tying rebar in a foundation trench, lightly enhanced in ChatGPT. Converted from a 3.0 MB PNG to a 370 KB mozjpeg (the hero `<h1>` is the LCP element). Desktop crop puts the red-shirted worker right of the headline; the mobile portrait crop centers the rebar trench and cuts him off at the edge.
+
+- **Roofing retired as a service (2026-09-09)** — the owner pulled roofing from the business, so it came out of the site entirely. Removed: `/services/roofing` (301 → `/services` via `next.config.ts`, because the URL was indexed), the `Roofing` entry in `SERVICES`, its `SERVICE_PAGES` block, `SERVICE_PRICING.roofing`, the `roofing` gallery category and its one project, the roofing option in `MultiStepForm`, the roofing `Offer` in `localBusinessSchema()`, and `"Roofing"` from `knowsAbout` in `lib/seo/entities.ts`. `exterior-repairs` took roofing's slot in the `ServicesGrid` bento (it had never been in the grid), which keeps the 2-large + 4-compact layout intact. Across the 31 city pages: 21 `topServices` entries, 10 roofing FAQs, 17 meta descriptions/hero subheadlines, and 11 body passages were purged or rewritten — Sausalito got a replacement salt-air FAQ so it stayed at its tier-3 floor of 3. Three blog posts had `/services/roofing` links repointed to `/services/exterior-repairs`. Seven images deleted. Roof language now survives only as architectural context (kickout flashing, rooflines, roof trusses, Eichler flat roofs), which is correct for the dry-rot content and reads as expertise, not as a service offer.
 
 - **SERP titles fixed sitewide + in the pipeline (2026-09-08)** — new optional `BlogPost.metaTitle` and `generatePageMetadata({ titleAbsolute })` decouple the Google title from the on-page H1; all 15 posts rewritten to 47-57 chars. The pipeline was writing the defect: briefs already carried a `metaTitle` that `generate-post.ts` never read, and the proposal prompt never capped its length. Critique pass now emits a `<meta_title>` block under 60-char rules, `resolveMetaTitle()` owns the fallback chain (critique line → brief's metaTitle → shortest over-length candidate → omit), `propose-next-batch.ts` caps at 60, and the draft PR body prints the title with its character count. PR #27. Driven by GSC: the blog earned 69% of impressions but converted at 0.3-0.7% CTR against ~2.5-5% par for its positions, while the homepage sat at par.
 - **Apple fluid-interface pass (2026-08-28)** — audited every animated surface against Apple's *Designing Fluid Interfaces* rules. New `lib/spring.ts` (hand-written, no dependency, per the zero-animation-libraries rule), `lib/scroll-driver.ts` (one shared scroll loop, read/write batched), `lib/button-styles.ts`, `hooks/useReducedMotion.ts`. `BeforeAfter` rebuilt on Pointer Events with capture, grab offset, `touch-pan-y` and momentum; `EstimateModal` rebuilt as an interruptible spring-driven sheet with trigger-anchored `transform-origin`, focus trap/restore and drag-to-dismiss; the 150ms step gate removed from `MultiStepForm`; Hero entrance re-armed on rAF and shortened for LCP; four `max-h` collapses converted to `grid-rows`; size-specific tracking/leading added to the type scale; header made translucent chrome; `prefers-reduced-motion` extended to the four unguarded ambient loops, plus new `prefers-reduced-transparency` and `prefers-contrast` support. Deleted 70 lines of unreferenced scroll-timeline CSS and the dead `--font-size-*` tokens. All eight areas verified manually in the browser. Branch `fluid-interface-pass`.
@@ -576,13 +576,13 @@ These were research-backed decisions — don't revert without reason:
 - **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
 - **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
-- **All 6 service page hero images** — composite decks, roofing, ADU, retaining walls, concrete foundations, and complete remodel pages all have real hero background images with SEO alt text (via `imageAlt` prop on Hero component)
-- **Before/after slider** — roofing service page and homepage both use interactive BeforeAfter component with gazebo roof replacement photos
+- **All service page hero images** — composite decks, ADU, retaining walls, concrete foundations, complete remodel, and exterior repairs pages all have real hero background images with SEO alt text (via `imageAlt` prop on Hero component)
+- **Before/after slider** — the homepage uses the interactive BeforeAfter component with the re-stucco pair (`stucco-wide-before/after.jpg`)
 - **BeforeAfter clipPath fix** — uses `clipPath: inset()` instead of `width` for pixel-perfect image alignment
 - **Homepage pixelation reveal** — GallerySection before/after slider pixelates into view via scroll-linked SVG filter (direct DOM manipulation for smoothness)
 - **Interactive county explorer** — ServiceArea component now has clickable county badges that expand a panel with city grid, staggered fade-in, and links to city pages
 - **Bubble animation** — DifferentiationSection rows use `bubble` RevealOnScroll type (easeOutBack single-overshoot settle)
-- **All gallery projects have real images** — 16 projects across all 6 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks, 1 roofing (shingles), 3 ADUs (insulation, framing, housewrap). All placeholder entries removed.
+- **All gallery projects have real images** — 15 projects across 5 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks, 3 ADUs (insulation, framing, housewrap). All placeholder entries removed.
 - **ServiceGallery pulls real images** — all 6 service pages pass `categorySlug` to `ServiceGallery`, which filters `GALLERY_PROJECTS` for entries with images. Optional `imagePosition` field controls `object-position` for custom cropping.
 - **Mobile stacking card lag fix** — `transition-all` replaced with `transition-[opacity,transform]` to prevent sticky positioning from being transitioned. Stagger delay removed — natural scroll timing handles card entrance sequencing.
 - **Form backend connected** — Resend email delivery from `estimates@gadgetconstructionsf.com` with all 7 form fields, reply-to, tap-to-call. ntfy push notifications for instant mobile alerts on new leads. Env vars: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NTFY_TOPIC` (set in Netlify).
@@ -751,10 +751,12 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Live URL:** `https://gadgetconstructionsf.com`
 - **Deployment:** Netlify (connected to GitHub repo, auto-deploys on push)
 - **Build command:** `npm run build`
-- **51+ routes** (homepage + about + contact + gallery + blog listing + 3 blog posts + services hub + 6 service pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
+- **58 routes** (homepage + about + contact + gallery + blog listing + 15 blog posts + services hub + 6 service pages + 5 landing pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
 
 ## Key Gotchas
 
+- **Phone photos carry an EXIF orientation tag, and only some tools honour it.** Five images in `public/images` (`dry-rot-hero`, `stucco-hero`, `siding-hero`, `dry-rot-before`, `dry-rot-after`) are stored landscape with orientation `6`, meaning a viewer is expected to rotate them 90° to display them upright and portrait. `next/image` honours the tag, so the rendered photo has always been correct — and `scripts/optimize-images.ts` already calls `.rotate()`. `scripts/generate-blur-map.mjs` did **not**, so it built every placeholder from the unrotated pixels and painted a landscape blur under a portrait photo — a sideways smear that snapped upright on load. Fixed 2026-09-09 by piping through `sharp(raw).rotate()` before `getPlaiceholder`. Any new tool that reads these files directly needs the same `.rotate()`, and any new phone photo added to `public/images` inherits the same tag. Check with `sharp(f).metadata().orientation` — anything other than `1` or undefined needs rotating before you measure or sample it.
+- **Roofing is retired — do not reintroduce it.** No service page, no `SERVICES` entry, no form option, no schema `Offer`, no gallery category. `/services/roofing` is a permanent redirect in `next.config.ts`; deleting that redirect resurrects a 404 on a URL Google has indexed. Roof *vocabulary* is still correct where a roof is the cause of an exterior-repair problem (kickout flashing, roof-to-wall transitions, fascia) or where it describes the architecture (Eichler flat roofs, Victorian rooflines) — that copy is deliberate and should stay. What must never come back is roofing framed as work Gadget sells. The AI content pipeline does not know this: `content/post-queue.json` briefs and `/next-content-batch` proposals should be checked for roofing angles before they draft.
 - **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
 - **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards
 - **Parallax is desktop-only** — `scale(1.1)` causes image cutoff on mobile viewports

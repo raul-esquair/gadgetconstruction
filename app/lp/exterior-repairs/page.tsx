@@ -255,7 +255,7 @@ export default function ExteriorRepairsLpPage() {
           "Full permit handling across 31 Bay Area cities",
           "5-year workmanship warranty in writing",
         ]}
-        backgroundImage="/images/why-choose-us-bg.jpg"
+        backgroundImage="/images/stucco-wide-after.jpg"
         imageAlt="Finished residential exterior in the San Francisco Bay Area after dry rot repair and siding work by Gadget Construction"
         service="exterior-repairs"
         formHeading="Get a Free Inspection"

@@ -628,7 +628,7 @@ Wood begins to rot when its moisture content stays above roughly 20% for extende
 
 During Bay Area atmospheric river events — the kind that dumped 6–10 inches on the Peninsula and Marin in January 2023 — rain hits coastal homes horizontally. Flashing details designed for vertical rainfall don't stop water arriving at a 45-degree angle under sustained wind pressure.
 
-Kickout flashing (the metal diverter where a roof slope meets a sidewall, designed to throw water away from the wall) fails first. Window head flashing — the metal cap above window frames that sheds roof runoff — is the second failure point. You'll find the damage 12–18 months after the storm event, when the framing that got wet has had time to rot. Our [services/roofing](/services/roofing) page covers how roof-to-wall transitions should be detailed to handle coastal wind-driven conditions.
+Kickout flashing (the metal diverter where a roof slope meets a sidewall, designed to throw water away from the wall) fails first. Window head flashing — the metal cap above window frames that sheds roof runoff — is the second failure point. You'll find the damage 12–18 months after the storm event, when the framing that got wet has had time to rot. Our [Bay Area exterior repair services](/services/exterior-repairs) page covers how roof-to-wall transitions should be detailed to handle coastal wind-driven conditions.
 
 ### UV from Reflected Ocean Light
 
@@ -1479,7 +1479,7 @@ Thresholds take direct water contact every time someone enters from the rain. Th
 
 ### 3. Fascia Boards and Eaves
 
-Take a flashlight and look up into the underside of eaves — particularly at gutter attachment points and where roof meets wall. Fascia boards (the vertical boards at the roof edge to which gutters attach) are among the most commonly rotted exterior elements on Bay Area homes because gutters concentrate water directly against them. Any gap between the gutter back and the fascia face is a direct water intrusion point. Soft fascia means the rafter tails behind them are next. For related moisture issues above the roofline, see our [Bay Area roofing services](/services/roofing).
+Take a flashlight and look up into the underside of eaves — particularly at gutter attachment points and where roof meets wall. Fascia boards (the vertical boards at the roof edge to which gutters attach) are among the most commonly rotted exterior elements on Bay Area homes because gutters concentrate water directly against them. Any gap between the gutter back and the fascia face is a direct water intrusion point. Soft fascia means the rafter tails behind them are next. For related moisture issues along the eaves and fascia, see our [Bay Area exterior repair services](/services/exterior-repairs).
 
 ### 4. Roof Valleys and Kickout Locations
 
@@ -1789,7 +1789,7 @@ SF DBI (the San Francisco Department of Building Inspection — the city agency 
 
 The WRB-disturbance trigger is the one that catches homeowners off guard. A re-coat that stays entirely on the surface finish doesn't require a permit. A repair that opens the wall to replace a section of failed WRB does — even if the patch area is small. When in doubt, confirm directly with SF DBI before starting work. A permitted scope gets inspected; inspection catches sheathing and framing problems that no surface assessment can see.
 
-**SF DBI permit processing currently runs 6–10 weeks for residential exterior work**, depending on project valuation and current review queue. Factor that into your schedule if you're planning a full re-stucco before the rainy season. Gadget Construction handles all permit pulling and inspection scheduling as part of every full re-stucco scope — it's not an add-on. If you're also evaluating roofing or window work alongside a re-stucco, combining scopes under one permit can reduce both cost and processing time; see our [roofing service](/services/roofing) and [complete remodel](/services/complete-remodel) pages for how we coordinate multi-trade exterior projects.
+**SF DBI permit processing currently runs 6–10 weeks for residential exterior work**, depending on project valuation and current review queue. Factor that into your schedule if you're planning a full re-stucco before the rainy season. Gadget Construction handles all permit pulling and inspection scheduling as part of every full re-stucco scope — it's not an add-on. If you're also evaluating siding or window work alongside a re-stucco, combining scopes under one permit can reduce both cost and processing time; see our [exterior repairs](/services/exterior-repairs) and [complete remodel](/services/complete-remodel) pages for how we coordinate multi-trade exterior projects.
 
 ---
 

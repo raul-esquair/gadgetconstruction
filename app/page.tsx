@@ -19,7 +19,8 @@ export default function HomePage() {
       <Hero
         headline="Get Rid of Contractor Nightmares Once and For All"
         subheadline="500+ Bay Area projects across 31 cities. Fixed-price contracts. Full permit handling. A 5-year warranty. And a crew that responds in minutes, not days."
-        backgroundImage="/images/hero-bg.jpg"
+        backgroundImage="/images/hero-foundation-crew.jpg"
+        imageAlt="Gadget Construction crew tying rebar in a trenched concrete foundation footing in a Bay Area backyard"
         urgencyText={getBookingUrgency()}
         openModal
         showTrustPills

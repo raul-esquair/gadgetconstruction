@@ -74,18 +74,6 @@ export const SERVICES: Service[] = [
       "Composite deck building across the Bay Area. Trex & TimberTech installations built for coastal fog and salt air. Serving 31 cities. CA Lic #1132983.",
   },
   {
-    name: "Roofing",
-    slug: "roofing",
-    shortDescription:
-      "Weather-tight protection installed right the first time",
-    icon: "Home",
-    image: "/images/roofing.jpg",
-    metaTitle:
-      "Roofing Contractor in the San Francisco Bay Area | Gadget Construction",
-    metaDescription:
-      "Trusted Bay Area roofing contractor. Re-roofing, repairs, and new construction — from Victorians to modern builds. Serving 31 cities. CA Lic #1132983.",
-  },
-  {
     name: "ADU Construction",
     slug: "adu-construction",
     shortDescription:
@@ -103,7 +91,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Dry rot, stucco, and siding repair for Bay Area homes built to survive fog and salt air",
     icon: "Wrench",
-    image: "/images/why-choose-us-bg.jpg",
+    image: "/images/dry-rot-after.jpg",
     metaTitle:
       "Dry Rot, Stucco & Siding Repair in the Bay Area | Gadget Construction",
     metaDescription:

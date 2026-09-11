@@ -18,7 +18,7 @@ interface WhyChooseUsProps {
 export default function WhyChooseUs({
   items = DIFFERENTIATORS,
   heading = "Why San Francisco Homeowners Choose Gadget Construction",
-  backgroundImage = "/images/why-choose-us-bg.jpg",
+  backgroundImage = "/images/composite-decks-hero.jpg",
 }: WhyChooseUsProps) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">

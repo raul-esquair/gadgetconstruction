@@ -14,7 +14,7 @@
  * Google currently has it as "Crawled - currently not indexed". Pointing more
  * internal links at it would reinforce the duplication rather than resolve it.
  *
- * Gaps worth noting: `roofing` and `retaining-walls` have no posts at all.
+ * Gaps worth noting: `retaining-walls` has no posts at all.
  * The Guides module simply doesn't render for a service with an empty list.
  */
 import { getPostBySlug } from "./blog-data";
@@ -39,7 +39,6 @@ export const SERVICE_GUIDES: Record<string, string[]> = {
   ],
   "complete-remodel": ["home-remodel-cost-san-francisco-2026"], // cost — commercial
   "adu-construction": ["adu-construction-san-francisco-guide"], // scope
-  roofing: [],
   "retaining-walls": [],
 };
 
