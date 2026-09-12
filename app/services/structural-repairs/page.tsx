@@ -15,6 +15,7 @@ import {
 } from "@/components/sections/ServicePageContent";
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
+import { HEADER_REPLACEMENT } from "@/lib/gallery-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
@@ -72,7 +73,11 @@ export default function StructuralRepairsPage() {
       <PricingSection items={SERVICE_PRICING["structural-repairs"]} heading="Structural Repair Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Structural Repair Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Structural Repair" categorySlug="structural-repairs" />
+      <ServiceGallery
+        serviceName="Structural Repair"
+        categorySlug="structural-repairs"
+        beforeAfter={HEADER_REPLACEMENT}
+      />
 
       <ServiceGuides
         serviceSlug="structural-repairs"

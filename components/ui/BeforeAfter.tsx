@@ -19,6 +19,9 @@ interface BeforeAfterProps {
   beforeAlt?: string;
   afterAlt?: string;
   caption?: string;
+  /** 3:4 frame for phone-shot pairs; the default is 4:3. */
+  portrait?: boolean;
+  sizes?: string;
   className?: string;
 }
 
@@ -30,6 +33,8 @@ export default function BeforeAfter({
   beforeAlt = "Before",
   afterAlt = "After",
   caption,
+  portrait = false,
+  sizes = "(max-width: 768px) 100vw, 50vw",
   className,
 }: BeforeAfterProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -179,7 +184,8 @@ export default function BeforeAfter({
       <div
         ref={containerRef}
         className={cn(
-          "relative aspect-[4/3] w-full overflow-hidden rounded-xl cursor-col-resize select-none",
+          "relative w-full overflow-hidden rounded-xl cursor-col-resize select-none",
+          portrait ? "aspect-[3/4]" : "aspect-[4/3]",
           // pan-y keeps vertical page scrolling working over the image while
           // horizontal drags come to us — without it a scroll hijacks the handle.
           "touch-pan-y"
@@ -205,7 +211,7 @@ export default function BeforeAfter({
           alt={afterAlt}
           fill
           className="object-cover pointer-events-none"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes={sizes}
         />
 
         {/* Before image (clipped — image stays full-width so it aligns with after) */}
@@ -220,7 +226,7 @@ export default function BeforeAfter({
             alt={beforeAlt}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes={sizes}
           />
         </div>
 
