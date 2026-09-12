@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
+import BBBBadge from "@/components/ui/BBBBadge";
 
 interface AnimatedStat {
   value: number;
@@ -11,16 +11,19 @@ interface AnimatedStat {
   decimals?: number;
 }
 
-const STATS: AnimatedStat[] = [
+type TrustItem = AnimatedStat | "bbb";
+
+const ITEMS: TrustItem[] = [
   { value: 12, suffix: "+", label: "Years in Business" },
   { value: 500, suffix: "+", label: "Projects Completed" },
   { value: 5.0, suffix: "★", label: "Star Rated", decimals: 1 },
+  "bbb",
   { value: 0, suffix: "", label: "Surprise Bills" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
 // Double the array for seamless loop
-const LOOPED_STATS = [...STATS, ...STATS];
+const LOOPED_ITEMS = [...ITEMS, ...ITEMS];
 
 function CountUpStat({ stat, shouldAnimate }: { stat: AnimatedStat; shouldAnimate: boolean }) {
   const [displayValue, setDisplayValue] = useState(0);
@@ -105,10 +108,14 @@ export default function TrustBar() {
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
 
         {/* Conveyor belt */}
-        <div className="flex animate-[marquee_8s_linear_infinite] md:animate-[marquee_15s_linear_infinite] hover:[animation-play-state:paused]">
-          {LOOPED_STATS.map((stat, index) => (
+        <div className="flex animate-[marquee_10s_linear_infinite] md:animate-[marquee_18s_linear_infinite] hover:[animation-play-state:paused]">
+          {LOOPED_ITEMS.map((item, index) => (
             <div key={index} className="flex items-center">
-              <CountUpStat stat={stat} shouldAnimate={isVisible} />
+              {item === "bbb" ? (
+                <BBBBadge duplicate={index >= ITEMS.length} className="px-8 md:px-12" />
+              ) : (
+                <CountUpStat stat={item} shouldAnimate={isVisible} />
+              )}
               <div className="w-px h-8 bg-neutral-200 flex-shrink-0" />
             </div>
           ))}

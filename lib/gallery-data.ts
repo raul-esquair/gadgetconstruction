@@ -10,9 +10,46 @@ export interface GalleryProject {
   imagePosition?: string;
 }
 
+export interface BeforeAfterPair {
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+  caption: string;
+  portrait?: boolean;
+}
+
+// Homepage slider + the structural repairs page. The before shot was warped
+// onto the after with a feature-matched homography (the camera moved between
+// visits) and both were cropped to the shared frame, so the divider never jumps.
+export const HEADER_REPLACEMENT: BeforeAfterPair = {
+  beforeImage: "/images/structural-header-before.jpg",
+  afterImage: "/images/structural-header-after.jpg",
+  beforeAlt:
+    "Rotted, shredded wood header exposed above a sliding glass door before structural repair by Gadget Construction",
+  afterAlt:
+    "Same sliding door opening with a new engineered header and fresh framing installed by Gadget Construction",
+  caption:
+    "Door Header Replacement — Rotted header and framing cut out, new engineered header installed",
+};
+
+// Homepage slider + the composite decks page. Shot from the same spot, so the
+// pair needed no alignment. Portrait phone photos — cropping to 4:3 cut the stairs.
+export const DECK_STAIRS: BeforeAfterPair = {
+  beforeImage: "/images/deck-stairs-before.jpg",
+  afterImage: "/images/deck-stairs-after.jpg",
+  beforeAlt:
+    "Back of a blue stucco Bay Area home with a bare wall over a raised concrete patio and an overgrown yard, before Gadget Construction built a deck",
+  afterAlt:
+    "Same home with a new second-story composite deck, braced timber posts, and a composite staircase with black railing built by Gadget Construction",
+  caption: "Second-Story Composite Deck — Braced timber posts, composite stairs, black railing",
+  portrait: true,
+};
+
 export const PROJECT_CATEGORIES = [
   { label: "All", slug: "all" },
   { label: "Remodels", slug: "complete-remodel" },
+  { label: "Structural", slug: "structural-repairs" },
   { label: "Foundations", slug: "concrete-foundations" },
   { label: "Retaining Walls", slug: "retaining-walls" },
   { label: "Decks", slug: "composite-decks" },
@@ -49,6 +86,16 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     scope: ["Gray marble tile flooring", "Sliding glass shower enclosure", "White shaker vanity", "Floating wood shelves", "Modern sconce lighting"],
     image: "/images/gallery-remodel-bathroom.jpg",
     imagePosition: "center 70%",
+  },
+  {
+    slug: "bay-area-sliding-door-header-replacement",
+    title: "Sliding Door Header Replacement — Rotted Framing Rebuilt",
+    category: "Structural Repairs",
+    categorySlug: "structural-repairs",
+    location: "Bay Area",
+    description: "The header over a wide sliding glass door had rotted to shreds, and the framing beside it with it. We cut out the damaged wood, set a new engineered header across the opening, and rebuilt the side framing in fresh lumber — so the wall above is carried properly again.",
+    scope: ["Rotted header removed", "New engineered header installed", "Side framing rebuilt in new lumber", "Load path restored over the opening"],
+    image: "/images/structural-header-after.jpg",
   },
   {
     slug: "bernal-heights-foundation",
@@ -99,6 +146,17 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     description: "Formed and reinforced a new concrete retaining wall on a steep Marin hillside — rebar grid tied to a poured footing with drainage provisions behind the wall to handle seasonal runoff.",
     scope: ["Rebar grid reinforcement", "Wood formwork", "Poured concrete footing", "Behind-wall drainage", "Hillside erosion control"],
     image: "/images/gallery-retaining-wall-rebar.jpg",
+  },
+  {
+    slug: "bay-area-second-story-deck-stairs",
+    title: "Second-Story Composite Deck & Staircase",
+    category: "Composite Decks",
+    categorySlug: "composite-decks",
+    location: "Bay Area",
+    description: "The back of this home was a bare wall over a raised concrete patio. We built a second-story composite deck on knee-braced timber posts, anchored to the patio on steel post bases, and ran a composite staircase down to it — gray boards and fascia with black railing to match.",
+    scope: ["Second-story composite deck", "Knee-braced timber posts on steel bases", "Composite staircase to the patio", "Black post & baluster railing", "Gray composite fascia"],
+    image: "/images/deck-stairs-after.jpg",
+    imagePosition: "center 45%",
   },
   {
     slug: "bay-area-pergola-deck",

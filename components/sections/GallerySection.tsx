@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import BeforeAfter from "@/components/ui/BeforeAfter";
+import { HEADER_REPLACEMENT, DECK_STAIRS } from "@/lib/gallery-data";
 
 function PixelReveal({ children }: { children: React.ReactNode }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -125,18 +126,21 @@ export default function GallerySection({ showCTA = true }: GallerySectionProps) 
             Every project tells a story
           </h2>
           <p className="mt-3 text-secondary text-lg max-w-xl">
-            Drag the slider to see the transformation. Real work, real results.
+            Drag the sliders to see the transformation. Real work, real results.
           </p>
         </AnimateOnScroll>
 
         <PixelReveal>
-          <div className="max-w-3xl mx-auto">
+          {/* 16fr:9fr makes a 4:3 and a 3:4 frame the same height side by side. */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[16fr_9fr] gap-10 md:gap-6">
             <BeforeAfter
-              beforeImage="/images/stucco-wide-before.jpg"
-              afterImage="/images/stucco-wide-after.jpg"
-              beforeAlt="Bay Area home stripped to wire lath and building paper before re-stucco by Gadget Construction"
-              afterAlt="Same Bay Area home with a finished stucco exterior after re-stucco by Gadget Construction"
-              caption="Full Re-Stucco — Tear-off to lath, new weather barrier, three-coat stucco"
+              {...HEADER_REPLACEMENT}
+              sizes="(max-width: 768px) 100vw, 640px"
+            />
+            <BeforeAfter
+              {...DECK_STAIRS}
+              sizes="(max-width: 768px) 100vw, 360px"
+              className="w-full max-w-sm mx-auto md:max-w-none"
             />
           </div>
         </PixelReveal>

@@ -7,8 +7,10 @@ import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import type { ServicePageData } from "@/lib/services-data";
-import { GALLERY_PROJECTS } from "@/lib/gallery-data";
+import { GALLERY_PROJECTS, type BeforeAfterPair } from "@/lib/gallery-data";
 import { blurProps } from "@/lib/blur";
+import { cn } from "@/lib/utils";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 
 interface ServiceIntroProps {
   data: ServicePageData["intro"];
@@ -122,12 +124,16 @@ export function ServiceDifferentiators({ differentiators }: ServiceDifferentiato
 interface ServiceGalleryProps {
   serviceName: string;
   categorySlug?: string;
+  /** Real before/after pair, shown above the grid. Replaces the placeholder tiles. */
+  beforeAfter?: BeforeAfterPair;
 }
 
-export function ServiceGallery({ serviceName, categorySlug }: ServiceGalleryProps) {
+export function ServiceGallery({ serviceName, categorySlug, beforeAfter }: ServiceGalleryProps) {
   const projectsWithImages = categorySlug
     ? GALLERY_PROJECTS.filter((p) => p.categorySlug === categorySlug && p.image)
     : [];
+  // A real slider beats three "Project Photo" placeholders underneath it.
+  const showGrid = projectsWithImages.length > 0 || !beforeAfter;
 
   return (
     <SectionWrapper>
@@ -139,49 +145,72 @@ export function ServiceGallery({ serviceName, categorySlug }: ServiceGalleryProp
           <div className="mt-3 mx-auto w-16 h-1 bg-accent-orange rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projectsWithImages.length > 0
-            ? projectsWithImages.slice(0, 6).map((project) => (
-                <div
-                  key={project.slug}
-                  className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100 group"
-                >
-                  <Image
-                    src={project.image!}
-                    {...blurProps(project.image!)}
-                    alt={`${project.title} — ${serviceName} project in ${project.location} by Gadget Construction`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-3 left-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm text-white font-heading font-semibold">{project.title}</p>
-                    <p className="text-xs text-white/70">{project.location}</p>
+        {beforeAfter && (
+          <BeforeAfter
+            {...beforeAfter}
+            // A portrait frame at the landscape width would be ~1000px tall.
+            className={cn("mx-auto", beforeAfter.portrait ? "max-w-md" : "max-w-3xl")}
+            sizes={beforeAfter.portrait ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 768px"}
+          />
+        )}
+
+        {showGrid && (
+          <div
+            className={cn(
+              "gap-4",
+              // Under a centred slider, a partial last row is centred too, so a
+              // lone project doesn't hang off the left edge. Widths match the grid.
+              beforeAfter
+                ? "mt-10 flex flex-wrap justify-center"
+                : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            )}
+          >
+            {projectsWithImages.length > 0
+              ? projectsWithImages.slice(0, 6).map((project) => (
+                  <div
+                    key={project.slug}
+                    className={cn(
+                      "relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100 group",
+                      beforeAfter && "w-full sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)]"
+                    )}
+                  >
+                    <Image
+                      src={project.image!}
+                      {...blurProps(project.image!)}
+                      alt={`${project.title} — ${serviceName} project in ${project.location} by Gadget Construction`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-3 left-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm text-white font-heading font-semibold">{project.title}</p>
+                      <p className="text-xs text-white/70">{project.location}</p>
+                    </div>
                   </div>
-                </div>
-              ))
-            : [1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100"
-                >
-                  <Image
-                    src="/images/logo.png"
-                    {...blurProps("/images/logo.png")}
-                    alt={`${serviceName} project ${i}`}
-                    fill
-                    className="object-contain p-16 opacity-10"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-sm text-neutral-400 font-heading font-medium">
-                      Project Photo {i}
-                    </p>
+                ))
+              : [1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100"
+                  >
+                    <Image
+                      src="/images/logo.png"
+                      {...blurProps("/images/logo.png")}
+                      alt={`${serviceName} project ${i}`}
+                      fill
+                      className="object-contain p-16 opacity-10"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <p className="text-sm text-neutral-400 font-heading font-medium">
+                        Project Photo {i}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
-        </div>
+                ))}
+          </div>
+        )}
 
         <div className="text-center mt-8">
           <Button href="/gallery" variant="outline">

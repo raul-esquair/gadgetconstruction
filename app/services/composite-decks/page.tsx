@@ -15,6 +15,7 @@ import {
 } from "@/components/sections/ServicePageContent";
 import PricingSection from "@/components/sections/PricingSection";
 import { SERVICE_PRICING } from "@/lib/pricing-data";
+import { DECK_STAIRS } from "@/lib/gallery-data";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 
 import FAQSection from "@/components/sections/FAQSection";
@@ -61,7 +62,11 @@ export default function CompositeDecksPage() {
       <PricingSection items={SERVICE_PRICING["composite-decks"]} heading="Composite Deck Costs in the Bay Area" />
       <ProcessSteps steps={data.process} heading="Our Deck Building Process" />
       <ServiceDifferentiators differentiators={data.differentiators} />
-      <ServiceGallery serviceName="Composite Deck" categorySlug="composite-decks" />
+      <ServiceGallery
+        serviceName="Composite Deck"
+        categorySlug="composite-decks"
+        beforeAfter={DECK_STAIRS}
+      />
 
       <ServiceGuides
 

@@ -16,9 +16,13 @@ const FOLDERS = ["images"];
 
 const EXTS = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 
-// Logos are transparent PNGs — a blur placeholder behind them renders as a
-// grey smear rather than a soft preview, so they're excluded.
-const SKIP = new Set(["/images/logo.png", "/images/logo-white.png"]);
+// Logos are transparent — a blur placeholder behind them renders as a grey
+// smear rather than a soft preview, so they're excluded.
+const SKIP = new Set([
+  "/images/logo.png",
+  "/images/logo-white.png",
+  "/images/bbb-accredited.webp",
+]);
 
 async function findImages() {
   const result = [];

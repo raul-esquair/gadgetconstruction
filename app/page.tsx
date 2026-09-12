@@ -8,7 +8,6 @@ import GallerySection from "@/components/sections/GallerySection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ServiceArea from "@/components/sections/ServiceArea";
 import CTABlock from "@/components/sections/CTABlock";
-import BBBSeal from "@/components/ui/BBBSeal";
 import JsonLd, { howToSchema } from "@/components/seo/JsonLd";
 import { PROCESS_STEPS } from "@/lib/constants";
 import { getBookingUrgency } from "@/lib/utils";
@@ -34,15 +33,10 @@ export default function HomePage() {
         showPhone={false}
         aside={<HeroEstimateForm />}
       />
-      <section className="bg-white border-b border-neutral-200 py-3 md:py-4">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-center">
-          <BBBSeal size="lg" />
-        </div>
-      </section>
       <TrustBar />
       <ServicesGrid />
       <DifferentiationSection />
-      <ProcessSteps showCTA={false} />
+      <ProcessSteps showCTA={false} backgroundImage="/images/process-rebar-bg.jpg" />
       <GallerySection showCTA={false} />
       <TestimonialsSection />
       <ServiceArea showCTA={false} />

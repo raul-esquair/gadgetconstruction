@@ -71,6 +71,7 @@ components/
     Card.tsx, Badge.tsx           # Basic UI elements
     FormField.tsx                 # Input/textarea/select with validation
     MultiStepForm.tsx             # 3-step progressive form with directional transitions (6 service options)
+    BBBBadge.tsx                  # Static BBB "Accredited Business" mark → BBB profile (TrustBar, Footer, About). BBBSeal.tsx is the live grade seal, now /lp/* only
     EstimateModal.tsx             # Context provider + spring-driven sheet (drag-to-dismiss) + EstimateButton
     AnimateOnScroll.tsx           # Binary scroll-trigger wrapper (uses useInView)
     RevealOnScroll.tsx            # Scroll-POSITION-linked animation (subscribes to lib/scroll-driver)
@@ -82,11 +83,11 @@ components/
     HeroEstimateForm.tsx          # Homepage hero's desktop CTA: inline two-step form card (SSR'd, no modal)
     SectionCTA.tsx                # Client wrapper for modal trigger in server sections
     PageHeader.tsx                # Reusable dark page header for non-hero pages (extends behind transparent header)
-    TrustBar.tsx                  # Marquee conveyor belt with 5 animated stats (slides up from bottom)
+    TrustBar.tsx                  # Marquee conveyor belt: 5 animated stats + BBB Accredited badge (slides up from bottom)
     ServicesGrid.tsx              # Bento grid desktop + stacking cards mobile
     WhyChooseUs.tsx               # 6 differentiator cards with bg image
     DifferentiationSection.tsx    # Problem vs. Solution comparison rows (bubble animation)
-    ProcessSteps.tsx              # 5-step timeline (horizontal desktop, vertical mobile)
+    ProcessSteps.tsx              # 5-step timeline (horizontal desktop, vertical mobile); optional backgroundImage → dark variant with desktop parallax (homepage only)
     GallerySection.tsx            # Homepage before/after slider with pixelation scroll-reveal
     TestimonialsSection.tsx       # 3 testimonial cards
     ServiceArea.tsx               # Interactive "31 Cities" section — clickable counties expand city panels
@@ -116,7 +117,7 @@ lib/                              # Data & utilities
   services-data.ts                # SERVICE_PAGES — full copy for each service page
   service-areas-data.ts           # SERVICE_AREAS — 31 cities with tier, county, FAQs, content
   blog-data.ts                    # BLOG_POSTS array (3 seed posts)
-  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (12 projects, all real images)
+  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (14 projects, all real images)
   about-data.ts                   # FOUNDER_STORY, VALUES, CREDENTIALS
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
@@ -186,8 +187,13 @@ public/images/
   retaining-walls-hero.jpg        # Retaining walls service page hero
   concrete-foundations-hero.jpg   # Concrete foundations service page hero (renamed from concrete-foundations.jpg)
   complete-remodel-hero.jpg       # Complete remodel service page hero
-  stucco-wide-before.jpg          # Before/after: wire lath & building paper before re-stucco
-  stucco-wide-after.jpg           # Before/after: finished stucco wall (also exterior-repairs hero)
+  structural-header-before.jpg    # Homepage + structural-repairs slider: rotted door header (warped onto the after's frame)
+  structural-header-after.jpg     # Same opening with a new engineered header (1410×1057, 4:3)
+  deck-stairs-before.jpg          # Homepage + composite-decks slider: bare stucco wall over a raised patio (1086×1448, 3:4)
+  deck-stairs-after.jpg           # Same wall with a second-story composite deck + stairs (also a deck gallery project)
+  process-rebar-bg.jpg            # Homepage "How It Works" background (rebar cage in a wall form, under an 85% scrim)
+  stucco-wide-before.jpg          # Re-stucco before: wire lath & building paper (/lp/stucco-repair slider)
+  stucco-wide-after.jpg           # Re-stucco after: finished stucco wall (also exterior-repairs hero)
   gallery-composite-deck-pergola.jpg  # Gallery: deck with pergola & LED lighting
   gallery-composite-deck-spa.jpg      # Gallery: spa deck with hot tub & privacy screens
   gallery-composite-deck-railing.jpg  # Gallery: wraparound deck with railing
@@ -318,6 +324,7 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - Uses blur-to-sharp transition (`blur-[2px]` → `blur-0`) for cinematic feel
 - Hero background image has Ken Burns effect (`@keyframes ken-burns`, 20s cycle)
 - **Parallax** (desktop only, `md:` and up): background moves at 0.3x scroll speed via `requestAnimationFrame`. `scale(1.1)` buffer prevents edge reveal. Disabled on mobile to avoid image cutoff.
+- **Mid-page parallax** (`ParallaxBackground` in `ProcessSteps.tsx`, the homepage "How It Works" photo): a section below the fold can't key off `scrollY`, so it shifts by 0.25× the distance from the section's centre to the viewport's centre. It runs on `lib/scroll-driver.ts`, gated by an IntersectionObserver, and sizes its own bleed (`top`/`bottom` = −0.25 × (viewport + section height) / 2) so no edge ever shows, instead of a fixed `scale`. Desktop only and off under reduced motion, like the Hero — main-thread parallax judders against iOS momentum scrolling.
 - Hero pulls up behind transparent header with `-mt-20 md:-mt-24` + extra top padding (`pt-28 md:pt-36`)
 - Mobile hero height: `min-h-[85vh]`, desktop: `min-h-[80vh]`
 - **`backgroundVideo`** (optional, `HeroVideoSource[]`) layers a muted looping `<video>` over `backgroundImage`, which stays the first paint and the fallback. The video is **client-only** (`useSyncExternalStore` with a `false` server snapshot), so it's absent from the SSR HTML and can't compete with the `<h1>` for LCP. It isn't mounted at all under `prefers-reduced-motion` or Save-Data; it fades in on `playing`, so a refused autoplay (iOS Low Power Mode) leaves the still showing; and an IntersectionObserver pauses it off-screen. Ken Burns is dropped from the still when a video is set. Use the video's first frame as `backgroundImage` so the fade-in doesn't jump. Order `<source>`s with `media` first, AV1 WebM before H.264 MP4 at each size (Safari without AV1 hardware falls through to the MP4).
@@ -366,11 +373,12 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 
 ### TrustBar — Marquee Conveyor Belt
 
-5 animated stats in a continuous horizontal scroll:
-- **12+ Years** · **500+ Projects** · **5.0★ Star Rated** · **0 Surprise Bills** · **100% Client Satisfaction**
-- Array doubled (`[...STATS, ...STATS]`) for seamless loop
+5 animated stats and the BBB badge in a continuous horizontal scroll:
+- **12+ Years** · **500+ Projects** · **5.0★ Star Rated** · **BBB Accredited Business** · **0 Surprise Bills** · **100% Client Satisfaction**
+- Array doubled (`[...ITEMS, ...ITEMS]`) for seamless loop
 - CSS `@keyframes marquee` translates -50% over time
-- Speed: 8s on mobile, 15s on desktop
+- Speed: 10s on mobile, 18s on desktop (raised from 8s/15s when the badge widened the belt, to keep roughly the same pixel speed)
+- **BBB badge** (2026-09-11) is the static "Accredited Business" mark (`components/ui/BBBBadge.tsx`, `/images/bbb-accredited.webp`, shared with the Footer and About page) linking to the BBB profile — deliberately *not* BBB's live seal image, which renders the current letter grade (A-). The loop's second copy is `aria-hidden` and `tabIndex={-1}` so the link exists once for keyboard and screen-reader users. The image needs `max-w-none`: preflight's `img { max-width: 100% }` lets the flex belt shrink its slot to the padding and the badge overlaps the next stat. It replaced the separate BBB strip that sat between the hero and the TrustBar on the homepage.
 - Gradient fades on left/right edges
 - Pauses on hover
 - Numbers count up on first view via individual `StatItem` components with self-contained observers
@@ -555,7 +563,7 @@ These were research-backed decisions — don't revert without reason:
 
 - **Structural Repairs follow-ups (from the ADU retirement, 2026-09-11):**
   - **Photos are done.** Bento card: rebar set under an existing footing (2026-09-11). Service hero: a looping video of the crew pulling rotted sheathing (source kept in `~/Desktop/Gadget Construction Assets/`). The card is an underpinning shot — underpinning is structural repair.
-  - **Gallery.** The page's `ServiceGallery` shows three "Project Photo" placeholders until a `GALLERY_PROJECTS` entry has `categorySlug: "structural-repairs"`. When the first one lands, also add `{ label: "Structural", slug: "structural-repairs" }` to `PROJECT_CATEGORIES` — it was deliberately left out so `/gallery` doesn't show an empty filter.
+  - **Gallery — started.** The page's `ServiceGallery` shows the door-header before/after slider (`HEADER_REPLACEMENT`) with the project tiles centred under it. The first structural project (`bay-area-sliding-door-header-replacement`, the after photo) is live on `/gallery` behind a new "Structural" filter. More structural photos are still wanted.
   - **Owner sign-off.** Osmin should confirm the scope (joists, beams/posts, sill plates, bearing-wall removal, pest-report Section 1 work, house-over-garage moment frames), that Gadget coordinates an outside structural engineer rather than engineering in-house, and the `SERVICE_PRICING["structural-repairs"]` ranges.
   - **Off-site.** Swap ADU for structural repair in the Google Business Profile service list and on Yelp, Houzz, BuildZoom, Angi. In GSC, request indexing for `/services/structural-repairs`, and URL-inspect `/services` so the ADU redirect is picked up.
   - **No framing posts yet.** `SERVICE_GUIDES["structural-repairs"]` borrows the two underpinning posts plus the dry-rot-cost and foundation-signs posts. A framing brief (sagging floors, pest-report Section 1 repairs, bearing-wall removal cost) is the obvious next `/next-content-batch` topic.
@@ -565,7 +573,7 @@ These were research-backed decisions — don't revert without reason:
   - **GA4 not configured.** The funnel events in `lib/track.ts` are a no-op until a GA4 property exists and `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set in Netlify. Until then, the only homepage measurement is the **Source** row in each lead email.
   - **Escape user input in the lead email** — `app/api/contact/route.ts` puts name/phone/email/service/timeline/scope/message into the Resend HTML raw, and into the ntfy `Title` header. Only the new Source row uses `escapeHtml()`. It was spun off as a separate task and is not done.
   - **Social proof is the next hero lever, and it's off-site.** `COMPANY.reviewCount` is **3** against 500+ projects. Don't put a star rating in the hero until there are ~25+ Google reviews. A review drive among past clients is the ask.
-  - **BBB seal directly under the hero shows "A-"** (rendered live by BBB). Either get the rating to A+ (usually an unanswered complaint or an incomplete profile) or move the seal to the footer/About page.
+  - **BBB rating is "A-"**. The site mostly no longer shows it: the TrustBar, Footer and About page use the static Accredited mark (`BBBBadge`). The live seal (`BBBSeal.tsx`) still renders the grade in `LpTrustStrip` on the `/lp/*` ad landing pages, and the BBB profile itself shows it. Getting to A+ is usually an unanswered complaint or an incomplete profile. The BBB profile also lists **"Years in Business: 1"** (accredited 2026-04-16), which contradicts the site's 12+ years — fix it in BBB's business portal.
 - **Google Ads conversions only fire from the `/lp/*` forms** (`LpQuickForm`, live since 2026-04). The homepage and every other `MultiStepForm` send none, so an ad visitor who navigates off the LP and converts elsewhere isn't counted. Firing the same label from `MultiStepForm` would be correct attribution, but it changes what Smart Bidding optimizes on, so it's a deliberate decision for a `/google-ads` session — not a drive-by fix.
 - **Pre-existing lint failures** — `react-hooks/set-state-in-effect` in `Header.tsx`, `MobileBottomBar.tsx` and `CTABlockForm.tsx`, plus an unused `Button` import in `Header.tsx`. `npm run lint` fails on `main` because of these; `npm run build` is unaffected.
 - **Header phone number wraps onto three lines at ~1024px** (the desktop nav is too crowded at that width).
@@ -608,7 +616,7 @@ These were research-backed decisions — don't revert without reason:
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
 - **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
 - **All service page hero images** — composite decks, retaining walls, concrete foundations, complete remodel, and exterior repairs pages all have real hero background images (structural repairs has a looping hero video with a poster still) with SEO alt text (via `imageAlt` prop on Hero component)
-- **Before/after slider** — the homepage uses the interactive BeforeAfter component with the re-stucco pair (`stucco-wide-before/after.jpg`)
+- **Before/after sliders** — two pairs in `lib/gallery-data.ts` (2026-09-11): `HEADER_REPLACEMENT` (4:3, homepage + `/services/structural-repairs`; it replaced the re-stucco pair) and `DECK_STAIRS` (portrait 3:4, homepage + `/services/composite-decks`). The homepage shows both side by side at `md+` in a `16fr_9fr` grid, which is the ratio that makes a 4:3 and a 3:4 frame the same height; below `md` they stack. `BeforeAfter` takes `portrait` and `sizes`; `ServiceGallery` takes an optional `beforeAfter` pair, narrows a portrait slider to `max-w-md`, and centres a partial last row of project tiles under it. The two shots were taken from slightly different spots, so the before was warped onto the after with a SIFT + RANSAC homography (OpenCV) and both cropped to the shared frame. Do the same for any new pair — unaligned photos visibly jump at the divider.
 - **BeforeAfter clipPath fix** — uses `clipPath: inset()` instead of `width` for pixel-perfect image alignment
 - **Homepage pixelation reveal** — GallerySection before/after slider pixelates into view via scroll-linked SVG filter (direct DOM manipulation for smoothness)
 - **Interactive county explorer** — ServiceArea component now has clickable county badges that expand a panel with city grid, staggered fade-in, and links to city pages

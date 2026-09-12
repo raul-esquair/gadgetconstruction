@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Phone, MapPin } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
-import BBBSeal from "@/components/ui/BBBSeal";
+import BBBBadge from "@/components/ui/BBBBadge";
 
 const companyLinks = [
   { label: "About", href: "/about" },
@@ -47,7 +47,7 @@ export default function Footer() {
               The Bay Area&apos;s trusted general contractor for {currentYear - COMPANY.founded}+ years. Serving 31 cities across 6 counties.
             </p>
             <div className="mt-5">
-              <BBBSeal size="sm" />
+              <BBBBadge size="sm" />
             </div>
           </div>
 
