@@ -13,7 +13,7 @@ Website for **Gadget Construction Inc.**, a Class B general contractor serving 3
 - **License:** CA #1132983
 - **Warranty:** 5-year workmanship
 - **Service area:** 31 cities across Marin, Contra Costa, Alameda, San Francisco, San Mateo, and Santa Clara counties
-- **Services:** Concrete Foundations, Retaining Walls, Complete Remodels, Composite Decks, ADU Construction, Exterior Repairs
+- **Services:** Concrete Foundations, Structural Repairs, Retaining Walls, Complete Remodels, Composite Decks, Exterior Repairs
 - **Site URL:** https://gadgetconstructionsf.com
 - **Tagline:** "Built Right. On Time. Guaranteed."
 
@@ -50,7 +50,7 @@ app/                              # Pages (App Router)
   page.tsx                        # Homepage (with HowTo schema, context-aware urgency badge)
   globals.css                     # Design tokens, keyframes, base styles, btn-concrete, overflow-x:clip
   opengraph-image.tsx             # Dynamic OG image (1200x630, logo + CTA + credentials)
-  sitemap.ts                      # Auto-generated sitemap for all 58 routes with priority tiers
+  sitemap.ts                      # Auto-generated sitemap for all 57 routes with priority tiers
   robots.ts                       # Robots.txt (allows all, blocks /api/, points to sitemap)
   about/page.tsx
   contact/page.tsx
@@ -58,7 +58,7 @@ app/                              # Pages (App Router)
   blog/page.tsx
   blog/[slug]/page.tsx
   services/page.tsx               # Services hub
-  services/*/page.tsx             # 6 individual service pages (roofing retired 2026-09-09)
+  services/*/page.tsx             # 6 individual service pages (roofing retired 2026-09-09; ADU → structural-repairs 2026-09-11)
   service-areas/page.tsx          # Service areas hub (31 cities grouped by county)
   service-areas/[city]/page.tsx   # 31 individual city SEO pages (with FAQ schema)
   api/contact/route.ts            # Form submission endpoint
@@ -116,7 +116,7 @@ lib/                              # Data & utilities
   services-data.ts                # SERVICE_PAGES — full copy for each service page
   service-areas-data.ts           # SERVICE_AREAS — 31 cities with tier, county, FAQs, content
   blog-data.ts                    # BLOG_POSTS array (3 seed posts)
-  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (15 projects, all real images)
+  gallery-data.ts                 # GALLERY_PROJECTS + PROJECT_CATEGORIES (12 projects, all real images)
   about-data.ts                   # FOUNDER_STORY, VALUES, CREDENTIALS
   contact-data.ts                 # CONTACT_COPY
   pricing-data.ts                 # SERVICE_PRICING by service slug
@@ -176,13 +176,13 @@ public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
   logo-white.png                  # Company logo — white version (for dark backgrounds, footer, OG image)
   hero-foundation-crew.jpg        # Homepage hero (Gadget crew tying rebar in a foundation trench; lightly AI-enhanced)
-  adu-construction.jpg            # ADU service card image (bento grid)
+  structural-repairs.jpg          # Structural repairs bento card (rebar set under an existing footing, 1672×941)
   complete-remodel.jpg            # Remodel service card image (bento grid)
   composite-decks.jpg             # Deck service card image (bento grid)
   concrete-foundations.jpg        # Foundation service card image (bento grid)
   retaining-walls.jpg             # Retaining wall service card image (bento grid)
   composite-decks-hero.jpg        # Composite decks service page hero
-  adu-construction-hero.jpg       # ADU construction service page hero
+  structural-repairs-hero.jpg     # Structural repairs hero POSTER — first frame of the hero video (sheathing tear-off)
   retaining-walls-hero.jpg        # Retaining walls service page hero
   concrete-foundations-hero.jpg   # Concrete foundations service page hero (renamed from concrete-foundations.jpg)
   complete-remodel-hero.jpg       # Complete remodel service page hero
@@ -201,9 +201,9 @@ public/images/
   gallery-remodel-kitchen.jpg        # Gallery: white cabinet kitchen remodel
   gallery-remodel-bathroom.jpg       # Gallery: marble tile bathroom remodel
   gallery-remodel-kitchen-island.jpg # Gallery: butcher block island kitchen remodel
-  gallery-adu-insulation.jpg         # Gallery: ADU insulation installation
-  gallery-adu-framing.jpg            # Gallery: two-story ADU framing phase
-  gallery-adu-housewrap.jpg          # Gallery: ADU Tyvek housewrap installation
+
+public/videos/
+  structural-repairs-hero-{1920,1280}.{webm,mp4}  # Structural repairs hero loop (AV1 + H.264, 4.3s, muted, ~0.6–2.3MB)
 ```
 
 ### Data Flow
@@ -320,6 +320,8 @@ The modal triggers from: header CTA button, mobile bottom bar, hero CTA, and all
 - **Parallax** (desktop only, `md:` and up): background moves at 0.3x scroll speed via `requestAnimationFrame`. `scale(1.1)` buffer prevents edge reveal. Disabled on mobile to avoid image cutoff.
 - Hero pulls up behind transparent header with `-mt-20 md:-mt-24` + extra top padding (`pt-28 md:pt-36`)
 - Mobile hero height: `min-h-[85vh]`, desktop: `min-h-[80vh]`
+- **`backgroundVideo`** (optional, `HeroVideoSource[]`) layers a muted looping `<video>` over `backgroundImage`, which stays the first paint and the fallback. The video is **client-only** (`useSyncExternalStore` with a `false` server snapshot), so it's absent from the SSR HTML and can't compete with the `<h1>` for LCP. It isn't mounted at all under `prefers-reduced-motion` or Save-Data; it fades in on `playing`, so a refused autoplay (iOS Low Power Mode) leaves the still showing; and an IntersectionObserver pauses it off-screen. Ken Burns is dropped from the still when a video is set. Use the video's first frame as `backgroundImage` so the fade-in doesn't jump. Order `<source>`s with `media` first, AV1 WebM before H.264 MP4 at each size (Safari without AV1 hardware falls through to the MP4).
+- **Encoding a hero loop** (only `/services/structural-repairs` has one): never ship camera/AI-tool output directly — the source was 17 MB 10-bit HEVC, which Chrome and Firefox mostly can't play. Crossfade the last 0.75s into the first 0.75s so the loop has no seam, drop audio, and encode both codecs at 1920 and 1280: `ffmpeg -i in.mp4 -filter_complex "[0:v]trim=0.75:END,setpts=PTS-STARTPTS[m];[0:v]trim=0:0.75,setpts=PTS-STARTPTS[h];[m][h]xfade=transition=fade:duration=0.75:offset=END-1.5,scale=W:-2:flags=lanczos,format=yuv420p[v]" -map "[v]" -an` then `-c:v libsvtav1 -crf 38 -preset 6` for `.webm`, and `-c:v libx264 -preset slow -crf 25 -profile:v high -level:v 4.0 -movflags +faststart` for `.mp4` (level 3.1 at 1280). The poster is the source frame at 0.75s through sharp mozjpeg q78.
 
 **Layer 2: Scroll-Position-Linked (`RevealOnScroll.tsx`) — PRIMARY SYSTEM**
 - Animation progress is **proportional to scroll position**, not binary on/off
@@ -429,7 +431,7 @@ Premium mobile menu with two visual modes:
 ### Multi-Step Form
 
 3-step progressive form: Service Selection → Timeline/Budget → Contact Info
-- **6 service options** in 2-column grid: Exterior Repairs, Retaining Walls, Complete Remodel, Composite Decks, ADU Construction, Concrete Foundations & Slabs
+- **6 service options** in 2-column grid: Exterior Repairs, Retaining Walls, Complete Remodel, Composite Decks, Structural Repairs, Concrete Foundations & Slabs
 - Step transitions animate with directional slide (forward = slide right, back = slide left)
 - 150ms fade-out, content swaps, fades in from opposite direction
 - Progress bar with numbered circles
@@ -439,7 +441,7 @@ Premium mobile menu with two visual modes:
 ### Services Bento Grid (Desktop) + Stacking Cards (Mobile)
 
 **Desktop (`sm:` and up):** Asymmetric bento layout:
-- 2 large "Featured Service" cards (Complete Remodel + ADU) spanning 2 columns
+- 2 large "Featured Service" cards (Complete Remodel + Structural Repairs) spanning 2 columns
 - 4 compact cards (Foundations, Retaining Walls, Decks, Exterior Repairs) in a row
 - `SERVICE_IMAGES` map has real photos for all 6 services; `SERVICE_IMAGE_ALT` provides SEO alt text
 - Large cards slide in from left/right, compact cards scale up via `RevealOnScroll`
@@ -487,7 +489,7 @@ Audited against 2026 Google standards (April 2026). All critical items addressed
 - 33 FAQ entries across service pages
 
 ### Crawlability
-- `app/sitemap.ts` — auto-generated sitemap for all 58 routes, with priority tiers by page type and city tier
+- `app/sitemap.ts` — auto-generated sitemap for all 57 routes, with priority tiers by page type and city tier
 - `app/robots.ts` — allows all crawling, blocks `/api/`, points to sitemap
 - Self-referencing canonical URLs on all pages
 
@@ -551,8 +553,22 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Pending
 
+- **Structural Repairs follow-ups (from the ADU retirement, 2026-09-11):**
+  - **Photos are done.** Bento card: rebar set under an existing footing (2026-09-11). Service hero: a looping video of the crew pulling rotted sheathing (source kept in `~/Desktop/Gadget Construction Assets/`). The card is an underpinning shot — underpinning is structural repair.
+  - **Gallery.** The page's `ServiceGallery` shows three "Project Photo" placeholders until a `GALLERY_PROJECTS` entry has `categorySlug: "structural-repairs"`. When the first one lands, also add `{ label: "Structural", slug: "structural-repairs" }` to `PROJECT_CATEGORIES` — it was deliberately left out so `/gallery` doesn't show an empty filter.
+  - **Owner sign-off.** Osmin should confirm the scope (joists, beams/posts, sill plates, bearing-wall removal, pest-report Section 1 work, house-over-garage moment frames), that Gadget coordinates an outside structural engineer rather than engineering in-house, and the `SERVICE_PRICING["structural-repairs"]` ranges.
+  - **Off-site.** Swap ADU for structural repair in the Google Business Profile service list and on Yelp, Houzz, BuildZoom, Angi. In GSC, request indexing for `/services/structural-repairs`, and URL-inspect `/services` so the ADU redirect is picked up.
+  - **No framing posts yet.** `SERVICE_GUIDES["structural-repairs"]` borrows the two underpinning posts plus the dry-rot-cost and foundation-signs posts. A framing brief (sagging floors, pest-report Section 1 repairs, bearing-wall removal cost) is the obvious next `/next-content-batch` topic.
 - **Roofing retirement — off-site cleanup (owner/agency, not code).** The site is done (PR #29, live 2026-09-11). Still outstanding: remove roofing from the Google Business Profile service list and from Yelp, Houzz, BuildZoom, Angi and any other directory; in GSC, run URL Inspection on `/services` → Request indexing so Google picks up the redirect sooner. The Google Ads plan never included roofing, so ads need nothing.
-- **Google Ads conversion tracking** — needs implementation on form submissions before ad campaigns go live (separate from CallRail which is now wired up for call attribution)
+- **Homepage hero follow-ups (from PR #30, 2026-09-11):**
+  - **Owner sign-off still owed.** Osmin hasn't confirmed (a) that homepage leads may arrive without timeline/budget — the two-step form only collects service + contact details + an optional message; and (b) the hero checkmark "5-year workmanship warranty". `google-ads-campaign-plan.md` says workmanship-warranty wording was stripped from the ad landing pages "per client direction", which conflicts with the homepage, `COMPANY.warranty` and `STATS`. Resolve which is true before anyone copies the claim further.
+  - **GA4 not configured.** The funnel events in `lib/track.ts` are a no-op until a GA4 property exists and `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set in Netlify. Until then, the only homepage measurement is the **Source** row in each lead email.
+  - **Escape user input in the lead email** — `app/api/contact/route.ts` puts name/phone/email/service/timeline/scope/message into the Resend HTML raw, and into the ntfy `Title` header. Only the new Source row uses `escapeHtml()`. It was spun off as a separate task and is not done.
+  - **Social proof is the next hero lever, and it's off-site.** `COMPANY.reviewCount` is **3** against 500+ projects. Don't put a star rating in the hero until there are ~25+ Google reviews. A review drive among past clients is the ask.
+  - **BBB seal directly under the hero shows "A-"** (rendered live by BBB). Either get the rating to A+ (usually an unanswered complaint or an incomplete profile) or move the seal to the footer/About page.
+- **Google Ads conversions only fire from the `/lp/*` forms** (`LpQuickForm`, live since 2026-04). The homepage and every other `MultiStepForm` send none, so an ad visitor who navigates off the LP and converts elsewhere isn't counted. Firing the same label from `MultiStepForm` would be correct attribution, but it changes what Smart Bidding optimizes on, so it's a deliberate decision for a `/google-ads` session — not a drive-by fix.
+- **Pre-existing lint failures** — `react-hooks/set-state-in-effect` in `Header.tsx`, `MobileBottomBar.tsx` and `CTABlockForm.tsx`, plus an unused `Button` import in `Header.tsx`. `npm run lint` fails on `main` because of these; `npm run build` is unaffected.
+- **Header phone number wraps onto three lines at ~1024px** (the desktop nav is too crowded at that width).
 - **Google Business Profile** — optimize for local SEO, ensure NAP consistency with site
 - **Service-specific testimonials** — removed from service pages pending hyper-relevant reviews per service category
 - **Exterior repairs hero image** — service page and `/lp/exterior-repairs` use `/images/stucco-wide-after.jpg` (a real job, but still scaffolded). Swap `backgroundImage` on `app/services/exterior-repairs/page.tsx:76` when a clean finished-exterior photo is available.
@@ -560,6 +576,7 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Done (Recently Completed)
 
+- **ADU retired, Structural Repairs added in its slots (2026-09-11)** — the owner wanted a service closer to the work Gadget actually does. `/services/adu-construction` became `/services/structural-repairs` (new copy, 6 scope items, 5-step process, 8 FAQs, 9 pricing rows); the old URL and the ADU blog guide permanently redirect to `/services` and `/blog` in `next.config.ts` (the hub, not the new page — an ADU searcher dropped on a repair page is worse than a list). Structural Repairs took ADU's position in `SERVICES`, the large bento card, the form option (`HardHat` icon), the schema `Offer`, `knowsAbout`, the gallery page's service links, and 24 city `topServices` entries. Across 28 city pages every ADU FAQ, meta description, subheadline, intro line, and constructionInsight was rewritten — mostly into city-specific structural FAQs — with FAQ counts unchanged. The ADU blog post, its image, the 3 ADU gallery projects and their photos are deleted; five in-body blog references were rewritten, three now linking to the new service. The drafting pipeline's voice sample (`content/style-reference.md`) and image-prompt service list no longer mention ADUs (or roofing, which had survived there). Structural Repairs covers the whole load path — underpinning included, not just framing — while surface dry rot stays on Exterior Repairs.
 - **Homepage hero CRO pass (2026-09-11)** — new headline naming services + region (a no-break space before the em dash so it never starts a line); subheadline paragraph → 3 checkmark proof points; trust line, review line, phone link and scroll chevron removed; the CTA is an inline two-step form card on desktop (`HeroEstimateForm` via `Hero aside`) and a full-width "Get Free Quote" modal button below `lg`. The homepage's form is two-step everywhere (hero, modal, CTA block). Headline sizes: 26px mobile / 40px `lg` / 48px `xl` — 4 lines at every width, and at 1440×900 the whole hero is 720px. An interim version that used six service chips to open the modal was replaced the same day. Measurement shipped alongside: every lead email now carries a Source row (which trigger + page), and GA4 funnel events (`estimate_open`, `estimate_step`, `generate_lead`, `phone_click`) fire once `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set in Netlify. Events go to GA4 only, never the Ads tag, so Smart Bidding's inputs are unchanged.
 
 - **New homepage hero (2026-09-11)** — `/images/hero-foundation-crew.jpg` replaces the interim dusk-deck placeholder that stood in after roofing was retired. It is a real Gadget job photo of the crew tying rebar in a foundation trench, lightly enhanced in ChatGPT. Converted from a 3.0 MB PNG to a 370 KB mozjpeg (the hero `<h1>` is the LCP element). Desktop crop puts the red-shirted worker right of the headline; the mobile portrait crop centers the rebar trench and cuts him off at the edge.
@@ -573,8 +590,7 @@ These were research-backed decisions — don't revert without reason:
 - **Exterior repairs service page** — `/services/exterior-repairs` covers dry rot, stucco, and siding as three subservices on one URL. 1,400+ words, 6-item scope, 5-step process, 4 differentiators, 8 FAQs, itemized pricing. Uses a custom `multiServiceGraphSchema()` helper that emits a `@graph` with three separate `Service` nodes (Dry Rot Repair, Stucco Repair, Siding Installation) per 2026 SEO research. Exterior Repairs is now the 7th entry in `SERVICES`.
 - **31 city cross-linking to exterior-repairs** — every city page links into the new service with varied anchor text via the new optional `serviceAnchors?: Partial<Record<string, string>>` field on `CityData`. Examples: "Doelger Home Stucco & Dry Rot Repair" (Daly City), "Eichler T1-11 Siding & Exterior Repair" (Menlo Park), "Craftsman Home Dry Rot & Siding Repair" (Berkeley). Rendered by `CityServices` in CityPageContent.tsx.
 - **12 hyper-local exterior-repair paragraphs** — new `CityExteriorRepairsContext` component renders a unique ~80-word paragraph on 12 priority cities (SF, Daly City, Pacifica, Sausalito, Mill Valley, San Rafael, San Anselmo, Berkeley, Oakland, Palo Alto, Menlo Park, San Jose). Only renders when `CityData.exteriorRepairsContext` field is populated. E-E-A-T Experience signal per 2026 Helpful Content update.
-- **ADU process rewrite** — ADU page now correctly reflects that Gadget receives approved plans from the homeowner's architect/designer. Gadget does NOT fabricate plan sets. New process: Feasibility Walk → Plan Review → Permit Submittal → Construction → Inspections & COO. Intro paragraph, scope items, "Full Design-Build" differentiator (→ "We Work With Your Designer"), and timeline FAQ all updated to remove design-build framing.
-- **Blog featured images** — all 3 existing posts have real architectural/editorial featured images (remodel cost, foundation signs, ADU guide). New blog detail hero layout: centered category · date · reading time meta line, big centered H1, featured image attached seamlessly to the dark canvas (no card chrome, `aspect-[3/2]`). Legacy `PageHeader` still used elsewhere.
+- **Blog featured images** — all 3 existing posts have real architectural/editorial featured images (remodel cost, foundation signs, and an ADU guide since retired). New blog detail hero layout: centered category · date · reading time meta line, big centered H1, featured image attached seamlessly to the dark canvas (no card chrome, `aspect-[3/2]`). Legacy `PageHeader` still used elsewhere.
 - **Blog hero animations** — `blueprint-grid` class (faint diagonal-drifting grid, 80s loop) + `hero-red-glow` class (breathing radial red accent, 6s loop, 18-42% opacity) in globals.css. Pure CSS, GPU-friendly, respects `prefers-reduced-motion`.
 - **CallRail DNI installed** — dynamic number insertion via `<script src="cdn.callrail.com/companies/336423236/f892bb58a107202ac4c7/12/swap.js">` in root layout. Real business number (628) 233-3589 stays in source code; CallRail's JS swaps it per-visitor based on traffic source (organic, paid, GBP, direct). CallRail "Website pool" configured on their side. Every phone number on the site is attributed.
 - **SearchAtlas dynamic optimization script** — third-party SEO script in root layout with `nowprocket` / `nitro-exclude` attributes preserved for cache-plugin compatibility.
@@ -591,13 +607,13 @@ These were research-backed decisions — don't revert without reason:
 - **Service pages regionalized** — all 6 service pages rewritten from SF-only to Bay Area (31 cities, 6 counties). Meta titles, headlines, intros, scope, differentiators, FAQs, pricing headings all updated. SF details preserved as anchor, supplemented with Marin, East Bay, Peninsula, South Bay references.
 - **Service page variety pass** — headlines, CTA text, intro openers, FAQ order, testimonial headings, and process step titles diversified across all 6 pages to avoid template feel
 - **All 6 service card images** — bento grid now has real photos for every service including concrete foundations
-- **All service page hero images** — composite decks, ADU, retaining walls, concrete foundations, complete remodel, and exterior repairs pages all have real hero background images with SEO alt text (via `imageAlt` prop on Hero component)
+- **All service page hero images** — composite decks, retaining walls, concrete foundations, complete remodel, and exterior repairs pages all have real hero background images (structural repairs has a looping hero video with a poster still) with SEO alt text (via `imageAlt` prop on Hero component)
 - **Before/after slider** — the homepage uses the interactive BeforeAfter component with the re-stucco pair (`stucco-wide-before/after.jpg`)
 - **BeforeAfter clipPath fix** — uses `clipPath: inset()` instead of `width` for pixel-perfect image alignment
 - **Homepage pixelation reveal** — GallerySection before/after slider pixelates into view via scroll-linked SVG filter (direct DOM manipulation for smoothness)
 - **Interactive county explorer** — ServiceArea component now has clickable county badges that expand a panel with city grid, staggered fade-in, and links to city pages
 - **Bubble animation** — DifferentiationSection rows use `bubble` RevealOnScroll type (easeOutBack single-overshoot settle)
-- **All gallery projects have real images** — 15 projects across 5 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks, 3 ADUs (insulation, framing, housewrap). All placeholder entries removed.
+- **All gallery projects have real images** — 12 projects across 4 categories: 3 remodels (kitchen, bathroom, kitchen island), 3 foundations (rebar, slab prep, garage compaction), 3 retaining walls (steps, landscaped, rebar/formwork), 4 composite decks. (The 3 ADU projects were removed with the service on 2026-09-11.) All placeholder entries removed.
 - **ServiceGallery pulls real images** — all 6 service pages pass `categorySlug` to `ServiceGallery`, which filters `GALLERY_PROJECTS` for entries with images. Optional `imagePosition` field controls `object-position` for custom cropping.
 - **Mobile stacking card lag fix** — `transition-all` replaced with `transition-[opacity,transform]` to prevent sticky positioning from being transitioned. Stagger delay removed — natural scroll timing handles card entrance sequencing.
 - **Form backend connected** — Resend email delivery from `estimates@gadgetconstructionsf.com` with all 7 form fields, reply-to, tap-to-call. ntfy push notifications for instant mobile alerts on new leads. Env vars: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NTFY_TOPIC` (set in Netlify).
@@ -766,11 +782,12 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Live URL:** `https://gadgetconstructionsf.com`
 - **Deployment:** Netlify (connected to GitHub repo, auto-deploys on push)
 - **Build command:** `npm run build`
-- **58 routes** (homepage + about + contact + gallery + blog listing + 15 blog posts + services hub + 6 service pages + 5 landing pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
+- **57 routes** (homepage + about + contact + gallery + blog listing + 14 blog posts + services hub + 6 service pages + 5 landing pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
 
 ## Key Gotchas
 
 - **Phone photos carry an EXIF orientation tag, and only some tools honour it.** Five images in `public/images` (`dry-rot-hero`, `stucco-hero`, `siding-hero`, `dry-rot-before`, `dry-rot-after`) are stored landscape with orientation `6`, meaning a viewer is expected to rotate them 90° to display them upright and portrait. `next/image` honours the tag, so the rendered photo has always been correct — and `scripts/optimize-images.ts` already calls `.rotate()`. `scripts/generate-blur-map.mjs` did **not**, so it built every placeholder from the unrotated pixels and painted a landscape blur under a portrait photo — a sideways smear that snapped upright on load. Fixed 2026-09-09 by piping through `sharp(raw).rotate()` before `getPlaiceholder`. Any new tool that reads these files directly needs the same `.rotate()`, and any new phone photo added to `public/images` inherits the same tag. Check with `sharp(f).metadata().orientation` — anything other than `1` or undefined needs rotating before you measure or sample it.
+- **ADU construction is retired — do not reintroduce it.** Same rules as roofing below: no service page, `SERVICES` entry, form option, schema `Offer`, gallery category, or copy that says Gadget builds ADUs, garage conversions, JADUs, or backyard units. `/services/adu-construction` and `/blog/adu-construction-san-francisco-guide` are permanent redirects in `next.config.ts` — keep them. The site ranked for ADU terms, so a `/next-content-batch` proposal can still chase an ADU query from GSC data; reject it. Structural Repairs took ADU's slots and covers the load path from the footing up — **underpinning is a structural repair**, not only a foundation service (Raul, 2026-09-11). The page leads its scope with underpinning, carries two per-pier/project pricing rows and a diagnostic FAQ ("underpinning or just new posts?"), and its guides module links the underpinning cost and timeline posts — its figures ($2,000–$4,500 per pier, $15,000–$50,000+ per project, 1–3 weeks on site) are copied from those posts, so change them together. The cost post owns the "underpinning cost" query: keep the service page's underpinning copy diagnostic rather than writing a second cost breakdown, and check which page the ads underpinning ad group lands on before changing either. Trim/siding rot belongs on Exterior Repairs.
 - **Roofing is retired — do not reintroduce it.** No service page, no `SERVICES` entry, no form option, no schema `Offer`, no gallery category. `/services/roofing` is a permanent redirect in `next.config.ts`; deleting that redirect resurrects a 404 on a URL Google has indexed. Roof *vocabulary* is still correct where a roof is the cause of an exterior-repair problem (kickout flashing, roof-to-wall transitions, fascia) or where it describes the architecture (Eichler flat roofs, Victorian rooflines) — that copy is deliberate and should stay. What must never come back is roofing framed as work Gadget sells. The content pipeline is mostly covered: `propose-next-batch.ts` builds its service list from `SERVICES`, which no longer has roofing. But it also feeds the model 90 days of GSC queries, and the site ranked for roofing terms, so a proposal can still chase a roofing query — reject any proposal PR that does.
 - **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
 - **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards

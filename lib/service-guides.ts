@@ -38,7 +38,12 @@ export const SERVICE_GUIDES: Record<string, string[]> = {
     "foundation-repair-signs-san-francisco", // diagnosis
   ],
   "complete-remodel": ["home-remodel-cost-san-francisco-2026"], // cost — commercial
-  "adu-construction": ["adu-construction-san-francisco-guide"], // scope
+  "structural-repairs": [
+    "foundation-underpinning-cost-san-francisco", // cost — commercial (the page's FAQ stays diagnostic so the two don't compete)
+    "how-long-does-foundation-underpinning-take-san-francisco", // timeline
+    "dry-rot-bay-area-homes-spot-repair-cost", // when rot reaches joists and sills
+    "foundation-repair-signs-san-francisco", // foundation vs. framing diagnosis
+  ],
   "retaining-walls": [],
 };
 

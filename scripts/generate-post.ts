@@ -498,7 +498,7 @@ ${escapedContent}
 // ──────────── Featured image generation ────────────
 
 const IMAGE_PROMPT_SYSTEM = `# Role
-You are an expert image prompt generator for blog featured images on the Gadget Construction website (Bay Area general contractor — concrete, foundations, retaining walls, ADUs, decks, roofing, remodels).
+You are an expert image prompt generator for blog featured images on the Gadget Construction website (Bay Area general contractor — concrete foundations, structural repairs, retaining walls, decks, remodels, exterior repairs).
 
 # Task
 Read the H1 and intro of the blog post supplied below. Identify the central idea, insight, or stat the post is built around, then produce a single text-to-image prompt for a featured image that visually represents that idea on-brand.

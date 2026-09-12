@@ -56,7 +56,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
         {
           title: "Slab-on-Grade Construction",
           description:
-            "Precision-poured concrete slabs for garages, ADUs, additions, and ground-floor living spaces.",
+            "Precision-poured concrete slabs for garages, additions, and ground-floor living spaces.",
         },
         {
           title: "Seismic Bolting & Cripple Wall Bracing",
@@ -741,143 +741,158 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
     ],
   },
 
-  "adu-construction": {
-    slug: "adu-construction",
+  "structural-repairs": {
+    slug: "structural-repairs",
     hero: {
       headline:
-        "ADU Construction — Add Space, Value & Income to Your Property",
+        "Get Rid of Sagging Floors and Rotted Framing Once and For All",
       subheadline:
-        "California's ADU laws have made it easier than ever to build a backyard unit. But easier doesn't mean easy. You need a contractor who's navigated the permit process in your city — not one figuring it out on your project.",
-      ctaText: "Check What's Possible on Your Lot",
+        "When settling, rot, or termites reach the footings, joists, beams, and sill plates holding your house up, patching the surface only hides the problem. We shore it, cut out what failed, and rebuild the load path — permitted and inspected.",
+      ctaText: "Book a Free Structural Inspection",
     },
     intro: {
-      heading: "More Space. More Value. More Possibilities.",
+      heading: "The Floor Isn't Supposed to Roll Like That",
       paragraphs: [
-        "Maybe you need space for aging parents. Maybe you want rental income to offset your mortgage. Maybe your adult kid needs a place while they get on their feet. Or maybe you just want to add $200,000+ to your property value. Whatever the reason, an Accessory Dwelling Unit is one of the smartest investments a Bay Area homeowner can make right now.",
-        "California's ADU laws (AB 881, SB 13, AB 68) have dramatically simplified the approval process statewide. But every city interprets these laws slightly differently. SF's DBI, Oakland's Planning & Building, Marin's Community Development, and each Peninsula and South Bay jurisdiction have their own review processes, timelines, and quirks. The paperwork alone stops most homeowners in their tracks.",
-        "Gadget Construction is the builder side of your ADU project. You bring the plans from your architect or designer; we take it from there — constructability review, detailed estimate, permit submittal and plan check support, full construction, and final inspections. We've built detached backyard units, garage conversions, and basement ADUs across 31 Bay Area cities in 6 counties. We know what each building department is looking for, which design choices get flagged in plan check, and how to avoid the common mistakes that add months and thousands of dollars to ADU projects.",
+        "You feel it before you see it. The hallway dips toward the middle. A marble rolls to one corner of the kitchen. A door that closed fine five years ago now drags on the floor. Or the pest inspector on your sale came back with a Section 1 list — rotted sill plate, termite-eaten joists, a girder split along its length — and your escrow has a deadline.",
+        "Most Bay Area homes were framed long before anyone wrote a modern seismic code. Victorians and Edwardians in SF, Craftsman bungalows in Berkeley and Oakland, Doelgers stacked over garages in the Sunset and Daly City, post-and-beam Eichlers and 1950s ranches down the Peninsula and into the South Bay. Decades of fog, slow plumbing leaks, subterranean termites, and a few serious earthquakes have worked on that wood. The damage sits where you don't look: in the crawlspace, behind the drywall, under the subfloor.",
+        "Structural repair isn't a patch job. We shore the house, cut out the wood that stopped carrying its load, and rebuild the load path — underpinned footings, sistered joists, new girders and posts, pressure-treated sill plates, engineered beams — built to a licensed structural engineer's stamped design whenever the work calls for one. We pull the permit, pass the inspections, and back it with a 5-year workmanship warranty in writing. 12+ years, 500+ projects, 31 cities across 6 counties.",
       ],
     },
     scope: {
-      heading: "Our ADU Construction Services",
+      heading: "Our Structural Repair Services",
       description:
-        "Full-service ADU design and build — we manage every phase so you get a finished, permitted unit without the chaos.",
+        "Every job starts under the house or behind the wall. We find what's actually carrying the load — and what stopped carrying it — before we price anything.",
       items: [
         {
-          title: "Detached Backyard ADUs",
+          title: "Foundation Underpinning",
           description:
-            "New standalone structures built in your backyard — from studio apartments to full 2-bedroom units up to 1,200 sq ft.",
+            "When a footing has settled, we carry it down to soil that won't move — helical or push piers, or new concrete poured beneath the old footing — then stabilize or lift the house above it.",
         },
         {
-          title: "Garage Conversions",
+          title: "Sagging Floor & Joist Repair",
           description:
-            "Transform your existing garage into a finished living space — often the fastest and most cost-effective ADU option.",
+            "Sister cracked or over-spanned joists, add a mid-span girder, and set new posts and piers in the crawlspace so the floor comes back toward level and stays there.",
         },
         {
-          title: "Basement Conversions",
+          title: "Beam, Girder & Post Replacement",
           description:
-            "Convert unused basement space into a legal, permitted dwelling unit with proper egress, ventilation, and waterproofing.",
+            "Rotted, split, or undersized beams replaced under temporary shoring — sized for the loads your house carries today, not the ones it carried in 1925.",
         },
         {
-          title: "Junior ADUs (JADUs)",
+          title: "Sill Plates & Termite-Damaged Framing",
           description:
-            "Up to 500 sq ft carved out of your existing home — an efficient option when lot space is limited.",
+            "Rot and termites go for the wood sitting on your foundation first — mudsills, rim joists, subfloor. We shore the wall, rebuild in pressure-treated lumber, re-anchor it to the concrete, and clear the Section 1 items on your pest report.",
         },
         {
-          title: "Permit & Plan Check Support",
+          title: "Load-Bearing Wall Removal",
           description:
-            "Bring us your approved plans. We submit to your local building department, track the review, and respond to plan check corrections so your project keeps moving.",
+            "Open the kitchen to the living room without losing what held the second floor up. Engineered beam, posts carried down to footings that can take the load, fully permitted.",
+        },
+        {
+          title: "House-Over-Garage Strengthening",
+          description:
+            "Living space over a wide garage opening is the weak story in an earthquake. Steel moment frames and plywood shear walls, installed to the engineer's design.",
         },
       ],
     },
     process: [
       {
         number: 1,
-        title: "Free Consultation & Feasibility Walk",
+        title: "Crawlspace & Framing Inspection",
         description:
-          "Already have an architect or designer? Bring them in. We walk your lot, review setbacks, height limits, and utility access, and tell you what's realistically buildable before you spend money on plans.",
+          "We get under the house, into the attic, and behind finishes where we need to. You get photos of what we found — not a guess from the driveway.",
       },
       {
         number: 2,
-        title: "Plan Review & Detailed Estimate",
+        title: "Engineering Where It's Needed",
         description:
-          "You bring the approved plans from your architect or designer. We review them for constructability, flag anything that will trip up plan check, and deliver a line-item estimate — no vague allowances, no surprise change orders.",
+          "Beam replacements, bearing-wall removal, and moment frames need calculations. We coordinate a licensed structural engineer and build to their stamped plans. Like-for-like repairs often don't need one.",
       },
       {
         number: 3,
-        title: "Permit Submittal & Plan Check Support",
+        title: "Fixed-Price Estimate & Permit",
         description:
-          "We submit your plans to your local building department, track the review, respond to corrections, and coordinate revisions with your designer. We've shepherded ADU permits through 31 Bay Area cities — we know what each jurisdiction asks for.",
+          "A line-item written estimate, then we pull the permit through your building department — SF DBI, Oakland, Berkeley, Marin CDA, or wherever your house is.",
       },
       {
         number: 4,
-        title: "Construction",
+        title: "Shore, Cut Out, Rebuild",
         description:
-          "Foundation, framing, plumbing, electrical, HVAC, finishes — built by our crew with weekly photo updates and one point of contact from groundbreak to final walkthrough.",
+          "Temporary shoring goes in first so nothing moves while the failed wood comes out. Then we rebuild the load path, with daily cleanup and one point of contact throughout.",
       },
       {
         number: 5,
-        title: "Final Inspections & Certificate of Occupancy",
+        title: "Inspection & Written Warranty",
         description:
-          "We coordinate every city inspection through final sign-off. You get a fully permitted, legal dwelling unit ready for move-in or rental.",
+          "City framing inspection, a final walkthrough with you, and a 5-year workmanship warranty in writing — plus a permit sign-off you can hand to a buyer or an insurer.",
       },
     ],
     differentiators: [
       {
+        icon: "Microscope",
+        title: "We Find the Cause, Not Just the Crack",
+        description:
+          "A sagging floor can be a failed girder, a rotted post, or a settling footing. We trace it to the source so you pay for one repair, not three.",
+      },
+      {
         icon: "FileCheck",
-        title: "Multi-Jurisdiction Permit Experts",
+        title: "Stamped Plans, Pulled Permits",
         description:
-          "We've navigated the ADU permit process in cities across 6 Bay Area counties. We know what each building department wants and how to deliver it without delays.",
+          "When a repair needs engineering, it gets engineering. Every structural job is permitted and inspected — no unpermitted work waiting to surface at your next sale.",
       },
       {
-        icon: "Wrench",
-        title: "We Work With Your Designer",
+        icon: "Layers",
+        title: "Foundation to Framing, One Crew",
         description:
-          "Already have plans or an architect on board? Perfect. We slot in as your builder, review for constructability, and coordinate directly with your design team through permitting and construction.",
-      },
-      {
-        icon: "TrendingUp",
-        title: "Value-Engineered",
-        description:
-          "We design for maximum livability and property value without over-building. Smart investments, not vanity projects.",
+          "If the problem started at the foundation, we fix that too. No passing you between a foundation company and a framer who each blame the other.",
       },
       {
         icon: "ShieldCheck",
-        title: "Fully Permitted & Legal",
+        title: "5-Year Workmanship Warranty",
         description:
-          "Every ADU we build is fully permitted with a Certificate of Occupancy. No gray areas, no surprises at tax time.",
+          "Every joist, beam, post, and sill plate we install — backed in writing for five years.",
       },
     ],
     faqs: [
       {
-        question: "What size ADU can I build on my property?",
+        question: "How much do structural repairs cost in the Bay Area?",
         answer:
-          "Under current California law, you can build a detached ADU up to 1,200 sq ft on most single-family lots, regardless of lot size or existing FAR. Junior ADUs (JADUs) can be up to 500 sq ft within your existing home. In many cases, you can build both a JADU and a detached ADU on the same lot. Setback and height requirements vary by city — we assess your specific lot and local rules during the feasibility visit.",
+          "It depends on what failed and how much of it. Replacing a single crawlspace post runs $500–$1,500. Sistering joists under a sagging floor typically costs $3,000–$12,000. A beam or girder replacement, including temporary shoring, runs $4,000–$15,000. Removing a load-bearing wall with an engineered beam is $10,000–$35,000 with engineering and permit. A steel moment frame at a garage opening runs $25,000–$75,000. We give you a fixed, line-item price after we've been under the house — not a ballpark over the phone.",
       },
       {
-        question: "Can I rent out my ADU?",
+        question: "Is my sagging floor a foundation problem or a framing problem?",
         answer:
-          "Yes. ADUs can be rented out as long-term rentals across the Bay Area. Market rates for a 1-bedroom ADU range from $1,800 to $3,500+/month depending on city, location, size, and finishes. Note: some cities like SF have additional rent control and just-cause eviction protections for ADUs. We recommend consulting a property management professional for your city's current rental regulations.",
+          "It can be either, and guessing wrong is expensive. If the floor dips in the middle of a room while the edges stay level, it's usually framing — an over-spanned joist, a failed girder, or a post that's rotted or sunk. If a whole side of the house has dropped, with diagonal cracks at the corners of doors and windows and cracked concrete below, the foundation is the more likely cause. We check both on the same visit, and we repair both, so there's no reason for us to sell you the wrong one.",
       },
       {
-        question: "Do I need to provide parking for an ADU?",
+        question: "Do I need underpinning, or just new posts and piers?",
         answer:
-          "No. California law eliminates the parking requirement for ADUs in most cases, including when the ADU is within half a mile of public transit. Even if you convert your garage to an ADU, you are not required to replace the lost parking. This applies across all Bay Area cities.",
+          "It depends on what's moving. New posts and piers fix a floor that sags between its supports while the perimeter foundation stays put. Underpinning is for when the footing itself has settled — a whole corner or side has dropped, cracks run diagonally from the corners of doors and windows, and the concrete below is cracked or out of level. We carry the footing down to stable soil with helical or push piers ($2,000–$4,500 per pier; most homes need 4–16) or new concrete poured beneath it. A typical project runs $15,000–$50,000+ with engineering and permit, and takes 1–3 weeks on site once the permit is issued.",
       },
       {
-        question: "Will an ADU increase my property value?",
+        question: "Can you fix the Section 1 items on my pest report before escrow closes?",
         answer:
-          "Yes. Studies show that a permitted ADU typically adds $200,000–$400,000+ to property value in the Bay Area market — often exceeding the construction cost. The rental income stream also improves your property's investment profile. A fully permitted, well-built ADU is one of the best ROI home improvements you can make in the current market.",
+          "Yes. Section 1 items on a California termite report are active infestation or existing damage — often a rotted sill plate, termite-eaten joists, or decayed framing under a leaking bathroom. Buyers and lenders commonly want them repaired before close. We work straight from the report, give you a written price quickly, and schedule around your closing date. Treatment for live termites is done by a licensed pest control company; we handle the structural repair.",
       },
       {
-        question: "What does an ADU cost to build?",
+        question: "Do I need a permit and an engineer for structural repairs?",
         answer:
-          "ADU costs across the Bay Area typically range from $150,000 to $400,000+ depending on type, size, finishes, and location. Garage conversions start around $100,000–$200,000. Detached new-construction ADUs run $250,000–$400,000+ for a fully finished unit. Costs include design, engineering, permits, site work, construction, and finishes. We provide detailed estimates with line-item breakdowns.",
+          "Usually a permit, sometimes an engineer. Replacing a beam, removing a load-bearing wall, or adding a moment frame needs a building permit and, in most Bay Area cities, stamped structural calculations. Like-for-like replacement of a rotted joist or post is simpler, but many cities still want it permitted. SF DBI, Oakland, Berkeley, and every Marin, Peninsula, and South Bay department draws its own line. We tell you what your city requires before you sign anything.",
       },
       {
-        question: "How long does an ADU take from start to move-in?",
+        question: "Can I remove a load-bearing wall to open up my kitchen?",
         answer:
-          "Once you have approved plans from your architect or designer, our side of the timeline is typically 6–12 months: permit review (2–4 months depending on the city) plus construction (4–8 months depending on type and size). Garage conversions are on the faster end; new detached construction takes longer. Some jurisdictions like Oakland and Berkeley have expedited ADU review. If you don't have plans yet, add 1–3 months on the front end for design with your architect. We give you a city-specific timeline at the estimate phase.",
+          "Almost always — it's a question of engineering and cost, not possibility. The load that wall carried has to go somewhere: into a new beam (flush in the ceiling or dropped below it), down through posts, and onto footings that can take it. Expect $10,000–$35,000 in the Bay Area depending on the span and what's above it. It's often done as part of a kitchen or whole-home remodel, which saves you opening the same ceiling twice.",
+      },
+      {
+        question: "My house sits over a garage. Is it a soft story?",
+        answer:
+          "Possibly. Living space over a wide garage opening is the classic weak story: there isn't enough wall at ground level to resist an earthquake's sideways shaking. The 1989 Loma Prieta quake showed what that looks like, most visibly in SF's Marina District. SF, Oakland, and Berkeley have mandatory soft-story programs for multi-unit wood buildings. Single-family homes aren't covered, but the physics is the same. A steel moment frame or new shear walls at the garage typically runs $25,000–$75,000, designed by a structural engineer.",
+      },
+      {
+        question: "How long does a structural repair take?",
+        answer:
+          "Replacing a few posts or sistering a handful of joists takes 1–3 days on site. A sill plate run or a beam replacement usually takes 1–2 weeks. Load-bearing wall removal and garage moment frames take 2–4 weeks of construction, plus permit review time, which varies by city. We give you a written schedule before we start, and 94% of our projects finish on or ahead of it.",
       },
     ],
   },

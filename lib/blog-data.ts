@@ -266,7 +266,7 @@ In most cases, yes — but with real limitations. Helical and push pier installa
 
 ### Do you need a permit for foundation underpinning in San Francisco?
 
-Yes. SF DBI requires a permit for all foundation underpinning work — helical piers, push piers, and slabjacking of structural slabs. The permit requires stamped engineered plans, plan review, a rough inspection during installation (before backfill), and a final inspection before permit closeout. Projects completed without permits appear as open violations during title search at resale. Unpermitted foundation work also creates personal liability if the repair fails — there's no inspection record to establish the work was performed to code. For related permit considerations, see the [ADU construction guide](/blog/adu-construction-san-francisco-guide), which covers how open foundation violations affect ADU permitting eligibility.
+Yes. SF DBI requires a permit for all foundation underpinning work — helical piers, push piers, and slabjacking of structural slabs. The permit requires stamped engineered plans, plan review, a rough inspection during installation (before backfill), and a final inspection before permit closeout. Projects completed without permits appear as open violations during title search at resale. Unpermitted foundation work also creates personal liability if the repair fails — there's no inspection record to establish the work was performed to code. If the excavation turns up rotted sill plates or failed posts above the foundation, that framing work gets permitted and inspected too — see our [structural repair services](/services/structural-repairs).
 
 ### How long does SF DBI take to approve foundation plans?
 
@@ -390,7 +390,7 @@ HardieShingle mimics the staggered cedar shingle profile of Bay Area brown-shing
 
 ### HardiePanel Vertical ($13–$17/sq ft installed)
 
-HardiePanel is a large-format vertical board, typically installed with batten strips over the seams. It reads as contemporary or modern farmhouse and is most appropriate on mid-century flat-roof homes, ADU garage conversions, and architectural accent zones. It's the lower-labor option in the line because fewer pieces cover more area. Eichler tracts in Green Gables and Fairmeadow in [Palo Alto](/service-areas/palo-alto) occasionally specify HardiePanel for ADU or garage siding when the aesthetic needs to integrate with original horizontal T1-11 (T1-11 is a grooved plywood panel siding common on 1960s–1980s homes and outbuildings throughout the Bay Area).
+HardiePanel is a large-format vertical board, typically installed with batten strips over the seams. It reads as contemporary or modern farmhouse and is most appropriate on mid-century flat-roof homes, detached garages, and architectural accent zones. It's the lower-labor option in the line because fewer pieces cover more area. Eichler tracts in Green Gables and Fairmeadow in [Palo Alto](/service-areas/palo-alto) occasionally specify HardiePanel for garage or accessory-building siding when the aesthetic needs to integrate with original horizontal T1-11 (T1-11 is a grooved plywood panel siding common on 1960s–1980s homes and outbuildings throughout the Bay Area).
 
 ### HardieTrim and Corner Boards
 
@@ -899,7 +899,7 @@ The engineer's fee is not padding. It's the reason the deck doesn't move in a 6.
 
 SF DBI (the San Francisco Department of Building Inspection) is the city agency that issues residential permits for structural, mechanical, and exterior work — including all decks. In San Francisco, any deck over 30 inches above grade requires a permit. Hillside and elevated decks trigger full plan review — not just over-the-counter permits — which adds 2–4 months to the pre-construction schedule. **Budget $2,500–$5,500 for the SF DBI permit on a hillside deck**, depending on project valuation.
 
-In unincorporated Marin and several incorporated cities, permits run through the Marin CDA (Marin Community Development Agency). Similar requirements apply: stamped structural drawings, plan review, and inspections at foundation, framing, and final. Marin CDA permit timelines are comparable to SF DBI — plan for 2–4 months of permit processing before construction begins. Both jurisdictions require permit inspection at caisson installation before concrete is poured. Don't skip that inspection. The concrete covers the evidence permanently. For a fuller picture of what SF permitting involves on structural projects, the [SF DBI permit process for ADU construction](/blog/adu-construction-san-francisco-guide) follows a similar path.
+In unincorporated Marin and several incorporated cities, permits run through the Marin CDA (Marin Community Development Agency). Similar requirements apply: stamped structural drawings, plan review, and inspections at foundation, framing, and final. Marin CDA permit timelines are comparable to SF DBI — plan for 2–4 months of permit processing before construction begins. Both jurisdictions require permit inspection at caisson installation before concrete is poured. Don't skip that inspection. The concrete covers the evidence permanently. Load-carrying framing work above the foundation — a beam replacement or a [load-bearing wall removal](/services/structural-repairs) — follows a similar permit path.
 
 ### Seismic Requirements for Elevated Deck Structures
 
@@ -2040,7 +2040,7 @@ This is the practical decision framework — organized by home type, location, a
 
 **Craftsman bungalows (Rockridge, Temescal, Berkeley Elmwood, Willow Glen):** Cedar shingle or shake for period-correct restoration. HardieShingle as a lower-maintenance alternative that approximates the profile — acceptable on homes where historical originality isn't the primary concern.
 
-**Modern and contemporary new construction:** Any of the three systems depending on design intent. HardiePlank is the most common spec for cost-performance reasons. Stucco on contemporary designs with clean smooth-finish detailing. For new ADU construction, fiber cement is typically the spec — see our [ADU construction guide](/blog/adu-construction-san-francisco-guide) for how exterior material choice interacts with permitting.
+**Modern and contemporary new construction:** Any of the three systems depending on design intent. HardiePlank is the most common spec for cost-performance reasons. Stucco on contemporary designs with clean smooth-finish detailing.
 
 ---
 
@@ -2336,7 +2336,7 @@ The version of this that hits SF homeowners hardest: pre-Loma Prieta soft-story 
 
 For homes showing active movement rather than historical settling, the cost of waiting is more direct. Gadget Construction has handled [SF foundation work](/service-areas/san-francisco) across the Outer Sunset, Marina, and Bernal Heights where homeowners delayed acting on visible diagonal cracking for three to four years. In two of those cases, water intrusion had compromised the sill plate and lower cripple wall framing by the time we arrived — adding $8,000–$15,000 in carpentry and framing repair on top of the underpinning scope. The foundation problem was the same size. The collateral damage was not.
 
-If a [complete remodel](/services/complete-remodel) or [ADU addition](/services/adu-construction) is already in your plans, address foundation settling before breaking ground — not after. Discovering active movement mid-project adds cost and schedule disruption that a pre-construction assessment would have avoided.
+If a [complete remodel](/services/complete-remodel) or a [load-bearing wall removal](/services/structural-repairs) is already in your plans, address foundation settling before breaking ground — not after. Discovering active movement mid-project adds cost and schedule disruption that a pre-construction assessment would have avoided.
 
 ---
 
@@ -3144,137 +3144,6 @@ A 1,500-square-foot home at mid-range scope lands at roughly $300,000–$525,000
 Every home is different. The only way to get an accurate estimate for your specific project is to have a contractor walk your space, understand your goals, and put it in writing.
 
 Gadget Construction provides detailed, itemized estimates with no obligation. We explain every line item so you know exactly what you're paying for — before any work begins.
-    `.trim(),
-  },
-  {
-    slug: "adu-construction-san-francisco-guide",
-    title:
-      "ADU Construction in SF: Costs, Permits & Everything You Need to Know",
-    metaTitle: "ADU Construction Cost & Permits in San Francisco",
-    excerpt:
-      "Thinking about building an ADU in San Francisco? Here's the complete guide — from California law to DBI permits to actual construction costs.",
-    date: "2026-03-15",
-    readingTime: "16 min read",
-    featuredImage: "/images/blog-adu-construction-sf.png",
-    relatedService: "adu-construction",
-    content: `
-## What Is an ADU?
-
-An Accessory Dwelling Unit (ADU) is a secondary housing unit on a single-family residential lot. In San Francisco, ADUs go by many names — in-law unit, granny flat, backyard cottage, garden apartment. Whatever you call it, an ADU is a fully independent living space with its own kitchen, bathroom, entrance, and sleeping area.
-
-California's ADU laws (AB 881, SB 13, AB 68) have dramatically expanded homeowners' rights to build ADUs — overriding many local restrictions that previously made them nearly impossible in cities like San Francisco.
-
-## Types of ADUs You Can Build in San Francisco
-
-### Detached ADU
-A standalone structure in your backyard, side yard, or rear yard. Can be up to 1,200 square feet regardless of your lot size. This is the most flexible option and typically offers the best rental income potential.
-
-### Garage Conversion
-Convert your existing garage into a finished living space. Often the most cost-effective option because the structure already exists. You are NOT required to replace the lost parking space.
-
-### Basement Conversion
-Convert unused basement space into a legal dwelling unit. Requires proper ceiling height (minimum 7 feet), egress windows, ventilation, and waterproofing. Common in SF's older homes with unfinished basements.
-
-### Junior ADU (JADU)
-A unit up to 500 square feet created within your existing home — for example, converting a bedroom with a separate entrance and kitchenette. JADUs are often the fastest and cheapest to build. You can build a JADU AND a detached ADU on the same lot.
-
-## How Much Does an ADU Cost in San Francisco?
-
-Real numbers from the SF market:
-
-| ADU Type | Typical Cost Range |
-|---|---|
-| Garage Conversion | $100,000 – $200,000 |
-| Basement Conversion | $120,000 – $250,000 |
-| Junior ADU (within existing home) | $80,000 – $150,000 |
-| Detached New Construction (studio/1BR) | $200,000 – $350,000 |
-| Detached New Construction (2BR, high-end) | $300,000 – $450,000+ |
-
-### What's Included in These Costs
-
-- Architectural design and engineering
-- DBI permit fees and plan review
-- Site work and foundation
-- Framing, plumbing, electrical, HVAC
-- Insulation, drywall, paint
-- Kitchen and bathroom fixtures
-- Flooring, doors, windows
-- Title 24 energy compliance
-- Final inspections and Certificate of Occupancy
-
-### What Drives ADU Costs Up
-
-- **Site conditions:** Sloped lots, limited access, and poor soil conditions increase foundation and site work costs.
-- **Utility connections:** Running new sewer, water, and electrical service to a detached ADU can add $15,000–$40,000 depending on distance and existing infrastructure.
-- **Finishes:** Builder-grade finishes vs. high-end finishes can swing costs by 30–50%.
-- **Structural complexity:** Two-story ADUs, complex rooflines, and custom designs cost more than simple rectangular floor plans.
-
-## The SF DBI Permit Process for ADUs
-
-San Francisco has streamlined its ADU permitting, but it's still a multi-step process:
-
-**Step 1: Pre-Application Research (1–2 weeks)**
-Check your lot's zoning, setbacks, and utility access. Determine which type and size of ADU is feasible.
-
-**Step 2: Design & Engineering (4–8 weeks)**
-Architectural plans, structural engineering, and Title 24 energy calculations — all prepared for DBI submittal.
-
-**Step 3: DBI Plan Review (8–16 weeks)**
-Submit your plans to DBI for review. Expect plan check comments and at least one round of revisions. ADU projects typically get expedited review — but "expedited" in SF still means 2–4 months.
-
-**Step 4: Permit Issuance**
-Once plans are approved, your building permit is issued and construction can begin.
-
-**Step 5: Construction Inspections**
-Multiple inspections throughout construction — foundation, framing, rough plumbing/electrical, insulation, and final.
-
-**Step 6: Certificate of Occupancy**
-After final inspection, you receive a Certificate of Occupancy — the legal document that makes your ADU a permitted dwelling unit.
-
-### Pro Tips for Faster Permitting
-
-- Submit complete, code-compliant plans the first time. Incomplete submittals get sent back and restart the queue.
-- Use standard details and proven floor plans. Custom everything takes longer to review.
-- Respond to plan check comments within 2 weeks. Don't let your file go stale.
-- Work with a contractor who has been through the DBI process before. Experience with the department saves months.
-
-## ADU Rental Income in San Francisco
-
-Current market rental rates for ADUs in San Francisco:
-
-- **Studio/efficiency:** $1,800 – $2,500/month
-- **1-bedroom:** $2,200 – $3,500/month
-- **2-bedroom:** $3,000 – $4,500/month
-
-At these rates, a well-built ADU can generate $25,000–$50,000+ in annual rental income. Most ADUs in SF pay for themselves within 5–10 years through rental income alone — while also adding $200,000–$400,000+ to property value.
-
-**Important:** ADUs in San Francisco are subject to rent control and just-cause eviction protections. Consult a property management professional or attorney for current tenant regulations.
-
-## Will an ADU Increase My Property Value?
-
-Yes — significantly. Appraisers value ADUs based on the income they generate and the additional living space they provide. In San Francisco's market, a fully permitted ADU typically adds $200,000–$400,000+ to property value.
-
-Key factors that maximize ADU value:
-- Full permit and Certificate of Occupancy (unpermitted units are a liability, not an asset)
-- Separate utility meters
-- Private entrance and outdoor space
-- Quality finishes that match the neighborhood
-- Code-compliant kitchen and bathroom
-
-## Is an ADU Right for You?
-
-An ADU makes sense if you:
-- Want rental income to offset your mortgage or supplement retirement
-- Need space for a family member (aging parent, adult child)
-- Want a home office or studio separate from your main home
-- Plan to stay in your home long-term and want to maximize property value
-- Have underutilized space (unused garage, unfinished basement, large backyard)
-
-## Next Steps
-
-The first step is a feasibility assessment. We visit your property, evaluate your lot, review zoning and setback requirements, and give you a clear answer on what type and size of ADU you can build — and what it will cost.
-
-No obligation. No pressure. Just the information you need to make a smart decision.
     `.trim(),
   },
   {

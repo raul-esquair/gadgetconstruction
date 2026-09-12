@@ -74,16 +74,16 @@ export const SERVICES: Service[] = [
       "Composite deck building across the Bay Area. Trex & TimberTech installations built for coastal fog and salt air. Serving 31 cities. CA Lic #1132983.",
   },
   {
-    name: "ADU Construction",
-    slug: "adu-construction",
+    name: "Structural Repairs",
+    slug: "structural-repairs",
     shortDescription:
-      "Add living space, rental income, or property value to your lot",
-    icon: "Building2",
-    image: "/images/adu-construction.jpg",
+      "Underpinning, sagging floors, and rotted beams — the load path, fixed from the footing up",
+    icon: "HardHat",
+    image: "/images/structural-repairs.jpg",
     metaTitle:
-      "ADU Construction in the San Francisco Bay Area | Gadget Construction",
+      "Structural Repairs in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Bay Area ADU contractor serving 31 cities. Detached units, garage conversions, in-law suites. Full permit handling for every jurisdiction. CA Lic #1132983.",
+      "Bay Area structural repair contractor. Underpinning, sagging floors, beam & sill plate replacement, load-bearing wall removal. 31 cities. CA Lic #1132983.",
   },
   {
     name: "Exterior Repairs",

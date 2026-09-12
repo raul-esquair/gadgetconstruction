@@ -78,12 +78,12 @@
     ]
   },
   {
-    "url": "/services/adu-construction",
+    "url": "/services/structural-repairs",
     "type": "service",
-    "title": "ADU Construction",
-    "summary": "Add living space, rental income, or property value to your lot",
+    "title": "Structural Repairs",
+    "summary": "Underpinning, sagging floors, and rotted beams — the load path, fixed from the footing up",
     "tags": [
-      "adu-construction"
+      "structural-repairs"
     ]
   },
   {
@@ -563,16 +563,6 @@
     "summary": "San Francisco is one of the most expensive remodeling markets in the country. Here's what projects actually cost — with real numbers, not national averages.",
     "tags": [
       "complete-remodel",
-      "blog"
-    ]
-  },
-  {
-    "url": "/blog/adu-construction-san-francisco-guide",
-    "type": "blog",
-    "title": "ADU Construction in SF: Costs, Permits & Everything You Need to Know",
-    "summary": "Thinking about building an ADU in San Francisco? Here's the complete guide — from California law to DBI permits to actual construction costs.",
-    "tags": [
-      "adu-construction",
       "blog"
     ]
   },
