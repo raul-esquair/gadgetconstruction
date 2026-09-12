@@ -149,7 +149,7 @@ export default function GalleryPage() {
                   { label: "Retaining Walls", href: "/services/retaining-walls" },
                   { label: "Complete Remodels", href: "/services/complete-remodel" },
                   { label: "Composite Decks", href: "/services/composite-decks" },
-                  { label: "ADU Construction", href: "/services/adu-construction" },
+                  { label: "Structural Repairs", href: "/services/structural-repairs" },
                 ].map((link) => (
                   <Link
                     key={link.href}

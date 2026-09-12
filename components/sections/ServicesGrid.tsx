@@ -15,7 +15,7 @@ import { blurProps } from "@/lib/blur";
 // Bento layout: first 2 services are large (high-value), rest are compact
 const BENTO_LAYOUT = [
   { large: true },   // Complete Remodel
-  { large: true },   // ADU Construction
+  { large: true },   // Structural Repairs
   { large: false },   // Concrete Foundations
   { large: false },   // Retaining Walls
   { large: false },   // Composite Decks
@@ -26,7 +26,7 @@ const BENTO_LAYOUT = [
 const SERVICE_IMAGE_ALT: Record<string, string> = {
   "concrete-foundations": "Construction workers pouring wet concrete into a rebar-reinforced foundation form on a Bay Area job site",
   "complete-remodel": "Complete home remodel project by Gadget Construction in the San Francisco Bay Area",
-  "adu-construction": "ADU accessory dwelling unit construction by Gadget Construction in the Bay Area",
+  "structural-repairs": "Worker setting rebar beneath an existing concrete footing during a structural repair by Gadget Construction",
   "composite-decks": "Composite deck building and installation by Gadget Construction",
   "retaining-walls": "Retaining wall construction by Gadget Construction in the Bay Area",
   "exterior-repairs": "Dry rot, stucco, and siding exterior repair by Gadget Construction on a Bay Area home",
@@ -35,7 +35,7 @@ const SERVICE_IMAGE_ALT: Record<string, string> = {
 // Reorder services: lead with the two highest-value
 const BENTO_ORDER = [
   SERVICES.find((s) => s.slug === "complete-remodel")!,
-  SERVICES.find((s) => s.slug === "adu-construction")!,
+  SERVICES.find((s) => s.slug === "structural-repairs")!,
   SERVICES.find((s) => s.slug === "concrete-foundations")!,
   SERVICES.find((s) => s.slug === "retaining-walls")!,
   SERVICES.find((s) => s.slug === "composite-decks")!,

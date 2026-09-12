@@ -23,7 +23,7 @@ export function localBusinessSchema() {
     // reference it by @id instead of restating a disconnected author name.
     founder: ownerPerson,
     description:
-      "San Francisco's trusted general contractor for 12+ years. Concrete foundations, remodels, decks, exterior repairs & ADU construction. 500+ projects completed.",
+      "San Francisco's trusted general contractor for 12+ years. Concrete foundations, structural repairs, remodels, decks & exterior repairs. 500+ projects completed.",
     telephone: "+16282333589",
     url: "https://gadgetconstructionsf.com",
     areaServed: [
@@ -65,7 +65,7 @@ export function localBusinessSchema() {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Retaining Walls" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Complete Home Remodeling" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Composite Decks" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "ADU Construction" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Structural Repairs" } },
       ],
     },
     knowsAbout: [

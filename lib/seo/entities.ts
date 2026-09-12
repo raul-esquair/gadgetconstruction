@@ -33,7 +33,7 @@ export const ownerPerson = {
     "Retaining walls",
     "Home remodeling",
     "Composite deck construction",
-    "ADU construction",
+    "Structural repair",
     "Dry rot repair",
     "Stucco repair",
     "Siding installation",

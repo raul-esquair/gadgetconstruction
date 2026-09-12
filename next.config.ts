@@ -8,13 +8,24 @@ const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
   },
-  // Roofing was retired as a service. The URL was indexed, so send its
-  // equity to the services hub rather than serving a 404.
+  // Retired services. Their URLs were indexed, so send the equity to the
+  // hubs rather than serving a 404. ADU gets the hub, not structural-repairs:
+  // an ADU searcher landing on a repair page is a worse outcome than a list.
   async redirects() {
     return [
       {
         source: "/services/roofing",
         destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/services/adu-construction",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/blog/adu-construction-san-francisco-guide",
+        destination: "/blog",
         permanent: true,
       },
     ];

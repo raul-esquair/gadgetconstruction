@@ -16,7 +16,6 @@ export const PROJECT_CATEGORIES = [
   { label: "Foundations", slug: "concrete-foundations" },
   { label: "Retaining Walls", slug: "retaining-walls" },
   { label: "Decks", slug: "composite-decks" },
-  { label: "ADUs", slug: "adu-construction" },
 ];
 
 export const GALLERY_PROJECTS: GalleryProject[] = [
@@ -140,36 +139,6 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     description: "Built a spacious gray composite deck designed for outdoor entertaining — featuring a modern fire pit, patio heater, lounge seating area, built-in BBQ zone under a steel pergola, and lush perimeter landscaping for privacy.",
     scope: ["Gray composite decking", "Oval fire pit with bench seating", "Steel pergola with BBQ zone", "Patio heater integration", "Privacy landscaping"],
     image: "/images/gallery-composite-deck-firepit.jpg",
-  },
-  {
-    slug: "berkeley-backyard-adu",
-    title: "Backyard Studio ADU",
-    category: "ADU Construction",
-    categorySlug: "adu-construction",
-    location: "Berkeley",
-    description: "Designed and built a 600 sq ft detached ADU with full kitchen, bathroom, and private entrance — permitted through Berkeley's building department with green building compliance.",
-    scope: ["Custom architectural design", "Full kitchen & bathroom", "Private entrance & patio", "Green building compliance", "Certificate of Occupancy"],
-    image: "/images/gallery-adu-insulation.jpg",
-  },
-  {
-    slug: "palo-alto-two-story-adu",
-    title: "Two-Story ADU — Framing Phase",
-    category: "ADU Construction",
-    categorySlug: "adu-construction",
-    location: "Bay Area",
-    description: "Ground-up two-story ADU build — full wood framing with scaffolding, second-floor joists, and roof trusses set. Photo shows the framing phase before sheathing, with windows and doors roughed in.",
-    scope: ["Two-story wood framing", "Scaffolding & safety", "Second-floor joist system", "Roof truss installation", "Window & door rough-ins"],
-    image: "/images/gallery-adu-framing.jpg",
-  },
-  {
-    slug: "san-rafael-detached-adu",
-    title: "Two-Bedroom Detached ADU",
-    category: "ADU Construction",
-    categorySlug: "adu-construction",
-    location: "San Rafael",
-    description: "Built a 1,000 sq ft 2-bedroom detached ADU on a Marin hillside lot — full design-build including engineering, permits, and landscaping.",
-    scope: ["1,000 sq ft 2BR/1BA", "Hillside pier foundation", "Full mechanical systems", "Landscaping & fencing", "DBI permits & C of O"],
-    image: "/images/gallery-adu-housewrap.jpg",
   },
   {
     slug: "bay-area-garage-foundation-prep",

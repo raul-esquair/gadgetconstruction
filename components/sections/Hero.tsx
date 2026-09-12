@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type ReactNode } from "react";
+import { useState, useEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import Image from "next/image";
 import { Phone, ChevronDown, Calendar, Check } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -10,6 +10,22 @@ import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { blurProps } from "@/lib/blur";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+
+export interface HeroVideoSource {
+  src: string;
+  type: string;
+  /** Picks a size per viewport. List the `media` sources first. */
+  media?: string;
+}
+
+// Video is client-only (server snapshot false), so it never ships in the SSR
+// HTML: it can't compete with the h1 for LCP, and nothing downloads before we
+// know the visitor hasn't asked for reduced motion or reduced data.
+const noopSubscribe = () => () => {};
+function canPlayBackgroundVideo(): boolean {
+  const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+  return !conn?.saveData;
+}
 
 interface HeroProps {
   headline: string;
@@ -30,6 +46,13 @@ interface HeroProps {
   showScrollIndicator?: boolean;
   urgencyText?: string;
   backgroundImage?: string;
+  /**
+   * Muted, looping video layered over `backgroundImage`. The image stays as
+   * the first paint and the fallback: under reduced motion, Save-Data, or a
+   * blocked autoplay (iOS Low Power Mode), the visitor just sees the still.
+   * Use its first frame as `backgroundImage` so the fade-in doesn't jump.
+   */
+  backgroundVideo?: HeroVideoSource[];
   imageAlt?: string;
   compact?: boolean;
   className?: string;
@@ -48,13 +71,18 @@ export default function Hero({
   showScrollIndicator = false,
   urgencyText,
   backgroundImage,
+  backgroundVideo,
   imageAlt = "",
   compact = false,
   className,
 }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const reducedMotion = useReducedMotion();
+  const videoAllowed = useSyncExternalStore(noopSubscribe, canPlayBackgroundVideo, () => false);
+  const showVideo = !!backgroundImage && !!backgroundVideo?.length && videoAllowed && !reducedMotion;
 
   // Arm on the first painted frame, not on a timer. The h1 is the LCP element
   // and Chrome ignores it while opacity is 0 — every ms of arming delay is a
@@ -95,6 +123,19 @@ export default function Hero({
     };
   }, [reducedMotion]);
 
+  // Only decode while the hero is on screen. Also the retry point when the
+  // browser refuses autoplay: play() rejects, the video stays transparent.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!showVideo || !video) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) video.play().catch(() => {});
+      else video.pause();
+    });
+    io.observe(video);
+    return () => io.disconnect();
+  }, [showVideo]);
+
   const stagger = (delay: number) => ({
     className: cn(
       "transition-[opacity,transform,filter] duration-700 will-change-[opacity,transform]",
@@ -126,13 +167,38 @@ export default function Hero({
             {...blurProps(backgroundImage)}
             alt={imageAlt}
             fill
-            className="object-cover animate-[ken-burns_20s_ease-in-out_infinite_alternate]"
+            // A video already moves; zooming the still under it would make
+            // the fade-in jump from a scaled frame to an unscaled one.
+            className={cn("object-cover", !backgroundVideo && "animate-[ken-burns_20s_ease-in-out_infinite_alternate]")}
             priority
             fetchPriority="high"
             decoding="sync"
             sizes="100vw"
             quality={80}
           />
+          {showVideo && (
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+              disableRemotePlayback
+              aria-hidden="true"
+              tabIndex={-1}
+              onPlaying={() => setVideoPlaying(true)}
+              className={cn(
+                "absolute inset-0 w-full h-full object-cover transition-opacity duration-700",
+                videoPlaying ? "opacity-100" : "opacity-0"
+              )}
+            >
+              {backgroundVideo!.map((source) => (
+                <source key={source.src} src={source.src} type={source.type} media={source.media} />
+              ))}
+            </video>
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
         </div>
       ) : (
