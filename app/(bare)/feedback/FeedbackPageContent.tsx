@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Loader2 } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import BareLogo from "@/components/ui/BareLogo";
 import Button from "@/components/ui/Button";
@@ -76,6 +76,13 @@ function Face({ variant, color, className }: { variant: FaceVariant; color: stri
   );
 }
 
+/**
+ * How long a happy customer waits for the kill switch before being sent to
+ * Google anyway. The write normally takes a few hundred ms; this only caps a
+ * slow or cold database.
+ */
+const KILL_SWITCH_WAIT_MS = 1500;
+
 /** Each screen enters from below; the global reduced-motion rule removes it. */
 const ENTER = "animate-[fade-in-up_400ms_cubic-bezier(0.16,1,0.3,1)_both]";
 const EMPTY: FormValues = { name: "", phone: "", email: "", details: "" };
@@ -98,6 +105,8 @@ export default function FeedbackPageContent() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  // True while a happy customer is being sent on to Google.
+  const [redirecting, setRedirecting] = useState(false);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const hasChangedMode = useRef(false);
 
@@ -123,6 +132,16 @@ export default function FeedbackPageContent() {
     };
   }, [token]);
 
+  // Coming back from Google with the Back button can restore this page from
+  // the back/forward cache mid-"Taking you to Google…". Show the button again.
+  useEffect(() => {
+    const onPageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setRedirecting(false);
+    };
+    window.addEventListener("pageshow", onPageShow);
+    return () => window.removeEventListener("pageshow", onPageShow);
+  }, []);
+
   // Each screen replaces the last in place, so move focus to its heading —
   // otherwise a screen reader is left on a button that no longer exists.
   useEffect(() => {
@@ -138,20 +157,48 @@ export default function FeedbackPageContent() {
   const choose = (value: number) => {
     setRating(value);
     // ⚠️ REVIEW GATING — a business decision, not an oversight. Only the two
-    // positive faces are shown the Google link; the negative ones go straight
-    // to a private form. That breaks Google's review policy and falls under
-    // the FTC consumer-reviews rule (16 CFR 465), and enforcement would land
-    // on the Business Profile. Chosen deliberately (2026-09-12), matching the
-    // Lamorinda Pavers site. The compliant flow is a one-line change:
-    // `value >= 3 ? "review" : "form"` → `"review"`, since the review screen
-    // already offers the private channel too. Don't change it in either
-    // direction without asking.
-    go(value >= 3 ? "review" : "form");
+    // positive faces are sent to Google; the negative ones go straight to a
+    // private form. That breaks Google's review policy and falls under the
+    // FTC consumer-reviews rule (16 CFR 465), and enforcement would land on
+    // the Business Profile. Chosen deliberately (2026-09-12), matching the
+    // Lamorinda Pavers site. The compliant flow: send every face to the
+    // review screen, which offers both Google and the private channel — i.e.
+    // `go("review")` here, with the 1–2 faces NOT auto-redirected (see
+    // sendToGoogle). Don't change it in either direction without asking.
+    if (value >= 3) {
+      go("review");
+      void sendToGoogle(value);
+      return;
+    }
+    go("form");
 
     // Fire and forget. Deliberately not awaited — the customer's next screen
     // must never wait on a database write, and the action swallows its own
     // errors. Worst case they receive one more email than they should.
     if (token) void recordFeedbackResponse(token, value);
+  };
+
+  /**
+   * Happy and Delighted go straight to the Google review box — no second
+   * screen to tap through (Raul, 2026-09-13). Every extra tap loses reviews.
+   *
+   * Same tab, not a new one: a tab opened after an await is no longer a direct
+   * response to the tap, and phone browsers block it as a popup. And the kill
+   * switch is awaited first (up to KILL_SWITCH_WAIT_MS), because leaving the
+   * page can cancel an in-flight request — the customer would then get the
+   * rest of the emails after already reviewing. The review screen renders
+   * underneath as the fallback, with its button, if the redirect is blocked
+   * or they come back.
+   */
+  const sendToGoogle = async (value: number) => {
+    setRedirecting(true);
+    if (token) {
+      await Promise.race([
+        recordFeedbackResponse(token, value),
+        new Promise((resolve) => setTimeout(resolve, KILL_SWITCH_WAIT_MS)),
+      ]);
+    }
+    window.location.assign(COMPANY.googleReviewUrl);
   };
 
   const restart = () => {
@@ -246,9 +293,21 @@ export default function FeedbackPageContent() {
             <h1 {...headingProps} className="text-4xl md:text-5xl font-heading font-extrabold mb-4 outline-none">
               That means a lot.
             </h1>
-            <p className="text-lg text-neutral-400 max-w-lg mx-auto mb-9">
-              Would you take a minute to say it on Google? It&apos;s how the next Bay Area homeowner
-              decides who to trust with their house.
+            <p className="text-lg text-neutral-400 max-w-lg mx-auto mb-9" aria-live="polite">
+              {redirecting ? (
+                <>
+                  <Loader2
+                    className="inline-block w-5 h-5 mr-2 -mt-0.5 animate-spin motion-reduce:hidden"
+                    aria-hidden="true"
+                  />
+                  Taking you to Google so you can leave a review&hellip;
+                </>
+              ) : (
+                <>
+                  Would you take a minute to say it on Google? It&apos;s how the next Bay Area
+                  homeowner decides who to trust with their house.
+                </>
+              )}
             </p>
 
             <Button href={COMPANY.googleReviewUrl} variant="secondary" size="lg" className="w-full sm:w-auto">
