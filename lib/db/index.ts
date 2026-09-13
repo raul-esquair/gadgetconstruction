@@ -14,6 +14,14 @@ export * from "./schema";
  * `prepare: false` is required — without it queries fail intermittently with
  * "prepared statement already exists". `max: 1` because each function
  * instance handles one request at a time.
+ *
+ * ⚠️ Never run queries concurrently (`Promise.all` over two queries). With one
+ * connection, postgres.js pipelines them, and Supavisor's transaction mode
+ * hangs on pipelined queries: the call never resolves, and every later query
+ * on that instance queues behind it. Verified 2026-09-13 — three parallel
+ * selects hung past 8s; the same three sequentially took ~40ms. `next dev`
+ * serves concurrent requests from one process, so two tabs loading at once
+ * can wedge the dev server the same way; restart it if pages hang on the DB.
  */
 function connectionString(): string {
   const url = process.env.DATABASE_URL;

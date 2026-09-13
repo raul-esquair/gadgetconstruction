@@ -6,6 +6,7 @@ import { isAuthenticated } from "@/lib/auth/guard";
 import { COMPANY } from "@/lib/constants";
 import { blurProps } from "@/lib/blur";
 import { logout } from "@/lib/actions/dashboard-auth";
+import DashboardNav from "./DashboardNav";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
@@ -36,14 +37,17 @@ export default async function DashboardLayout({ children }: { children: React.Re
               {...blurProps("/images/logo.png")}
             />
           </Link>
-          <form action={logout}>
-            <button
-              type="submit"
-              className="text-sm text-neutral-400 hover:text-accent-orange transition-colors cursor-pointer"
-            >
-              Sign out
-            </button>
-          </form>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <DashboardNav />
+            <form action={logout}>
+              <button
+                type="submit"
+                className="px-2 py-2 text-sm text-neutral-400 hover:text-accent-orange transition-colors cursor-pointer"
+              >
+                Sign out
+              </button>
+            </form>
+          </div>
         </div>
       </header>
       <div className="max-w-6xl mx-auto px-5 sm:px-6 py-8 sm:py-12">{children}</div>

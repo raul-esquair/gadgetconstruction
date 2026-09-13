@@ -24,27 +24,35 @@ export default function AddRequestForm({ today }: { today: string }) {
   const [values, setValues] = useState<FormValues>(empty);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Set when the error is a repeat-customer warning the owner may override.
+  const [canOverride, setCanOverride] = useState(false);
   const [saved, setSaved] = useState<string | null>(null);
 
   const update =
     (field: keyof FormValues) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       setValues((v) => ({ ...v, [field]: e.target.value }));
+      // A warning about one email address doesn't apply to another.
+      if (field === "email") setCanOverride(false);
+    };
 
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function submit(allowRepeat: boolean) {
     setSubmitting(true);
     setError(null);
+    setCanOverride(false);
     setSaved(null);
 
-    const result = await addReviewRequest({
-      name: values.name,
-      email: values.email,
-      phone: values.phone || null,
-      projectType: values.projectType || null,
-      completedAt: values.completedAt || null,
-      notes: values.notes || null,
-    });
+    const result = await addReviewRequest(
+      {
+        name: values.name,
+        email: values.email,
+        phone: values.phone || null,
+        projectType: values.projectType || null,
+        completedAt: values.completedAt || null,
+        notes: values.notes || null,
+      },
+      { allowRepeat },
+    );
 
     setSubmitting(false);
 
@@ -54,6 +62,12 @@ export default function AddRequestForm({ today }: { today: string }) {
       return;
     }
     setError(result.error);
+    setCanOverride(!!result.canOverride);
+  }
+
+  function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    submit(false);
   }
 
   if (!open) {
@@ -104,9 +118,19 @@ export default function AddRequestForm({ today }: { today: string }) {
         </p>
 
         {error && (
-          <p className="text-sm text-accent-red" role="alert">
-            {error}
-          </p>
+          <div role="alert" className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className={canOverride ? "text-sm text-amber-800" : "text-sm text-accent-red"}>{error}</p>
+            {canOverride && (
+              <button
+                type="button"
+                onClick={() => submit(true)}
+                disabled={submitting}
+                className="text-sm font-semibold text-primary underline underline-offset-2 hover:text-accent-orange disabled:opacity-50 cursor-pointer"
+              >
+                Add anyway
+              </button>
+            )}
+          </div>
         )}
 
         <div className="flex items-center gap-3 pt-1">

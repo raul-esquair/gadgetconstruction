@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { isCronAuthorized } from "@/lib/reviews/cron-auth";
-import { healthSnapshot } from "@/lib/reviews/queries";
+import { getReviewSettings, healthSnapshot } from "@/lib/reviews/queries";
+import { todayInBusinessTz } from "@/lib/reviews/dates";
+import { isSendDay } from "@/lib/reviews/schedule";
 
 export const dynamic = "force-dynamic";
 
@@ -34,8 +36,10 @@ export async function GET(request: Request) {
   }
 
   let snapshot;
+  let settings;
   try {
-    snapshot = await healthSnapshot(WINDOW_HOURS);
+    settings = await getReviewSettings();
+    snapshot = await healthSnapshot(WINDOW_HOURS, settings);
   } catch (err) {
     // Details go to the Netlify function log, not the public response.
     console.error("[review-health] database check failed:", err);
@@ -49,9 +53,21 @@ export async function GET(request: Request) {
     snapshot.lastSentAt !== null &&
     Date.now() - snapshot.lastSentAt.getTime() < WINDOW_HOURS * 3_600_000;
 
+  /**
+   * Days when silence is expected rather than a fault: sending is paused from
+   * the dashboard, today is a skipped weekend day, or sending resumed inside
+   * the window and the first send after it hasn't come round yet. A pause is
+   * Osmin's call, so it's reported in `checks` but never alerts.
+   */
+  const resumedRecently =
+    settings.resumedAt !== null &&
+    Date.now() - new Date(settings.resumedAt).getTime() < WINDOW_HOURS * 3_600_000;
+  const quietExpected =
+    settings.paused || !isSendDay(todayInBusinessTz(), settings) || resumedRecently;
+
   // Overdue alone is normal during a backfill — the batch cap drains it a few
   // a day. Overdue with nothing sent in the window means the send isn't running.
-  if (snapshot.overdue > 0 && !sentRecently) {
+  if (snapshot.overdue > 0 && !sentRecently && !quietExpected) {
     problems.push(
       `${snapshot.overdue} review email(s) are overdue and nothing has been sent in ${WINDOW_HOURS} hours. The daily 17:00 UTC send is probably not running: check Netlify → Logs → Functions → review-dispatch.`,
     );
@@ -70,6 +86,7 @@ export async function GET(request: Request) {
     problems,
     checks: {
       database: "ok",
+      paused: settings.paused,
       due: snapshot.due,
       overdue: snapshot.overdue,
       lastSentAt: snapshot.lastSentAt?.toISOString() ?? null,

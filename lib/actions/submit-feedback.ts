@@ -3,6 +3,7 @@
 import { Resend } from "resend";
 import { COMPANY } from "@/lib/constants";
 import { escapeHtml } from "@/lib/utils";
+import { getReviewSettings } from "@/lib/reviews/queries";
 
 export interface FeedbackSubmission {
   /** 1 = not happy … 4 = delighted. Mostly 1–2; 3–4 via the "tell Osmin privately" link. */
@@ -53,13 +54,13 @@ export async function submitFeedback(data: FeedbackSubmission): Promise<Feedback
   if (!email && !phone) {
     return {
       ok: false,
-      error: `Please add a phone number or an email so ${COMPANY.ownerFirstName} can reach you.`,
+      error: "Please add a phone number or an email so we can reach you.",
     };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_EMAIL;
-  if (!apiKey || !to) {
+  const to = await alertRecipients();
+  if (!apiKey || to.length === 0) {
     console.error("submitFeedback: RESEND_API_KEY or CONTACT_EMAIL is not set");
     return { ok: false, error: CALL_US };
   }
@@ -146,6 +147,22 @@ export async function submitFeedback(data: FeedbackSubmission): Promise<Feedback
   } catch (err) {
     console.error("submitFeedback threw:", err);
     return { ok: false, error: CALL_US };
+  }
+}
+
+/**
+ * Whoever Osmin chose on the dashboard's settings page, else CONTACT_EMAIL.
+ * A database hiccup falls back to CONTACT_EMAIL rather than losing the
+ * complaint — this is the one email that must always go somewhere.
+ */
+async function alertRecipients(): Promise<string[]> {
+  const fallback = process.env.CONTACT_EMAIL ? [process.env.CONTACT_EMAIL] : [];
+  try {
+    const { alertEmails } = await getReviewSettings();
+    return alertEmails.length > 0 ? alertEmails : fallback;
+  } catch (err) {
+    console.error("submitFeedback: could not read alert recipients, using CONTACT_EMAIL:", err);
+    return fallback;
   }
 }
 
