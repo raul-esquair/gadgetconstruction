@@ -342,8 +342,8 @@ export default function FeedbackPageContent() {
                 Tell us what went wrong.
               </h1>
               <p className="text-lg text-neutral-400 mb-9">
-                This goes straight to {COMPANY.ownerFirstName}, not a general inbox. He&apos;ll get
-                back to you himself.
+                Your feedback helps {COMPANY.shortName} improve the experience for every customer
+                and do our best work.
               </p>
             </div>
 
@@ -410,7 +410,7 @@ export default function FeedbackPageContent() {
                   Back
                 </Button>
                 <Button type="submit" variant="secondary" disabled={submitting}>
-                  {submitting ? "Sending…" : `Send to ${COMPANY.ownerFirstName}`}
+                  {submitting ? "Sending…" : "Submit"}
                 </Button>
               </div>
             </form>

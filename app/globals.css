@@ -280,6 +280,13 @@ h3 {
   border-radius: 4px;
 }
 
+/* Elements focused by script, not by the user — e.g. /feedback moves focus to
+   each new screen's heading so screen readers announce it. They can't be
+   tabbed to or clicked, so a ring on them is just a stray red box. */
+[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
