@@ -54,7 +54,7 @@ export async function submitFeedback(data: FeedbackSubmission): Promise<Feedback
   if (!email && !phone) {
     return {
       ok: false,
-      error: `Please add a phone number or an email so ${COMPANY.ownerFirstName} can reach you.`,
+      error: "Please add a phone number or an email so we can reach you.",
     };
   }
 

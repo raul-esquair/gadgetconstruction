@@ -93,7 +93,7 @@ function validate(values: FormValues): FormErrors {
   if (!values.details.trim()) errors.details = "Please tell us what happened";
   else if (values.details.trim().length < 10) errors.details = "A little more detail helps us fix it";
   if (!values.phone.trim() && !values.email.trim()) {
-    errors.phone = `Add a phone or an email so ${COMPANY.ownerFirstName} can reach you`;
+    errors.phone = "Add a phone or an email so we can reach you";
   }
   return errors;
 }
@@ -328,7 +328,7 @@ export default function FeedbackPageContent() {
                   onClick={() => go("form")}
                   className="text-accent-orange font-medium hover:underline cursor-pointer"
                 >
-                  Tell {COMPANY.ownerFirstName} privately.
+                  Tell us privately.
                 </button>
               </p>
             </div>
@@ -383,7 +383,7 @@ export default function FeedbackPageContent() {
               </div>
               {!errors.phone && (
                 <p className="text-xs text-neutral-300 -mt-3">
-                  Add at least one so {COMPANY.ownerFirstName} can reach you.
+                  Add at least one so we can reach you.
                 </p>
               )}
 
@@ -426,8 +426,8 @@ export default function FeedbackPageContent() {
               Thank you &mdash; we got it.
             </h1>
             <p className="text-lg text-neutral-400 mb-8">
-              {COMPANY.ownerFirstName} has it now and will reach out personally. If you&apos;d rather
-              talk right now, call{" "}
+              We&apos;ll use it to make things right, and to do better for the next homeowner. If
+              you&apos;d rather talk now, call{" "}
               <a href={COMPANY.phoneHref} className="text-accent-orange font-semibold whitespace-nowrap">
                 {COMPANY.phone}
               </a>
