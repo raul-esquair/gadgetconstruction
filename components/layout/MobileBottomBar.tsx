@@ -6,6 +6,7 @@ import { Phone, FileText } from "lucide-react";
 import { useEstimateModal } from "@/components/ui/EstimateModal";
 import { COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { isBareRoute } from "@/lib/bare-routes";
 
 export default function MobileBottomBar() {
   const pathname = usePathname();
@@ -43,8 +44,9 @@ export default function MobileBottomBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-  // Hide on contact page and on PPC landing pages (they render their own sticky bar)
-  if (pathname === "/contact" || pathname?.startsWith("/lp/")) return null;
+  // Hide on the contact page, and on bare routes (PPC landing pages render
+  // their own sticky bar; see lib/bare-routes.ts for the rest)
+  if (pathname === "/contact" || isBareRoute(pathname)) return null;
 
   return (
     <div

@@ -10,10 +10,11 @@ import Button from "@/components/ui/Button";
 import { EstimateButton } from "@/components/ui/EstimateModal";
 import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
+import { isBareRoute } from "@/lib/bare-routes";
 
 export default function Header() {
   const pathname = usePathname();
-  const isLpRoute = pathname?.startsWith("/lp/");
+  const isBare = isBareRoute(pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -85,7 +86,7 @@ export default function Header() {
   // Mobile menu style: dark when at top of hero page, white when scrolled
   const menuIsDark = hasHero && !isScrolled;
 
-  if (isLpRoute) return null;
+  if (isBare) return null;
 
   return (
     <header

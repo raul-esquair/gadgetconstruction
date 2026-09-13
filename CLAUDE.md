@@ -24,6 +24,9 @@ npm run dev      # Start dev server (localhost:3000)
 npm run build    # Production build — must pass with 0 errors before committing
 npm run lint     # ESLint check
 npm run blur:gen # Regenerate lib/blur-map.json after adding/changing images
+npm run check:schedule  # 36 assertions on review-request cadence (no DB needed)
+npm run db:generate     # New drizzle/*.sql migration from lib/db/schema.ts (no DB needed)
+npm run db:migrate      # Apply migrations — reads .env (DIRECT_URL, else DATABASE_URL)
 ```
 
 `prebuild` runs `blur:gen` automatically, so `npm run build` always has a current blur map.
@@ -40,6 +43,7 @@ npm run blur:gen # Regenerate lib/blur-map.json after adding/changing images
 - **Lucide React** (icons)
 - **clsx + tailwind-merge** (via `cn()` helper in `lib/utils.ts`)
 - **Zero animation libraries** — all animations use IntersectionObserver + scroll listeners + CSS
+- **Supabase Postgres + Drizzle ORM** (`postgres` driver) — only the review-request system touches it; see "Review Request System"
 - **class-variance-authority + @radix-ui/react-slot** (shadcn button dependency, installed but only used by `components/ui/shadcn-button.tsx` if present)
 
 ### File Structure
@@ -62,6 +66,17 @@ app/                              # Pages (App Router)
   service-areas/page.tsx          # Service areas hub (31 cities grouped by county)
   service-areas/[city]/page.tsx   # 31 individual city SEO pages (with FAQ schema)
   api/contact/route.ts            # Form submission endpoint
+  api/review-requests/dispatch/   # Bearer-protected cron endpoint — sends due review emails
+  api/review-requests/health/     # Bearer-protected health check (counts only) — polled daily by GitHub Actions
+  (bare)/                         # Route group: pages with no site chrome (layout cancels main's header padding)
+    feedback/                     # Reputation page: 4 faces → Google review or private form (+ its own OG card)
+    unsubscribe/                  # Review-email opt-out (POST-only confirm button)
+    dashboard/                    # Password-gated review-request manager; login/ + (app)/ (gated layout)
+
+netlify/functions/
+  review-dispatch.mts             # Scheduled 17:00 UTC → POSTs /api/review-requests/dispatch
+
+drizzle/                          # Committed SQL migrations + drizzle-kit snapshots
 
 components/
   ui/                             # Primitives
@@ -70,6 +85,7 @@ components/
     SectionWrapper.tsx            # Section with bg variants (white/light/dark/gradient)
     Card.tsx, Badge.tsx           # Basic UI elements
     FormField.tsx                 # Input/textarea/select with validation
+    BareLogo.tsx                  # Centred dark logo for bare routes (no site header)
     MultiStepForm.tsx             # 3-step progressive form with directional transitions (6 service options)
     BBBBadge.tsx                  # Static BBB "Accredited Business" mark → BBB profile (TrustBar, Footer, About). BBBSeal.tsx is the live grade seal, now /lp/* only
     EstimateModal.tsx             # Context provider + spring-driven sheet (drag-to-dismiss) + EstimateButton
@@ -132,6 +148,11 @@ lib/                              # Data & utilities
   utils.ts                        # cn() helper + getBookingUrgency() + prefersReducedTransparency()
   track.ts                        # track() → GA4 funnel events; no-op until NEXT_PUBLIC_GA_MEASUREMENT_ID is set
   logo-base64.ts                  # White logo as base64 constant (used by OG image)
+  bare-routes.ts                  # isBareRoute() — which paths hide Header/Footer/MobileBottomBar
+  db/                             # getDb() (lazy) + schema.ts (3 review tables, RLS on)
+  reviews/                        # schedule.ts + dates.ts (pure), queries.ts, emails.ts, dispatch.ts
+  auth/                           # Dashboard session: HMAC-signed cookie, single shared password
+  actions/                        # Server Actions: dashboard auth, review requests, feedback, unsubscribe
 
 hooks/
   useInView.ts                    # IntersectionObserver hook (binary trigger, fires once)
@@ -172,6 +193,7 @@ scripts/                          # CLI tools (Node + Python)
   weekly-publish.yml              # Mon 14:00 UTC — Netlify rebuild + sitemap resubmit + IndexNow
   gsc-report.yml                  # Manual — 90-day search performance report
   gsc-index-coverage.yml          # Manual — sitemap stats + per-URL index inspection
+  review-system-health.yml        # Daily 18:00 UTC — review-system health check, emails raul@esquair.com on failure
 
 public/images/
   logo.png                        # Company logo — dark version (for white backgrounds)
@@ -224,7 +246,7 @@ All content lives in `lib/` as typed constants. No CMS, no external APIs, no dat
 - `SERVICE_PRICING` record → PricingSection on each service page
 - `TESTIMONIALS`, `DIFFERENTIATORS`, `PROCESS_STEPS` → section components
 
-**To add a new service:** Add to `SERVICES` in constants.ts, add entry to `SERVICE_PAGES` in services-data.ts, add pricing to `SERVICE_PRICING`, create `app/services/[slug]/page.tsx`.
+**To add a new service:** Add to `SERVICES` in constants.ts, add entry to `SERVICE_PAGES` in services-data.ts, add pricing to `SERVICE_PRICING`, create `app/services/[slug]/page.tsx`, and add its review-email phrase to `PROJECT_PHRASES` in `lib/reviews/emails.ts`.
 
 **To add a new blog post:** Two paths —
   1. **Automated (preferred):** The Friday `weekly-draft.yml` workflow picks up the next `status: "queued"` brief from `content/post-queue.json`, generates the full post with featured image, opens a PR. To add a new topic, invoke `/next-content-batch` (proposes 4 new briefs) or edit `post-queue.json` directly with a manually-written brief.
@@ -476,6 +498,82 @@ All pages have unique hyper-local content (NOT template swaps with city names). 
 
 Helper functions: `getCitiesByCounty()`, `getCityBySlug()`, `getNeighboringCities()`
 
+## Review Request System
+
+Automated post-job review requests, ported 2026-09-12 from the Lamorinda Pavers site (`~/Desktop/lamorindapaving`, repo `raul-esquair/lamorindapavers`), where it has run in production since 2026-08-23. Gadget has **3 Google reviews against 500+ projects** — this is the review drive the hero's social proof is waiting on.
+
+### Flow
+1. After a job wraps, a customer is added at `/dashboard`.
+2. A daily cron sends up to 3 emails from Osmin — touches at `startAt` + **0 / 5 / 14** days.
+3. The customer clicks a face on `/feedback?t=<token>` → **kill switch** (`markResponded`) stops the rest. It fires on the face *click*, not a form submit — most happy customers go straight to Google and never come back.
+4. 3–4 faces → Google review CTA. 1–2 faces → a private form that emails `CONTACT_EMAIL` and pushes ntfy at priority 5.
+
+### ⚑ Decisions already made — do NOT re-open without asking
+1. **Review gating is intentional.** 1–2 faces never see the Google link. This breaks Google's review policy and is covered by the FTC consumer-reviews rule (16 CFR 465); enforcement would land on the Google Business Profile. Raul chose it on 2026-09-12 after the risk was laid out, matching Lamorinda. Reverting is one line in `app/(bare)/feedback/FeedbackPageContent.tsx`: `value >= 3 ? "review" : "form"` → `"review"` (the review screen already offers the private channel). A business decision, not a bug — don't change it silently in either direction.
+2. **Supabase, not Neon** (Lamorinda uses Neon). Same Drizzle schema; the driver is `postgres` (postgres-js) over Supabase's **transaction pooler**. `prepare: false` is mandatory there, `max: 1` per function instance.
+3. **Emails are from Osmin in the first person** (`Osmin Bernal <osmin@gadgetconstructionsf.com>`), deliberately plain — no logo banner, no buttons. They read as one person writing to another, which converts better and filters less. Replies go to `REVIEW_REPLY_TO`, else `CONTACT_EMAIL`.
+4. **Email only.** Lamorinda's research: SMS as touch 1 converts ~3–5× better, but needs Twilio + A2P 10DLC registration + TCPA consent. Deferred.
+5. **No login rate limiting.** Serverless instances don't share memory, so a counter is bypassed by parallel requests. A fixed 600ms per attempt plus a long random password is the mitigation. Don't make the password memorable.
+6. **Leads persistence and Lamorinda's SMS/appointment tables were left behind.** Only the three review tables exist.
+
+### Cadence (`lib/reviews/schedule.ts`)
+**Pure — no database imports** — so the rules deciding who gets emailed are testable in isolation (`npm run check:schedule`, 36 assertions). Keep it that way.
+- Finished **today** → `startAt` today (Osmin is marking it complete at the walkthrough, peak satisfaction). The daily cron caps how literal that is: a job added after the 10am run goes out the next morning.
+- Finished any other recent day → `completedAt + 2`, clamped so nothing is scheduled into the past.
+- Older than 14 days (`BACKFILL_THRESHOLD_DAYS`) or no date → tomorrow, so importing past customers doesn't fire every touch at once.
+- All dates are `YYYY-MM-DD` strings in `America/Los_Angeles` (`lib/reviews/dates.ts`), never `Date` objects — the cron runs on UTC.
+
+### Idempotency (do not weaken)
+- `review_touches` has a **unique index on `(request_id, n)`** — a duplicate send is impossible at the database level.
+- `dispatch.ts` **claims the touch before sending.** A crash mid-run costs one missed email (invisible, recoverable); recording after the send would risk a double send. Don't "fix" the order.
+- `findDueRequests` returns **at most one touch per request per run**, so an overdue sequence catches up a day at a time.
+- **Batch cap** `REVIEW_BATCH_LIMIT` (default 8/run) — a domain that normally sends a handful of emails suddenly sending 40 looks compromised. Also keeps the run inside Netlify's 30s scheduled-function limit. With 500+ past customers, a backfill drains at 8/day by design. Review *recency* matters for local ranking, so a steady trickle beats a burst followed by silence.
+- `email_suppressions` is keyed by **email, not request** — an unsubscribe outlives the request it came from.
+- Missing `RESEND_API_KEY` returns **before** any touch is claimed.
+- `dryRun` is a true no-op: it neither claims touches nor closes completed sequences. Lamorinda's `dispatch.ts` still closes sequences on a dry run; port the fix back on the next sync.
+
+### Cron
+`netlify/functions/review-dispatch.mts`, daily **17:00 UTC** (10am PDT / 9am PST). Scheduled functions can't be invoked by URL and time out at 30s, so it's a thin trigger that POSTs to `/api/review-requests/dispatch`, where the logic lives and which *can* be run by hand. Scheduled functions only run on the published deploy, never previews.
+```bash
+curl -H "Authorization: Bearer $CRON_SECRET" "https://gadgetconstructionsf.com/api/review-requests/dispatch?dryRun=1"
+```
+
+### Health check + alerts (`.github/workflows/review-system-health.yml`)
+Daily at **18:00 UTC**, an hour after the send, GitHub Actions calls `/api/review-requests/health` (same `CRON_SECRET` bearer). If the check fails, it **emails raul@esquair.com** through Resend: GitHub's own failure emails only reach the workflow owner's account. If the alert step itself fails, that GitHub email is the fallback. The health endpoint flags the failures that are otherwise silent, where the site looks fine while customers stop getting emails:
+- **Database unreachable** (503) — usually a paused Supabase project (restorable from the dashboard for a year) or a stale `DATABASE_URL`.
+- **`RESEND_API_KEY` or `CONTACT_EMAIL` missing on Netlify.**
+- **The send isn't running** — touches overdue *and* nothing sent in 26h. Overdue alone is normal mid-backfill (the batch cap drains it), so both conditions are required.
+- **Resend rejecting sends** — touches claimed in the last 26h with no Resend id. The claim-before-send order means those customers skip that email for good.
+
+It also keeps Supabase awake with real queries every day, which is why a separate keep-alive ping was rejected: a REST-root ping may not even count as database activity. Three tries, 20s apart, before alerting, so a cold start doesn't send a false alarm. Test delivery with **Actions → Review system health check → Run workflow → "Send the alert email even if the check passes"**. All four detectors were verified against the real database with seeded data on 2026-09-12.
+- ⚠️ **Public repo, public logs.** The endpoint returns counts and generic messages only; raw DB errors go to the Netlify function log. Never add customer data to it.
+- ⚠️ **GitHub disables scheduled workflows in a public repo after 60 days with no commits.** The weekly blog pipeline keeps the repo active today. If that ever stops, re-enable the workflow from the Actions tab.
+- Needs the **`CRON_SECRET` GitHub Actions secret** (same value as Netlify's); `RESEND_API_KEY` was already there. A missing secret fails the check and triggers an alert saying so.
+
+### `/feedback` page
+- **Statically generated** (build shows ○). The `?t=` token is read client-side via `useSearchParams` so the page stays on the CDN — no database round trip before first paint on a phone. Keep it ○.
+- `noindex, nofollow` and absent from `app/sitemap.ts`. Deliberately **not** in `robots.ts` disallow — a blocked URL can't be crawled, so Google would never see the noindex.
+- Faces are hand-drawn SVG (emoji differ per device): flat filled circles — red / yellow / light green / dark green — with dark `#1F2937` features, so they read on white and on the dark OG card alike. Always in color, not grey-until-hover (hover is dead on touch). The colors, `FEATURES` and `MOUTHS` are **duplicated** in `opengraph-image.tsx` as data URIs — change one, change both.
+- The OG card matters: the link gets texted, so the iMessage/WhatsApp preview is the first thing a customer sees. It uses `LOGO_WHITE_BASE64` (not a disk read — see the Netlify OG gotcha). Messaging apps cache previews hard; append `?v=N` to force a fresh one.
+- No framer-motion (zero-animation-libraries rule): each screen enters with the existing `fade-in-up` keyframe via `animate-[…]`, so the global reduced-motion rule removes it. Focus moves to each new screen's `<h1>`.
+
+### Bare routes (`lib/bare-routes.ts`)
+`isBareRoute()` is the single list of paths that hide Header, Footer and MobileBottomBar: `/lp/*`, `/feedback`, `/unsubscribe`, `/dashboard/*`. It replaced three separate `/lp/` checks. The `(bare)` route group's layout applies `-mt-20 md:-mt-24` to cancel `<main>`'s header padding (`app/lp/layout.tsx` does the same). A bare page must render its own logo (`BareLogo`), or it reads as a phishing form.
+
+### Dashboard auth (`lib/auth/`)
+One shared password → HMAC-signed, httpOnly cookie `gc_dashboard` (14 days). No user table. **Every Server Action re-checks the session itself** (`requireAuth()` in `lib/actions/review-requests.ts`) — the layout gate protects the page, but Server Actions are independently reachable endpoints.
+
+### Database (Supabase)
+- `lib/db/index.ts` → `getDb()`, **lazy on purpose**: `npm run build` succeeds with zero env vars (verified), because resolving the connection at import time would fail every static page's build.
+- **Every table calls `.enableRLS()`.** Supabase exposes `public` through its Data API, and the anon key is public by design — a table without RLS is readable and writable by anyone. RLS on with no policies closes the Data API; the app connects as `postgres`, which owns the tables and bypasses RLS. **Any new table needs the same call.**
+- Migrations are committed in `drizzle/`. `db:migrate` prefers `DIRECT_URL` (session pooler, port 5432) for DDL.
+- `.env` values must be **double-quoted** — connection strings can contain `&`, which breaks `source .env` in zsh.
+- ⚠️ **Free-tier Supabase projects pause after ~7 days without database activity.** The daily send and the daily health check both run real queries; if it pauses anyway, the health check alerts. Supabase Pro (~$25/mo) never pauses.
+- ⚠️ **Deploy previews share the production database** (one `DATABASE_URL`). Previews can't fire the cron and the dashboard is password-gated, but a preview can read and write real customer data.
+
+### Environment variables (Netlify — mark secret, scope to Functions)
+`DATABASE_URL` (Supabase transaction pooler, port 6543), `DASHBOARD_PASSWORD` (24+ random chars — store it before marking secret, the flag is irreversible), `DASHBOARD_SESSION_SECRET` (`openssl rand -hex 32`), `CRON_SECRET`. Already set: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NTFY_TOPIC`. Optional: `REVIEW_REPLY_TO`, `REVIEW_BATCH_LIMIT`. Local `.env` additionally wants `DIRECT_URL` for migrations.
+
 ## SEO
 
 Audited against 2026 Google standards (April 2026). All critical items addressed.
@@ -561,6 +659,13 @@ These were research-backed decisions — don't revert without reason:
 
 ## What's Pending
 
+- **Review request system — built, not yet live (2026-09-12).** The code is complete and the build is green, but nothing works in production until:
+  1. ~~**Supabase project**~~ **DONE 2026-09-12** — project on Postgres 17.6 (`aws-0-us-west-1` pooler), local `.env` holds `DATABASE_URL` + `DIRECT_URL` + the three dashboard secrets, migration `0000_init_review_system` applied, RLS confirmed on all 3 tables (0 policies). A full round trip through `lib/reviews/*` over the transaction pooler passed (create → due → dry run claims nothing → duplicate touch rejected → kill switch idempotent) and the test row was deleted.
+  2. **Netlify env vars**: `DATABASE_URL`, `DASHBOARD_PASSWORD`, `DASHBOARD_SESSION_SECRET`, `CRON_SECRET` (see "Review Request System").
+  3. **Reply-to inbox.** Review-email replies go to `CONTACT_EMAIL` unless `REVIEW_REPLY_TO` is set. Confirm that's somewhere Osmin actually reads.
+  4. **Osmin sign-off**: on review gating (see decision 1 there — the risk lands on *his* Business Profile), on emails going out in his name and voice, and on the promises the pages make for him ("He'll get back to you himself").
+  5. **GitHub secret `CRON_SECRET`** for the health check, then after merge run the workflow once with "Send the alert email even if the check passes" to confirm alerts reach raul@esquair.com.
+  6. **End-to-end test**: add yourself at `/dashboard` with today's date → `?dryRun=1` curl → real run → click a face → confirm the request shows "Responded" and no further touches go out. Then text a `/feedback` link to a phone to check the OG preview and that the Google link lands where it should.
 - **Structural Repairs follow-ups (from the ADU retirement, 2026-09-11):**
   - **Photos are done.** Bento card: rebar set under an existing footing (2026-09-11). Service hero: a looping video of the crew pulling rotted sheathing (source kept in `~/Desktop/Gadget Construction Assets/`). The card is an underpinning shot — underpinning is structural repair.
   - **Gallery — started.** The page's `ServiceGallery` shows the door-header before/after slider (`HEADER_REPLACEMENT`) with the project tiles centred under it. The first structural project (`bay-area-sliding-door-header-replacement`, the after photo) is live on `/gallery` behind a new "Structural" filter. More structural photos are still wanted.
@@ -711,6 +816,7 @@ Run monthly when queue is low (or automatically — see below). `.claude/skills/
 | `NETLIFY_BUILD_HOOK_URL` | weekly-publish | Triggers Netlify rebuild on Monday 07:00 UTC |
 | `GSC_SERVICE_ACCOUNT_JSON_BASE64` | next-content-batch | Base64-encoded GCP service account JSON for Search Console API reads |
 | `GSC_PROPERTY_URL` | weekly-publish | Search Console property id for the sitemap resubmit — must be `sc-domain:gadgetconstructionsf.com` |
+| `CRON_SECRET` | review-system-health | Bearer for `/api/review-requests/health` — same value as the Netlify variable |
 | `GITHUB_TOKEN` | all workflows | Auto-provided by GitHub Actions for gh CLI (branch push, PR create) |
 
 ### Brief schema (`content/post-queue.json`)
@@ -790,12 +896,16 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 - **Live URL:** `https://gadgetconstructionsf.com`
 - **Deployment:** Netlify (connected to GitHub repo, auto-deploys on push)
 - **Build command:** `npm run build`
-- **57 routes** (homepage + about + contact + gallery + blog listing + 14 blog posts + services hub + 6 service pages + 5 landing pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image)
+- **64 routes** (homepage + about + contact + gallery + blog listing + 14 blog posts + services hub + 6 service pages + 5 landing pages + service areas hub + 31 city pages + API route + sitemap.xml + robots.txt + opengraph-image, plus the review system's 7: /feedback + its OG image, /unsubscribe, /dashboard, /dashboard/login, /api/review-requests/dispatch, /api/review-requests/health — none of them in the sitemap)
 
 ## Key Gotchas
 
 - **Phone photos carry an EXIF orientation tag, and only some tools honour it.** Five images in `public/images` (`dry-rot-hero`, `stucco-hero`, `siding-hero`, `dry-rot-before`, `dry-rot-after`) are stored landscape with orientation `6`, meaning a viewer is expected to rotate them 90° to display them upright and portrait. `next/image` honours the tag, so the rendered photo has always been correct — and `scripts/optimize-images.ts` already calls `.rotate()`. `scripts/generate-blur-map.mjs` did **not**, so it built every placeholder from the unrotated pixels and painted a landscape blur under a portrait photo — a sideways smear that snapped upright on load. Fixed 2026-09-09 by piping through `sharp(raw).rotate()` before `getPlaiceholder`. Any new tool that reads these files directly needs the same `.rotate()`, and any new phone photo added to `public/images` inherits the same tag. Check with `sharp(f).metadata().orientation` — anything other than `1` or undefined needs rotating before you measure or sample it.
 - **ADU construction is retired — do not reintroduce it.** Same rules as roofing below: no service page, `SERVICES` entry, form option, schema `Offer`, gallery category, or copy that says Gadget builds ADUs, garage conversions, JADUs, or backyard units. `/services/adu-construction` and `/blog/adu-construction-san-francisco-guide` are permanent redirects in `next.config.ts` — keep them. The site ranked for ADU terms, so a `/next-content-batch` proposal can still chase an ADU query from GSC data; reject it. Structural Repairs took ADU's slots and covers the load path from the footing up — **underpinning is a structural repair**, not only a foundation service (Raul, 2026-09-11). The page leads its scope with underpinning, carries two per-pier/project pricing rows and a diagnostic FAQ ("underpinning or just new posts?"), and its guides module links the underpinning cost and timeline posts — its figures ($2,000–$4,500 per pier, $15,000–$50,000+ per project, 1–3 weeks on site) are copied from those posts, so change them together. The cost post owns the "underpinning cost" query: keep the service page's underpinning copy diagnostic rather than writing a second cost breakdown, and check which page the ads underpinning ad group lands on before changing either. Trim/siding rot belongs on Exterior Repairs.
+- **`/feedback` gates reviews on purpose** — 1–2 faces never see the Google link. It carries Google-policy and FTC exposure and was chosen deliberately; see "Review Request System" → decision 1 before touching the routing in either direction.
+- **New Supabase tables need `.enableRLS()`** — the `public` schema is exposed through Supabase's Data API with a public anon key. And keep `prepare: false` on the `postgres` client; the transaction pooler can't hold prepared statements.
+- **A new chrome-less page goes in `lib/bare-routes.ts`** — not a fresh `pathname` check in Header, Footer and MobileBottomBar, which is how the `/lp/` rule used to be copied three times.
+- **Review emails key their copy off `PROJECT_PHRASES` in `lib/reviews/emails.ts`** (SERVICES slug → "your new deck"). Add a service there when you add one to `SERVICES`, or its customers get the generic "your project".
 - **Roofing is retired — do not reintroduce it.** No service page, no `SERVICES` entry, no form option, no schema `Offer`, no gallery category. `/services/roofing` is a permanent redirect in `next.config.ts`; deleting that redirect resurrects a 404 on a URL Google has indexed. Roof *vocabulary* is still correct where a roof is the cause of an exterior-repair problem (kickout flashing, roof-to-wall transitions, fascia) or where it describes the architecture (Eichler flat roofs, Victorian rooflines) — that copy is deliberate and should stay. What must never come back is roofing framed as work Gadget sells. The content pipeline is mostly covered: `propose-next-batch.ts` builds its service list from `SERVICES`, which no longer has roofing. But it also feeds the model 90 days of GSC queries, and the site ranked for roofing terms, so a proposal can still chase a roofing query — reject any proposal PR that does.
 - **Domain is `gadgetconstructionsf.com`** NOT `gadgetconstruction.com` — all URLs, schemas, sitemap, OG must use the SF version
 - **`overflow-x: clip`** (not `hidden`) on html/main — `hidden` breaks `position: sticky` on mobile stacking cards
