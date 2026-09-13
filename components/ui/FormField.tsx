@@ -11,8 +11,9 @@ interface FormFieldBaseProps {
 }
 
 interface InputFieldProps extends FormFieldBaseProps {
-  type: "text" | "email" | "tel";
+  type: "text" | "email" | "tel" | "date" | "password";
   placeholder?: string;
+  autoComplete?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -87,6 +88,7 @@ export default function FormField(props: FormFieldProps) {
           type={props.type}
           required={required}
           placeholder={props.placeholder}
+          autoComplete={props.autoComplete}
           value={props.value}
           onChange={props.onChange}
           className={cn(fieldStyles, error && errorFieldStyles)}

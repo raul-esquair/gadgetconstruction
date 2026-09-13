@@ -13,6 +13,14 @@ export const COMPANY = {
   serviceArea: "San Francisco & the Bay Area",
   rating: 5.0,
   reviewCount: 3,
+  owner: "Osmin Bernal",
+  ownerFirstName: "Osmin",
+  /**
+   * Where /feedback sends a happy customer: the Business Profile's own review
+   * link, which opens Google's review composer directly (it resolves to
+   * search.google.com/local/writereview for place ChIJ25KWYHOBhYARBXbX9hGvfTY).
+   */
+  googleReviewUrl: "https://g.page/r/CQV21_YRr302EBE/review",
   url: "https://gadgetconstructionsf.com",
   address: {
     street: "168 Hyde St",

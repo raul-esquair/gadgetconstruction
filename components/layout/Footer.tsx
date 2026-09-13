@@ -7,6 +7,7 @@ import { Phone, MapPin } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import BBBBadge from "@/components/ui/BBBBadge";
+import { isBareRoute } from "@/lib/bare-routes";
 
 const companyLinks = [
   { label: "About", href: "/about" },
@@ -20,7 +21,7 @@ export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
-  if (pathname?.startsWith("/lp/")) return null;
+  if (isBareRoute(pathname)) return null;
 
   return (
     <footer className="bg-primary text-white">
