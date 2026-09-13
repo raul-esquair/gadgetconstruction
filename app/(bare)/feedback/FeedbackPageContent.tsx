@@ -328,7 +328,7 @@ export default function FeedbackPageContent() {
                   onClick={() => go("form")}
                   className="text-accent-orange font-medium hover:underline cursor-pointer"
                 >
-                  Tell us privately.
+                  We&apos;d love your feedback.
                 </button>
               </p>
             </div>
