@@ -5,6 +5,7 @@ import {
   attachProviderId,
   closeCompletedSequences,
   findDueRequests,
+  getReviewSettings,
   recordTouch,
 } from "./queries";
 
@@ -12,14 +13,15 @@ import {
  * From Osmin, on the domain already verified in Resend for the estimate form.
  * The address only has to exist as a sender — replies go to REPLY_TO.
  */
-const FROM = `${COMPANY.owner} <osmin@gadgetconstructionsf.com>`;
+export const FROM = `${COMPANY.owner} <osmin@gadgetconstructionsf.com>`;
 
 /**
- * Replies go to an inbox someone actually reads. REVIEW_REPLY_TO overrides;
- * otherwise the same inbox the estimate leads land in.
+ * Replies go to an inbox someone actually reads: the address set on the
+ * dashboard's settings page, else REVIEW_REPLY_TO, else the same inbox the
+ * estimate leads land in.
  */
-function replyTo(): string | undefined {
-  return process.env.REVIEW_REPLY_TO || process.env.CONTACT_EMAIL || undefined;
+export function defaultReplyTo(): string | null {
+  return process.env.REVIEW_REPLY_TO || process.env.CONTACT_EMAIL || null;
 }
 
 /**
@@ -39,6 +41,8 @@ export interface DispatchResult {
   closed: number;
   errors: string[];
   dryRun: boolean;
+  /** Sending is paused from the dashboard — nothing was considered. */
+  paused: boolean;
 }
 
 export async function dispatchReviewEmails(
@@ -57,13 +61,22 @@ export async function dispatchReviewEmails(
     closed: 0,
     errors: [],
     dryRun,
+    paused: false,
   };
 
-  const due = await findDueRequests(limit);
+  // Read fresh on every run. If this throws, the run fails loudly (and the
+  // health check notices) rather than assuming "not paused".
+  const settings = await getReviewSettings();
+  if (settings.paused) {
+    result.paused = true;
+    return result;
+  }
+
+  const due = await findDueRequests(limit, settings);
   result.attempted = due.length;
 
   if (due.length === 0) {
-    if (!dryRun) result.closed = await closeCompletedSequences();
+    if (!dryRun) result.closed = await closeCompletedSequences(settings);
     return result;
   }
 
@@ -79,7 +92,7 @@ export async function dispatchReviewEmails(
   const resend = apiKey ? new Resend(apiKey) : null;
 
   for (const { request, touch } of due) {
-    const email = renderReviewEmail(request, touch);
+    const email = renderReviewEmail(request, touch, undefined, settings.templates[touch]);
 
     if (dryRun) {
       result.sent++;
@@ -102,7 +115,7 @@ export async function dispatchReviewEmails(
       const sendResult = await resend!.emails.send({
         from: FROM,
         to: request.email,
-        replyTo: replyTo(),
+        replyTo: settings.replyTo ?? defaultReplyTo() ?? undefined,
         subject: email.subject,
         text: email.text,
         html: email.html,
@@ -138,6 +151,6 @@ export async function dispatchReviewEmails(
     }
   }
 
-  if (!dryRun) result.closed = await closeCompletedSequences();
+  if (!dryRun) result.closed = await closeCompletedSequences(settings);
   return result;
 }

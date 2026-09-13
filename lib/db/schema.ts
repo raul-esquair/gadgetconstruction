@@ -1,4 +1,15 @@
-import { date, index, integer, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  date,
+  index,
+  integer,
+  jsonb,
+  pgTable,
+  text,
+  timestamp,
+  uniqueIndex,
+  uuid,
+} from "drizzle-orm/pg-core";
 
 /**
  * Review-request tables. Ported from the Lamorinda Pavers site, where the same
@@ -100,6 +111,39 @@ export const emailSuppressions = pgTable("email_suppressions", {
   reason: text("reason").$type<SuppressionReason>().notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 }).enableRLS();
+
+/**
+ * Osmin's settings from /dashboard/settings — one row, id "default".
+ *
+ * Every column except `paused` is nullable, and null means "use the default
+ * in code" (DEFAULT_SETTINGS in lib/reviews/settings.ts). That keeps the
+ * defaults in one place: a fresh database, a missing row and the owner guide
+ * PDF all see the same copy and cadence. Email templates are stored only when
+ * they differ from the default, so improving the default copy in code still
+ * reaches any email he never touched.
+ */
+export const reviewSettings = pgTable("review_settings", {
+  id: text("id").primaryKey(),
+  paused: boolean("paused").notNull().default(false),
+  pausedAt: timestamp("paused_at", { withTimezone: true }),
+  /** When sending last resumed — the health check allows a day for the first send after. */
+  resumedAt: timestamp("resumed_at", { withTimezone: true }),
+  emailCount: integer("email_count"),
+  /** Days after email 1 that email 2 goes out. */
+  gapDays2: integer("gap_days_2"),
+  /** Days after email 2 that email 3 goes out. */
+  gapDays3: integer("gap_days_3"),
+  skipWeekends: boolean("skip_weekends"),
+  repeatWindowDays: integer("repeat_window_days"),
+  /** Keyed "1" | "2" | "3"; only customized emails are present. */
+  templates: jsonb("templates").$type<Partial<Record<"1" | "2" | "3", { subject: string; body: string }>>>(),
+  replyTo: text("reply_to"),
+  /** Comma-separated. */
+  alertEmails: text("alert_emails"),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+}).enableRLS();
+
+export type ReviewSettingsRow = typeof reviewSettings.$inferSelect;
 
 export type ReviewRequest = typeof reviewRequests.$inferSelect;
 export type NewReviewRequest = typeof reviewRequests.$inferInsert;

@@ -24,7 +24,7 @@ npm run dev      # Start dev server (localhost:3000)
 npm run build    # Production build — must pass with 0 errors before committing
 npm run lint     # ESLint check
 npm run blur:gen # Regenerate lib/blur-map.json after adding/changing images
-npm run check:schedule  # 36 assertions on review-request cadence (no DB needed)
+npm run check:schedule  # 72 assertions on review-request cadence, templates, settings validation (no DB needed)
 npm run db:generate     # New drizzle/*.sql migration from lib/db/schema.ts (no DB needed)
 npm run db:migrate      # Apply migrations — reads .env (DIRECT_URL, else DATABASE_URL)
 ```
@@ -71,7 +71,7 @@ app/                              # Pages (App Router)
   (bare)/                         # Route group: pages with no site chrome (layout cancels main's header padding)
     feedback/                     # Reputation page: 4 faces → Google review or private form (+ its own OG card)
     unsubscribe/                  # Review-email opt-out (POST-only confirm button)
-    dashboard/                    # Password-gated review-request manager; login/ + (app)/ (gated layout)
+    dashboard/                    # Password-gated review-request manager; login/ + (app)/ (gated layout) + (app)/settings/ (Osmin's settings pane)
 
 netlify/functions/
   review-dispatch.mts             # Scheduled 17:00 UTC → POSTs /api/review-requests/dispatch
@@ -149,8 +149,8 @@ lib/                              # Data & utilities
   track.ts                        # track() → GA4 funnel events; no-op until NEXT_PUBLIC_GA_MEASUREMENT_ID is set
   logo-base64.ts                  # White logo as base64 constant (used by OG image)
   bare-routes.ts                  # isBareRoute() — which paths hide Header/Footer/MobileBottomBar
-  db/                             # getDb() (lazy) + schema.ts (3 review tables, RLS on)
-  reviews/                        # schedule.ts + dates.ts (pure), queries.ts, emails.ts, dispatch.ts
+  db/                             # getDb() (lazy) + schema.ts (3 review tables + review_settings, RLS on)
+  reviews/                        # schedule.ts + dates.ts + settings.ts + emails.ts (pure), queries.ts, dispatch.ts
   auth/                           # Dashboard session: HMAC-signed cookie, single shared password
   actions/                        # Server Actions: dashboard auth, review requests, feedback, unsubscribe
 
@@ -504,29 +504,31 @@ Automated post-job review requests, ported 2026-09-12 from the Lamorinda Pavers 
 
 ### Flow
 1. After a job wraps, a customer is added at `/dashboard`.
-2. A daily cron sends up to 3 emails from Osmin — touches at `startAt` + **0 / 5 / 14** days.
+2. A daily cron sends up to 3 emails from Osmin — by default touches at `startAt` + **0 / 5 / 14** days. Osmin can change the count, the gaps and the wording at `/dashboard/settings` (see "Settings pane").
 3. The customer clicks a face on `/feedback?t=<token>` → **kill switch** (`markResponded`) stops the rest. It fires on the face *click*, not a form submit — most happy customers go straight to Google and never come back.
-4. 3–4 faces → Google review CTA. 1–2 faces → a private form that emails `CONTACT_EMAIL` and pushes ntfy at priority 5.
+4. 3–4 faces → Google review CTA. 1–2 faces → a private form that emails the alert addresses from settings (else `CONTACT_EMAIL`) and pushes ntfy at priority 5.
 
 ### ⚑ Decisions already made — do NOT re-open without asking
 1. **Review gating is intentional.** 1–2 faces never see the Google link. This breaks Google's review policy and is covered by the FTC consumer-reviews rule (16 CFR 465); enforcement would land on the Google Business Profile. Raul chose it on 2026-09-12 after the risk was laid out, matching Lamorinda. Reverting is one line in `app/(bare)/feedback/FeedbackPageContent.tsx`: `value >= 3 ? "review" : "form"` → `"review"` (the review screen already offers the private channel). A business decision, not a bug — don't change it silently in either direction.
 2. **Supabase, not Neon** (Lamorinda uses Neon). Same Drizzle schema; the driver is `postgres` (postgres-js) over Supabase's **transaction pooler**. `prepare: false` is mandatory there, `max: 1` per function instance.
-3. **Emails are from Osmin in the first person** (`Osmin Bernal <osmin@gadgetconstructionsf.com>`), deliberately plain — no logo banner, no buttons. They read as one person writing to another, which converts better and filters less. Replies go to `REVIEW_REPLY_TO`, else `CONTACT_EMAIL`.
+3. **Emails are from Osmin in the first person** (`Osmin Bernal <osmin@gadgetconstructionsf.com>`), deliberately plain — no logo banner, no buttons. They read as one person writing to another, which converts better and filters less. Replies go to the reply-to address set in settings, else `REVIEW_REPLY_TO`, else `CONTACT_EMAIL`.
 4. **Email only.** Lamorinda's research: SMS as touch 1 converts ~3–5× better, but needs Twilio + A2P 10DLC registration + TCPA consent. Deferred.
 5. **No login rate limiting.** Serverless instances don't share memory, so a counter is bypassed by parallel requests. A fixed 600ms per attempt plus a long random password is the mitigation. Don't make the password memorable.
-6. **Leads persistence and Lamorinda's SMS/appointment tables were left behind.** Only the three review tables exist.
+6. **Leads persistence and Lamorinda's SMS/appointment tables were left behind.** Only the three review tables exist (plus `review_settings`, added 2026-09-13).
 
 ### Cadence (`lib/reviews/schedule.ts`)
-**Pure — no database imports** — so the rules deciding who gets emailed are testable in isolation (`npm run check:schedule`, 36 assertions). Keep it that way.
+**Pure — no database imports** — so the rules deciding who gets emailed are testable in isolation (`npm run check:schedule`, 72 assertions). Keep it that way. The cadence is a `Cadence` parameter (`emailCount`, `gapDays`, `skipWeekends`), never a module constant, because it comes from the settings row.
 - Finished **today** → `startAt` today (Osmin is marking it complete at the walkthrough, peak satisfaction). The daily cron caps how literal that is: a job added after the 10am run goes out the next morning.
 - Finished any other recent day → `completedAt + 2`, clamped so nothing is scheduled into the past.
 - Older than 14 days (`BACKFILL_THRESHOLD_DAYS`) or no date → tomorrow, so importing past customers doesn't fire every touch at once.
 - All dates are `YYYY-MM-DD` strings in `America/Los_Angeles` (`lib/reviews/dates.ts`), never `Date` objects — the cron runs on UTC.
+- **Each gap counts from the day the previous email actually went out** (`nextTouch()`), not from `startAt` (changed 2026-09-13). With offsets from `startAt`, anything that delayed an email — a pause, the batch cap, a skipped weekend — made the next one due immediately, so two emails landed a day apart. Now a delay can push the whole sequence later but never squeeze it. For on-time sends the dates are identical to the old 0 / 5 / 14.
+- **Skip weekends:** `isSendDay()` blocks Saturday and Sunday entirely (an overdue Thursday email still waits for Monday), and `nextSendDay()` shifts due dates for display.
 
 ### Idempotency (do not weaken)
 - `review_touches` has a **unique index on `(request_id, n)`** — a duplicate send is impossible at the database level.
 - `dispatch.ts` **claims the touch before sending.** A crash mid-run costs one missed email (invisible, recoverable); recording after the send would risk a double send. Don't "fix" the order.
-- `findDueRequests` returns **at most one touch per request per run**, so an overdue sequence catches up a day at a time.
+- `findDueRequests` returns **at most one touch per request per run**, and each gap counts from the real previous send, so an overdue sequence catches up with its full spacing.
 - **Batch cap** `REVIEW_BATCH_LIMIT` (default 8/run) — a domain that normally sends a handful of emails suddenly sending 40 looks compromised. Also keeps the run inside Netlify's 30s scheduled-function limit. With 500+ past customers, a backfill drains at 8/day by design. Review *recency* matters for local ranking, so a steady trickle beats a burst followed by silence.
 - `email_suppressions` is keyed by **email, not request** — an unsubscribe outlives the request it came from.
 - Missing `RESEND_API_KEY` returns **before** any touch is claimed.
@@ -545,6 +547,8 @@ Daily at **18:00 UTC**, an hour after the send, GitHub Actions calls `/api/revie
 - **The send isn't running** — touches overdue *and* nothing sent in 26h. Overdue alone is normal mid-backfill (the batch cap drains it), so both conditions are required.
 - **Resend rejecting sends** — touches claimed in the last 26h with no Resend id. The claim-before-send order means those customers skip that email for good.
 
+The "send isn't running" detector stays quiet when silence is expected: sending paused from the dashboard, today a skipped weekend day, or sending resumed inside the 26h window. A pause is reported as `checks.paused` but never alerts — it's Osmin's call. (Nothing flags a pause left on for weeks; the dashboard's amber banner is the only reminder.)
+
 It also keeps Supabase awake with real queries every day, which is why a separate keep-alive ping was rejected: a REST-root ping may not even count as database activity. Three tries, 20s apart, before alerting, so a cold start doesn't send a false alarm. Test delivery with **Actions → Review system health check → Run workflow → "Send the alert email even if the check passes"**. All four detectors were verified against the real database with seeded data on 2026-09-12.
 - ⚠️ **Public repo, public logs.** The endpoint returns counts and generic messages only; raw DB errors go to the Netlify function log. Never add customer data to it.
 - ⚠️ **GitHub disables scheduled workflows in a public repo after 60 days with no commits.** The weekly blog pipeline keeps the repo active today. If that ever stops, re-enable the workflow from the Actions tab.
@@ -560,19 +564,43 @@ It also keeps Supabase awake with real queries every day, which is why a separat
 ### Bare routes (`lib/bare-routes.ts`)
 `isBareRoute()` is the single list of paths that hide Header, Footer and MobileBottomBar: `/lp/*`, `/feedback`, `/unsubscribe`, `/dashboard/*`. It replaced three separate `/lp/` checks. The `(bare)` route group's layout applies `-mt-20 md:-mt-24` to cancel `<main>`'s header padding (`app/lp/layout.tsx` does the same). A bare page must render its own logo (`BareLogo`), or it reads as a phishing form.
 
+### Settings pane (`/dashboard/settings`, added 2026-09-13)
+Built after competitor research across NiceJob, Jobber, Housecall Pro, ServiceTitan, Birdeye, GatherUp, Grade.us, BrightLocal and others. What Osmin controls:
+- **Pause all sending** — one switch, saves instantly (separate from the form so it can't wait on Save or be discarded with other edits). Due emails are held, never skipped. `dispatch.ts` reads settings first on every run and **throws rather than guessing** if it can't, because guessing "not paused" would send what he paused.
+- **Emails per customer** (1–3) and **days between them** (2–30 each; the floor is NiceJob's minimum spacing).
+- **Skip weekends.**
+- **Email wording** — subject + body per email, with `{first_name}`, `{project}`, `{when_finished}` fields, live preview, "Send test" (sends the *unsaved* text, `[Test]` subject, empty token so links go to the bare `/feedback` and `/unsubscribe`) and "Reset to the original wording". The feedback link, signature, license line and unsubscribe footer are added by `renderReviewEmail()` and are not editable. Unknown `{fields}` are rejected on save.
+- **Repeat customers** — "don't ask again within" off / 3 / 6 (default) / 12 months. Checked when a customer is added (`addReviewRequest`); the form offers "Add anyway". An address that already has an active sequence also warns. An unsubscribed address is refused outright.
+- **Reply-to address** and **unhappy-customer alert addresses** (up to 3). Blank = the env defaults. `submitFeedback` falls back to `CONTACT_EMAIL` if the settings read fails — that alert must always go somewhere.
+
+Deliberately **not** exposed: the 8/day batch cap (deliverability + the 30s function limit), send time of day (one daily cron), SMS, review-site rotation, A/B tests, and who sees the Google button (the gating decision above stays a code change).
+
+Storage is one `review_settings` row (`id = 'default'`), RLS on. **Every column except `paused` is nullable and null means "the default in code"** (`DEFAULT_SETTINGS` in `lib/reviews/settings.ts`). Templates are stored only when they differ from `DEFAULT_TEMPLATES`, so improving the default copy in code still reaches any email he never edited. No row = launch behaviour. `lib/reviews/settings.ts` is pure and shared by the page (inline errors) and the Server Action (`lib/actions/review-settings.ts`), which re-validates. Changes apply from the next send, including customers already mid-sequence.
+
 ### Dashboard auth (`lib/auth/`)
-One shared password → HMAC-signed, httpOnly cookie `gc_dashboard` (14 days). No user table. **Every Server Action re-checks the session itself** (`requireAuth()` in `lib/actions/review-requests.ts`) — the layout gate protects the page, but Server Actions are independently reachable endpoints.
+One shared password → HMAC-signed, httpOnly cookie `gc_dashboard` (14 days). No user table. **Every Server Action re-checks the session itself** (`dashboardAuthError()` in `lib/auth/guard.ts` — kept out of the `"use server"` files, where every export becomes a callable endpoint) — the layout gate protects the page, but Server Actions are independently reachable endpoints.
 
 ### Database (Supabase)
 - `lib/db/index.ts` → `getDb()`, **lazy on purpose**: `npm run build` succeeds with zero env vars (verified), because resolving the connection at import time would fail every static page's build.
 - **Every table calls `.enableRLS()`.** Supabase exposes `public` through its Data API, and the anon key is public by design — a table without RLS is readable and writable by anyone. RLS on with no policies closes the Data API; the app connects as `postgres`, which owns the tables and bypasses RLS. **Any new table needs the same call.**
-- Migrations are committed in `drizzle/`. `db:migrate` prefers `DIRECT_URL` (session pooler, port 5432) for DDL.
+- Migrations are committed in `drizzle/`. `db:migrate` prefers `DIRECT_URL` (session pooler, port 5432) for DDL. `0001_review_settings` was applied to production on 2026-09-13, ahead of the code that reads it.
+- ⚠️ **Never run two queries concurrently** (`Promise.all`). With `max: 1`, postgres-js pipelines them on the one connection, and Supavisor's transaction mode **hangs** on pipelined queries — the call never resolves and every later query on that instance queues behind it. Verified 2026-09-13: three parallel selects hung past 8s; the same three sequentially took ~40ms (a pool of 3 also worked). Production is safe with sequential code because a function instance serves one request at a time, but `next dev` serves concurrent requests from one process, so two tabs loading dashboard pages at once can wedge the dev server — restart it if dashboard pages hang.
 - `.env` values must be **double-quoted** — connection strings can contain `&`, which breaks `source .env` in zsh.
 - ⚠️ **Free-tier Supabase projects pause after ~7 days without database activity.** The daily send and the daily health check both run real queries; if it pauses anyway, the health check alerts. Supabase Pro (~$25/mo) never pauses.
 - ⚠️ **Deploy previews share the production database** (one `DATABASE_URL`). Previews can't fire the cron and the dashboard is password-gated, but a preview can read and write real customer data.
 
 ### Environment variables (Netlify — mark secret, scope to Functions)
 `DATABASE_URL` (Supabase transaction pooler, port 6543), `DASHBOARD_PASSWORD` (24+ random chars — store it before marking secret, the flag is irreversible), `DASHBOARD_SESSION_SECRET` (`openssl rand -hex 32`), `CRON_SECRET`. Already set: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NTFY_TOPIC`. Optional: `REVIEW_REPLY_TO`, `REVIEW_BATCH_LIMIT`. Local `.env` additionally wants `DIRECT_URL` for migrations.
+
+### Owner guide (`Gadget-Construction-Review-System-Guide.pdf`)
+A 7-page plain-language PDF for Osmin, made 2026-09-13: what the system does, what customers see (real screenshots), the unhappy path, how to add customers, then **three tick-box decisions on page 6** (who sees the Google button, whether the wording in his name is right, where replies go), and the emails word for word. It deliberately omits the dashboard password ("sent separately"). The PDF sits in the repo root untracked, like the other client PDFs. The source is in `scripts/review-guide/`, kept on purpose because Lamorinda's equivalent was lost with a session scratchpad:
+```bash
+node scripts/review-guide/shoot.mjs    # re-screenshot the live /feedback page
+npx tsx scripts/review-guide/build.ts  # rebuild the PDF
+```
+- `build.ts` fills `guide.html` with the output of the real `renderReviewEmail()` using the **default** templates, so reword `DEFAULT_TEMPLATES` in `lib/reviews/emails.ts` and the guide follows on the next build. It does not read the database: once Osmin edits the wording in settings, the guide's "emails word for word" pages no longer match what goes out. Email 1's second line now reads "We finished {project} {when_finished}." (was "We wrapped up … today" / "… and I wanted to follow up"), so the current PDF is slightly out of date.
+- `shoot.mjs` and `build.ts` drive headless Chrome through `cdp.mjs`, a ~60-line DevTools-protocol client on Node's built-in `WebSocket`, not Puppeteer. `shoot.mjs` loads `/feedback` **without** a `?t=` token, so clicking faces writes nothing to the database. Keep it that way.
+- The Google policy quote on page 6 ("selectively solicit positive reviews from customers") was checked against the live policy page on 2026-09-13. Google dropped that line in 2022 and later restored it, so re-check before reusing it.
 
 ## SEO
 
@@ -660,10 +688,10 @@ These were research-backed decisions — don't revert without reason:
 ## What's Pending
 
 - **Review request system — LIVE since 2026-09-13 (PR #33).** Supabase is migrated with RLS verified. The Netlify env vars and the `CRON_SECRET` GitHub secret are set, Netlify schedules `review-dispatch` at `0 17 * * *`, and the prod dry run and health check pass. The test-alert workflow run succeeded and Resend accepted the email to raul@esquair.com. **End-to-end test passed 2026-09-13:** Raul added himself at `/dashboard` → a manual real dispatch sent touch 1 (Resend-confirmed) → he clicked a face → the request went `stopped / responded` with nothing further due. It recorded rating 3 (Happy) although he meant Delighted: the two sit side by side on a phone and the first tap wins by design. A controlled click on Delighted on the live site recorded 4, so the mapping is correct. Still open:
-  1. **Reply-to inbox.** Review-email replies go to `CONTACT_EMAIL` unless `REVIEW_REPLY_TO` is set. Confirm that's somewhere Osmin actually reads — the unhappy-customer alert lands there too. Also confirm who is subscribed to `NTFY_TOPIC`.
+  1. **Reply-to inbox.** Review-email replies go to `CONTACT_EMAIL` unless an address is set in `/dashboard/settings` (or `REVIEW_REPLY_TO`). Confirm that's somewhere Osmin actually reads — the unhappy-customer alert lands there too unless he sets alert addresses. Also confirm who is subscribed to `NTFY_TOPIC`.
   2. **Osmin sign-off**: on review gating (see decision 1 there — the risk lands on *his* Business Profile), on emails going out in his name and voice, and on the promises the pages make for him ("He'll get back to you himself").
   3. **Phone check of the texted link**: the `/feedback` OG preview in iMessage, and that the Google button opens the review composer for a signed-in user.
-  4. **Onboarding Osmin**: dashboard URL + password, who enters finished jobs, and whether to backfill past customers (drains at 8/day).
+  4. **Onboarding Osmin**: dashboard URL + password (send the password separately; the guide omits it), who enters finished jobs, and whether to backfill past customers (drains at 8/day). The owner guide PDF is ready (see "Owner guide"). Walking him through its page 6 settles items 1 and 2 above.
   5. Raul's test row stays in `review_requests` (stopped, harmless). Delete it before quoting response-rate stats from the dashboard.
 - **Structural Repairs follow-ups (from the ADU retirement, 2026-09-11):**
   - **Photos are done.** Bento card: rebar set under an existing footing (2026-09-11). Service hero: a looping video of the crew pulling rotted sheathing (source kept in `~/Desktop/Gadget Construction Assets/`). The card is an underpinning shot — underpinning is structural repair.
@@ -901,6 +929,8 @@ The performance report has an `opportunities` block (close-to-page-1, low-CTR, i
 
 - **Phone photos carry an EXIF orientation tag, and only some tools honour it.** Five images in `public/images` (`dry-rot-hero`, `stucco-hero`, `siding-hero`, `dry-rot-before`, `dry-rot-after`) are stored landscape with orientation `6`, meaning a viewer is expected to rotate them 90° to display them upright and portrait. `next/image` honours the tag, so the rendered photo has always been correct — and `scripts/optimize-images.ts` already calls `.rotate()`. `scripts/generate-blur-map.mjs` did **not**, so it built every placeholder from the unrotated pixels and painted a landscape blur under a portrait photo — a sideways smear that snapped upright on load. Fixed 2026-09-09 by piping through `sharp(raw).rotate()` before `getPlaiceholder`. Any new tool that reads these files directly needs the same `.rotate()`, and any new phone photo added to `public/images` inherits the same tag. Check with `sharp(f).metadata().orientation` — anything other than `1` or undefined needs rotating before you measure or sample it.
 - **ADU construction is retired — do not reintroduce it.** Same rules as roofing below: no service page, `SERVICES` entry, form option, schema `Offer`, gallery category, or copy that says Gadget builds ADUs, garage conversions, JADUs, or backyard units. `/services/adu-construction` and `/blog/adu-construction-san-francisco-guide` are permanent redirects in `next.config.ts` — keep them. The site ranked for ADU terms, so a `/next-content-batch` proposal can still chase an ADU query from GSC data; reject it. Structural Repairs took ADU's slots and covers the load path from the footing up — **underpinning is a structural repair**, not only a foundation service (Raul, 2026-09-11). The page leads its scope with underpinning, carries two per-pier/project pricing rows and a diagnostic FAQ ("underpinning or just new posts?"), and its guides module links the underpinning cost and timeline posts — its figures ($2,000–$4,500 per pier, $15,000–$50,000+ per project, 1–3 weeks on site) are copied from those posts, so change them together. The cost post owns the "underpinning cost" query: keep the service page's underpinning copy diagnostic rather than writing a second cost breakdown, and check which page the ads underpinning ad group lands on before changing either. Trim/siding rot belongs on Exterior Repairs.
+- **`next build` type-checks every `.ts`/`.mts` file in the repo, untracked ones included** (`tsconfig.json` includes `**/*.ts`). A half-finished script in `scripts/` that doesn't type-check breaks your local `npm run build` even though it was never committed. Run `npx tsc --noEmit -p .` after adding one.
+- **Scripts that import from `@/lib` must be `.ts` with a `main()` wrapper.** tsx runs `.ts` as CommonJS here (no `"type": "module"`), so top-level `await` fails with "not supported with the cjs output format". Renaming to `.mts` doesn't help: ESM then can't see the named exports of the CommonJS-transpiled lib files ("does not provide an export named 'COMPANY'"). Use `__dirname`, not `import.meta.url`. Plain `.mjs` scripts that don't import lib (like `scripts/review-guide/shoot.mjs`) can use top-level await.
 - **`/feedback` gates reviews on purpose** — 1–2 faces never see the Google link. It carries Google-policy and FTC exposure and was chosen deliberately; see "Review Request System" → decision 1 before touching the routing in either direction.
 - **New Supabase tables need `.enableRLS()`** — the `public` schema is exposed through Supabase's Data API with a public anon key. And keep `prepare: false` on the `postgres` client; the transaction pooler can't hold prepared statements.
 - **A new chrome-less page goes in `lib/bare-routes.ts`** — not a fresh `pathname` check in Header, Footer and MobileBottomBar, which is how the `/lp/` rule used to be copied three times.

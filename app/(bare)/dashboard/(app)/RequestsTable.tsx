@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import type { RequestWithTouches } from "@/lib/reviews/queries";
 import { stopFollowUps } from "@/lib/actions/review-requests";
-import { touchDueDate, TOUCH_NUMBERS, type TouchNumber } from "@/lib/reviews/schedule";
+import { nextTouch, type Cadence } from "@/lib/reviews/schedule";
 import { SERVICES } from "@/lib/constants";
 
 // Darker shades of the /feedback face colors, so the text stays readable on white.
@@ -16,12 +16,13 @@ const RATING: Record<number, { label: string; className: string }> = {
 
 const SERVICE_NAMES = new Map(SERVICES.map((s) => [s.slug, s.name]));
 
-function statusChip(r: RequestWithTouches) {
+function statusChip(r: RequestWithTouches, paused: boolean) {
   if (r.respondedAt) return { label: "Responded", className: "bg-green-50 text-green-700" };
+  if (r.status === "active" && paused) return { label: "Paused", className: "bg-neutral-100 text-neutral-500" };
   if (r.status === "active") return { label: "Active", className: "bg-amber-50 text-amber-700" };
 
   const map: Record<string, string> = {
-    complete: "All 3 sent",
+    complete: "All sent",
     manual: "Stopped",
     unsubscribed: "Unsubscribed",
     bounced: "Bounced",
@@ -29,11 +30,13 @@ function statusChip(r: RequestWithTouches) {
   return { label: map[r.stoppedReason ?? ""] ?? "Stopped", className: "bg-neutral-100 text-neutral-400" };
 }
 
-/** Next touch that hasn't been sent, based on how many have gone out. */
-function nextTouchDate(r: RequestWithTouches): string | null {
+/**
+ * When the next email goes out. A date in the past means it's queued behind
+ * the daily cap (or a pause) and goes out at the next send.
+ */
+function nextTouchDate(r: RequestWithTouches, cadence: Cadence): string | null {
   if (r.status !== "active") return null;
-  const next = TOUCH_NUMBERS.find((n) => n > r.touchCount) as TouchNumber | undefined;
-  return next ? touchDueDate(r.startAt, next) : null;
+  return nextTouch(r.startAt, r.touches, cadence)?.date ?? null;
 }
 
 function formatDate(value: string | null) {
@@ -45,9 +48,15 @@ function formatDate(value: string | null) {
 export default function RequestsTable({
   requests,
   siteUrl,
+  cadence,
+  paused,
+  today,
 }: {
   requests: RequestWithTouches[];
   siteUrl: string;
+  cadence: Cadence;
+  paused: boolean;
+  today: string;
 }) {
   const [pending, startTransition] = useTransition();
   const [copied, setCopied] = useState<string | null>(null);
@@ -105,8 +114,10 @@ export default function RequestsTable({
           </thead>
           <tbody className="text-sm">
             {requests.map((r) => {
-              const chip = statusChip(r);
-              const next = nextTouchDate(r);
+              const chip = statusChip(r, paused);
+              const next = nextTouchDate(r, cadence);
+              // Someone who got 3 before the count was lowered still shows "3 of 3".
+              const total = Math.max(cadence.emailCount, r.touches.length);
               const rating = r.rating !== null ? RATING[r.rating] : null;
               return (
                 <tr key={r.id} className="border-b border-neutral-100 last:border-0">
@@ -119,8 +130,10 @@ export default function RequestsTable({
                     <p>{(r.projectType && SERVICE_NAMES.get(r.projectType)) ?? r.projectType ?? "—"}</p>
                     <p className="text-xs text-neutral-300">done {formatDate(r.completedAt)}</p>
                   </td>
-                  <td className="px-4 py-3 align-top text-neutral-500">{r.touchCount} of 3</td>
-                  <td className="px-4 py-3 align-top text-neutral-500">{next ? formatDate(next) : "—"}</td>
+                  <td className="px-4 py-3 align-top text-neutral-500">{r.touches.length} of {total}</td>
+                  <td className="px-4 py-3 align-top text-neutral-500">
+                    {next ? (paused ? "On hold" : next < today ? "Next send" : formatDate(next)) : "—"}
+                  </td>
                   <td className="px-4 py-3 align-top">
                     <span className={`inline-block rounded-full px-2.5 py-1 text-xs font-medium ${chip.className}`}>
                       {chip.label}
