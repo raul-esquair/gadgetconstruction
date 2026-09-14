@@ -1,0 +1,19 @@
+# SPIKE, deploy preview only: never merge.
+# Proxies /dashboard to the Esquair client hub from Netlify's CDN. `signed`
+# names the env var holding the shared secret; Netlify adds an x-nf-sign JWS
+# (netlify_id, site_url, deploy_context) that the hub verifies. `force` makes
+# it win over this site's own /dashboard.
+
+[[redirects]]
+  from = "/dashboard"
+  to = "https://esquair-crm.vercel.app/dashboard"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
+
+[[redirects]]
+  from = "/dashboard/*"
+  to = "https://esquair-crm.vercel.app/dashboard/:splat"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
