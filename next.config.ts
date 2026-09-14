@@ -30,6 +30,19 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // SPIKE, deploy preview only: never merge. Proxies /dashboard to the Esquair
+  // client hub to test Server Actions and cookies through a rewrite.
+  // beforeFiles so it wins over this site's own /dashboard.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/dashboard", destination: "https://esquair-crm.vercel.app/dashboard" },
+        { source: "/dashboard/:path*", destination: "https://esquair-crm.vercel.app/dashboard/:path*" },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 };
 
 export default nextConfig;
