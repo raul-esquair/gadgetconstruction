@@ -49,7 +49,7 @@ newly changed since the user was last in Google Ads.
 Propose 3–5 likely tasks based on what's actionable. Don't guess — offer
 options. Examples (pick the ones that fit current state):
 
-- Add a pending ad group (Stucco / Siding / Underpinning if still deferred)
+- Add a pending ad group (Stucco / Siding if still deferred — Underpinning was removed 2026-09-27)
 - Review the Search terms report and add new negative keywords
 - Check conversion verification status and tune CallRail conversion values
 - Reallocate budget based on week's performance
@@ -118,7 +118,6 @@ we don't re-derive them every session:
 - **Landing pages:**
   - `/lp/exterior-repairs` (+ `#dry-rot`, `#stucco`, `#siding` anchors)
   - `/lp/composite-decks`
-- **Services fallback (non-LP):** `/services/concrete-foundations` for Underpinning
 
 ## Hard Rules
 
@@ -153,7 +152,7 @@ If any are no, resolve them before handing back.
 
 Skip these — they're handled elsewhere:
 
-- Writing ad copy from scratch: existing RSA copy for all 5 ad groups is in
+- Writing ad copy from scratch: existing RSA copy for the live ad groups is in
   `google-ads-campaign-plan.md`. Reuse it. Only draft new copy when adding
   a genuinely new ad group or replacing a deprecated ad.
 - Site code changes for tracking: the gtag is already installed at

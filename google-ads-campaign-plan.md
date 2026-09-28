@@ -25,7 +25,7 @@
 | **Ad Group — Composite Decks** | ✅ Live (12 keywords: 6 Exact + 6 Phrase as of 2026-04-29, Max CPC raised $10 → $20 to meet $10.54–$33.22 market range) |
 | **Ad Group — Stucco Repair (OLD, in Dry Rot Repair campaign)** | ⏸ Paused 2026-04-25 (replaced by new Stucco campaign — keep paused 30 days for history, then delete) |
 | **Ad Group — Siding** | 🔴 Deferred (LP `/lp/siding-repair` BUILT and ready — activate ad group when budget scales month 2+) |
-| **Ad Group — Underpinning** | 🔴 Deferred (month 2+) |
+| **Ad Group — Underpinning** | ❌ Dropped 2026-09-27 — client pulled underpinning from the business; never launched, do not rebuild |
 | **Dedicated LPs — Dry Rot, Stucco, Siding** | ✅ All 3 launched 2026-04-25 — see Landing Pages section |
 | **Workmanship warranty messaging removed from LPs** | ✅ 2026-04-25 — per client direction; manufacturer warranty (Trex/TimberTech 25-yr) preserved on Composite Decks LP |
 | **Pricing CRO tweaks on LPs (cost-of-waiting callout, includes/not-included footnote)** | ✅ 2026-04-25 |
@@ -258,19 +258,19 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
 ---
 
-### 🔴 Ad Group 5: Underpinning  *(deferred to month 2+)*
+### ❌ Ad Group 5: Underpinning — REMOVED 2026-09-27
 
-**Final URL when activated:** `/services/concrete-foundations` (existing service page, not an LP)
+The client pulled underpinning from the business, so it came off the site
+entirely (PR #36: service copy, pricing, FAQs and both underpinning blog posts,
+whose URLs now 308 to `/blog`). The ad group was never launched, so there is
+nothing to pause — its keywords and its `/services/concrete-foundations` final
+URL are deleted here so they can't be revived from this doc.
 
-| Keyword | Match Type | Monthly Vol | CPC Range |
-|---------|-----------|-------------|-----------|
-| under pinning | Phrase | 480 | $2.95–$55.00 |
-| foundation underpinning | Phrase | 90 | $2.48–$28.17 |
-| foundation underpinning contractors | Exact | 20 | — |
-| underpinning contractor | Exact | 10 | — |
-| **Group total** | | **600** | |
-
-**Why deferred:** Limited inventory (~600 searches/mo) means $500/mo budget would undersend. Add once we're scaling total budget.
+**Do not re-add it.** The site still ranks for underpinning terms and the
+keyword planner still shows ~600 searches/mo, so it will keep looking like an
+opportunity. It isn't — Gadget doesn't sell the work. Structural demand is
+served by the framing, sill-plate and bearing-wall side of
+`/services/structural-repairs`.
 
 ---
 
@@ -287,7 +287,7 @@ Legend: 🟢 Live · 🟡 Pending / Scheduled · 🔴 Deferred
 
 ### Scaling Path
 
-- **If Month 1 ROAS > 300%:** scale to $2,800/mo, add Siding + Underpinning
+- **If Month 1 ROAS > 300%:** scale to $2,800/mo, add Siding
 - **If Month 1 ROAS 150–300%:** hold budget, optimize creative + bids
 - **If Month 1 ROAS < 150%:** pause underperforming ad group, consolidate budget onto winners
 
@@ -354,7 +354,7 @@ Added 2026-04-21. Catches top-of-funnel deck shoppers still comparing materials.
 
 ### Structured Snippets (pending)
 - **Type:** Services
-- **Values:** Dry Rot Repair, Stucco Repair, Siding Installation, Composite Decks, Foundation Underpinning, Home Remodeling
+- **Values:** Dry Rot Repair, Stucco Repair, Siding Installation, Composite Decks, Structural Repairs, Home Remodeling
 
 ### Location Extension (pending)
 Link Google Business Profile in Google Ads → Tools → Business Profile.
@@ -444,7 +444,6 @@ Expand weekly based on Search terms report.
 | Stucco | /lp/exterior-repairs#stucco | ✅ Live |
 | Siding | /lp/exterior-repairs#siding | ✅ Live (unused until Siding ad group activates) |
 | Composite Decks | /lp/composite-decks | ✅ Live |
-| Underpinning | /services/concrete-foundations | ✅ Existing (not optimized as PPC LP) |
 
 All LPs have `noindex, follow` meta robots so they don't compete with /services/* organic rankings.
 
@@ -475,7 +474,7 @@ All LPs have `noindex, follow` meta robots so they don't compete with /services/
 - [ ] If 30+ conversions: switch both campaigns to **Target CPA** bidding
   - Start target: $60 (tune based on actual cost-per-lead)
 - [ ] Reallocate budget from underperforming ad groups to winners
-- [ ] If budget justifies: activate Siding and/or Underpinning ad groups
+- [ ] If budget justifies: activate the Siding ad group
 
 ---
 
