@@ -85,13 +85,13 @@ export const SERVICES: Service[] = [
     name: "Structural Repairs",
     slug: "structural-repairs",
     shortDescription:
-      "Underpinning, sagging floors, and rotted beams — the load path, fixed from the footing up",
+      "Sagging floors, rotted beams, and failing sill plates — the load path, rebuilt and permitted",
     icon: "HardHat",
-    image: "/images/structural-repairs.jpg",
+    image: "/images/structural-repairs-shoring.jpg",
     metaTitle:
       "Structural Repairs in the San Francisco Bay Area | Gadget Construction",
     metaDescription:
-      "Bay Area structural repair contractor. Underpinning, sagging floors, beam & sill plate replacement, load-bearing wall removal. 31 cities. CA Lic #1132983.",
+      "Bay Area structural repair contractor. Sagging floors, joist & beam replacement, sill plates, load-bearing wall removal. 31 cities. CA Lic #1132983.",
   },
   {
     name: "Exterior Repairs",

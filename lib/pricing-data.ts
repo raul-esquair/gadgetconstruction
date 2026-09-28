@@ -70,7 +70,6 @@ export const SERVICE_PRICING: Record<string, { service: string; range: string; n
     { service: "Termite / Water-Damaged Framing", range: "$2,500–$15,000", note: "Studs, rim joists, subfloor — scoped from your pest report" },
     { service: "Load-Bearing Wall Removal", range: "$10,000–$35,000", note: "Engineering, permit, beam, posts, and finish patch" },
     { service: "House-Over-Garage Moment Frame", range: "$25,000–$75,000", note: "Engineered steel frame at the garage opening" },
-    { service: "Foundation Underpinning (per pier)", range: "$2,000–$4,500", note: "Push or helical piers; most homes need 4–16" },
-    { service: "Typical Underpinning Project", range: "$15,000–$50,000+", note: "Piers, engineering, and permit" },
+    { service: "Cripple Wall Bracing & Foundation Bolting", range: "$4,000–$12,000", note: "Mudsill anchors and plywood shear panels in the crawlspace" },
   ],
 };

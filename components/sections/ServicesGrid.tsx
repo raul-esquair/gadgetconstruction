@@ -26,7 +26,7 @@ const BENTO_LAYOUT = [
 const SERVICE_IMAGE_ALT: Record<string, string> = {
   "concrete-foundations": "Construction workers pouring wet concrete into a rebar-reinforced foundation form on a Bay Area job site",
   "complete-remodel": "Complete home remodel project by Gadget Construction in the San Francisco Bay Area",
-  "structural-repairs": "Worker setting rebar beneath an existing concrete footing during a structural repair by Gadget Construction",
+  "structural-repairs": "Temporary shoring posts on hydraulic jacks carrying a Bay Area home while Gadget Construction replaces a failed beam",
   "composite-decks": "Composite deck building and installation by Gadget Construction",
   "retaining-walls": "Retaining wall construction by Gadget Construction in the Bay Area",
   "exterior-repairs": "Dry rot, stucco, and siding exterior repair by Gadget Construction on a Bay Area home",

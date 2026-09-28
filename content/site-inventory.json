@@ -81,7 +81,7 @@
     "url": "/services/structural-repairs",
     "type": "service",
     "title": "Structural Repairs",
-    "summary": "Underpinning, sagging floors, and rotted beams — the load path, fixed from the footing up",
+    "summary": "Sagging floors, rotted beams, and failing sill plates — the load path, rebuilt and permitted",
     "tags": [
       "structural-repairs"
     ]
@@ -437,16 +437,6 @@
     ]
   },
   {
-    "url": "/blog/how-long-does-foundation-underpinning-take-san-francisco",
-    "type": "blog",
-    "title": "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
-    "summary": "Foundation underpinning in San Francisco typically takes 6–16 weeks from engineering to final inspection — but the timeline splits into 5 phases most contractors don't explain. Here's what to actually expect.",
-    "tags": [
-      "concrete-foundations",
-      "blog"
-    ]
-  },
-  {
     "url": "/blog/hardie-board-installation-cost-bay-area-2026",
     "type": "blog",
     "title": "James Hardie Installation Cost in the Bay Area (2026): Real Numbers from 500+ Projects",
@@ -513,16 +503,6 @@
     "summary": "Fog, salt air, and fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare — including failure patterns we see every week.",
     "tags": [
       "exterior-repairs",
-      "blog"
-    ]
-  },
-  {
-    "url": "/blog/foundation-underpinning-cost-san-francisco",
-    "type": "blog",
-    "title": "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
-    "summary": "Foundation underpinning in San Francisco typically costs $15,000 to $50,000+. The method matters more than the price. Here's how helical piers, push piers, and slabjacking compare — with real SF soil conditions in mind.",
-    "tags": [
-      "concrete-foundations",
       "blog"
     ]
   },
