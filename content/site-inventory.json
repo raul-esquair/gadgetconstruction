@@ -81,7 +81,7 @@
     "url": "/services/structural-repairs",
     "type": "service",
     "title": "Structural Repairs",
-    "summary": "Underpinning, sagging floors, and rotted beams — the load path, fixed from the footing up",
+    "summary": "Sagging floors, rotted beams, and failing sill plates — the load path, rebuilt and permitted",
     "tags": [
       "structural-repairs"
     ]
@@ -437,12 +437,12 @@
     ]
   },
   {
-    "url": "/blog/how-long-does-foundation-underpinning-take-san-francisco",
+    "url": "/blog/composite-deck-permits-bay-area-sf-marin-east-bay",
     "type": "blog",
-    "title": "How Long Does Foundation Underpinning Take in San Francisco? A Real Timeline",
-    "summary": "Foundation underpinning in San Francisco typically takes 6–16 weeks from engineering to final inspection — but the timeline splits into 5 phases most contractors don't explain. Here's what to actually expect.",
+    "title": "Do You Need a Permit for a Composite Deck in the Bay Area? (SF, Marin, East Bay)",
+    "summary": "Most Bay Area cities require a permit for any deck over 30 inches above grade — but the rules and timelines differ by jurisdiction. Here's what's required in SF, Marin, Oakland, Berkeley, and the Peninsula.",
     "tags": [
-      "concrete-foundations",
+      "composite-decks",
       "blog"
     ]
   },
@@ -513,16 +513,6 @@
     "summary": "Fog, salt air, and fire zones make the Bay Area uniquely hard on exterior siding. Here's how stucco, Hardie board, and wood siding actually compare — including failure patterns we see every week.",
     "tags": [
       "exterior-repairs",
-      "blog"
-    ]
-  },
-  {
-    "url": "/blog/foundation-underpinning-cost-san-francisco",
-    "type": "blog",
-    "title": "Foundation Underpinning Cost in SF: Helical Piers vs Push Piers vs Slabjacking",
-    "summary": "Foundation underpinning in San Francisco typically costs $15,000 to $50,000+. The method matters more than the price. Here's how helical piers, push piers, and slabjacking compare — with real SF soil conditions in mind.",
-    "tags": [
-      "concrete-foundations",
       "blog"
     ]
   },

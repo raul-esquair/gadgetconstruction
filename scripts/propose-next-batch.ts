@@ -230,7 +230,7 @@ async function callClaudeForProposal(ctx: {
 }): Promise<Proposal> {
   const system = `You are a senior SEO content strategist proposing the next batch of blog posts for Gadget Construction — a Class B general contractor serving 31 Bay Area cities across 6 counties. CA Lic #1132983.
 
-Your job: propose ${BATCH_SIZE} blog briefs that will maximize organic traffic and lead generation for their 5 target services (composite decks, foundation underpinning, stucco repair, siding, dry rot repair).
+Your job: propose ${BATCH_SIZE} blog briefs that will maximize organic traffic and lead generation for their 5 target services (composite decks, structural repairs, stucco repair, siding, dry rot repair).
 
 <style_guide>
 ${ctx.style}
@@ -272,6 +272,11 @@ This site optimizes for answer-engine citation (ChatGPT, Perplexity, Google AI O
 - Assign scheduled dates from the list provided (one date per brief, in order).
 - For "refresh" action briefs, include refreshesSlug pointing to the existing post.
 - Do NOT duplicate keywords or angles already covered in queue or published posts.
+- **Retired services — never propose a brief about them, whatever GSC shows:** roofing, ADU /
+  garage conversion / JADU, and foundation underpinning or piering (dropped Sept 2026 at the
+  client's direction). The site ranked for all three, so their queries will still appear in the
+  data — ignore them. Structural work is pitched as framing, beams, sill plates, bearing-wall
+  removal and seismic retrofit, never as underpinning.
 - Include a "proposalRationale" field on each brief explaining WHY this post wins — cite GSC data, keyword volume, or cluster logic.
 - **metaTitle must be <=60 characters.** It becomes the page's <title>, and Google truncates
   around 60. Lead with the primary keyword and do NOT append "| Gadget Construction Inc." —

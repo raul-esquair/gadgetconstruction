@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      // Underpinning came off the site in Sept 2026 at the client's direction.
+      // Both posts were indexed, so their URLs go to the hub rather than 404.
+      {
+        source: "/blog/foundation-underpinning-cost-san-francisco",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-long-does-foundation-underpinning-take-san-francisco",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 };

@@ -34,13 +34,10 @@ export const SERVICE_GUIDES: Record<string, string[]> = {
     "composite-vs-wood-decking-bay-area-2026", // material comparison
   ],
   "concrete-foundations": [
-    "foundation-underpinning-cost-san-francisco", // cost — commercial
     "foundation-repair-signs-san-francisco", // diagnosis
   ],
   "complete-remodel": ["home-remodel-cost-san-francisco-2026"], // cost — commercial
   "structural-repairs": [
-    "foundation-underpinning-cost-san-francisco", // cost — commercial (the page's FAQ stays diagnostic so the two don't compete)
-    "how-long-does-foundation-underpinning-take-san-francisco", // timeline
     "dry-rot-bay-area-homes-spot-repair-cost", // when rot reaches joists and sills
     "foundation-repair-signs-san-francisco", // foundation vs. framing diagnosis
   ],

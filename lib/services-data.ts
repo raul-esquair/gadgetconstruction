@@ -755,7 +755,7 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       paragraphs: [
         "You feel it before you see it. The hallway dips toward the middle. A marble rolls to one corner of the kitchen. A door that closed fine five years ago now drags on the floor. Or the pest inspector on your sale came back with a Section 1 list — rotted sill plate, termite-eaten joists, a girder split along its length — and your escrow has a deadline.",
         "Most Bay Area homes were framed long before anyone wrote a modern seismic code. Victorians and Edwardians in SF, Craftsman bungalows in Berkeley and Oakland, Doelgers stacked over garages in the Sunset and Daly City, post-and-beam Eichlers and 1950s ranches down the Peninsula and into the South Bay. Decades of fog, slow plumbing leaks, subterranean termites, and a few serious earthquakes have worked on that wood. The damage sits where you don't look: in the crawlspace, behind the drywall, under the subfloor.",
-        "Structural repair isn't a patch job. We shore the house, cut out the wood that stopped carrying its load, and rebuild the load path — underpinned footings, sistered joists, new girders and posts, pressure-treated sill plates, engineered beams — built to a licensed structural engineer's stamped design whenever the work calls for one. We pull the permit, pass the inspections, and back it with a 5-year workmanship warranty in writing. 12+ years, 500+ projects, 31 cities across 6 counties.",
+        "Structural repair isn't a patch job. We shore the house, cut out the wood that stopped carrying its load, and rebuild the load path — sistered joists, new girders and posts, pressure-treated sill plates, engineered beams — built to a licensed structural engineer's stamped design whenever the work calls for one. We pull the permit, pass the inspections, and back it with a 5-year workmanship warranty in writing. 12+ years, 500+ projects, 31 cities across 6 counties.",
       ],
     },
     scope: {
@@ -763,11 +763,6 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
       description:
         "Every job starts under the house or behind the wall. We find what's actually carrying the load — and what stopped carrying it — before we price anything.",
       items: [
-        {
-          title: "Foundation Underpinning",
-          description:
-            "When a footing has settled, we carry it down to soil that won't move — helical or push piers, or new concrete poured beneath the old footing — then stabilize or lift the house above it.",
-        },
         {
           title: "Sagging Floor & Joist Repair",
           description:
@@ -787,6 +782,11 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           title: "Load-Bearing Wall Removal",
           description:
             "Open the kitchen to the living room without losing what held the second floor up. Engineered beam, posts carried down to footings that can take the load, fully permitted.",
+        },
+        {
+          title: "Cripple Wall Bracing & Foundation Bolting",
+          description:
+            "The short walls between your foundation and your first floor are what slide in an earthquake. We anchor the mudsill to the concrete and sheathe those walls in plywood, with hold-downs where the engineer calls for them.",
         },
         {
           title: "House-Over-Garage Strengthening",
@@ -865,9 +865,9 @@ export const SERVICE_PAGES: Record<string, ServicePageData> = {
           "It can be either, and guessing wrong is expensive. If the floor dips in the middle of a room while the edges stay level, it's usually framing — an over-spanned joist, a failed girder, or a post that's rotted or sunk. If a whole side of the house has dropped, with diagonal cracks at the corners of doors and windows and cracked concrete below, the foundation is the more likely cause. We check both on the same visit, and we repair both, so there's no reason for us to sell you the wrong one.",
       },
       {
-        question: "Do I need underpinning, or just new posts and piers?",
+        question: "Can you bolt my house to its foundation and brace the cripple walls?",
         answer:
-          "It depends on what's moving. New posts and piers fix a floor that sags between its supports while the perimeter foundation stays put. Underpinning is for when the footing itself has settled — a whole corner or side has dropped, cracks run diagonally from the corners of doors and windows, and the concrete below is cracked or out of level. We carry the footing down to stable soil with helical or push piers ($2,000–$4,500 per pier; most homes need 4–16) or new concrete poured beneath it. A typical project runs $15,000–$50,000+ with engineering and permit, and takes 1–3 weeks on site once the permit is issued.",
+          "Yes — it's the most common seismic retrofit on a Bay Area house, and it's the same crawlspace work as a sill plate repair. We anchor the mudsill to the concrete, sheathe the short cripple walls between the foundation and the first floor in plywood, and add hold-downs and vents where the engineer's design calls for them. On a typical single-family home it runs $4,000–$12,000 and takes 3–7 days on site. If the mudsill is rotted or termite-eaten, it gets replaced first — bolting damaged wood to concrete buys you nothing.",
       },
       {
         question: "Can you fix the Section 1 items on my pest report before escrow closes?",
