@@ -1,0 +1,53 @@
+# Esquair hub proxy.
+#
+# The dashboard, the review feedback page and the unsubscribe page are served
+# by the Esquair hub, proxied from Netlify's CDN. The marketing site is
+# unaffected: if the hub is down, these three paths go down and every other
+# page keeps serving.
+#
+# `status = 200` proxies rather than redirecting, so the customer's address
+# bar keeps saying gadgetconstructionsf.com.
+#
+# `force = true` is what makes these win over the site's own routes — this
+# repo still contains the old /dashboard, /feedback and /unsubscribe pages,
+# and without `force` Next.js would keep answering them.
+#
+# `signed` names the environment variable holding this site's own secret.
+# Netlify signs every proxied request with it, and the hub verifies that
+# signature to know which client the request belongs to — it can't use the
+# hostname, because behind a proxy it only ever sees its own. The value is
+# set from the hub repo with `npm run site:proxy-secret` and is unique to
+# this site, so it can't sign for anyone else's.
+#
+# No [build] section on purpose: the build settings live in the Netlify UI
+# and this file is additive.
+
+[[redirects]]
+  from = "/dashboard"
+  to = "https://esquair-crm.vercel.app/dashboard"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
+
+[[redirects]]
+  from = "/dashboard/*"
+  to = "https://esquair-crm.vercel.app/dashboard/:splat"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
+
+# Customer-facing, and deliberately at the site root rather than under
+# /dashboard: review emails link here, so the address must not change.
+[[redirects]]
+  from = "/feedback"
+  to = "https://esquair-crm.vercel.app/dashboard/feedback"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
+
+[[redirects]]
+  from = "/unsubscribe"
+  to = "https://esquair-crm.vercel.app/dashboard/unsubscribe"
+  status = 200
+  force = true
+  signed = "ESQUAIR_HUB_SIGNING_SECRET"
