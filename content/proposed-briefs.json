@@ -1,1 +1,551 @@
-[]
+[
+  {
+    "slug": "composite-deck-cost-san-francisco",
+    "scheduledDate": "2026-10-13",
+    "status": "proposed",
+    "action": "refresh",
+    "refreshesSlug": "composite-deck-cost-san-francisco",
+    "title": "Composite Deck Cost in San Francisco: Real 2026 Numbers from 500+ Bay Area Projects",
+    "metaTitle": "Composite Deck Cost San Francisco 2026 (Real Numbers)",
+    "excerpt": "Composite decks in San Francisco run $15,000–$60,000+ in 2026. Here's the real cost breakdown by size, slope, and material — from 500+ Bay Area projects, with the hidden line items most contractors leave out of the bid.",
+    "primaryKeyword": "composite deck cost san francisco",
+    "secondaryKeywords": [
+      "composite deck pricing bay area",
+      "trex deck cost san francisco",
+      "composite deck cost per square foot bay area",
+      "how much does a composite deck cost in sf"
+    ],
+    "relatedService": "composite-decks",
+    "targetWordCount": 2500,
+    "geoFocus": "SF-anchored",
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Bernal Heights",
+      "Twin Peaks",
+      "Sunset"
+    ],
+    "proposalRationale": "GSC shows this post pulling 472 impressions in 90 days at avg position 6.1 with ZERO clicks. That's the textbook impressions-no-clicks pattern — the title/meta aren't earning the click despite ranking page 1. The post has been live since April and should be rewritten with 2026 numbers, question-form H2s for AI Overview extraction, and a tighter metaTitle. Also need to add FAQ block (currently missing) since AI Overview appearance is likely the source of many of the 472 impressions. Refresh > new because the URL is already ranked and respelling the title/meta/schema is the fastest click lift available in the account.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Composite Decks Cost in San Francisco in 2026",
+        "notes": "Rebuild the opener with sharper numbers and standalone sentences AI engines can extract. Three-tier range + per-sq-ft math upfront."
+      },
+      {
+        "h2": "How Much Does a Composite Deck Cost per Square Foot in San Francisco?",
+        "h3": [
+          "Entry-Level Composite ($45–$65/sq ft installed)",
+          "Mid-Range Composite ($65–$95/sq ft installed)",
+          "Premium Composite ($95–$140/sq ft installed)"
+        ],
+        "notes": "Question-form H2 matching how homeowners phrase this to ChatGPT. Break down per-sq-ft math by product tier. Reference Trex Enhance / Select / Transcend, TimberTech EDGE / Vintage / Harvest, Fiberon Sanctuary / Concordia / Paramount."
+      },
+      {
+        "h2": "Price Ranges by Project Type",
+        "h3": [
+          "Standard 300 sq ft Deck ($15,000–$35,000)",
+          "Multi-Level Hillside Deck ($35,000–$60,000+)",
+          "Deck with Pergola and Lighting ($25,000–$50,000)",
+          "Railing-Only Replacement ($3,000–$8,000)"
+        ],
+        "notes": "Keep original structure but tighten numbers to 2026 and add neighborhood anchor per tier."
+      },
+      {
+        "h2": "What Drives Composite Deck Costs Up in San Francisco?",
+        "h3": [
+          "Material Tier (Trex, TimberTech, Fiberon)",
+          "Site Access on Steep SF Streets",
+          "Structural Requirements for Decks Over 30 Inches",
+          "SF DBI Permits and Structural Advisory Review",
+          "Add-Ons: Pergolas, LED Lighting, Fire Features"
+        ],
+        "notes": "Question-form H2. Each sub with specific dollar impact. Cross-link to the permit post."
+      },
+      {
+        "h2": "Hidden Costs Most SF Deck Contractors Don't Itemize",
+        "notes": "Dry rot discovery at ledger (10-15% contingency), undersized footings requiring upgrade, electrical for lighting ($800-$2,500), gas lines for fire features, HOA review fees, demolition of existing deck ($3-$6/sq ft), lead paint testing on pre-1978 homes."
+      },
+      {
+        "h2": "Real SF Project Examples (2026)",
+        "notes": "Three concrete examples with line-item breakdowns. 320 sq ft Trex Enhance in Noe Valley flat lot ($22,000); 600 sq ft TimberTech multi-level in Bernal Heights hillside ($48,000); 450 sq ft Fiberon deck with pergola + LED in Sunset ($39,000)."
+      },
+      {
+        "h2": "How to Budget for Your SF Composite Deck",
+        "notes": "10-15% contingency, apples-to-apples bid comparison framework, red flags in bids (no demo line, no permit line, 'allowance' for dry rot without number)."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block with the 6 questions listed in mustInclude."
+      },
+      {
+        "h2": "Ready to Get a Real Number on Your SF Deck?",
+        "notes": "CTA — fixed-price itemized estimates after free site visit."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular (these mirror how real users phrase queries to ChatGPT, Perplexity, and Google AI Overviews): 'How much does a composite deck cost in San Francisco in 2026?', 'What's the cheapest composite deck brand that still lasts?', 'Do I need a permit for a composite deck in SF?', 'How much more does a hillside deck cost than a flat lot deck in SF?', 'Is Trex or TimberTech better for the SF Sunset fog belt?', 'How long does a composite deck take to build in San Francisco?', 'Can I replace just the deck boards and keep the old frame?'",
+      "Define SF Department of Building Inspection (DBI) as a standalone quotable sentence on first use: 'The San Francisco Department of Building Inspection (DBI) is the city agency that reviews, permits, and inspects all construction work in San Francisco, including any deck over 30 inches above grade.'",
+      "Define capped composite as a standalone sentence: 'Capped composite decking is a composite board (recycled wood fiber + plastic) wrapped in a protective polymer shell that prevents moisture absorption, fading, and staining — the industry standard for Bay Area installations since 2013.'",
+      "Define California Residential Code (CRC) Section R105.2 as standalone sentence: 'California Residential Code Section R105.2 sets the statewide threshold that any deck over 30 inches above grade at any point requires a building permit.'",
+      "Reference SF Department of Building Inspection (DBI) by full name when citing permit requirements.",
+      "Reference California Residential Code Sections R105.2 (permit threshold) and R507 (deck construction) by name.",
+      "Stat callout as standalone sentence: 'Composite decks in San Francisco cost $15,000 to $60,000+ installed in 2026, with most 300 sq ft projects falling between $15,000 and $35,000.'",
+      "Stat callout as standalone sentence: 'Composite decking in San Francisco costs $45 to $140 per square foot installed in 2026 depending on product tier, site access, and structural requirements.'",
+      "Stat callout as standalone sentence: 'Hillside composite decks in San Francisco cost 30–60% more than flat-lot decks of the same size due to drilled pier footings, longer posts, and limited material access.'",
+      "Stat callout as standalone sentence: 'Dry rot discovery at the deck ledger board adds $1,500–$6,000 to roughly 1 in 3 SF deck replacement projects.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context paired with named SF neighborhoods and the service — e.g., 'Gadget Construction installs composite decks across San Francisco's Noe Valley, Bernal Heights, Twin Peaks, and the Sunset.'",
+      "Reference CA License #1132983.",
+      "500+ Bay Area projects claim.",
+      "5-year workmanship warranty (in writing) mentioned specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "National pricing averages (always Bay Area 2026 numbers).",
+      "Generic 'depends on your project' hedging without specific dollar impact.",
+      "Treating composite decks as commodity.",
+      "Vague per-sq-ft ranges without product tier."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/composite-decks",
+        "anchor": "composite deck construction in San Francisco"
+      },
+      {
+        "url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026",
+        "anchor": "comparing Trex, TimberTech, and Fiberon"
+      },
+      {
+        "url": "/blog/composite-deck-permits-bay-area-sf-marin-east-bay",
+        "anchor": "SF DBI deck permit requirements"
+      },
+      {
+        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+        "anchor": "hillside deck cost premium"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "dry rot at deck ledger boards"
+      }
+    ],
+    "cta": "Ready to know what your specific SF deck will cost in 2026? Gadget Construction provides detailed, line-item estimates after a free site visit — no allowances, no surprises. CA License #1132983."
+  },
+  {
+    "slug": "structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
+    "scheduledDate": "2026-10-20",
+    "status": "proposed",
+    "action": "new",
+    "title": "Structural Repair Cost in San Francisco: Sagging Floors, Rotted Beams, Failing Sill Plates (2026)",
+    "metaTitle": "Structural Repair Cost San Francisco 2026 | Floors, Beams, Sills",
+    "excerpt": "Sagging floors, rotted beams, and failing sill plates on SF homes typically cost $4,500–$45,000+ to repair in 2026. Here's what each failure actually costs, what causes it, and how to tell what you're dealing with.",
+    "primaryKeyword": "structural repair cost san francisco",
+    "secondaryKeywords": [
+      "sagging floor repair cost",
+      "rotted beam replacement cost bay area",
+      "sill plate replacement san francisco",
+      "sister joist cost"
+    ],
+    "relatedService": "structural-repairs",
+    "targetWordCount": 2700,
+    "geoFocus": "SF-anchored",
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Mission",
+      "Bernal Heights",
+      "Sunset",
+      "Richmond",
+      "Alamo Square"
+    ],
+    "proposalRationale": "Structural Repairs is one of the 5 target services and has ZERO blog coverage — a cluster gap. GSC shows /services/structural-repairs pulling 15 impressions with 0 clicks (position 5.6) with no supporting content. Underpinning queries still rank (357 impressions on the retired underpinning cost post) and need a legitimate replacement destination that stays within the services Gadget actually sells (framing, beams, sill plates, bearing-wall removal, seismic retrofit). High commercial intent — 'structural repair cost' searches convert. Also feeds internal links from the foundation-signs post that currently has no structural repair destination.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Structural Repair Costs in San Francisco in 2026",
+        "notes": "Three-tier range upfront. Localized repair $4,500–$12,000; mid-scope (bearing beam / multi-joist) $12,000–$28,000; major (sill plate + framing + seismic) $28,000–$80,000+. Note SF-specific drivers."
+      },
+      {
+        "h2": "Why Do SF Homes Develop Structural Problems?",
+        "notes": "Question-form H2. Housing era 1900–1950 pre-modern framing standards, expansive clay in Sunset, fill in Marina, sand in Richmond, 1906/1989 seismic exposure, chronic moisture at sill plates from fog belt, undersized original framing."
+      },
+      {
+        "h2": "Sagging Floor Repair in San Francisco",
+        "h3": [
+          "What Causes SF Floors to Sag",
+          "Sister-Joist Repair ($2,500–$8,000)",
+          "Full Joist Replacement ($6,000–$18,000)",
+          "Beam Replacement Under the Floor ($8,000–$25,000)"
+        ],
+        "notes": "Diagnostic by severity. Common SF causes: rotted joist ends at exterior walls, undersized original joists, failed center beam, foundation settlement. Cross-link to foundation signs post."
+      },
+      {
+        "h2": "Rotted Beam Replacement in Bay Area Homes",
+        "h3": [
+          "Dry Rot vs Structural Damage: How to Tell",
+          "Beam Sistering ($3,500–$9,000)",
+          "Full Beam Replacement ($8,000–$22,000)",
+          "Load Transfer and Temporary Shoring"
+        ],
+        "notes": "Specific to garage carrying beams on SF rowhouses, bay window headers, deck ledgers. Fog belt accelerates rot. Reference IRC beam sizing requirements."
+      },
+      {
+        "h2": "Failing Sill Plate Replacement in SF",
+        "h3": [
+          "Why SF Sill Plates Fail (Moisture, Termites, Pre-Code Framing)",
+          "Partial Sill Plate Replacement ($4,500–$12,000)",
+          "Full Perimeter Sill Plate Replacement ($18,000–$45,000)",
+          "Combining Sill Plate Work with Seismic Retrofit"
+        ],
+        "notes": "Pre-1950 SF homes commonly have no anchor bolts; sill plate replacement is often paired with foundation bolting. Reference ABAG / Earthquake Brace + Bolt standards."
+      },
+      {
+        "h2": "Bearing-Wall Removal (Load-Bearing Wall to Beam Conversion)",
+        "notes": "Common SF remodel request — remove wall between kitchen and dining in Edwardian flat. Steel beam $12,000–$28,000, engineered LVL $8,000–$18,000. Requires structural engineer stamp + SF DBI permit."
+      },
+      {
+        "h2": "What Drives SF Structural Repair Costs Up",
+        "h3": [
+          "Structural Engineer Stamp (Required for Load-Bearing Work)",
+          "SF DBI Permit and Plan Review",
+          "Temporary Shoring and Access",
+          "Dry Rot Discovery During Demo",
+          "Historic District Review"
+        ],
+        "notes": "Each with dollar impact. Structural engineer $2K–$6K. DBI plan review 4–12 weeks."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Diagnose Your SF Home's Structural Issue?",
+        "notes": "CTA — free on-site structural assessment with written findings."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How much does it cost to fix a sagging floor in a San Francisco Victorian?', 'What's the difference between sistering a joist and replacing it?', 'How do I know if my beam is rotted or just old?', 'Do I need a structural engineer for sill plate replacement in SF?', 'Can I remove a load-bearing wall in my Edwardian flat?', 'How long does structural repair take in San Francisco?', 'Is sill plate replacement the same as seismic retrofit?'",
+      "Define sill plate as a standalone quotable sentence: 'A sill plate is the horizontal pressure-treated wood member bolted to the top of the foundation that the floor joists and wall framing rest on — the critical connection point between a house and its foundation.'",
+      "Define sister joist as a standalone sentence: 'Sistering a joist means attaching a new structural member alongside a damaged or undersized existing joist to share the load, used when full replacement is impractical.'",
+      "Define Class B license as a standalone sentence: 'A California Class B General Building Contractor license (such as CA License #1132983) authorizes a contractor to perform structural framing, foundation, and multi-trade work on residential and commercial buildings.'",
+      "Define bearing wall as a standalone sentence: 'A bearing wall is any wall that carries structural load from the floors, ceiling, or roof above — removal requires a replacement beam sized by a licensed structural engineer.'",
+      "Reference SF Department of Building Inspection (DBI) by full name for permit requirements on structural work.",
+      "Reference California Building Code (CBC) and California Residential Code (CRC) by name for structural requirements.",
+      "Reference ABAG Earthquake Brace + Bolt program by name for sill plate / seismic retrofit context.",
+      "Stat callout as standalone sentence: 'Structural repair on San Francisco homes costs $4,500–$80,000+ in 2026, depending on scope — from localized joist sistering to full sill plate replacement with seismic retrofit.'",
+      "Stat callout as standalone sentence: 'Sister-joist repair on a sagging San Francisco floor typically costs $2,500–$8,000 per span in 2026, while full joist replacement runs $6,000–$18,000.'",
+      "Stat callout as standalone sentence: 'Full perimeter sill plate replacement on a typical San Francisco rowhouse costs $18,000–$45,000 in 2026 and is almost always combined with foundation bolting.'",
+      "Stat callout as standalone sentence: 'Removing a load-bearing wall in a San Francisco Edwardian flat costs $8,000–$28,000 depending on beam material (engineered LVL vs steel) and requires a structural engineer's stamped drawings.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction performs structural repairs across San Francisco's Noe Valley, Mission, Bernal Heights, and the Sunset and Richmond districts.'",
+      "Reference CA License #1132983 as Class B general building contractor.",
+      "500+ Bay Area projects claim.",
+      "5-year workmanship warranty specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Any mention of underpinning, piering, or pier-and-beam foundation lifting — Gadget does not sell these services.",
+      "Fear-mongering about 'your house could collapse' language.",
+      "National structural repair averages.",
+      "Treating all cracks as structural emergencies.",
+      "Vague 'depends on your project' hedging without dollar impact."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/structural-repairs",
+        "anchor": "SF structural repair services"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "signs your SF home needs structural attention"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "dry rot at structural members"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "stair-step stucco cracks and structural movement"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "structural repair throughout San Francisco"
+      }
+    ],
+    "cta": "Think your SF home has a structural issue? Gadget Construction provides free on-site structural assessments with written findings and photos — not a scare-tactic sales pitch. We'll diagnose the actual failure, coordinate with a licensed structural engineer when needed, and give you a fixed-price estimate. CA License #1132983."
+  },
+  {
+    "slug": "how-to-tell-if-you-have-dry-rot-or-termites-bay-area",
+    "scheduledDate": "2026-10-27",
+    "status": "proposed",
+    "action": "new",
+    "title": "How to Tell If You Have Dry Rot or Termites (Bay Area Homeowner Diagnostic Guide)",
+    "metaTitle": "Dry Rot vs Termites: How to Tell (Bay Area Guide 2026)",
+    "excerpt": "Soft wood on your Bay Area home? It could be dry rot, termites, or both — and they need different fixes. Here's how to tell them apart in 90 seconds, where each hides, and what repair actually costs.",
+    "primaryKeyword": "dry rot vs termites",
+    "secondaryKeywords": [
+      "how to tell if dry rot or termites",
+      "signs of termites bay area",
+      "dry rot or termite damage",
+      "wood damage identification"
+    ],
+    "relatedService": "exterior-repairs",
+    "targetWordCount": 2500,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "Sunset",
+      "Richmond",
+      "Pacifica",
+      "Daly City",
+      "Sausalito",
+      "Mill Valley",
+      "Oakland",
+      "Berkeley",
+      "Alameda"
+    ],
+    "proposalRationale": "GSC shows the dry-rot post pulling 1,146 impressions in 90 days (position 9.7, 12 clicks) — the top-performing exterior-repairs post. 'Dry rot vs termites' is one of the top related queries real homeowners ask ChatGPT and Perplexity when diagnosing wood damage, and it has no dedicated page in the queue. This is a classic AEO play: a diagnostic / comparison query with high AI engine extraction potential (standalone sentences differentiating the two problems), high commercial intent (both lead to inspection + repair), and strong internal-link potential to the dry rot post, exterior repairs service, and the coastal repairs post. Fills a cluster gap between dry rot content and the broader exterior-repairs service without duplicating either.",
+    "outline": [
+      {
+        "h2": "The Short Answer: Dry Rot vs Termites in 90 Seconds",
+        "notes": "Lead with the two-sentence differentiator. Dry rot = fungal, cubical/cracked wood, musty smell, no insects visible. Termites = insect damage, hollow sound, mud tubes, visible wings or frass. Both common in Bay Area; often co-occur."
+      },
+      {
+        "h2": "What's Dry Rot and What Are Termites? (The 60-Second Biology)",
+        "notes": "Short primer. Dry rot = wood-decay fungi needing 20%+ moisture content. Termites = insects (subterranean + drywood species common in Bay Area). Both eat wood but by different mechanisms."
+      },
+      {
+        "h2": "How to Tell Dry Rot and Termite Damage Apart",
+        "h3": [
+          "Visual Pattern: Cubical Cracking vs Hollow Galleries",
+          "Smell: Musty vs No Odor",
+          "Debris: Fungal Strands vs Frass (Insect Pellets)",
+          "Mud Tubes and Wings: Termite Dead Giveaways",
+          "The Screwdriver Test (Works for Both)"
+        ],
+        "notes": "Diagnostic grid. Specific tells for each. Frass looks like coffee grounds / sawdust pellets. Mud tubes = subterranean termites. Discarded wings near windows = swarming drywood termites."
+      },
+      {
+        "h2": "Where Each Hides in Bay Area Homes",
+        "h3": [
+          "Dry Rot Hotspots: Fog Belt Window Sills, Deck Ledgers, Bay Window Bases",
+          "Subterranean Termite Hotspots: Foundation-Adjacent Wood, Crawl Space, Earth-to-Wood Contact",
+          "Drywood Termite Hotspots: Attic Rafters, Fascia, Door Jambs, Window Frames"
+        ],
+        "notes": "Hyper-local. Subterranean termites in East Bay and Peninsula clay soils. Drywood termites throughout. Dry rot concentrated in coastal fog belt (Sunset, Pacifica, Daly City, Sausalito)."
+      },
+      {
+        "h2": "What If You Have Both? (It's Common)",
+        "notes": "Termite-damaged wood with chronic moisture also develops dry rot. Order of operations: pest control treats termites first, then structural contractor removes damaged wood, fixes water source, replaces framing. Explain scope boundary between pest control and general contractor."
+      },
+      {
+        "h2": "What Dry Rot Repair Costs (Our Scope)",
+        "notes": "Localized $800–$2,500; whole-wall $4,000–$12,000; structural $12,000–$30,000+. Cross-link to the dry rot post for depth."
+      },
+      {
+        "h2": "What Termite Damage Repair Costs (After Pest Control Does Their Part)",
+        "notes": "Explicit: pest control treats the infestation ($800–$3,000 typical), then structural repair of damaged framing is our scope. Repair ranges: localized trim/sill $600–$2,000; joist/beam replacement $3,500–$15,000; major structural $15,000–$45,000+."
+      },
+      {
+        "h2": "When to Call a Pest Inspector vs a General Contractor",
+        "notes": "Decision framework. Suspect termites (frass, wings, mud tubes) → pest inspector first. Suspect dry rot (musty smell, fungal strands, soft wood near water source) → general contractor. Both → sequence pest first, then structural."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Diagnose What's Actually Eating Your Wood?",
+        "notes": "CTA — free exterior assessment with written findings and photos."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How can I tell if I have dry rot or termites in my Bay Area home?', 'Do dry rot and termites look the same?', 'Can you have dry rot and termites at the same time?', 'Who do I call first — a pest inspector or a contractor?', 'How much does termite damage repair cost in San Francisco?', 'Are drywood or subterranean termites more common in the Bay Area?', 'Does Gadget Construction do termite treatment?'",
+      "Define dry rot as a standalone quotable sentence: 'Dry rot is wood decay caused by specific fungi (including Serpula lacrymans and Meruliporia incrassata) that consume wood when moisture content stays above 20% — the 'dry' in the name refers to the crumbly appearance of the damaged wood, not the required conditions.'",
+      "Define subterranean termites as a standalone sentence: 'Subterranean termites are soil-dwelling insects (primarily Reticulitermes hesperus in the Bay Area) that build mud tubes from the ground to reach wood, and are the most common structural pest in Bay Area homes with crawl spaces or earth-to-wood contact.'",
+      "Define drywood termites as a standalone sentence: 'Drywood termites (primarily Incisitermes minor in the Bay Area) nest directly inside dry wood without soil contact, commonly infesting attic rafters, fascia boards, and door frames — identified by small piles of hexagonal fecal pellets called frass.'",
+      "Define frass as a standalone sentence: 'Frass is the hexagonal, coffee-ground-like fecal pellets drywood termites push out of their galleries, often found in small piles below infested wood and considered a definitive diagnostic sign.'",
+      "Reference California Structural Pest Control Board by name as the licensing body for termite treatment (clarifying scope boundary with general contractors).",
+      "Stat callout as standalone sentence: 'Dry rot and termite damage frequently co-occur in Bay Area homes because termite-damaged wood retains moisture, creating conditions for fungal decay to establish.'",
+      "Stat callout as standalone sentence: 'Localized dry rot repair in the Bay Area costs $800–$2,500 per affected area in 2026, while whole-wall framing replacement runs $4,000–$12,000.'",
+      "Stat callout as standalone sentence: 'Structural repair of termite-damaged framing in Bay Area homes costs $3,500–$45,000+ in 2026, performed after a licensed pest control operator treats the active infestation.'",
+      "Stat callout as standalone sentence: 'The screwdriver test — pressing a flat-head screwdriver into suspect wood — identifies both dry rot and termite damage: if the tip sinks more than 1/8 inch without splitting the surface, the wood is compromised.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context paired with named Bay Area neighborhoods and the service — e.g., 'Gadget Construction repairs dry rot and termite-damaged framing across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Daly City's Westlake, and Marin's coastal corridor.'",
+      "Explicit scope statement that Gadget Construction performs structural repair of damaged wood but does not perform termite treatment (which requires a California Structural Pest Control Board license).",
+      "Reference CA License #1132983.",
+      "500+ Bay Area projects claim."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Claiming Gadget treats termites (we don't — licensing scope).",
+      "Dismissing either problem as 'not a big deal'.",
+      "Generic national pest statistics without Bay Area context.",
+      "Fear-mongering without diagnostic tools."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area dry rot and structural wood repair"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "full dry rot diagnostic and cost guide"
+      },
+      {
+        "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
+        "anchor": "coastal home repairs that often reveal termite or rot damage"
+      },
+      {
+        "url": "/services/structural-repairs",
+        "anchor": "structural repair of damaged framing"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "Pacifica coastal home inspections"
+      }
+    ],
+    "cta": "Not sure if it's dry rot, termites, or both? Gadget Construction provides free exterior assessments with written photo findings — and we'll tell you honestly if you need a pest inspector before we can do our part. CA License #1132983, Class B general building contractor."
+  },
+  {
+    "slug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "scheduledDate": "2026-11-03",
+    "status": "proposed",
+    "action": "refresh",
+    "refreshesSlug": "stucco-vs-hardie-board-vs-wood-siding-bay-area",
+    "title": "Stucco vs Hardie Board vs Wood Siding: What's Right for Bay Area Homes (2026)",
+    "metaTitle": "Stucco vs Hardie Board vs Wood Siding (Bay Area 2026)",
+    "excerpt": "Fog, salt air, and WUI fire zones make Bay Area siding choices harder than most guides admit. Here's how stucco, Hardie board, and wood siding actually compare in 2026 — with failure patterns we see every week.",
+    "primaryKeyword": "stucco vs hardie board",
+    "secondaryKeywords": [
+      "hardie board vs wood siding",
+      "fiber cement vs stucco bay area",
+      "best siding for bay area homes",
+      "siding comparison san francisco"
+    ],
+    "relatedService": "exterior-repairs",
+    "targetWordCount": 2800,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Mill Valley",
+      "Oakland Hills",
+      "Berkeley Hills",
+      "Pacifica",
+      "Menlo Park",
+      "Palo Alto",
+      "Daly City"
+    ],
+    "proposalRationale": "GSC shows this post is the TOP-performing blog post by impressions: 1,456 impressions, 11 clicks at avg position 9.0 over 90 days. That's a 0.76% CTR — well below where position 9 should be converting. The one branded query that appeared ('full transformation' at position 11) is noise, meaning the post ranks for a long tail of commercial siding comparison queries but isn't earning clicks on them. Refresh target: tighten the metaTitle (currently acceptable but could be sharpened), add a proper FAQ block for AI Overview extraction, add standalone-sentence stat callouts, and add 2026 pricing updates. The post is the single highest-leverage piece of real estate in the content inventory — a 5x CTR lift gets ~50 more clicks/quarter without needing more impressions. Also hardens the siding cluster ahead of Siding ad group activation.",
+    "outline": [
+      {
+        "h2": "The Short Answer: Which Bay Area Homes Should Use Which Siding",
+        "notes": "Keep the original decisive opener but tighten to 3 sentences with named architectural contexts for each material."
+      },
+      {
+        "h2": "Why Is Bay Area Siding Different from Siding Anywhere Else?",
+        "notes": "Question-form H2. Fog = permanent moisture, salt air = fastener/paint corrosion, WUI fire zones = Chapter 7A compliance, wind-driven rain, UV. Any siding must survive all five."
+      },
+      {
+        "h2": "Three-Coat Stucco in the Bay Area",
+        "h3": [
+          "How Three-Coat Stucco Works (Lath, WRB, Scratch, Brown, Finish)",
+          "Why Bay Area Stucco Cracks",
+          "Stucco Cost in 2026: $7–$14/sq ft New, $15K–$35K Full-House Re-Stucco",
+          "When Stucco Is the Right Call"
+        ],
+        "notes": "Keep structure. Update pricing to 2026. Add Doelger failure pattern cross-link."
+      },
+      {
+        "h2": "James Hardie Fiber Cement (Hardie Board)",
+        "h3": [
+          "What Hardie Board Is Actually Made Of",
+          "Class A Fire Rating and WUI Zone Compliance (Chapter 7A)",
+          "Hardie Board Cost in 2026: $14–$22/sq ft Installed",
+          "When Hardie Is the Right Call (80% of Bay Area Homes)"
+        ],
+        "notes": "Expand with 2026 pricing. Reference HZ10 climate zone spec. Cross-link to the Hardie cost post."
+      },
+      {
+        "h2": "Wood Siding (Cedar, Redwood, T1-11, Shingle)",
+        "h3": [
+          "Cedar and Redwood Clapboard",
+          "T1-11 Plywood on Eichler Homes",
+          "Cedar Shake and Shingle",
+          "Wood Siding Cost in 2026: $8–$25/sq ft Installed",
+          "When Wood Is the Right Call"
+        ],
+        "notes": "Keep architectural context. Update pricing. Reiterate Eichler T1-11 architectural authenticity requirement."
+      },
+      {
+        "h2": "Side-by-Side Comparison Table",
+        "notes": "Clean markdown table: Material / Cost per sq ft / Fire Rating / Fastener Spec / 30-Year Maintenance Cost / Best Architectural Fit / Coastal Verdict."
+      },
+      {
+        "h2": "Which Siding Is Right for Your Specific Bay Area Home?",
+        "notes": "Decision framework by home type and zone. Victorian/Edwardian, Eichler, Doelger, WUI fire zone, coastal, modern. Each with named neighborhoods."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block — the critical AEO addition this refresh needs."
+      },
+      {
+        "h2": "Ready to Choose the Right Siding for Your Bay Area Home?",
+        "notes": "CTA — Gadget installs all three; free assessment factoring fire zone + coastal exposure."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular (these mirror how real users phrase queries to ChatGPT, Perplexity, and Google AI Overviews): 'Is Hardie board better than stucco for Bay Area homes?', 'Can I put Hardie board over existing stucco?', 'What siding is required in WUI fire zones in Marin and the Oakland Hills?', 'Is stucco still a good choice for homes in the SF Sunset?', 'What siding should I use on my Eichler home?', 'How much more does Hardie board cost than stucco in San Francisco?', 'Does wood siding last in Pacifica or Sausalito salt air?'",
+      "Define WUI (wildland-urban interface) zone as a standalone quotable sentence: 'A wildland-urban interface (WUI) zone is a geographic area where structures meet or intermingle with undeveloped wildland vegetation, requiring compliance with California Building Code Chapter 7A fire-resistant construction standards — including most of Marin County, the Oakland and Berkeley Hills, and Peninsula hills above roughly 500 feet.'",
+      "Define James Hardie fiber cement as a standalone sentence: 'James Hardie fiber cement siding is a composite cladding made from Portland cement, silica sand, and cellulose fiber, carrying a Class A fire rating and 30-year substrate warranty when installed to manufacturer specifications.'",
+      "Define three-coat stucco as a standalone sentence: 'Three-coat stucco is a traditional exterior cladding system applied in three successive layers (scratch coat, brown coat, and finish coat) over wire lath and a weather-resistive barrier, totaling roughly 7/8 inch of cementitious material.'",
+      "Define weather-resistive barrier (WRB) as a standalone sentence: 'A weather-resistive barrier (WRB) is the water-shedding membrane installed between the exterior sheathing and the cladding, required by the California Residential Code to prevent water intrusion into the wall assembly.'",
+      "Define HZ10 as standalone sentence: 'HZ10 is James Hardie's product classification for climate zones with humidity, seismic activity, and coastal salt exposure — the required specification for all Bay Area installations.'",
+      "Reference California Building Code Chapter 7A by name for WUI zone requirements.",
+      "Reference California Residential Code Sections R703 (exterior covering) by name.",
+      "Reference SF Department of Building Inspection (DBI), Oakland Planning & Building Department, and Marin Community Development Agency (CDA) by full names for jurisdictional permit context.",
+      "Reference James Hardie Best Practices Installation Guide by name for fastener spacing requirements.",
+      "Stat callout as standalone sentence: 'James Hardie fiber cement siding costs $14–$22 per square foot installed in the Bay Area in 2026, while three-coat stucco runs $7–$14 per square foot new construction and cedar clapboard runs $10–$16 per square foot.'",
+      "Stat callout as standalone sentence: 'California Building Code Chapter 7A requires non-combustible or ignition-resistant exterior cladding in designated wildland-urban interface zones, which includes most of Marin County and the Oakland and Berkeley Hills.'",
+      "Stat callout as standalone sentence: 'Coastal Bay Area Hardie installations require 316-grade stainless steel fasteners to prevent corrosion in salt-air environments, adding roughly 8–12% to material cost.'",
+      "Stat callout as standalone sentence: 'Eichler homes originally clad in T1-11 plywood siding should be re-sided with T1-11 to preserve architectural integrity, as fiber cement and stucco visually break the midcentury post-and-beam facade.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction installs stucco, James Hardie fiber cement, and wood siding across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Mill Valley's WUI corridor, and Palo Alto's Eichler tracts.'",
+      "Reference CA License #1132983.",
+      "500+ Bay Area projects claim.",
+      "5-year workmanship warranty specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Dismissing stucco as 'outdated' (it's correct for many SF homes).",
+      "Claiming Hardie is perfect (it dents, it's heavy, it requires specific fastener spec).",
+      "Ignoring architectural context in the recommendation framework.",
+      "National siding averages instead of Bay Area 2026 numbers.",
+      "Vague 'depends on your home' hedging without specific decision criteria."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area stucco and siding installation"
+      },
+      {
+        "url": "/blog/hardie-board-installation-cost-bay-area-2026",
+        "anchor": "full Hardie board cost breakdown"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "when stucco cracks mean re-stucco"
+      },
+      {
+        "url": "/blog/siding-replacement-cost-san-francisco-2026",
+        "anchor": "full-house siding replacement cost"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "WUI fire zone homes in Marin"
+      },
+      {
+        "url": "/service-areas/palo-alto",
+        "anchor": "Eichler homes in Palo Alto"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "Pacifica coastal siding"
+      }
+    ],
+    "cta": "Choosing siding for your Bay Area home? Gadget Construction installs all three — three-coat stucco, James Hardie fiber cement, and wood siding. We'll walk your home, factor in WUI fire zone and coastal exposure, and recommend what's actually right for your architecture and site. CA License #1132983, 500+ Bay Area projects."
+  }
+]
