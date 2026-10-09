@@ -41,6 +41,227 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
+    featuredImage: "/images/blog-structural-repair-cost-san-francisco-sagging-floors-rotted-beams.png",
+    title: "Structural Repair Cost in San Francisco: Sagging Floors, Rotted Beams, Failing Sill Plates (2026)",
+    metaTitle: "Structural Repair Cost San Francisco 2026 | Floors, Beams, Sills",
+    excerpt:
+      "Sagging floors, rotted beams, and failing sill plates on SF homes typically cost $4,500–$45,000+ to repair in 2026. Here's what each failure actually costs, what causes it, and how to tell what you're dealing with.",
+    date: "2026-10-19",
+    readingTime: "16 min read",
+    relatedService: "structural-repairs",
+    faqs: [
+      {
+        "question": "How much does it cost to fix a sagging floor in a San Francisco Victorian?",
+        "answer": "Fixing a sagging floor in a San Francisco Victorian typically costs $4,500–$18,000 in 2026, depending on the cause. Sister-joist repair runs $2,500–$8,000 per span. A failed center beam costs $8,000–$25,000 to replace. Sill plate rot causing perimeter sag is the most expensive origin — partial sill replacement runs $4,500–$12,000, and full perimeter work runs $18,000–$45,000. The diagnostic step determines the repair path and the cost."
+      },
+      {
+        "question": "What's the difference between sistering a joist and replacing it?",
+        "answer": "Sistering a joist means attaching a new structural member alongside the existing damaged or undersized joist to share the load — used when full replacement is impractical. Full replacement removes the old joist entirely. Sister-joist repair costs $2,500–$8,000 per span. Full replacement costs $6,000–$18,000. The choice depends on the condition of the existing joist, crawl space access, and whether the root cause has been resolved."
+      },
+      {
+        "question": "How do I know if my beam is rotted or just old?",
+        "answer": "The probe test is the field diagnostic: press a sharp awl into the wood surface. Sound wood resists; dry-rotted wood yields under light pressure and crumbles. Surface checking and dark discoloration are signs of age, not necessarily structural failure. A beam that probes solid throughout its section is structurally sound. A beam that probes soft within the first quarter-inch of any face needs evaluation. A structural engineer's site visit — typically $300–$600 — provides a definitive answer."
+      },
+      {
+        "question": "Do I need a structural engineer for sill plate replacement in SF?",
+        "answer": "Yes, for most scopes. Partial sill plate replacement on a single wall may be reviewable by SF DBI without a full engineer stamp. Any sill plate work combined with seismic anchor bolting, or covering more than one wall, typically requires engineered drawings per SF DBI's structural review process. If the work qualifies for the ABAG Earthquake Brace + Bolt program, engineer involvement is required for EBB pre-approval. Budget $2,000–$4,500 for structural engineering on a full sill plate scope."
+      },
+      {
+        "question": "Can I remove a load-bearing wall in my Edwardian flat?",
+        "answer": "Yes. Bearing-wall removal in Edwardian flats — the most common open-plan remodel request in the Mission, Richmond, and Alamo Square — is a defined, permittable scope. It requires a structural engineer's stamped drawings, an SF DBI permit, and a contractor with a California Class B license. An engineered LVL beam for a typical flat costs $8,000–$18,000 installed. A steel beam for longer spans runs $12,000–$28,000. SF DBI plan review runs 4–8 weeks."
+      },
+      {
+        "question": "How long does structural repair take in San Francisco?",
+        "answer": "Construction time for most SF structural repairs runs 1–4 weeks. Sister-joist work on a single span takes 3–5 days. Full sill plate replacement on one wall takes 1–2 weeks. Full perimeter sill replacement takes 2–4 weeks. Bearing-wall removal with beam installation takes 1–2 weeks of construction. Add SF DBI permit review time — 4–12 weeks — to every timeline. Total project duration from signed contract to final inspection typically runs 8–16 weeks."
+      },
+      {
+        "question": "Is sill plate replacement the same as seismic retrofit?",
+        "answer": "No — but they frequently overlap. Sill plate replacement addresses rotted or deteriorated wood at the foundation interface. Seismic retrofit adds anchor bolts, cripple-wall bracing, and hold-downs to meet current seismic standards. Many SF homeowners combine both because they share the same crawl space access and anchor-bolt scope, and the ABAG Earthquake Brace + Bolt program provides up to $3,000 in rebates for qualifying seismic work that offsets part of the combined cost."
+      }
+    ],
+    content: `
+## The Short Answer: What Structural Repair Costs in San Francisco in 2026
+
+Structural repair cost in San Francisco runs $4,500–$80,000+ in 2026, depending on scope — from localized joist sistering to full sill plate replacement with seismic retrofit. Localized repairs like sister-joisting a sagging span run $4,500–$12,000. Mid-scope work — replacing a bearing beam or multiple joists — runs $12,000–$28,000. Major structural scopes involving sill plate replacement, seismic retrofit, or bearing-wall removal push $28,000–$80,000+. SF-specific drivers — crawl space access constraints, the SF Department of Building Inspection (DBI) permit process, and chronic fog-belt moisture — push every number above the California average.
+
+If you're seeing a sloping floor in a Noe Valley Victorian, sticking doors in a Mission Edwardian flat, or soft wood at the base of a Sunset rowhouse wall, this guide covers what each failure pattern actually costs and what repair path makes sense. Gadget Construction has diagnosed and repaired structural failures across San Francisco's neighborhoods on 500+ Bay Area projects — the ranges here come from that work, not national databases.
+
+---
+
+## Why Do SF Homes Develop Structural Problems?
+
+San Francisco's housing stock is old, and old framing wasn't built for what it's been put through. Most SF structural problems — sagging floors, rotted beams, failing sill plates — share one or more of the same root causes.
+
+Most homes in the city were built between 1900 and 1950, under framing standards that predated modern load tables, joist sizing requirements, and moisture management. Original Douglas fir joists were sized for lighter live loads, narrower spans, and a construction era where crawl space ventilation wasn't an engineered requirement. Decades of use, remodel, and deferred maintenance have pushed many of those members past their original design capacity.
+
+Soil conditions accelerate the problem. Sunset District homes sit on expansive clay that swells and contracts seasonally, placing uneven loads on foundations and the framing above. Marina District homes are on artificial fill — primarily rubble placed after the 1906 earthquake — that behaves erratically under seismic loading. Richmond District homes sit on sand that allows differential settlement. Each soil type creates its own pattern of foundation movement, and that movement telegraphs into the framing above: sloping floors, sticking doors, and cracking at wall-ceiling junctions. For what those warning signs look like in practice, see [signs your SF home needs structural attention](/blog/foundation-repair-signs-san-francisco).
+
+Then there's moisture. The Bay Area fog belt — Sunset, Richmond, Outer Mission, Bernal Heights — keeps crawl space humidity elevated for months at a time. Original redwood and Douglas fir framing holds up well in dry conditions, but sill plates at the foundation interface and joist ends at exterior walls absorb ground moisture and eventually rot. Combine chronic moisture with lateral forces from the 1906 and 1989 Loma Prieta earthquakes, and you have a structural degradation pattern that shows up consistently across SF's pre-war housing stock.
+
+[Stair-step stucco cracks and structural movement](/blog/cracked-stucco-san-francisco-patch-recoat-tear-off) at the exterior walls are often the first visible indicator that framing or foundation movement is underway — worth checking if you've seen recent cracking outside the house.
+
+---
+
+## Sagging Floor Repair in San Francisco
+
+A sagging floor in an SF home is usually one of three things: a localized joist problem, a failed center beam, or foundation settlement transmitting into the framing. The repair cost depends entirely on which failure you're dealing with — and they can look similar from the living room.
+
+### What Causes SF Floors to Sag
+
+Joist ends at exterior walls are the most common failure point in San Francisco's [structural repair](/services/structural-repairs) cases. When sill plates absorb moisture or rot, joist ends bearing on them lose their support and deflect. This shows up as a floor that's lower at the perimeter than at the center — a specific pattern that's easy to misread as a foundation problem. A second common cause is undersized original framing: Edwardian-era joists spanning 14–16 feet at 16-inch centers were often undersized by today's California Residential Code (CRC) standards, and they've been sagging slowly ever since. A failed center beam — the primary carrying member running down the middle of the crawl space — creates a V-shaped sag pattern at the middle of a room, not the perimeter.
+
+[Dry rot at structural members](/blog/dry-rot-bay-area-homes-spot-repair-cost) is the underlying cause in a majority of perimeter-sag cases in Sunset and Bernal Heights homes — the damage at the sill plate telegraphs into the joists above it.
+
+### Sister-Joist Repair ($2,500–$8,000)
+
+Sister-joist repair on a sagging San Francisco floor typically costs $2,500–$8,000 per span in 2026, while full joist replacement runs $6,000–$18,000.
+
+Sistering a joist means attaching a new structural member alongside a damaged or undersized existing joist to share the load, used when full replacement is impractical. In San Francisco crawl spaces — often 18–24 inches of clearance, with plumbing and HVAC competing for space — sistering is frequently the practical choice when the existing joist is deflected but still structurally continuous. A typical sister-joist scope for one sagging span covers 3–5 joists and includes jacking the floor flat, installing full-length dimensional lumber or LVL (laminated veneer lumber — engineered wood manufactured from multiple layers of wood veneers bonded under heat and pressure) alongside each member, and bolting at code-required spacing per CRC R602.7. At $2,500–$8,000 per span, it's significantly cheaper than replacement when access allows.
+
+Sistering doesn't address the underlying cause. If the floor is sagging because joist ends are rotting at the sill plate, sistering without addressing the sill is a temporary fix. Confirm the failure origin before choosing this repair path.
+
+### Full Joist Replacement ($6,000–$18,000)
+
+Full joist replacement is the right call when the existing joist is cracked, split at mid-span, or so deteriorated that sistering won't achieve adequate section. Cost runs $6,000–$18,000 for a single-span scope in SF, depending on joist count, crawl space access, and whether plumbing or electrical needs to be relocated to thread new members in. In Mission District Edwardian flats and Noe Valley Victorians — where original framing often includes diagonal subfloor and mid-span bridging installed around existing mechanical runs — full replacement takes significantly more labor than the square footage suggests.
+
+Full joist replacement always requires temporary shoring to carry the floor load while old members come out. Shoring rental and setup adds $1,200–$2,800 to the scope and should appear as a line item on any legitimate bid.
+
+### Beam Replacement Under the Floor ($8,000–$25,000)
+
+A failed center beam is a different repair category. The beam carries multiple joist spans, so replacing it means shoring every floor bay it supports, removing the old member, and installing a new beam sized per the California Building Code (CBC) span tables for the tributary load it carries. On a typical Sunset District or Richmond District single-family home, that's a 4×10 or 4×12 Douglas fir or equivalent LVL running 20–30 linear feet. Material is the smaller cost — access, shoring, and labor in a constrained SF crawl space drives the number. Budget $8,000–$25,000 depending on beam length, access complexity, and whether pocket repairs are needed at the beam-end bearing points.
+
+---
+
+## Rotted Beam Replacement in Bay Area Homes
+
+Rotted beam replacement is one of the most common [SF structural repair services](/services/structural-repairs) we perform — and it concentrates in specific locations: garage carrying beams over the garage door opening, bay window headers exposed to fog-side weather, and deck ledger beams where flashing has failed. The fog belt accelerates rot at any beam that's intermittently wet — condensation cycles in the Sunset and Richmond are enough to soften untreated Douglas fir in 15–20 years if drainage and flashing details aren't maintained.
+
+### Dry Rot vs. Structural Damage: How to Tell
+
+Dry rot (caused by fungi that consume the cellulose in wood, leaving a brown, crumbly mass) is different from mechanical damage. A probe test — pressing a sharp awl or screwdriver into the wood surface under load — is the field diagnostic. Sound wood resists the probe. Dry-rotted wood yields to light pressure and crumbles. A beam that's surface-checked or discolored but probes solid throughout is old, not compromised. A beam that probes soft within the first quarter-inch of any face needs evaluation for replacement or sistering. Do not assume discoloration equals structural failure. But do not assume a sound-looking surface means the interior is solid — deep rot often hides behind intact exterior fiber.
+
+For a full breakdown of how [dry rot at structural members](/blog/dry-rot-bay-area-homes-spot-repair-cost) progresses and what it costs at each damage stage, the pattern of deterioration determines whether you're in spot-repair or full replacement territory.
+
+### Beam Sistering ($3,500–$9,000)
+
+When a beam is partially rotted — typically at one end where it bears in a pocket — sistering is an option if the mid-span section is structurally sound. A sister beam is installed alongside the original, sized to carry the full load independently per CBC span requirements, and bolted at code-required spacing. Beam sistering on an SF garage carrying beam or bay window header runs $3,500–$9,000 depending on beam size, bearing pocket condition, and access. On garage-level work — where ceiling height and vehicle clearance complicate staging — expect the higher end of that range.
+
+### Full Beam Replacement ($8,000–$22,000)
+
+Full beam replacement is required when rot extends through the mid-span section or when the beam is cracked, split, or has lost section to insect damage. The California Residential Code (CRC) governs minimum beam sizing for residential spans — a replacement beam must meet current CRC dimensions for the load it carries, which often means stepping up in size from the original. On a Noe Valley or Mission rowhouse with a 3-car tandem garage, the carrying beam can span 18–22 feet, requiring engineered LVL or a built-up section with load-path continuity to the posts below. Full rotted beam replacement cost on those Bay Area scopes runs $8,000–$22,000 including shoring, demolition, beam fabrication or procurement, installation, and bearing point repair.
+
+### Load Transfer and Temporary Shoring
+
+Any beam replacement — sistered or full — requires temporary shoring to carry the floor load during the repair. Shoring is not optional and should appear on every bid for this scope. On a 2-story SF rowhouse where the garage beam carries a floor above, shoring must support the floor framing across the full beam span while the old member is removed. Shoring setup, rental, and removal adds $1,500–$3,500 to beam replacement scope and is frequently omitted from lowball bids. Ask specifically: "Is temporary shoring included, and what's the dollar amount?"
+
+---
+
+## Failing Sill Plate Replacement in SF
+
+A sill plate is the horizontal pressure-treated wood member bolted to the top of the foundation that the floor joists and wall framing rest on — the critical connection point between a house and its foundation. In San Francisco, sill plates are the single most common structural failure point on pre-1950 homes, and sill plate replacement cost in SF is often the largest single line item in a structural repair budget.
+
+### Why SF Sill Plates Fail (Moisture, Termites, Pre-Code Framing)
+
+Pre-1950 SF homes almost universally have one of three sill plate problems: active rot from chronic crawl space moisture, termite damage, or the complete absence of anchor bolts connecting the sill to the foundation. Original construction placed sill plates directly on concrete without a moisture barrier — over decades, ground moisture wicks up, the wood softens, and rot or termite colonization follows. By the time a homeowner notices a sill problem — usually via a sloping floor at the perimeter or sticking exterior doors — the damage often extends 4–8 linear feet on the affected wall.
+
+The seismic exposure compounds this. A sill plate with no anchor bolts is a house that can slide off its foundation in a significant earthquake. The 1989 Loma Prieta earthquake demonstrated this pattern repeatedly in the Marina District, where homes on fill soil with unbonded sills suffered disproportionate structural damage.
+
+### Partial Sill Plate Replacement ($4,500–$12,000)
+
+Localized sill replacement — replacing 6–12 linear feet of rotted sill on one wall — runs $4,500–$12,000 in San Francisco in 2026. Scope includes shoring the floor above, removing the damaged section, installing new pressure-treated sill plate with a sill gasket (the foam membrane between the sill and the foundation that blocks moisture migration), anchor bolting at code spacing per CBC Section 2308.3, and reinstalling the floor framing bearing on the new sill. Access constraints in SF crawl spaces drive labor cost — this is not a fast repair, and it's not one where low crawl space clearance is irrelevant to your budget.
+
+### Full Perimeter Sill Plate Replacement ($18,000–$45,000)
+
+Full perimeter sill plate replacement on a typical San Francisco rowhouse costs $18,000–$45,000 in 2026 and is almost always combined with foundation bolting. When rot or termite damage is found on one wall, it's frequently present on others — and the crawl space inspection required to scope partial replacement often reveals the full extent. A full perimeter replacement includes shoring the floor framing around the entire structure, removing and replacing all sill plates, installing sill gaskets, and anchor-bolting to current seismic code standards.
+
+Gadget Construction has performed full perimeter sill plate replacements on Alamo Square Victorians, Bernal Heights cottages, and Sunset District rowhouses — the crawl space conditions and original framing patterns differ by neighborhood, and scoping accurately requires a physical inspection, not a phone estimate.
+
+### Combining Sill Plate Work with Seismic Retrofit
+
+Sill plate replacement and seismic retrofit are naturally paired because they share the same access, shoring, and anchor-bolt scope. The Association of Bay Area Governments (ABAG) Earthquake Brace + Bolt (EBB) program provides rebates of up to $3,000 for qualifying cripple-wall bracing and anchor-bolt work on pre-1980 SF homes — work that directly overlaps with sill plate replacement scope. If you're replacing sill plates, confirm EBB eligibility before the permit is pulled: the program requires pre-approval and a licensed contractor. A California Class B General Building Contractor license (such as CA License #1132983) authorizes a contractor to perform structural framing, foundation, and multi-trade work on residential and commercial buildings — and qualifies for EBB program participation. Combining both scopes avoids a second crawl space mobilization and can reduce total project cost by $3,000–$6,000 compared to doing them separately.
+
+---
+
+## Bearing-Wall Removal (Load-Bearing Wall to Beam Conversion)
+
+Bearing-wall removal is one of the most common structural repair and remodel requests on SF Edwardian flats — and one of the most frequently misquoted scopes in the city. A bearing wall is any wall that carries structural load from the floors, ceiling, or roof above — removal requires a replacement beam sized by a licensed structural engineer. This is achievable work, but the cost and process differ significantly from removing a non-structural partition.
+
+Removing a load-bearing wall in a San Francisco Edwardian flat costs $8,000–$28,000 depending on beam material (engineered LVL vs. steel) and requires a structural engineer's stamped drawings. The wall carries load from above — removing it without a replacement beam means losing that load path entirely. An engineered LVL beam (laminated veneer lumber sized by a structural engineer for the specific span and tributary load) runs $8,000–$18,000 installed, including temporary shoring, new posts at the beam ends, and patch work at floor, ceiling, and wall surfaces. A steel W-flange beam — specified when the span exceeds what LVL can economically achieve, typically 18+ feet — runs $12,000–$28,000 installed, accounting for higher material cost and the crane or rigging typically required to set steel in a rowhouse interior.
+
+Both scopes require a structural engineer's stamped drawings and an SF DBI permit. The San Francisco Department of Building Inspection (DBI) is the city agency that issues permits for structural, mechanical, and exterior work in San Francisco. Plan review for bearing-wall removal at SF DBI runs 4–8 weeks and may require a Structural Advisory Committee review step for multi-unit buildings or complex load paths. The engineer fee runs $2,000–$5,000 before the permit application is submitted. Contractors who quote bearing-wall removal without mentioning an engineer or a DBI permit are not quoting the full scope.
+
+If you're opening up a floor plan as part of a larger project, see our [home remodel cost guide for San Francisco](/blog/home-remodel-cost-san-francisco-2026) for how structural work fits into an overall remodel budget.
+
+---
+
+## What Drives SF Structural Repair Costs Up
+
+Six factors push structural repair cost in San Francisco beyond the baseline. Most contractor bids don't itemize them. They should.
+
+### Structural Engineer Stamp (Required for Load-Bearing Work)
+
+Any repair involving a bearing wall, beam replacement carrying significant load, or sill plate work combined with seismic bracing requires a structural engineer's stamped drawings under both the CBC and the CRC. Engineer fees for SF residential structural work run $2,000–$6,000 depending on scope complexity, and they're due before permit submittal — not contingent on construction proceeding. The engineer provides the design; a licensed Class B contractor executes it.
+
+### SF DBI Permit and Plan Review
+
+The San Francisco Department of Building Inspection (DBI) is the city agency that issues permits for structural, mechanical, and exterior work in San Francisco. Structural repair permits at SF DBI require permit-ready drawings showing framing layout, member sizes, connection details, and load path. SF DBI permit processing for residential structural work currently runs 4–12 weeks. Permit fees for structural framing work run $1,200–$4,500. Unpermitted structural work surfaces as a disclosure obligation at sale — and a retroactive permit for structural work that can't be inspected without partial demo typically requires opening walls or floors for inspection.
+
+### Temporary Shoring and Access
+
+Temporary shoring is a fixed cost of any structural repair involving load-bearing members — not an optional add-on. For crawl space work, shoring adds $1,200–$3,500 per repair scope. SF crawl space constraints (low clearance, plumbing obstacles, no exterior access on zero-lot-line rowhouses) extend labor time significantly versus a comparable repair in a house with full basement access. Access difficulty adds 15–25% to labor cost on many SF structural scopes.
+
+### Dry Rot Discovery During Demo
+
+Structural demo is where the actual condition of a Bay Area home reveals itself. Sill plate work, joist replacement, and beam removal consistently uncover rot extending beyond the initially visible damage. Budget a named discovery allowance — $3,000–$8,000 is realistic on a pre-1950 SF home — rather than accepting a bid that says "dry rot repair as needed" without a dollar figure. That phrase is where surprise invoices are born.
+
+### Historic District Review
+
+Alamo Square, the Haight, and Ashbury Heights include blocks where exterior structural work — visible framing changes, foundation modifications, or exterior wall alterations — may trigger historic district overlay review at SF DBI. Historic review can add $2,000–$6,000 in administrative costs and documentation, and it can extend permit timelines by 2–4 weeks. Confirm overlay zone designation before submitting plans for any project in those neighborhoods.
+
+---
+
+## Frequently Asked Questions
+
+### How much does it cost to fix a sagging floor in a San Francisco Victorian?
+
+Fixing a sagging floor in a San Francisco Victorian typically costs $4,500–$18,000 in 2026, depending on the cause. Sister-joist repair runs $2,500–$8,000 per span. A failed center beam costs $8,000–$25,000 to replace. Sill plate rot causing perimeter sag is the most expensive origin — partial sill replacement runs $4,500–$12,000, and full perimeter work runs $18,000–$45,000. The diagnostic step — confirming which failure you're dealing with — determines the repair path and the cost.
+
+### What's the difference between sistering a joist and replacing it?
+
+Sistering a joist means attaching a new structural member alongside the existing damaged or undersized joist to share the load — used when full replacement is impractical. Full replacement removes the old joist entirely. Sister-joist repair costs $2,500–$8,000 per span. Full replacement costs $6,000–$18,000. The choice depends on the condition of the existing joist, crawl space access, and whether the root cause (rot, settlement) has been resolved before the repair is done.
+
+### How do I know if my beam is rotted or just old?
+
+The probe test is the field diagnostic: press a sharp awl into the wood surface. Sound wood resists; dry-rotted wood yields under light pressure and crumbles. Surface checking (small cracks running along the grain) and dark discoloration are signs of age and moisture exposure, not necessarily structural failure. A beam that probes solid throughout its full section is structurally sound even if it looks old. A beam that probes soft within the first quarter-inch of any face needs evaluation. A structural engineer's site visit — typically $300–$600 — provides a definitive answer.
+
+### Do I need a structural engineer for sill plate replacement in SF?
+
+Yes, for most scopes. Partial sill plate replacement on a single wall may be reviewable by SF DBI without a full engineer stamp, depending on extent. Any sill plate work combined with seismic anchor bolting, or any scope covering more than one wall, typically requires engineered drawings per SF DBI's structural review process. If the work also qualifies for the ABAG Earthquake Brace + Bolt program, engineer involvement is required for EBB pre-approval. Budget $2,000–$4,500 for structural engineering on a full sill plate scope.
+
+### Can I remove a load-bearing wall in my Edwardian flat?
+
+Yes. Bearing-wall removal in Edwardian flats — the most common open-plan remodel request in the Mission, Richmond, and Alamo Square — is a defined, permittable scope. It requires a structural engineer's stamped drawings, an SF DBI permit, and a contractor with a California Class B license to perform the framing work. An engineered LVL beam for a typical flat costs $8,000–$18,000 installed. A steel beam for longer spans runs $12,000–$28,000. SF DBI plan review runs 4–8 weeks.
+
+### How long does structural repair take in San Francisco?
+
+Construction time for most SF structural repairs runs 1–4 weeks, depending on scope. Sister-joist work on a single span takes 3–5 days. Full sill plate replacement on one wall takes 1–2 weeks. Full perimeter sill replacement takes 2–4 weeks. Bearing-wall removal with beam installation takes 1–2 weeks of construction. Add SF DBI permit review time — 4–12 weeks before construction can begin — to every timeline. Total project duration from signed contract to final inspection typically runs 8–16 weeks for permitted structural work.
+
+### Is sill plate replacement the same as seismic retrofit?
+
+No — but they frequently overlap. Sill plate replacement addresses rotted or deteriorated wood at the foundation interface. Seismic retrofit adds anchor bolts, cripple-wall bracing (the short stud-framed wall between the foundation and first floor, common in pre-1950 SF homes), and hold-downs to bring the structure to current seismic resistance standards. Many SF homeowners do both at the same time because they share the same crawl space access and anchor-bolt scope, and the ABAG Earthquake Brace + Bolt program provides up to $3,000 in rebates for qualifying seismic work that can offset part of the combined cost.
+
+---
+
+## Ready to Diagnose Your SF Home's Structural Issue?
+
+Think your SF home has a structural issue? Gadget Construction (CA License #1132983) provides free on-site structural assessments with written findings and photos — not a scare-tactic sales pitch. Gadget Construction performs [structural repair throughout San Francisco](/service-areas/san-francisco), including Noe Valley, Mission, Bernal Heights, Alamo Square, and the Sunset and Richmond districts, backed by 500+ Bay Area projects and a 5-year workmanship warranty in writing on every project.
+
+We'll diagnose the actual failure, coordinate with a licensed structural engineer when the scope requires it, and give you a fixed-price estimate with named allowances for discovery — no vague "as needed" language. Schedule your free on-site assessment through our [SF structural repair services](/services/structural-repairs) page.
+    `.trim(),
+  },
+
+  {
     slug: "composite-deck-permits-bay-area-sf-marin-east-bay",
     featuredImage: "/images/blog-composite-deck-permits-bay-area-sf-marin-east-bay.png",
     title: "Do You Need a Permit for a Composite Deck in the Bay Area? (SF, Marin, East Bay)",
