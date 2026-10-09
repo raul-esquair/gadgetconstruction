@@ -1214,5 +1214,277 @@
       }
     ],
     "cta": "Planning a composite deck? Gadget Construction handles all permit pulling, structural engineer coordination, and inspection scheduling as part of every project — SF DBI, Marin CDA, Oakland Planning & Building, and every Peninsula jurisdiction we serve. Free on-site assessment across 31 Bay Area cities."
+  },
+  {
+    "slug": "structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
+    "scheduledDate": "2026-10-19",
+    "status": "queued",
+    "action": "new",
+    "title": "Structural Repair Cost in San Francisco: Sagging Floors, Rotted Beams, Failing Sill Plates (2026)",
+    "metaTitle": "Structural Repair Cost San Francisco 2026 | Floors, Beams, Sills",
+    "excerpt": "Sagging floors, rotted beams, and failing sill plates on SF homes typically cost $4,500–$45,000+ to repair in 2026. Here's what each failure actually costs, what causes it, and how to tell what you're dealing with.",
+    "primaryKeyword": "structural repair cost san francisco",
+    "secondaryKeywords": [
+      "sagging floor repair cost",
+      "rotted beam replacement cost bay area",
+      "sill plate replacement san francisco",
+      "sister joist cost"
+    ],
+    "relatedService": "structural-repairs",
+    "targetWordCount": 2700,
+    "geoFocus": "SF-anchored",
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Mission",
+      "Bernal Heights",
+      "Sunset",
+      "Richmond",
+      "Alamo Square"
+    ],
+    "proposalRationale": "Structural Repairs is one of the 5 target services and has ZERO blog coverage — a cluster gap. GSC shows /services/structural-repairs pulling 15 impressions with 0 clicks (position 5.6) with no supporting content. Underpinning queries still rank (357 impressions on the retired underpinning cost post) and need a legitimate replacement destination that stays within the services Gadget actually sells (framing, beams, sill plates, bearing-wall removal, seismic retrofit). High commercial intent — 'structural repair cost' searches convert. Also feeds internal links from the foundation-signs post that currently has no structural repair destination.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Structural Repair Costs in San Francisco in 2026",
+        "notes": "Three-tier range upfront. Localized repair $4,500–$12,000; mid-scope (bearing beam / multi-joist) $12,000–$28,000; major (sill plate + framing + seismic) $28,000–$80,000+. Note SF-specific drivers."
+      },
+      {
+        "h2": "Why Do SF Homes Develop Structural Problems?",
+        "notes": "Question-form H2. Housing era 1900–1950 pre-modern framing standards, expansive clay in Sunset, fill in Marina, sand in Richmond, 1906/1989 seismic exposure, chronic moisture at sill plates from fog belt, undersized original framing."
+      },
+      {
+        "h2": "Sagging Floor Repair in San Francisco",
+        "h3": [
+          "What Causes SF Floors to Sag",
+          "Sister-Joist Repair ($2,500–$8,000)",
+          "Full Joist Replacement ($6,000–$18,000)",
+          "Beam Replacement Under the Floor ($8,000–$25,000)"
+        ],
+        "notes": "Diagnostic by severity. Common SF causes: rotted joist ends at exterior walls, undersized original joists, failed center beam, foundation settlement. Cross-link to foundation signs post."
+      },
+      {
+        "h2": "Rotted Beam Replacement in Bay Area Homes",
+        "h3": [
+          "Dry Rot vs Structural Damage: How to Tell",
+          "Beam Sistering ($3,500–$9,000)",
+          "Full Beam Replacement ($8,000–$22,000)",
+          "Load Transfer and Temporary Shoring"
+        ],
+        "notes": "Specific to garage carrying beams on SF rowhouses, bay window headers, deck ledgers. Fog belt accelerates rot. Reference IRC beam sizing requirements."
+      },
+      {
+        "h2": "Failing Sill Plate Replacement in SF",
+        "h3": [
+          "Why SF Sill Plates Fail (Moisture, Termites, Pre-Code Framing)",
+          "Partial Sill Plate Replacement ($4,500–$12,000)",
+          "Full Perimeter Sill Plate Replacement ($18,000–$45,000)",
+          "Combining Sill Plate Work with Seismic Retrofit"
+        ],
+        "notes": "Pre-1950 SF homes commonly have no anchor bolts; sill plate replacement is often paired with foundation bolting. Reference ABAG / Earthquake Brace + Bolt standards."
+      },
+      {
+        "h2": "Bearing-Wall Removal (Load-Bearing Wall to Beam Conversion)",
+        "notes": "Common SF remodel request — remove wall between kitchen and dining in Edwardian flat. Steel beam $12,000–$28,000, engineered LVL $8,000–$18,000. Requires structural engineer stamp + SF DBI permit."
+      },
+      {
+        "h2": "What Drives SF Structural Repair Costs Up",
+        "h3": [
+          "Structural Engineer Stamp (Required for Load-Bearing Work)",
+          "SF DBI Permit and Plan Review",
+          "Temporary Shoring and Access",
+          "Dry Rot Discovery During Demo",
+          "Historic District Review"
+        ],
+        "notes": "Each with dollar impact. Structural engineer $2K–$6K. DBI plan review 4–12 weeks."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Diagnose Your SF Home's Structural Issue?",
+        "notes": "CTA — free on-site structural assessment with written findings."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How much does it cost to fix a sagging floor in a San Francisco Victorian?', 'What's the difference between sistering a joist and replacing it?', 'How do I know if my beam is rotted or just old?', 'Do I need a structural engineer for sill plate replacement in SF?', 'Can I remove a load-bearing wall in my Edwardian flat?', 'How long does structural repair take in San Francisco?', 'Is sill plate replacement the same as seismic retrofit?'",
+      "Define sill plate as a standalone quotable sentence: 'A sill plate is the horizontal pressure-treated wood member bolted to the top of the foundation that the floor joists and wall framing rest on — the critical connection point between a house and its foundation.'",
+      "Define sister joist as a standalone sentence: 'Sistering a joist means attaching a new structural member alongside a damaged or undersized existing joist to share the load, used when full replacement is impractical.'",
+      "Define Class B license as a standalone sentence: 'A California Class B General Building Contractor license (such as CA License #1132983) authorizes a contractor to perform structural framing, foundation, and multi-trade work on residential and commercial buildings.'",
+      "Define bearing wall as a standalone sentence: 'A bearing wall is any wall that carries structural load from the floors, ceiling, or roof above — removal requires a replacement beam sized by a licensed structural engineer.'",
+      "Reference SF Department of Building Inspection (DBI) by full name for permit requirements on structural work.",
+      "Reference California Building Code (CBC) and California Residential Code (CRC) by name for structural requirements.",
+      "Reference ABAG Earthquake Brace + Bolt program by name for sill plate / seismic retrofit context.",
+      "Stat callout as standalone sentence: 'Structural repair on San Francisco homes costs $4,500–$80,000+ in 2026, depending on scope — from localized joist sistering to full sill plate replacement with seismic retrofit.'",
+      "Stat callout as standalone sentence: 'Sister-joist repair on a sagging San Francisco floor typically costs $2,500–$8,000 per span in 2026, while full joist replacement runs $6,000–$18,000.'",
+      "Stat callout as standalone sentence: 'Full perimeter sill plate replacement on a typical San Francisco rowhouse costs $18,000–$45,000 in 2026 and is almost always combined with foundation bolting.'",
+      "Stat callout as standalone sentence: 'Removing a load-bearing wall in a San Francisco Edwardian flat costs $8,000–$28,000 depending on beam material (engineered LVL vs steel) and requires a structural engineer's stamped drawings.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction performs structural repairs across San Francisco's Noe Valley, Mission, Bernal Heights, and the Sunset and Richmond districts.'",
+      "Reference CA License #1132983 as Class B general building contractor.",
+      "500+ Bay Area projects claim.",
+      "5-year workmanship warranty specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Any mention of underpinning, piering, or pier-and-beam foundation lifting — Gadget does not sell these services.",
+      "Fear-mongering about 'your house could collapse' language.",
+      "National structural repair averages.",
+      "Treating all cracks as structural emergencies.",
+      "Vague 'depends on your project' hedging without dollar impact."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/structural-repairs",
+        "anchor": "SF structural repair services"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "signs your SF home needs structural attention"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "dry rot at structural members"
+      },
+      {
+        "url": "/blog/cracked-stucco-san-francisco-patch-recoat-tear-off",
+        "anchor": "stair-step stucco cracks and structural movement"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "structural repair throughout San Francisco"
+      }
+    ],
+    "cta": "Think your SF home has a structural issue? Gadget Construction provides free on-site structural assessments with written findings and photos — not a scare-tactic sales pitch. We'll diagnose the actual failure, coordinate with a licensed structural engineer when needed, and give you a fixed-price estimate. CA License #1132983."
+  },
+  {
+    "slug": "how-to-tell-if-you-have-dry-rot-or-termites-bay-area",
+    "scheduledDate": "2026-10-26",
+    "status": "queued",
+    "action": "new",
+    "title": "How to Tell If You Have Dry Rot or Termites (Bay Area Homeowner Diagnostic Guide)",
+    "metaTitle": "Dry Rot vs Termites: How to Tell (Bay Area Guide 2026)",
+    "excerpt": "Soft wood on your Bay Area home? It could be dry rot, termites, or both — and they need different fixes. Here's how to tell them apart in 90 seconds, where each hides, and what repair actually costs.",
+    "primaryKeyword": "dry rot vs termites",
+    "secondaryKeywords": [
+      "how to tell if dry rot or termites",
+      "signs of termites bay area",
+      "dry rot or termite damage",
+      "wood damage identification"
+    ],
+    "relatedService": "exterior-repairs",
+    "targetWordCount": 2500,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "Sunset",
+      "Richmond",
+      "Pacifica",
+      "Daly City",
+      "Sausalito",
+      "Mill Valley",
+      "Oakland",
+      "Berkeley",
+      "Alameda"
+    ],
+    "proposalRationale": "GSC shows the dry-rot post pulling 1,146 impressions in 90 days (position 9.7, 12 clicks) — the top-performing exterior-repairs post. 'Dry rot vs termites' is one of the top related queries real homeowners ask ChatGPT and Perplexity when diagnosing wood damage, and it has no dedicated page in the queue. This is a classic AEO play: a diagnostic / comparison query with high AI engine extraction potential (standalone sentences differentiating the two problems), high commercial intent (both lead to inspection + repair), and strong internal-link potential to the dry rot post, exterior repairs service, and the coastal repairs post. Fills a cluster gap between dry rot content and the broader exterior-repairs service without duplicating either.",
+    "outline": [
+      {
+        "h2": "The Short Answer: Dry Rot vs Termites in 90 Seconds",
+        "notes": "Lead with the two-sentence differentiator. Dry rot = fungal, cubical/cracked wood, musty smell, no insects visible. Termites = insect damage, hollow sound, mud tubes, visible wings or frass. Both common in Bay Area; often co-occur."
+      },
+      {
+        "h2": "What's Dry Rot and What Are Termites? (The 60-Second Biology)",
+        "notes": "Short primer. Dry rot = wood-decay fungi needing 20%+ moisture content. Termites = insects (subterranean + drywood species common in Bay Area). Both eat wood but by different mechanisms."
+      },
+      {
+        "h2": "How to Tell Dry Rot and Termite Damage Apart",
+        "h3": [
+          "Visual Pattern: Cubical Cracking vs Hollow Galleries",
+          "Smell: Musty vs No Odor",
+          "Debris: Fungal Strands vs Frass (Insect Pellets)",
+          "Mud Tubes and Wings: Termite Dead Giveaways",
+          "The Screwdriver Test (Works for Both)"
+        ],
+        "notes": "Diagnostic grid. Specific tells for each. Frass looks like coffee grounds / sawdust pellets. Mud tubes = subterranean termites. Discarded wings near windows = swarming drywood termites."
+      },
+      {
+        "h2": "Where Each Hides in Bay Area Homes",
+        "h3": [
+          "Dry Rot Hotspots: Fog Belt Window Sills, Deck Ledgers, Bay Window Bases",
+          "Subterranean Termite Hotspots: Foundation-Adjacent Wood, Crawl Space, Earth-to-Wood Contact",
+          "Drywood Termite Hotspots: Attic Rafters, Fascia, Door Jambs, Window Frames"
+        ],
+        "notes": "Hyper-local. Subterranean termites in East Bay and Peninsula clay soils. Drywood termites throughout. Dry rot concentrated in coastal fog belt (Sunset, Pacifica, Daly City, Sausalito)."
+      },
+      {
+        "h2": "What If You Have Both? (It's Common)",
+        "notes": "Termite-damaged wood with chronic moisture also develops dry rot. Order of operations: pest control treats termites first, then structural contractor removes damaged wood, fixes water source, replaces framing. Explain scope boundary between pest control and general contractor."
+      },
+      {
+        "h2": "What Dry Rot Repair Costs (Our Scope)",
+        "notes": "Localized $800–$2,500; whole-wall $4,000–$12,000; structural $12,000–$30,000+. Cross-link to the dry rot post for depth."
+      },
+      {
+        "h2": "What Termite Damage Repair Costs (After Pest Control Does Their Part)",
+        "notes": "Explicit: pest control treats the infestation ($800–$3,000 typical), then structural repair of damaged framing is our scope. Repair ranges: localized trim/sill $600–$2,000; joist/beam replacement $3,500–$15,000; major structural $15,000–$45,000+."
+      },
+      {
+        "h2": "When to Call a Pest Inspector vs a General Contractor",
+        "notes": "Decision framework. Suspect termites (frass, wings, mud tubes) → pest inspector first. Suspect dry rot (musty smell, fungal strands, soft wood near water source) → general contractor. Both → sequence pest first, then structural."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Diagnose What's Actually Eating Your Wood?",
+        "notes": "CTA — free exterior assessment with written findings and photos."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How can I tell if I have dry rot or termites in my Bay Area home?', 'Do dry rot and termites look the same?', 'Can you have dry rot and termites at the same time?', 'Who do I call first — a pest inspector or a contractor?', 'How much does termite damage repair cost in San Francisco?', 'Are drywood or subterranean termites more common in the Bay Area?', 'Does Gadget Construction do termite treatment?'",
+      "Define dry rot as a standalone quotable sentence: 'Dry rot is wood decay caused by specific fungi (including Serpula lacrymans and Meruliporia incrassata) that consume wood when moisture content stays above 20% — the 'dry' in the name refers to the crumbly appearance of the damaged wood, not the required conditions.'",
+      "Define subterranean termites as a standalone sentence: 'Subterranean termites are soil-dwelling insects (primarily Reticulitermes hesperus in the Bay Area) that build mud tubes from the ground to reach wood, and are the most common structural pest in Bay Area homes with crawl spaces or earth-to-wood contact.'",
+      "Define drywood termites as a standalone sentence: 'Drywood termites (primarily Incisitermes minor in the Bay Area) nest directly inside dry wood without soil contact, commonly infesting attic rafters, fascia boards, and door frames — identified by small piles of hexagonal fecal pellets called frass.'",
+      "Define frass as a standalone sentence: 'Frass is the hexagonal, coffee-ground-like fecal pellets drywood termites push out of their galleries, often found in small piles below infested wood and considered a definitive diagnostic sign.'",
+      "Reference California Structural Pest Control Board by name as the licensing body for termite treatment (clarifying scope boundary with general contractors).",
+      "Stat callout as standalone sentence: 'Dry rot and termite damage frequently co-occur in Bay Area homes because termite-damaged wood retains moisture, creating conditions for fungal decay to establish.'",
+      "Stat callout as standalone sentence: 'Localized dry rot repair in the Bay Area costs $800–$2,500 per affected area in 2026, while whole-wall framing replacement runs $4,000–$12,000.'",
+      "Stat callout as standalone sentence: 'Structural repair of termite-damaged framing in Bay Area homes costs $3,500–$45,000+ in 2026, performed after a licensed pest control operator treats the active infestation.'",
+      "Stat callout as standalone sentence: 'The screwdriver test — pressing a flat-head screwdriver into suspect wood — identifies both dry rot and termite damage: if the tip sinks more than 1/8 inch without splitting the surface, the wood is compromised.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context paired with named Bay Area neighborhoods and the service — e.g., 'Gadget Construction repairs dry rot and termite-damaged framing across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Daly City's Westlake, and Marin's coastal corridor.'",
+      "Explicit scope statement that Gadget Construction performs structural repair of damaged wood but does not perform termite treatment (which requires a California Structural Pest Control Board license).",
+      "Reference CA License #1132983.",
+      "500+ Bay Area projects claim."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Claiming Gadget treats termites (we don't — licensing scope).",
+      "Dismissing either problem as 'not a big deal'.",
+      "Generic national pest statistics without Bay Area context.",
+      "Fear-mongering without diagnostic tools."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area dry rot and structural wood repair"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "full dry rot diagnostic and cost guide"
+      },
+      {
+        "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
+        "anchor": "coastal home repairs that often reveal termite or rot damage"
+      },
+      {
+        "url": "/services/structural-repairs",
+        "anchor": "structural repair of damaged framing"
+      },
+      {
+        "url": "/service-areas/pacifica",
+        "anchor": "Pacifica coastal home inspections"
+      }
+    ],
+    "cta": "Not sure if it's dry rot, termites, or both? Gadget Construction provides free exterior assessments with written photo findings — and we'll tell you honestly if you need a pest inspector before we can do our part. CA License #1132983, Class B general building contractor."
   }
 ]
