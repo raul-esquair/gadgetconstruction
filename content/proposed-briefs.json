@@ -1,1 +1,524 @@
-[]
+[
+  {
+    "slug": "composite-deck-cost-san-francisco",
+    "scheduledDate": "2026-11-02",
+    "status": "queued",
+    "action": "refresh",
+    "refreshesSlug": "composite-deck-cost-san-francisco",
+    "title": "Composite Deck Cost in San Francisco (2026): Real Numbers from 500+ Bay Area Projects",
+    "metaTitle": "Composite Deck Cost San Francisco 2026 | Real Numbers",
+    "excerpt": "Composite decks in San Francisco typically run $15,000 to $60,000+ in 2026. Here's the real per-square-foot math from 500+ Bay Area projects — plus the 6 cost drivers most contractors hide in their bids.",
+    "primaryKeyword": "composite deck cost san francisco",
+    "secondaryKeywords": [
+      "composite deck cost bay area",
+      "trex deck cost san francisco",
+      "composite deck price per square foot",
+      "how much does a composite deck cost in sf"
+    ],
+    "relatedService": "composite-decks",
+    "targetWordCount": 2500,
+    "geoFocus": "SF-anchored",
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Bernal Heights",
+      "Twin Peaks",
+      "Sunset",
+      "Richmond"
+    ],
+    "proposalRationale": "GSC shows this post pulling 473 impressions in 90 days with ZERO clicks at position 6.1 — the single biggest impressions-no-clicks opportunity in the account. The post is ranking page 1 but the title/meta isn't earning the click. Refresh to tighten metaTitle (current one is 59 chars but may be reading as generic), add AEO lifts (none in original brief), add FAQ for AI engines, add fresh 2026 project examples. Also strengthens internal link flow to the newer permits post (position 8.2, 353 impressions, 4 clicks) and refreshed hillside post. This is pure recovered value — the ranking exists, we just need to earn the click and the AI citation.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Composite Decks Cost in San Francisco in 2026",
+        "notes": "Open with the headline range ($15K–$60K+). Three-tier breakdown: 300 sq ft standard ($15K–$35K), multi-level/hillside ($35K–$60K+), deck with pergola ($25K–$50K). State the per-sq-ft range ($50–$125 installed) as a standalone sentence."
+      },
+      {
+        "h2": "Why Do SF Composite Decks Cost More Than National Averages?",
+        "notes": "Question-form H2 for AI matching. Explain SF premium: labor rates, 30-inch permit threshold, hillside access, DBI plan review timelines, scaffolding on 3-story rowhouses, dry rot discovery at existing ledgers."
+      },
+      {
+        "h2": "Composite Deck Price Ranges by Project Type",
+        "h3": [
+          "Standard 300 sq ft Flat-Lot Deck ($15,000–$35,000)",
+          "Multi-Level Hillside Deck ($35,000–$60,000+)",
+          "Deck with Pergola and LED Lighting ($25,000–$50,000)",
+          "Railing-Only Replacement ($3,000–$8,000)"
+        ],
+        "notes": "For each tier: what's included, typical materials, example SF neighborhood, timeline. Use pricing from SERVICE_PRICING.composite-decks."
+      },
+      {
+        "h2": "What Drives Composite Deck Costs in San Francisco",
+        "h3": [
+          "Material Selection (Trex, TimberTech, Fiberon)",
+          "Site Access and Demolition",
+          "Structural Requirements (Hillside, Multi-Level, Elevated)",
+          "SF DBI Permits (Decks Over 30 Inches)",
+          "Add-Ons: Pergolas, Lighting, Railings"
+        ],
+        "notes": "Specific dollar impact per factor. Reference the SF DBI 30-inch threshold and CRC Section R105.2 by name."
+      },
+      {
+        "h2": "Hidden Costs Most SF Contractors Don't Put in the Bid",
+        "notes": "Red-flag section. Dry rot at ledger, undersized footings, drainage, old fasteners, HOA review, electrical, gas lines, lead paint testing on pre-1978 homes. Each with cost impact."
+      },
+      {
+        "h2": "Real 2026 Project Examples from 500+ Bay Area Projects",
+        "notes": "Three concrete 2026 examples. Example 1: 320 sq ft Trex Transcend deck in Noe Valley flat lot, $24,500. Example 2: 600 sq ft TimberTech AZEK multi-level in Bernal Heights hillside, $52,000. Example 3: 450 sq ft Fiberon Paramount deck with pergola and LED lighting, $41,500. Each with scope, materials, timeline, cost drivers."
+      },
+      {
+        "h2": "How to Budget for Your SF Composite Deck",
+        "notes": "Practical guidance: 2–3 estimates, apples-to-apples comparison, 10% contingency, per-sq-ft math sanity check. End with Gadget's fixed-price approach."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI-Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Get a Real Number on Your SF Deck?",
+        "notes": "CTA — free site visit, written itemized estimate, no allowances."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular that mirror how real users phrase queries to AI engines: 'How much does a composite deck cost in San Francisco in 2026?', 'Is Trex or TimberTech more expensive to install in the Bay Area?', 'Do I need a permit for a composite deck in SF?', 'How much does a 300 square foot composite deck cost in San Francisco?', 'Why are composite decks more expensive in SF than other cities?', 'How long does it take to build a composite deck in San Francisco?', 'Can I put composite decking over my existing wood deck frame?'",
+      "Define composite decking as a standalone quotable sentence: 'Composite decking is a manufactured board made from a blend of recycled wood fiber and plastic, typically capped with a polymer shell for stain and fade resistance, engineered to last 25–50 years with minimal maintenance in Bay Area climates.'",
+      "Define SF Department of Building Inspection (DBI) as a standalone quotable sentence: 'The San Francisco Department of Building Inspection (DBI) is the city agency that reviews plans, issues permits, and inspects construction for all buildings in San Francisco, including residential decks over 30 inches above grade.'",
+      "Define capped composite as a standalone sentence: 'Capped composite decking has a protective polymer shell bonded to the composite core on three or four sides, providing superior stain, fade, and moisture resistance compared to uncapped first-generation composite.'",
+      "Define ledger board as a standalone sentence: 'A ledger board is the horizontal structural member bolted to the house framing that supports one end of a deck's joists — the single most failure-prone connection on any attached deck and the most common site of dry rot in Bay Area homes.'",
+      "Reference California Residential Code (CRC) Section R105.2 by name for the 30-inch permit threshold.",
+      "Reference CRC Section R507 by name for deck-specific structural requirements.",
+      "Reference SF Department of Building Inspection (DBI) by full name for permit jurisdiction.",
+      "Stat callout as standalone sentence: 'Composite decks in San Francisco cost $15,000–$60,000+ in 2026, with a typical 300 square foot flat-lot deck running $15,000–$35,000 fully installed.'",
+      "Stat callout as standalone sentence: 'Installed composite deck pricing in San Francisco runs $50–$125 per square foot in 2026, with material brand, site access, and structural complexity driving the range.'",
+      "Stat callout as standalone sentence: 'Any deck over 30 inches above grade in San Francisco requires a building permit from SF DBI under California Residential Code Section R105.2.'",
+      "Stat callout as standalone sentence: 'Hillside composite deck construction in San Francisco adds 30–60% to flat-lot pricing due to drilled pier footings, taller post heights, and restricted material access.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction builds composite decks across San Francisco's Noe Valley, Bernal Heights, Sunset, and Richmond neighborhoods.'",
+      "Named SF neighborhoods (Noe Valley, Bernal Heights, Twin Peaks, Sunset, Richmond).",
+      "500+ Bay Area projects claim.",
+      "CA License #1132983.",
+      "5-year workmanship warranty specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "National pricing averages (always Bay Area 2026 numbers).",
+      "Generic 'we pride ourselves' language.",
+      "Vague ranges without site-condition explanation.",
+      "Treating composite decks as a commodity (they're not — brand and tier matter).",
+      "The old 2025 price points — refresh must use 2026 numbers throughout."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/composite-decks",
+        "anchor": "SF composite deck construction"
+      },
+      {
+        "url": "/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026",
+        "anchor": "comparing Trex, TimberTech, and Fiberon for Bay Area weather"
+      },
+      {
+        "url": "/blog/composite-deck-permits-bay-area-sf-marin-east-bay",
+        "anchor": "SF DBI deck permit requirements"
+      },
+      {
+        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+        "anchor": "hillside deck cost premium in SF and Marin"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "dry rot discovered at existing deck ledger boards"
+      }
+    ],
+    "cta": "Ready to know what your specific SF composite deck will cost? Gadget Construction provides itemized, fixed-price estimates after a free site visit — no allowances, no surprise change orders. CA License #1132983, serving 31 Bay Area cities."
+  },
+  {
+    "slug": "composite-deck-timeline-how-long-build-sf-bay-area",
+    "scheduledDate": "2026-11-09",
+    "status": "queued",
+    "action": "new",
+    "title": "How Long Does It Take to Build a Composite Deck in the Bay Area? (Real 2026 Timelines)",
+    "metaTitle": "Composite Deck Build Timeline Bay Area 2026 | Real Weeks",
+    "excerpt": "Most Bay Area composite decks take 8–16 weeks from signed contract to final inspection — but only 2–4 weeks of that is actual construction. Here's where the other 10 weeks go, by jurisdiction.",
+    "primaryKeyword": "how long does it take to build a composite deck",
+    "secondaryKeywords": [
+      "composite deck construction timeline",
+      "how long does deck construction take bay area",
+      "deck build time san francisco",
+      "deck project duration"
+    ],
+    "relatedService": "composite-decks",
+    "targetWordCount": 2400,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Mill Valley",
+      "Oakland",
+      "Berkeley",
+      "Palo Alto",
+      "Daly City",
+      "Sausalito"
+    ],
+    "proposalRationale": "GSC shows the hillside deck post getting impressions on 'hillside deck construction time weeks' and 'hillside deck construction timeline weeks' queries at positions 4–5 — real homeowners are searching timeline queries with no dedicated landing page. The composite-decks cluster has 4 posts on cost, materials, permits, and hillside but ZERO on timeline/duration. Timeline is one of the top 3 pre-purchase deck questions. High AEO value (specific week counts are extractable), fills a clear cluster gap, and creates a strong internal-link destination from the cost post (refreshed in the same batch) and permits post.",
+    "outline": [
+      {
+        "h2": "The Short Answer: 8–16 Weeks Total, 2–4 Weeks of Actual Construction",
+        "notes": "Direct answer. Signed contract → final inspection averages 8–16 weeks in the Bay Area. Only 2–4 of those weeks are hammers-swinging; the rest is permits, engineering, materials, and inspection scheduling. Where it varies by jurisdiction and complexity."
+      },
+      {
+        "h2": "Why Does Composite Deck Construction Take So Long in the Bay Area?",
+        "notes": "Question-form H2. Three reasons: permit review timelines (SF DBI 2–8 weeks, Marin CDA 3–8, Peninsula 4–12), structural engineer stamp requirements, material lead times for premium composite brands, dry rot discovery during demo, inspection scheduling delays."
+      },
+      {
+        "h2": "The 6 Phases of a Bay Area Composite Deck Build",
+        "h3": [
+          "Phase 1: Design and Material Selection (1–3 Weeks)",
+          "Phase 2: Permit Submission and DBI/CDA Review (2–8 Weeks)",
+          "Phase 3: Material Ordering and Delivery (1–4 Weeks)",
+          "Phase 4: Demolition and Framing (3–7 Days)",
+          "Phase 5: Decking, Railing, and Finish Install (4–10 Days)",
+          "Phase 6: Final Inspection and Punch List (1–3 Weeks)"
+        ],
+        "notes": "Each phase: what happens, who's involved, typical duration, what delays it. Phase 2 is the biggest variable by jurisdiction."
+      },
+      {
+        "h2": "Timeline by Project Type",
+        "h3": [
+          "Simple Flat-Lot Deck (8–10 Weeks Total)",
+          "Multi-Level or Mid-Complexity Deck (10–14 Weeks)",
+          "Hillside / Elevated Deck with Structural Engineer (14–20 Weeks)",
+          "Deck with Full Permit, Pergola, Electrical (12–18 Weeks)"
+        ],
+        "notes": "Each type: typical total timeline, phase-by-phase breakdown, where the time concentrates."
+      },
+      {
+        "h2": "Timeline by Jurisdiction (SF DBI, Marin CDA, Peninsula)",
+        "notes": "Comparison table. Columns: Jurisdiction, Standard Permit Timeline, Complex/Hillside Timeline, Average Final Inspection Wait, Notes. Cover SF DBI, Marin CDA, Oakland Planning & Building, Berkeley Planning & Development, Palo Alto, Daly City DECD."
+      },
+      {
+        "h2": "What Can Add Weeks to Your Project",
+        "notes": "Dry rot discovery at ledger (adds 1–3 weeks), structural engineer back-and-forth (2–4 weeks), material lead times on premium brands like TimberTech AZEK Harvest (3–6 weeks), HOA review in planned communities (2–8 weeks), rainy season atmospheric river delays (1–3 weeks), inspection scheduling backlog at busy jurisdictions."
+      },
+      {
+        "h2": "How to Shorten Your Composite Deck Build Time",
+        "notes": "Practical tips: finalize material selection before permit submission, use in-stock composite colors, hire contractor who pulls their own permits, choose a contractor with existing engineer relationships, schedule in October–February for faster permit queues."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI-Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Start the Clock on Your Bay Area Deck?",
+        "notes": "CTA — free site visit, realistic timeline estimate specific to the jurisdiction."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How long does it take to build a composite deck in San Francisco?', 'How long does SF DBI take to approve a deck permit?', 'Can a deck be built in 2 weeks?', 'How long does Marin County take for deck permits?', 'What time of year is best to build a deck in the Bay Area?', 'How long does it take to get a structural engineer stamp on a hillside deck?', 'Does Trex or TimberTech take longer to deliver in the Bay Area?'",
+      "Define SF Department of Building Inspection (DBI) as a standalone sentence (same definition as cost post for entity consistency).",
+      "Define Marin Community Development Agency (CDA) as a standalone sentence: 'The Marin Community Development Agency (CDA) is the county department that reviews and permits construction in unincorporated Marin County, with each incorporated city — Mill Valley, Sausalito, Tiburon, San Rafael, Ross, Larkspur — operating its own building department.'",
+      "Define structural engineer stamp as a standalone sentence: 'A structural engineer stamp is a licensed professional engineer's seal applied to construction drawings certifying that the design meets structural code — required in the Bay Area for all hillside decks, multi-level decks, and decks over 8 feet above grade.'",
+      "Define atmospheric river as a standalone sentence: 'An atmospheric river is a long, narrow corridor of concentrated moisture in the atmosphere that produces sustained heavy rainfall — a Bay Area winter weather pattern that routinely halts outdoor construction for 3–10 days at a time.'",
+      "Reference California Residential Code (CRC) Section R105.2 by name for permit threshold.",
+      "Reference SF DBI, Marin CDA, Oakland Planning & Building Department, Berkeley Planning & Development Department, and Daly City Department of Economic & Community Development by full names.",
+      "Stat callout as standalone sentence: 'A typical Bay Area composite deck takes 8–16 weeks from signed contract to final inspection in 2026, with only 2–4 weeks of actual on-site construction.'",
+      "Stat callout as standalone sentence: 'SF DBI deck permit review takes 2–8 weeks depending on complexity, with over-the-counter approval available for simple flat-lot decks and Structural Advisory Committee review adding 4–6 weeks for hillside projects.'",
+      "Stat callout as standalone sentence: 'Hillside composite deck construction in the Bay Area averages 14–20 weeks total — roughly double the timeline of a flat-lot deck of the same square footage — because of structural engineering and foundation requirements.'",
+      "Stat callout as standalone sentence: 'Premium composite decking brands like TimberTech AZEK Harvest and Trex Signature can add 3–6 weeks of material lead time to a Bay Area project, while in-stock Trex Enhance and Fiberon Sanctuary typically ship within 5–10 business days.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction builds composite decks across San Francisco's DBI jurisdiction, Mill Valley's Marin CDA, and Oakland's Planning & Building Department.'",
+      "Named Bay Area jurisdictions and neighborhoods.",
+      "500+ Bay Area projects claim.",
+      "CA License #1132983."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Promising unrealistic 'built in 2 weeks' timelines.",
+      "Generic 'depends on your project' hedging without week counts.",
+      "Ignoring permit timeline as the dominant variable.",
+      "'Local building department' as lazy fallback — always name the specific department."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/composite-decks",
+        "anchor": "Bay Area composite deck construction"
+      },
+      {
+        "url": "/blog/composite-deck-cost-san-francisco",
+        "anchor": "composite deck cost breakdown with permit line items"
+      },
+      {
+        "url": "/blog/composite-deck-permits-bay-area-sf-marin-east-bay",
+        "anchor": "detailed permit requirements by jurisdiction"
+      },
+      {
+        "url": "/blog/hillside-multi-level-deck-construction-sf-marin",
+        "anchor": "hillside deck engineering timelines"
+      },
+      {
+        "url": "/service-areas/mill-valley",
+        "anchor": "Mill Valley deck construction"
+      }
+    ],
+    "cta": "Planning a Bay Area composite deck? Gadget Construction gives you a realistic jurisdiction-specific timeline at the free site visit — not an optimistic 'few weeks' pitch. We handle permit pulling, engineer coordination, and inspection scheduling across SF DBI, Marin CDA, Oakland, Berkeley, and every Peninsula city. CA License #1132983."
+  },
+  {
+    "slug": "dry-rot-repair-cost-bay-area-2026",
+    "scheduledDate": "2026-11-16",
+    "status": "queued",
+    "action": "new",
+    "title": "Dry Rot Repair Cost in the Bay Area (2026): Window Sills, Decks, Framing, Full Scope",
+    "metaTitle": "Dry Rot Repair Cost Bay Area 2026 | Real Project Numbers",
+    "excerpt": "Dry rot repair in the Bay Area typically costs $800 to $30,000+ in 2026 depending on where the rot is and how far it's spread. Here's the real per-location cost math — plus how to tell what tier of repair you actually need.",
+    "primaryKeyword": "dry rot repair cost",
+    "secondaryKeywords": [
+      "cost of dry rot repair",
+      "dry rot repair cost bay area",
+      "dry rot repair cost san francisco",
+      "how much does dry rot repair cost"
+    ],
+    "relatedService": "exterior-repairs",
+    "targetWordCount": 2500,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Sunset",
+      "Richmond",
+      "Pacifica",
+      "Daly City",
+      "Sausalito",
+      "Mill Valley",
+      "Oakland"
+    ],
+    "proposalRationale": "GSC shows 'cost of dry rot repair' at position 14.5 with 23 impressions and 0 clicks — flagged in the close-to-page-1 opportunities bucket. The parent dry rot post (1,624 impressions, position 9.9, 18 clicks — the single best-performing exterior-repairs post) ranks for diagnostic queries but doesn't own 'cost' intent. A dedicated cost post captures commercial-intent clicks the parent is leaking, pushes the whole cluster past the rank-13 threshold into page 1, and creates strong AEO extractable units (per-location cost sentences). Fills the exterior-repairs cluster gap on dedicated cost content.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Dry Rot Repair Costs in the Bay Area in 2026",
+        "notes": "Three-tier range upfront. Localized $800–$2,500; whole-wall/multi-point $4,000–$12,000; structural $12,000–$30,000+. State per-location cost as standalone sentences for AI extraction."
+      },
+      {
+        "h2": "Why Do Bay Area Dry Rot Repairs Cost What They Do?",
+        "notes": "Question-form H2. Cost drivers: fungal spread (always worse than it looks), water source diagnosis, framing exposure, dry rot vs structural scope line, access (scaffolding on 3-story), coastal fastener spec, lead paint testing on pre-1978 homes."
+      },
+      {
+        "h2": "Dry Rot Repair Cost by Location",
+        "h3": [
+          "Window Sill and Trim Rot ($800–$2,500 per Window)",
+          "Door Threshold and Jamb Rot ($1,200–$3,500)",
+          "Fascia and Eave Rot ($1,500–$6,000)",
+          "Deck Ledger Board Rot ($1,500–$4,500)",
+          "Bay Window Base Rot ($2,500–$8,500)",
+          "Sill Plate / Band Joist Rot ($4,500–$18,000)",
+          "Whole-Wall Framing Rot ($8,000–$30,000+)"
+        ],
+        "notes": "Each location: typical scope, what's actually replaced, 2026 cost range, example neighborhood where it's common. Use SERVICE_PRICING.exterior-repairs."
+      },
+      {
+        "h2": "What's Included in a Dry Rot Repair Cost",
+        "notes": "Line items: inspection and probing, water-source diagnosis, demo and cutback into healthy wood, framing/sister-joist as needed, new WRB, new flashing, new sheathing, siding/stucco patch-back, paint. NOT typically included: full-elevation re-paint, interior drywall repair, mold remediation."
+      },
+      {
+        "h2": "Hidden Dry Rot Costs Most Contractors Don't Mention",
+        "notes": "Red-flag section. Scope expansion once wall is open, lead paint testing (EPA RRP for pre-1978), scaffolding for 2nd/3rd floor work, flashing redesign vs just replacement, structural engineer stamp if load path is involved, mold if water intrusion is longstanding."
+      },
+      {
+        "h2": "Real 2026 Project Examples from 500+ Bay Area Projects",
+        "notes": "Three concrete examples. Example 1: Sunset Doelger bay window base rot + kickout flashing redesign, $7,200. Example 2: Pacifica Linda Mar whole-wall framing rot + Hardie patch-back, $18,500. Example 3: Mill Valley cedar fascia rot + 3-story scaffolding, $9,800. Each with scope, timeline, cost drivers."
+      },
+      {
+        "h2": "How to Avoid Paying for Dry Rot Twice",
+        "notes": "The water-source rule. If the water source isn't fixed, the repair fails in 2–3 years. What a legit scope-of-work looks like vs a cosmetic patch. Questions to ask the bidder."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI-Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Get a Real Number on Your Dry Rot Repair?",
+        "notes": "CTA — free inspection with written photo findings and fixed-price estimate."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How much does dry rot repair cost in San Francisco?', 'What's the cheapest way to fix dry rot?', 'How much does it cost to replace a rotted window sill?', 'Is dry rot repair covered by homeowners insurance?', 'How much does it cost to fix dry rot on a deck ledger?', 'Why do dry rot repair estimates vary so much?', 'Can I just paint over dry rot?'",
+      "Define dry rot as a standalone quotable sentence: 'Dry rot is wood decay caused by specific fungi — primarily Serpula lacrymans and Meruliporia incrassata — that consume wood when moisture content stays above 20%, with the term 'dry' referring to the crumbly appearance of damaged wood rather than the required moisture conditions.'",
+      "Define kickout flashing as a standalone sentence: 'Kickout flashing is a specialized metal flashing installed where a roof edge meets a vertical wall, designed to divert water away from the siding and into the gutter — one of the most common Bay Area flashing failures and a frequent root cause of bay window rot.'",
+      "Define weather-resistive barrier (WRB) as a standalone sentence: 'A weather-resistive barrier (WRB) is a layer of material — typically housewrap or asphalt-saturated felt — installed between the sheathing and exterior cladding to block liquid water while allowing water vapor to escape.'",
+      "Define sister joist as a standalone sentence: 'Sistering a joist means attaching a new structural member alongside a damaged or undersized existing joist to share the load, used when full replacement is impractical.'",
+      "Reference California Residential Code (CRC) by name for structural framing requirements.",
+      "Reference EPA Renovation, Repair, and Painting (RRP) Rule by name for lead paint testing on pre-1978 homes.",
+      "Reference James Hardie Best Practices Installation Guide by name for patch-back fastener spec in coastal zones.",
+      "Stat callout as standalone sentence: 'Dry rot repair in the Bay Area costs $800–$30,000+ in 2026 depending on location and extent, with localized window sill repair at the low end and whole-wall framing replacement at the high end.'",
+      "Stat callout as standalone sentence: 'Dry rot repair at a single window sill in the Bay Area typically costs $800–$2,500 in 2026, including demo, framing cutback, new flashing, and siding patch-back.'",
+      "Stat callout as standalone sentence: 'Deck ledger board dry rot repair costs $1,500–$4,500 in the Bay Area in 2026, with the ledger itself being the second most common dry rot location after window sills.'",
+      "Stat callout as standalone sentence: 'Whole-wall framing dry rot repair on Bay Area homes costs $8,000–$30,000+ in 2026, with most of the premium going to structural framing, new WRB and flashing, and siding or stucco patch-back.'",
+      "Stat callout as standalone sentence: 'Dry rot repair fails within 2–3 years if the water source isn't fixed as part of the scope — the single most common Bay Area contractor shortcut.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction repairs dry rot across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Daly City's Westlake, and Marin's coastal corridor.'",
+      "Named coastal neighborhoods (Sunset, Richmond, Pacifica, Daly City Westlake, Sausalito, Mill Valley).",
+      "500+ Bay Area projects claim.",
+      "CA License #1132983.",
+      "5-year workmanship warranty specifically (in writing)."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Suggesting bondo or epoxy filler as a legitimate repair.",
+      "Fear-mongering without diagnostic cost tiers.",
+      "National dry rot averages (always Bay Area 2026 numbers).",
+      "Vague 'it depends' language without per-location dollar impact.",
+      "Treating dry rot as cosmetic (it's fungal and it spreads)."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/exterior-repairs",
+        "anchor": "Bay Area dry rot repair"
+      },
+      {
+        "url": "/blog/dry-rot-bay-area-homes-spot-repair-cost",
+        "anchor": "how to spot dry rot before you call for a quote"
+      },
+      {
+        "url": "/blog/how-to-tell-if-you-have-dry-rot-or-termites-bay-area",
+        "anchor": "telling dry rot from termite damage"
+      },
+      {
+        "url": "/blog/5-exterior-repairs-coastal-bay-area-homes-always-need",
+        "anchor": "coastal home exterior repair patterns"
+      },
+      {
+        "url": "/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
+        "anchor": "structural repair when dry rot reaches the load path"
+      }
+    ],
+    "cta": "Think you have dry rot? Gadget Construction provides free inspections with written photo findings and fixed-price estimates — not scope-of-work hedges or scare tactics. We fix the water source as part of every repair, with a 5-year workmanship warranty in writing. CA License #1132983, serving 31 Bay Area cities."
+  },
+  {
+    "slug": "sagging-floor-repair-cost-bay-area-sister-joist-beam",
+    "scheduledDate": "2026-11-23",
+    "status": "queued",
+    "action": "new",
+    "title": "Sagging Floor Repair in Bay Area Homes: Sister-Joist, Beam, or Full Replacement? (2026 Cost Guide)",
+    "metaTitle": "Sagging Floor Repair Cost Bay Area 2026 | Joist, Beam, Replace",
+    "excerpt": "A sagging floor in your Bay Area home typically costs $2,500 to $25,000+ to repair in 2026 — but the fix depends on whether it's a bouncy joist, a failing beam, or settling foundation. Here's how to tell what you actually need.",
+    "primaryKeyword": "sagging floor repair cost",
+    "secondaryKeywords": [
+      "sister joist cost bay area",
+      "sagging floor repair san francisco",
+      "bouncy floor repair cost",
+      "floor joist replacement cost"
+    ],
+    "relatedService": "structural-repairs",
+    "targetWordCount": 2600,
+    "geoFocus": "Bay Area-wide",
+    "citiesReferenced": [
+      "San Francisco",
+      "Noe Valley",
+      "Mission",
+      "Bernal Heights",
+      "Alamo Square",
+      "Oakland",
+      "Berkeley",
+      "Alameda"
+    ],
+    "proposalRationale": "The structural-repairs service has ZERO published blog support (the pillar structural-repair-cost post is still queued for 2026-10-19 but not yet published to GSC — this brief slot deliberately comes after it). GSC shows /services/structural-repairs at 21 impressions, 0 clicks, position 6.2 — classic impressions-no-clicks pattern indicating demand with no funnel. Sagging floor is the #1 symptom query for structural repair (Victorian/Edwardian owners in Noe Valley, Mission, Alamo Square routinely search this). Narrower than the pillar cost post, higher AEO extraction value (specific repair-tier dollar amounts), and creates a strong internal-link destination from the foundation-signs post (412 impressions, 1 click, position 8.2) which currently has no symptom-level repair content to link to.",
+    "outline": [
+      {
+        "h2": "The Short Answer: What Sagging Floor Repair Costs in the Bay Area in 2026",
+        "notes": "Three-tier range upfront. Sister-joist $2,500–$8,000 per span; full joist or beam replacement $6,000–$18,000; sagging from foundation settlement $12,000–$25,000+. State per-fix cost as standalone sentences."
+      },
+      {
+        "h2": "Why Do Bay Area Floors Sag in the First Place?",
+        "notes": "Question-form H2. Four causes: undersized original joists (pre-1950 framing standards), joist end rot at exterior walls (coastal fog), failing center beam (deferred maintenance), foundation settlement (expansive clay in Sunset, fill in Marina, sand in Richmond). Cross-link to foundation signs post."
+      },
+      {
+        "h2": "How to Diagnose Why Your Floor Is Sagging",
+        "h3": [
+          "The Marble Test (Localized vs Systemic)",
+          "The Bounce Test (Joist Deflection)",
+          "Looking at the Crawl Space (Rot vs Undersized)",
+          "Checking Door Frames and Walls (Foundation Settlement)"
+        ],
+        "notes": "DIY diagnostic framework. Each test: what to do, what the result means, which repair tier it points to."
+      },
+      {
+        "h2": "Sister-Joist Repair ($2,500–$8,000)",
+        "notes": "When it's the right fix: bouncy/sagging in a specific room, joists are undersized or have end rot, framing is otherwise sound. Process: temporary shoring, cut back rotted ends, bolt new 2x10 or 2x12 alongside existing. Common on Noe Valley Victorians, Alameda Edwardians, Berkeley bungalows."
+      },
+      {
+        "h2": "Full Joist or Beam Replacement ($6,000–$18,000)",
+        "notes": "When it's the right fix: multiple joists compromised, central beam is sagging or notched, prior sister attempts failed. Process: expose structure, temporary shoring, remove damaged members, install new LVL or steel beam, re-attach joists. More common on multi-flat Victorians and Mission flats with carved-up basements."
+      },
+      {
+        "h2": "Sagging From Foundation Settlement ($12,000–$25,000+)",
+        "notes": "Important caveat — this is where symptoms overlap with foundation movement. Signs: stair-step cracks in stucco, doors sticking, slope that follows the whole floor plan, not just one bay. The fix is NOT underpinning (Gadget doesn't sell that). The fix is level/correct what's accessible — rebuild sill plates, replace rotted framing above the foundation, level floors with new sistered joists at correct elevation. Reference Earthquake Brace + Bolt program by name for the common seismic retrofit combo."
+      },
+      {
+        "h2": "What Drives Sagging Floor Repair Costs Up in the Bay Area",
+        "h3": [
+          "Access and Crawl Space Height",
+          "Temporary Shoring Requirements",
+          "Structural Engineer Stamp",
+          "Dry Rot Discovery",
+          "SF DBI, Oakland, Berkeley Permit Review"
+        ],
+        "notes": "Each with dollar impact. Crawl space under 24 inches adds labor. Engineer stamp $2K–$6K. Permit review 4–12 weeks."
+      },
+      {
+        "h2": "Real 2026 Project Examples",
+        "notes": "Three examples. Example 1: Noe Valley Victorian, 3 sister-joists in dining room, $4,800. Example 2: Mission flat, full center beam replacement with LVL, $14,500. Example 3: Alameda Craftsman, joist-end rot at exterior wall, 8 sister-joists plus sill plate section, $11,200. Each with scope, cost drivers, timeline."
+      },
+      {
+        "h2": "Frequently Asked Questions",
+        "notes": "AI-Overview-optimized FAQ block."
+      },
+      {
+        "h2": "Ready to Diagnose Your Sagging Floor?",
+        "notes": "CTA — free crawl space assessment with written findings."
+      }
+    ],
+    "mustInclude": [
+      "FAQ section must answer these specific questions in Bay Area homeowner vernacular: 'How much does it cost to fix a sagging floor in a San Francisco Victorian?', 'What is the difference between sistering a joist and replacing it?', 'Can I fix a bouncy floor without opening the ceiling below?', 'How do I know if my sagging floor is a joist or foundation problem?', 'Do I need a structural engineer for sister-joist repair?', 'How long does sagging floor repair take?', 'Is a sagging floor dangerous to walk on?'",
+      "Define sister joist as a standalone quotable sentence: 'Sistering a joist means attaching a new structural member — typically a 2x10 or 2x12 — alongside a damaged or undersized existing joist to share the load, used when full joist replacement would require major interior demolition.'",
+      "Define LVL beam as a standalone sentence: 'A laminated veneer lumber (LVL) beam is an engineered structural member made from thin wood veneers bonded with adhesive, offering greater span capacity and dimensional stability than traditional sawn lumber — commonly used as replacement center beams in Bay Area Victorian and Edwardian flats.'",
+      "Define joist deflection as a standalone sentence: 'Joist deflection is the downward movement of a floor joist under load, measured as a fraction of the span — the California Building Code typically limits residential floor deflection to L/360 for live loads, meaning a 12-foot joist should not deflect more than roughly 0.4 inches.'",
+      "Define Class B license as a standalone sentence: 'A California Class B General Building Contractor license (such as CA License #1132983) authorizes a contractor to perform structural framing, foundation, and multi-trade work on residential and commercial buildings.'",
+      "Reference California Building Code (CBC) and California Residential Code (CRC) by name for joist deflection and framing requirements.",
+      "Reference SF Department of Building Inspection (DBI) by full name for structural permit requirements.",
+      "Reference California Earthquake Brace + Bolt (EBB) program by name for the common sill-plate / seismic retrofit combo.",
+      "Stat callout as standalone sentence: 'Sagging floor repair in the Bay Area costs $2,500–$25,000+ in 2026, with the fix depending on whether the cause is bouncy joists, a failing center beam, or foundation settlement.'",
+      "Stat callout as standalone sentence: 'Sister-joist repair on a Bay Area home typically costs $2,500–$8,000 per span in 2026, including temporary shoring, cutback into healthy wood, and bolted installation of a new joist alongside the existing one.'",
+      "Stat callout as standalone sentence: 'Full center beam replacement with an engineered LVL on a Bay Area Victorian or Edwardian flat costs $8,000–$18,000 in 2026 and requires a structural engineer's stamped drawings.'",
+      "Stat callout as standalone sentence: 'The California Residential Code limits residential floor joist deflection to L/360 for live loads — meaning a 12-foot span should not deflect more than approximately 0.4 inches under normal use.'",
+      "Brand-entity stacking: mention 'Gadget Construction' at least 3 times in factual non-promotional context — e.g., 'Gadget Construction performs sister-joist and structural floor repair across San Francisco's Noe Valley, Mission, and Bernal Heights, plus Oakland, Berkeley, and Alameda.'",
+      "Explicit statement that Gadget does not perform underpinning or pier-and-beam foundation lifting — structural scope is framing, beams, sill plates, bearing-wall conversion, and seismic retrofit.",
+      "500+ Bay Area projects claim.",
+      "CA License #1132983 as Class B general building contractor.",
+      "5-year workmanship warranty specifically."
+    ],
+    "mustAvoid": [
+      "References to 'as mentioned above' or 'as discussed earlier' — every section must read standalone for LLM passage extraction.",
+      "Any mention of underpinning, piering, or pier-and-beam foundation lifting as the fix — Gadget does not sell these services.",
+      "Fear-mongering about 'your floor could collapse' language.",
+      "Suggesting self-leveling compound as a legitimate structural fix.",
+      "National structural repair averages.",
+      "Treating all sagging floors as foundation emergencies.",
+      "Vague 'depends on your project' hedging without per-tier dollar impact."
+    ],
+    "internalLinks": [
+      {
+        "url": "/services/structural-repairs",
+        "anchor": "Bay Area structural floor repair"
+      },
+      {
+        "url": "/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
+        "anchor": "full SF structural repair cost breakdown"
+      },
+      {
+        "url": "/blog/foundation-repair-signs-san-francisco",
+        "anchor": "signs your sagging floor is actually foundation settlement"
+      },
+      {
+        "url": "/blog/dry-rot-repair-cost-bay-area-2026",
+        "anchor": "dry rot repair at joist ends and sill plates"
+      },
+      {
+        "url": "/service-areas/san-francisco",
+        "anchor": "structural repair across San Francisco"
+      }
+    ],
+    "cta": "Floor sagging, bouncy, or sloping? Gadget Construction provides free crawl-space assessments with written photo findings — we'll tell you honestly whether you need a sister-joist, a beam replacement, or a conversation about foundation movement. We don't do underpinning, so we won't upsell you into it. CA License #1132983, Class B general building contractor."
+  }
+]
