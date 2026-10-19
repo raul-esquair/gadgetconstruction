@@ -41,6 +41,233 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-to-tell-if-you-have-dry-rot-or-termites-bay-area",
+    featuredImage: "/images/blog-how-to-tell-if-you-have-dry-rot-or-termites-bay-area.png",
+    title: "How to Tell If You Have Dry Rot or Termites (Bay Area Homeowner Diagnostic Guide)",
+    metaTitle: "Dry Rot vs Termites: How to Tell Them Apart (Bay Area 2026)",
+    excerpt:
+      "Soft wood on your Bay Area home? It could be dry rot, termites, or both — and they need different fixes. Here's how to tell them apart in 90 seconds, where each hides, and what repair actually costs.",
+    date: "2026-10-26",
+    readingTime: "15 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How can I tell if I have dry rot or termites in my Bay Area home?",
+        "answer": "Run the screwdriver test first: press a flat-head screwdriver into any suspicious wood. Dry rot yields with a crumbly, cubical texture. Termite damage yields suddenly as the tip punches through a thin veneer into a hollow gallery. Then check for secondary evidence: dry rot produces a musty smell and visible fungal mycelium. Termites produce mud tubes (subterranean) or frass piles below wood (drywood). Both signs together means both problems."
+      },
+      {
+        "question": "Do dry rot and termite damage look the same?",
+        "answer": "No — the physical evidence is distinctly different. Dry rot produces a brown, cubically cracked, crumbly mass that looks like diced wood. Termite damage produces intact-looking wood with hollow galleries inside (subterranean) or frass-packed kick-holes in otherwise sound wood (drywood). Surface discoloration appears in both, but the fracture pattern, smell, and debris are different enough that a probe test and visual inspection typically separate the two."
+      },
+      {
+        "question": "Can you have dry rot and termites at the same time?",
+        "answer": "Yes — and it's common in Bay Area homes. Termite-damaged wood retains moisture more readily than sound wood, creating conditions for fungal decay to establish. Chronically wet, rot-softened wood is also easier for termites to colonize. Pre-war Sunset, Richmond, and Alameda homes with crawl space moisture issues frequently show both problems at sill plate level. The repair sequence is pest treatment first, then structural repair."
+      },
+      {
+        "question": "Who do I call first — a pest inspector or a contractor?",
+        "answer": "If you're seeing mud tubes, frass, or discarded wings, call a pest inspector first. The California Structural Pest Control Board licenses the inspectors who assess and treat structural infestations — that report documents what the contractor scopes for structural repair. A pest inspection costs $150–$300 and produces written findings. If you're seeing soft wood with a musty smell and a visible moisture source but no insect evidence, call a general contractor directly."
+      },
+      {
+        "question": "How much does termite damage repair cost in San Francisco?",
+        "answer": "Structural repair of termite-damaged framing in San Francisco runs $600–$45,000+ in 2026, depending on extent. Localized trim or sill replacement costs $600–$2,000. Joist or sill plate damage in a crawl space runs $3,500–$15,000. Major structural damage involving multiple framing bays runs $15,000–$45,000+. These figures cover the contractor's repair scope only — pest control treatment ($800–$3,000 typical) is billed separately before structural repair begins."
+      },
+      {
+        "question": "Are drywood or subterranean termites more common in the Bay Area?",
+        "answer": "Both species are active throughout the Bay Area but concentrate in different locations. Subterranean termites (Reticulitermes hesperus) are the more common structural threat in homes with crawl spaces and earth-to-wood contact — East Bay and Peninsula clay-soil homes are high-frequency environments. Drywood termites (Incisitermes minor) infest above-grade wood without soil contact, appearing in attic framing, fascia, and window frames region-wide. Many Bay Area homes have both species present simultaneously."
+      },
+      {
+        "question": "Does Gadget Construction do termite treatment?",
+        "answer": "No. Termite treatment requires a license from the California Structural Pest Control Board — a separate licensing pathway from the Class B general building contractor license (CA License #1132983) that Gadget Construction holds. Gadget Construction performs structural repair of damaged framing after a licensed pest control operator has treated and cleared the active infestation. A free exterior assessment will tell you honestly if you need a pest inspector before structural repair can be scoped."
+      }
+    ],
+    content: `
+## The Short Answer: Dry Rot vs Termites in 90 Seconds
+
+Soft or crumbly wood on your Bay Area home is either a fungal problem, an insect problem, or both — and the fix is different for each. **Dry rot vs termites** is one of the most common diagnostic questions Bay Area homeowners get wrong, and misidentifying one for the other delays the right repair by weeks and adds cost. Dry rot leaves behind brown, cubical, cracked wood with a musty smell and no insects visible. Termites leave hollow-sounding wood, mud tubes, discarded wings, or small piles of hexagonal pellets called frass. Both are common across Bay Area housing stock, and they frequently co-occur.
+
+If you're looking at damaged wood right now and need a fast answer, start with the [full dry rot diagnostic and cost guide](/blog/dry-rot-bay-area-homes-spot-repair-cost) for fungal decay, or keep reading for the side-by-side comparison. Gadget Construction has assessed and repaired [Bay Area dry rot and structural wood repair](/services/exterior-repairs) across 500+ projects in San Francisco's Sunset and Richmond, Pacifica, Daly City's Westlake, and Marin's coastal corridor — and the diagnostic distinctions below come from that field experience, not a textbook.
+
+---
+
+## What's Dry Rot and What Are Termites? (The 60-Second Biology)
+
+Dry rot and termites destroy wood by different mechanisms — which is exactly why they leave different evidence behind.
+
+**Dry rot is wood decay caused by specific fungi (including *Serpula lacrymans* and *Meruliporia incrassata*) that consume wood when moisture content stays above 20% — the "dry" in the name refers to the crumbly appearance of the damaged wood, not the required conditions.** The fungi break down the cellulose and hemicellulose in wood fiber, leaving behind a brown, brittle, cubically fractured mass. No insects. No galleries. Just soft, crumbling wood at locations with chronic moisture exposure — window sills, deck ledgers, sill plates.
+
+**Subterranean termites are soil-dwelling insects (primarily *Reticulitermes hesperus* in the Bay Area) that build mud tubes from the ground to reach wood, and are the most common structural pest in Bay Area homes with crawl spaces or earth-to-wood contact.** They forage through wood along the grain, leaving intact wood surfaces while hollowing out the interior. You won't see the damage until you probe for it.
+
+**Drywood termites (primarily *Incisitermes minor* in the Bay Area) nest directly inside dry wood without soil contact, commonly infesting attic rafters, fascia boards, and door frames — identified by small piles of hexagonal fecal pellets called frass.** Unlike subterranean species, drywood termites don't need ground contact and can colonize wood anywhere in the structure — including well above the crawl space where damage goes undetected for years.
+
+Both problems eat into your framing. Neither is a minor inconvenience in a Bay Area home built between 1900 and 1960. For a broader look at how [coastal home repairs that often reveal termite or rot damage](/blog/5-exterior-repairs-coastal-bay-area-homes-always-need) surface during routine exterior maintenance, that post covers the five failure patterns Gadget Construction sees most frequently.
+
+---
+
+## How to Tell Dry Rot and Termite Damage Apart
+
+The physical evidence each leaves behind is distinct. You don't need a professional to run the initial diagnostic — you need to know what to look for. This section covers five diagnostic tests you can run yourself to distinguish **dry rot vs termites** before making any calls.
+
+### Visual Pattern: Cubical Cracking vs Hollow Galleries
+
+Dry rot produces a characteristic cubical cracking pattern — the wood fractures along and across the grain, leaving square or rectangular chunks that crumble when pressed. The affected area looks like it's been diced. This pattern is unique to fungal decay and doesn't appear in insect damage.
+
+Termite damage produces galleries — tunnels eaten along the grain of the wood, often with intact surface fibers left standing. Subterranean termites are particularly clean about this: they eat the interior of a board and leave the exterior veneer largely intact until the damage is severe. Tap the surface with a knuckle — hollow-sounding wood that looks intact on the surface is characteristic of subterranean termite galleries. Drywood termites leave a similar gallery pattern but typically in harder-to-access locations like attic framing or fascia.
+
+### Smell: Musty vs No Odor
+
+Dry rot produces a noticeable musty, mushroom-like smell — the characteristic odor of active fungal growth. In crawl spaces and behind wall cladding, this smell is often detectable before you can see the damage. A Sunset District home where the crawl space smells like a damp basement is worth investigating for fungal decay at sill plates and joist ends.
+
+Termite damage has no distinctive smell. If you're detecting a musty odor and soft wood, you're most likely dealing with dry rot or a combination of both problems. Termite damage alone is odorless.
+
+### Debris: Fungal Strands vs Frass (Insect Pellets)
+
+Dry rot sometimes produces visible fungal mycelium — white or grayish cotton-like strands growing across the surface of or adjacent to affected wood. In advanced cases, the fruiting body of the fungus may be visible, resembling a bracket mushroom. This mycelium is a definitive indicator of active fungal decay.
+
+**Frass is the hexagonal, coffee-ground-like fecal pellets drywood termites push out of their galleries, often found in small piles below infested wood and considered a definitive diagnostic sign.** If you find a small cone-shaped pile of what looks like coarse sawdust or coffee grounds beneath a window frame, attic rafter, or fascia board, that's drywood termite frass — not sawdust from normal wood aging, and not fungal debris. Subterranean termites don't produce visible frass; they incorporate waste into their mud tubes.
+
+### Mud Tubes and Wings: Termite Dead Giveaways
+
+Subterranean termites are the only wood-destroying pest that builds mud tubes — pencil-width tunnels of soil, saliva, and wood particles running up foundation walls, piers, or exterior surfaces from the ground to the wood above. If you see mud tubes in your crawl space or along your foundation stem wall, subterranean termites are confirmed. No other pest produces this structure.
+
+Discarded wings near windows, doors, or interior light sources indicate a termite swarm — drywood or subterranean colonies periodically release winged reproductives that shed their wings after landing. Finding a pile of small, equal-length wings on a windowsill in spring is a reliable indicator of an active colony somewhere in or adjacent to the structure.
+
+Dry rot produces neither mud tubes nor wings. If you're seeing either, you're dealing with termites regardless of what the wood looks like.
+
+### The Screwdriver Test (Works for Both)
+
+**The screwdriver test — pressing a flat-head screwdriver into suspect wood — identifies both dry rot and termite damage: if the tip sinks more than 1/8 inch without splitting the surface, the wood is compromised.** Sound wood resists the probe. Dry-rotted wood yields and crumbles. Termite-hollowed wood may appear solid at the surface but gives way suddenly when the veneer collapses — you'll feel the tip punch through a thin shell into empty space. Both results mean the structural capacity of that member is compromised and needs evaluation.
+
+Surface discoloration and checking (small grain-direction cracks) in old wood don't automatically mean failure — probe-test any suspicious area before assuming the worst or dismissing the concern. If the screwdriver test reveals compromised framing, [structural repair of damaged framing](/services/structural-repairs) is the next step after you've determined whether termites are part of the picture.
+
+---
+
+## Where Each Hides in Bay Area Homes
+
+Dry rot and termites concentrate in predictable locations depending on species and local conditions. Bay Area housing patterns — fog belt climate, crawl space construction, pre-war framing — create specific hotspots for each. Knowing where to look is half the diagnostic.
+
+### Dry Rot Hotspots: Fog Belt Window Sills, Deck Ledgers, Bay Window Bases
+
+Dry rot concentrates wherever wood stays chronically moist: window sills, deck ledger boards, bay window bases, sill plates at the foundation interface, and joist ends at exterior walls. In San Francisco's Sunset and Richmond districts — and in Pacifica's Linda Mar and Rockaway neighborhoods — coastal fog keeps exterior wood moisture content elevated for months at a time. A bay window base on a Sunset Doelger that hasn't been repainted and recaulked in a decade is a dry rot candidate.
+
+A deck ledger on a [Sausalito](/service-areas/sausalito) or [Mill Valley](/service-areas/mill-valley) home without kickout flashing (the angled metal diverter that keeps water from channeling behind the ledger) is nearly guaranteed to develop rot within 10–15 years. [Pacifica coastal home inspections](/service-areas/pacifica) routinely surface dry rot at window sill and ledger level — the salt-air fog belt in Linda Mar and Rockaway accelerates moisture intrusion faster than any other microclimate we work in.
+
+For a complete map of where dry rot initiates and progresses in Bay Area homes, the [full dry rot diagnostic and cost guide](/blog/dry-rot-bay-area-homes-spot-repair-cost) covers failure patterns by location and housing era. And if you're evaluating siding alongside rot damage, the [James Hardie installation cost guide](/blog/hardie-board-installation-cost-bay-area-2026) covers how rot-resistant fiber cement compares to wood in the fog belt.
+
+### Subterranean Termite Hotspots: Foundation-Adjacent Wood, Crawl Space, Earth-to-Wood Contact
+
+Subterranean termites operate from the soil up. Any wood in direct or near-direct contact with the ground is their access point: mudsill plates, wood form boards left in place during foundation pours, wood debris in crawl spaces, and posts bearing on concrete without metal hardware separation. [Oakland](/service-areas/oakland) and [Berkeley](/service-areas/berkeley) homes in Rockridge, Temescal, and Elmwood — built on clay soils with crawl space construction — are high-frequency subterranean termite environments. The clay retains moisture, supports soil-colony populations, and creates the conditions *Reticulitermes hesperus* prefers. Check for mud tubes at the foundation stem wall and at any crawl space pier showing staining or soil deposits.
+
+[Alameda](/service-areas/oakland) Victorian rowhouses with raised foundations and unvented crawl spaces are another predictable subterranean termite environment — the crawl space moisture and earth-to-wood contact at the mudsill create ideal colony access. If your home has showing any of the [5 signs of foundation problems](/blog/foundation-repair-signs-san-francisco), there's a meaningful chance subterranean termite activity at the mudsill is a contributing factor worth investigating.
+
+### Drywood Termite Hotspots: Attic Rafters, Fascia, Door Jambs, Window Frames
+
+Drywood termites don't need soil — they infest dry, exposed wood above grade. Attic rafters in [Berkeley](/service-areas/berkeley) Craftsman bungalows, fascia boards on Alameda Victorian rowhouses, and wood door and window frames throughout the Bay Area are the most common drywood termite locations. You'll often find frass accumulations in the attic or along the top plate of exterior walls. Unlike subterranean damage, which tracks up from the foundation, drywood termite damage can appear anywhere in the structure — including well above the crawl space, where it often goes undetected for years.
+
+If a drywood termite colony has damaged fascia or trim and you're evaluating siding replacement at the same time, the [stucco vs Hardie board vs wood siding comparison](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area) is worth reading before deciding on replacement material.
+
+---
+
+## What If You Have Both? (It's Common)
+
+**Dry rot and termite damage frequently co-occur in Bay Area homes because termite-damaged wood retains moisture, creating conditions for fungal decay to establish.** A subterranean termite colony that has been active in a crawl space sill plate for several years leaves behind damaged wood with disrupted surface integrity — that same wood absorbs ground moisture at accelerated rates and becomes a fungal decay site. The reverse is also true: chronically moist, rot-softened wood is easier for termites to colonize than sound, dry framing.
+
+When you find both, the repair sequence matters. Pest control treats the active termite infestation first — that work requires a license from the **California Structural Pest Control Board**, the state agency that licenses termite inspectors and pest control operators who treat structural infestations. This is a separate licensing pathway from a Class B general building contractor license. Once the pest control operator completes treatment and confirms the infestation is resolved, the structural contractor removes the damaged wood, addresses the moisture source (failed flashing, inadequate crawl space drainage, missing vapor barrier), and replaces the framing.
+
+Gadget Construction repairs dry rot and termite-damaged framing across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, [Daly City's](/service-areas/daly-city) Westlake, and Marin's coastal corridor — but we do not perform termite treatment. That work requires a California Structural Pest Control Board license, which is separate from our Class B general building contractor license (CA License #1132983). The two scopes are complementary, not interchangeable.
+
+---
+
+## What Dry Rot Repair Costs in the Bay Area (Our Scope)
+
+Dry rot repair is Gadget Construction's scope — not termite treatment. Here's what structural wood repair costs when fungal decay is the confirmed problem.
+
+**Localized dry rot repair in the Bay Area costs $800–$2,500 per affected area in 2026, while whole-wall framing replacement runs $4,000–$12,000.** Structural framing failures — rotted sill plates, joist ends, or beam bearing points — push costs to $12,000–$30,000+ depending on scope and crawl space access constraints.
+
+Those ranges reflect real variation based on location, extent of damage, and whether the moisture source driving the rot has been corrected. A [Daly City](/service-areas/daly-city) Westlake home with a single rotted window sill and intact framing behind it is a $900–$1,500 repair. A Sunset rowhouse where the fog-side sill plate has been wet for 15 years is a $12,000–$25,000 scope involving crawl space access, shoring, full sill replacement, and anchor bolting.
+
+| Damage Scope | Typical Cost (2026) | Example Location |
+|---|---|---|
+| Single sill / trim repair | $800–$2,500 | Sunset window sill, Daly City fascia |
+| Multi-area / whole-wall | $4,000–$12,000 | Richmond Edwardian, Pacifica bungalow |
+| Structural sill plate / joists | $12,000–$30,000+ | Crawl space, fog-belt Doelger |
+
+Dry rot repair always requires fixing the moisture source. Replacing damaged wood without correcting the drainage, flashing, or ventilation failure that caused the rot is a temporary repair. For cost depth by damage stage and location, the [full dry rot diagnostic and cost guide](/blog/dry-rot-bay-area-homes-spot-repair-cost) has per-repair pricing from 500+ Bay Area projects. For structural framing failures — sagging floors, rotted beams, failing sill plates — the [structural repair cost guide for San Francisco homes](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) covers those scopes in detail.
+
+---
+
+## What Termite Damage Repair Costs (After Pest Control Does Their Part)
+
+Structural repair of termite damage is a two-step process: a licensed pest control operator treats the infestation first, then a general contractor repairs the structural damage. These are separate scopes, separate bills, and separate licensing requirements.
+
+**Structural repair of termite-damaged framing in Bay Area homes costs $3,500–$45,000+ in 2026, performed after a licensed pest control operator treats the active infestation.** Pest control treatment typically runs $800–$3,000 depending on method (localized spot treatment vs. whole-house fumigation for drywood termites) and infestation extent — billed separately by the pest control operator.
+
+After treatment, structural repair cost depends on what the termites damaged:
+
+- **Localized trim, sill, or window frame repair:** $600–$2,000. Replacing a termite-hollowed window sill, door jamb, or section of fascia with new dimensional lumber or composite trim. Common outcome after drywood termite treatment at Alameda or Berkeley bungalows.
+- **Joist or beam repair/replacement:** $3,500–$15,000. Subterranean termites active in a crawl space for years frequently damage joist ends at the sill plate or the sill plate itself. Sistering or replacing affected joists, repairing the sill, and anchor-bolting is a combined scope.
+- **Major structural repair:** $15,000–$45,000+. When a subterranean colony has compromised multiple bays of framing, the carrying beam, or the full perimeter sill plate, the structural repair scope approaches a full sill plate replacement — because that's often what it is.
+
+[Structural repair of damaged framing](/services/structural-repairs) after termite treatment follows the same engineering, permitting, and shoring requirements as any Bay Area structural repair scope. The SF Department of Building Inspection (SF DBI) — the city agency that issues residential permits for structural, mechanical, and exterior work in San Francisco — requires a permit for any structural framing replacement. Termite damage doesn't create a permit exemption. Similar requirements apply in Oakland's Planning & Building Department and Berkeley's Planning & Development Department.
+
+If termite damage has reached the point where you're replacing multiple framing members, the [structural repair cost guide](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) will give you a clearer picture of what that full scope involves.
+
+---
+
+## When to Call a Pest Inspector vs a General Contractor
+
+This is the decision most Bay Area homeowners get stuck on. Here's a clear framework based on what you're seeing.
+
+**Start with a pest inspector if you're seeing any of these:** mud tubes at the foundation or crawl space, frass piles below wood framing, discarded wings near windows, or hollow-sounding wood with no moisture source nearby. The California Structural Pest Control Board licenses the inspectors and operators who assess and treat structural infestations — that inspection produces a Section 1 (active infestation) or Section 2 (conditions conducive to infestation) report, which is the documented baseline you need before any structural repair scope begins. A pest inspection typically costs $150–$300 and gives you a written findings report the contractor then uses to scope the repair.
+
+**Start with a general contractor if you're seeing:** soft, crumbly wood near a water source, a musty smell in the crawl space, or visible fungal growth. These are dry rot indicators where the moisture source and extent of structural damage need assessment before any treatment question is relevant. [Bay Area dry rot and structural wood repair](/services/exterior-repairs) is Gadget Construction's primary scope for these situations.
+
+**Call both — pest inspector first, then contractor — when you have:** hollow-sounding wood, a musty smell, and a known moisture problem. That combination suggests co-occurring damage. The pest inspector confirms and treats the infestation. Gadget Construction (CA License #1132983) then assesses the structural damage, scopes the repair, and handles permitting through the appropriate Bay Area jurisdiction — SF DBI, Marin Community Development Agency (CDA), Oakland's Planning & Building Department, or Berkeley's Planning & Development Department.
+
+[Pacifica coastal home inspections](/service-areas/pacifica) frequently surface both problems simultaneously. The salt-air climate in Linda Mar and Rockaway accelerates wood degradation, and the older crawl space construction in that housing stock creates moisture conditions that support both fungal and subterranean termite activity.
+
+---
+
+## Frequently Asked Questions
+
+### How can I tell if I have dry rot or termites in my Bay Area home?
+
+Run the screwdriver test first: press a flat-head screwdriver into any suspicious wood. Dry rot yields with a crumbly texture — the wood breaks into cubical fragments. Termite damage yields suddenly as the tip punches through a thin veneer into a hollow gallery. Then check for secondary evidence: dry rot produces a musty smell and sometimes visible fungal mycelium. Termites produce mud tubes (subterranean species), frass piles below wood (drywood species), or discarded wings near windows. If you have both soft wood and frass or mud tubes, you likely have both problems simultaneously.
+
+### Do dry rot and termite damage look the same?
+
+No — the physical evidence is distinctly different. Dry rot produces a brown, cubically cracked, crumbly mass that looks like diced wood. Termite damage produces intact-looking wood with hollow galleries inside (subterranean) or frass-packed kick-holes in otherwise sound wood (drywood). Surface discoloration appears in both cases, but the fracture pattern, smell, and debris are different enough that a probe test and visual inspection typically separate the two. **Dry rot vs termites** is a diagnosis you can make yourself before calling anyone.
+
+### Can you have dry rot and termites at the same time?
+
+Yes — and it's common in Bay Area homes. Termite-damaged wood retains moisture more readily than sound wood, creating conditions for fungal decay to establish alongside an active infestation. The reverse is also true: chronically wet, rot-softened wood is easier for termites to colonize. Pre-war Sunset, Richmond, and Alameda homes with crawl space moisture issues frequently show both problems at sill plate level. The repair sequence is pest treatment first, then structural repair — you can't correctly scope the framing repair until the infestation is confirmed cleared.
+
+### Who do I call first — a pest inspector or a contractor?
+
+If you're seeing mud tubes, frass, or discarded wings, call a pest inspector first. The California Structural Pest Control Board licenses the inspectors and operators who assess and treat structural infestations — that inspection report documents what the contractor then scopes for structural repair. A pest inspection costs $150–$300 and produces written findings. If you're seeing soft wood with a musty smell and a visible moisture source but no insect evidence, call a general contractor. When both signs are present, pest inspector first — always.
+
+### How much does termite damage repair cost in San Francisco?
+
+Structural repair of termite-damaged framing in San Francisco runs $600–$45,000+ in 2026, depending on extent. Localized trim or sill replacement costs $600–$2,000. Joist or sill plate damage in a crawl space runs $3,500–$15,000. Major structural damage involving multiple framing bays runs $15,000–$45,000+. These figures cover the contractor's repair scope only — pest control treatment ($800–$3,000 typical) is billed separately by the licensed pest control operator before structural repair begins. SF DBI permits are required for any structural framing replacement.
+
+### Are drywood or subterranean termites more common in the Bay Area?
+
+Both species are active throughout the Bay Area, but they concentrate in different locations. Subterranean termites (*Reticulitermes hesperus*) are the more common structural threat in homes with crawl spaces and earth-to-wood contact — East Bay and Peninsula homes on clay soils are high-frequency environments. Drywood termites (*Incisitermes minor*) infest above-grade wood without soil contact and are found throughout the region in attic framing, fascia, and window frames. Many Bay Area homes have both species present in different locations simultaneously, making a comprehensive pest inspection — not just a visual check — important before scoping any repair.
+
+### Does Gadget Construction do termite treatment?
+
+No. Termite treatment requires a license from the California Structural Pest Control Board — a separate licensing pathway from the Class B general building contractor license (CA License #1132983) that Gadget Construction holds. Gadget Construction performs the structural repair of damaged framing after a licensed pest control operator has treated and cleared the active infestation. During a free exterior assessment, we'll tell you honestly if the damage pattern suggests active termites and you need a pest inspector before we can accurately scope the structural repair.
+
+---
+
+## Ready to Diagnose What's Actually Eating Your Wood?
+
+Not sure if it's dry rot, termites, or both? Gadget Construction provides free exterior assessments with written photo findings — and we'll tell you honestly if you need a pest inspector before we can do our part. We've completed 500+ Bay Area projects across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, [Daly City's](/service-areas/daly-city) Westlake, [Sausalito](/service-areas/sausalito), [Mill Valley](/service-areas/mill-valley), [Oakland](/service-areas/oakland), [Berkeley](/service-areas/berkeley), and Alameda — backed by a 5-year workmanship warranty in writing on every project. CA License #1132983, Class B general building contractor.
+
+Schedule your free assessment through our [Bay Area dry rot and structural wood repair](/services/exterior-repairs) page. You'll get written findings, photos, and a straight answer about what's damaged, what caused it, and who needs to be involved to fix it right.
+    `.trim(),
+  },
+
+  {
     slug: "structural-repair-cost-san-francisco-sagging-floors-rotted-beams",
     featuredImage: "/images/blog-structural-repair-cost-san-francisco-sagging-floors-rotted-beams.png",
     title: "Structural Repair Cost in San Francisco: Sagging Floors, Rotted Beams, Failing Sill Plates (2026)",
