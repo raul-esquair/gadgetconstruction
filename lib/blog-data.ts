@@ -41,6 +41,242 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "composite-deck-timeline-how-long-build-sf-bay-area",
+    title: "How Long Does It Take to Build a Composite Deck in the Bay Area? (Real 2026 Timelines)",
+    metaTitle: "Composite Deck Build Timeline Bay Area 2026 | Real Weeks",
+    excerpt:
+      "Most Bay Area composite decks take 8–16 weeks from signed contract to final inspection — but only 2–4 weeks of that is actual construction. Here's where the other 10 weeks go, by jurisdiction.",
+    date: "2026-11-02",
+    readingTime: "15 min read",
+    relatedService: "composite-decks",
+    faqs: [
+      {
+        "question": "How long does it take to build a composite deck in San Francisco?",
+        "answer": "A composite deck in San Francisco typically takes 8–14 weeks from signed contract to final inspection in 2026. Simple flat-lot decks with over-the-counter SF DBI permits run 8–10 weeks. Multi-level or elevated decks requiring Structural Advisory Committee review at SF DBI run 12–16 weeks. Hillside decks with full structural engineering and SAC review run 14–20 weeks. Actual construction is 2–3 weeks of that total; the rest is SF DBI permit review, inspection scheduling, and material lead time."
+      },
+      {
+        "question": "How long does SF DBI take to approve a deck permit?",
+        "answer": "SF DBI deck permit review takes 2–8 weeks depending on complexity. Simple flat-lot deck permits may clear over the counter or within 2–4 weeks. Elevated or hillside decks requiring Structural Advisory Committee review add 4–6 weeks to that baseline. Submitting in October through February consistently produces faster results than spring submittals, when the SF DBI queue is at its longest."
+      },
+      {
+        "question": "Can a deck be built in 2 weeks?",
+        "answer": "The construction itself — framing, composite boards, railing — can be completed in 2 weeks for a standard 300–400 sq ft flat-lot deck. But the total deck project duration from signed contract to legal, permitted completion is 8–16 weeks in the Bay Area because of permit review time. A deck built without permits isn't a finished project — it's a disclosure liability at resale and a code violation. Any contractor promising a '2-week total' timeline in a Bay Area jurisdiction that requires permits is omitting the permit phase, not delivering a faster process."
+      },
+      {
+        "question": "How long does Marin County take for deck permits?",
+        "answer": "Unincorporated Marin County permit review through the Marin CDA runs 3–6 weeks for standard decks and 6–10 weeks for hillside or elevated scopes. Each incorporated Marin city — Mill Valley, Sausalito, Tiburon, San Rafael, Ross, Larkspur — operates its own building department with its own timelines. Mill Valley typically runs 3–5 weeks for standard decks. Sausalito waterfront and hillside decks, which almost always require a structural engineer stamp, run 5–8 weeks."
+      },
+      {
+        "question": "What time of year is best to build a deck in the Bay Area?",
+        "answer": "October through February produces the fastest permit approvals at most Bay Area jurisdictions — queues are shorter than spring and summer. Construction in November through January carries atmospheric river exposure, which can delay outdoor framing by 3–10 days. February and March offer the best balance: short permit queues and improving weather. Spring (March through June) produces the worst permit backlogs at SF DBI and Berkeley's Planning & Development Department, even though the weather is ideal."
+      },
+      {
+        "question": "How long does it take to get a structural engineer stamp on a hillside deck?",
+        "answer": "Structural engineer drawings for a hillside composite deck typically take 2–4 weeks from initial site data to stamped permit-ready plans. That includes the engineer's site visit, load calculations, footing design, and drawing preparation. If SF DBI or the Marin CDA issues plan check comments requiring revised calculations, a resubmittal round adds another 2–4 weeks. Total engineer-to-permit-approval time on a hillside scope routinely runs 6–10 weeks. Contractors with established engineering relationships can compress the drawing preparation phase to 1–2 weeks."
+      },
+      {
+        "question": "Does Trex or TimberTech take longer to deliver in the Bay Area?",
+        "answer": "It depends on the product line. Premium composite decking brands like TimberTech AZEK Harvest and Trex Signature can add 3–6 weeks of material lead time to a Bay Area project, while in-stock Trex Enhance and Fiberon Sanctuary typically ship within 5–10 business days. Standard TimberTech Reserve lines are generally available from Bay Area distributors in 1–2 weeks. If you're choosing a premium board in a specific color or finish, confirm stock availability before finalizing permit drawings — changing materials post-permit requires a plan amendment and additional review time."
+      }
+    ],
+    content: `
+## The Short Answer: 8–16 Weeks Total, 2–4 Weeks of Actual Construction
+
+A typical Bay Area composite deck takes 8–16 weeks from signed contract to final inspection in 2026, with only 2–4 weeks of actual on-site construction. The remaining 10–12 weeks are permits, engineering, material lead times, and inspection scheduling — not contractor delays. Where your project lands in that range depends almost entirely on your jurisdiction's permit review queue, your site's complexity, and whether you're building on flat ground or a Bay Area hillside.
+
+If you're trying to understand [composite deck cost breakdown with permit line items](/blog/composite-deck-cost-san-francisco) alongside this timeline, that post covers what each phase costs in dollars. This one covers what each phase costs in weeks.
+
+---
+
+## Why Does Composite Deck Construction Take So Long in the Bay Area?
+
+Most homeowners expect a deck to be a fast project. You're not building a house — how complicated can it be? The deck itself isn't complicated. The Bay Area permit process is.
+
+Three factors drive total composite deck construction timeline, and only one of them involves actual construction.
+
+**Permit review timelines.** The San Francisco Department of Building Inspection (DBI) is the city agency that issues permits for structural, mechanical, and exterior work in San Francisco. SF DBI deck permit review takes 2–8 weeks depending on complexity, with over-the-counter approval available for simple flat-lot decks and Structural Advisory Committee review adding 4–6 weeks for hillside projects. The Marin Community Development Agency (CDA) is the county department that reviews and permits construction in unincorporated Marin County, with each incorporated city — Mill Valley, Sausalito, Tiburon, San Rafael, Ross, Larkspur — operating its own building department. Marin CDA and incorporated Marin city departments run 3–8 weeks. Peninsula jurisdictions like Palo Alto often run 4–12 weeks, particularly for elevated or engineered scopes. None of these timelines are negotiable. You cannot pay to skip the queue.
+
+**Structural engineer requirements.** A structural engineer stamp is a licensed professional engineer's seal applied to construction drawings certifying that the design meets structural code — required in the Bay Area for all hillside decks, multi-level decks, and decks over 8 feet above grade. Hillside composite deck construction in the Bay Area averages 14–20 weeks total — roughly double the timeline of a flat-lot deck of the same square footage — because of structural engineering and foundation requirements. Engineer back-and-forth on drawings, plan check comments from SF DBI, and resubmittal rounds can each add 2–4 weeks.
+
+**Material lead times.** Premium composite decking brands like TimberTech AZEK Harvest and Trex Signature can add 3–6 weeks of material lead time to a Bay Area project, while in-stock Trex Enhance and Fiberon Sanctuary typically ship within 5–10 business days. Material selection finalized before the permit is submitted is material that can be ordered before approval clears — a meaningful overlap that compresses overall deck project duration.
+
+California Residential Code (CRC) Section R105.2 defines the permit exemption threshold — decks not exceeding 200 square feet, not attached to the dwelling, and not more than 30 inches above grade are exempt from permit requirements. Most Bay Area composite deck projects exceed at least one of those criteria and require a permit. Assuming otherwise is the most common planning mistake Gadget Construction sees across its 500+ Bay Area projects.
+
+For a full breakdown of what each jurisdiction requires in the submittal package, see the post on [detailed permit requirements by jurisdiction](/blog/composite-deck-permits-bay-area-sf-marin-east-bay).
+
+---
+
+## The 6 Phases of a Bay Area Composite Deck Build
+
+How long does deck construction take in the Bay Area? The honest answer requires breaking the project into six distinct phases — because the time concentrates very differently across each one.
+
+### Phase 1: Design and Material Selection (1–3 Weeks)
+
+This phase covers site assessment, deck layout, material selection, and structural drawing preparation. A contractor visits the site to measure, assess slope, check ledger attachment conditions, and evaluate any existing rot or framing issues at the house connection point. Homeowner decisions on decking brand, board color, railing style, and post finish happen here.
+
+What delays it: homeowner indecision on materials, discovery of dry rot at the existing ledger or rim joist requiring repair before drawings can be finalized, and contractors who don't maintain existing relationships with structural engineers. Choose a composite material before permit drawings are submitted — changing from Trex Transcend to TimberTech AZEK after permit submission can require a plan amendment and additional review time. The [Trex vs. TimberTech vs. Fiberon comparison](/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026) is worth reading before this phase if you haven't locked in a brand.
+
+### Phase 2: Permit Submission and DBI/CDA Review (2–8 Weeks)
+
+Permit drawings are submitted to the appropriate building department. For San Francisco projects, that's SF DBI. For [Mill Valley deck construction](/service-areas/mill-valley), that's the City of Mill Valley Building Department. For unincorporated Marin sites, it's the Marin CDA. Oakland projects go to the Oakland Planning & Building Department. Berkeley projects go to the Berkeley Planning & Development Department. Daly City projects go to the Daly City Department of Economic & Community Development.
+
+Phase 2 is the single biggest variable in the entire composite deck construction timeline. What delays it: incomplete drawing submittals, plan check comments requiring revised structural calculations, hillside or elevated deck projects triggering Structural Advisory Committee review at SF DBI, and high-volume submittal periods. Spring and early summer produce the longest queues at every Bay Area jurisdiction. Submitting in October through February consistently produces faster review.
+
+### Phase 3: Material Ordering and Delivery (1–4 Weeks)
+
+Once permit approval is confirmed, materials are ordered. Standard composite decking from Trex Enhance or Fiberon Sanctuary arrives in 5–10 business days from Bay Area distributors. Premium lines — TimberTech AZEK Harvest, Trex Signature, Fiberon Paramount in custom colors — can run 3–6 weeks from order to delivery. Structural framing lumber and hardware are typically available locally in 3–5 days.
+
+Ordering materials before permit approval is an option for experienced contractors who know the permit will clear without material changes — but it's a risk homeowners should explicitly authorize. If your project needs premium boards in a specific color, discuss lead time before permit submission so ordering can happen in parallel.
+
+### Phase 4: Demolition and Framing (3–7 Days)
+
+Demolition of an existing deck and framing installation typically runs 3–7 days of on-site work for a standard single-level composite deck on a flat lot. Hillside projects with poured concrete piers or helical pile foundations extend this phase to 1–3 weeks depending on the number of footings, concrete cure time, and structural complexity.
+
+What delays it: dry rot discovery at the ledger or rim joist. This is the most common delay trigger in Bay Area deck construction. The contractor exposes the ledger attachment point and finds rot extending into the band joist or rim joist behind it. Repairing that damage is the right call — not a contractor upsell — but it adds 1–3 weeks to this phase. Sunset Doelger homes, [Sausalito](/service-areas/sausalito) hillside houses, and [Daly City](/service-areas/daly-city) Westlake ranches are particularly prone to this discovery. For a full picture of what ledger rot looks like and how far it typically spreads, the guide on [dry rot in Bay Area homes](/blog/dry-rot-bay-area-homes-spot-repair-cost) covers it in detail.
+
+An intermediate framing inspection is required before decking installation — the building inspector must approve the framing before it's covered.
+
+### Phase 5: Decking, Railing, and Finish Install (4–10 Days)
+
+Composite board installation, railing system assembly, post cap and fascia trim, and any integrated lighting or electrical rough-in all happen here. For a 300–400 sq ft single-level deck, composite board installation takes 2–4 days. Railing and trim adds 2–4 days. Electrical for low-voltage deck lighting, if in scope, runs 1–2 additional days.
+
+What delays it: material defects requiring replacement boards (rare with Trex or TimberTech but not unknown), railing special-order components, and weather. An atmospheric river is a long, narrow corridor of concentrated moisture in the atmosphere that produces sustained heavy rainfall — a Bay Area winter weather pattern that routinely halts outdoor construction for 3–10 days at a time. Projects running November through February carry meaningful atmospheric river exposure. Framing can proceed in light rain with appropriate protection; composite board installation cannot.
+
+### Phase 6: Final Inspection and Punch List (1–3 Weeks)
+
+After construction is complete, the contractor schedules the final inspection with the relevant building department. At SF DBI, final inspection scheduling currently runs 1–2 weeks from request to appointment. Marin CDA and Peninsula jurisdictions vary — some schedule within a week, others run 2–3 weeks out during busy seasons.
+
+The inspector verifies ledger attachment, guard railing height and load resistance, stair geometry, and structural connections. If any items fail, corrections and a re-inspection add another 1–2 weeks. A contractor who builds to the inspection checklist the first time avoids that delay. Gadget Construction's 5-year workmanship warranty — in writing on every project — covers defects that might otherwise surface at re-inspection.
+
+---
+
+## Timeline by Project Type
+
+Composite deck build time varies significantly by project complexity. Here's how each type breaks down from signed contract to final inspection.
+
+### Simple Flat-Lot Deck (8–10 Weeks Total)
+
+A ground-level or low-elevation deck on a flat lot, attached to the house, under 400 sq ft, and not requiring a structural engineer stamp. Over-the-counter permit approval at SF DBI or same-week approval at some Peninsula departments is possible for this scope. Material lead time for in-stock composite is 5–10 business days. Construction runs 5–10 days. Final inspection schedules within 1–2 weeks.
+
+Phase breakdown: Design (1 week) → Permit (2–3 weeks) → Materials (1 week, overlapping permit) → Demo/Framing (3–5 days) → Decking/Railing (5–7 days) → Final Inspection (1–2 weeks). **Total: 8–10 weeks.**
+
+### Multi-Level or Mid-Complexity Deck (10–14 Weeks)
+
+Two-level decks, L-shaped configurations, decks over 8 feet above grade, or decks with integrated stairs and cable railing require engineered drawings. Structural engineer stamp required. Permit review runs 3–6 weeks at most Bay Area jurisdictions. Material lead time may extend if railing components are special-order.
+
+Phase breakdown: Design + Engineering (2–3 weeks) → Permit (3–6 weeks) → Materials (2–3 weeks, overlapping permit) → Demo/Framing (1–2 weeks) → Decking/Railing/Trim (1–2 weeks) → Final Inspection (1–2 weeks). **Total: 10–14 weeks.**
+
+The [hillside deck engineering timelines](/blog/hillside-multi-level-deck-construction-sf-marin) post covers multi-level configurations in the SF and Marin context in detail — including what structural drawings need to show for these projects to pass plan check.
+
+### Hillside / Elevated Deck with Structural Engineer (14–20 Weeks)
+
+Hillside composite deck construction in the Bay Area averages 14–20 weeks total — roughly double the timeline of a flat-lot deck of the same square footage — because of structural engineering and foundation requirements. Projects in [Sausalito](/service-areas/sausalito), Mill Valley's Tamalpais Valley, the [Oakland](/service-areas/oakland) Hills, and Berkeley Hills above 500 feet fall into this category. Structural drawings require a licensed engineer. SF DBI Structural Advisory Committee review or Marin CDA hillside review may apply. Concrete pier or helical pile foundation installation adds cure time and inspection holds.
+
+Phase breakdown: Design + Engineering (3–4 weeks) → Permit + SAC Review (4–8 weeks) → Materials (3–4 weeks, overlapping permit) → Foundation + Framing (2–3 weeks) → Decking/Railing (1–2 weeks) → Final Inspection (2–3 weeks). **Total: 14–20 weeks.**
+
+### Deck with Full Permit, Pergola, Electrical (12–18 Weeks)
+
+Adding a pergola, outdoor kitchen rough-in, or 120V electrical expands the permit scope and trades involved. Electrical requires a separate electrical permit and inspection at most Bay Area jurisdictions. Pergola structural members may require a separate structural detail in the engineer's drawings. Additional trades — electrician, gas plumber for outdoor cooking — each require scheduling coordination.
+
+Phase breakdown: Design (2–3 weeks) → Combined Permit (4–6 weeks) → Materials (3–5 weeks) → Construction including trades (2–3 weeks) → Final Inspection (1–2 weeks). **Total: 12–18 weeks.**
+
+---
+
+## Timeline by Jurisdiction: SF DBI, Marin CDA, and the Peninsula
+
+Permit review timeline is the dominant variable in how long deck construction takes in the Bay Area. This table covers every jurisdiction Gadget Construction regularly works in across San Francisco, Marin, the East Bay, and the Peninsula.
+
+| Jurisdiction | Standard Permit Timeline | Complex/Hillside Permit | Final Inspection Wait | Notes |
+|---|---|---|---|---|
+| SF DBI (San Francisco) | 2–4 weeks | 6–10 weeks (SAC review) | 1–2 weeks | OTC available for simple decks; SAC adds time for elevated/hillside |
+| Marin CDA (unincorporated) | 3–6 weeks | 6–10 weeks | 1–2 weeks | Each incorporated Marin city runs its own department separately |
+| Mill Valley Building Dept. | 3–5 weeks | 5–8 weeks | 1–2 weeks | Hillside sites common; engineer stamp nearly always required |
+| Oakland Planning & Building | 3–5 weeks | 5–8 weeks | 1–2 weeks | Online submittal available; response times vary by season |
+| Berkeley Planning & Development | 4–6 weeks | 6–10 weeks | 1–3 weeks | High submittal volume; fire zone overlay may apply in the hills |
+| Palo Alto Building Dept. | 4–8 weeks | 8–12 weeks | 1–2 weeks | Detailed plan check; engineered decks may need structural peer review |
+| Daly City DECD | 2–4 weeks | 4–6 weeks | 1–2 weeks | Faster than SF DBI for comparable scope |
+
+Gadget Construction builds composite decks across San Francisco's DBI jurisdiction, [Mill Valley](/service-areas/mill-valley)'s Marin CDA, and Oakland's Planning & Building Department — and pulls permits in all of them directly. For a complete breakdown of what each jurisdiction requires in the submittal package, the post on [detailed permit requirements by jurisdiction](/blog/composite-deck-permits-bay-area-sf-marin-east-bay) covers drawing requirements, fee schedules, and inspection sequences by department.
+
+---
+
+## What Can Add Weeks to Your Project
+
+Every phase of the composite deck construction timeline has a predictable failure point. These are the most common.
+
+**Dry rot at the ledger.** The ledger board is the deck's attachment point to the house. In Sunset Doelger homes, [Sausalito](/service-areas/sausalito) hillside houses, and [Daly City](/service-areas/daly-city) Westlake ranches, that ledger is frequently rotted when exposed. Repair before new framing can be attached adds 1–3 weeks and $1,500–$4,500 in repair cost. Budget for this discovery on any pre-1980 Bay Area home with an existing deck. The post on [how to tell if you have dry rot or termites](/blog/how-to-tell-if-you-have-dry-rot-or-termites-bay-area) gives you a 90-second diagnostic you can run before work starts.
+
+**Structural engineer back-and-forth.** Plan check comments from SF DBI or the Marin CDA requiring revised structural calculations generate a resubmittal cycle — typically 2–4 additional weeks per round. Contractors with established engineer relationships and permit experience at specific departments reduce resubmittal rounds. For context on what structural drawings typically show and why revisions happen, the [structural repair cost post](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) covers the load-path logic that drives engineer decisions.
+
+**Premium material lead times.** Premium composite decking brands like TimberTech AZEK Harvest and Trex Signature can add 3–6 weeks of material lead time to a Bay Area project, while in-stock Trex Enhance and Fiberon Sanctuary typically ship within 5–10 business days. If your project is timing-sensitive, confirm stock availability before finalizing the material decision.
+
+**HOA review.** Planned communities in parts of the East Bay, Marin, and the Peninsula require HOA architectural review before construction begins. HOA review timelines run 2–8 weeks and are entirely outside the contractor's control. This is a parallel process to permit review, not sequential — start both simultaneously.
+
+**Atmospheric river delays.** Projects running November through February carry real weather exposure. A Bay Area atmospheric river can halt exterior framing and composite board installation for 3–10 days at a stretch. Build a 2-week weather buffer into any winter project schedule. The good news: permit queues are shortest in those same months, so the weather risk and the permit speed often offset each other.
+
+**Inspection scheduling backlogs.** At Berkeley's Planning & Development Department and SF DBI, framing and final inspection appointments during peak spring season (March through June) can book 2–3 weeks out. Schedule inspections proactively — not the day construction finishes.
+
+---
+
+## How to Shorten Your Composite Deck Build Time
+
+These steps are practical. Each one is specific to how Bay Area permit queues and supply chains actually work in 2026.
+
+**Lock in your material selection before permit submittal.** Material choice affects construction drawings — board width, railing post spacing, and fascia details all appear in the permit set. Finalizing materials before the permit goes in means you can order immediately once approval clears, cutting 2–4 weeks off the overlap between the permit and materials phases. The [composite vs. wood decking comparison](/blog/composite-vs-wood-decking-bay-area-2026) is worth reviewing if you're still weighing material categories.
+
+**Choose in-stock composite colors.** Trex Enhance Natural in Toasted Sand and Clam Shell are typically in stock at Bay Area distributors. TimberTech AZEK Harvest Collection in standard colors is usually 2–3 weeks out. Trex Signature and custom-color composite boards run 4–6 weeks. The [composite deck cost breakdown with permit line items](/blog/composite-deck-cost-san-francisco) shows how material choice affects both price and schedule simultaneously.
+
+**Use a contractor who pulls their own permits.** Some contractors hand permit coordination to the homeowner. This is slow. A contractor experienced with SF DBI, the Marin CDA, Oakland's Planning & Building Department, and Berkeley's Planning & Development Department knows exactly what each jurisdiction needs in the submittal package, reducing plan check rejection rounds. Gadget Construction pulls permits directly across all 31 cities it serves — including every jurisdiction listed in this post.
+
+**Schedule in fall or early winter.** Permit queues at most Bay Area jurisdictions are shortest from October through February. A permit submitted in October may clear in 2–3 weeks; the same submittal in April may take 6–8 weeks. If you're not in a rush to start, submitting in October for a February construction window is often the fastest overall path.
+
+**Choose a contractor with established engineer relationships.** For hillside and elevated decks requiring a structural engineer stamp, the engineer's turnaround on revised drawings after plan check comments is a major timeline variable. Contractors who regularly work with the same structural engineers get faster turnaround and fewer resubmittal rounds than one-off engagements. This is especially relevant for [Oakland](/service-areas/oakland) Hills, [Berkeley](/service-areas/berkeley) Hills, and Marin hillside projects where structural review is nearly always required.
+
+---
+
+## Frequently Asked Questions
+
+### How long does it take to build a composite deck in San Francisco?
+
+A composite deck in San Francisco typically takes 8–14 weeks from signed contract to final inspection in 2026. Simple flat-lot decks with over-the-counter SF DBI permits run 8–10 weeks. Multi-level or elevated decks requiring Structural Advisory Committee review at SF DBI run 12–16 weeks. Hillside decks with full structural engineering and SAC review run 14–20 weeks. Actual construction is 2–3 weeks of that total; the rest is SF DBI permit review, inspection scheduling, and material lead time.
+
+### How long does SF DBI take to approve a deck permit?
+
+SF DBI deck permit review takes 2–8 weeks depending on complexity. Simple flat-lot deck permits may clear over the counter or within 2–4 weeks. Elevated or hillside decks requiring Structural Advisory Committee review add 4–6 weeks to that baseline. Submitting in October through February consistently produces faster results than spring submittals, when the SF DBI queue is at its longest.
+
+### Can a deck be built in 2 weeks?
+
+The construction itself — framing, composite boards, railing — can be completed in 2 weeks for a standard 300–400 sq ft flat-lot deck. But the total deck project duration from signed contract to legal, permitted completion is 8–16 weeks in the Bay Area because of permit review time. A deck built without permits isn't a finished project — it's a disclosure liability at resale and a code violation. Any contractor promising a "2-week total" timeline in a Bay Area jurisdiction that requires permits is omitting the permit phase, not delivering a faster process.
+
+### How long does Marin County take for deck permits?
+
+Unincorporated Marin County permit review through the Marin CDA runs 3–6 weeks for standard decks and 6–10 weeks for hillside or elevated scopes. Each incorporated Marin city — Mill Valley, Sausalito, Tiburon, San Rafael, Ross, Larkspur — operates its own building department with its own timelines. Mill Valley typically runs 3–5 weeks for standard decks. Sausalito waterfront and hillside decks, which almost always require a structural engineer stamp, run 5–8 weeks.
+
+### What time of year is best to build a deck in the Bay Area?
+
+October through February produces the fastest permit approvals at most Bay Area jurisdictions — queues are shorter than spring and summer. Construction in November through January carries atmospheric river exposure, which can delay outdoor framing by 3–10 days. February and March offer the best balance: short permit queues and improving weather. Spring (March through June) produces the worst permit backlogs at SF DBI and Berkeley's Planning & Development Department, even though the weather is ideal.
+
+### How long does it take to get a structural engineer stamp on a hillside deck?
+
+Structural engineer drawings for a hillside composite deck typically take 2–4 weeks from initial site data to stamped permit-ready plans. That includes the engineer's site visit, load calculations, footing design, and drawing preparation. If SF DBI or the Marin CDA issues plan check comments requiring revised calculations, a resubmittal round adds another 2–4 weeks. Total engineer-to-permit-approval time on a hillside scope routinely runs 6–10 weeks. Contractors with established engineering relationships can compress the drawing preparation phase to 1–2 weeks.
+
+### Does Trex or TimberTech take longer to deliver in the Bay Area?
+
+It depends on the product line. Premium composite decking brands like TimberTech AZEK Harvest and Trex Signature can add 3–6 weeks of material lead time to a Bay Area project, while in-stock Trex Enhance and Fiberon Sanctuary typically ship within 5–10 business days. Standard TimberTech Reserve lines are generally available from Bay Area distributors in 1–2 weeks. If you're choosing a premium board in a specific color or finish, confirm stock availability before finalizing permit drawings — changing materials post-permit requires a plan amendment and additional review time. The [Trex vs. TimberTech vs. Fiberon post](/blog/trex-vs-timbertech-vs-fiberon-bay-area-2026) details which product lines are typically in stock locally.
+
+---
+
+## Ready to Start the Clock on Your Bay Area Deck?
+
+The permit process starts when you decide — not when construction starts. Every week of planning delay adds a week to the back end of your project.
+
+Gadget Construction provides a realistic, jurisdiction-specific timeline at the free site visit — not an optimistic "few weeks" pitch. Gadget Construction builds [Bay Area composite deck construction](/services/composite-decks) across San Francisco's DBI jurisdiction, Mill Valley's Marin CDA, and Oakland's Planning & Building Department — with 500+ Bay Area projects completed and a 5-year workmanship warranty in writing on every one. We handle permit pulling, structural engineer coordination, and inspection scheduling across SF DBI, Marin CDA, Oakland, Berkeley, and every Peninsula city.
+
+Schedule your free site visit through our [Bay Area composite deck construction](/services/composite-decks) page. You'll leave with a written timeline estimate, a jurisdiction-specific permit sequence, and a straight answer on material lead times for your chosen product. CA License #1132983, Class B general building contractor.
+    `.trim(),
+  },
+
+  {
     slug: "how-to-tell-if-you-have-dry-rot-or-termites-bay-area",
     featuredImage: "/images/blog-how-to-tell-if-you-have-dry-rot-or-termites-bay-area.png",
     title: "How to Tell If You Have Dry Rot or Termites (Bay Area Homeowner Diagnostic Guide)",
