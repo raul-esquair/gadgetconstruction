@@ -41,6 +41,240 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "dry-rot-repair-cost-bay-area-2026",
+    title: "Dry Rot Repair Cost in the Bay Area (2026): Window Sills, Decks, Framing, Full Scope",
+    metaTitle: "Dry Rot Repair Cost Bay Area 2026: Real Project Numbers",
+    excerpt:
+      "Dry rot repair in the Bay Area typically costs $800 to $30,000+ in 2026 depending on where the rot is and how far it's spread. Here's the real per-location cost math — plus how to tell what tier of repair you actually need.",
+    date: "2026-11-09",
+    readingTime: "17 min read",
+    relatedService: "exterior-repairs",
+    faqs: [
+      {
+        "question": "How much does dry rot repair cost in San Francisco?",
+        "answer": "Dry rot repair in San Francisco runs $800–$30,000+ in 2026. A single window sill repair in the Sunset or Richmond costs $800–$2,500. Bay window base rot on Doelger homes and Richmond Edwardians runs $2,500–$8,500. Structural sill plate or joist repair costs $4,500–$18,000+. SF DBI requires permits for any structural framing replacement."
+      },
+      {
+        "question": "What's the cheapest way to fix dry rot?",
+        "answer": "Catching it early is the only legitimate way to reduce dry rot repair cost. A window sill caught before rot spreads to rough framing is a $900–$1,500 repair. Left two more wet seasons, the same sill becomes a $4,000–$6,000 repair. Epoxy filler or paint over compromised wood is concealment, not a repair — it makes the next repair more expensive by hiding active fungal decay."
+      },
+      {
+        "question": "How much does it cost to replace a rotted window sill?",
+        "answer": "Replacing a rotted window sill in the Bay Area costs $800–$2,500 in 2026. That covers demo, cutback to sound framing, new pan flashing, new sill, siding patch-back, and prime coat. The lower end applies when rot is contained to the sill. If moisture has tracked into the sub-sill framing or rough opening, expect a bay window scope of $2,500–$8,500 instead."
+      },
+      {
+        "question": "Is dry rot repair covered by homeowners insurance?",
+        "answer": "Typically, no. Most Bay Area homeowners insurance policies exclude gradual moisture intrusion, rot, and fungal decay as maintenance failures. If dry rot resulted from a sudden covered event like an undetected pipe burst, a partial claim is possible — but adjusters routinely deny rot claims as gradual damage. Budget for dry rot repair as a maintenance cost, not an insurance event."
+      },
+      {
+        "question": "How much does it cost to fix dry rot on a deck ledger?",
+        "answer": "Deck ledger dry rot repair in the Bay Area costs $1,500–$4,500 in 2026. A complete repair includes the ledger board, new lag or through-bolt connections per California Residential Code (CRC) Section R507, and kickout flashing redesign. Ledger repairs in San Francisco and Marin typically require a permit — the inspector verifies attachment pattern and flashing before deck framing is reassembled."
+      },
+      {
+        "question": "Why do dry rot repair estimates vary so much?",
+        "answer": "Three reasons. First, rot extent isn't visible without demo — contractors quoting without probing are guessing. Second, some bids include full moisture management (flashing redesign, WRB, patch-back) while others quote only wood replacement. Third, access costs differ sharply between a single-story Westlake ranch and a three-story Marin hillside home. Ask every bidder what's explicitly included."
+      },
+      {
+        "question": "Can I just paint over dry rot?",
+        "answer": "No. Painting over dry rot hides the damage without stopping fungal decay — the fungus keeps consuming wood beneath the surface. It also erases visible evidence, making future assessment harder. This is the most common Bay Area homeowner mistake, and it reliably converts a $1,500 sill repair into a $6,000 framing repair by the time paint starts bubbling and peeling again."
+      }
+    ],
+    content: `
+## The Short Answer: What Dry Rot Repair Costs in the Bay Area in 2026
+
+Dry rot repair in the Bay Area costs $800–$30,000+ in 2026 depending on location and extent, with localized window sill repair at the low end and whole-wall framing replacement at the high end. Localized repairs — a single window sill, a short section of fascia — run $800–$2,500. Multi-point or whole-wall rot climbs to $4,000–$12,000. When rot reaches the structural framing — sill plates, joist ends, band joists — the number lands between $12,000 and $30,000+. Where your project falls depends almost entirely on how far the fungus has traveled from the original moisture source, which is almost always farther than it looks from the exterior.
+
+This guide covers [Bay Area dry rot repair](/services/exterior-repairs) costs by location, what's included in a legitimate scope, and the hidden line items that turn a $1,500 quote into a $6,000 change order. Numbers come from 500+ Bay Area projects, not national averages.
+
+---
+
+## Why Do Bay Area Dry Rot Repairs Cost What They Do?
+
+Dry rot is wood decay caused by specific fungi — primarily *Serpula lacrymans* and *Meruliporia incrassata* — that consume wood when moisture content stays above 20%, with the term "dry" referring to the crumbly appearance of damaged wood rather than the required moisture conditions. Understanding what drives dry rot repair cost starts with understanding what dry rot actually is: a fungal infection that spreads through wood fiber as long as moisture is present. The visible damage on the exterior is rarely where the repair ends.
+
+**Fungal spread is always worse than it looks.** A rotted window sill that appears to be 6 inches wide has frequently sent hyphal strands — the fungus's root-like network — 12 to 24 inches into adjacent framing. Every competent repair cuts back into visually healthy wood until a probe test confirms sound fiber. That cutback is what drives scope, and scope is what drives cost.
+
+**Water-source diagnosis adds time and sometimes money.** Replacing damaged wood without finding the moisture entry point produces a failed repair in 2–3 years. The water-source diagnosis — tracing the leak back to failed flashing, a missing kickout, a cracked caulk joint, or a grade-slope problem — is part of every legitimate scope. If you're still trying to determine whether you're dealing with rot or a different problem entirely, [telling dry rot from termite damage](/blog/how-to-tell-if-you-have-dry-rot-or-termites-bay-area) walks through the 90-second diagnostic.
+
+**Framing exposure cost is non-linear.** Peeling back exterior cladding to access framing requires matching siding, new weather-resistive barrier (WRB), flashing, and patch-back. A weather-resistive barrier (WRB) is a layer of material — typically housewrap or asphalt-saturated felt — installed between the sheathing and exterior cladding to block liquid water while allowing water vapor to escape. On a stucco-clad Sunset Doelger, a patch-back that integrates with the existing two- or three-coat stucco system costs more than a wood-sided home where matching the board profile is straightforward.
+
+**Access multiplies labor cost.** Single-story homes in Daly City's Westlake neighborhood have simple ladder access. A three-story [Mill Valley](/service-areas/mill-valley) hillside house with a rotted fascia above a steep slope requires full scaffolding — typically $1,500–$3,500 just for the staging — before the first demo cut.
+
+**Coastal fastener spec adds material cost.** The James Hardie Best Practices Installation Guide specifies hot-dipped galvanized or stainless steel fasteners for coastal installations — including the fog belt from San Francisco's Sunset and Richmond through Pacifica's Linda Mar and Rockaway. Standard fasteners corrode within a few years in salt-air environments, compromising the patch-back repair. The full pattern of why coastal Bay Area homes need this treatment is covered in [coastal home exterior repair patterns](/blog/5-exterior-repairs-coastal-bay-area-homes-always-need).
+
+**Lead paint testing is legally required on pre-1978 homes.** The EPA Renovation, Repair, and Painting (RRP) Rule requires contractors to test for lead paint before disturbing painted surfaces on homes built before 1978. Most Bay Area housing stock — particularly Sunset and Richmond Edwardian flats and Marin Craftsman bungalows — was built well before that threshold. Testing adds $200–$400 to the upfront scope, and lead-safe work practices add labor throughout.
+
+---
+
+## Dry Rot Repair Cost by Location
+
+Dry rot repair cost varies dramatically depending on where the rot is — because location determines how far the fungus typically travels, how complex the flashing geometry is, and whether the framing behind it is structural. Below are 2026 installed costs for each common location, drawn from Bay Area projects.
+
+### Window Sill and Trim Rot ($800–$2,500 per Window)
+
+Dry rot repair at a single window sill in the Bay Area typically costs $800–$2,500 in 2026, including demo, framing cutback, new flashing, and siding patch-back. The sill is the most common dry rot location in Bay Area homes — it collects water, holds it against the joint between the window frame and exterior wall, and gets repainted over and over without anyone addressing the underlying drainage problem.
+
+What's replaced: the rotted sill, any adjacent apron trim, and the sub-sill if moisture has tracked inward. New pan flashing or sill dam flashing is installed before the new sill goes in. Siding patch-back covers the cutback area. Common neighborhoods: any Sunset or Richmond fog-belt home built between 1900 and 1960, [Pacifica](/service-areas/pacifica) Linda Mar bungalows, [Sausalito](/service-areas/sausalito) waterfront cottages. For a visual diagnostic on what sill rot looks like at different stages, [how to spot dry rot before you call for a quote](/blog/dry-rot-bay-area-homes-spot-repair-cost) gives you the screwdriver-test protocol.
+
+### Door Threshold and Jamb Rot ($1,200–$3,500)
+
+Door threshold rot is the second most common Bay Area entry-door failure — water tracks under the door, saturates the threshold, and spreads into the sub-jamb and rough framing behind it. Cost range: $1,200–$3,500 depending on how far into the rough opening the rot has traveled. A surface threshold-only replacement runs $1,200–$1,800. When the rot extends to the king stud or the sub-sill framing, you're at $2,500–$3,500 and the door may need temporary removal and reinstallation.
+
+### Fascia and Eave Rot ($1,500–$6,000)
+
+Fascia rot develops when roof drainage runs behind the gutter and saturates the top of the fascia board — a failure almost always caused by a full or mis-pitched gutter combined with inadequate drip edge. Cost range: $1,500–$6,000 depending on linear footage affected, second- or third-floor access requirements, and whether rot has extended into the rafter tail behind the fascia.
+
+Replacing a rotted rafter tail requires sistering the tail back to sound framing or, in severe cases, a full rafter tail replacement. Sistering a joist means attaching a new structural member alongside a damaged or undersized existing joist to share the load, used when full replacement is impractical — the same technique applies to rafter tails. At a two-story [Oakland](/service-areas/oakland) or [Berkeley](/service-areas/berkeley) Craftsman where the fascia runs along a roofline 20 feet above grade, scaffolding is unavoidable.
+
+### Deck Ledger Board Rot ($1,500–$4,500)
+
+Deck ledger board dry rot repair costs $1,500–$4,500 in the Bay Area in 2026, with the ledger itself being the second most common dry rot location after window sills. Kickout flashing is a specialized metal flashing installed where a roof edge meets a vertical wall, designed to divert water away from the siding and into the gutter — one of the most common Bay Area flashing failures and a frequent root cause of bay window rot and ledger rot.
+
+A ledger without kickout flashing — or with kickout flashing that has failed or was undersized — channels water directly behind the ledger board and into the rim joist and band joist behind it. The repair includes ledger replacement, new lag bolt or through-bolt connections to code, and kickout flashing redesign — not just replacement of the flashing strip. California Residential Code (CRC) Section R507 governs deck ledger attachment requirements, including fastener pattern and flashing specifications. Any repair that restores ledger attachment is subject to those requirements and typically requires a permit and inspection in SF DBI (the San Francisco Department of Building Inspection) and Marin CDA (the Marin Community Development Agency) jurisdictions. If your deck's ledger repair crosses into the deck structure itself, the costs and permitting are covered in detail in our [composite deck permits guide](/blog/composite-deck-permits-bay-area-sf-marin-east-bay).
+
+### Bay Window Base Rot ($2,500–$8,500)
+
+Bay windows are the highest-risk dry rot location on Sunset Doelger homes, Richmond Edwardian flats, and Pacific Heights Victorians. The base of the bay — where the roof of the bay meets the exterior wall below it — is a complex intersection of roof, wall, and projecting floor that is chronically difficult to waterproof. When the kickout or step flashing at that intersection fails, water tracks directly into the framing of the bay window floor projection and into the exterior wall behind it.
+
+Cost range: $2,500–$8,500. The low end covers surface soffit and trim repair where the framing is intact. The high end covers rot that has reached the structural framing of the bay window projection itself — the rim joist, bay window joists, and the sill plate of the wall above. The full picture of where bay window rot originates and how far it typically spreads is covered in [how to spot dry rot before you call for a quote](/blog/dry-rot-bay-area-homes-spot-repair-cost).
+
+### Sill Plate / Band Joist Rot ($4,500–$18,000)
+
+Sill plate rot is where dry rot repair cost crosses from significant to serious — and where the scope crosses from cosmetic into structural. The mudsill — the pressure-treated (in newer homes) or plain Douglas fir (in older ones) plate that sits on top of the foundation and carries the floor framing — is the most consequential dry rot location in a Bay Area home. Water tracking down from exterior cladding, up from the foundation through inadequate drainage, or in from a crawl space vapor barrier failure saturates the mudsill and spreads into joist ends and the band joist behind it.
+
+Cost range: $4,500–$18,000. A localized mudsill replacement — one or two bays of framing at a single corner — runs $4,500–$7,500. A perimeter-wide sill plate replacement on a Sunset rowhouse where the fog-side wall has been chronically wet for 15 years approaches $12,000–$18,000 and requires shoring the floor system, removing the damaged sill section by section, and anchor-bolting the new sill per current seismic requirements. When the load path is involved, [structural repair when dry rot reaches the load path](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) covers the engineering and permitting requirements in detail.
+
+### Whole-Wall Framing Rot ($8,000–$30,000+)
+
+Whole-wall framing dry rot repair on Bay Area homes costs $8,000–$30,000+ in 2026, with most of the premium going to structural framing, new WRB and flashing, and siding or stucco patch-back. This scope applies when a single sustained moisture failure — a failed roof-to-wall intersection, a cracked stucco field above a window that went unfixed for years — has allowed water to track down inside the wall cavity and rot the framing from the top plate to the sill plate.
+
+Demo involves stripping the exterior cladding, removing the WRB, and exposing every framing member. Rotted studs are replaced. The rough opening at every window is rebuilt. New WRB is installed. New flashing is redesigned and installed at every penetration. New sheathing goes on, then new siding or the first coat of a new stucco system. This is a full exterior wall reconstruction, not a patch. For context on what siding patch-back costs at scale, see [siding replacement cost in San Francisco](/blog/siding-replacement-cost-san-francisco-2026) and the [stucco vs. Hardie vs. wood siding comparison](/blog/stucco-vs-hardie-board-vs-wood-siding-bay-area) for material selection at the patch-back stage.
+
+---
+
+## What's Included in a Dry Rot Repair Cost
+
+A complete dry rot repair scope includes all of these line items. If a quote omits any of them, ask specifically why.
+
+- **Inspection and probing** — screwdriver test and moisture meter readings across the affected zone and the surrounding area, not just the visible damage
+- **Water-source diagnosis** — tracing the moisture entry point and identifying the flashing, drainage, or cladding failure that caused it
+- **Demo and cutback** — removing damaged wood back to sound fiber, which is always farther than the exterior suggests
+- **Framing repair** — replacement studs, sistered joists, new rim joist sections, or sill plate replacement as required by the extent of decay
+- **New WRB** — housewrap or felt replacement in the exposed area, lapped and taped to the existing WRB at the perimeter
+- **New flashing** — not just replacing the failed piece but redesigning the flashing detail to eliminate the failure mechanism
+- **New sheathing** — where structural panels are compromised by rot or moisture
+- **Siding or stucco patch-back** — matching the existing cladding, with all coastal fastener specs applied per the James Hardie Best Practices Installation Guide for fiber cement or equivalent standards for other cladding types
+- **Prime coat on new wood** — all new exterior wood surfaces primed before patch-back cladding is installed
+
+**Not typically included:** full-elevation repaint beyond the repair area, interior drywall repair if water has tracked inside, mold remediation (a separate licensed scope), and termite treatment if infestation is discovered.
+
+---
+
+## Hidden Dry Rot Costs Most Contractors Don't Mention
+
+The following line items show up after demo but weren't in the original quote on bids written by contractors who haven't done this work at scale. A contractor who has seen hundreds of Bay Area dry rot projects knows to build them in upfront.
+
+**Scope expansion once the wall is open.** Rot spreads through framing faster than it appears on the exterior. A window sill repair that looks like a $1,200 job can expose a rotted king stud, header end, and rim joist behind it — converting it to a $4,500 scope. The only way to avoid this surprise is a contractor who probes aggressively before writing the quote and gives you a range based on worst-case cutback, not best-case.
+
+**Lead paint testing.** The EPA Renovation, Repair, and Painting (RRP) Rule applies to any repair disturbing painted surfaces on pre-1978 homes. Most Bay Area homes fall under this rule. Testing costs $200–$400 and must happen before demo begins. Lead-safe work practices during the repair add 10–15% to labor.
+
+**Scaffolding.** Third-floor fascia repairs, bay window base work on a hillside home, and any scope above 15 feet adds $1,500–$3,500 in staging before the first demo cut. Not every contractor includes this in the initial quote, especially on a fixed-fee basis.
+
+**Flashing redesign vs. replacement.** Replacing a failed kickout flashing piece with an identical piece repeats the failure. The correct repair redesigns the flashing geometry to actually divert water — which takes more labor and sometimes a different material. Some contractors quote flashing "replacement" and mean the former.
+
+**Structural engineer stamp.** When dry rot has compromised load-bearing framing — carrying beams, sill plates, posts — a structural engineer review may be required before the repair can be permitted under California Residential Code (CRC) requirements. That adds $800–$2,500 for engineering, and a permit is required for any structural framing replacement at SF DBI, the Marin Community Development Agency (CDA), [Oakland](/service-areas/oakland)'s Planning & Building Department, or [Berkeley](/service-areas/berkeley)'s Planning & Development Department.
+
+**Mold remediation.** Long-standing water intrusion in a wall cavity frequently produces mold alongside dry rot. Mold remediation is a separate licensed scope — not included in a general contractor's dry rot repair. If you smell mold when the wall opens, budget $1,500–$6,000+ for remediation before structural repair proceeds.
+
+---
+
+## Real 2026 Project Examples from 500+ Bay Area Projects
+
+These are actual scopes and costs from Gadget Construction projects. Addresses are withheld; neighborhoods and conditions are accurate.
+
+### Project 1: Sunset Doelger Bay Window Base Rot + Kickout Flashing Redesign — $7,200
+
+A Sunset District Doelger built in 1948 showed soft, paint-peeling trim at the base of the front bay window. The visible damage was a 4-foot section of soffit and fascia trim at the bay window base. Demo revealed rot tracking 18 inches into the bay window floor joist ends and the rim joist, plus a completely failed step flashing where the bay roof met the main wall above it.
+
+Scope: rotted joist ends sistered back to sound framing, new rim joist section, full kickout and step flashing redesign at the bay roof intersection, new housewrap, new fiber cement trim to match the original profile, prime coat. The flashing redesign added four hours of sheet metal work but eliminated the moisture entry point that had been running water into the bay for at least a decade. Total: $7,200. Timeline: 6 working days.
+
+### Project 2: Pacifica Linda Mar Whole-Wall Framing Rot + Hardie Patch-Back — $18,500
+
+A 1962 ranch in Linda Mar, [Pacifica](/service-areas/pacifica), had a 14-foot-wide section of the ocean-facing wall where T1-11 siding (a grooved plywood panel commonly used in 1960s–1970s construction that functions as both sheathing and cladding) had been failing for years without repair. Water had tracked behind the siding and down the wall framing. Demo exposed rot across 12 studs from the top plate to within 8 inches of the mudsill, and compromised OSB sheathing throughout.
+
+Scope: full stud bay replacement, new OSB sheathing, new Tyvek WRB lapped to the existing wrap at the perimeter, new James Hardie HardiePlank lap siding with hot-dipped galvanized fasteners per the James Hardie Best Practices Installation Guide for coastal zones, new step flashing at the roof-to-wall intersection above. Lead paint testing added $300 to the scope upfront. Total: $18,500. Timeline: 12 working days. For context on what Hardie installation adds to a patch-back scope, the [James Hardie installation cost breakdown](/blog/hardie-board-installation-cost-bay-area-2026) covers coastal fastener requirements in detail. [Coastal home exterior repair patterns](/blog/5-exterior-repairs-coastal-bay-area-homes-always-need) covers the failure modes that make Pacifica and the fog-belt corridor high-frequency dry rot environments.
+
+### Project 3: Mill Valley Cedar Fascia Rot + Three-Story Scaffolding — $9,800
+
+A 1974 hillside home in Mill Valley's Tamalpais Valley had rotted cedar fascia running the full 40-foot width of the main roofline above the uphill side of the structure — approximately 22 feet above the slope below. The gutter had been running over the back edge for years, saturating the top of the fascia and spreading into 8 rafter tails.
+
+Scope: full fascia replacement in finger-jointed primed pine (matching the original profile), 8 rafter tail replacements sistered to sound framing, new drip edge and gutter rehang at proper pitch, scaffolding for three-story access. Scaffolding alone was $2,800 of the $9,800 total. Without the scaffolding line in the quote upfront, this job would have looked like a $6,000 repair — and then surprised the homeowner with a change order. Timeline: 9 working days including scaffold setup and tear-down. Gadget Construction serves Mill Valley and the [broader Marin coastal corridor](/service-areas/mill-valley) for exactly these hillside access scenarios.
+
+---
+
+## How to Avoid Paying for Dry Rot Twice
+
+Dry rot repair fails within 2–3 years if the water source isn't fixed as part of the scope — the single most common Bay Area contractor shortcut. This is not a minor risk. The fungus responsible for dry rot doesn't stop when you remove the damaged wood. If the moisture that fed it is still entering the wall system, the new wood becomes the next food source within one or two wet seasons.
+
+A legitimate repair scope always includes three things: remove the damaged wood, address the moisture source, and restore the water management system (WRB, flashing, cladding) so the repaired area sheds water the way it was supposed to from the start.
+
+What a shortcut looks like in a competitor bid: "Replace rotted sill, prime and paint." No mention of flashing. No mention of WRB. No mention of how water got there. That repair will rot again.
+
+**Questions to ask any bidder before signing:**
+
+- Where is the water coming from, and what are you doing to stop it?
+- What flashing are you replacing or redesigning — and can you show me the detail?
+- How far are you cutting back into the framing, and what's your process for confirming you've reached sound wood?
+- Is your quote a fixed price or does it have an open-ended scope expansion clause?
+- What does your warranty cover, and for how long?
+
+Gadget Construction's answer to that last question: a 5-year workmanship warranty, in writing, on every repair — covering both the structural work and the water management details. If the repair fails because of a workmanship defect within five years, it's our scope to fix. You can see the full scope of what that covers on our [exterior repairs service page](/services/exterior-repairs).
+
+---
+
+## Frequently Asked Questions
+
+### How much does dry rot repair cost in San Francisco?
+
+Dry rot repair in San Francisco runs $800–$30,000+ in 2026. A single window sill repair in the Sunset or Richmond costs $800–$2,500. Bay window base rot — common on Doelger homes and Richmond Edwardians — runs $2,500–$8,500. Structural sill plate or joist repair costs $4,500–$18,000+. The range is wide because the fungus spreads unpredictably, and the real scope isn't confirmed until the wall is open. SF DBI requires permits for any structural framing replacement.
+
+### What's the cheapest way to fix dry rot?
+
+Catching it early is the only way to legitimately reduce dry rot repair cost. A window sill caught before rot spreads to the rough framing is a $900–$1,500 repair. The same sill left for two more wet seasons — where rot has tracked into the king stud and rim joist — becomes a $4,000–$6,000 repair. There is no cheap shortcut that holds. Epoxy filler or surface paint over compromised wood is not a repair; it's concealment, and it makes the next repair more expensive by hiding active fungal decay.
+
+### How much does it cost to replace a rotted window sill?
+
+Replacing a rotted window sill in the Bay Area costs $800–$2,500 in 2026. That range covers demo, probing and cutback to sound framing, new pan flashing, new sill, siding patch-back, and prime coat. The lower end applies when rot is contained to the sill itself. The higher end applies when moisture has tracked into the sub-sill framing or the lower edge of the rough opening. If rot has reached the framing behind the window, you're looking at a bay window scope ($2,500–$8,500) rather than a surface sill repair.
+
+### Is dry rot repair covered by homeowners insurance?
+
+Typically, no. Most Bay Area homeowners insurance policies exclude damage caused by gradual moisture intrusion, rot, and fungal decay — categorized as a maintenance failure rather than a sudden, accidental loss. If dry rot resulted from a sudden, covered water event (a pipe burst that went undetected for days), there may be a partial claim, but adjusters routinely deny rot claims on the basis that the damage was gradual. Don't count on insurance. Budget for dry rot repair as a maintenance cost.
+
+### How much does it cost to fix dry rot on a deck ledger?
+
+Deck ledger dry rot repair in the Bay Area costs $1,500–$4,500 in 2026. A complete repair includes the ledger board, new lag or through-bolt connections per California Residential Code (CRC) Section R507, and kickout flashing redesign. Ledger repairs in San Francisco and Marin typically require a permit and inspection — the ledger is a structural connection between the deck and the house, and the inspector verifies attachment pattern and flashing before deck framing is reassembled.
+
+### Why do dry rot repair estimates vary so much?
+
+Three reasons. First, the extent of rot isn't visible without demo — contractors who quote without probing are guessing at scope. Second, some estimates include the full repair (flashing redesign, WRB, patch-back) while others quote only wood replacement and leave moisture management out entirely. Third, access costs vary dramatically between a single-story Westlake ranch and a three-story Marin hillside home. When comparing bids, ask every contractor what's explicitly included — specifically flashing, WRB, and the moisture-source fix. A quote that omits all three will produce a failed repair.
+
+### Can I just paint over dry rot?
+
+No. Painting over dry rot conceals the damage without stopping the fungal decay — the fungus continues consuming wood fiber beneath the painted surface. It also makes future assessment harder because the visible evidence disappears. Painting over dry rot is the most common mistake Bay Area homeowners make when deferring a repair, and it consistently converts a $1,500 sill repair into a $6,000 framing repair by the time the paint begins to bubble and peel again. For a diagnostic walkthrough of what active dry rot looks like versus surface weathering you can safely leave alone, [how to spot dry rot before you call for a quote](/blog/dry-rot-bay-area-homes-spot-repair-cost) gives you the screwdriver-test protocol and the visual patterns to look for.
+
+---
+
+## Ready to Get a Real Number on Your Dry Rot Repair?
+
+Dry rot doesn't wait, and the fungus spreads faster than the exterior damage suggests.
+
+Gadget Construction provides free inspections with written photo findings and fixed-price estimates — no scope-of-work hedges, no change-order surprises, no cosmetic patches that fail in two seasons. Gadget Construction repairs dry rot across San Francisco's Sunset and Richmond, Pacifica's Linda Mar, Daly City's Westlake, and Marin's coastal corridor, with 500+ Bay Area projects completed and a 5-year workmanship warranty in writing on every one.
+
+Schedule your free inspection through our [Bay Area dry rot repair](/services/exterior-repairs) page. You'll leave with written findings, photos, and a fixed number. If you're not yet sure whether you're looking at dry rot, termite damage, or both, [telling dry rot from termite damage](/blog/how-to-tell-if-you-have-dry-rot-or-termites-bay-area) covers the 90-second diagnostic before you call anyone. CA License #1132983, Class B general building contractor, serving 31 cities across 6 Bay Area counties.
+    `.trim(),
+  },
+
+  {
     slug: "composite-deck-timeline-how-long-build-sf-bay-area",
     title: "How Long Does It Take to Build a Composite Deck in the Bay Area? (Real 2026 Timelines)",
     metaTitle: "Composite Deck Build Timeline Bay Area 2026 | Real Weeks",
