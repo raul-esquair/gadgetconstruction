@@ -41,6 +41,216 @@ export function getRelatedPosts(
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "sagging-floor-repair-cost-bay-area-sister-joist-beam",
+    title: "Sagging Floor Repair in Bay Area Homes: Sister-Joist, Beam, or Full Replacement? (2026 Cost Guide)",
+    metaTitle: "Sagging Floor Repair Cost Bay Area 2026 | Joist, Beam, Replace",
+    excerpt:
+      "A sagging floor in your Bay Area home typically costs $2,500 to $25,000+ to repair in 2026 — but the fix depends on whether it's a bouncy joist, a failing beam, or settling foundation. Here's how to tell what you actually need.",
+    date: "2026-11-16",
+    readingTime: "16 min read",
+    relatedService: "structural-repairs",
+    faqs: [
+      {
+        "question": "How much does it cost to fix a sagging floor in a San Francisco Victorian?",
+        "answer": "Sagging floor repair in a San Francisco Victorian runs $2,500–$25,000+ in 2026. Undersized joists — common in Noe Valley, Alamo Square, and Pacific Heights Victorians built before 1930 — typically cost $2,500–$8,000 for sister-joist repair. A failing center beam costs $8,000–$18,000. Sill plate rot or foundation settlement pushes the framing repair scope to $12,000–$25,000+."
+      },
+      {
+        "question": "What is the difference between sistering a joist and replacing it?",
+        "answer": "Sistering adds a new structural member alongside the damaged one without removing the original. It's done from the crawl space with no flooring or ceiling disturbed. Full replacement removes the original entirely. Sistering works when the joist is undersized or end-rotted; replacement is needed when the joist has failed across its full length or the member is a center beam."
+      },
+      {
+        "question": "Can I fix a bouncy floor without opening the ceiling below?",
+        "answer": "Yes, in most cases. Sister-joist repair is performed entirely from the crawl space — no flooring removed above, no ceiling opened below. The only access required is the crawl space hatch. If no hatch exists, cutting one adds $200–$600 to the scope, which is still far less disruptive than opening finished ceilings or floors."
+      },
+      {
+        "question": "How do I know if my sagging floor is a joist problem or foundation settlement?",
+        "answer": "A joist or beam problem produces localized sag in one room or span. Foundation settlement produces systemic slope across the whole floor plan, combined with racking door frames, diagonal drywall cracks, and stair-step stucco cracking on the exterior. The marble test helps: if it rolls across multiple rooms in a consistent direction, foundation movement is the more likely cause."
+      },
+      {
+        "question": "Do I need a structural engineer for sister-joist repair?",
+        "answer": "For straightforward sister-joist work on a residential floor, many Bay Area jurisdictions — including SF DBI and Oakland's Planning & Building Department — accept prescriptive repairs under the California Residential Code without an engineering stamp. Center beam replacement, bearing-wall repairs, and hillside structures almost always require stamped drawings. Engineering coordination is included in every Gadget Construction scope that requires it."
+      },
+      {
+        "question": "How long does sagging floor repair take?",
+        "answer": "Sister-joist repairs run 2–5 working days on-site. Full center beam replacement takes 7–14 working days. Add 4–10 weeks for SF DBI permit review on structural scopes, plus 1–3 weeks for final inspection scheduling. Sister-joist scopes that don't require a permit typically go from signed contract to completion in 2–4 weeks total."
+      },
+      {
+        "question": "Is a sagging floor dangerous to walk on?",
+        "answer": "A bouncy or deflecting floor is exceeding California Building Code deflection limits, but that alone rarely creates an immediate hazard. Most Bay Area sagging floor conditions reflect years of gradual deflection rather than sudden failure risk. Extreme visible deflection across a wide area warrants assessment before continued use. The right move is a professional crawl-space evaluation, not evacuation."
+      }
+    ],
+    content: `
+## The Short Answer: What Sagging Floor Repair Costs in the Bay Area in 2026
+
+Sagging floor repair in the Bay Area costs $2,500–$25,000+ in 2026, with the fix depending on whether the cause is bouncy joists, a failing center beam, or foundation settlement. Sister-joist repair on a Bay Area home typically costs $2,500–$8,000 per span in 2026, including temporary shoring, cutback into healthy wood, and bolted installation of a new joist alongside the existing one. Full center beam replacement with an engineered LVL on a Bay Area Victorian or Edwardian flat costs $8,000–$18,000 in 2026 and requires a structural engineer's stamped drawings. When sagging traces back to foundation settlement — sill plate rot, soil movement, or inadequate bearing — the repair scope runs $12,000–$25,000+. Where your project lands depends on what's actually causing the sag, which you can narrow down before you call anyone.
+
+This guide covers [Bay Area structural floor repair](/services/structural-repairs) costs by repair type, a DIY diagnostic you can run this weekend, and the hidden cost drivers that convert a $4,000 sister-joist scope into a $14,000 beam replacement. Numbers come from 500+ Bay Area projects, not national averages.
+
+---
+
+## Why Do Bay Area Floors Sag in the First Place?
+
+Bay Area floors sag for four distinct reasons — and each one points to a different repair tier and cost range. Getting the diagnosis right before calling a contractor is the difference between a $4,800 sagging floor repair and an unnecessary $20,000 scope.
+
+**Undersized original joists.** Pre-1950 Bay Area framing — common in Noe Valley Victorians, Alamo Square Edwardians, and Alameda Craftsman bungalows — was built to standards that predate modern span tables. A 2×8 joist spanning 14 feet was acceptable under early 20th-century codes. Under the California Residential Code (CRC) live-load deflection limits, that same joist is undersized today. Floors built to those old standards bounce, spring, and sag — not because anything has failed, but because the original design doesn't meet current requirements. This is the most common cause of bouncy floor repair calls Gadget Construction receives from San Francisco's Noe Valley, Mission, and Bernal Heights.
+
+**Joist end rot at exterior walls.** Joist ends bearing on the mudsill at the exterior wall are the most moisture-exposed point in the floor framing. In San Francisco's fog belt — the Sunset, Richmond, and Bernal Heights — and in coastal Alameda and Berkeley, decades of elevated humidity and inadequate vapor control saturate joist ends and spread fungal decay inward. The joist may look fine from above but have lost 30–50% of its bearing capacity from the end. For a detailed look at how dry rot progresses through floor framing and what it costs to repair at the sill plate, the [dry rot repair at joist ends and sill plates](/blog/dry-rot-repair-cost-bay-area-2026) guide covers current Bay Area pricing and scope. If you're unsure whether you're looking at rot or termite damage, the [dry rot vs. termite diagnostic guide](/blog/how-to-tell-if-you-have-dry-rot-or-termites-bay-area) is a useful first step before any contractor call.
+
+**Failing center beam.** Victorian and Edwardian flats in the Mission, Alamo Square, and Oakland's Temescal district commonly have a single center girder running the length of the building, carrying all floor joist mid-span loads. These beams were often notched during later plumbing or electrical work — cutting into the bottom tension zone of the beam, the worst place to remove material — and rarely reinforced. A notched or checked center girder deflects progressively under load, pulling every joist in the floor system down with it. The [full SF structural repair cost breakdown](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) covers beam failure costs alongside other structural repair tiers.
+
+**Foundation settlement.** Expansive clay in the Sunset, bay fill in the Marina, and loose sand in the Richmond move seasonally and over decades. When the foundation settles unevenly, the mudsill, posts, and beam bearing points settle with it — producing a floor slope that follows the entire floor plan rather than a single room or bay. For a full picture of how to distinguish structural floor problems from foundation movement, [signs your sagging floor is actually foundation settlement](/blog/foundation-repair-signs-san-francisco) covers the visual diagnostic in detail.
+
+---
+
+## How to Diagnose Why Your Floor Is Sagging
+
+You can narrow the cause of a sagging floor to one of three repair tiers with four tests that require no tools beyond a marble and a flashlight.
+
+### The Marble Test (Localized vs. Systemic)
+
+Place a marble on the floor in the area that feels wrong. Watch where it rolls. If it rolls consistently toward one wall or one corner and stops within 6–8 feet, the sag is localized — a single span of joists or a failed post below that area. If the marble rolls slowly across a full room or across multiple rooms in the same direction, the slope is systemic — following the whole floor plane. Localized sag points to joist or beam repair. Systemic, whole-floor slope that continues across room boundaries points to foundation settlement and belongs in [full SF structural repair cost breakdown](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) territory.
+
+### The Bounce Test (Joist Deflection)
+
+Walk across the suspect area and pay attention to flex underfoot. Joist deflection is the downward movement of a floor joist under load, measured as a fraction of the span — the California Building Code (CBC) typically limits residential floor deflection to L/360 for live loads, meaning a 12-foot joist should not deflect more than roughly 0.4 inches. The California Residential Code (CRC R301.7) encodes this same limit for prescriptive residential framing. If the floor springs noticeably under your weight and returns, the joists are deflecting beyond that limit — either undersized for the span or weakened by rot or notching. A floor that feels solid but slopes doesn't bounce — that distinction matters for repair tier selection.
+
+### Looking at the Crawl Space (Rot vs. Undersized)
+
+Take a flashlight into the crawl space. You're looking for two things: the condition of the joist ends where they bear on the mudsill, and whether the joists show any visible checking, rot, or previous sister attempts. Probe the joist ends with a screwdriver — if the tip sinks into the wood under moderate pressure, rot has compromised the bearing end. If the joist ends are solid but the joists themselves are smaller than 2×10 on a span over 12 feet, undersizing is the likely culprit. Also check the center beam: a beam that shows a visible crown downward, or that has visible notches cut from the bottom edge, is a failing center beam — not a joist problem. If you discover widespread rot in the crawl space, the [dry rot in Bay Area homes guide](/blog/dry-rot-bay-area-homes-spot-repair-cost) explains how far it typically spreads and what remediation costs.
+
+### Checking Door Frames and Walls (Foundation Settlement)
+
+Walk through the house and check every door and window. Doors that have started sticking or that drag at the top corner on one side, combined with diagonal cracking in the drywall or stucco above the opening, indicate racking — the whole structure moving relative to the foundation. Stair-step cracks in exterior stucco following mortar lines are another pattern of foundation settlement, not joist failure. If you're seeing these combined with a sloping floor, the repair conversation starts with the foundation, not the framing above it. The [cracked stucco diagnostic guide](/blog/cracked-stucco-san-francisco-patch-recoat-tear-off) explains how to read stucco crack patterns and which ones signal structural movement versus surface aging.
+
+---
+
+## Sister-Joist Repair: $2,500–$8,000
+
+Sister-joist repair is the right fix for sagging floor repair when the floor is bouncy or slightly sagging in a specific room, the joists are undersized or have end rot, and the surrounding framing is otherwise sound. Sistering a joist means attaching a new structural member — typically a 2×10 or 2×12 — alongside a damaged or undersized existing joist to share the load, used when full joist replacement would require major interior demolition. Sister-joist repair on a Bay Area home typically costs $2,500–$8,000 per span in 2026, including temporary shoring, cutback into healthy wood, and bolted installation of a new joist alongside the existing one.
+
+The process: temporary shoring is installed below the floor system before any work begins, supporting the floor load while the existing joists are addressed. Rotted joist ends are cut back to sound wood. The new sister joist is cut to length, plumb-nailed and bolted alongside the existing member at specified intervals per California Residential Code (CRC) framing requirements, and bearing is verified at both the mudsill and the center beam. No flooring is removed from above. No ceiling is disturbed below. The repair is entirely accessed from the crawl space.
+
+This repair is most common in Noe Valley Victorians where the original fir joists are undersized by modern span tables, Alameda Edwardian flats where joist ends have rotted at the fog-side exterior wall, and Berkeley Craftsman bungalows where decades of deferred maintenance have left the floor system chronically underperforming. The California Residential Code limits residential floor joist deflection to L/360 for live loads — meaning a 12-foot span should not deflect more than approximately 0.4 inches under normal use. Sister-joist repairs bring the floor system into compliance with that standard without opening the floor from above.
+
+Gadget Construction performs sister-joist and structural floor repair across San Francisco's Noe Valley, Mission, and Bernal Heights, plus [Oakland](/service-areas/oakland), [Berkeley](/service-areas/berkeley), and [Alameda](/service-areas/san-francisco). For the full range of structural repair cost options on SF homes — including sill plate and bearing wall work — the [full SF structural repair cost breakdown](/blog/structural-repair-cost-san-francisco-sagging-floors-rotted-beams) goes deeper on each tier.
+
+---
+
+## Full Joist or Beam Replacement: $6,000–$18,000
+
+Full joist or beam replacement is the right sagging floor repair when multiple joists are compromised beyond sistering, when the center beam itself is sagging or has been structurally compromised by notching, or when prior sister attempts have already filled the available bearing surface alongside the existing joist. Full center beam replacement with an engineered LVL on a Bay Area Victorian or Edwardian flat costs $8,000–$18,000 in 2026 and requires a structural engineer's stamped drawings.
+
+A laminated veneer lumber (LVL) beam is an engineered structural member made from thin wood veneers bonded with adhesive, offering greater span capacity and dimensional stability than traditional sawn lumber — commonly used as replacement center beams in Bay Area Victorian and Edwardian flats. LVL replaces failing sawn-lumber center beams because it can span the full length of a Victorian flat — frequently 40–50 feet — in a single member without splicing, eliminating the mid-span bearing failures that plague original built-up lumber girders.
+
+The process requires temporary shoring of the entire floor system, removal of the damaged joists or beam section by section, installation of the new engineered member, and re-hanging all tributary joists at the corrected elevation. This scope is most common in Mission flats where the basement has been modified for parking or ADU use — carving out original posts and altering the bearing path — and in multi-unit Alamo Square Victorians where the original center girder has been notched by multiple decades of trades work.
+
+SF DBI (the San Francisco Department of Building Inspection, the city agency that issues residential permits for structural, mechanical, and exterior work) requires a permit and structural engineer's stamped drawings for any center beam replacement. Oakland's Planning & Building Department and Berkeley's Planning & Development Department have equivalent requirements. Permit review for structural framing work at SF DBI runs 4–10 weeks depending on project complexity. For context on how Bay Area permit timelines affect overall project scheduling across different jurisdictions, the [composite deck permit guide](/blog/composite-deck-permits-bay-area-sf-marin-east-bay) has a useful jurisdiction-by-jurisdiction breakdown of plan check timelines.
+
+---
+
+## Sagging From Foundation Settlement: $12,000–$25,000+
+
+Not every sagging floor is a joist or beam problem. When the floor slope follows the entire floor plan — not a single bay or room — and door frames are racking and exterior stucco shows stair-step cracks, the cause is foundation movement, not failing framing above it.
+
+It's important to be direct: Gadget Construction does not perform underpinning, pier-and-beam foundation lifting, or pressure grouting. Those are specialized foundation contractor scopes. If your diagnosis points to active foundation settlement requiring underpinning, you need a licensed foundation contractor — not a general building contractor.
+
+What Gadget Construction does in foundation settlement scenarios is address the framing above the foundation: rebuilding rotted or undersized sill plates, sistering joists at corrected elevation to re-level the floor where possible, replacing compromised mudsill sections, and reinforcing the connection between the foundation and the framing per current seismic standards. This work frequently pairs with the California Earthquake Brace + Bolt (EBB) program — a state-funded incentive program that subsidizes seismic retrofit of cripple-wall foundations in pre-1980 wood-frame homes — because the same access that allows sill plate repair also allows cripple-wall bracing installation. If your home qualifies for EBB funding, that subsidy can offset $3,000–$6,500 of the structural repair cost.
+
+The repair scope for settlement-related framing damage runs $12,000–$25,000+ and covers the framing correction, not the foundation movement itself. If the foundation is still actively settling, framing repairs are premature — the foundation issue must be addressed first. The [signs your sagging floor is actually foundation settlement](/blog/foundation-repair-signs-san-francisco) post covers the diagnostic sequence before any contractor call.
+
+---
+
+## What Drives Sagging Floor Repair Costs Up in the Bay Area
+
+### Access and Crawl Space Height
+
+Crawl spaces under 24 inches of clear height require modified hand tools, prone-position work, and significantly longer labor hours for every task a contractor can complete standing in a taller space. Many San Francisco and Oakland rowhouses have crawl spaces of 18–22 inches — enough to access but not enough to work efficiently. Expect a 15–25% labor premium on any crawl space repair below 24 inches of clearance. Crawl spaces with standing water, significant debris, or no existing access hatch add further cost for drainage, cleanout, and access preparation before structural work can begin.
+
+### Temporary Shoring Requirements
+
+Every sister-joist and beam replacement scope requires temporary shoring — a system of posts and beams installed to support the floor load while the damaged framing is removed or modified. Shoring on a single-room sister-joist scope runs $400–$900. Shoring for a full center beam replacement on a Victorian flat — where the floor system above needs continuous support across 30–50 feet of span — runs $1,500–$3,500 and must be in place before demo begins. Shoring is not optional and shouldn't be missing from any legitimate bid.
+
+### Structural Engineer Stamp
+
+A California Class B General Building Contractor license (such as CA License #1132983) authorizes a contractor to perform structural framing, foundation, and multi-trade work on residential and commercial buildings — but SF DBI and most Bay Area jurisdictions require a licensed structural engineer's stamped drawings for any center beam replacement, full joist replacement, or repair affecting a bearing wall or primary load path. Structural engineer fees for floor framing repair run $800–$2,500 for a straightforward sister-joist scope and $2,000–$6,000 for full beam replacement with complex load path analysis. If plan check comments require revised calculations, a resubmittal round adds another $500–$1,500 in engineering fees and 2–4 weeks in timeline.
+
+### Dry Rot Discovery
+
+The crawl space is the last place most Bay Area homeowners have looked in years. Demo routinely uncovers joist end rot, mudsill rot, or sill plate decay that wasn't visible from the exterior and wasn't part of the original scope. A sister-joist repair scoped for three joists can expand to include a mudsill section replacement and [dry rot repair at joist ends and sill plates](/blog/dry-rot-repair-cost-bay-area-2026) when the wall is opened. Budget a 15–25% contingency on any Bay Area structural floor repair for rot discovery, particularly in pre-1960 homes on the fog-side wall. The [5 exterior repairs coastal Bay Area homes always need](/blog/5-exterior-repairs-coastal-bay-area-homes-always-need) explains why moisture intrusion at the sill plate is so predictable in Sunset, Pacifica, and Marin homes specifically.
+
+### SF DBI, Oakland, and Berkeley Permit Review
+
+Structural framing repair permits at SF DBI run 4–10 weeks for plan check review. Oakland's Planning & Building Department and Berkeley's Planning & Development Department run 3–8 weeks. Peninsula jurisdictions vary widely — Palo Alto runs 6–12 weeks for engineered structural scopes. These timelines are not negotiable and cannot be shortened by expedite fees for most structural scopes. Submit permits in fall or early winter when queues are shortest. For [structural repair across San Francisco](/service-areas/san-francisco) specifically, SF DBI's online permit portal allows status tracking — use it to monitor plan check comments in real time rather than waiting for mail.
+
+---
+
+## Real 2026 Project Examples
+
+These are actual scopes and costs from Gadget Construction projects completed across the Bay Area. Addresses are withheld; neighborhoods and conditions are accurate.
+
+### Project 1: Noe Valley Victorian, 3 Sister-Joists in Dining Room — $4,800
+
+A 1908 Victorian in Noe Valley had a noticeably bouncy dining room floor — springy underfoot in the center of the room, more pronounced when multiple people were present. Crawl space inspection found original 2×8 Douglas fir joists spanning 13 feet — undersized for the span under California Residential Code (CRC) live-load requirements. Joist ends were solid. No rot. The problem was entirely undersizing.
+
+Scope: temporary shoring of the dining room floor, three new 2×12 sister-joists bolted alongside the existing members at 16-inch on-center intervals per CRC framing requirements, bearing verified at mudsill and center beam. No flooring removed above. No ceiling disturbed below. All work completed from crawl space access. Total: **$4,800**. Timeline: 3 working days including shoring setup.
+
+### Project 2: Mission Flat, Full Center Beam Replacement with LVL — $14,500
+
+A 1920 two-unit Mission flat had a floor system that sloped 1.5 inches across the width of the building — consistent with center beam failure, not foundation settlement. Crawl space revealed the original built-up 3×12 center girder notched in four locations by previous plumbing work, with the bottom tension zone compromised at two of those cuts. No rot. The beam had been progressively deflecting for years.
+
+Scope: structural engineer's stamped drawings, temporary shoring of both floor levels above, center beam removal in sections, installation of a full-length LVL beam at corrected elevation, re-hanging all tributary joists with new joist hangers, re-leveling the floor system to within 1/4 inch across the full span. SF DBI permit and inspection. Total: **$14,500**, including $2,200 in structural engineering fees. Timeline: 11 working days including shoring and permit inspection hold.
+
+### Project 3: Alameda Craftsman, 8 Sister-Joists + Sill Plate Section — $11,200
+
+A 1935 Craftsman in Alameda's Gold Coast neighborhood had soft, springy floors along the entire ocean-facing wall — a 22-foot run. Crawl space inspection found joist end rot on 8 consecutive joists bearing on the mudsill at the west wall, plus a 6-foot section of mudsill itself compromised by dry rot from chronic moisture at the siding-to-foundation gap.
+
+Scope: 8 sister-joists bolted alongside the existing members after cutback into sound framing (averaging 18 inches of cutback per joist), 6-foot mudsill section replacement with pressure-treated Douglas fir, new anchor bolts at code spacing, temporary shoring throughout. Lead paint testing added $280 to the upfront scope. No SF DBI permit required for the sister-joist scope in Alameda, but Alameda's Building Division required a permit for the mudsill replacement and anchor bolt work. Total: **$11,200**. Timeline: 7 working days. Gadget Construction performs [structural repair across San Francisco](/service-areas/san-francisco) and throughout the East Bay, including [Alameda](/service-areas/oakland), [Oakland](/service-areas/oakland), and [Berkeley](/service-areas/berkeley) — with a 5-year workmanship warranty in writing on every project.
+
+---
+
+## Frequently Asked Questions
+
+### How much does it cost to fix a sagging floor in a San Francisco Victorian?
+
+Sagging floor repair in a San Francisco Victorian runs $2,500–$25,000+ in 2026 depending on cause. A bouncy floor from undersized original joists — common in Noe Valley, Alamo Square, and Pacific Heights Victorians built before 1930 — typically costs $2,500–$8,000 for sister-joist repair. A failing center beam in a Mission or Castro flat costs $8,000–$18,000 for full LVL replacement with a structural engineer stamp. When the cause is sill plate rot or foundation settlement, the framing repair scope runs $12,000–$25,000+. SF DBI (the San Francisco Department of Building Inspection) requires permits and inspections for any structural framing repair beyond prescriptive sistering.
+
+### What is the difference between sistering a joist and replacing it?
+
+Sistering adds a new structural member alongside the damaged one without removing the original. Replacing removes the original entirely and installs a new member in its place. Sistering is preferred when the original joist is in place but undersized, end-rotted, or slightly checked — because the sister can be installed from the crawl space without disturbing flooring above or ceilings below. Full replacement is required when the original joist has failed across its full length, when previous sistering attempts have already filled the available space, or when the framing member is a center beam rather than a floor joist.
+
+### Can I fix a bouncy floor without opening the ceiling below?
+
+Yes, in most cases. Sister-joist repair is performed entirely from the crawl space — no flooring is removed above, and no ceiling is opened below. This is the primary advantage of sistering over full joist replacement. The crawl space access hatch is the only opening required. If your home doesn't have an existing access hatch, cutting one adds $200–$600 to the scope but is still far less disruptive than opening finished ceilings.
+
+### How do I know if my sagging floor is a joist problem or foundation settlement?
+
+A joist or beam problem produces localized sag — affecting one room or one span, with the rest of the floor performing normally. Foundation settlement produces systemic slope — the entire floor plane tilting in one direction, with door frames racking, diagonal drywall cracks, and stair-step stucco cracking on the exterior. The marble test is useful: if the marble rolls across multiple rooms in a consistent direction, foundation movement is more likely than a single joist failure. For a full diagnostic sequence, [signs your sagging floor is actually foundation settlement](/blog/foundation-repair-signs-san-francisco) covers each symptom pattern in detail.
+
+### Do I need a structural engineer for sister-joist repair?
+
+For a straightforward sister-joist repair — adding new joists alongside undersized originals in a residential floor system — many Bay Area jurisdictions do not require an engineer stamp. SF DBI and Oakland's Planning & Building Department typically accept prescriptive framing repairs under the California Residential Code (CRC) without engineering for sister-joist work. Full center beam replacement, any repair affecting a bearing wall, and repairs on hillside structures almost always require a structural engineer's stamped drawings. Gadget Construction coordinates structural engineering for every scope that requires it — it's included in the project cost, not a surprise add-on.
+
+### How long does sagging floor repair take?
+
+Sister-joist repairs typically take 2–5 working days of on-site construction. Full center beam replacement runs 7–14 working days. Add 4–10 weeks for SF DBI permit review on structural scopes, plus 1–3 weeks for final inspection scheduling. For scopes that don't require a permit — straightforward sister-joist work in jurisdictions with prescriptive approval — total timeline from signed contract to completion is often 2–4 weeks.
+
+### Is a sagging floor dangerous to walk on?
+
+A floor that bounces or deflects noticeably is structurally underperforming — it's exceeding the California Building Code (CBC) deflection limits — but that condition alone doesn't create an immediate hazard for most Bay Area homes. A floor with visible extreme deflection across a wide area warrants professional assessment before normal use continues. Most sagging floor conditions represent years of gradual deflection, not sudden failure risk. Get an assessment, understand the cause, and repair it on a planned schedule. If you're unsure whether your situation is a maintenance repair or something more urgent, a free crawl space assessment is the right first step.
+
+---
+
+## Ready to Diagnose Your Sagging Floor?
+
+A bouncy floor in a Noe Valley Victorian and a sloping floor in a Mission flat require completely different repairs — and misdiagnosing one for the other wastes money and fixes nothing.
+
+Gadget Construction provides free crawl-space assessments with written photo findings — we'll tell you honestly whether you need a sister-joist, a beam replacement, or a conversation about foundation movement. We don't perform underpinning or pier-and-beam foundation lifting, so we won't upsell you into a scope we don't offer. Gadget Construction performs [Bay Area structural floor repair](/services/structural-repairs) across San Francisco's Noe Valley, Mission, and Bernal Heights, plus [Oakland](/service-areas/oakland), [Berkeley](/service-areas/berkeley), and [Alameda](/service-areas/san-francisco) — 500+ Bay Area projects completed, 5-year workmanship warranty in writing on every one, CA License #1132983, Class B general building contractor, serving 31 cities across 6 Bay Area counties.
+
+Schedule your free crawl-space assessment through our [structural repairs service page](/services/structural-repairs). You'll leave with written photo findings, a clear diagnosis of the cause, and a fixed-price estimate covering the actual repair scope.
+    `.trim(),
+  },
+
+  {
     slug: "dry-rot-repair-cost-bay-area-2026",
     title: "Dry Rot Repair Cost in the Bay Area (2026): Window Sills, Decks, Framing, Full Scope",
     metaTitle: "Dry Rot Repair Cost Bay Area 2026: Real Project Numbers",
